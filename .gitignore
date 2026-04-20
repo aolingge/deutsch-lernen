@@ -1,0 +1,32 @@
+# Local private inputs
+private/
+raw/
+source/
+sources/
+imports/
+exports/
+obsidian/
+onenote/
+screenshots/
+recordings/
+audio/
+video/
+
+# Secrets and local config
+.env
+.env.*
+*.pem
+*.key
+*.p12
+*.pfx
+*.kdbx
+secrets.*
+
+# Logs and generated files
+*.log
+tmp/
+temp/
+.cache/
+.DS_Store
+Thumbs.db
+
