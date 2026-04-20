@@ -37,6 +37,10 @@ foreach ($file in $files) {
     foreach ($pattern in $patterns) {
         $matches = [regex]::Matches($text, $pattern.Regex)
         foreach ($match in $matches) {
+            if ($pattern.Name -eq "phone-like" -and $match.Value -match "^\d{4}-\d{2}-\d{2}$") {
+                continue
+            }
+
             $lineNumber = ($text.Substring(0, $match.Index) -split "`n").Count
             $hits += [pscustomobject]@{
                 File = $file.FullName

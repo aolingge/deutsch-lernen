@@ -15,10 +15,21 @@
 
 - [B1 学习路线](docs/learning-paths/b1-roadmap.md)
 - [核心语法](docs/grammar/core-grammar.md)
+- [冠词、格和代词](docs/grammar/cases-and-pronouns.md)
+- [动词时态和情态动词](docs/grammar/verb-tenses-and-modals.md)
+- [B1 必考从句](docs/grammar/subordinate-clauses.md)
 - [主题词汇](docs/vocabulary/theme-vocabulary.md)
+- [听力与阅读高频词汇](docs/vocabulary/listening-reading-core-vocabulary.md)
+- [B1 固定搭配](docs/vocabulary/collocations.md)
 - [B1 考试备考](docs/exam/b1-exam-guide.md)
+- [听力解题策略](docs/exam/listening-strategy.md)
+- [阅读解题策略](docs/exam/reading-strategy.md)
+- [写作模板](docs/exam/writing-templates.md)
+- [口语模板](docs/exam/speaking-templates.md)
 - [德国生活指南](docs/life-in-germany/README.md)
+- [预约与办事表达](docs/life-in-germany/appointments-and-offices.md)
 - [公开学习资源](docs/resources/public-resources.md)
+- [本地资源整理记录](docs/resources/import-log.md)
 - [隐私与脱敏规则](PRIVACY.md)
 - [贡献指南](CONTRIBUTING.md)
 
@@ -43,4 +54,3 @@
 
 - 文档内容使用 [CC BY 4.0](LICENSE-CONTENT.md)。
 - 脚本和仓库辅助代码使用 [MIT](LICENSE-CODE.md)。
-
