@@ -1,19 +1,36 @@
-# 公开学习资源
+# 公开学习资源导航
 
-这里只放公开、稳定、适合长期学习的资源入口。使用外部资源时，请遵守对应网站的版权和使用条款。
+这页是资源总入口。目标不是堆链接，而是帮学习者快速判断：现在该用哪个资源、怎么用、有什么风险。
 
-## 官方和准官方资源
+Last checked: 2026-04-21
 
-- [Goethe-Institut: Kostenlos Deutsch ueben](https://www.goethe.de/ins/us/de/spr/ueb.html)
-- [vhs-Lernportal B1-Deutschkurs](https://b1.vhs-lernportal.de/wws/home.php)
-- [vhs-Lernportal Kursangebot](https://www.vhs-lernportal.de/wws/kursangebot-lernende.php)
-- [BAMF Integrationskurse](https://www.bamf.de/DE/Themen/Integration/ZugewanderteTeilnehmende/Integrationskurse/integrationskurse-node.html)
-- [DW Deutsch lernen](https://learngerman.dw.com/)
+## 快速推荐
 
-## 怎么使用这些资源
+| 需求 | 优先入口 | 为什么 |
+| --- | --- | --- |
+| 从 A1 系统学到 B1 | [DW Learn German / Nicos Weg](https://learngerman.dw.com/de/deutsch-lernen/s-9095) | 有视频、课文、练习，适合自学闭环 |
+| 做 A1-B1 体系化练习 | [vhs-Lernportal](https://www.vhs-lernportal.de/wws/kursangebot-lernende.php) | 课程化、练习多，适合长期刷 |
+| 找官方免费练习 | [Goethe-Institut: Kostenlos Deutsch ueben](https://www.goethe.de/de/spr/ueb.html) | 官方资源，含练习、视频、播客和生活主题 |
+| 准备 Goethe B1 | [Goethe B1 Prüfungstraining](https://www.goethe.de/de/m/spr/prf/ueb/pb1.html) | 官方 B1 听说读写练习材料 |
+| 准备 telc B1 | [telc Deutsch B1](https://www.telc.net/en/language-examinations/certificate-exams/german/certificate-german-telc-german-b1/) | 有 B1 模拟题和音频下载入口 |
+| 练真实语速听力 | [Easy German](https://www.easygerman.org/) | 街采访、双语字幕、按等级选内容 |
+| B1 以上慢速听力 | [Slow German](https://slowgerman.com/) | 语速清楚，主题覆盖德国文化与社会 |
+| 查单词和语法 | [Duden](https://www.duden.de/woerterbuch) / [DWDS](https://www.dwds.de/) / [PONS](https://en.pons.com/translate/german-english) | 分别适合拼写语法、德德语义、双语翻译 |
 
-- Goethe-Institut：适合找考试、练习和文化学习入口。
-- vhs-Lernportal：适合系统练 A1 到 B1。
-- BAMF：适合了解德国融合课程和官方政策入口。
-- DW：适合用视频、音频和新闻材料训练听力与阅读。
+## 分类页
+
+- [官方课程与系统学习平台](official-platforms.md)
+- [考试与德国融入资源](exam-and-integration-resources.md)
+- [视频、音频、YouTube 与 B 站资源](video-audio-resources.md)
+- [词典、语法和学习工具](dictionaries-and-tools.md)
+- [如何筛选资源](resource-selection-guide.md)
+- [本地资源整理记录](import-log.md)
+
+## 使用顺序建议
+
+1. 先选一个主线课程，例如 DW Nicos Weg 或 vhs-Lernportal。
+2. 每天配一个练习站，例如 Goethe、Lingolia 或 Schubert。
+3. 每周固定做一次听读材料，例如 Easy German、Slow German 或 DW Top-Thema。
+4. 考前只刷官方样题，不要被来源不明的“真题包”带偏。
+5. B 站和 YouTube 适合补讲解、听力和语感，但不要把刷视频当成完整学习。
 
