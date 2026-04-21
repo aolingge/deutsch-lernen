@@ -1,0 +1,28 @@
+name: Maintenance Digest
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "15 4 * * 1"
+
+permissions:
+  actions: read
+  contents: read
+  issues: write
+  pull-requests: read
+  security-events: read
+
+jobs:
+  digest:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@48b55a011bda9f5d6aeb4c2d9c7362e8dae4041e # v6
+        with:
+          node-version: 24
+      - run: node scripts/maintenance-digest.mjs
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_REPOSITORY: ${{ github.repository }}
