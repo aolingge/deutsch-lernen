@@ -1,0 +1,30 @@
+name: Agent task
+description: Create a tightly scoped task that can be assigned to a coding agent.
+title: "[Agent]: "
+labels: ["agent-ready", "enhancement"]
+body:
+  - type: textarea
+    id: goal
+    attributes:
+      label: Goal
+      description: What should the agent change? Keep it narrow enough for one pull request.
+    validations:
+      required: true
+  - type: textarea
+    id: constraints
+    attributes:
+      label: Constraints
+      description: Mention files, commands, security limits, or behavior that must not change.
+      placeholder: "Do not add real secrets. Run the most relevant checks."
+    validations:
+      required: true
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Acceptance checks
+      description: Which checks prove the task is done?
+      value: |
+        - Run the most relevant build, test, lint, or typecheck command.
+        - Include the command output summary in the PR body.
+    validations:
+      required: true
