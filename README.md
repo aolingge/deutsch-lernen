@@ -59,3 +59,6 @@
 
 - 文档内容使用 [CC BY 4.0](LICENSE-CONTENT.md)。
 - 脚本和仓库辅助代码使用 [MIT](LICENSE-CODE.md)。
+## Support
+
+If this project saves you time, you can support future maintenance here: [Buy Me a Coffee](https://www.buymeacoffee.com/aolingge).
