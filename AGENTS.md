@@ -1,9 +1,21 @@
-# Agent Rules For This Repository
+# Repository Agent Instructions
 
-- 默认使用中文沟通，但代码、文件名和公开文档标题优先保持英文或德语可读。
-- 这是公开仓库，任何自动化或人工提交都必须先做隐私检查。
-- 不要提交本地原始学习资源、Obsidian 导出、OneNote 导出、截图、录音、视频或私有链接。
-- 新内容应优先写成通用学习资料，而不是私人学习记录。
-- 外部资料优先引用官方链接，只做简短介绍，不复制大段原文。
-- 每次修改后至少运行 `pwsh ./tools/privacy-scan.ps1 .`。
+## Project Context
 
+Repository: `aolingge/deutsch-lernen`
+Primary language: PowerShell
+
+## Default Workflow
+
+- Keep changes small and focused.
+- Read existing README, package files, build scripts, and workflow files before editing.
+- Prefer existing project conventions over introducing new structure.
+- Do not add secrets, tokens, cookies, private URLs, private paths, or credentials to repository files, issue comments, PR comments, fixtures, or docs.
+- Include verification commands in PR descriptions.
+- Treat workflow, publishing, dependency, and authentication changes as security-sensitive.
+
+## Pull Request Rules
+
+- CI and security checks must pass before merge.
+- Low-risk Dependabot patch updates may be auto-merged only when branch protection and required checks are active.
+- Major dependency updates, GitHub Actions updates, publishing changes, and human-authored code changes require maintainer review.
