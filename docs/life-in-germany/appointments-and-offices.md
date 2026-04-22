@@ -2,6 +2,20 @@
 
 德国生活中很多事情需要提前预约，例如看病、办证、咨询课程、租房看房、政府部门办事。先掌握一套稳定表达，会比临场硬想轻松很多。
 
+Last checked: 2026-04-22
+
+## 预约前先确认
+
+不同城市和机构的材料要求会变，先看官方页面，再写邮件或打电话。这样能减少来回补材料。
+
+| 要确认的问题 | 德语关键词 | 可以怎么问 |
+| --- | --- | --- |
+| 这个事项是否需要预约 | `Termin erforderlich` | `Brauche ich dafuer einen Termin?` |
+| 哪些材料必须带 | `erforderliche Unterlagen` | `Welche Unterlagen muss ich mitbringen?` |
+| 是否能网上办理 | `online beantragen` | `Kann ich den Antrag online stellen?` |
+| 是否需要原件或复印件 | `Original`, `Kopie` | `Brauche ich das Original oder reicht eine Kopie?` |
+| 是否收费 | `Gebuehr`, `Kosten` | `Welche Gebuehren fallen an?` |
+
 ## 基础预约模板
 
 ```text
@@ -84,4 +98,3 @@ Vielen Dank fuer Ihre Hilfe.
 
 - 具体材料和政策会变化，请以对应机构官方页面为准。
 - 不要把自己的预约确认邮件、申请表、证件照片或办事截图上传到公开仓库。
-

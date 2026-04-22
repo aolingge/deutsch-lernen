@@ -11,6 +11,13 @@
 - 想了解德国生活、学习、工作、行政办事常识的人
 - 想把零散德语笔记整理成长期学习系统的人
 
+## 快速开始
+
+- 想系统学习 B1：先读 [B1 学习路线](docs/learning-paths/b1-roadmap.md)，再配合 [核心语法](docs/grammar/core-grammar.md) 和 [主题词汇](docs/vocabulary/theme-vocabulary.md)。
+- 想准备考试：先看 [B1 考试备考](docs/exam/b1-exam-guide.md)，再分开练听力、阅读、写作和口语模板。
+- 想处理德国生活场景：先看 [德国生活指南](docs/life-in-germany/README.md) 和 [预约与办事表达](docs/life-in-germany/appointments-and-offices.md)。
+- 想找公开资源：先从 [公开学习资源](docs/resources/public-resources.md) 开始，只使用官方或明确可公开的链接。
+
 ## 内容地图
 
 - [B1 学习路线](docs/learning-paths/b1-roadmap.md)
@@ -35,7 +42,9 @@
 - [词典、语法和学习工具](docs/resources/dictionaries-and-tools.md)
 - [如何筛选资源](docs/resources/resource-selection-guide.md)
 - [本地资源整理记录](docs/resources/import-log.md)
+- [更新记录](CHANGELOG.md)
 - [隐私与脱敏规则](PRIVACY.md)
+- [安全与公开内容报告](SECURITY.md)
 - [贡献指南](CONTRIBUTING.md)
 
 ## 维护原则
@@ -59,6 +68,3 @@
 
 - 文档内容使用 [CC BY 4.0](LICENSE-CONTENT.md)。
 - 脚本和仓库辅助代码使用 [MIT](LICENSE-CODE.md)。
-## Support
-
-If this project saves you time, you can support future maintenance here: [Buy Me a Coffee](https://www.buymeacoffee.com/aolingge).
