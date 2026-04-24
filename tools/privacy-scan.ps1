@@ -28,6 +28,29 @@ $files = Get-ChildItem -LiteralPath $root -Recurse -File -Force |
 
 $hits = @()
 
+function Test-AllowedHit {
+    param(
+        [string]$File,
+        [string]$Type,
+        [string]$Line
+    )
+
+    if ($Type -ne "password-word") {
+        return $false
+    }
+
+    $normalized = $File -replace "/", "\"
+    if ($normalized -match "\\.github\\workflows\\" -and $Line -match "secrets\.GITHUB_TOKEN") {
+        return $true
+    }
+
+    if ($normalized -match "\\scripts\\maintenance-digest\.mjs$" -and $Line -match "GITHUB_TOKEN|Bearer \`\$\{token\}|token[,:=]") {
+        return $true
+    }
+
+    return $false
+}
+
 foreach ($file in $files) {
     $text = Get-Content -LiteralPath $file.FullName -Raw -ErrorAction SilentlyContinue
     if ($null -eq $text) {
@@ -42,6 +65,11 @@ foreach ($file in $files) {
             }
 
             $lineNumber = ($text.Substring(0, $match.Index) -split "`n").Count
+            $line = ($text -split "`r?`n")[$lineNumber - 1]
+            if (Test-AllowedHit -File $file.FullName -Type $pattern.Name -Line $line) {
+                continue
+            }
+
             $hits += [pscustomobject]@{
                 File = $file.FullName
                 Line = $lineNumber
