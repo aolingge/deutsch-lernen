@@ -1,0 +1,42 @@
+name: Content improvement
+description: Suggest a public learning-content improvement or report a public-doc issue.
+title: "[Content]: "
+labels:
+  - documentation
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this form for public learning-content improvements only.
+        Do not paste personal data, private links, screenshots, raw course material, or credentials here.
+  - type: textarea
+    id: problem
+    attributes:
+      label: What needs improvement?
+      description: Describe the unclear, outdated, or missing part.
+      placeholder: The B1 listening page could use a shorter checklist for multiple-choice questions.
+    validations:
+      required: true
+  - type: textarea
+    id: suggested_change
+    attributes:
+      label: Suggested change
+      description: Explain the concrete fix or addition you want.
+      placeholder: Add a short step-by-step checklist and one example.
+    validations:
+      required: true
+  - type: input
+    id: page
+    attributes:
+      label: Relevant page or path
+      description: Link the public page or repo path if you know it.
+      placeholder: docs/exam/listening-strategy.md
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Before submitting
+      options:
+        - label: I did not include personal data, private links, raw screenshots, or credentials.
+          required: true
+        - label: This request is about public learning content, not private study records.
+          required: true
