@@ -2,6 +2,8 @@
 
 四技能不是平均用力。不同等级的重点不同：A1-A2 建句子，B1 建任务，B2 建观点，C1 建学术和专业表达。
 
+新手建议先用 [新手学习入口](../learning-paths/start-here.md) 定等级，再用 [从零到 B1 的前 30 天启动计划](../learning-paths/zero-to-b1-30-day-starter.md) 建立每日闭环。
+
 ## 阅读 Lesen
 
 | 等级 | 材料 | 训练动作 |

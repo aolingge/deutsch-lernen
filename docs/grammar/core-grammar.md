@@ -1,5 +1,7 @@
 # 德语核心语法
 
+如果你不知道某个语法点应该怎么用于写作或口语，先看 [语法到输出地图](../learning-paths/grammar-to-output-map.md)。语法学习的目标是能完成表达任务，而不是只记术语。
+
 ## 更完整的语法索引
 
 - [A1-B1 全语法点清单](a1-b1-grammar-checklist.md)

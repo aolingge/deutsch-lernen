@@ -22,6 +22,9 @@ Last checked: 2026-05-05
 
 ## 分类页
 
+- [学习系统总地图](../README.md)
+- [新手学习入口](../learning-paths/start-here.md)
+- [学习资源组合包](resource-packages.md)
 - [官方课程与系统学习平台](official-platforms.md)
 - [A1-C1 与 DSH 资源导航](a1-c1-dsh-resource-index.md)
 - [B1 学习网站与练习资源](b1-learning-websites.md)

@@ -6,6 +6,8 @@
 
 Last checked: 2026-05-05
 
+新手先看：[新手学习入口](start-here.md)。如果你还没有稳定学习节奏，先走 [从零到 B1 的前 30 天启动计划](zero-to-b1-30-day-starter.md)。
+
 ## 总体路线
 
 | 阶段 | 核心目标 | 输出证明 | 常见用途 |
@@ -126,3 +128,9 @@ C1 和大学入学考试衔接：
 ```
 
 模板：[每周德语学习模板](../templates/weekly-german-study-template.md)。
+
+相关导航：
+
+- [语法到输出地图](grammar-to-output-map.md)
+- [学习资源组合包](../resources/resource-packages.md)
+- [德语考试选择树](../exam/exam-decision-tree.md)
