@@ -9,6 +9,7 @@ Last checked: 2026-05-05
 | 资源 | 链接 | 适合技能 | 怎么用 | 注意 |
 | --- | --- | --- | --- | --- |
 | Goethe B1 官方说明 | [Goethe-Zertifikat B1](https://www.goethe.de/ins/de/de/m/prf/prf/gzb1.html) | 考试目标 | 先读能力要求，知道 B1 要做到什么 | 定目标，不是练习主体 |
+| Goethe B1 中国页 | [Goethe-Zertifikat B1 China](https://www.goethe.de/ins/cn/zh/spr/prf/zb1.html) | 中国考点信息 | 在中国报名或查考试信息前先看这里 | 日期和费用要回考点实时确认 |
 | Goethe B1 官方练习材料 | [B1 Uebungsmaterial](https://www.goethe.de/ins/de/de/m/prf/prf/gzb1/ueb.html) | 听读写说、模拟题 | 每周做 1 个模块；考前 3 周整套计时 | 优先级最高 |
 | Goethe B1 在线 Modellsatz | [bfu.goethe.de/b1_mod](https://bfu.goethe.de/b1_mod/) | 熟悉题型 | 第一次低压力熟悉界面和题型 | 做完会有记忆效应，不宜反复刷分 |
 | Goethe/ÖSD B1 词表 | [B1 Wortliste PDF](https://www.goethe.de/pro/relaunch/prf/en/Goethe-Zertifikat_B1_Wortliste.pdf) | 词汇覆盖 | 每周按主题抽词，做例句和口头造句 | 词表是参考，不是唯一课程 |
@@ -21,6 +22,7 @@ Last checked: 2026-05-05
 | 资源 | 链接 | 适合阶段 | 怎么用 |
 | --- | --- | --- | --- |
 | DW Nicos Weg B1 | [Nicos Weg B1](https://learngerman.dw.com/de/c-36519687) | B1 初期到中期 | 每周 3-5 课：看视频 -> 做互动练习 -> 摘句型 |
+| Goethe Deutsch fuer dich | [Deutsch fuer dich](https://www.goethe.de/prj/dfd/en/home.cfm) | A1-C2 练习社区 | 用作官方补充练习和主题输入 |
 | vhs-Lernportal B1 | [B1-Deutschkurs](https://b1.vhs-lernportal.de/wws/home.php) | B1 初期到中期 | 每周 2-3 个小单元，周末做平台测试 |
 | vhs B1 Deutsch App | [B1 app](https://b1.vhs-lernportal.de/wws/app-b1.php) | 碎片时间 | 通勤做 10-15 分钟练习 |
 | Schubert Begegnungen B1+ | [Begegnungen B1+](https://www.schubert-verlag.de/begegnungen_b1.php) | B1 中期到 B1+ | 每周选一章，练 Redemittel 和在线练习 |

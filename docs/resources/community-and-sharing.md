@@ -18,6 +18,8 @@
 - italki: <https://www.italki.com/>
 - Meetup German groups: <https://www.meetup.com/topics/german/>
 - Reddit r/German: <https://www.reddit.com/r/German/>
+- Reddit r/German Wiki: <https://www.reddit.com/r/German/wiki/index/>
+- Reddit r/WriteStreakGerman: <https://www.reddit.com/r/WriteStreakGerman/>
 - Easy German: <https://www.easygerman.org/>
 
 ## 微信搜索关键词
@@ -53,6 +55,7 @@ Nicos Weg B1
 
 - “内部真题”“押题必中”“包过”。
 - 要求发身份证、准考证、付款截图到群。
+- 代报名却不让你回 Goethe 或官方合作考点核验。
 - 让你转发盗版教材 PDF、音频、课程录屏。
 - 只卖资料，不讲训练方法和反馈。
 
