@@ -46,6 +46,17 @@ Last checked: 2026-05-05
 - B2：新闻/访谈 + 观点文 + 口语讨论。
 - C1/DSH：长文摘要 + 讲座笔记 + 学术写作。
 
+配套本仓库练习：
+
+- [A1 自检训练](../levels/a1-self-check.md)
+- [A2 自检训练](../levels/a2-self-check.md)
+- [B1 自检训练](../levels/b1-self-check.md)
+- [B2 自检训练](../levels/b2-self-check.md)
+- [C1 自检训练](../levels/c1-self-check.md)
+- [DSH 模块原创练习](../exam/dsh-module-drills.md)
+- [B2-C1 学术表达库](../exam/b2-c1-academic-expression-bank.md)
+- [词汇复习闭环](../vocabulary/vocabulary-review-system.md)
+
 不要做：
 
 - 不下载和上传盗版教材、音频、课程录屏。

@@ -13,7 +13,7 @@
 
 ## 快速开始
 
-- 想从 A1 规划到 C1：先读 [A1-C1 德语总路线](docs/learning-paths/a1-c1-roadmap.md)，再按 [A1](docs/levels/a1.md)、[A2](docs/levels/a2.md)、[B1](docs/levels/b1.md)、[B2](docs/levels/b2.md)、[C1](docs/levels/c1.md) 分级推进。
+- 想从 A1 规划到 C1：先读 [A1-C1 德语总路线](docs/learning-paths/a1-c1-roadmap.md)，再按 [A1](docs/levels/a1.md)、[A2](docs/levels/a2.md)、[B1](docs/levels/b1.md)、[B2](docs/levels/b2.md)、[C1](docs/levels/c1.md) 分级推进，并用每级自检页判断是否升级。
 - 想系统学习 B1：先读 [B1 学习路线](docs/learning-paths/b1-roadmap.md)，再配合 [核心语法](docs/grammar/core-grammar.md) 和 [主题词汇](docs/vocabulary/theme-vocabulary.md)。
 - 想准备考试：先看 [德语考试地图](docs/exam/german-exam-map-a1-c1-dsh.md)，再进入 [B1 考试备考](docs/exam/b1-exam-guide.md)、[DSH 备考指南](docs/exam/dsh-prep-guide.md) 或 [TestDaF 与 C1 衔接](docs/exam/testdaf-c1-bridge.md)。
 - 想处理赴德准备：先看 [Germany Prep](docs/germany-prep/README.md)、[赴德学习与生活准备清单](docs/life-in-germany/study-and-life-prep-checklist.md) 和 [预约与办事表达](docs/life-in-germany/appointments-and-offices.md)。
@@ -24,6 +24,7 @@
 - [A1-C1 德语总路线](docs/learning-paths/a1-c1-roadmap.md)
 - [等级升级方法](docs/learning-paths/level-upgrade-method.md)
 - [A1](docs/levels/a1.md) / [A2](docs/levels/a2.md) / [B1](docs/levels/b1.md) / [B2](docs/levels/b2.md) / [C1](docs/levels/c1.md)
+- [A1 自检](docs/levels/a1-self-check.md) / [A2 自检](docs/levels/a2-self-check.md) / [B1 自检](docs/levels/b1-self-check.md) / [B2 自检](docs/levels/b2-self-check.md) / [C1 自检](docs/levels/c1-self-check.md)
 - [B1 学习路线](docs/learning-paths/b1-roadmap.md)
 - [核心语法](docs/grammar/core-grammar.md)
 - [A1-C1 语法升级路线](docs/grammar/a1-c1-grammar-progression.md)
@@ -34,16 +35,20 @@
 - [主题词汇](docs/vocabulary/theme-vocabulary.md)
 - [听力与阅读高频词汇](docs/vocabulary/listening-reading-core-vocabulary.md)
 - [B1 固定搭配](docs/vocabulary/collocations.md)
+- [词汇复习闭环](docs/vocabulary/vocabulary-review-system.md)
 - [德语考试地图](docs/exam/german-exam-map-a1-c1-dsh.md)
 - [B1 考试备考](docs/exam/b1-exam-guide.md)
 - [DSH 备考指南](docs/exam/dsh-prep-guide.md)
+- [DSH 模块原创练习](docs/exam/dsh-module-drills.md)
 - [DSH-2 十二周备考路线](docs/exam/dsh-12-week-plan.md)
 - [TestDaF 与 C1 衔接](docs/exam/testdaf-c1-bridge.md)
+- [B2-C1 学术表达库](docs/exam/b2-c1-academic-expression-bank.md)
 - [听力解题策略](docs/exam/listening-strategy.md)
 - [阅读解题策略](docs/exam/reading-strategy.md)
 - [写作模板](docs/exam/writing-templates.md)
 - [口语模板](docs/exam/speaking-templates.md)
 - [Germany Prep](docs/germany-prep/README.md)
+- [赴德场景德语短语本](docs/germany-prep/scenario-german-phrasebook.md)
 - [赴德学习与生活准备清单](docs/life-in-germany/study-and-life-prep-checklist.md)
 - [德国生活指南](docs/life-in-germany/README.md)
 - [预约与办事表达](docs/life-in-germany/appointments-and-offices.md)
