@@ -33,6 +33,7 @@ Last checked: 2026-05-05
 - [资料分享与社群入口](community-and-sharing.md)
 - [从私人 Obsidian 到公开仓库](obsidian-public-export.md)
 - [如何筛选资源](resource-selection-guide.md)
+- [词汇复习闭环](../vocabulary/vocabulary-review-system.md)
 - [本地资源整理记录](import-log.md)
 - [每日与模考复盘模板](../templates/daily-b1-training-template.md)
 

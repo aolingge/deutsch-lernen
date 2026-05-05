@@ -5,20 +5,20 @@
 ## Now
 
 1. A1-C1 每级练习页
-   验收：为 `docs/levels/` 每一级补 1 个自检页，包含听说读写任务、输出样例和升级判断。
+   状态：已新增 [A1](docs/levels/a1-self-check.md)、[A2](docs/levels/a2-self-check.md)、[B1](docs/levels/b1-self-check.md)、[B2](docs/levels/b2-self-check.md)、[C1](docs/levels/c1-self-check.md) 自检页；后续可继续补更多主题化题组。
 2. DSH 模块化原创练习
-   验收：为 HV/LV/WS/TP/口试各补 1 组原创练习，不复制大学样题原文、音频或答案。
+   状态：已新增 [DSH 模块原创练习](docs/exam/dsh-module-drills.md)；后续可继续扩展多套同难度材料。
 3. Germany-prep 场景德语扩展
-   验收：为 `docs/germany-prep/` 每个高频场景补 5-8 条可替换表达，并链接官方来源。
+   状态：已新增 [赴德场景德语短语本](docs/germany-prep/scenario-german-phrasebook.md)；后续可按城市/大学场景继续拆分。
 
 ## Next
 
-1. B2-C1 学术表达库
-   验收：新增摘要、图表、让步、反驳、引用、转述表达库，明确适用 DSH/TestDaF/C1。
-2. 资源筛选示例
-   验收：给 `docs/resources/resource-selection-guide.md` 补 3 个“为什么保留 / 为什么不收录”的公开案例，帮助贡献者统一标准。
-3. 词汇复习方法页
-   验收：新增 1 篇说明主题词汇如何做复习、默写、听写和固定搭配回顾的短指南，并链接现有词汇文档。
+1. DSH 第二套原创题组
+   验收：为 HV/LV/WS/TP/口试各补第二套原创练习，难度略高于当前题组。
+2. B2-C1 输出批改清单
+   验收：新增摘要、图表、论证、口试四张评分表，帮助自评和互评。
+3. A1-C1 主题词汇扩展
+   验收：按住房、学习、医疗、行政、工作、媒体、环境、教育扩充搭配和例句。
 
 ## Later
 

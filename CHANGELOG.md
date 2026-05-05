@@ -4,6 +4,7 @@
 
 ## 2026-05-05
 
+- Added A1-C1 self-check drills, original DSH module exercises, a B2-C1 academic expression bank, a vocabulary review loop, and a Germany-prep scenario German phrasebook.
 - Expanded the repository from a B1-focused scaffold into an A1-C1 learning system with per-level routes, grammar progression, four-skill training, DSH/TestDaF/C1 guidance, and reusable weekly/DSH templates.
 - Added Germany-prep pages for study application, visa/residence navigation, APS/uni-assist, housing/Anmeldung, banking/insurance, healthcare, transport, work/internship, recognition, and core glossary.
 - Added official-resource indexes and safety boundaries for publishing only sanitized reusable Markdown and external links.

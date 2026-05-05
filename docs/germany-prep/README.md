@@ -16,6 +16,7 @@ Last checked: 2026-05-05
 - [工作与实习](work-internship.md)
 - [职业资格认证](recognition-career.md)
 - [赴德词汇表](glossary.md)
+- [赴德场景德语短语本](scenario-german-phrasebook.md)
 
 ## 使用原则
 
