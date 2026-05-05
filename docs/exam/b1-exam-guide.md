@@ -1,5 +1,12 @@
 # B1 考试备考
 
+配套页：
+
+- [Goethe B1 官方模考使用路线](goethe-b1-mock-exam-workflow.md)
+- [Goethe B1 四项题型与得分策略](goethe-b1-format-and-strategy.md)
+- [Goethe B1 中国报名、考点和防诈骗入口](goethe-b1-china-registration-and-safety.md)
+- [B1 听力例题复盘库](listening-review-bank.md)
+
 ## 考试能力目标
 
 B1 重点考察你能否在常见场景中：
@@ -19,6 +26,8 @@ B1 重点考察你能否在常见场景中：
 3. 不要因为一个陌生词停太久。
 4. 最后检查否定词和时间词。
 
+阅读五类 Teil 的具体动作见：[B1 阅读解题策略](reading-strategy.md)。
+
 ## 听力
 
 听前预测：
@@ -27,6 +36,8 @@ B1 重点考察你能否在常见场景中：
 - 场景在哪里？
 - 可能会出现哪些数字、时间、地点？
 - 问题要找事实还是态度？
+
+听力四类 Teil 的具体动作见：[B1 听力解题策略](listening-strategy.md)。
 
 ## 写作
 
@@ -60,3 +71,8 @@ Ich freue mich auf Ihre Antwort.
 - Ich stimme dir zu.
 - Ich sehe das anders, weil ...
 
+## 训练模板
+
+- [每日 B1 训练模板](../templates/daily-b1-training-template.md)
+- [Goethe B1 模考复盘模板](../templates/mock-exam-review-template.md)
+- [B1 错题复盘模板](../templates/error-review-template.md)

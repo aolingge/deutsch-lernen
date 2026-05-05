@@ -18,6 +18,12 @@ Last checked: 2026-04-21
 - 亮点：Goethe 的资源按主题和等级整理，覆盖 A1 到 C 级别。
 - 使用方法：每周选 1 个主题，例如 `Leben & Alltag` 或 `Arbeiten & Beruf`，把里面的词汇和句型整理到自己的复习表。
 
+## Goethe Deutsch fuer dich
+
+- Link: [Deutsch fuer dich](https://www.goethe.de/prj/dfd/en/home.cfm)
+- 适合：想用 Goethe 官方练习社区补语法、词汇、阅读和听力的人。
+- 使用方法：把它当作官方补充练习，不要替代完整主线课程；每次只选一个主题或等级任务完成。
+
 ## Goethe: Leben & Alltag
 
 - Link: [Leben & Alltag](https://www.goethe.de/de/spr/ueb/lua.html)
@@ -53,4 +59,3 @@ Last checked: 2026-04-21
 - Link: [DeutschAkademie Online-Deutschkurs](https://www.deutschakademie.de/online-deutschkurs/)
 - 适合：想多做语法题和等级练习的人。
 - 使用方法：适合作为第二练习来源，不建议同时开太多练习站，避免只收藏不完成。
-
