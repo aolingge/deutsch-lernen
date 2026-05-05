@@ -1,5 +1,7 @@
 # TestDaF 与 C1 衔接
 
+如果你还没确定要考 TestDaF、DSH 还是 telc C1 Hochschule，先看 [德语考试选择树](exam-decision-tree.md)。
+
 `TestDaF = Test Deutsch als Fremdsprache / 德福考试 / 面向希望在德国高校学习的德语学习者。`
 
 TestDaF 不是单纯的 C1 语法考试，而是把阅读、听力、写作、口语分开评为 TDN 3、TDN 4、TDN 5。很多德语授课大学常见目标是四项 TDN 4，但具体要求必须查目标大学。

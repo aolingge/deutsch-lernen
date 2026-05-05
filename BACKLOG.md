@@ -4,11 +4,13 @@
 
 ## Now
 
-1. A1-C1 每级练习页
+1. 新手入口和学习路径
+   状态：已新增 [学习系统总地图](docs/README.md)、[新手学习入口](docs/learning-paths/start-here.md)、[前 30 天启动计划](docs/learning-paths/zero-to-b1-30-day-starter.md)、[语法到输出地图](docs/learning-paths/grammar-to-output-map.md)、[德语考试选择树](docs/exam/exam-decision-tree.md) 和 [学习资源组合包](docs/resources/resource-packages.md)。
+2. A1-C1 每级练习页
    状态：已新增 [A1](docs/levels/a1-self-check.md)、[A2](docs/levels/a2-self-check.md)、[B1](docs/levels/b1-self-check.md)、[B2](docs/levels/b2-self-check.md)、[C1](docs/levels/c1-self-check.md) 自检页；后续可继续补更多主题化题组。
-2. DSH 模块化原创练习
+3. DSH 模块化原创练习
    状态：已新增 [DSH 模块原创练习](docs/exam/dsh-module-drills.md)；后续可继续扩展多套同难度材料。
-3. Germany-prep 场景德语扩展
+4. Germany-prep 场景德语扩展
    状态：已新增 [赴德场景德语短语本](docs/germany-prep/scenario-german-phrasebook.md)；后续可按城市/大学场景继续拆分。
 
 ## Next

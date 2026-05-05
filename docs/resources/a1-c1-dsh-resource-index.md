@@ -4,6 +4,8 @@
 
 Last checked: 2026-05-05
 
+如果你想直接按阶段选组合，先看 [学习资源组合包](resource-packages.md)。如果你是第一次打开仓库，先看 [新手学习入口](../learning-paths/start-here.md)。
+
 ## 官方和高可信主线
 
 | 资源 | 链接 | 适合阶段 | 怎么用 |

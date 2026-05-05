@@ -4,6 +4,8 @@
 
 Last checked: 2026-05-05
 
+如果你还在规划学习路线，先看 [新手学习入口](../learning-paths/start-here.md) 和 [学习资源组合包](../resources/resource-packages.md)，再回到这里处理赴德清单。
+
 ## 入口
 
 - [时间线清单](timeline-checklist.md)
