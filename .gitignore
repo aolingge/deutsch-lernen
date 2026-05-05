@@ -11,6 +11,13 @@ screenshots/
 recordings/
 audio/
 video/
+docs/maintenance/
+scripts/ralph/
+.obsidian/
+.codex/
+.omx/
+00_Inbox/
+90_System/
 
 # Secrets and local config
 .env
@@ -21,6 +28,8 @@ video/
 *.pfx
 *.kdbx
 secrets.*
+id_rsa
+id_ed25519
 
 # Logs and generated files
 *.log
@@ -30,3 +39,24 @@ temp/
 .DS_Store
 Thumbs.db
 
+# Binary/private source material should stay local unless explicitly reviewed.
+*.pdf
+*.doc
+*.docx
+*.xls
+*.xlsx
+*.ppt
+*.pptx
+*.zip
+*.7z
+*.rar
+*.jpg
+*.jpeg
+*.png
+*.gif
+*.webp
+*.mp3
+*.mp4
+*.m4a
+*.wav
+*.mov

@@ -9,6 +9,7 @@ $root = Resolve-Path -LiteralPath $Path
 $patterns = @(
     @{ Name = "email"; Regex = "[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}" },
     @{ Name = "phone-like"; Regex = "(\+?\d[\d\s().-]{7,}\d)" },
+    @{ Name = "id-card-like"; Regex = "\b\d{17}[\dXx]\b" },
     @{ Name = "token-like"; Regex = "(ghp_|gho_|sk-[A-Za-z0-9]|xox[baprs]-|AKIA[0-9A-Z]{16})" },
     @{ Name = "private-key"; Regex = "BEGIN (RSA |OPENSSH |EC |DSA )?PRIVATE KEY" },
     @{ Name = "password-word"; Regex = "(?i)(password|passwd|pwd|secret|token|cookie|api[_-]?key)\s*[:=]" },
@@ -16,14 +17,26 @@ $patterns = @(
     @{ Name = "obsidian-private-path"; Regex = "[A-Z]:\\笔记保存obstian|[A-Z]:\\.*Obsidian|[A-Z]:\\.*OneNote" }
 )
 
+$localOnlyPathRegex = @(
+    "\\docs\\maintenance\\",
+    "\\scripts\\ralph\\",
+    "\\.codex\\",
+    "\\.omx\\",
+    "\\.obsidian\\",
+    "\\00_Inbox\\",
+    "\\90_System\\"
+)
+
 $files = Get-ChildItem -LiteralPath $root -Recurse -File -Force |
     Where-Object {
-        $_.FullName -notmatch "\\.git\\" -and
-        $_.FullName -notmatch "\\node_modules\\" -and
-        $_.FullName -notlike "*\tools\privacy-scan.ps1" -and
-        $_.FullName -notmatch "\\private\\" -and
-        $_.FullName -notmatch "\\raw\\" -and
-        $_.FullName -notmatch "\\source(s)?\\"
+        $normalized = $_.FullName -replace "/", "\"
+        $normalized -notmatch "\\.git\\" -and
+        $normalized -notmatch "\\node_modules\\" -and
+        $normalized -notlike "*\tools\privacy-scan.ps1" -and
+        $normalized -notmatch "\\private\\" -and
+        $normalized -notmatch "\\raw\\" -and
+        $normalized -notmatch "\\source(s)?\\" -and
+        -not ($localOnlyPathRegex | Where-Object { $normalized -match $_ })
     }
 
 $hits = @()
