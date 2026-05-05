@@ -1,41 +1,54 @@
 # Deutsch Lernen
 
-一个面向中文学习者的公开德语学习仓库，目标是把德语语言学习、B1 备考、德国生活常识和长期学习方法整理成可复用的开源知识库。
+一个面向中文学习者的公开德语学习仓库，目标是把 A1-C1 德语学习、B1/DSH/TestDaF 备考、赴德学习生活准备和长期学习方法整理成可复用的开源知识库。
 
 > Status: early public scaffold. 内容会持续补全，但仓库只收录可公开、已脱敏、可复用的资料。
 
 ## 适合谁
 
-- 正在从 A1/A2 过渡到 B1 的德语学习者
-- 需要准备 Goethe-Zertifikat B1、DTZ 或类似 B1 考试的人
-- 想了解德国生活、学习、工作、行政办事常识的人
+- 正在从 A1 学到 C1 的德语学习者
+- 需要准备 Goethe、telc、OeSD、TestDaF、DSH 或 DTZ 的人
+- 想了解德国生活、留学申请、工作、行政办事常识的人
 - 想把零散德语笔记整理成长期学习系统的人
 
 ## 快速开始
 
+- 想从 A1 规划到 C1：先读 [A1-C1 德语总路线](docs/learning-paths/a1-c1-roadmap.md)，再按 [A1](docs/levels/a1.md)、[A2](docs/levels/a2.md)、[B1](docs/levels/b1.md)、[B2](docs/levels/b2.md)、[C1](docs/levels/c1.md) 分级推进。
 - 想系统学习 B1：先读 [B1 学习路线](docs/learning-paths/b1-roadmap.md)，再配合 [核心语法](docs/grammar/core-grammar.md) 和 [主题词汇](docs/vocabulary/theme-vocabulary.md)。
-- 想准备考试：先看 [B1 考试备考](docs/exam/b1-exam-guide.md)，再分开练听力、阅读、写作和口语模板。
-- 想处理德国生活场景：先看 [德国生活指南](docs/life-in-germany/README.md) 和 [预约与办事表达](docs/life-in-germany/appointments-and-offices.md)。
+- 想准备考试：先看 [德语考试地图](docs/exam/german-exam-map-a1-c1-dsh.md)，再进入 [B1 考试备考](docs/exam/b1-exam-guide.md)、[DSH 备考指南](docs/exam/dsh-prep-guide.md) 或 [TestDaF 与 C1 衔接](docs/exam/testdaf-c1-bridge.md)。
+- 想处理赴德准备：先看 [Germany Prep](docs/germany-prep/README.md)、[赴德学习与生活准备清单](docs/life-in-germany/study-and-life-prep-checklist.md) 和 [预约与办事表达](docs/life-in-germany/appointments-and-offices.md)。
 - 想找公开资源：先从 [公开学习资源](docs/resources/public-resources.md) 开始，只使用官方或明确可公开的链接。
 
 ## 内容地图
 
+- [A1-C1 德语总路线](docs/learning-paths/a1-c1-roadmap.md)
+- [等级升级方法](docs/learning-paths/level-upgrade-method.md)
+- [A1](docs/levels/a1.md) / [A2](docs/levels/a2.md) / [B1](docs/levels/b1.md) / [B2](docs/levels/b2.md) / [C1](docs/levels/c1.md)
 - [B1 学习路线](docs/learning-paths/b1-roadmap.md)
 - [核心语法](docs/grammar/core-grammar.md)
+- [A1-C1 语法升级路线](docs/grammar/a1-c1-grammar-progression.md)
 - [冠词、格和代词](docs/grammar/cases-and-pronouns.md)
 - [动词时态和情态动词](docs/grammar/verb-tenses-and-modals.md)
 - [B1 必考从句](docs/grammar/subordinate-clauses.md)
+- [A1-C1 四技能训练系统](docs/skills/a1-c1-four-skills-training.md)
 - [主题词汇](docs/vocabulary/theme-vocabulary.md)
 - [听力与阅读高频词汇](docs/vocabulary/listening-reading-core-vocabulary.md)
 - [B1 固定搭配](docs/vocabulary/collocations.md)
+- [德语考试地图](docs/exam/german-exam-map-a1-c1-dsh.md)
 - [B1 考试备考](docs/exam/b1-exam-guide.md)
+- [DSH 备考指南](docs/exam/dsh-prep-guide.md)
+- [DSH-2 十二周备考路线](docs/exam/dsh-12-week-plan.md)
+- [TestDaF 与 C1 衔接](docs/exam/testdaf-c1-bridge.md)
 - [听力解题策略](docs/exam/listening-strategy.md)
 - [阅读解题策略](docs/exam/reading-strategy.md)
 - [写作模板](docs/exam/writing-templates.md)
 - [口语模板](docs/exam/speaking-templates.md)
+- [Germany Prep](docs/germany-prep/README.md)
+- [赴德学习与生活准备清单](docs/life-in-germany/study-and-life-prep-checklist.md)
 - [德国生活指南](docs/life-in-germany/README.md)
 - [预约与办事表达](docs/life-in-germany/appointments-and-offices.md)
 - [公开学习资源](docs/resources/public-resources.md)
+- [A1-C1 与 DSH 资源导航](docs/resources/a1-c1-dsh-resource-index.md)
 - [官方课程与系统学习平台](docs/resources/official-platforms.md)
 - [考试与德国融入资源](docs/resources/exam-and-integration-resources.md)
 - [视频、音频、YouTube 与 B 站资源](docs/resources/video-audio-resources.md)
@@ -43,6 +56,7 @@
 - [如何筛选资源](docs/resources/resource-selection-guide.md)
 - [本地资源整理记录](docs/resources/import-log.md)
 - [更新记录](CHANGELOG.md)
+- [公开 Backlog](BACKLOG.md)
 - [隐私与脱敏规则](PRIVACY.md)
 - [安全与公开内容报告](SECURITY.md)
 - [贡献指南](CONTRIBUTING.md)

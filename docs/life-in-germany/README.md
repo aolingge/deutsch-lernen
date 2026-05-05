@@ -17,6 +17,12 @@ Last checked: 2026-04-22
 - Behoerde：政府部门办事
 - Kultur：节日、礼貌和社会规则
 
+## 赴德准备入口
+
+- [赴德学习与生活准备清单](study-and-life-prep-checklist.md)
+- [官方链接与场景德语](official-links-and-scenario-german.md)
+- [预约与办事表达](appointments-and-offices.md)
+
 ## 官方入口
 
 这些入口适合先确认政策和流程，再回到本仓库练表达。不要把官方 PDF、表格或个人申请材料复制进仓库。

@@ -42,6 +42,19 @@ Last checked: 2026-04-21
 - 适合：目标是德国大学入学、需要 B2-C1 学术德语的人。
 - 注意：TestDaF 不是 B1 考试，适合中高级阶段作为后续目标。
 
+## DSH
+
+- Link: [FaDaF: Was ist die DSH?](https://www.fadaf.de/dsh/start/was-ist-die-dsh/)
+- Link: [HRK Sprachnachweis Deutsch](https://www.hrk.de/themen/internationales/internationale-studierende-und-forschende/hochschulzugang-fuer-internationale-studierende/sprachnachweis-deutsch/)
+- 适合：目标是德国德语授课大学、需要校内或注册 DSH 证明的人。
+- 怎么用：先读目标大学语言要求，再决定是否准备 DSH。备考路线见 [DSH 备考指南](../exam/dsh-prep-guide.md)。
+
+## telc Deutsch C1 Hochschule
+
+- Link: [telc Deutsch C1 Hochschule](https://www.telc.net/sprachpruefungen/zertifikatspruefung/deutsch/telc-deutsch-c1-hochschule/)
+- 适合：需要高校入学方向 C1 德语证明的人。
+- 怎么用：下载官方 Übungstest，重点练学术阅读、听力笔记、写作和口语讨论。
+
 ## OeSD
 
 - Link: [OeSD Prüfungen](https://www.osd.at/)
@@ -53,4 +66,3 @@ Last checked: 2026-04-21
 - 官方样题可以链接，不要把 PDF 全文复制进仓库。
 - 不要上传付费教材扫描、课程讲义、机构内部题库。
 - B 站或网盘里的“真题合集”来源不明时，只能作为搜索线索，不应作为仓库推荐主入口。
-
