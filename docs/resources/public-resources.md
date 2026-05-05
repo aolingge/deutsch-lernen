@@ -20,9 +20,13 @@ Last checked: 2026-04-21
 ## 分类页
 
 - [官方课程与系统学习平台](official-platforms.md)
+- [B1 学习网站与练习资源](b1-learning-websites.md)
 - [考试与德国融入资源](exam-and-integration-resources.md)
 - [视频、音频、YouTube 与 B 站资源](video-audio-resources.md)
 - [词典、语法和学习工具](dictionaries-and-tools.md)
+- [德语语法外链资源库](grammar-resource-index.md)
+- [资料分享与社群入口](community-and-sharing.md)
+- [从私人 Obsidian 到公开仓库](obsidian-public-export.md)
 - [如何筛选资源](resource-selection-guide.md)
 - [本地资源整理记录](import-log.md)
 
@@ -33,4 +37,3 @@ Last checked: 2026-04-21
 3. 每周固定做一次听读材料，例如 Easy German、Slow German 或 DW Top-Thema。
 4. 考前只刷官方样题，不要被来源不明的“真题包”带偏。
 5. B 站和 YouTube 适合补讲解、听力和语感，但不要把刷视频当成完整学习。
-

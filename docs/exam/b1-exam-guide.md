@@ -1,5 +1,10 @@
 # B1 考试备考
 
+配套页：
+
+- [Goethe B1 官方模考使用路线](goethe-b1-mock-exam-workflow.md)
+- [B1 听力例题复盘库](listening-review-bank.md)
+
 ## 考试能力目标
 
 B1 重点考察你能否在常见场景中：
@@ -59,4 +64,3 @@ Ich freue mich auf Ihre Antwort.
 - Ein Nachteil ist, dass ...
 - Ich stimme dir zu.
 - Ich sehe das anders, weil ...
-
