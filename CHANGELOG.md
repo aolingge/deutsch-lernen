@@ -2,6 +2,10 @@
 
 这个文件记录仓库中对公开学习者有用的内容更新。它不是个人学习日志，也不记录本地私有资料来源。
 
+## 2026-05-08
+
+- Added an English content map to help non-Chinese collaborators find the main learning paths, exam prep pages, Germany-prep notes, resource indexes, and contribution/safety policies.
+
 ## 2026-05-05
 
 - Added beginner-friendly integration pages: a docs system map, a start-here guide, a 30-day starter plan, a grammar-to-output map, an exam decision tree, and resource packages to connect the existing notes into a learnable path.

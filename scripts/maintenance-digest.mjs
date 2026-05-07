@@ -85,6 +85,7 @@ const openBugs = issues.filter((issue) => !issue.pull_request && issue.title !==
 const failedRuns = runs.workflow_runs.filter((run) =>
   ["push", "schedule", "workflow_dispatch"].includes(run.event) &&
   new Date(run.created_at) >= sevenDaysAgo &&
+  run.status === "completed" &&
   !["success", "skipped", "cancelled"].includes(run.conclusion)
 );
 const hasProblems = stalePulls.length > 0 || openBugs.length > 0 || failedRuns.length > 0 ||
