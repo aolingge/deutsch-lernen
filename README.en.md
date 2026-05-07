@@ -22,6 +22,37 @@ An open German-learning knowledge base for Chinese speakers. It organizes A1-C1 
 - Preparing for Germany: see [Germany Prep](docs/germany-prep/README.md), the [study and life checklist](docs/life-in-germany/study-and-life-prep-checklist.md), and [appointments/offices phrases](docs/life-in-germany/appointments-and-offices.md).
 - Looking for public resources: use [resource packages](docs/resources/resource-packages.md) and [public resources](docs/resources/public-resources.md).
 
+## Content Map
+
+- [System map](docs/README.md)
+- [Start-here guide](docs/learning-paths/start-here.md)
+- [Zero-to-B1 30-day starter](docs/learning-paths/zero-to-b1-30-day-starter.md)
+- [A1-C1 roadmap](docs/learning-paths/a1-c1-roadmap.md)
+- [Level upgrade method](docs/learning-paths/level-upgrade-method.md)
+- [Grammar-to-output map](docs/learning-paths/grammar-to-output-map.md)
+- [A1](docs/levels/a1.md) / [A2](docs/levels/a2.md) / [B1](docs/levels/b1.md) / [B2](docs/levels/b2.md) / [C1](docs/levels/c1.md)
+- [A1 self-check](docs/levels/a1-self-check.md) / [A2 self-check](docs/levels/a2-self-check.md) / [B1 self-check](docs/levels/b1-self-check.md) / [B2 self-check](docs/levels/b2-self-check.md) / [C1 self-check](docs/levels/c1-self-check.md)
+- [B1 roadmap](docs/learning-paths/b1-roadmap.md)
+- [Core grammar](docs/grammar/core-grammar.md)
+- [A1-C1 grammar progression](docs/grammar/a1-c1-grammar-progression.md)
+- [Theme vocabulary](docs/vocabulary/theme-vocabulary.md)
+- [A1-C1 four-skills training](docs/skills/a1-c1-four-skills-training.md)
+- [German exam map](docs/exam/german-exam-map-a1-c1-dsh.md)
+- [Exam decision tree](docs/exam/exam-decision-tree.md)
+- [B1 exam guide](docs/exam/b1-exam-guide.md)
+- [DSH prep guide](docs/exam/dsh-prep-guide.md)
+- [DSH module drills](docs/exam/dsh-module-drills.md)
+- [TestDaF to C1 bridge](docs/exam/testdaf-c1-bridge.md)
+- [Germany Prep](docs/germany-prep/README.md)
+- [Germany scenario phrasebook](docs/germany-prep/scenario-german-phrasebook.md)
+- [Study and life checklist](docs/life-in-germany/study-and-life-prep-checklist.md)
+- [Public resources](docs/resources/public-resources.md)
+- [Resource packages](docs/resources/resource-packages.md)
+- [Backlog](BACKLOG.md)
+- [Privacy and redaction rules](PRIVACY.md)
+- [Security and public-content reporting](SECURITY.md)
+- [Contributing guide](CONTRIBUTING.md)
+
 ## Maintenance Principles
 
 1. Practical before complete: every note should prefer examples, scenarios, and common mistakes.
