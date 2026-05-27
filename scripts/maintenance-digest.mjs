@@ -4,6 +4,10 @@ const token = process.env.GITHUB_TOKEN;
 const repository = process.env.GITHUB_REPOSITORY;
 
 if (!token || !repository) {
+  if (!process.env.GITHUB_ACTIONS) {
+    console.log("Skipping maintenance digest: GITHUB_TOKEN and GITHUB_REPOSITORY are only required for GitHub Actions runs.");
+    process.exit(0);
+  }
   throw new Error("GITHUB_TOKEN and GITHUB_REPOSITORY are required.");
 }
 
