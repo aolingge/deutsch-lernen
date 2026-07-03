@@ -20,7 +20,7 @@ Last checked: 2026-05-05
 | 入口 | 链接 | 怎么用 |
 | --- | --- | --- |
 | 北京考试时间与报名信息 | [北京报名信息](https://www.goethe.de/ins/cn/zh/spr/prf/anm.html) | 查北京分院考试日期、报名开放时间和通知 |
-| 北京 B1 在线报名表 | [B1 Anmeldung](https://www.goethe.de/ins/cn/de/spr/prf/anm/b1anm.html) | 只在准备报名时打开，不在公开笔记里保存个人信息 |
+| 北京 B1 报名入口 | [北京报名信息](https://www.goethe.de/ins/cn/zh/spr/prf/anm.html) | 只在准备报名时从官方入口进入，不在公开笔记里保存个人信息 |
 | 北京成绩与证书 | [成绩查询](https://www.goethe.de/ins/cn/zh/spr/prf/erg.html) | 查成绩查询、证书领取或邮寄说明 |
 | 上海 Goethe 考试页 | [上海考试总览](https://www.goethe.de/ins/sha/de/spr/prf.html) | 查上海考点考试与报名信息 |
 | 中国考试中心列表 | [官方考试中心入口](https://www.goethe.de/ins/cn/zh/m/ueb/koo/pfz.html) | 找中国大陆其他考试中心入口 |
