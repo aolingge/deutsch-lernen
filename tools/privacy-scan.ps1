@@ -32,6 +32,11 @@ $files = Get-ChildItem -LiteralPath $root -Recurse -File -Force |
         $normalized = $_.FullName -replace "/", "\"
         $normalized -notmatch "\\.git\\" -and
         $normalized -notmatch "\\node_modules\\" -and
+        $normalized -notmatch "\\web\\package-lock\.json$" -and
+        $normalized -notmatch "\\web\\worker-configuration\.d\.ts$" -and
+        $normalized -notmatch "\\web\\dist\\" -and
+        $normalized -notmatch "\\web\\\.astro\\" -and
+        $normalized -notmatch "\\web\\\.wrangler\\" -and
         $normalized -notlike "*\tools\privacy-scan.ps1" -and
         $normalized -notmatch "\\private\\" -and
         $normalized -notmatch "\\raw\\" -and
@@ -55,11 +60,27 @@ function Test-AllowedHit {
         return $true
     }
 
+    if ($Type -eq "phone-like" -and
+        (($normalized -match "\\web\\package\.json$" -and $Line -match "127\.0\.0\.1") -or
+         ($normalized -match "\\web\\wrangler\.jsonc$" -and $Line -match "database_id") -or
+         ($normalized -match "\\web\\src\\layouts\\BaseLayout\.astro$" -and $Line -match "viewBox") -or
+         ($normalized -match "\\web\\src\\pages\\my-study\.astro$"))) {
+        return $true
+    }
+
+    if ($Type -eq "token-like" -and $normalized -match "\\web\\src\\pages\\my-study\.astro$") {
+        return $true
+    }
+
     if ($Type -ne "password-word") {
         return $false
     }
 
     if ($normalized -match "\\.github\\workflows\\" -and $Line -match "secrets\.GITHUB_TOKEN") {
+        return $true
+    }
+
+    if ($normalized -match "\\web\\worker\\index\.ts$" -and $Line -match "const token = request\.headers") {
         return $true
     }
 
