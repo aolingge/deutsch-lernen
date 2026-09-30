@@ -1,0 +1,3 @@
+<script is:inline>
+(() => { const path = location.pathname; if (path.startsWith('/admin') || path.startsWith('/api')) return; const key = `deutsch-hub.view.${path}`; if (sessionStorage.getItem(key)) return; sessionStorage.setItem(key, '1'); const eventId = crypto.randomUUID().replaceAll('-', ''); fetch('/api/visit', { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ eventId, path }) }).catch(() => {}); })();
+</script>

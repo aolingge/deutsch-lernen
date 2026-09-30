@@ -1,0 +1,28 @@
+---
+// @ts-nocheck
+const { title = '德语学习导航', description = '把德语课程、考试、新闻和学习工具整理成一张清晰的地图。' } = Astro.props;
+import PageViewTracker from '../components/PageViewTracker.astro';
+---
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="description" content={description} />
+    <title>{title} · Deutsch Lernen</title>
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231d4ed8'/%3E%3Cpath d='M17 18h30v8H26v6h17v8H26v6h21v8H17z' fill='white'/%3E%3C/svg%3E" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="/"><span class="brand-mark">DE</span><span>德语学习导航<small>Deutsch Lernen</small></span></a>
+      <nav aria-label="主导航"><a href="/resources/">全部资源</a><a href="/levels/b1/">分级路线</a><a href="/exams/">考试专区</a><a href="/news/">新闻阅读</a><a href="/my-study/">我的学习</a></nav>
+    </header>
+    <main>{Astro.children}</main>
+    <footer class="site-footer"><div><strong>Deutsch Lernen</strong><p>为中文学习者整理的德语学习与考试资源地图。</p></div><div><a href="/sources/">来源与核验</a><a href="/privacy/">隐私说明</a><a href="https://github.com/aolingge/deutsch-lernen">GitHub 仓库</a></div><p class="footer-note">链接由原站提供，本网站不镜像第三方教材或课程内容。</p></footer>
+    <PageViewTracker />
+  </body>
+</html>
+<style is:global>
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap');
+:root{--ink:#172033;--muted:#687386;--line:#d9e0ea;--paper:#f8fafc;--blue:#2055d6;--blue-deep:#17378e;--mint:#dff5e9;--gold:#f5c451;--red:#c2413b}*{box-sizing:border-box}html{background:var(--paper);color:var(--ink);font-family:Manrope,ui-sans-serif,sans-serif}body{margin:0;min-width:320px}a{color:inherit}.site-header{max-width:1260px;margin:auto;padding:18px 28px;display:flex;align-items:center;justify-content:space-between;gap:28px}.brand{display:flex;align-items:center;gap:10px;text-decoration:none;font-weight:800;letter-spacing:-.02em}.brand small{display:block;color:var(--muted);font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.06em;margin-top:2px}.brand-mark{background:var(--blue);color:white;border-radius:8px;padding:9px 7px;font:500 13px 'DM Mono',monospace}.site-header nav{display:flex;gap:20px;font-size:13px;font-weight:600}.site-header nav a{text-decoration:none;color:#546075}.site-header nav a:hover{color:var(--blue)}main{min-height:68vh}.site-footer{max-width:1260px;margin:80px auto 0;padding:30px 28px 45px;border-top:1px solid var(--line);display:flex;gap:40px;flex-wrap:wrap;color:var(--muted);font-size:13px}.site-footer strong{color:var(--ink)}.site-footer p{margin:8px 0}.site-footer a{margin-right:18px}.footer-note{flex-basis:100%;font-size:11px}@media(max-width:760px){.site-header{padding:15px 18px;align-items:flex-start}.site-header nav{gap:10px;overflow:auto;white-space:nowrap;padding-top:6px}.site-header nav a:nth-child(n+4){display:none}.site-footer{padding:24px 18px}.footer-note{margin-top:0}}
+</style>

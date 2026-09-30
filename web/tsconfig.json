@@ -1,0 +1,10 @@
+{
+  "extends": "astro/tsconfigs/strict",
+  "compilerOptions": {
+    "allowJs": true,
+    "checkJs": true,
+    "skipLibCheck": true,
+    "types": ["node"]
+  },
+  "exclude": ["scripts", "tests", "dist", "src/pages/api", "src/pages/my-study.astro", "src/pages/resource/[slug].astro"]
+}
