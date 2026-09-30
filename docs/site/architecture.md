@@ -23,7 +23,9 @@ npm run dev
 ## 线上边界
 
 - 公开目录由静态页面和 `GET /api/public-catalog` 提供。
-- `web/migrations/0001_catalog.sql` 到 `0003_stats.sql` 为 D1 资源、新闻、访问量迁移。
+- `web/migrations/0001_catalog.sql` 到 `0005_live_catalog_and_atomic_visits.sql` 为 D1 资源、新闻、访问量、在线目录和审计迁移。
 - `POST /api/visit` 在 D1 配置后才统计服务端浏览量；未配置时返回 503，不展示伪造数字。
-- 管理 API 在 Access 验证完成前默认返回 403。不要把 `admin-auth-not-configured` 改成匿名写入。
-- `wrangler.jsonc` 中的 D1 ID 仍是占位符，正式部署前必须用实际目标数据库 ID 生成生产配置，不能提交凭据。
+- 管理 API 使用 Cloudflare Access JWT、issuer/audience/email 校验和 `ADMIN_EMAILS` 白名单；未配置或未验证身份时默认返回 403。不要把 `admin-auth-not-configured` 改成匿名写入。
+- `catalog_entries` 保存在线目录草稿与发布状态，`catalog_audit` 留存版本审计；公开 API 只返回已发布条目。
+- 访问量通过 D1 唯一事件与 trigger 原子汇总，并使用 `VISIT_LIMIT` 限制请求频率。
+- Worker 与静态 Assets 同域提供；`/api/*` 和 `/resource/*` 由 Worker 优先路由。

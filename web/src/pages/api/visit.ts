@@ -1,1 +1,0 @@
-export function POST() { return new Response(JSON.stringify({ accepted: false, reason: '请通过 Cloudflare Worker 访问统计服务' }), { status: 503, headers: { 'content-type': 'application/json; charset=utf-8' } }); }

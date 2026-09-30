@@ -1,82 +1,111 @@
-import catalog from '../data/resources.json';
+import seed from '../data/resources.json';
+import categories from '../data/categories.json';
 import { createRemoteJWKSet, jwtVerify } from 'jose';
+import { validateResource } from '../src/lib/catalog-schema.mjs';
 
-type Env = { DB?: D1Database; ASSETS?: Fetcher; ACCESS_ISSUER?: string; ACCESS_AUDIENCE?: string; ADMIN_EMAILS?: string };
-const json = (body: unknown, status = 200, headers: Record<string, string> = {}) => new Response(JSON.stringify(body), { status, headers: { 'content-type': 'application/json; charset=utf-8', ...headers } });
-const dayInHk = () => new Intl.DateTimeFormat('en-CA', { timeZone: 'Asia/Hong_Kong' }).format(new Date());
-
-async function adminEmail(request: Request, env: Env) {
+interface Statement { bind(...values: unknown[]): Statement; run(): Promise<{meta:{changes:number}}> ; first<T=Record<string,unknown>>():Promise<T|null>; all<T=Record<string,unknown>>():Promise<{results:T[]}>; }
+type Env = { DB?: {prepare(sql:string):Statement}; ASSETS: {fetch(request:Request):Promise<Response>}; VISIT_LIMIT?: {limit(input:{key:string}):Promise<{success:boolean}>}; ACCESS_ISSUER?: string; ACCESS_AUDIENCE?: string; ADMIN_EMAILS?: string };
+const json = (body: unknown, status = 200, headers: Record<string,string> = {}) => new Response(JSON.stringify(body), { status, headers: { 'content-type': 'application/json; charset=utf-8', 'cache-control': 'no-store', 'x-content-type-options': 'nosniff', ...headers } });
+const jwksByIssuer = new Map<string, ReturnType<typeof createRemoteJWKSet>>();
+export async function adminEmail(request: Request, env: Env) {
   if (!env.ACCESS_ISSUER || !env.ACCESS_AUDIENCE || !env.ADMIN_EMAILS) return null;
-  const token = request.headers.get('Cf-Access-Jwt-Assertion');
-  if (!token) return null;
+  const assertion = request.headers.get('Cf-Access-Jwt-Assertion');
+  if (!assertion) return null;
   try {
     const issuer = env.ACCESS_ISSUER.replace(/\/$/, '');
-    const jwks = createRemoteJWKSet(new URL(`${issuer}/cdn-cgi/access/certs`));
-    const { payload } = await jwtVerify(token, jwks, { issuer, audience: env.ACCESS_AUDIENCE });
-    const email = typeof payload.email === 'string' ? payload.email.toLowerCase() : '';
-    return env.ADMIN_EMAILS.split(',').map((value) => value.trim().toLowerCase()).includes(email) ? email : null;
+    if (!/^https:\/\/[a-z0-9-]+\.cloudflareaccess\.com$/.test(issuer)) return null;
+    let jwks = jwksByIssuer.get(issuer);
+    if (!jwks) { jwks = createRemoteJWKSet(new URL(issuer + '/cdn-cgi/access/certs')); jwksByIssuer.set(issuer, jwks); }
+    const { payload } = await jwtVerify(assertion, jwks, { issuer, audience: env.ACCESS_AUDIENCE, algorithms: ['RS256'] });
+    if (typeof payload.exp !== 'number' || typeof payload.email !== 'string') return null;
+    const email = payload.email.toLowerCase();
+    return env.ADMIN_EMAILS.split(',').map(v => v.trim().toLowerCase()).includes(email) ? email : null;
   } catch { return null; }
 }
-
-const resourceFields = ['id','slug','titleOriginal','titleZh','descriptionZh','howToUseZh','primaryCategory','tags','levels','levelBasis','skills','exams','formats','price','access','languages','sourceName','url','canonicalUrl','rights','status','linkStatus','lastEditorialCheckedAt'] as const;
-const normalizeResource = (value: Record<string, unknown>) => Object.fromEntries(resourceFields.map((key) => [key, value[key] ?? null]));
-async function adminResources(request: Request, env: Env, email: string) {
-  if (!env.DB) return json({ ok: false, error: 'database-unavailable' }, 503);
+async function publicCatalog(env: Env) {
+  if (!env.DB) return { resources: seed.filter(r => r.status === 'published'), categories };
+  const rows = await env.DB.prepare("SELECT payload_json FROM catalog_entries WHERE status = 'published' ORDER BY id").all<{payload_json: string}>();
+  return { resources: rows.results.map(r => validateResource(JSON.parse(r.payload_json))), categories };
+}
+async function admin(request: Request, env: Env, path: string) {
+  const email = await adminEmail(request, env);
+  if (!email) return json({ error: env.ACCESS_ISSUER ? 'forbidden' : 'admin-auth-not-configured' }, 403);
+  if (!env.DB) return json({ error: 'database-unavailable' },503);
+  if (path === '/api/admin/session') return json({ ok:true });
+  if (path === '/api/admin/export') return json({ schemaVersion:1, ...(await publicCatalog(env)) });
+  if (path !== '/api/admin/resources') return json({ error:'not-found' },404);
   if (request.method === 'GET') {
-    const rows = await env.DB.prepare('SELECT * FROM resources ORDER BY updated_at DESC').all();
-    return json({ ok: true, resources: rows.results });
+    const rows = await env.DB.prepare('SELECT payload_json, revision FROM catalog_entries ORDER BY id').all<{payload_json:string;revision:number}>();
+    return json({ resources: rows.results.map(r => ({ ...JSON.parse(r.payload_json), revision:r.revision })), categories });
   }
-  if (request.method !== 'PUT' && request.method !== 'POST') return json({ ok: false, error: 'method-not-allowed' }, 405);
-  let input: Record<string, unknown>; try { input = await request.json(); } catch { return json({ ok: false, error: 'invalid-json' }, 400); }
-  const item = normalizeResource(input); const required = ['id','slug','titleZh','descriptionZh','howToUseZh','primaryCategory','sourceName','url','canonicalUrl'];
-  if (required.some((key) => typeof item[key] !== 'string' || !item[key])) return json({ ok: false, error: 'missing-required-field' }, 400);
-  const now = new Date().toISOString(); const revision = Number(input.revision ?? 1);
+  if (!['POST','PUT'].includes(request.method)) return json({error:'method-not-allowed'},405,{allow:'GET, POST, PUT'});
+  if (request.headers.get('origin') !== new URL(request.url).origin) return json({error:'cross-origin-write'},403);
+  if (!request.headers.get('content-type')?.startsWith('application/json')) return json({error:'expected-json'},415);
+  const raw = await request.text();
+  if (raw.length > 32768) return json({error:'resource-too-large'},413);
+  let input: Record<string,unknown>;
+  let item: ReturnType<typeof validateResource>;
+  try { input=JSON.parse(raw); item=validateResource(input); } catch (error) { return json({error:'invalid-resource',message:String(error)},400); }
+  const now=new Date().toISOString();
+  const values=[item.slug,item.canonicalUrl,item.primaryCategory,item.status,JSON.stringify(item),now,email];
   try {
-    const exists = await env.DB.prepare('SELECT revision FROM resources WHERE id = ?').bind(item.id).first<{ revision: number }>();
-    if (request.method === 'PUT' && (!exists || exists.revision !== revision)) return json({ ok: false, error: 'revision-conflict', currentRevision: exists?.revision ?? null }, 409);
-    const nextRevision = exists ? revision + 1 : 1;
-    await env.DB.prepare(`INSERT INTO resources (id,slug,title_original,title_zh,description_zh,how_to_use_zh,primary_category,tags_json,levels_json,level_basis,skills_json,exams_json,formats_json,price,access,languages_json,source_name,url,canonical_url,rights,status,link_status,last_editorial_checked_at,revision,created_at,updated_at) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?) ON CONFLICT(id) DO UPDATE SET slug=excluded.slug,title_original=excluded.title_original,title_zh=excluded.title_zh,description_zh=excluded.description_zh,how_to_use_zh=excluded.how_to_use_zh,primary_category=excluded.primary_category,tags_json=excluded.tags_json,levels_json=excluded.levels_json,level_basis=excluded.level_basis,skills_json=excluded.skills_json,exams_json=excluded.exams_json,formats_json=excluded.formats_json,price=excluded.price,access=excluded.access,languages_json=excluded.languages_json,source_name=excluded.source_name,url=excluded.url,canonical_url=excluded.canonical_url,rights=excluded.rights,status=excluded.status,link_status=excluded.link_status,last_editorial_checked_at=excluded.last_editorial_checked_at,revision=excluded.revision,updated_at=excluded.updated_at`).bind(item.id,item.slug,item.titleOriginal,item.titleZh,item.descriptionZh,item.howToUseZh,item.primaryCategory,JSON.stringify(item.tags ?? []),JSON.stringify(item.levels ?? []),item.levelBasis ?? 'unspecified',JSON.stringify(item.skills ?? []),JSON.stringify(item.exams ?? []),JSON.stringify(item.formats ?? []),item.price ?? 'unknown',item.access ?? 'unknown',JSON.stringify(item.languages ?? []),item.sourceName,item.url,item.canonicalUrl,item.rights ?? 'link-only',item.status ?? 'draft',item.linkStatus ?? 'unchecked',item.lastEditorialCheckedAt ?? null,nextRevision,now,now).run();
-    await env.DB.prepare('INSERT INTO resource_revisions (resource_id,revision,changed_at,changed_by,payload_json) VALUES (?,?,?,?,?)').bind(item.id,nextRevision,now,email,JSON.stringify(item)).run();
-    return json({ ok: true, id: item.id, revision: nextRevision }, exists ? 200 : 201);
-  } catch (error) { console.error(String(error)); return json({ ok: false, error: 'write-failed' }, 500); }
+    if (request.method === 'POST') {
+      await env.DB.prepare('INSERT INTO catalog_entries(slug,canonical_url,category,status,payload_json,updated_at,actor,id) VALUES(?,?,?,?,?,?,?,?)').bind(...values,item.id).run();
+      return json({ok:true,id:item.id,revision:1},201);
+    }
+    if (!Number.isInteger(input.revision) || Number(input.revision)<1) return json({error:'revision-required'},400);
+    const result=await env.DB.prepare('UPDATE catalog_entries SET slug=?,canonical_url=?,category=?,status=?,payload_json=?,updated_at=?,actor=?,revision=revision+1 WHERE id=? AND revision=?').bind(...values,item.id,input.revision).run();
+    if (result.meta.changes !== 1) return json({error:'revision-conflict'},409);
+    return json({ok:true,id:item.id,revision:Number(input.revision)+1});
+  } catch { return json({error:'duplicate-id-slug-or-url'},409); }
 }
-
 async function visit(request: Request, env: Env) {
-  if (!env.DB) return json({ accepted: false, reason: 'stats-unavailable' }, 503);
-  let input: { eventId?: string; path?: string };
-  try { input = await request.json(); } catch { return json({ accepted: false, reason: 'invalid-json' }, 400); }
-  if (!input.eventId || !/^[a-zA-Z0-9_-]{12,80}$/.test(input.eventId) || !input.path?.startsWith('/')) return json({ accepted: false, reason: 'invalid-event' }, 400);
-  const now = new Date().toISOString(); const day = dayInHk();
-  try {
-    const inserted = await env.DB.prepare('INSERT OR IGNORE INTO visit_events (event_id, path, created_at) VALUES (?, ?, ?)').bind(input.eventId, input.path.slice(0, 180), now).run();
-    if (inserted.meta.changes !== 1) return json({ accepted: false, duplicate: true });
-    await env.DB.batch([
-      env.DB.prepare('INSERT INTO visit_daily (day, page_views) VALUES (?, 1) ON CONFLICT(day) DO UPDATE SET page_views = page_views + 1').bind(day),
-      env.DB.prepare('UPDATE visit_totals SET page_views = page_views + 1, updated_at = ? WHERE id = 1').bind(now),
-    ]);
-    return json({ accepted: true });
-  } catch (error) { console.error(JSON.stringify({ message: 'visit counter unavailable', error: String(error) })); return json({ accepted: false, reason: 'stats-not-migrated' }, 503); }
+  if (!env.DB) return json({accepted:false,reason:'stats-unavailable'},503);
+  if (env.VISIT_LIMIT && !(await env.VISIT_LIMIT.limit({key:request.headers.get('cf-connecting-ip')??'local'})).success) return json({accepted:false,reason:'rate-limited'},429,{'retry-after':'60'});
+  if (!request.headers.get('content-type')?.startsWith('application/json')) return json({accepted:false,reason:'expected-json'},415);
+  const origin=request.headers.get('origin');
+  if (origin && origin !== new URL(request.url).origin) return json({accepted:false,reason:'cross-origin'},403);
+  const raw=await request.text();
+  if (raw.length>1024) return json({accepted:false,reason:'too-large'},413);
+  let input: {eventId?:unknown;path?:unknown};
+  try { input=JSON.parse(raw); } catch { return json({accepted:false,reason:'invalid-json'},400); }
+  if (!input || typeof input.eventId !== 'string' || !/^[a-zA-Z0-9_-]{12,80}$/.test(input.eventId) || typeof input.path !== 'string' || !/^\/(?!\/)[a-zA-Z0-9/_-]{0,179}$/.test(input.path) || /^\/(admin|api)(\/|$)/.test(input.path)) return json({accepted:false,reason:'invalid-event'},400);
+  const now=new Date().toISOString();
+  const day=new Intl.DateTimeFormat('en-CA',{timeZone:'Asia/Hong_Kong'}).format(new Date());
+  const inserted=await env.DB.prepare('INSERT OR IGNORE INTO visit_events(event_id,path,created_at,day) VALUES(?,?,?,?)').bind(input.eventId,input.path,now,day).run();
+  return json({accepted:inserted.meta.changes===1,duplicate:inserted.meta.changes!==1});
 }
-
 async function stats(env: Env) {
-  if (!env.DB) return json({ available: false, message: '统计服务尚未配置' }, 503);
-  let row: Record<string, unknown> | null; let today: Record<string, unknown> | null;
-  try { row = await env.DB.prepare('SELECT page_views as totalPageViews, since, updated_at as updatedAt FROM visit_totals WHERE id = 1').first(); today = await env.DB.prepare('SELECT page_views as todayPageViews FROM visit_daily WHERE day = ?').bind(dayInHk()).first(); } catch (error) { console.error(JSON.stringify({ message: 'stats unavailable', error: String(error) })); return json({ available: false, message: '统计数据库尚未初始化' }, 503); }
-  return json({ available: true, totalPageViews: row?.totalPageViews ?? 0, todayPageViews: today?.todayPageViews ?? 0, since: row?.since ?? null, updatedAt: row?.updatedAt ?? null }, 200, { 'cache-control': 'public, max-age=60' });
+  if (!env.DB) return json({available:false,message:'统计服务尚未配置'},503);
+  const day=new Intl.DateTimeFormat('en-CA',{timeZone:'Asia/Hong_Kong'}).format(new Date());
+  const row=await env.DB.prepare('SELECT page_views AS totalPageViews,since,updated_at AS updatedAt FROM visit_totals WHERE id=1').first();
+  const today=await env.DB.prepare('SELECT page_views AS count FROM visit_daily WHERE day=?').bind(day).first<{count:number}>();
+  if (!row) return json({available:false,message:'统计数据库尚未初始化'},503);
+  return json({available:true,...row,todayPageViews:today?.count??0},200,{'cache-control':'public, max-age=30'});
 }
-
-export default { async fetch(request: Request, env: Env): Promise<Response> {
-  const url = new URL(request.url);
-  if (url.pathname === '/api/health') return json({ ok: true, service: 'deutsch-lernen-resource-hub' });
-  if (url.pathname === '/api/stats' && request.method === 'GET') return stats(env);
-  if (url.pathname === '/api/visit' && request.method === 'POST') return visit(request, env);
-  if (url.pathname.startsWith('/api/admin/')) {
-    const email = await adminEmail(request, env);
-    if (!email) return json({ ok: false, error: env.ACCESS_ISSUER ? 'forbidden' : 'admin-auth-not-configured' }, 403);
-    if (url.pathname === '/api/admin/resources') return adminResources(request, env, email);
-    if (url.pathname === '/api/admin/export') return json({ ok: true, resources: (await env.DB?.prepare('SELECT * FROM resources WHERE status = ? ORDER BY id').bind('published').all())?.results ?? [] });
-    return json({ ok: false, error: 'not-found' }, 404);
+export default {
+  async fetch(request: Request, env: Env): Promise<Response> {
+    const url=new URL(request.url); const path=url.pathname.replace(/\/$/,'') || '/';
+    try {
+      if (path==='/api/health') return json({ok:true,service:'deutsch-lernen-resource-hub'});
+      if (path==='/api/public-catalog' && request.method==='GET') return json({schemaVersion:1,...(await publicCatalog(env))},200,{'cache-control':'public, max-age=30'});
+      if (path==='/api/stats' && request.method==='GET') return await stats(env);
+      if (path==='/api/visit' && request.method==='POST') return await visit(request,env);
+      if (path.startsWith('/api/admin/')) return await admin(request,env,path);
+      if (path.startsWith('/api/')) return json({error:'not-found'},404);
+      if (/^\/resource\/[a-z0-9-]+$/.test(path)) {
+        const slug=path.split('/')[2]; const {resources}=await publicCatalog(env);
+        if (!resources.some(r=>r.slug===slug)) return new Response('资源不存在或尚未公开',{status:404});
+        url.pathname='/resource/view/';
+        return env.ASSETS.fetch(new Request(url,request));
+      }
+      const response=await env.ASSETS.fetch(request);
+      const secured=new Response(response.body,response);
+      secured.headers.set('x-content-type-options','nosniff');
+      secured.headers.set('referrer-policy','strict-origin-when-cross-origin');
+      secured.headers.set('x-frame-options','DENY');
+      return secured;
+    } catch { return json({error:'service-unavailable',message:'服务暂不可用，请稍后重试'},503); }
   }
-  if (url.pathname === '/api/public-catalog') return json({ schemaVersion: 1, exportedAt: new Date().toISOString(), resources: catalog.filter((resource) => resource.status === 'published') }, 200, { 'cache-control': 'public, max-age=300' });
-  return env.ASSETS?.fetch(request) ?? new Response('Not found', { status: 404 });
-} } satisfies ExportedHandler<Env & { ASSETS: Fetcher }>;
+};
+

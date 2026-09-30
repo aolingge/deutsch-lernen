@@ -6,5 +6,5 @@
     "skipLibCheck": true,
     "types": ["node"]
   },
-  "exclude": ["scripts", "tests", "dist", "src/pages/api", "src/pages/my-study.astro", "src/pages/resource/[slug].astro"]
+  "exclude": ["scripts", "tests", "dist", "worker-configuration.d.ts", "src/pages/api"]
 }

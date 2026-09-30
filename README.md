@@ -4,7 +4,7 @@
 
 一个面向中文学习者的公开德语学习仓库，目标是把 A1-C1 德语学习、B1/DSH/TestDaF 备考、赴德学习生活准备和长期学习方法整理成可复用的开源知识库。
 
-> Status: early public scaffold. 内容会持续补全，但仓库只收录可公开、已脱敏、可复用的资料。
+> 在线目录：https://deutsch-lernen-resource-hub.pirostonelsonrx688.workers.dev/
 
 ## 适合谁
 

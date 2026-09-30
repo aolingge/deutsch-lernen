@@ -1,0 +1,7 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import catalog from '../data/resources.json' with {type:'json'};
+import {canonicalize,validateResource} from '../src/lib/catalog-schema.mjs';
+test('URL canonicalization rejects script URLs and strips fragment duplicates',()=>{assert.equal(canonicalize('https://example.invalid/test/?utm_source=x#section'),'https://example.invalid/test');assert.throws(()=>canonicalize('javascript:alert(1)'));assert.throws(()=>canonicalize('https://user:pass'+'@'+'example.invalid/'));});
+test('editor input rejects incorrect levels, scalar arrays and non-string identifiers',()=>{assert.throws(()=>validateResource({...catalog[0],levels:['B3']}));assert.throws(()=>validateResource({...catalog[0],tags:'unsafe'}));assert.throws(()=>validateResource({...catalog[0],id:123}));});
+

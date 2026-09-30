@@ -11,19 +11,19 @@
     "deploy": "npm run build && wrangler deploy",
     "worker:types": "wrangler types",
     "check": "astro check",
-    "test": "node --test tests/*.test.mjs",
+    "test": "node scripts/compile-worker-test.mjs && node --test tests/*.test.mjs",
     "validate:catalog": "node scripts/validate-catalog.mjs",
-    "verify": "npm run validate:catalog && npm run test && npm run build"
+    "verify": "npm run validate:catalog && npm run check && npm run test && npm run build"
   },
   "dependencies": {
-    "@astrojs/cloudflare": "^12.6.8",
-    "astro": "^5.14.1",
+    "astro": "7.3.5",
     "jose": "^6.1.0",
     "typescript": "^5.9.3"
   },
   "devDependencies": {
     "@astrojs/check": "^0.9.4",
     "@types/node": "^22.15.0",
-    "wrangler": "^4.39.0"
+    "wrangler": "4.144.0",
+    "esbuild": "0.28.2"
   }
 }

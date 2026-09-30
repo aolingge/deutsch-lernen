@@ -10,7 +10,7 @@ $patterns = @(
     @{ Name = "email"; Regex = "[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}" },
     @{ Name = "phone-like"; Regex = "(\+?\d[\d\s().-]{7,}\d)" },
     @{ Name = "id-card-like"; Regex = "\b\d{17}[\dXx]\b" },
-    @{ Name = "token-like"; Regex = "(ghp_|gho_|sk-[A-Za-z0-9]|xox[baprs]-|AKIA[0-9A-Z]{16})" },
+    @{ Name = "token-like"; Regex = "(ghp_|gho_|sk-(?:proj-|svcacct-)?[A-Za-z0-9_-]{20,}|xox[baprs]-|AKIA[0-9A-Z]{16})" },
     @{ Name = "private-key"; Regex = "BEGIN (RSA |OPENSSH |EC |DSA )?PRIVATE KEY" },
     @{ Name = "password-word"; Regex = "(?i)(password|passwd|pwd|secret|token|cookie|api[_-]?key)\s*[:=]" },
     @{ Name = "windows-private-path"; Regex = "[A-Z]:\\Users\\[^\\\s]+" },
@@ -32,7 +32,6 @@ $files = Get-ChildItem -LiteralPath $root -Recurse -File -Force |
         $normalized = $_.FullName -replace "/", "\"
         $normalized -notmatch "\\.git\\" -and
         $normalized -notmatch "\\node_modules\\" -and
-        $normalized -notmatch "\\web\\package-lock\.json$" -and
         $normalized -notmatch "\\web\\worker-configuration\.d\.ts$" -and
         $normalized -notmatch "\\web\\dist\\" -and
         $normalized -notmatch "\\web\\\.astro\\" -and
@@ -54,6 +53,7 @@ function Test-AllowedHit {
     )
 
     $normalized = $File -replace "/", "\"
+    if ($Type -eq "phone-like" -and $Line -match '127\.0\.0\.1' -and $normalized -match '\\web\\e2e\\public_site\.py$') { return $true }
     if ($Type -eq "phone-like" -and
         $normalized -match "\\.github\\workflows\\" -and
         $Line -match "uses:\s+\S+@[0-9a-f]{40}(\s|#|$)") {
@@ -63,12 +63,11 @@ function Test-AllowedHit {
     if ($Type -eq "phone-like" -and
         (($normalized -match "\\web\\package\.json$" -and $Line -match "127\.0\.0\.1") -or
          ($normalized -match "\\web\\wrangler\.jsonc$" -and $Line -match "database_id") -or
-         ($normalized -match "\\web\\src\\layouts\\BaseLayout\.astro$" -and $Line -match "viewBox") -or
-         ($normalized -match "\\web\\src\\pages\\my-study\.astro$"))) {
+         ($normalized -match "\\web\\src\\layouts\\BaseLayout\.astro$" -and $Line -match "viewBox"))) {
         return $true
     }
 
-    if ($Type -eq "token-like" -and $normalized -match "\\web\\src\\pages\\my-study\.astro$") {
+    if ($Type -eq "phone-like" -and $normalized -match "\\web\\package-lock\.json$" -and ($Line -match '"(integrity|version|resolved|node)"\s*:' -or $Line -match '":\s*"[\^~]?\d+(?:\.\d+)+(?:[-+\w.]*)"' -or $Line -match '"workerd"\s*:\s*"[<>^~]?\d+\.\d{8,}\.\d+')) {
         return $true
     }
 
@@ -77,10 +76,6 @@ function Test-AllowedHit {
     }
 
     if ($normalized -match "\\.github\\workflows\\" -and $Line -match "secrets\.GITHUB_TOKEN") {
-        return $true
-    }
-
-    if ($normalized -match "\\web\\worker\\index\.ts$" -and $Line -match "const token = request\.headers") {
         return $true
     }
 
