@@ -48,11 +48,17 @@ function Test-AllowedHit {
         [string]$Line
     )
 
+    $normalized = $File -replace "/", "\"
+    if ($Type -eq "phone-like" -and
+        $normalized -match "\\.github\\workflows\\" -and
+        $Line -match "uses:\s+\S+@[0-9a-f]{40}(\s|#|$)") {
+        return $true
+    }
+
     if ($Type -ne "password-word") {
         return $false
     }
 
-    $normalized = $File -replace "/", "\"
     if ($normalized -match "\\.github\\workflows\\" -and $Line -match "secrets\.GITHUB_TOKEN") {
         return $true
     }
