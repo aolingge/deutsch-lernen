@@ -54,6 +54,7 @@ function Test-AllowedHit {
 
     $normalized = $File -replace "/", "\"
     if ($Type -eq "phone-like" -and $Line -match '127\.0\.0\.1' -and $normalized -match '\\web\\e2e\\public_site\.py$') { return $true }
+    if ($Type -eq "phone-like" -and $normalized -match "\\README(\.en)?\.md$" -and $Line -match "shields\.io") { return $true }
     if ($Type -eq "phone-like" -and
         $normalized -match "\\.github\\workflows\\" -and
         $Line -match "uses:\s+\S+@[0-9a-f]{40}(\s|#|$)") {
