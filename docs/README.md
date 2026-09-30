@@ -10,6 +10,7 @@
 | 刚开始学或基础不稳 | [前 30 天启动计划](learning-paths/zero-to-b1-30-day-starter.md) | 建立每日闭环 |
 | 想从 A1 学到 C1 | [A1-C1 德语总路线](learning-paths/a1-c1-roadmap.md) | 看每级目标 |
 | 想准备 B1 | [B1 学习路线](learning-paths/b1-roadmap.md) | 进入 B1 四项训练 |
+| 想照着一周计划学习 B1 | [B1 一周训练闭环](learning-paths/b1-weekly-loop.md) | 每天的时间、材料、步骤和成果标准 |
 | 想准备 DSH/TestDaF | [德语考试选择树](exam/exam-decision-tree.md) | 先选考试再训练 |
 | 想去德国生活/学习 | [Germany Prep](germany-prep/README.md) | 查官方入口和场景德语 |
 
@@ -29,6 +30,7 @@
 | --- | --- | --- |
 | 等级路线 | [A1-C1 德语总路线](learning-paths/a1-c1-roadmap.md) | 每级自检结果 |
 | 学习方法 | [等级升级方法](learning-paths/level-upgrade-method.md) | 每周训练安排 |
+| B1 周计划 | [B1 一周训练闭环](learning-paths/b1-weekly-loop.md) | 每天一项可检查的学习成果 |
 | 语法应用 | [语法到输出地图](learning-paths/grammar-to-output-map.md) | 句子、邮件、观点文、报告 |
 | 四技能 | [A1-C1 四技能训练系统](skills/a1-c1-four-skills-training.md) | 听读写说训练记录 |
 | 词汇 | [词汇复习闭环](vocabulary/vocabulary-review-system.md) | 搭配和例句 |

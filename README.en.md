@@ -4,7 +4,7 @@ Languages: [简体中文](README.md) | English
 
 An open German-learning knowledge base for Chinese speakers. It organizes A1-C1 study paths, B1/DSH/TestDaF preparation, Germany study/life readiness, and long-term learning methods into reusable public notes.
 
-> Status: early public scaffold. Content is being expanded, and the repository only accepts public, redacted, reusable material.
+> Live study hub: https://deutsch-lernen-resource-hub.pirostonelsonrx688.workers.dev/
 
 ## Who It Helps
 
@@ -14,6 +14,8 @@ An open German-learning knowledge base for Chinese speakers. It organizes A1-C1 
 - People turning scattered German notes into a long-term learning system.
 
 ## Start Here
+
+The public site now provides 128 Chinese-annotated resources across 12 categories, level and exam filters, resource details, and a browser-local study plan.
 
 - New to the repository: start with the [system map](docs/README.md) and [start-here guide](docs/learning-paths/start-here.md).
 - Planning A1-C1: read the [A1-C1 roadmap](docs/learning-paths/a1-c1-roadmap.md), then use the level pages and self-checks.

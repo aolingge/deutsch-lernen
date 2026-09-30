@@ -1,100 +1,85 @@
-# Deutsch Lernen
+<div align="center">
 
-语言：简体中文 | [English](README.en.md)
+# 德语学习路线与资源地图
 
-一个面向中文学习者的公开德语学习仓库，目标是把 A1-C1 德语学习、B1/DSH/TestDaF 备考、赴德学习生活准备和长期学习方法整理成可复用的开源知识库。
+### 为中文学习者整理的 A1–C1 学习路线、考试训练与德国生活指南
 
-> Status: early public scaffold. 内容会持续补全，但仓库只收录可公开、已脱敏、可复用的资料。
+[打开在线学习站](https://deutsch-lernen-resource-hub.pirostonelsonrx688.workers.dev/) · [从学习路线开始](docs/README.md) · [浏览所有资源](docs/resources/public-resources.md) · [参与改进](CONTRIBUTING.md)
 
-## 适合谁
+[![网站检查](https://github.com/aolingge/deutsch-lernen/actions/workflows/web-check.yml/badge.svg)](https://github.com/aolingge/deutsch-lernen/actions/workflows/web-check.yml)
+[![内容许可：CC BY 4.0](https://img.shields.io/badge/内容许可-CC%20BY%204.0-385b43)](LICENSE-CONTENT.md)
+[![代码许可：MIT](https://img.shields.io/badge/代码许可-MIT-8f3f31)](LICENSE-CODE.md)
 
-- 正在从 A1 学到 C1 的德语学习者
-- 需要准备 Goethe、telc、OeSD、TestDaF、DSH 或 DTZ 的人
-- 想了解德国生活、留学申请、工作、行政办事常识的人
-- 想把零散德语笔记整理成长期学习系统的人
+</div>
 
-## 快速开始
+> 先确定现在的水平和目标，再选一条课程主线。每次学习都留下可检查的结果：一次复述、一封邮件、一段录音或一份错题复盘。
 
-- 第一次打开：先读 [学习系统总地图](docs/README.md) 和 [新手学习入口](docs/learning-paths/start-here.md)，不要从文件列表硬翻。
-- 想从 A1 规划到 C1：先读 [A1-C1 德语总路线](docs/learning-paths/a1-c1-roadmap.md)，再按 [A1](docs/levels/a1.md)、[A2](docs/levels/a2.md)、[B1](docs/levels/b1.md)、[B2](docs/levels/b2.md)、[C1](docs/levels/c1.md) 分级推进，并用每级自检页判断是否升级。
-- 完全零基础或基础很散：用 [从零到 B1 的前 30 天启动计划](docs/learning-paths/zero-to-b1-30-day-starter.md) 建立每日学习闭环。
-- 想系统学习 B1：先读 [B1 学习路线](docs/learning-paths/b1-roadmap.md)，再配合 [核心语法](docs/grammar/core-grammar.md) 和 [主题词汇](docs/vocabulary/theme-vocabulary.md)。
-- 想补语法但不知道怎么用：从 [语法到输出地图](docs/learning-paths/grammar-to-output-map.md) 开始，把语法点放进句子、邮件、观点文和口语。
-- 想准备考试：先看 [德语考试选择树](docs/exam/exam-decision-tree.md) 和 [德语考试地图](docs/exam/german-exam-map-a1-c1-dsh.md)，再进入 [B1 考试备考](docs/exam/b1-exam-guide.md)、[DSH 备考指南](docs/exam/dsh-prep-guide.md) 或 [TestDaF 与 C1 衔接](docs/exam/testdaf-c1-bridge.md)。
-- 想处理赴德准备：先看 [Germany Prep](docs/germany-prep/README.md)、[赴德学习与生活准备清单](docs/life-in-germany/study-and-life-prep-checklist.md) 和 [预约与办事表达](docs/life-in-germany/appointments-and-offices.md)。
-- 想找公开资源：先从 [学习资源组合包](docs/resources/resource-packages.md) 和 [公开学习资源](docs/resources/public-resources.md) 开始，只使用官方或明确可公开的链接。
+## 这个项目适合谁
 
-## 内容地图
+- 想从零开始，或正在从 A1 学到 C1 的中文学习者。
+- 正在准备 Goethe、telc、ÖSD、TestDaF、DSH 或 DTZ 的考生。
+- 想把听、说、读、写训练放进同一周安排的人。
+- 需要查找可靠德语课程、词典、新闻、发音工具或赴德生活资料的人。
 
-- [A1-C1 德语总路线](docs/learning-paths/a1-c1-roadmap.md)
-- [学习系统总地图](docs/README.md)
-- [新手学习入口](docs/learning-paths/start-here.md)
-- [从零到 B1 的前 30 天启动计划](docs/learning-paths/zero-to-b1-30-day-starter.md)
-- [等级升级方法](docs/learning-paths/level-upgrade-method.md)
-- [语法到输出地图](docs/learning-paths/grammar-to-output-map.md)
-- [A1](docs/levels/a1.md) / [A2](docs/levels/a2.md) / [B1](docs/levels/b1.md) / [B2](docs/levels/b2.md) / [C1](docs/levels/c1.md)
-- [A1 自检](docs/levels/a1-self-check.md) / [A2 自检](docs/levels/a2-self-check.md) / [B1 自检](docs/levels/b1-self-check.md) / [B2 自检](docs/levels/b2-self-check.md) / [C1 自检](docs/levels/c1-self-check.md)
-- [B1 学习路线](docs/learning-paths/b1-roadmap.md)
-- [核心语法](docs/grammar/core-grammar.md)
-- [A1-C1 语法升级路线](docs/grammar/a1-c1-grammar-progression.md)
-- [冠词、格和代词](docs/grammar/cases-and-pronouns.md)
-- [动词时态和情态动词](docs/grammar/verb-tenses-and-modals.md)
-- [B1 必考从句](docs/grammar/subordinate-clauses.md)
-- [A1-C1 四技能训练系统](docs/skills/a1-c1-four-skills-training.md)
-- [主题词汇](docs/vocabulary/theme-vocabulary.md)
-- [听力与阅读高频词汇](docs/vocabulary/listening-reading-core-vocabulary.md)
-- [B1 固定搭配](docs/vocabulary/collocations.md)
-- [词汇复习闭环](docs/vocabulary/vocabulary-review-system.md)
-- [德语考试地图](docs/exam/german-exam-map-a1-c1-dsh.md)
-- [德语考试选择树](docs/exam/exam-decision-tree.md)
-- [B1 考试备考](docs/exam/b1-exam-guide.md)
-- [DSH 备考指南](docs/exam/dsh-prep-guide.md)
-- [DSH 模块原创练习](docs/exam/dsh-module-drills.md)
-- [DSH-2 十二周备考路线](docs/exam/dsh-12-week-plan.md)
-- [TestDaF 与 C1 衔接](docs/exam/testdaf-c1-bridge.md)
-- [B2-C1 学术表达库](docs/exam/b2-c1-academic-expression-bank.md)
-- [听力解题策略](docs/exam/listening-strategy.md)
-- [阅读解题策略](docs/exam/reading-strategy.md)
-- [写作模板](docs/exam/writing-templates.md)
-- [口语模板](docs/exam/speaking-templates.md)
-- [Germany Prep](docs/germany-prep/README.md)
-- [赴德场景德语短语本](docs/germany-prep/scenario-german-phrasebook.md)
-- [赴德学习与生活准备清单](docs/life-in-germany/study-and-life-prep-checklist.md)
-- [德国生活指南](docs/life-in-germany/README.md)
-- [预约与办事表达](docs/life-in-germany/appointments-and-offices.md)
-- [公开学习资源](docs/resources/public-resources.md)
-- [学习资源组合包](docs/resources/resource-packages.md)
-- [A1-C1 与 DSH 资源导航](docs/resources/a1-c1-dsh-resource-index.md)
-- [官方课程与系统学习平台](docs/resources/official-platforms.md)
-- [考试与德国融入资源](docs/resources/exam-and-integration-resources.md)
-- [视频、音频、YouTube 与 B 站资源](docs/resources/video-audio-resources.md)
-- [词典、语法和学习工具](docs/resources/dictionaries-and-tools.md)
-- [如何筛选资源](docs/resources/resource-selection-guide.md)
-- [本地资源整理记录](docs/resources/import-log.md)
-- [更新记录](CHANGELOG.md)
-- [公开 Backlog](BACKLOG.md)
-- [隐私与脱敏规则](PRIVACY.md)
-- [安全与公开内容报告](SECURITY.md)
-- [贡献指南](CONTRIBUTING.md)
+## 选一条适合你的路线
 
-## 维护原则
+| 你现在的情况 | 从这里开始 | 你将得到什么 |
+| --- | --- | --- |
+| 不确定水平和方向 | [新手学习入口](docs/learning-paths/start-here.md) | 先定位，再选适合自己的第一步 |
+| 从零开始或基础不稳 | [零基础到 B1 的前 30 天](docs/learning-paths/zero-to-b1-30-day-starter.md) | 每日安排和第一阶段目标 |
+| 系统学习 A1–C1 | [等级总路线](docs/learning-paths/a1-c1-roadmap.md) | 每一级的沟通目标和升级自检 |
+| 现在重点准备 B1 | [B1 学习路线](docs/learning-paths/b1-roadmap.md) · [B1 一周训练闭环](docs/learning-paths/b1-weekly-loop.md) | 可执行的周计划、四项技能和复盘 |
+| 准备 Goethe、telc、DSH 或 TestDaF | [考试选择树](docs/exam/exam-decision-tree.md) · [考试地图](docs/exam/german-exam-map-a1-c1-dsh.md) | 先选考试，再安排模块训练 |
+| 准备留学、工作或在德国生活 | [赴德学习与生活入口](docs/germany-prep/README.md) | 官方信息入口、生活清单和场景表达 |
 
-1. 先实用，再完整：每篇内容都尽量给例句、场景和常见错误。
-2. 中文解释优先：新概念先用普通话解释清楚，再给德语术语。
-3. 不上传私人资料：课堂记录、个人经历、账号信息、聊天记录、截图原图等不进入公开仓库。
-4. 只收录可公开材料：引用外部资料时优先链接官方来源，不复制受版权保护的大段内容。
-5. 自动化要保守：定时任务只能整理和重写脱敏后的通用内容，不能直接发布本地原始笔记。
+也可以直接打开[在线学习站](https://deutsch-lernen-resource-hub.pirostonelsonrx688.workers.dev/)，按等级、技能、考试和类别筛选 **128 条带中文用途说明的资源**，把收藏的资料安排进浏览器本地学习计划。
 
-## 本地资源如何进入公开仓库
+## 学习内容
 
-本仓库默认不接收原始资源。推荐流程：
+| 学习模块 | 内容 |
+| --- | --- |
+| 分级路线 | [A1](docs/levels/a1.md) · [A2](docs/levels/a2.md) · [B1](docs/levels/b1.md) · [B2](docs/levels/b2.md) · [C1](docs/levels/c1.md)，以及对应的[能力自检](docs/README.md#每级入口) |
+| 听说读写 | [四项技能训练](docs/skills/a1-c1-four-skills-training.md)、[听力策略](docs/exam/listening-strategy.md)、[阅读策略](docs/exam/reading-strategy.md)、[写作模板](docs/exam/writing-templates.md)、[口语模板](docs/exam/speaking-templates.md) |
+| 语法与词汇 | [核心语法](docs/grammar/core-grammar.md)、[A1–C1 语法进阶](docs/grammar/a1-c1-grammar-progression.md)、[主题词汇](docs/vocabulary/theme-vocabulary.md)、[词汇复习闭环](docs/vocabulary/vocabulary-review-system.md) |
+| 考试准备 | [Goethe B1](docs/exam/b1-exam-guide.md)、[DSH](docs/exam/dsh-prep-guide.md)、[TestDaF 与 C1 衔接](docs/exam/testdaf-c1-bridge.md)、[模考复盘](docs/exam/goethe-b1-mock-exam-workflow.md) |
+| 资源目录 | [官方平台](docs/resources/official-platforms.md)、[词典与工具](docs/resources/dictionaries-and-tools.md)、[音频与视频](docs/resources/video-audio-resources.md)、[资源选择说明](docs/resources/resource-selection-guide.md) |
+| 德国生活 | [学习与生活准备清单](docs/life-in-germany/study-and-life-prep-checklist.md)、[办事表达](docs/life-in-germany/appointments-and-offices.md)、[场景短语](docs/germany-prep/scenario-german-phrasebook.md) |
 
-1. 在本地私有目录整理原始资料。
-2. 用 [tools/privacy-scan.ps1](tools/privacy-scan.ps1) 扫描候选 Markdown。
-3. 把内容改写成通用知识点，删除姓名、联系方式、账号、地址、私人链接、课堂群信息和个人经历细节。
-4. 只提交改写后的 Markdown。
+完整目录见[学习系统总地图](docs/README.md)。
 
-## License
+## 我们怎么整理资料
 
-- 文档内容使用 [CC BY 4.0](LICENSE-CONTENT.md)。
-- 脚本和仓库辅助代码使用 [MIT](LICENSE-CODE.md)。
+- **说明为什么推荐**：每条外部资源标注中文用途、适合等级、训练技能、费用或注册条件和来源。
+- **区分官方规则与学习建议**：等级能力与考试政策链接原始发布方；学习计划说明它是可调整的训练示范。
+- **用任务检验学习**：优先设计能在生活、学习和考试中完成的沟通任务，不以看完页面或收藏链接作为学习成果。
+- **鼓励主动回忆和间隔复习**：先合上材料试着想，再核对与订正；按掌握情况缩短或延长复习间隔。
+- **尊重版权与隐私**：链接到公开来源，不镜像付费课程或大段教材；个人笔记和账号资料不进入公开仓库。
+
+## 本地预览
+
+需要 Node.js 22 或更高版本。
+
+```powershell
+cd web
+npm ci --ignore-scripts
+npm run dev
+```
+
+打开 `http://localhost:4321/`。发布前运行 `npm run verify`；包含目录字段检查、Worker/API 测试、类型检查和静态构建。
+
+## 贡献与内容边界
+
+欢迎修正错链、补充高质量公开资源、完善中文使用说明或增加原创练习。提交前请阅读[贡献指南](CONTRIBUTING.md)和[隐私脱敏规则](PRIVACY.md)，并运行：
+
+```powershell
+powershell -ExecutionPolicy Bypass -File tools/privacy-scan.ps1 .
+```
+
+资源建议优先来自考试机构、大学、德国公共媒体和官方学习平台。请提供原始链接、适用等级、练习方式、费用/注册条件和最近核验日期；不要复制教材、付费课程、真题包或个人学习档案。
+
+## 许可
+
+- 文档和原创学习资料： [CC BY 4.0](LICENSE-CONTENT.md)
+- 脚本和网站辅助代码： [MIT](LICENSE-CODE.md)
+
+在线站点：[deutsch-lernen-resource-hub.pirostonelsonrx688.workers.dev](https://deutsch-lernen-resource-hub.pirostonelsonrx688.workers.dev/) · 隐私说明：[PRIVACY.md](PRIVACY.md) · 安全报告：[SECURITY.md](SECURITY.md)
