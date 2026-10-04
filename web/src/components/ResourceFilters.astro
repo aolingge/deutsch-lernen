@@ -1,4 +1,5 @@
 ---
+import { icon } from '../lib/icons.mjs';
 import { levelLabels, resources } from '../data';
 const skills = [...new Set(resources.flatMap((r) => r.skills))].sort();
 const exams = [...new Set(resources.flatMap((r) => r.exams))].filter((v) => v && v !== '非考试专项').sort();
@@ -6,7 +7,7 @@ const formats = [...new Set(resources.flatMap((r) => r.formats))].sort();
 const { basePath = '/resources/' } = Astro.props;
 ---
 <form id="resource-filters" class="filters" action={basePath} method="get">
-  <div class="search-row"><label class="search-box"><span aria-hidden="true" class="search-icon">⌕</span><span class="sr-only">搜索资源</span><input type="search" name="q" placeholder="搜索名称、关键词或网站…" autocomplete="off" /><kbd aria-hidden="true">/</kbd></label><button type="submit" class="search-submit">搜索</button></div>
+  <div class="search-row"><label class="search-box"><span aria-hidden="true" class="search-icon" set:html={icon('search')} /><span class="sr-only">搜索资源</span><input type="search" name="q" placeholder="搜索名称、关键词或网站…" autocomplete="off" /><kbd aria-hidden="true">/</kbd></label><button type="submit" class="search-submit">搜索</button></div>
   <input type="hidden" name="category" />
   <div class="filter-row">
     <label><span>等级</span><select name="level"><option value="">全部等级</option>{levelLabels.map((level) => <option value={level}>{level}</option>)}</select></label>

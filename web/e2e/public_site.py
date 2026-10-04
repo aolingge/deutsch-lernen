@@ -1,7 +1,7 @@
 import json, os, pathlib
 from playwright.sync_api import sync_playwright, expect
 base = os.environ.get('E2E_BASE_URL', 'http://127.0.0.1:8793')
-out = pathlib.Path('.wrangler/qa-directory'); out.mkdir(parents=True, exist_ok=True)
+out = pathlib.Path(os.environ.get('E2E_OUTPUT_DIR', '.wrangler/qa-directory')); out.mkdir(parents=True, exist_ok=True)
 rows = json.loads(pathlib.Path('data/resources.json').read_text(encoding='utf-8'))
 public = [r for r in rows if r['status'] == 'published' and r['rights'] != 'owned']
 by_id = {r['id']: r for r in public}
@@ -15,6 +15,10 @@ with sync_playwright() as p:
         page.goto(base + route, wait_until='domcontentloaded')
         page.wait_for_function("document.documentElement.dataset.catalogReady === 'true'")
     go('/')
+    page.keyboard.press('Tab')
+    expect(page.get_by_role('link', name='跳到主要内容')).to_be_focused()
+    page.keyboard.press('Enter')
+    expect(page.locator('#main-content')).to_be_focused()
     assert page.evaluate("getComputedStyle(document.querySelector('.directory-workspace')).display === 'grid'"), 'directory stylesheet missing'
     expect(page.locator('[data-resource-count]')).to_have_text(str(len(public)))
     assert page.locator('.category-link').count() == 13
@@ -106,6 +110,6 @@ with sync_playwright() as p:
     flows.append('interactive catalog fallback on API failure')
     assert not errors, errors
     browser.close()
-report = {'passed': True, 'publicResources': len(public), 'flows': flows, 'pageErrors': errors}
+report = {'baseUrl': base, 'passed': True, 'publicResources': len(public), 'flows': flows, 'pageErrors': errors}
 (out/'report.json').write_text(json.dumps(report, ensure_ascii=False, indent=2), encoding='utf-8')
 print(json.dumps(report, ensure_ascii=False))

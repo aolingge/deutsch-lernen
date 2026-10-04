@@ -1,3 +1,4 @@
+import { icon } from '../lib/icons.mjs';
 import type { Resource, Category } from '../types';
 import snapshot from '../../data/resources.json';
 import snapshotCategories from '../../data/categories.json';
@@ -49,7 +50,7 @@ function updateFavoriteButtons() {
     button.setAttribute('aria-pressed', String(saved));
     const r = items.find((r) => r.id === button.dataset.save);
     if (button.classList.contains('bookmark')) {
-      button.textContent = saved ? '★' : '☆';
+      button.innerHTML = icon('star');
       button.setAttribute('aria-label', `${saved ? '取消收藏' : '收藏'} ${r?.titleZh || '资源'}`);
     } else button.textContent = saved ? '★ 已收藏' : '☆ 收藏资源';
   });

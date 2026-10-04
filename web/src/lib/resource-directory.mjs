@@ -1,3 +1,4 @@
+import { icon } from './icons.mjs';
 // Shared by the static pages and browser. Own study guides remain in the repository.
 /** @param {{ status: string, rights: string }} r */
 export const isDirectoryResource = (r) => r.status === 'published' && r.rights !== 'owned';
@@ -37,12 +38,12 @@ export function resourceCard(r, categories, saved = false) {
   const category = categories.find((c) => c.id === r.primaryCategory);
   const domain = new URL(r.url).hostname.replace(/^www\./, '');
   const status = { ok: '可访问', restricted: '访问受限', unchecked: '待核验', broken: '链接异常' }[r.linkStatus];
-  const mark = (r.titleOriginal || r.sourceName).replace(/[^a-zA-Z0-9]/g, '').slice(0, 2).toUpperCase() || 'DE';
+  const mark = r.sourceName.replace(/[^a-zA-Z0-9]/g, '').slice(0, 2).toUpperCase() || 'DE';
   return `<article class="resource-card live-card" data-category="${e(r.primaryCategory)}">
-    <div class="card-top"><span class="source-mark" aria-hidden="true">${e(mark)}</span><div class="source-info"><span>${e(r.sourceName)}</span><small>${e(domain)}</small></div><button type="button" class="bookmark" data-save="${e(r.id)}" aria-label="${saved ? '取消收藏' : '收藏'} ${e(r.titleZh)}" aria-pressed="${saved}">${saved ? '★' : '☆'}</button></div>
-    <div class="card-body"><h3><a href="${e(r.url)}" target="_blank" rel="noopener noreferrer">${e(r.titleZh)}<span class="out-arrow" aria-hidden="true">↗</span></a></h3><p class="description">${e(r.descriptionZh)}</p></div>
-    <div class="chips"><span class="category-chip">${e(category?.name || '资源')}</span>${r.levels.length ? `<span title="${r.levelBasis === 'official' ? '来源标级' : '编辑参考等级'}">${e(r.levels.join(' · '))}</span>` : ''}</div>
-    <div class="card-bottom"><div class="meta"><span class="price ${e(r.price)}">${priceLabels[r.price]}</span><span>${accessLabels[r.access]}</span></div><a class="detail-link" href="/resource/${e(r.slug)}/" aria-label="${e(r.titleZh)}的资源信息">详情 <span aria-hidden="true">→</span></a></div>
+    <div class="card-top"><span class="source-mark" aria-hidden="true">${e(mark)}</span><div class="source-info"><span>${e(r.sourceName)}</span><small>${e(domain)}</small></div><button type="button" class="bookmark" data-save="${e(r.id)}" aria-label="${saved ? '取消收藏' : '收藏'} ${e(r.titleZh)}" aria-pressed="${saved}">${icon('star')}</button></div>
+    <div class="card-body"><h3><a href="${e(r.url)}" target="_blank" rel="noopener noreferrer">${e(r.titleZh)}<span class="out-arrow" aria-hidden="true">${icon('arrow-up-right')}</span></a></h3><p class="description">${e(r.descriptionZh)}</p></div>
+    <div class="chips"><span class="category-chip">${e(category?.name || '资源')}</span>${r.levels.length ? `<span title="${r.levelBasis === 'official' ? '来源标级' : '编辑参考等级'}">${e(r.levels.join(' · '))}</span>` : ''}${r.formats[0] ? `<span class="format-chip">${e(r.formats[0])}</span>` : ''}</div>
+    <div class="card-bottom"><div class="meta"><span class="price ${e(r.price)}">${priceLabels[r.price]}</span><span>${accessLabels[r.access]}</span></div><a class="detail-link" href="/resource/${e(r.slug)}/" aria-label="${e(r.titleZh)}的资源信息">详情 <span aria-hidden="true">${icon('arrow-right')}</span></a></div>
     <span class="sr-only">链接记录：${e(status)}；${e(r.lastEditorialCheckedAt || '暂无记录日期')}</span>
   </article>`;
 }
