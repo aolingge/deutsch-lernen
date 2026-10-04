@@ -64,7 +64,7 @@ const resources = [
   make('aldi-sued', 'shopping', 'ALDI SÜD', 'ALDI SÜD 德国超市', '德国南部和西部常用的折扣超市信息入口。', 'ALDI SÜD', 'https://www.aldi-sued.de/', { providerType: 'commercial', tags: ['超市', '食品', '折扣'] }),
   make('aldi-nord', 'shopping', 'ALDI Nord', 'ALDI Nord 德国超市', '德国北部和东部常用的折扣超市信息入口。', 'ALDI Nord', 'https://www.aldi-nord.de/', { providerType: 'commercial', tags: ['超市', '食品', '折扣'] }),
   make('decathlon-germany', 'shopping', 'Decathlon Deutschland', 'Decathlon 德国运动用品', '德国运动服装、器材和户外用品电商及门店入口。', 'Decathlon', 'https://www.decathlon.de/', { providerType: 'commercial', tags: ['运动', '户外', '购物'] }),
-  make('obi', 'shopping', 'OBI Deutschland', 'OBI 德国家居建材', '德国装修、园艺、工具和建材零售平台。', 'OBI', 'https://www.obi.de/', { providerType: 'commercial', tags: ['建材', '工具', '园艺'] }),
+  make('obi', 'shopping', 'OBI Deutschland', 'OBI 德国家居建材', '德国装修、园艺、工具和建材零售平台。', 'OBI', 'https://www.obi.de/baumarkt/', { providerType: 'commercial', tags: ['建材', '工具', '园艺'] }),
   make('hornbach', 'shopping', 'HORNBACH Deutschland', 'HORNBACH 德国建材', '德国建材、工具、装修和园艺用品平台。', 'HORNBACH', 'https://www.hornbach.de/', { providerType: 'commercial', tags: ['建材', '工具', '装修'] }),
   make('zooplus', 'shopping', 'zooplus Deutschland', 'zooplus 宠物用品', '德国宠物食品、用品和配送电商。', 'zooplus', 'https://www.zooplus.de/', { providerType: 'commercial', tags: ['宠物', '食品', '购物'] }),
 

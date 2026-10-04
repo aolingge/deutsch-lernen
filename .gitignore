@@ -62,3 +62,8 @@ Thumbs.db
 *.wav
 *.mov
 web/data/public-snapshot.json
+
+# Reader imports and generated summaries stay local; the public-domain source
+# texts under web/public/reader/data/sources are explicitly reviewed and tracked.
+tools/reader/input/
+web/public/reader/data/BUILD-SUMMARY.txt

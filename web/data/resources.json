@@ -14659,8 +14659,8 @@
       "德语"
     ],
     "sourceName": "OBI",
-    "url": "https://www.obi.de/",
-    "canonicalUrl": "https://www.obi.de/",
+    "url": "https://www.obi.de/baumarkt/",
+    "canonicalUrl": "https://www.obi.de/baumarkt/",
     "rights": "link-only",
     "status": "published",
     "linkStatus": "unchecked",
@@ -14680,7 +14680,7 @@
     "editorialStatus": "partial",
     "evidence": [
       {
-        "url": "https://www.obi.de/",
+        "url": "https://www.obi.de/baumarkt/",
         "fields": [
           "purpose"
         ],

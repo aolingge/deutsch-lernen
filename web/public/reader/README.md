@@ -1,6 +1,6 @@
 # Gutenberg Deutsch Reader
 
-这是 `PDF版` 的本地网页阅读器。它把十本 Gutenberg 德语原著整理成可搜索、可切换主题、可调整字级的学习页面；原文优先，中文译文默认像参考页面一样模糊，鼠标悬停后显示清晰译文。
+这是 `PDF版` 的本地网页阅读器。它把十二本 Gutenberg 德语原著整理成可搜索、可筛选、可切换主题、可调整字级的学习页面；原文优先，中文译文默认像参考页面一样模糊，鼠标悬停后显示清晰译文。
 
 ## 打开
 
@@ -11,7 +11,7 @@
 在 PowerShell 中运行：
 
 ```powershell
-Set-Location 'D:\aolin\07_Study\德语学习\01_Gutenberg德语原著\PDF版\web-reader'
+Set-Location 'web/public/reader'
 .\build-reader.ps1
 ```
 
@@ -27,7 +27,7 @@ Set-Location 'D:\aolin\07_Study\德语学习\01_Gutenberg德语原著\PDF版\web
 
 ## 当前边界
 
-- 当前十本书共 20,049 个段落，已通过德语助手现有会员的默认引擎导入对应中文译文。短元数据、网址和版权尾页也会保留原文，避免伪造译文。
+- 当前十二本书共约 20,000 个段落；前十本包含已有译文，第十一和第十二本暂未导入中文译文。短元数据、网址和版权尾页也会保留原文，避免伪造译文。
 - 本地工具会用段落 HTML 和精确匹配导入译文；新增书籍只需登记 manifest、重建数据，再导入真实的双语 HTML。
 - 若要迁移到另一份阅读器数据，可使用 `prepare-input.py --reader <reader目录> --book 01` 生成输入，再使用 `import-eudic.py --reader <reader目录> --book 01 --html <德语助手导出的双语HTML>` 导入；两步都会保留段落顺序并更新 `data/translations/` 缓存。
 - 译文有三种模式：`悬停显示`、`始终显示`、`隐藏`。电脑用鼠标悬停，手机可点击模糊译文或用键盘聚焦。
