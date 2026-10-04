@@ -12,3 +12,14 @@ test('resource directory accepts entries without historical instructions and ret
   assert.throws(() => validateResource({ ...resource, howToUseZh: { invalid: true } }));
 });
 
+test('editorial metadata validates real dates, nonblank lists and evidence while preserving old records', () => {
+  assert.throws(() => validateResource({...catalog[0], lastEditorialCheckedAt:'2026-02-31'}));
+  assert.throws(() => validateResource({...catalog[0], skills:[' ']}));
+  assert.throws(() => validateResource({...catalog[0], mediaTypes:['求职']}));
+  const item = validateResource({...catalog[0], formats:[' 网页 ','网页'], providerId:'dw', mediaTypes:['网页','音频'], levelScope:'any', costNoteZh:'公开音频免费', evidence:[{url:'https://example.org/',fields:['price'],checkedAt:'2026-10-04'}]});
+  assert.deepEqual(item.formats,['网页']);
+  assert.equal(item.providerId,'dw');
+  assert.equal(item.evidence[0].fields[0],'price');
+  assert.throws(() => validateResource({...catalog[0], evidence:[{url:'javascript:alert(1)',fields:['price'],checkedAt:'2026-10-04'}]}));
+});
+

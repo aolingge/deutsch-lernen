@@ -567,7 +567,7 @@
     "slug": "goethe-speaking-practice",
     "titleOriginal": "Online Aussprachetrainer",
     "titleZh": "歌德在线德语发音训练",
-    "descriptionZh": "歌德学院的在线发音训练，辅助练习德语语音与跟读。",
+    "descriptionZh": "歌德学院的在线发音训练，辅助练习德语语音与跟读；训练入口需要注册，适用于各个等级。",
     "howToUseZh": "歌德学院的在线发音训练，辅助练习德语语音与跟读。",
     "primaryCategory": "speaking",
     "tags": [
@@ -575,13 +575,8 @@
       "官方",
       "录音复述"
     ],
-    "levels": [
-      "A1",
-      "A2",
-      "B1",
-      "B2"
-    ],
-    "levelBasis": "official",
+    "levels": [],
+    "levelBasis": "unspecified",
     "skills": [
       "口语"
     ],
@@ -591,7 +586,8 @@
       "练习"
     ],
     "price": "free",
-    "access": "open",
+    "access": "registration",
+    "accessNoteZh": "介绍页公开；开始训练时需要注册。",
     "languages": [
       "德语",
       "英语"
@@ -635,6 +631,7 @@
       "应用"
     ],
     "price": "freemium",
+    "costNoteZh": "桌面版免费；AnkiDroid 免费；官方 iOS 应用单独收费，价格以应用商店为准。",
     "access": "open",
     "languages": [
       "德语",
@@ -661,11 +658,8 @@
       "官方信息",
       "留学工作"
     ],
-    "levels": [
-      "B1",
-      "B2",
-      "C1"
-    ],
+    "levels": [],
+    "levelScope": "information",
     "levelBasis": "editorial",
     "skills": [
       "阅读",
@@ -1135,6 +1129,7 @@
       "B2"
     ],
     "levelBasis": "editorial",
+    "levelScope": "learning",
     "skills": [
       "综合"
     ],
@@ -6833,8 +6828,8 @@
   {
     "id": "duden-mentor",
     "slug": "duden-mentor",
-    "titleZh": "Duden Mentor 写作检查",
-    "titleOriginal": "Duden Mentor",
+    "titleZh": "Duden-Schreibassistent 写作检查",
+    "titleOriginal": "Duden-Schreibassistent",
     "sourceName": "Duden",
     "url": "https://mentor.duden.de/",
     "canonicalUrl": "https://mentor.duden.de/",
@@ -6861,6 +6856,7 @@
       "Duden",
       "writing"
     ],
+    "aliases": ["Duden Mentor", "Mentor"],
     "exams": [],
     "levelBasis": "editorial",
     "languages": [

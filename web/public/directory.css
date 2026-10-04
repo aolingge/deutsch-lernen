@@ -105,6 +105,7 @@ a:hover { color: var(--blue); }
 .view-switch button[aria-pressed=true] { background: #e3eddf; color: var(--blue); }
 .view-switch svg { width: 17px; height: 17px; }
 .resource-grid { display: grid; grid-template-columns: repeat(auto-fit,minmax(min(100%,290px),1fr)); gap: 18px; scroll-margin-top: 25px; }
+.resource-grid:has(> .resource-card:only-child) { max-width: 760px; }
 .resource-card { position: relative; background: #fff; border: 1px solid var(--line); border-radius: 16px; padding: 22px; display: flex; flex-direction: column; min-width: 0; box-shadow: 0 2px 3px #203b3103; transition: border-color .18s, box-shadow .18s, transform .18s; }
 .resource-card:hover, .resource-card:focus-within { border-color: #96b49b; box-shadow: 0 8px 24px #243b2c0c; }
 .resource-card:hover { transform: translateY(-2px); }
@@ -196,6 +197,11 @@ a:hover { color: var(--blue); }
 .source-columns { display: grid; grid-template-columns: 1fr 1fr; gap: 45px; }
 .source-columns dt { font-size: .9375rem; font-weight: 700; }
 .source-columns dd { margin: 6px 0 20px; font-size: .875rem; line-height: 1.8; color: var(--muted); }
+.source-directory-note { margin-top: -8px; }
+.provider-index { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 0 26px; padding: 0; list-style: none; border-block: 1px solid var(--line); margin: 18px 0 35px; }
+.provider-index li { display: flex; justify-content: space-between; gap: 12px; padding: 13px 0; border-bottom: 1px solid #e8eee7; font-size: .875rem; }
+.provider-index a { font-weight: 650; text-decoration: none; }
+.provider-index span { color: var(--muted); font-size: .75rem; white-space: nowrap; }
 @media (max-width: 1100px) {
   .shell { width: calc(100% - 48px); }
   .site-header nav { margin-left: auto; gap: 20px; }
@@ -248,6 +254,7 @@ a:hover { color: var(--blue); }
   .detail-header { display: block; }
   .source-columns { grid-template-columns: 1fr; gap: 15px; }
   .source-facts { gap: 20px; flex-wrap: wrap; }
+  .provider-index { grid-template-columns: 1fr; }
 }
 @media (max-width: 470px) {
   .filters { display: flex; flex-wrap: wrap; }

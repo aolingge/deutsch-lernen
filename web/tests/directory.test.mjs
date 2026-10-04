@@ -17,6 +17,9 @@ test('common Chinese and German names find the same existing resources', () => {
     assert.ok(find(alias).length, alias);
     assert.deepEqual(find(alias), find(original));
   }
+  assert.ok(selectResources(rows, new URLSearchParams('q=德福考试')).length >= 1);
+  assert.equal(selectResources(rows, new URLSearchParams('q=worterbuch')).length, selectResources(rows, new URLSearchParams('q=Wörterbuch')).length);
+  assert.ok(selectResources(rows, new URLSearchParams('q=免费')).length > 0);
 });
 
 test('detail return links preserve filters and reject external or unsafe destinations', () => {

@@ -7,8 +7,8 @@ export const accessLabels = { open: '免注册', registration: '需注册', 'exa
 /** @param {unknown} value */
 const normalize = (value) => String(value ?? '').normalize('NFKC').toLocaleLowerCase().trim();
 const aliases = [
-  ['testdaf', '德福'], ['词典', '字典', 'dictionary', 'wörterbuch'],
-  ['播客', 'podcast', 'podcasts'], ['goethe', '歌德'], ['nicos', 'nikos'],
+  ['testdaf', '德福', '德福考试', 'testdaf考试'], ['词典', '字典', 'dictionary', 'wörterbuch', 'worterbuch'],
+  ['免费', '免费资源', 'free'], ['播客', 'podcast', 'podcasts'], ['goethe', '歌德'], ['nicos', 'nikos'],
 ];
 /** @param {string} word */
 const searchTerms = (word) => aliases.find((group) => group.includes(word)) || [word];
@@ -22,15 +22,21 @@ export function selectResources(items, params, favorites = []) {
   const words = normalize(params.get('q')).split(/\s+/).filter(Boolean);
   const saved = new Set(favorites);
   const selected = items.filter((r) => {
-    const haystack = normalize([r.titleZh, r.titleOriginal, r.descriptionZh, r.sourceName, r.url, ...r.tags, ...r.levels, ...r.skills, ...r.exams, ...r.formats].join(' '));
+    const haystack = normalize([
+      r.titleZh, r.titleOriginal, r.descriptionZh, r.sourceName, r.url,
+      ...r.tags, ...r.levels, ...r.skills, ...r.exams, ...r.formats,
+      ...(r.mediaTypes || []), ...(r.aliases || []),
+      r.price === 'free' ? '免费 free' : r.price === 'freemium' ? '部分免费 freemium' : r.price === 'paid' ? '付费 paid' : '',
+    ].join(' '));
     return isDirectoryResource(r) && words.every((word) => searchTerms(word).some((term) => haystack.includes(term)))
-      && (!params.get('level') || r.levels.some((level) => level === params.get('level')))
+      && (!params.get('level') || r.levelScope === 'any' || r.levelScope === 'information' || r.levels.some((level) => level === params.get('level')))
       && (!params.get('category') || r.primaryCategory === params.get('category'))
       && (!params.get('skill') || r.skills.includes(params.get('skill') || ''))
       && (!params.get('exam') || r.exams.includes(params.get('exam') || ''))
       && (!params.get('price') || r.price === params.get('price'))
       && (!params.get('access') || r.access === params.get('access'))
-      && (!params.get('format') || r.formats.includes(params.get('format') || ''))
+      && (!params.get('format') || (r.mediaTypes?.length ? r.mediaTypes : r.formats).includes(params.get('format') || ''))
+      && (!params.get('provider') || (r.providerId || new URL(r.url).hostname.replace(/^www\./,'')) === params.get('provider'))
       && (params.get('saved') !== '1' || saved.has(r.id));
   });
   const sort = params.get('sort');
@@ -60,7 +66,7 @@ export function resourceCard(r, categories, saved = false, returnTo = '') {
   const domainMarks = { 'dw.com': 'DW', 'goethe.de': 'GI', 'testdaf.de': 'TD', 'telc.net': 'telc', 'duden.de': 'Du', 'deepl.com': 'DL', 'duolingo.com': 'Duo', 'apps.ankiweb.net': 'Anki' };
   const mark = domainMarks[domain] || (domain.split('.').at(-2) || domain).slice(0, 3).toUpperCase();
   const detailHref = `/resource/${r.slug}/` + (returnTo ? '?' + new URLSearchParams({ from: directoryReturnPath(returnTo) }) : '');
-  const media = [...new Set(r.formats)].slice(0, 2);
+  const media = [...new Set(r.mediaTypes?.length ? r.mediaTypes : r.formats)].slice(0, 2);
   return `<article class="resource-card live-card" data-category="${e(r.primaryCategory)}">
     <div class="card-top"><span class="source-mark" aria-hidden="true">${e(mark)}</span><div class="source-info"><span>${e(r.sourceName)}</span><small>${e(domain)}</small></div><button type="button" class="bookmark" data-save="${e(r.id)}" aria-label="${saved ? '取消收藏' : '收藏'} ${e(r.titleZh)}" aria-pressed="${saved}">${icon('star')}</button></div>
     <div class="card-body"><h3><a href="${e(r.url)}" target="_blank" rel="noopener noreferrer">${e(r.titleZh)}<span class="out-arrow" aria-hidden="true">${icon('arrow-up-right')}</span></a></h3><p class="description">${e(r.descriptionZh)}</p></div>
@@ -75,6 +81,6 @@ export function resourceCard(r, categories, saved = false, returnTo = '') {
 export function resourceDetail(r, categories, returnTo = '/resources/') {
   const e = escapeHtml;
   const status = { ok: '链接可访问', restricted: '自动访问受限', broken: '链接异常', unchecked: '待核验' }[r.linkStatus];
-  const facts = [['来源', r.sourceName], ['费用', priceLabels[r.price]], ['访问条件', accessLabels[r.access]], ['参考等级', r.levels.join(' · ') || '未标级'], ['内容形式', r.formats.join(' · ')], ['技能 / 主题', r.skills.join(' · ')], ['语言', r.languages.join(' · ')], ['核验记录', `${status} / ${r.lastEditorialCheckedAt || '暂无日期'}`], ['网站', new URL(r.url).hostname]];
+  const facts = [['来源', r.sourceName], ['费用', [priceLabels[r.price], r.costNoteZh].filter(Boolean).join('；')], ['访问条件', [accessLabels[r.access], r.accessNoteZh].filter(Boolean).join('；')], ['参考等级', r.levels.join(' · ') || '未标级'], ['内容形式', (r.mediaTypes?.length ? r.mediaTypes : r.formats).join(' · ')], ['技能 / 主题', r.skills.join(' · ')], ['语言', r.languages.join(' · ')], ['核验记录', `${status} / ${r.lastEditorialCheckedAt || '暂无日期'}`], ['网站', new URL(r.url).hostname]];
   return `<a class="detail-back" href="${e(directoryReturnPath(returnTo))}">← 返回资源目录</a><div class="detail-header"><div><p class="detail-label">${e(categories.find((c) => c.id === r.primaryCategory)?.name)}</p><h1>${e(r.titleZh)}</h1><p class="original">${e(r.titleOriginal)}</p></div></div><p class="detail-intro">${e(r.descriptionZh)}</p><div class="detail-actions"><a class="action-link" href="${e(r.url)}" target="_blank" rel="noopener noreferrer">打开原站 ↗</a><button type="button" data-save="${e(r.id)}" aria-label="收藏资源" aria-pressed="false">☆ 收藏资源</button></div><p id="resource-note" role="status" class="detail-note"></p><dl class="detail-facts">${facts.map(([key, val]) => `<div><dt>${e(key)}</dt><dd>${e(val)}</dd></div>`).join('')}</dl><p class="detail-note">等级依据：${r.levelBasis === 'official' ? '来源官网标注' : r.levelBasis === 'editorial' ? '编辑参考，非机构认证' : '未标级'}。费用、可用性与地区限制以原站当前页面为准。</p>`;
 }

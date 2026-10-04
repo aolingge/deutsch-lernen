@@ -2,11 +2,13 @@
 import { icon } from '../lib/icons.mjs';
 import { levelLabels, resources } from '../data';
 import { priceLabels, accessLabels } from '../lib/resource-directory.mjs';
+import { providerKey } from '../lib/catalog-facets.mjs';
 const prices = [...new Set(resources.map((r) => r.price))];
 const access = [...new Set(resources.map((r) => r.access))];
 const skills = [...new Set(resources.flatMap((r) => r.skills))].sort();
 const exams = [...new Set(resources.flatMap((r) => r.exams))].filter((v) => v && v !== '非考试专项').sort();
-const formats = [...new Set(resources.flatMap((r) => r.formats))].sort();
+const formats = [...new Set(resources.flatMap((r) => r.mediaTypes?.length ? r.mediaTypes : r.formats))].sort();
+const providers = [...new Map(resources.map(r => [providerKey(r), r.sourceName]))].sort((a, b) => a[1].localeCompare(b[1], 'de'));
 const { basePath = '/resources/' } = Astro.props;
 ---
 <form id="resource-filters" class="filters" action={basePath} method="get">
@@ -22,7 +24,8 @@ const { basePath = '/resources/' } = Astro.props;
     <label><span>技能</span><select name="skill"><option value="">全部技能</option>{skills.map((skill) => <option value={skill}>{skill}</option>)}</select></label>
     <label><span>考试</span><select name="exam"><option value="">全部考试</option>{exams.map((exam) => <option value={exam}>{exam}</option>)}</select></label>
     <label><span>访问</span><select name="access"><option value="">全部条件</option>{access.map((value) => <option value={value}>{accessLabels[value]}</option>)}</select></label>
-    <label><span>形式</span><select name="format"><option value="">全部形式</option>{formats.map((format) => <option value={format}>{format}</option>)}</select></label>
+    <label><span>媒体</span><select name="format"><option value="">全部媒体</option>{formats.map((format) => <option value={format}>{format}</option>)}</select></label>
+    <label><span>来源</span><select name="provider"><option value="">全部来源</option>{providers.map(([id, name]) => <option value={id}>{name}</option>)}</select></label>
     </div>
   </details>
 </form>

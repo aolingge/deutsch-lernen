@@ -4,6 +4,7 @@ import snapshot from '../../data/public-snapshot.json';
 import snapshotCategories from '../../data/categories.json';
 import { isDirectoryResource, selectResources, resourceCard, resourceDetail, directoryReturnPath, escapeHtml, priceLabels, accessLabels } from '../lib/resource-directory.mjs';
 import { getFavorites, toggleFavorite } from './favorites';
+import { buildFacets, catalogCounts, providerKey } from '../lib/catalog-facets.mjs';
 
 let items = snapshot.filter(isDirectoryResource) as Resource[];
 let categories = snapshotCategories as Category[];
@@ -13,7 +14,7 @@ const workspace = document.querySelector<HTMLElement>('[data-directory]');
 const grid = document.querySelector<HTMLElement>('[data-catalog-grid]');
 const form = document.querySelector<HTMLFormElement>('#resource-filters');
 const savedOnly = workspace?.dataset.savedOnly === 'true';
-const advancedKeys = ['skill', 'exam', 'access', 'format'];
+const advancedKeys = ['skill', 'exam', 'access', 'format', 'provider'];
 let timer: ReturnType<typeof setTimeout>;
 let composing = false;
 const e = escapeHtml;
@@ -33,11 +34,24 @@ function params() {
 function syncForm(initial = false) {
   if (!form) return;
   const value = params();
+  syncFacetOptions(value);
   for (const control of Array.from(form.elements)) {
     if (control instanceof HTMLInputElement || control instanceof HTMLSelectElement) control.value = value.get(control.name) || (control.name === 'sort' ? 'default' : '');
   }
   const advanced = form.querySelector<HTMLDetailsElement>('[data-advanced-filters]');
   if (initial && advanced && advancedKeys.some((key) => value.get(key))) advanced.open = true;
+}
+function syncFacetOptions(value: URLSearchParams) {
+  if (!form) return;
+  const facets = buildFacets(items, value, favorites) as Record<string, {value:string; count:number; available:boolean}[]>;
+  const first: Record<string, string> = { level:'全部等级', price:'全部费用', access:'全部条件', skill:'全部技能', exam:'全部考试', format:'全部媒体', provider:'全部来源' };
+  for (const [key, options] of Object.entries(facets)) {
+    const select = form.querySelector<HTMLSelectElement>(`select[name="${key}"]`);
+    if (!select) continue;
+    const labels: Record<string, string> = key === 'price' ? priceLabels : key === 'access' ? accessLabels : key === 'provider' ? Object.fromEntries(items.map(r => [providerKey(r), r.sourceName])) : {};
+    select.innerHTML = `<option value="">${first[key] || key}</option>` + options.map(option => `<option value="${e(option.value)}">${e(labels[option.value] || option.value)}${option.available ? ` (${option.count})` : '（当前目录未收录）'}</option>`).join('');
+    select.value = value.get(key) || '';
+  }
 }
 function navigate(next: URLSearchParams, replace = false) {
   clearTimeout(timer);
@@ -72,10 +86,14 @@ function render() {
   const pageFocus = focused?.dataset.page;
   const filterFocus = focused?.dataset.removeFilter;
   const favoriteFocus = focused?.dataset.save;
-  document.querySelectorAll('[data-resource-count]').forEach((node) => { node.textContent = String(items.length); });
+  const counts = catalogCounts(items);
+  document.querySelectorAll('[data-resource-count]').forEach((node) => { node.textContent = String(counts.resources); });
+  document.querySelectorAll('[data-site-count]').forEach((node) => { node.textContent = String(counts.sites); });
+  document.querySelectorAll('[data-total-category-count]').forEach((node) => { node.textContent = String(counts.categories); });
   document.querySelectorAll<HTMLElement>('[data-category-count]').forEach((node) => { node.textContent = String(node.dataset.categoryCount ? items.filter((r) => r.primaryCategory === node.dataset.categoryCount).length : items.length); });
   if (!grid || !form) { updateFavoriteButtons(); return; }
   const value = params();
+  syncFacetOptions(value);
   const advancedCount = document.querySelector<HTMLElement>('[data-advanced-count]');
   if (advancedCount) {
     const count = advancedKeys.filter((key) => value.get(key)).length;
@@ -102,9 +120,9 @@ function render() {
   const pager = document.querySelector('.catalog-pager')!;
   pager.innerHTML = total > 1 ? Array.from({ length: total }, (_, i) => { const next = new URLSearchParams(value); next.set('page', String(i + 1)); return `<a href="?${e(next.toString())}" data-page="${i + 1}" ${i + 1 === page ? 'aria-current="page"' : ''}>${i + 1}</a>`; }).join('') + `<span class="pager-summary">${(page - 1) * 24 + 1}–${Math.min(page * 24, results.length)} / ${results.length}</span>` : '';
   const chips = document.querySelector('[data-active-filters]')!;
-  const labels: Record<string, string> = { q: '搜索', category: '分类', level: '等级', skill: '技能', exam: '考试', price: '费用', access: '访问', format: '形式' };
+  const labels: Record<string, string> = { q: '搜索', category: '分类', level: '等级', skill: '技能', exam: '考试', price: '费用', access: '访问', format: '媒体', provider: '来源' };
   const active = Array.from(value).filter(([key, val]) => key in labels && val);
-  chips.innerHTML = active.map(([key, val]) => { const label = key === 'category' ? categories.find((c) => c.id === val)?.name || val : key === 'price' ? priceLabels[val as keyof typeof priceLabels] || val : key === 'access' ? accessLabels[val as keyof typeof accessLabels] || val : val; return `<button type="button" data-remove-filter="${key}" aria-label="移除${labels[key]}筛选：${e(label)}">${e(label)} <span aria-hidden="true">×</span></button>`; }).join('') + (active.length ? '<button type="button" data-reset>清除筛选</button>' : '');
+  chips.innerHTML = active.map(([key, val]) => { const label = key === 'category' ? categories.find((c) => c.id === val)?.name || val : key === 'price' ? priceLabels[val as keyof typeof priceLabels] || val : key === 'access' ? accessLabels[val as keyof typeof accessLabels] || val : key === 'provider' ? items.find(r => providerKey(r) === val)?.sourceName || val : val; return `<button type="button" data-remove-filter="${key}" aria-label="移除${labels[key]}筛选：${e(label)}">${e(label)} <span aria-hidden="true">×</span></button>`; }).join('') + (active.length ? '<button type="button" data-reset>清除筛选</button>' : '');
   document.querySelectorAll<HTMLElement>('[data-view-toggle]').forEach((button) => { button.setAttribute('aria-pressed', String(button.dataset.viewToggle === grid.dataset.view)); });
   updateFavoriteButtons();
   if (focused && !focused.isConnected) {

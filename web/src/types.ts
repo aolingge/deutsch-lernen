@@ -6,5 +6,10 @@ export type Resource = {
   access: 'open' | 'registration' | 'exam-registration' | 'unknown'; languages: string[]; sourceName: string;
   url: string; canonicalUrl: string; rights: 'link-only' | 'owned' | 'licensed'; status: 'published' | 'draft' | 'archived';
   linkStatus: 'unchecked' | 'ok' | 'restricted' | 'broken'; lastEditorialCheckedAt?: string;
+  providerId?: string; providerType?: 'institution'|'public-media'|'publisher'|'community'|'commercial'|'independent'|'unspecified';
+  mediaTypes?: string[]; costNoteZh?: string; accessNoteZh?: string; interfaceLanguages?: string[];
+  levelScope?: 'learning'|'any'|'information'; readingDifficultyZh?: string; aliases?: string[];
+  lastLinkCheckedAt?: string; editorialStatus?: 'verified'|'partial'|'unverified'; editorialNoteZh?: string;
+  evidence?: {url:string; fields:string[]; checkedAt:string}[];
 };
 export type Category = { id: string; name: string; description: string; accent: string };
