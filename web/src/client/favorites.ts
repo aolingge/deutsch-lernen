@@ -18,3 +18,15 @@ export function toggleFavorite(id: string): boolean {
   localStorage.setItem(key, JSON.stringify(value));
   return saved;
 }
+export function exportFavorites(): string {
+  return JSON.stringify({ version: 1, favorites: getFavorites(), exportedAt: new Date().toISOString() }, null, 2);
+}
+export function importFavorites(input: unknown): number {
+  if (!input || typeof input !== 'object' || Array.isArray(input)) throw Error('收藏备份格式不正确');
+  const values = (input as { favorites?: unknown }).favorites;
+  if (!Array.isArray(values) || values.length > 500 || values.some((id) => typeof id !== 'string' || !/^[a-z0-9-]{1,100}$/.test(id))) throw Error('收藏备份格式不正确');
+  const value = read();
+  value.favorites = [...new Set([...getFavorites(), ...values])].slice(0, 500);
+  localStorage.setItem(key, JSON.stringify(value));
+  return (value.favorites as string[]).length;
+}

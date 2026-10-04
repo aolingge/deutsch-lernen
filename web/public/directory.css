@@ -147,6 +147,10 @@ a:hover { color: var(--blue); }
 .catalog-pager a[aria-current] { background: var(--blue); border-color: var(--blue); color: white; }
 .pager-summary { font-size: .75rem; color: var(--muted); margin-left: 10px; }
 .directory-status { font-size: .75rem; color: var(--muted); line-height: 1.8; }
+.favorites-tools { display:flex; gap:10px; align-items:center; margin-top:24px; }
+.favorites-tools button, .favorites-tools .file-button { border:1px solid var(--line); border-radius:7px; background:#fff; color:var(--blue); padding:10px 13px; font-size:.8125rem; cursor:pointer; }
+.favorites-tools .file-button input { position:absolute; width:1px; height:1px; overflow:hidden; clip:rect(0 0 0 0); }
+.favorites-tools [role=status] { color:var(--muted); font-size:.75rem; }
 .nojs-resources { list-style: none; padding: 0; }
 .nojs-resources li { padding: 18px 0; border-bottom: 1px solid var(--line); }
 .nojs-resources a { font-weight: 650; }

@@ -3,7 +3,7 @@ import type { Resource, Category } from '../types';
 import snapshot from '../../data/public-snapshot.json';
 import snapshotCategories from '../../data/categories.json';
 import { isDirectoryResource, selectResources, resourceCard, resourceDetail, directoryReturnPath, escapeHtml, priceLabels, accessLabels } from '../lib/resource-directory.mjs';
-import { getFavorites, toggleFavorite } from './favorites';
+import { getFavorites, toggleFavorite, exportFavorites, importFavorites } from './favorites';
 import { buildFacets, catalogCounts, providerKey } from '../lib/catalog-facets.mjs';
 
 let items = snapshot.filter(isDirectoryResource) as Resource[];
@@ -216,3 +216,28 @@ async function refresh() {
   }
 }
 void refresh();
+
+document.querySelector('[data-export-favorites]')?.addEventListener('click', () => {
+  try {
+    const link = document.createElement('a');
+    link.href = URL.createObjectURL(new Blob([exportFavorites()], { type: 'application/json' }));
+    link.download = 'deutsch-lernen-favorites.json';
+    link.click();
+    setTimeout(() => URL.revokeObjectURL(link.href), 1000);
+    notify('收藏备份已导出。');
+  } catch { notify('收藏备份导出失败。'); }
+});
+document.querySelector<HTMLInputElement>('[data-import-favorites]')?.addEventListener('change', async (event) => {
+  const input = event.currentTarget as HTMLInputElement;
+  const file = input.files?.[0];
+  if (!file) return;
+  try {
+    if (file.size > 1024 * 1024) throw Error('文件过大');
+    const count = importFavorites(JSON.parse(await file.text()));
+    favorites = getFavorites();
+    render();
+    notify(`已导入 ${count} 个收藏。`);
+  } catch { notify('收藏备份格式不正确，原收藏未改变。'); }
+  input.value = '';
+});
+document.querySelector<HTMLInputElement>('[data-import-favorites]')?.addEventListener('click', () => notify('请选择之前导出的收藏 JSON 文件。'));
