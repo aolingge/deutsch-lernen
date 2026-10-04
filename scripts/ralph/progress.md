@@ -29,7 +29,7 @@ Authorization: execute all twelve packages, verify and deploy the configured web
 | W09 administration | complete for this release | editor exposes optional historical text and new metadata; live protected write workflow intentionally not exercised without an admin session |
 | W10 favorites | complete | local JSON export/import with size and schema validation; import merges IDs and preserves private goals/tasks |
 | W11 metadata/performance | complete for current scope | canonical/title/sitemap/robots and live response checks passed; no Lighthouse/field INP claim |
-| W12 regression/deploy | complete | local verify, link check, local/live Chromium smoke, favorites controls, API/D1 consistency, headers, sitemap/robots and live detail checks passed; deployed version `c5229213-67d4-4633-b3a5-fc90da3a412a` |
+| W12 regression/deploy | complete | local verify, link check, local/live Chromium smoke, favorites controls, API/D1 consistency, headers, sitemap/robots and live detail checks passed; deployed version `18ee3956-f064-4e39-b1a8-5545e75a6733` |
 
 ## Checkpoints
 
@@ -42,5 +42,5 @@ Authorization: execute all twelve packages, verify and deploy the configured web
 - Live Playwright smoke uses `domcontentloaded` plus DOM readiness because network-idle is not a stable Worker completion condition; it passed at 320, 375 and 1440 px.
 - Final link report: `.wrangler/resource-links-final.json` with 114 ok, 11 restricted, 0 broken and 5 unchecked.
 - Favorites backup controls were deployed and verified at `/favorites/`; import merges valid IDs and does not overwrite private goals/tasks.
-- Final deployment version: `c5229213-67d4-4633-b3a5-fc90da3a412a`; live endpoints and key detail pages returned 200.
+- Final deployment version: `18ee3956-f064-4e39-b1a8-5545e75a6733`; live endpoints and key detail pages returned 200. Import now checks version 1 and asks for a merge preview before writing.
 - Remaining limit: no Firefox/WebKit or real Cloudflare Access admin write flow was exercised; no claim is made for those paths.
