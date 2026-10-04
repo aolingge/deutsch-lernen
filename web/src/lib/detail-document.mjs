@@ -18,6 +18,7 @@ export function renderDetailDocument(template, resource, categories, url) {
     isPartOf: { '@type': 'WebSite', name: 'Deutsch Lernen', url: new URL('/', url.origin).href },
   }).replace(/</g, '\\u003c');
   return template.replace(section, () => `<section class="live-detail" data-detail data-server-rendered="true" data-resource-id="${e(resource.id)}">${resourceDetail(resource, categories, returnTo)}</section>`)
+    .replace(/<meta name="robots" content="noindex, follow"[^>]*>/, '')
     .replace(/<title>[\s\S]*?<\/title>/, () => `<title>${e(title)}</title>`)
     .replace(/<meta name="description" content="[^"]*"[^>]*>/, () => `<meta name="description" content="${e(resource.descriptionZh)}">`)
     .replace(/<meta property="og:title" content="[^"]*"[^>]*>/, () => `<meta property="og:title" content="${e(title)}">`)

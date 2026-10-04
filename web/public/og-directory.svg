@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <rect width="1200" height="630" fill="#f7f8f3" />
+  <path d="M0 0H1200V18H0Z" fill="#245442" />
+  <circle cx="1100" cy="80" r="310" fill="#e8f0e7" />
+  <g font-family="Microsoft YaHei, PingFang SC, sans-serif">
+    <rect x="64" y="64" width="66" height="66" rx="18" fill="#245442" />
+    <text x="77" y="107" font-size="29" font-family="Georgia,serif" font-weight="700" fill="white">DE</text>
+    <text x="153" y="107" font-size="27" fill="#245442" font-family="Georgia,serif">Deutsch Lernen</text>
+    <text x="64" y="251" font-size="66" fill="#203b31" font-weight="700">德语资源导航<tspan fill="#a17b32">.</tspan></text>
+    <text x="68" y="313" font-size="27" fill="#596e61">课程、词典、播客、考试与德国生活信息</text>
+    <g fill="white" stroke="#d8e2d8">
+      <rect x="64" y="375" width="326" height="118" rx="18" />
+      <rect x="413" y="375" width="326" height="118" rx="18" />
+      <rect x="762" y="375" width="374" height="118" rx="18" />
+    </g>
+    <g fill="#245442" font-size="25" font-weight="700">
+      <text x="90" y="420">Goethe-Institut</text>
+      <text x="439" y="420">Deutsche Welle</text>
+      <text x="788" y="420">词典 · 工具 · 生活</text>
+    </g>
+    <g fill="#596e61" font-size="21">
+      <text x="90" y="460">课程与考试资料</text>
+      <text x="439" y="460">新闻与音视频</text>
+      <text x="788" y="460">按用途查找，直接打开原站</text>
+    </g>
+    <text x="64" y="573" font-family="Consolas,monospace" font-size="20" letter-spacing="3" fill="#596e61">RESOURCE DIRECTORY</text>
+    <text x="1135" y="574" font-size="22" fill="#245442" text-anchor="end">资源整合 · 无需登录</text>
+  </g>
+</svg>

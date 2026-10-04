@@ -17,4 +17,6 @@ test('current public details replace the loading shell, escape labels and exclud
   assert.ok(html.includes('data-server-rendered="true"'));
   assert.ok(!html.includes('正在读取资源'));
   assert.ok(!html.includes('<script>bad'));
+  const noindexShell=shell.replace('<head>','<head><meta name="robots" content="noindex, follow">');
+  assert.ok(!renderDetailDocument(noindexShell,resource,categories,new URL('https://hub.example.invalid/resource/anki/')).includes('noindex'));
 });

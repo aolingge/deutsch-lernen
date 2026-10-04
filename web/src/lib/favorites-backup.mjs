@@ -1,10 +1,11 @@
 const favoriteId = /^[a-z0-9-]{1,100}$/;
 
 export const favoriteBackupVersion = 1;
+export const favoriteLimit = 500;
 
 /** @param {unknown} value */
 export function validFavoriteIds(value) {
-  if (!Array.isArray(value) || value.length > 500) return false;
+  if (!Array.isArray(value) || value.length > favoriteLimit) return false;
   return value.every((id) => typeof id === 'string' && favoriteId.test(id));
 }
 
@@ -29,5 +30,7 @@ export function parseFavoritesBackup(input) {
 
 /** @param {unknown} current @param {unknown} incoming */
 export function mergeFavoriteIds(current, incoming) {
-  return [...new Set([...normalizeFavoriteIds(current), ...normalizeFavoriteIds(incoming)])].slice(0, 500);
+  const merged = [...new Set([...normalizeFavoriteIds(current), ...normalizeFavoriteIds(incoming)])];
+  if (merged.length > favoriteLimit) throw Error(`最多保存 ${favoriteLimit} 个收藏；合并后将超过上限，原收藏未改变`);
+  return merged;
 }

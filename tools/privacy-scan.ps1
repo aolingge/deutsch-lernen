@@ -32,6 +32,7 @@ $files = Get-ChildItem -LiteralPath $root -Recurse -File -Force |
         $normalized = $_.FullName -replace "/", "\"
         $normalized -notmatch "\\.git\\" -and
         $normalized -notmatch "\\node_modules\\" -and
+        $_.Extension -notin @('.png', '.jpg', '.jpeg', '.gif', '.webp', '.ico') -and
         $normalized -notmatch "\\web\\worker-configuration\.d\.ts$" -and
         $normalized -notmatch "\\web\\dist\\" -and
         $normalized -notmatch "\\web\\\.astro\\" -and
@@ -49,10 +50,19 @@ function Test-AllowedHit {
     param(
         [string]$File,
         [string]$Type,
-        [string]$Line
+        [string]$Line,
+        [string]$Value
     )
 
     $normalized = $File -replace "/", "\"
+    # Allow only exact reviewed non-private numbers, not every match on a line.
+    if ($Type -eq 'phone-like') {
+        if ($Value -eq '127.0.0.1' -and $normalized -match '\\web\\tests\\[^\\]+\.py$') { return $true }
+        if ($normalized -match '\\web\\public\\og-directory\.svg$' -and $Value -eq '0 0 1200 630' -and $Line -match 'viewBox="0 0 1200 630"') { return $true }
+        if ($normalized -match '\\web\\public\\reader\\index\.html$' -and $Value -eq '0 0 32 32' -and $Line -match "viewBox='0 0 32 32'") { return $true }
+        if ($normalized -match '\\web\\public\\reader\\data\\books\.js$' -and
+            $Value -in @('64-6221541', '+1 (862) 621-9288') -and $Line -match 'Project Gutenberg Literary Archive Foundation') { return $true }
+    }
     if ($Type -eq "phone-like" -and $Line -match '127\.0\.0\.1' -and $normalized -match '\\web\\e2e\\public_site\.py$') { return $true }
     if ($Type -eq "phone-like" -and $normalized -match "\\README(\.en)?\.md$" -and $Line -match "shields\.io") { return $true }
     if ($Type -eq "phone-like" -and
@@ -102,7 +112,7 @@ foreach ($file in $files) {
 
             $lineNumber = ($text.Substring(0, $match.Index) -split "`n").Count
             $line = ($text -split "`r?`n")[$lineNumber - 1]
-            if (Test-AllowedHit -File $file.FullName -Type $pattern.Name -Line $line) {
+            if (Test-AllowedHit -File $file.FullName -Type $pattern.Name -Line $line -Value $match.Value) {
                 continue
             }
 

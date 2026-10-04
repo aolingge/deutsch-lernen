@@ -5,6 +5,7 @@ import dns from 'node:dns';
 import net from 'node:net';
 import { pathToFileURL } from 'node:url';
 import { isDirectoryResource } from '../src/lib/resource-directory.mjs';
+import { validateResource, categoryIds } from '../src/lib/catalog-schema.mjs';
 
 export function isPublicAddress(address) {
   if (address.startsWith('::ffff:')) return isPublicAddress(address.slice(7));
@@ -28,54 +29,76 @@ export function validateTarget(value) {
 export function classifyStatus(status) {
   return status >= 200 && status < 300 ? 'ok' : [401,403,429].includes(status) ? 'restricted' : [404,410].includes(status) ? 'broken' : 'unchecked';
 }
-export async function loadCatalog({ liveUrl } = {}) {
+// Resolve once and connect to that checked address. Bound the body while streaming,
+// including responses without Content-Length; keep the timeout through body completion.
+export async function requestPublic(value, { maxBytes = 0, headers = {}, timeoutMs = 15000 } = {}, { get = https.get, lookup = dns.lookup } = {}) {
+  const url = validateTarget(value);
+  return new Promise((resolve, reject) => {
+    let request;
+    const timer = setTimeout(() => { request?.destroy(); reject(Error('request-timeout')); }, timeoutMs);
+    const fail = (error) => { clearTimeout(timer); reject(error); request?.destroy(); };
+    request = get(url, {
+      headers: { 'user-agent': 'DeutschResourceDirectoryLinkCheck/1.0', ...headers },
+      lookup(hostname, options, callback) {
+        lookup(hostname, { all: true }, (error, addresses) => {
+          if (error) return callback(error);
+          if (!addresses.length || addresses.some(({ address }) => !isPublicAddress(address))) return callback(Error('unsafe-address'));
+          const selected = addresses.find(entry => entry.family === 4) || addresses[0];
+          if (options.all) callback(null, [selected]); else callback(null, selected.address, selected.family);
+        });
+      },
+    }, response => {
+      const result = { code: response.statusCode || 0, headers: response.headers, body: '' };
+      if (!maxBytes) { clearTimeout(timer); resolve(result); response.destroy(); return; }
+      if (Number(response.headers['content-length']) > maxBytes) { fail(Error('live-catalog-too-large')); response.destroy(); return; }
+      const chunks = [];
+      let bytes = 0;
+      response.on('data', chunk => {
+        bytes += chunk.length;
+        if (bytes > maxBytes) { fail(Error('live-catalog-too-large')); response.destroy(); return; }
+        chunks.push(chunk);
+      });
+      response.on('end', () => { clearTimeout(timer); resolve({ ...result, body: Buffer.concat(chunks).toString('utf8') }); });
+      response.on('aborted', () => fail(Error('response-aborted')));
+      response.on('error', fail);
+    });
+    request.on('error', fail);
+  });
+}
+export async function loadCatalog({ liveUrl, request = requestPublic } = {}) {
   if (!liveUrl) {
     const resources = JSON.parse(await fs.readFile(new URL('../data/resources.json', import.meta.url), 'utf8')).filter(isDirectoryResource);
     return { source: 'repository', resources };
   }
   const endpoint = validateTarget(liveUrl);
   if (!endpoint.pathname.endsWith('/api/public-catalog')) throw Error('live-catalog-path-required');
-  const addresses = await dns.promises.lookup(endpoint.hostname, { all: true });
-  if (!addresses.length || addresses.some(({ address }) => !isPublicAddress(address))) throw Error('unsafe-address');
-  const response = await fetch(endpoint, { headers: { accept: 'application/json' }, redirect: 'error', signal: AbortSignal.timeout(15000) });
-  if (!response.ok) throw Error(`live-catalog-http-${response.status}`);
-  const contentLength = Number(response.headers.get('content-length') || 0);
-  if (contentLength > 5 * 1024 * 1024) throw Error('live-catalog-too-large');
-  const text = await response.text();
-  if (text.length > 5 * 1024 * 1024) throw Error('live-catalog-too-large');
-  const body = JSON.parse(text);
+  const response = await request(endpoint.href, { maxBytes: 5 * 1024 * 1024, headers: { accept: 'application/json' } });
+  if (response.code !== 200) throw Error(`live-catalog-http-${response.code}`);
+  const body = JSON.parse(response.body);
   if (body?.schemaVersion !== 1 || !Array.isArray(body.resources) || !Array.isArray(body.categories) || body.resources.length > 500) throw Error('live-catalog-schema-invalid');
-  const resources = body.resources.filter(isDirectoryResource);
-  if (resources.length !== body.resources.length) throw Error('live-catalog-resource-invalid');
+  const categories = new Set();
+  for (const category of body.categories) {
+    if (!categoryIds.includes(category?.id) || typeof category.name !== 'string' || !category.name.trim() || categories.has(category.id)) throw Error('live-catalog-category-invalid');
+    categories.add(category.id);
+  }
+  const identifiers = new Set();
+  const resources = body.resources.map(raw => {
+    let item;
+    try { item = validateResource(raw); } catch { throw Error('live-catalog-resource-invalid'); }
+    if (!isDirectoryResource(item) || !categories.has(item.primaryCategory) || identifiers.has(item.id)) throw Error('live-catalog-resource-invalid');
+    identifiers.add(item.id);
+    return item;
+  });
   return { source: endpoint.href, resources };
 }
 export async function checkUrl(value, redirects = 0) {
   const url = validateTarget(value);
-  const result = await new Promise((resolve, reject) => {
-    const timer = setTimeout(() => { request.destroy(); reject(Error('request-timeout')); }, 10000);
-    const request = https.get(url, {
-      headers: { 'user-agent': 'DeutschResourceDirectoryLinkCheck/1.0', range: 'bytes=0-1023' },
-      lookup(hostname, options, callback) {
-        dns.lookup(hostname, { all: true }, (error, addresses) => {
-          if (error) return callback(error);
-          if (!addresses.length || addresses.some(({address}) => !isPublicAddress(address))) return callback(Error('unsafe-address'));
-          const selected = addresses.find((entry) => entry.family === 4) || addresses[0];
-          // Use the checked address in this connection; never resolve a second time.
-          if (options.all) callback(null, [selected]); else callback(null, selected.address, selected.family);
-        });
-      },
-    }, (response) => {
-      clearTimeout(timer);
-      resolve({ code: response.statusCode || 0, location: response.headers.location });
-      response.destroy();
-    });
-    request.on('error', (error) => { clearTimeout(timer); reject(error); });
-  });
-  if ([301,302,303,307,308].includes(result.code) && result.location) {
+  const result = await requestPublic(url.href, { headers: { range: 'bytes=0-1023' }, timeoutMs: 10000 });
+  if ([301,302,303,307,308].includes(result.code) && result.headers.location) {
     if (redirects >= 4) throw Error('redirect-limit');
-    return checkUrl(new URL(result.location, url).href, redirects + 1);
+    return checkUrl(new URL(result.headers.location, url).href, redirects + 1);
   }
-  return { status: classifyStatus(result.code), httpStatus: result.code };
+  return { status: classifyStatus(result.code), httpStatus: result.code, finalUrl: url.href, redirects };
 }
 
 async function main() {

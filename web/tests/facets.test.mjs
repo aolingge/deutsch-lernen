@@ -1,7 +1,14 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import catalog from '../data/resources.json' with {type:'json'};
-import {buildFacets,catalogCounts} from '../src/lib/catalog-facets.mjs';
+import {buildFacets,catalogCounts,providerIndex} from '../src/lib/catalog-facets.mjs';
+
+test('provider index counts live records by stable ID and excludes drafts',()=>{
+  const base={...catalog[0],providerId:'group-one'};
+  const rows=[base,{...base,id:'second-entry'},{...base,id:'draft-entry',status:'draft'}, {...base,id:'another-provider',providerId:'group-two'}];
+  const index=providerIndex(rows);
+  assert.deepEqual(index.map(r=>[r.id,r.count]),[['group-one',2],['group-two',1]]);
+});
 
 test('facets include live values, preserve unavailable choices and count without their own constraint',()=>{
   const a={...catalog[0],id:'facet-a',skills:['新增技能'],formats:['PDF'],mediaTypes:['PDF'],price:'free',providerId:'sample'};

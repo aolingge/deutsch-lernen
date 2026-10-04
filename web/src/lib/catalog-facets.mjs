@@ -2,6 +2,17 @@ import {selectResources,isDirectoryResource} from './resource-directory.mjs';
 /** @param {import('../types').Resource} r */
 export const providerKey = r => r.providerId || new URL(r.url).hostname.replace(/^www\./,'');
 /** @param {import('../types').Resource[]} rows */
+export function providerIndex(rows) {
+  const providers = new Map();
+  for (const r of rows.filter(isDirectoryResource)) {
+    const id = providerKey(r);
+    const row = providers.get(id) || { id, name:r.sourceName, count:0 };
+    row.count++;
+    providers.set(id,row);
+  }
+  return [...providers.values()].sort((a,b)=>b.count-a.count || a.name.localeCompare(b.name,'zh-CN'));
+}
+/** @param {import('../types').Resource[]} rows */
 export function catalogCounts(rows) {
   const items=rows.filter(isDirectoryResource);
   return {resources:items.length,categories:new Set(items.map(r=>r.primaryCategory)).size,sites:new Set(items.map(r=>new URL(r.url).hostname.replace(/^www\./,''))).size,providers:new Set(items.map(providerKey)).size};

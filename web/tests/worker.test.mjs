@@ -50,6 +50,17 @@ test('live detail response renders current database content and metadata', async
   assert.equal(response.headers.get('x-content-type-options'), 'nosniff');
   db.close();
 });
+
+test('public responses exclude editorial evidence and historical instructions while protected data stays intact', async () => {
+  const {db,adapter}=database();
+  const item={...catalog.find(r=>r.id==='anki'),howToUseZh:'historical instruction',evidence:[{url:'https://example.invalid/source',fields:['purpose'],checkedAt:'2026-10-04'}]};
+  db.prepare('INSERT INTO catalog_entries(id,slug,canonical_url,category,status,payload_json,updated_at) VALUES(?,?,?,?,?,?,?)').run(item.id,item.slug,item.canonicalUrl,item.primaryCategory,'published',JSON.stringify(item),now);
+  const result=await (await worker.fetch(request('/api/public-catalog'),{DB:adapter})).json();
+  assert.equal('evidence' in result.resources[0],false);
+  assert.equal('howToUseZh' in result.resources[0],false);
+  assert.deepEqual(JSON.parse(db.prepare('SELECT payload_json FROM catalog_entries').get().payload_json),item);
+  db.close();
+});
 test('signed Access identity permits edits; anonymous, forged, wrong origin and stale revisions are denied',async()=>{const {db,adapter}=database();const {privateKey,publicKey}=await generateKeyPair('RS256');const jwk=await exportJWK(publicKey);jwk.kid='test-key';const issuer='https://test-admin.cloudflareaccess.com';const identity=['owner','example.invalid'].join('@');const env={DB:adapter,ACCESS_ISSUER:issuer,ACCESS_AUDIENCE:'test-audience',ADMIN_EMAILS:identity};const originalFetch=globalThis.fetch;globalThis.fetch=async url=>{assert.equal(String(url),issuer+'/cdn-cgi/access/certs');return new Response(JSON.stringify({keys:[jwk]}),{headers:{'content-type':'application/json'}});};
  try {const assertion=await new SignJWT({email:identity}).setProtectedHeader({alg:'RS256',kid:'test-key'}).setIssuer(issuer).setAudience('test-audience').setIssuedAt().setExpirationTime('5m').sign(privateKey);
  const authorized=(method,r,originHeader=origin)=>new Request(origin+'/api/admin/resources',{method,headers:{'Cf-Access-Jwt-Assertion':assertion,'content-type':'application/json',origin:originHeader},...(r?{body:JSON.stringify(r)}:{})});

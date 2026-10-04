@@ -4,11 +4,12 @@ import PageViewTracker from '../components/PageViewTracker.astro';
 const path = Astro.url.pathname;
 const canonicalPath = ['/', '/resources/', '/study/'].includes(path) ? '/' : path;
 const canonical = new URL(canonicalPath, Astro.site);
-const privatePage = ['/favorites/', '/my-study/', '/admin/'].includes(path);
+const privatePage = ['/favorites/', '/my-study/', '/admin/', '/resource/view/'].includes(path);
 const catalog = ['/', '/resources/', '/study/'].includes(path) || path.startsWith('/resource/') || path.startsWith('/levels/');
+const collectionPage = ['/', '/resources/', '/study/', '/exams/', '/news/', '/sources/'].includes(path) || path.startsWith('/levels/');
 const structuredData = JSON.stringify({
   '@context': 'https://schema.org',
-  '@type': catalog ? 'CollectionPage' : 'WebSite',
+  '@type': collectionPage ? 'CollectionPage' : 'WebPage',
   name: `${title} · Deutsch Lernen`,
   description,
   url: canonical.href,

@@ -36,6 +36,7 @@ id_ed25519
 tmp/
 temp/
 .cache/
+__pycache__/
 .DS_Store
 Thumbs.db
 

@@ -4,11 +4,16 @@ import { createRemoteJWKSet, jwtVerify } from 'jose';
 import { validateResource } from '../src/lib/catalog-schema.mjs';
 import { isDirectoryResource, escapeHtml } from '../src/lib/resource-directory.mjs';
 import { renderDetailDocument } from '../src/lib/detail-document.mjs';
+import { readBody } from './read-body.mjs';
 
 interface Statement { bind(...values: unknown[]): Statement; run(): Promise<{meta:{changes:number}}> ; first<T=Record<string,unknown>>():Promise<T|null>; all<T=Record<string,unknown>>():Promise<{results:T[]}>; }
 type Env = { DB?: {prepare(sql:string):Statement}; ASSETS: {fetch(request:Request):Promise<Response>}; VISIT_LIMIT?: {limit(input:{key:string}):Promise<{success:boolean}>}; ACCESS_ISSUER?: string; ACCESS_AUDIENCE?: string; ADMIN_EMAILS?: string };
 const json = (body: unknown, status = 200, headers: Record<string,string> = {}) => new Response(JSON.stringify(body), { status, headers: { 'content-type': 'application/json; charset=utf-8', 'cache-control': 'no-store', 'x-content-type-options': 'nosniff', ...headers } });
 const jwksByIssuer = new Map<string, ReturnType<typeof createRemoteJWKSet>>();
+function publicRecord(item: ReturnType<typeof validateResource>) {
+  const { howToUseZh, evidence, ...publicItem } = item;
+  return publicItem;
+}
 export async function adminEmail(request: Request, env: Env) {
   if (!env.ACCESS_ISSUER || !env.ACCESS_AUDIENCE || !env.ADMIN_EMAILS) return null;
   const assertion = request.headers.get('Cf-Access-Jwt-Assertion');
@@ -25,10 +30,10 @@ export async function adminEmail(request: Request, env: Env) {
   } catch { return null; }
 }
 async function publicCatalog(env: Env) {
-  if (!env.DB) return { resources: seed.filter(r => r.status === 'published' && r.rights !== 'owned'), categories };
+  if (!env.DB) return { resources: seed.filter(isDirectoryResource).map(publicRecord), categories };
   const rows = await env.DB.prepare("SELECT id, payload_json FROM catalog_entries WHERE status = 'published' ORDER BY id").all<{id: string; payload_json: string}>();
   const resources = rows.results.flatMap((row) => {
-    try { const item = validateResource(JSON.parse(row.payload_json)); return isDirectoryResource(item) ? [item] : []; }
+    try { const item = validateResource(JSON.parse(row.payload_json)); return isDirectoryResource(item) ? [publicRecord(item)] : []; }
     catch { console.error('Invalid public catalog record', row.id); return []; }
   });
   return { resources, categories };
@@ -55,8 +60,8 @@ async function admin(request: Request, env: Env, path: string) {
   if (!['POST','PUT'].includes(request.method)) return json({error:'method-not-allowed'},405,{allow:'GET, POST, PUT'});
   if (request.headers.get('origin') !== new URL(request.url).origin) return json({error:'cross-origin-write'},403);
   if (!request.headers.get('content-type')?.startsWith('application/json')) return json({error:'expected-json'},415);
-  const raw = await request.text();
-  if (raw.length > 32768) return json({error:'resource-too-large'},413);
+  let raw: string;
+  try { raw = await readBody(request, 32768); } catch { return json({error:'resource-too-large'},413); }
   let input: Record<string,unknown>;
   let item: ReturnType<typeof validateResource>;
   try { input=JSON.parse(raw); item=validateResource(input); } catch (error) { return json({error:'invalid-resource',message:String(error)},400); }
@@ -79,8 +84,8 @@ async function visit(request: Request, env: Env) {
   if (!request.headers.get('content-type')?.startsWith('application/json')) return json({accepted:false,reason:'expected-json'},415);
   const origin=request.headers.get('origin');
   if (origin && origin !== new URL(request.url).origin) return json({accepted:false,reason:'cross-origin'},403);
-  const raw=await request.text();
-  if (raw.length>1024) return json({accepted:false,reason:'too-large'},413);
+  let raw: string;
+  try { raw=await readBody(request,1024); } catch { return json({accepted:false,reason:'too-large'},413); }
   let input: {eventId?:unknown;path?:unknown};
   try { input=JSON.parse(raw); } catch { return json({accepted:false,reason:'invalid-json'},400); }
   if (!input || typeof input.eventId !== 'string' || !/^[a-zA-Z0-9_-]{12,80}$/.test(input.eventId) || typeof input.path !== 'string' || !/^\/(?!\/)[a-zA-Z0-9/_-]{0,179}$/.test(input.path) || /^\/(admin|api)(\/|$)/.test(input.path)) return json({accepted:false,reason:'invalid-event'},400);

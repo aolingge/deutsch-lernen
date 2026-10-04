@@ -15,3 +15,11 @@ test('favorites import rejects unknown versions and invalid identifiers without 
   assert.throws(() => parseFavoritesBackup({ version: 1, favorites: ['../private'] }), /格式/);
   assert.deepEqual(mergeFavoriteIds(['anki'], ['duden-mentor', 'anki']), ['anki', 'duden-mentor']);
 });
+
+test('favorites merge preserves all identifiers or rejects overflow without truncation', () => {
+  const existing = Array.from({ length: 500 }, (_, i) => `resource-${i}`);
+  assert.deepEqual(mergeFavoriteIds(existing, ['resource-1']), existing);
+  assert.throws(() => mergeFavoriteIds(existing, ['new-resource']), /超过上限/);
+  assert.equal(existing.length, 500);
+  assert.deepEqual(mergeFavoriteIds(existing.slice(0, 499), ['new-resource']), [...existing.slice(0, 499), 'new-resource']);
+});

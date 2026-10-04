@@ -41,7 +41,8 @@ a:hover { color: var(--blue); }
 .directory-intro h1 { font: 700 clamp(30px,3.4vw,48px)/1.3 Georgia,"Songti SC","SimSun",serif; letter-spacing: 1px; margin: 0; }
 .title-dot { color: var(--gold); font-family: Georgia,serif; margin-left: 7px; }
 .intro-line { font-size: .875rem; line-height: 1.8; color: var(--muted); margin: 12px 0 0; }
-.reading-entry { display: inline-flex; align-items: center; justify-content: space-between; gap: 28px; width: min(100%, 430px); margin-top: 20px; padding: 13px 16px; border: 1px solid #c7d8c7; border-left: 3px solid var(--gold); border-radius: 9px; background: #ffffffb8; text-decoration: none; color: var(--ink); }
+.directory-extras:not(:empty) { margin-bottom: 24px; }
+.reading-entry { display: flex; align-items: center; justify-content: space-between; gap: 28px; width: min(100%, 430px); padding: 13px 16px; border: 1px solid #c7d8c7; border-left: 3px solid var(--gold); border-radius: 9px; background: #ffffffb8; text-decoration: none; color: var(--ink); }
 .reading-entry:hover { color: var(--blue); background: #fff; border-color: var(--blue); }
 .reading-entry strong, .reading-entry small { display: block; }
 .reading-entry strong { font: 700 .875rem Georgia,serif; }
@@ -152,9 +153,12 @@ a:hover { color: var(--blue); }
 .catalog-pager a[aria-current] { background: var(--blue); border-color: var(--blue); color: white; }
 .pager-summary { font-size: .75rem; color: var(--muted); margin-left: 10px; }
 .directory-status { font-size: .75rem; color: var(--muted); line-height: 1.8; }
-.favorites-tools { display:flex; gap:10px; align-items:center; margin-top:24px; }
+.favorites-tools { display:flex; flex-wrap:wrap; gap:10px; align-items:center; }
 .favorites-tools button, .favorites-tools .file-button { border:1px solid var(--line); border-radius:7px; background:#fff; color:var(--blue); padding:10px 13px; font-size:.8125rem; cursor:pointer; }
 .favorites-tools .file-button input { position:absolute; width:1px; height:1px; overflow:hidden; clip:rect(0 0 0 0); }
+.favorites-tools .file-button:focus-within { outline:3px solid var(--gold); outline-offset:3px; }
+.favorites-tools button:hover, .favorites-tools .file-button:hover { background:var(--mint); border-color:var(--blue); }
+.favorites-tools [role=status] { flex-basis:100%; overflow-wrap:anywhere; }
 .favorites-tools [role=status] { color:var(--muted); font-size:.75rem; }
 .nojs-resources { list-style: none; padding: 0; }
 .nojs-resources li { padding: 18px 0; border-bottom: 1px solid var(--line); }

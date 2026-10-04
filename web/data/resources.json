@@ -1897,12 +1897,8 @@
       "阅读",
       "词汇"
     ],
-    "levels": [
-      "B1",
-      "B2",
-      "C1"
-    ],
-    "levelBasis": "editorial",
+    "levels": [],
+    "levelBasis": "unspecified",
     "skills": [
       "阅读",
       "词汇"
@@ -1923,7 +1919,17 @@
     "rights": "link-only",
     "status": "published",
     "linkStatus": "ok",
-    "lastEditorialCheckedAt": "2026-10-04"
+    "lastEditorialCheckedAt": "2026-10-04",
+    "levelScope": "information",
+    "evidence": [
+      {
+        "url": "https://www.daad.de/en/studying-in-germany/",
+        "fields": [
+          "purpose"
+        ],
+        "checkedAt": "2026-10-04"
+      }
+    ]
   },
   {
     "id": "study-in-germany",
@@ -1938,12 +1944,8 @@
       "阅读",
       "词汇"
     ],
-    "levels": [
-      "B1",
-      "B2",
-      "C1"
-    ],
-    "levelBasis": "editorial",
+    "levels": [],
+    "levelBasis": "unspecified",
     "skills": [
       "阅读",
       "词汇"
@@ -1964,7 +1966,17 @@
     "rights": "link-only",
     "status": "published",
     "linkStatus": "ok",
-    "lastEditorialCheckedAt": "2026-10-04"
+    "lastEditorialCheckedAt": "2026-10-04",
+    "levelScope": "information",
+    "evidence": [
+      {
+        "url": "https://www.study-in-germany.com/en/",
+        "fields": [
+          "purpose"
+        ],
+        "checkedAt": "2026-10-04"
+      }
+    ]
   },
   {
     "id": "uni-assist",
@@ -1979,12 +1991,8 @@
       "阅读",
       "词汇"
     ],
-    "levels": [
-      "B1",
-      "B2",
-      "C1"
-    ],
-    "levelBasis": "editorial",
+    "levels": [],
+    "levelBasis": "unspecified",
     "skills": [
       "阅读",
       "词汇"
@@ -2005,7 +2013,17 @@
     "rights": "link-only",
     "status": "published",
     "linkStatus": "ok",
-    "lastEditorialCheckedAt": "2026-10-04"
+    "lastEditorialCheckedAt": "2026-10-04",
+    "levelScope": "information",
+    "evidence": [
+      {
+        "url": "https://www.uni-assist.de/en/",
+        "fields": [
+          "purpose"
+        ],
+        "checkedAt": "2026-10-04"
+      }
+    ]
   },
   {
     "id": "aps-china",
@@ -2020,12 +2038,8 @@
       "阅读",
       "词汇"
     ],
-    "levels": [
-      "B1",
-      "B2",
-      "C1"
-    ],
-    "levelBasis": "editorial",
+    "levels": [],
+    "levelBasis": "unspecified",
     "skills": [
       "阅读",
       "词汇"
@@ -2046,7 +2060,17 @@
     "rights": "link-only",
     "status": "published",
     "linkStatus": "ok",
-    "lastEditorialCheckedAt": "2026-10-04"
+    "lastEditorialCheckedAt": "2026-10-04",
+    "levelScope": "information",
+    "evidence": [
+      {
+        "url": "https://www.aps.org.cn/",
+        "fields": [
+          "purpose"
+        ],
+        "checkedAt": "2026-10-04"
+      }
+    ]
   },
   {
     "id": "bamf",
@@ -7968,11 +7992,7 @@
     "url": "https://anabin.kmk.org/",
     "canonicalUrl": "https://anabin.kmk.org/",
     "primaryCategory": "life",
-    "levels": [
-      "B1",
-      "B2",
-      "C1"
-    ],
+    "levels": [],
     "price": "free",
     "access": "open",
     "skills": [
@@ -7988,14 +8008,24 @@
       "life"
     ],
     "exams": [],
-    "levelBasis": "editorial",
+    "levelBasis": "unspecified",
     "languages": [
       "德语"
     ],
     "rights": "link-only",
     "status": "published",
     "linkStatus": "ok",
-    "lastEditorialCheckedAt": "2026-10-04"
+    "lastEditorialCheckedAt": "2026-10-04",
+    "levelScope": "information",
+    "evidence": [
+      {
+        "url": "https://anabin.kmk.org/",
+        "fields": [
+          "purpose"
+        ],
+        "checkedAt": "2026-10-04"
+      }
+    ]
   },
   {
     "id": "hochschulkompass",
@@ -8003,14 +8033,10 @@
     "titleZh": "Hochschulkompass 德国大学与专业",
     "titleOriginal": "Hochschulkompass",
     "sourceName": "Hochschulrektorenkonferenz",
-    "url": "https://www.hochschulkompass.de/",
-    "canonicalUrl": "https://www.hochschulkompass.de/",
+    "url": "https://www.hochschulkompass.de/home.html",
+    "canonicalUrl": "https://www.hochschulkompass.de/home.html",
     "primaryCategory": "life",
-    "levels": [
-      "B1",
-      "B2",
-      "C1"
-    ],
+    "levels": [],
     "price": "free",
     "access": "open",
     "skills": [
@@ -8027,13 +8053,23 @@
       "life"
     ],
     "exams": [],
-    "levelBasis": "editorial",
+    "levelBasis": "unspecified",
     "languages": [
       "德语"
     ],
     "rights": "link-only",
     "status": "published",
-    "linkStatus": "unchecked"
+    "linkStatus": "unchecked",
+    "levelScope": "information",
+    "evidence": [
+      {
+        "url": "https://www.hochschulkompass.de/",
+        "fields": [
+          "purpose"
+        ],
+        "checkedAt": "2026-10-04"
+      }
+    ]
   },
   {
     "id": "studycheck",
@@ -8044,11 +8080,7 @@
     "url": "https://www.studycheck.de/",
     "canonicalUrl": "https://www.studycheck.de/",
     "primaryCategory": "life",
-    "levels": [
-      "B1",
-      "B2",
-      "C1"
-    ],
+    "levels": [],
     "price": "free",
     "access": "open",
     "skills": [
@@ -8065,14 +8097,24 @@
       "life"
     ],
     "exams": [],
-    "levelBasis": "editorial",
+    "levelBasis": "unspecified",
     "languages": [
       "德语"
     ],
     "rights": "link-only",
     "status": "published",
     "linkStatus": "ok",
-    "lastEditorialCheckedAt": "2026-10-04"
+    "lastEditorialCheckedAt": "2026-10-04",
+    "levelScope": "information",
+    "evidence": [
+      {
+        "url": "https://www.studycheck.de/",
+        "fields": [
+          "purpose"
+        ],
+        "checkedAt": "2026-10-04"
+      }
+    ]
   },
   {
     "id": "anerkennung",
@@ -8083,11 +8125,7 @@
     "url": "https://www.anerkennung-in-deutschland.de/",
     "canonicalUrl": "https://www.anerkennung-in-deutschland.de/",
     "primaryCategory": "life",
-    "levels": [
-      "B1",
-      "B2",
-      "C1"
-    ],
+    "levels": [],
     "price": "free",
     "access": "open",
     "skills": [
@@ -8103,14 +8141,24 @@
       "life"
     ],
     "exams": [],
-    "levelBasis": "editorial",
+    "levelBasis": "unspecified",
     "languages": [
       "德语"
     ],
     "rights": "link-only",
     "status": "published",
     "linkStatus": "ok",
-    "lastEditorialCheckedAt": "2026-10-04"
+    "lastEditorialCheckedAt": "2026-10-04",
+    "levelScope": "information",
+    "evidence": [
+      {
+        "url": "https://www.anerkennung-in-deutschland.de/",
+        "fields": [
+          "purpose"
+        ],
+        "checkedAt": "2026-10-04"
+      }
+    ]
   },
   {
     "id": "handbook-germany",
@@ -8121,12 +8169,7 @@
     "url": "https://handbookgermany.de/",
     "canonicalUrl": "https://handbookgermany.de/",
     "primaryCategory": "life",
-    "levels": [
-      "A2",
-      "B1",
-      "B2",
-      "C1"
-    ],
+    "levels": [],
     "price": "free",
     "access": "open",
     "skills": [
@@ -8142,14 +8185,24 @@
       "life"
     ],
     "exams": [],
-    "levelBasis": "editorial",
+    "levelBasis": "unspecified",
     "languages": [
       "德语"
     ],
     "rights": "link-only",
     "status": "published",
     "linkStatus": "ok",
-    "lastEditorialCheckedAt": "2026-10-04"
+    "lastEditorialCheckedAt": "2026-10-04",
+    "levelScope": "information",
+    "evidence": [
+      {
+        "url": "https://handbookgermany.de/",
+        "fields": [
+          "purpose"
+        ],
+        "checkedAt": "2026-10-04"
+      }
+    ]
   },
   {
     "id": "deutsche-bahn",
@@ -8160,12 +8213,7 @@
     "url": "https://www.bahn.de/",
     "canonicalUrl": "https://www.bahn.de/",
     "primaryCategory": "life",
-    "levels": [
-      "A2",
-      "B1",
-      "B2",
-      "C1"
-    ],
+    "levels": [],
     "price": "free",
     "access": "open",
     "skills": [
@@ -8182,14 +8230,24 @@
       "life"
     ],
     "exams": [],
-    "levelBasis": "editorial",
+    "levelBasis": "unspecified",
     "languages": [
       "德语"
     ],
     "rights": "link-only",
     "status": "published",
     "linkStatus": "ok",
-    "lastEditorialCheckedAt": "2026-10-04"
+    "lastEditorialCheckedAt": "2026-10-04",
+    "levelScope": "information",
+    "evidence": [
+      {
+        "url": "https://www.bahn.de/",
+        "fields": [
+          "purpose"
+        ],
+        "checkedAt": "2026-10-04"
+      }
+    ]
   },
   {
     "id": "verbraucherzentrale",
@@ -8200,11 +8258,7 @@
     "url": "https://www.verbraucherzentrale.de/",
     "canonicalUrl": "https://www.verbraucherzentrale.de/",
     "primaryCategory": "life",
-    "levels": [
-      "B1",
-      "B2",
-      "C1"
-    ],
+    "levels": [],
     "price": "free",
     "access": "open",
     "skills": [
@@ -8220,14 +8274,24 @@
       "life"
     ],
     "exams": [],
-    "levelBasis": "editorial",
+    "levelBasis": "unspecified",
     "languages": [
       "德语"
     ],
     "rights": "link-only",
     "status": "published",
     "linkStatus": "ok",
-    "lastEditorialCheckedAt": "2026-10-04"
+    "lastEditorialCheckedAt": "2026-10-04",
+    "levelScope": "information",
+    "evidence": [
+      {
+        "url": "https://www.verbraucherzentrale.de/",
+        "fields": [
+          "purpose"
+        ],
+        "checkedAt": "2026-10-04"
+      }
+    ]
   },
   {
     "id": "gesund-bund",
@@ -8238,11 +8302,7 @@
     "url": "https://gesund.bund.de/",
     "canonicalUrl": "https://gesund.bund.de/",
     "primaryCategory": "life",
-    "levels": [
-      "B1",
-      "B2",
-      "C1"
-    ],
+    "levels": [],
     "price": "free",
     "access": "open",
     "skills": [
@@ -8258,14 +8318,24 @@
       "life"
     ],
     "exams": [],
-    "levelBasis": "editorial",
+    "levelBasis": "unspecified",
     "languages": [
       "德语"
     ],
     "rights": "link-only",
     "status": "published",
     "linkStatus": "ok",
-    "lastEditorialCheckedAt": "2026-10-04"
+    "lastEditorialCheckedAt": "2026-10-04",
+    "levelScope": "information",
+    "evidence": [
+      {
+        "url": "https://gesund.bund.de/",
+        "fields": [
+          "purpose"
+        ],
+        "checkedAt": "2026-10-04"
+      }
+    ]
   },
   {
     "id": "arbeitsagentur",
@@ -8276,11 +8346,7 @@
     "url": "https://www.arbeitsagentur.de/",
     "canonicalUrl": "https://www.arbeitsagentur.de/",
     "primaryCategory": "life",
-    "levels": [
-      "B1",
-      "B2",
-      "C1"
-    ],
+    "levels": [],
     "price": "free",
     "access": "open",
     "skills": [
@@ -8297,14 +8363,24 @@
       "life"
     ],
     "exams": [],
-    "levelBasis": "editorial",
+    "levelBasis": "unspecified",
     "languages": [
       "德语"
     ],
     "rights": "link-only",
     "status": "published",
     "linkStatus": "ok",
-    "lastEditorialCheckedAt": "2026-10-04"
+    "lastEditorialCheckedAt": "2026-10-04",
+    "levelScope": "information",
+    "evidence": [
+      {
+        "url": "https://www.arbeitsagentur.de/",
+        "fields": [
+          "purpose"
+        ],
+        "checkedAt": "2026-10-04"
+      }
+    ]
   },
   {
     "id": "auswaertiges-amt",
@@ -8315,11 +8391,7 @@
     "url": "https://www.auswaertiges-amt.de/",
     "canonicalUrl": "https://www.auswaertiges-amt.de/",
     "primaryCategory": "life",
-    "levels": [
-      "B1",
-      "B2",
-      "C1"
-    ],
+    "levels": [],
     "price": "free",
     "access": "open",
     "skills": [
@@ -8335,14 +8407,24 @@
       "life"
     ],
     "exams": [],
-    "levelBasis": "editorial",
+    "levelBasis": "unspecified",
     "languages": [
       "德语"
     ],
     "rights": "link-only",
     "status": "published",
     "linkStatus": "ok",
-    "lastEditorialCheckedAt": "2026-10-04"
+    "lastEditorialCheckedAt": "2026-10-04",
+    "levelScope": "information",
+    "evidence": [
+      {
+        "url": "https://www.auswaertiges-amt.de/",
+        "fields": [
+          "purpose"
+        ],
+        "checkedAt": "2026-10-04"
+      }
+    ]
   },
   {
     "id": "studierendenwerke",
@@ -8353,11 +8435,7 @@
     "url": "https://www.studierendenwerke.de/",
     "canonicalUrl": "https://www.studierendenwerke.de/",
     "primaryCategory": "life",
-    "levels": [
-      "B1",
-      "B2",
-      "C1"
-    ],
+    "levels": [],
     "price": "free",
     "access": "open",
     "skills": [
@@ -8373,13 +8451,23 @@
       "life"
     ],
     "exams": [],
-    "levelBasis": "editorial",
+    "levelBasis": "unspecified",
     "languages": [
       "德语"
     ],
     "rights": "link-only",
     "status": "published",
-    "linkStatus": "restricted"
+    "linkStatus": "restricted",
+    "levelScope": "information",
+    "evidence": [
+      {
+        "url": "https://www.studierendenwerke.de/",
+        "fields": [
+          "purpose"
+        ],
+        "checkedAt": "2026-10-04"
+      }
+    ]
   },
   {
     "id": "berufenet",

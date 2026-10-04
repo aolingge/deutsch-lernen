@@ -26,7 +26,12 @@
     els.notice.textContent = book.translationStatus === "not-imported" ? "这本书的德语正文已准备好。当前文件夹里没有对应中文译文，因此“显示译文”暂时不会伪造内容；可后续把人工或校订译文导入 data/books.js。" : "第一本书复用了已有沉浸式翻译 HTML 中能精确对应的本地译文，未匹配段落仍保持原文。";
     els.content.dataset.translationMode = state.translation;
     els.content.innerHTML = book.paragraphs.map((item, index) => { const text = clean(item.de); const translation = clean(item.zh); const heading = text.length < 100 && (/^(Kapitel|Erstes|Zweites|Drittes|Viertes|Fünftes|Sechstes|Siebentes|Achtes|Neuntes|Zehntes|Inhalt|Personen|Gestalten|Teil|Das Ende)/i.test(text) || /^[A-ZÄÖÜ][^.!?]{2,70}$/.test(text)); const longTranslation = translation.length > 92 || text.length > 150; return `<section class="reading-block ${heading ? "is-heading" : ""}" data-index="${index}"><p class="german">${escapeHtml(text)}</p>${translation ? `<span class="translation ${longTranslation ? "long" : "short"}" tabindex="0" role="button" aria-label="悬停或点击显示译文" ${state.translation === "hide" ? "hidden" : ""}>${escapeHtml(translation)}</span>` : ""}</section>`; }).join("");
-    els.content.querySelectorAll(".translation").forEach((translation) => translation.addEventListener("click", () => { if (state.translation === "hover") translation.classList.toggle("is-revealed"); }));
+    els.content.querySelectorAll(".translation").forEach((translation) => {
+      translation.setAttribute("aria-expanded", String(state.translation === "show"));
+      if (state.translation === "show") { translation.removeAttribute("role"); translation.removeAttribute("tabindex"); translation.removeAttribute("aria-label"); translation.removeAttribute("aria-expanded"); }
+      translation.addEventListener("click", () => { if (state.translation === "hover") { const expanded=translation.classList.toggle("is-revealed"); translation.setAttribute("aria-expanded",String(expanded)); } });
+      translation.addEventListener("keydown", event => { if(state.translation === "hover" && (event.key === "Enter" || event.key === " ")) { event.preventDefault(); translation.click(); } });
+    });
     updateControls();
     updateProgress();
     const savedPosition = Number(localStorage.getItem(positionKey()) || 0);

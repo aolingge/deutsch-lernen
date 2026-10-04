@@ -16,7 +16,7 @@ export function toggleFavorite(id: string): boolean {
   const value = read();
   const favorites = getFavorites();
   const saved = !favorites.includes(id);
-  value.favorites = saved ? [...favorites, id] : favorites.filter((item) => item !== id);
+  value.favorites = saved ? mergeFavoriteIds(favorites, [id]) : favorites.filter((item) => item !== id);
   localStorage.setItem(key, JSON.stringify(value));
   return saved;
 }

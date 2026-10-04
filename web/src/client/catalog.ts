@@ -4,7 +4,9 @@ import snapshot from '../../data/public-snapshot.json';
 import snapshotCategories from '../../data/categories.json';
 import { isDirectoryResource, selectResources, resourceCard, resourceDetail, directoryReturnPath, escapeHtml, priceLabels, accessLabels } from '../lib/resource-directory.mjs';
 import { getFavorites, toggleFavorite, exportFavorites, importFavorites } from './favorites';
-import { buildFacets, catalogCounts, providerKey } from '../lib/catalog-facets.mjs';
+import { buildFacets, catalogCounts, providerKey, providerIndex } from '../lib/catalog-facets.mjs';
+import { mergeFavoriteIds, parseFavoritesBackup } from '../lib/favorites-backup.mjs';
+import { parsePublicCatalog } from '../lib/public-catalog.mjs';
 
 let items = snapshot.filter(isDirectoryResource) as Resource[];
 let categories = snapshotCategories as Category[];
@@ -18,8 +20,9 @@ const advancedKeys = ['skill', 'exam', 'access', 'format', 'provider'];
 let timer: ReturnType<typeof setTimeout>;
 let composing = false;
 const e = escapeHtml;
+const favoriteError = (error: unknown) => error instanceof DOMException ? '浏览器存储不可用，请检查存储权限或剩余空间' : error instanceof Error ? error.message : '收藏操作失败';
 const notify = (message: string) => {
-  const note = document.querySelector('#directory-note, #resource-note');
+  const note = document.querySelector('#favorites-note, #directory-note, #resource-note');
   if (note) note.textContent = message;
 };
 try { favorites = getFavorites(); view = localStorage.getItem('deutsch-hub.directory-view') || 'grid'; }
@@ -87,6 +90,14 @@ function render() {
   const filterFocus = focused?.dataset.removeFilter;
   const favoriteFocus = focused?.dataset.save;
   const counts = catalogCounts(items);
+  const sourceIndex=document.querySelector('.provider-index');
+  if (sourceIndex) {
+    const providers=providerIndex(items);
+    sourceIndex.innerHTML=providers.map(p=>`<li><a href="/resources/?provider=${encodeURIComponent(p.id)}">${e(p.name)}</a><span>${p.count} 个资源</span></li>`).join('');
+    const facts=document.querySelectorAll('.source-facts strong');
+    if(facts[1])facts[1].textContent=String(counts.categories);
+    if(facts[2])facts[2].textContent=String(providers.length);
+  }
   document.querySelectorAll('[data-resource-count]').forEach((node) => { node.textContent = String(counts.resources); });
   document.querySelectorAll('[data-site-count]').forEach((node) => { node.textContent = String(counts.sites); });
   document.querySelectorAll('[data-total-category-count]').forEach((node) => { node.textContent = String(counts.categories); });
@@ -160,6 +171,7 @@ const scheduleSearch = () => {
 search?.addEventListener('compositionstart', () => { composing = true; clearTimeout(timer); });
 search?.addEventListener('compositionend', () => { composing = false; scheduleSearch(); });
 search?.addEventListener('input', scheduleSearch);
+// This associated select is outside the form in the DOM, so its event does not bubble to the form.
 document.querySelector<HTMLSelectElement>('select[name=sort]')?.addEventListener('change', () => navigate(fromForm()));
 window.addEventListener('popstate', () => { clearTimeout(timer); syncForm(true); render(); });
 window.addEventListener('storage', () => { try { favorites = getFavorites(); render(); } catch { notify('读取收藏失败。'); } });
@@ -181,7 +193,7 @@ document.addEventListener('click', (event) => {
     return;
   }
   const bookmark = node.closest<HTMLElement>('[data-save]');
-  if (bookmark) { try { const saved = toggleFavorite(bookmark.dataset.save!); favorites = getFavorites(); if (savedOnly) render(); else updateFavoriteButtons(); notify(saved ? '已收藏，保存在当前浏览器。' : '已取消收藏。'); } catch { notify('收藏未保存，请检查浏览器存储权限。'); } return; }
+  if (bookmark) { try { const saved = toggleFavorite(bookmark.dataset.save!); favorites = getFavorites(); if (savedOnly) render(); else updateFavoriteButtons(); notify(saved ? '已收藏，保存在当前浏览器。' : '已取消收藏。'); } catch (error) { notify(favoriteError(error)); } return; }
   const category = node.closest<HTMLElement>('.category-link');
   const remove = node.closest<HTMLElement>('[data-remove-filter]');
   const reset = node.closest('[data-reset]');
@@ -199,9 +211,8 @@ async function refresh() {
   try {
     const response = await fetch('/api/public-catalog', { signal: AbortSignal.timeout(7000) });
     if (!response.ok) throw Error('目录读取失败');
-    const data = await response.json();
-    if (!Array.isArray(data.resources) || !Array.isArray(data.categories)) throw Error('目录格式不正确');
-    items = data.resources.filter(isDirectoryResource); categories = data.categories;
+    const data = parsePublicCatalog(await response.json());
+    items = data.resources as Resource[]; categories = data.categories;
     render(); showDetail();
   } catch { notify('当前显示本地目录，实时更新暂不可用。'); }
   finally {
@@ -232,11 +243,14 @@ document.querySelector<HTMLInputElement>('[data-import-favorites]')?.addEventLis
   const file = input.files?.[0];
   if (!file) return;
   try {
-    if (file.size > 1024 * 1024) throw Error('文件过大');
+    if (file.size > 1024 * 1024) throw Error('收藏备份不能超过 1 MB');
     const backup = JSON.parse(await file.text());
-    const incoming = Array.isArray(backup?.favorites) ? backup.favorites.length : 0;
-    const existing = getFavorites().length;
-    if (!window.confirm(`将导入 ${incoming} 个收藏，并与当前 ${existing} 个收藏合并。继续吗？`)) {
+    const incoming = parseFavoritesBackup(backup);
+    const existing = getFavorites();
+    const merged = mergeFavoriteIds(existing, incoming);
+    const added = merged.length - existing.length;
+    const unavailable = incoming.filter(id => !items.some(r => r.id === id)).length;
+    if (!window.confirm(`将新增 ${added} 个收藏，合并后共 ${merged.length} 个。${unavailable ? `其中 ${unavailable} 个暂未在公开目录中收录，仍会保留在备份中。` : ''}继续吗？`)) {
       notify('已取消导入，原收藏未改变。');
       input.value = '';
       return;
@@ -244,8 +258,8 @@ document.querySelector<HTMLInputElement>('[data-import-favorites]')?.addEventLis
     const count = importFavorites(backup);
     favorites = getFavorites();
     render();
-    notify(`已导入 ${count} 个收藏。`);
-  } catch { notify('收藏备份格式不正确，原收藏未改变。'); }
+    notify(`已新增 ${added} 个收藏，共保存 ${count} 个。${unavailable ? `其中 ${unavailable} 个暂未公开，已保留。` : ''}`);
+  } catch (error) { notify(`${error instanceof SyntaxError ? '收藏备份不是有效的 JSON' : favoriteError(error)}。原收藏未改变。`); }
   input.value = '';
 });
 document.querySelector<HTMLInputElement>('[data-import-favorites]')?.addEventListener('click', () => notify('请选择之前导出的收藏 JSON 文件。'));
