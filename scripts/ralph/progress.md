@@ -25,11 +25,11 @@ Authorization: execute all twelve packages, verify and deploy the configured web
 | W05 visuals | complete | single-result grid capped at 760px; responsive black-box checks at 320/375/1440 pass |
 | W06 providers | complete | stable provider facet and source index with counts/links |
 | W07 search | complete | TestDaF, Wörterbuch transliteration, price aliases and resource aliases covered by regression tests |
-| W08 link maintenance | complete | repository link checker run: 114 ok, 11 restricted, 0 broken, 5 unchecked; no automatic archival |
+| W08 link maintenance | complete | repository and live-D1 link checker modes; final live run 115 ok, 11 restricted, 0 broken, 4 unchecked; CI uploads both reports and never auto-archives |
 | W09 administration | complete for this release | editor exposes optional historical text and new metadata; live protected write workflow intentionally not exercised without an admin session |
-| W10 favorites | complete | local JSON export/import with size and schema validation; import merges IDs and preserves private goals/tasks |
-| W11 metadata/performance | complete for current scope | canonical/title/sitemap/robots and live response checks passed; no Lighthouse/field INP claim |
-| W12 regression/deploy | complete | local verify, link check, local/live Chromium smoke, favorites controls, API/D1 consistency, headers, sitemap/robots and live detail checks passed; deployed version `18ee3956-f064-4e39-b1a8-5545e75a6733` |
+| W10 favorites | complete | versioned local JSON export/import with size/schema validation, merge confirmation, dedicated contract tests; private goals/tasks remain untouched |
+| W11 metadata/performance | complete for current scope | canonical/OG image/JSON-LD/sitemap/robots and CSP Report-Only verified live; repeatable Chromium lab samples recorded, no field INP claim |
+| W12 regression/deploy | complete | local verify, live link check, accessibility/keyboard/reflow smoke, Chromium cross-browser smoke, performance samples, API/D1 consistency, headers and live detail checks passed; deployed version `55962e30-da5c-4c38-8e6e-8b6aaa14bff1` |
 
 ## Checkpoints
 
@@ -41,6 +41,9 @@ Authorization: execute all twelve packages, verify and deploy the configured web
 - Remote D1 metadata refresh used guarded `catalog-seed` revision updates; five edited rows now have audit revisions and live API reflects the verified metadata.
 - Live Playwright smoke uses `domcontentloaded` plus DOM readiness because network-idle is not a stable Worker completion condition; it passed at 320, 375 and 1440 px.
 - Final link report: `.wrangler/resource-links-final.json` with 114 ok, 11 restricted, 0 broken and 5 unchecked.
+- Live link report: `.wrangler/resource-links-live.json` with 115 ok, 11 restricted, 0 broken and 4 unchecked; catalog source is the public D1 API.
+- QA artifacts: `tests/accessibility-smoke.py`, `tests/cross-browser-smoke.py`, `tests/performance-smoke.py`; Chromium and keyboard/reflow passed, Firefox/WebKit binaries unavailable on this host.
+- OG image, JSON-LD and CSP Report-Only were verified on a live detail response; `/og-directory.png` returned 200.
 - Favorites backup controls were deployed and verified at `/favorites/`; import merges valid IDs and does not overwrite private goals/tasks.
-- Final deployment version: `18ee3956-f064-4e39-b1a8-5545e75a6733`; live endpoints and key detail pages returned 200. Import now checks version 1 and asks for a merge preview before writing.
+- Final deployment version: `55962e30-da5c-4c38-8e6e-8b6aaa14bff1`; live endpoints and key detail pages returned 200. Import checks version 1 and asks for a merge preview before writing.
 - Remaining limit: no Firefox/WebKit or real Cloudflare Access admin write flow was exercised; no claim is made for those paths.
