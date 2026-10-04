@@ -89,9 +89,13 @@ with sync_playwright() as p:
     go('/?category=grammar&level=B1&price=free')
     original_url = page.url
     page.evaluate('scrollTo(0, 300)')
-    previous_scroll = page.evaluate('scrollY')
     page.locator('.detail-link').first.click()
     page.wait_for_function("document.documentElement?.dataset.catalogReady === 'true'")
+    # Playwright may scroll the link into view before clicking; compare the
+    # position recorded at the actual click, not before that automatic scroll.
+    return_state = page.evaluate("JSON.parse(sessionStorage.getItem('deutsch-hub.directory-return'))")
+    previous_scroll = return_state['scroll']
+    assert previous_scroll > 0 and base + return_state['url'] == original_url
     page.locator('.detail-back').click()
     page.wait_for_function("document.documentElement?.dataset.catalogReady === 'true'")
     assert page.url == original_url, 'detail return lost filter context'
