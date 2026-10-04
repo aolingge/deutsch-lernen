@@ -2,6 +2,7 @@
 (function () {
   "use strict";
   const books = window.GUTENBERG_BOOKS || [];
+  books.forEach(book => { book.translatedParagraphs = book.paragraphs.filter(item => String(item.zh || '').trim()).length; });
   const savedTranslation = localStorage.getItem("gutenberg-translation-v2");
   const state = { bookId: localStorage.getItem("gutenberg-book") || books[0]?.id, translation: savedTranslation === "hide" || savedTranslation === "show" ? savedTranslation : "hover", theme: localStorage.getItem("gutenberg-theme") || "paper", fontSize: Number(localStorage.getItem("gutenberg-font-size") || 20) };
   const $ = (selector) => document.querySelector(selector);
@@ -13,7 +14,7 @@
   function savePosition() { localStorage.setItem(positionKey(), String(Math.round(window.scrollY))); }
   function renderBooks() {
     const query = clean(els.search.value).toLowerCase();
-    els.list.innerHTML = books.filter((book) => `${book.title} ${book.germanTitle} ${book.author}`.toLowerCase().includes(query)).map((book) => `<button class="book-card ${book.id === state.bookId ? "active" : ""}" type="button" data-book="${book.id}"><span class="book-card-top"><span>${book.id} · ${book.level}</span><span>${book.study}</span></span><h2>${book.title}</h2><p>${book.germanTitle} · ${book.author}</p><span class="book-status ${book.translationStatus === "not-imported" ? "pending" : ""}">${book.translationStatus === "partial-local" ? "部分本地译文" : "译文待导入"}</span></button>`).join("") || `<p class="library-note">没有匹配的书目。</p>`;
+    els.list.innerHTML = books.filter((book) => `${book.title} ${book.germanTitle} ${book.author}`.toLowerCase().includes(query)).map((book) => `<button class="book-card ${book.id === state.bookId ? "active" : ""}" type="button" data-book="${book.id}"><span class="book-card-top"><span>${book.id} · ${book.level}</span><span>${book.study}</span></span><h2>${book.title}</h2><p>${book.germanTitle} · ${book.author}</p><span class="book-status ${book.translationStatus === "not-imported" ? "pending" : ""}">${book.translatedParagraphs ? `已导入 ${book.translatedParagraphs} / ${book.paragraphs.length} 段译文` : "译文待导入"}</span></button>`).join("") || `<p class="library-note">没有匹配的书目。</p>`;
     els.list.querySelectorAll("[data-book]").forEach((button) => button.addEventListener("click", () => { state.bookId = button.dataset.book; save(); renderBooks(); renderReader(); window.scrollTo({ top: 0, behavior: "smooth" }); }));
   }
   function renderReader() {
@@ -22,8 +23,8 @@
     els.title.textContent = book.title;
     els.meta.textContent = `${book.germanTitle} · ${book.author}  /  ${book.level} · ${book.study}`;
     els.number.textContent = book.id;
-    els.notice.hidden = book.translationStatus !== "not-imported";
-    els.notice.textContent = book.translationStatus === "not-imported" ? "这本书的德语正文已准备好。当前文件夹里没有对应中文译文，因此“显示译文”暂时不会伪造内容；可后续把人工或校订译文导入 data/books.js。" : "第一本书复用了已有沉浸式翻译 HTML 中能精确对应的本地译文，未匹配段落仍保持原文。";
+    els.notice.hidden = false;
+    els.notice.textContent = book.translatedParagraphs ? `已导入 ${book.translatedParagraphs} / ${book.paragraphs.length} 段译文。中文为机器翻译，遇到疑问请结合德语原文理解；数字、网址等内容可能仅保留原文。` : "这本书的译文尚未导入，可以先阅读德语原文。";
     els.content.dataset.translationMode = state.translation;
     els.content.innerHTML = book.paragraphs.map((item, index) => { const text = clean(item.de); const translation = clean(item.zh); const heading = text.length < 100 && (/^(Kapitel|Erstes|Zweites|Drittes|Viertes|Fünftes|Sechstes|Siebentes|Achtes|Neuntes|Zehntes|Inhalt|Personen|Gestalten|Teil|Das Ende)/i.test(text) || /^[A-ZÄÖÜ][^.!?]{2,70}$/.test(text)); const longTranslation = translation.length > 92 || text.length > 150; return `<section class="reading-block ${heading ? "is-heading" : ""}" data-index="${index}"><p class="german">${escapeHtml(text)}</p>${translation ? `<span class="translation ${longTranslation ? "long" : "short"}" tabindex="0" role="button" aria-label="悬停或点击显示译文" ${state.translation === "hide" ? "hidden" : ""}>${escapeHtml(translation)}</span>` : ""}</section>`; }).join("");
     els.content.querySelectorAll(".translation").forEach((translation) => {
