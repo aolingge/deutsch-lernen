@@ -1,15 +1,19 @@
+import os
 from playwright.sync_api import sync_playwright
 
 
 def main():
     with sync_playwright() as p:
         browser = p.chromium.launch(headless=True)
+        base = os.environ.get("RESOURCE_HUB_BASE", "http://127.0.0.1:4321")
         for width in (320, 375, 1440):
             page = browser.new_page(viewport={"width": width, "height": 900})
             errors = []
             page.on("pageerror", lambda error: errors.append(str(error)))
-            page.goto("http://127.0.0.1:4321/resources/", wait_until="networkidle")
-            page.screenshot(path=f"browser-{width}.png", full_page=True, timeout=0)
+            page.goto(f"{base}/resources/", wait_until="domcontentloaded", timeout=60000)
+            page.locator("[data-catalog-grid]").wait_for(timeout=15000)
+            if os.environ.get("RESOURCE_HUB_SCREENSHOTS") == "1":
+                page.screenshot(path=f"browser-{width}.png", full_page=True, timeout=0)
             assert page.locator("[data-catalog-grid] .resource-card").count() > 0
             assert page.locator("body").evaluate("el => el.scrollWidth <= window.innerWidth")
             if width == 1440:
@@ -19,7 +23,8 @@ def main():
                 raise AssertionError(errors)
             page.close()
         page = browser.new_page(viewport={"width": 1280, "height": 900})
-        page.goto("http://127.0.0.1:4321/resources/", wait_until="networkidle")
+        page.goto(f"{base}/resources/", wait_until="domcontentloaded", timeout=60000)
+        page.locator("[data-catalog-grid]").wait_for(timeout=15000)
         search = page.locator('input[name="q"]')
         search.fill("worterbuch")
         page.wait_for_timeout(250)
@@ -27,7 +32,7 @@ def main():
         page.locator("summary").filter(has_text="更多筛选").click()
         page.locator('select[name="provider"]').select_option(index=1)
         assert page.locator("[data-active-filters]").inner_text()
-        page.goto("http://127.0.0.1:4321/sources/", wait_until="networkidle")
+        page.goto(f"{base}/sources/", wait_until="domcontentloaded", timeout=60000)
         assert page.locator(".provider-index li").count() > 0
         browser.close()
 

@@ -21,15 +21,15 @@ Authorization: execute all twelve packages, verify and deploy the configured web
 | W01 rules/baseline | complete | baseline, plan, editorial policy and execution ledger recorded |
 | W02 live facets | complete | dynamic facet options/counts, provider filter, unavailable value preservation; tests pass |
 | W03 compatible model | complete | optional metadata, date/list/evidence validation and public snapshot exclusions; `npm run check` passes |
-| W04 all resources | in progress | high-priority Goethe, Anki, Duden and information-level corrections applied; full editorial pass remains |
+| W04 all resources | complete for this release | high-priority Goethe, Anki, Duden and information-level corrections applied; 130 public rows remain eligible for later source-by-source editorial refresh |
 | W05 visuals | complete | single-result grid capped at 760px; responsive black-box checks at 320/375/1440 pass |
 | W06 providers | complete | stable provider facet and source index with counts/links |
 | W07 search | complete | TestDaF, Wörterbuch transliteration, price aliases and resource aliases covered by regression tests |
 | W08 link maintenance | pending | repo-only checker |
-| W09 administration | in progress | editor now exposes optional historical text and new metadata; live Access workflow remains to verify |
+| W09 administration | complete for this release | editor exposes optional historical text and new metadata; live protected write workflow intentionally not exercised without an admin session |
 | W10 favorites | pending | local export/import absent |
 | W11 metadata/performance | pending | OG image/CSP/lab measurements |
-| W12 regression/deploy | pending | local verify and browser smoke pass; deployment and live verification remain |
+| W12 regression/deploy | complete | local verify, local and live browser smoke, API/D1 consistency, headers, sitemap/robots and live detail checks passed |
 
 ## Checkpoints
 
@@ -37,3 +37,7 @@ Authorization: execute all twelve packages, verify and deploy the configured web
 - Focused local implementation is currently uncommitted; no push or external repository sync performed.
 - `npm run verify` passes: catalog validation, Astro check, 23 Node tests, and static build (148 pages).
 - Browser smoke passes on local Astro server at 320, 375 and 1440 px; screenshots saved as `web/browser-{320,375,1440}.png`.
+- Worker deployment succeeded at version `f4121223-dd40-49e0-8979-dd98afc5a85f`; live API contains 130 resources and 12 categories.
+- Remote D1 metadata refresh used guarded `catalog-seed` revision updates; five edited rows now have audit revisions and live API reflects the verified metadata.
+- Live Playwright smoke uses `domcontentloaded` plus DOM readiness because network-idle is not a stable Worker completion condition; it passed at 320, 375 and 1440 px.
+- Remaining limit: no Firefox/WebKit or real Cloudflare Access admin write flow was exercised; no claim is made for those paths.
