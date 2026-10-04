@@ -6929,7 +6929,10 @@
       "Duden",
       "writing"
     ],
-    "aliases": ["Duden Mentor", "Mentor"],
+    "aliases": [
+      "Duden Mentor",
+      "Mentor"
+    ],
     "exams": [],
     "levelBasis": "editorial",
     "languages": [
@@ -8508,5 +8511,3720 @@
     "status": "published",
     "linkStatus": "ok",
     "lastEditorialCheckedAt": "2026-10-04"
+  },
+  {
+    "id": "nebenan",
+    "slug": "nebenan",
+    "titleOriginal": "nebenan.de",
+    "titleZh": "nebenan.de 邻里社区",
+    "descriptionZh": "按街区连接邻居、发布本地信息和互助请求的德国社区平台。",
+    "primaryCategory": "social",
+    "tags": [
+      "社区",
+      "邻里",
+      "互助"
+    ],
+    "levels": [],
+    "levelBasis": "unspecified",
+    "skills": [
+      "生活信息"
+    ],
+    "exams": [],
+    "formats": [
+      "网页"
+    ],
+    "price": "unknown",
+    "access": "registration",
+    "languages": [
+      "德语"
+    ],
+    "sourceName": "nebenan.de",
+    "url": "https://nebenan.de/",
+    "canonicalUrl": "https://nebenan.de/",
+    "rights": "link-only",
+    "status": "published",
+    "linkStatus": "unchecked",
+    "lastEditorialCheckedAt": "2026-10-04",
+    "providerId": "nebenan",
+    "providerType": "community",
+    "mediaTypes": [
+      "网页"
+    ],
+    "costNoteZh": "信息入口免费；第三方交易、服务或订阅费用以原站为准。",
+    "accessNoteZh": "部分功能可能要求注册或登录，以原站为准。",
+    "interfaceLanguages": [
+      "德语"
+    ],
+    "levelScope": "information",
+    "aliases": [],
+    "editorialStatus": "partial",
+    "evidence": [
+      {
+        "url": "https://nebenan.de/",
+        "fields": [
+          "purpose"
+        ],
+        "checkedAt": "2026-10-04"
+      }
+    ],
+    "howToUseZh": "打开原站，按页面提示查找相关信息；费用、资格和可用性以原站为准。"
+  },
+  {
+    "id": "meetup-germany",
+    "slug": "meetup-germany",
+    "titleOriginal": "Meetup Deutschland",
+    "titleZh": "Meetup 德国线下活动",
+    "descriptionZh": "查找德国各城市的语言交换、技术、兴趣和社交活动。",
+    "primaryCategory": "social",
+    "tags": [
+      "活动",
+      "兴趣小组",
+      "线下"
+    ],
+    "levels": [],
+    "levelBasis": "unspecified",
+    "skills": [
+      "生活信息"
+    ],
+    "exams": [],
+    "formats": [
+      "网页"
+    ],
+    "price": "unknown",
+    "access": "registration",
+    "languages": [
+      "德语"
+    ],
+    "sourceName": "Meetup",
+    "url": "https://www.meetup.com/find/?location=de--Berlin",
+    "canonicalUrl": "https://www.meetup.com/find/?location=de--Berlin",
+    "rights": "link-only",
+    "status": "published",
+    "linkStatus": "unchecked",
+    "lastEditorialCheckedAt": "2026-10-04",
+    "providerId": "meetup-germany",
+    "providerType": "community",
+    "mediaTypes": [
+      "网页"
+    ],
+    "costNoteZh": "信息入口免费；第三方交易、服务或订阅费用以原站为准。",
+    "accessNoteZh": "部分功能可能要求注册或登录，以原站为准。",
+    "interfaceLanguages": [
+      "德语"
+    ],
+    "levelScope": "information",
+    "aliases": [],
+    "editorialStatus": "partial",
+    "evidence": [
+      {
+        "url": "https://www.meetup.com/find/?location=de--Berlin",
+        "fields": [
+          "purpose"
+        ],
+        "checkedAt": "2026-10-04"
+      }
+    ],
+    "howToUseZh": "打开原站，按页面提示查找相关信息；费用、资格和可用性以原站为准。"
+  },
+  {
+    "id": "internations-germany",
+    "slug": "internations-germany",
+    "titleOriginal": "InterNations Germany",
+    "titleZh": "InterNations 德国外籍人士社区",
+    "descriptionZh": "面向在德国生活的国际人士，提供城市社区、活动和经验交流入口。",
+    "primaryCategory": "social",
+    "tags": [
+      "外籍人士",
+      "社区",
+      "活动"
+    ],
+    "levels": [],
+    "levelBasis": "unspecified",
+    "skills": [
+      "生活信息"
+    ],
+    "exams": [],
+    "formats": [
+      "网页"
+    ],
+    "price": "unknown",
+    "access": "registration",
+    "languages": [
+      "德语"
+    ],
+    "sourceName": "InterNations",
+    "url": "https://www.internations.org/germany-expats",
+    "canonicalUrl": "https://www.internations.org/germany-expats",
+    "rights": "link-only",
+    "status": "published",
+    "linkStatus": "unchecked",
+    "lastEditorialCheckedAt": "2026-10-04",
+    "providerId": "internations-germany",
+    "providerType": "community",
+    "mediaTypes": [
+      "网页"
+    ],
+    "costNoteZh": "信息入口免费；第三方交易、服务或订阅费用以原站为准。",
+    "accessNoteZh": "部分功能可能要求注册或登录，以原站为准。",
+    "interfaceLanguages": [
+      "德语"
+    ],
+    "levelScope": "information",
+    "aliases": [],
+    "editorialStatus": "partial",
+    "evidence": [
+      {
+        "url": "https://www.internations.org/germany-expats",
+        "fields": [
+          "purpose"
+        ],
+        "checkedAt": "2026-10-04"
+      }
+    ],
+    "howToUseZh": "打开原站，按页面提示查找相关信息；费用、资格和可用性以原站为准。"
+  },
+  {
+    "id": "toy-town-germany",
+    "slug": "toy-town-germany",
+    "titleOriginal": "Toytown Germany",
+    "titleZh": "Toytown Germany 英语社区",
+    "descriptionZh": "长期运行的德国英语社区，包含城市生活、工作和办事讨论。",
+    "primaryCategory": "social",
+    "tags": [
+      "英语社区",
+      "城市生活",
+      "讨论"
+    ],
+    "levels": [],
+    "levelBasis": "unspecified",
+    "skills": [
+      "生活信息"
+    ],
+    "exams": [],
+    "formats": [
+      "网页"
+    ],
+    "price": "unknown",
+    "access": "open",
+    "languages": [
+      "英语",
+      "德语"
+    ],
+    "sourceName": "Toytown Germany",
+    "url": "https://www.toytowngermany.com/",
+    "canonicalUrl": "https://www.toytowngermany.com/",
+    "rights": "link-only",
+    "status": "published",
+    "linkStatus": "unchecked",
+    "lastEditorialCheckedAt": "2026-10-04",
+    "providerId": "toy-town-germany",
+    "providerType": "community",
+    "mediaTypes": [
+      "网页"
+    ],
+    "costNoteZh": "信息入口免费；第三方交易、服务或订阅费用以原站为准。",
+    "accessNoteZh": "部分功能可能要求注册或登录，以原站为准。",
+    "interfaceLanguages": [
+      "德语"
+    ],
+    "levelScope": "information",
+    "aliases": [],
+    "editorialStatus": "partial",
+    "evidence": [
+      {
+        "url": "https://www.toytowngermany.com/",
+        "fields": [
+          "purpose"
+        ],
+        "checkedAt": "2026-10-04"
+      }
+    ],
+    "howToUseZh": "打开原站，按页面提示查找相关信息；费用、资格和可用性以原站为准。"
+  },
+  {
+    "id": "reddit-germany",
+    "slug": "reddit-germany",
+    "titleOriginal": "r/germany",
+    "titleZh": "Reddit Germany 社区",
+    "descriptionZh": "德国相关的公开讨论区，可浏览生活、旅行和社会话题。",
+    "primaryCategory": "social",
+    "tags": [
+      "社区",
+      "讨论",
+      "英语"
+    ],
+    "levels": [],
+    "levelBasis": "unspecified",
+    "skills": [
+      "生活信息"
+    ],
+    "exams": [],
+    "formats": [
+      "网页"
+    ],
+    "price": "unknown",
+    "access": "registration",
+    "languages": [
+      "英语",
+      "德语"
+    ],
+    "sourceName": "Reddit",
+    "url": "https://www.reddit.com/r/germany/",
+    "canonicalUrl": "https://www.reddit.com/r/germany/",
+    "rights": "link-only",
+    "status": "published",
+    "linkStatus": "unchecked",
+    "lastEditorialCheckedAt": "2026-10-04",
+    "providerId": "reddit-germany",
+    "providerType": "community",
+    "mediaTypes": [
+      "网页"
+    ],
+    "costNoteZh": "信息入口免费；第三方交易、服务或订阅费用以原站为准。",
+    "accessNoteZh": "部分功能可能要求注册或登录，以原站为准。",
+    "interfaceLanguages": [
+      "德语"
+    ],
+    "levelScope": "information",
+    "aliases": [],
+    "editorialStatus": "partial",
+    "evidence": [
+      {
+        "url": "https://www.reddit.com/r/germany/",
+        "fields": [
+          "purpose"
+        ],
+        "checkedAt": "2026-10-04"
+      }
+    ],
+    "howToUseZh": "打开原站，按页面提示查找相关信息；费用、资格和可用性以原站为准。"
+  },
+  {
+    "id": "couchsurfing-germany",
+    "slug": "couchsurfing-germany",
+    "titleOriginal": "Couchsurfing Germany",
+    "titleZh": "Couchsurfing 德国社区",
+    "descriptionZh": "旅行者和当地人交流、参加活动与寻找短期接待信息的社区入口。",
+    "primaryCategory": "social",
+    "tags": [
+      "旅行",
+      "活动",
+      "社区"
+    ],
+    "levels": [],
+    "levelBasis": "unspecified",
+    "skills": [
+      "生活信息"
+    ],
+    "exams": [],
+    "formats": [
+      "网页"
+    ],
+    "price": "unknown",
+    "access": "registration",
+    "languages": [
+      "德语"
+    ],
+    "sourceName": "Couchsurfing",
+    "url": "https://www.couchsurfing.com/places/germany",
+    "canonicalUrl": "https://www.couchsurfing.com/places/germany",
+    "rights": "link-only",
+    "status": "published",
+    "linkStatus": "unchecked",
+    "lastEditorialCheckedAt": "2026-10-04",
+    "providerId": "couchsurfing-germany",
+    "providerType": "community",
+    "mediaTypes": [
+      "网页"
+    ],
+    "costNoteZh": "信息入口免费；第三方交易、服务或订阅费用以原站为准。",
+    "accessNoteZh": "部分功能可能要求注册或登录，以原站为准。",
+    "interfaceLanguages": [
+      "德语"
+    ],
+    "levelScope": "information",
+    "aliases": [],
+    "editorialStatus": "partial",
+    "evidence": [
+      {
+        "url": "https://www.couchsurfing.com/places/germany",
+        "fields": [
+          "purpose"
+        ],
+        "checkedAt": "2026-10-04"
+      }
+    ],
+    "howToUseZh": "打开原站，按页面提示查找相关信息；费用、资格和可用性以原站为准。"
+  },
+  {
+    "id": "immobilienscout24",
+    "slug": "immobilienscout24",
+    "titleOriginal": "ImmoScout24",
+    "titleZh": "ImmoScout24 房屋与公寓",
+    "descriptionZh": "德国规模较大的房屋出租、购买和房源搜索平台。",
+    "primaryCategory": "housing",
+    "tags": [
+      "租房",
+      "买房",
+      "房源"
+    ],
+    "levels": [],
+    "levelBasis": "unspecified",
+    "skills": [
+      "生活信息"
+    ],
+    "exams": [],
+    "formats": [
+      "网页"
+    ],
+    "price": "unknown",
+    "access": "registration",
+    "languages": [
+      "德语"
+    ],
+    "sourceName": "ImmoScout24",
+    "url": "https://www.immobilienscout24.de/",
+    "canonicalUrl": "https://www.immobilienscout24.de/",
+    "rights": "link-only",
+    "status": "published",
+    "linkStatus": "unchecked",
+    "lastEditorialCheckedAt": "2026-10-04",
+    "providerId": "immobilienscout24",
+    "providerType": "commercial",
+    "mediaTypes": [
+      "网页"
+    ],
+    "costNoteZh": "信息入口免费；第三方交易、服务或订阅费用以原站为准。",
+    "accessNoteZh": "部分功能可能要求注册或登录，以原站为准。",
+    "interfaceLanguages": [
+      "德语"
+    ],
+    "levelScope": "information",
+    "aliases": [],
+    "editorialStatus": "partial",
+    "evidence": [
+      {
+        "url": "https://www.immobilienscout24.de/",
+        "fields": [
+          "purpose"
+        ],
+        "checkedAt": "2026-10-04"
+      }
+    ],
+    "howToUseZh": "打开原站，按页面提示查找相关信息；费用、资格和可用性以原站为准。"
+  },
+  {
+    "id": "immowelt",
+    "slug": "immowelt",
+    "titleOriginal": "immowelt",
+    "titleZh": "immowelt 房产平台",
+    "descriptionZh": "搜索德国出租、出售、公寓和房屋房源。",
+    "primaryCategory": "housing",
+    "tags": [
+      "租房",
+      "房产",
+      "房源"
+    ],
+    "levels": [],
+    "levelBasis": "unspecified",
+    "skills": [
+      "生活信息"
+    ],
+    "exams": [],
+    "formats": [
+      "网页"
+    ],
+    "price": "unknown",
+    "access": "open",
+    "languages": [
+      "德语"
+    ],
+    "sourceName": "immowelt",
+    "url": "https://www.immowelt.de/",
+    "canonicalUrl": "https://www.immowelt.de/",
+    "rights": "link-only",
+    "status": "published",
+    "linkStatus": "unchecked",
+    "lastEditorialCheckedAt": "2026-10-04",
+    "providerId": "immowelt",
+    "providerType": "commercial",
+    "mediaTypes": [
+      "网页"
+    ],
+    "costNoteZh": "信息入口免费；第三方交易、服务或订阅费用以原站为准。",
+    "accessNoteZh": "部分功能可能要求注册或登录，以原站为准。",
+    "interfaceLanguages": [
+      "德语"
+    ],
+    "levelScope": "information",
+    "aliases": [],
+    "editorialStatus": "partial",
+    "evidence": [
+      {
+        "url": "https://www.immowelt.de/",
+        "fields": [
+          "purpose"
+        ],
+        "checkedAt": "2026-10-04"
+      }
+    ],
+    "howToUseZh": "打开原站，按页面提示查找相关信息；费用、资格和可用性以原站为准。"
+  },
+  {
+    "id": "immonet",
+    "slug": "immonet",
+    "titleOriginal": "Immonet",
+    "titleZh": "Immonet 房屋搜索",
+    "descriptionZh": "德国住宅、合租和商业房产搜索入口。",
+    "primaryCategory": "housing",
+    "tags": [
+      "租房",
+      "房产",
+      "公寓"
+    ],
+    "levels": [],
+    "levelBasis": "unspecified",
+    "skills": [
+      "生活信息"
+    ],
+    "exams": [],
+    "formats": [
+      "网页"
+    ],
+    "price": "unknown",
+    "access": "open",
+    "languages": [
+      "德语"
+    ],
+    "sourceName": "Immonet",
+    "url": "https://www.immonet.de/",
+    "canonicalUrl": "https://www.immonet.de/",
+    "rights": "link-only",
+    "status": "published",
+    "linkStatus": "unchecked",
+    "lastEditorialCheckedAt": "2026-10-04",
+    "providerId": "immonet",
+    "providerType": "commercial",
+    "mediaTypes": [
+      "网页"
+    ],
+    "costNoteZh": "信息入口免费；第三方交易、服务或订阅费用以原站为准。",
+    "accessNoteZh": "部分功能可能要求注册或登录，以原站为准。",
+    "interfaceLanguages": [
+      "德语"
+    ],
+    "levelScope": "information",
+    "aliases": [],
+    "editorialStatus": "partial",
+    "evidence": [
+      {
+        "url": "https://www.immonet.de/",
+        "fields": [
+          "purpose"
+        ],
+        "checkedAt": "2026-10-04"
+      }
+    ],
+    "howToUseZh": "打开原站，按页面提示查找相关信息；费用、资格和可用性以原站为准。"
+  },
+  {
+    "id": "wg-gesucht",
+    "slug": "wg-gesucht",
+    "titleOriginal": "WG-Gesucht.de",
+    "titleZh": "WG-Gesucht 合租与短租",
+    "descriptionZh": "德国学生和年轻人常用的合租、整租、短租房源平台。",
+    "primaryCategory": "housing",
+    "tags": [
+      "合租",
+      "短租",
+      "学生住房"
+    ],
+    "levels": [],
+    "levelBasis": "unspecified",
+    "skills": [
+      "生活信息"
+    ],
+    "exams": [],
+    "formats": [
+      "网页"
+    ],
+    "price": "unknown",
+    "access": "registration",
+    "languages": [
+      "德语"
+    ],
+    "sourceName": "WG-Gesucht",
+    "url": "https://www.wg-gesucht.de/",
+    "canonicalUrl": "https://www.wg-gesucht.de/",
+    "rights": "link-only",
+    "status": "published",
+    "linkStatus": "unchecked",
+    "lastEditorialCheckedAt": "2026-10-04",
+    "providerId": "wg-gesucht",
+    "providerType": "commercial",
+    "mediaTypes": [
+      "网页"
+    ],
+    "costNoteZh": "信息入口免费；第三方交易、服务或订阅费用以原站为准。",
+    "accessNoteZh": "部分功能可能要求注册或登录，以原站为准。",
+    "interfaceLanguages": [
+      "德语"
+    ],
+    "levelScope": "information",
+    "aliases": [],
+    "editorialStatus": "partial",
+    "evidence": [
+      {
+        "url": "https://www.wg-gesucht.de/",
+        "fields": [
+          "purpose"
+        ],
+        "checkedAt": "2026-10-04"
+      }
+    ],
+    "howToUseZh": "打开原站，按页面提示查找相关信息；费用、资格和可用性以原站为准。"
+  },
+  {
+    "id": "wohnungsboerse",
+    "slug": "wohnungsboerse",
+    "titleOriginal": "Wohnungsbörse",
+    "titleZh": "Wohnungsbörse 房源搜索",
+    "descriptionZh": "按城市搜索德国出租房、公寓和房屋信息。",
+    "primaryCategory": "housing",
+    "tags": [
+      "租房",
+      "公寓",
+      "房源"
+    ],
+    "levels": [],
+    "levelBasis": "unspecified",
+    "skills": [
+      "生活信息"
+    ],
+    "exams": [],
+    "formats": [
+      "网页"
+    ],
+    "price": "unknown",
+    "access": "open",
+    "languages": [
+      "德语"
+    ],
+    "sourceName": "Wohnungsbörse",
+    "url": "https://www.wohnungsboerse.net/",
+    "canonicalUrl": "https://www.wohnungsboerse.net/",
+    "rights": "link-only",
+    "status": "published",
+    "linkStatus": "unchecked",
+    "lastEditorialCheckedAt": "2026-10-04",
+    "providerId": "wohnungsboerse",
+    "providerType": "commercial",
+    "mediaTypes": [
+      "网页"
+    ],
+    "costNoteZh": "信息入口免费；第三方交易、服务或订阅费用以原站为准。",
+    "accessNoteZh": "部分功能可能要求注册或登录，以原站为准。",
+    "interfaceLanguages": [
+      "德语"
+    ],
+    "levelScope": "information",
+    "aliases": [],
+    "editorialStatus": "partial",
+    "evidence": [
+      {
+        "url": "https://www.wohnungsboerse.net/",
+        "fields": [
+          "purpose"
+        ],
+        "checkedAt": "2026-10-04"
+      }
+    ],
+    "howToUseZh": "打开原站，按页面提示查找相关信息；费用、资格和可用性以原站为准。"
+  },
+  {
+    "id": "kleinanzeigen-housing",
+    "slug": "kleinanzeigen-housing",
+    "titleOriginal": "Kleinanzeigen Immobilien",
+    "titleZh": "Kleinanzeigen 房屋分类",
+    "descriptionZh": "德国分类信息网站中的房屋出租、出售和合租入口。",
+    "primaryCategory": "housing",
+    "tags": [
+      "租房",
+      "合租",
+      "分类信息"
+    ],
+    "levels": [],
+    "levelBasis": "unspecified",
+    "skills": [
+      "生活信息"
+    ],
+    "exams": [],
+    "formats": [
+      "网页"
+    ],
+    "price": "unknown",
+    "access": "registration",
+    "languages": [
+      "德语"
+    ],
+    "sourceName": "Kleinanzeigen",
+    "url": "https://www.kleinanzeigen.de/s-wohnung-mieten/c203",
+    "canonicalUrl": "https://www.kleinanzeigen.de/s-wohnung-mieten/c203",
+    "rights": "link-only",
+    "status": "published",
+    "linkStatus": "unchecked",
+    "lastEditorialCheckedAt": "2026-10-04",
+    "providerId": "kleinanzeigen-housing",
+    "providerType": "commercial",
+    "mediaTypes": [
+      "网页"
+    ],
+    "costNoteZh": "信息入口免费；第三方交易、服务或订阅费用以原站为准。",
+    "accessNoteZh": "部分功能可能要求注册或登录，以原站为准。",
+    "interfaceLanguages": [
+      "德语"
+    ],
+    "levelScope": "information",
+    "aliases": [],
+    "editorialStatus": "partial",
+    "evidence": [
+      {
+        "url": "https://www.kleinanzeigen.de/s-wohnung-mieten/c203",
+        "fields": [
+          "purpose"
+        ],
+        "checkedAt": "2026-10-04"
+      }
+    ],
+    "howToUseZh": "打开原站，按页面提示查找相关信息；费用、资格和可用性以原站为准。"
+  },
+  {
+    "id": "wohngeld-bund",
+    "slug": "wohngeld-bund",
+    "titleOriginal": "Wohngeld.de",
+    "titleZh": "德国住房补贴信息入口",
+    "descriptionZh": "了解德国 Wohngeld 住房补贴概念并进入地方申请信息。",
+    "primaryCategory": "housing",
+    "tags": [
+      "住房补贴",
+      "官方信息"
+    ],
+    "levels": [],
+    "levelBasis": "unspecified",
+    "skills": [
+      "生活信息"
+    ],
+    "exams": [],
+    "formats": [
+      "网页"
+    ],
+    "price": "unknown",
+    "access": "open",
+    "languages": [
+      "德语"
+    ],
+    "sourceName": "Bundesministerium für Wohnen",
+    "url": "https://www.bmwsb.bund.de/DE/wohnen/wohngeld/wohngeld_node.html",
+    "canonicalUrl": "https://www.bmwsb.bund.de/DE/wohnen/wohngeld/wohngeld_node.html",
+    "rights": "link-only",
+    "status": "published",
+    "linkStatus": "unchecked",
+    "lastEditorialCheckedAt": "2026-10-04",
+    "providerId": "wohngeld-bund",
+    "providerType": "institution",
+    "mediaTypes": [
+      "网页"
+    ],
+    "costNoteZh": "信息入口免费；资格与金额由主管机关审核。",
+    "accessNoteZh": "部分功能可能要求注册或登录，以原站为准。",
+    "interfaceLanguages": [
+      "德语"
+    ],
+    "levelScope": "information",
+    "aliases": [],
+    "editorialStatus": "partial",
+    "evidence": [
+      {
+        "url": "https://www.bmwsb.bund.de/DE/themen/wohnen/wohngeld/wohngeld-node.html",
+        "fields": [
+          "purpose"
+        ],
+        "checkedAt": "2026-10-04"
+      }
+    ],
+    "howToUseZh": "打开原站，按页面提示查找相关信息；费用、资格和可用性以原站为准。"
+  },
+  {
+    "id": "arbeitsagentur-jobsuche",
+    "slug": "arbeitsagentur-jobsuche",
+    "titleOriginal": "Jobsuche",
+    "titleZh": "联邦就业局 Jobsuche",
+    "descriptionZh": "德国联邦就业局官方职位、培训和实习搜索平台。",
+    "primaryCategory": "jobs",
+    "tags": [
+      "求职",
+      "培训",
+      "官方"
+    ],
+    "levels": [],
+    "levelBasis": "unspecified",
+    "skills": [
+      "生活信息"
+    ],
+    "exams": [],
+    "formats": [
+      "网页"
+    ],
+    "price": "unknown",
+    "access": "open",
+    "languages": [
+      "德语"
+    ],
+    "sourceName": "Bundesagentur für Arbeit",
+    "url": "https://www.arbeitsagentur.de/jobsuche/",
+    "canonicalUrl": "https://www.arbeitsagentur.de/jobsuche/",
+    "rights": "link-only",
+    "status": "published",
+    "linkStatus": "unchecked",
+    "lastEditorialCheckedAt": "2026-10-04",
+    "providerId": "arbeitsagentur",
+    "providerType": "institution",
+    "mediaTypes": [
+      "网页"
+    ],
+    "costNoteZh": "信息入口免费；第三方交易、服务或订阅费用以原站为准。",
+    "accessNoteZh": "部分功能可能要求注册或登录，以原站为准。",
+    "interfaceLanguages": [
+      "德语"
+    ],
+    "levelScope": "information",
+    "aliases": [],
+    "editorialStatus": "partial",
+    "evidence": [
+      {
+        "url": "https://www.arbeitsagentur.de/jobsuche/",
+        "fields": [
+          "purpose"
+        ],
+        "checkedAt": "2026-10-04"
+      }
+    ],
+    "howToUseZh": "打开原站，按页面提示查找相关信息；费用、资格和可用性以原站为准。"
+  },
+  {
+    "id": "make-it-in-germany-jobs",
+    "slug": "make-it-in-germany-jobs",
+    "titleOriginal": "Make it in Germany Jobs",
+    "titleZh": "Make it in Germany 职位搜索",
+    "descriptionZh": "面向国际专业人才的德国职位和移民就业信息入口。",
+    "primaryCategory": "jobs",
+    "tags": [
+      "国际求职",
+      "职位",
+      "官方"
+    ],
+    "levels": [],
+    "levelBasis": "unspecified",
+    "skills": [
+      "生活信息"
+    ],
+    "exams": [],
+    "formats": [
+      "网页"
+    ],
+    "price": "unknown",
+    "access": "open",
+    "languages": [
+      "英语",
+      "德语"
+    ],
+    "sourceName": "Make it in Germany",
+    "url": "https://www.make-it-in-germany.com/en/working-in-germany/job-listings",
+    "canonicalUrl": "https://www.make-it-in-germany.com/en/working-in-germany/job-listings",
+    "rights": "link-only",
+    "status": "published",
+    "linkStatus": "unchecked",
+    "lastEditorialCheckedAt": "2026-10-04",
+    "providerId": "make-it-in-germany-jobs",
+    "providerType": "institution",
+    "mediaTypes": [
+      "网页"
+    ],
+    "costNoteZh": "信息入口免费；第三方交易、服务或订阅费用以原站为准。",
+    "accessNoteZh": "部分功能可能要求注册或登录，以原站为准。",
+    "interfaceLanguages": [
+      "德语"
+    ],
+    "levelScope": "information",
+    "aliases": [],
+    "editorialStatus": "partial",
+    "evidence": [
+      {
+        "url": "https://www.make-it-in-germany.com/en/working-in-germany/job-listings",
+        "fields": [
+          "purpose"
+        ],
+        "checkedAt": "2026-10-04"
+      }
+    ],
+    "howToUseZh": "打开原站，按页面提示查找相关信息；费用、资格和可用性以原站为准。"
+  },
+  {
+    "id": "stepstone-germany",
+    "slug": "stepstone-germany",
+    "titleOriginal": "StepStone Deutschland",
+    "titleZh": "StepStone 德国职位",
+    "descriptionZh": "德国企业职位、行业和地区搜索平台。",
+    "primaryCategory": "jobs",
+    "tags": [
+      "求职",
+      "职位",
+      "职业"
+    ],
+    "levels": [],
+    "levelBasis": "unspecified",
+    "skills": [
+      "生活信息"
+    ],
+    "exams": [],
+    "formats": [
+      "网页"
+    ],
+    "price": "unknown",
+    "access": "open",
+    "languages": [
+      "德语"
+    ],
+    "sourceName": "StepStone",
+    "url": "https://www.stepstone.de/",
+    "canonicalUrl": "https://www.stepstone.de/",
+    "rights": "link-only",
+    "status": "published",
+    "linkStatus": "unchecked",
+    "lastEditorialCheckedAt": "2026-10-04",
+    "providerId": "stepstone-germany",
+    "providerType": "commercial",
+    "mediaTypes": [
+      "网页"
+    ],
+    "costNoteZh": "信息入口免费；第三方交易、服务或订阅费用以原站为准。",
+    "accessNoteZh": "部分功能可能要求注册或登录，以原站为准。",
+    "interfaceLanguages": [
+      "德语"
+    ],
+    "levelScope": "information",
+    "aliases": [],
+    "editorialStatus": "partial",
+    "evidence": [
+      {
+        "url": "https://www.stepstone.de/",
+        "fields": [
+          "purpose"
+        ],
+        "checkedAt": "2026-10-04"
+      }
+    ],
+    "howToUseZh": "打开原站，按页面提示查找相关信息；费用、资格和可用性以原站为准。"
+  },
+  {
+    "id": "indeed-germany",
+    "slug": "indeed-germany",
+    "titleOriginal": "Indeed Deutschland",
+    "titleZh": "Indeed 德国职位",
+    "descriptionZh": "按关键词、地点和职位类型搜索德国工作。",
+    "primaryCategory": "jobs",
+    "tags": [
+      "求职",
+      "职位",
+      "招聘"
+    ],
+    "levels": [],
+    "levelBasis": "unspecified",
+    "skills": [
+      "生活信息"
+    ],
+    "exams": [],
+    "formats": [
+      "网页"
+    ],
+    "price": "unknown",
+    "access": "open",
+    "languages": [
+      "德语"
+    ],
+    "sourceName": "Indeed",
+    "url": "https://de.indeed.com/",
+    "canonicalUrl": "https://de.indeed.com/",
+    "rights": "link-only",
+    "status": "published",
+    "linkStatus": "unchecked",
+    "lastEditorialCheckedAt": "2026-10-04",
+    "providerId": "indeed-germany",
+    "providerType": "commercial",
+    "mediaTypes": [
+      "网页"
+    ],
+    "costNoteZh": "信息入口免费；第三方交易、服务或订阅费用以原站为准。",
+    "accessNoteZh": "部分功能可能要求注册或登录，以原站为准。",
+    "interfaceLanguages": [
+      "德语"
+    ],
+    "levelScope": "information",
+    "aliases": [],
+    "editorialStatus": "partial",
+    "evidence": [
+      {
+        "url": "https://de.indeed.com/",
+        "fields": [
+          "purpose"
+        ],
+        "checkedAt": "2026-10-04"
+      }
+    ],
+    "howToUseZh": "打开原站，按页面提示查找相关信息；费用、资格和可用性以原站为准。"
+  },
+  {
+    "id": "linkedin-jobs-germany",
+    "slug": "linkedin-jobs-germany",
+    "titleOriginal": "LinkedIn Jobs Germany",
+    "titleZh": "LinkedIn 德国职位",
+    "descriptionZh": "通过职业社交网络搜索德国职位和公司。",
+    "primaryCategory": "jobs",
+    "tags": [
+      "职业社交",
+      "求职",
+      "职位"
+    ],
+    "levels": [],
+    "levelBasis": "unspecified",
+    "skills": [
+      "生活信息"
+    ],
+    "exams": [],
+    "formats": [
+      "网页"
+    ],
+    "price": "unknown",
+    "access": "registration",
+    "languages": [
+      "英语",
+      "德语"
+    ],
+    "sourceName": "LinkedIn",
+    "url": "https://www.linkedin.com/jobs/search/?location=Germany",
+    "canonicalUrl": "https://www.linkedin.com/jobs/search/?location=Germany",
+    "rights": "link-only",
+    "status": "published",
+    "linkStatus": "unchecked",
+    "lastEditorialCheckedAt": "2026-10-04",
+    "providerId": "linkedin-jobs-germany",
+    "providerType": "commercial",
+    "mediaTypes": [
+      "网页"
+    ],
+    "costNoteZh": "信息入口免费；第三方交易、服务或订阅费用以原站为准。",
+    "accessNoteZh": "部分功能可能要求注册或登录，以原站为准。",
+    "interfaceLanguages": [
+      "德语"
+    ],
+    "levelScope": "information",
+    "aliases": [],
+    "editorialStatus": "partial",
+    "evidence": [
+      {
+        "url": "https://www.linkedin.com/jobs/search/?location=Germany",
+        "fields": [
+          "purpose"
+        ],
+        "checkedAt": "2026-10-04"
+      }
+    ],
+    "howToUseZh": "打开原站，按页面提示查找相关信息；费用、资格和可用性以原站为准。"
+  },
+  {
+    "id": "xing-jobs",
+    "slug": "xing-jobs",
+    "titleOriginal": "XING Jobs",
+    "titleZh": "XING 德国职位",
+    "descriptionZh": "德国职业社交网络的职位和职业信息入口。",
+    "primaryCategory": "jobs",
+    "tags": [
+      "职业社交",
+      "求职",
+      "职位"
+    ],
+    "levels": [],
+    "levelBasis": "unspecified",
+    "skills": [
+      "生活信息"
+    ],
+    "exams": [],
+    "formats": [
+      "网页"
+    ],
+    "price": "unknown",
+    "access": "registration",
+    "languages": [
+      "德语"
+    ],
+    "sourceName": "XING",
+    "url": "https://www.xing.com/jobs",
+    "canonicalUrl": "https://www.xing.com/jobs",
+    "rights": "link-only",
+    "status": "published",
+    "linkStatus": "unchecked",
+    "lastEditorialCheckedAt": "2026-10-04",
+    "providerId": "xing-jobs",
+    "providerType": "commercial",
+    "mediaTypes": [
+      "网页"
+    ],
+    "costNoteZh": "信息入口免费；第三方交易、服务或订阅费用以原站为准。",
+    "accessNoteZh": "部分功能可能要求注册或登录，以原站为准。",
+    "interfaceLanguages": [
+      "德语"
+    ],
+    "levelScope": "information",
+    "aliases": [],
+    "editorialStatus": "partial",
+    "evidence": [
+      {
+        "url": "https://www.xing.com/jobs",
+        "fields": [
+          "purpose"
+        ],
+        "checkedAt": "2026-10-04"
+      }
+    ],
+    "howToUseZh": "打开原站，按页面提示查找相关信息；费用、资格和可用性以原站为准。"
+  },
+  {
+    "id": "kununu",
+    "slug": "kununu",
+    "titleOriginal": "kununu",
+    "titleZh": "kununu 公司评价与薪资",
+    "descriptionZh": "查看德国公司评价、薪资和雇主信息，辅助求职比较。",
+    "primaryCategory": "jobs",
+    "tags": [
+      "公司评价",
+      "薪资",
+      "求职"
+    ],
+    "levels": [],
+    "levelBasis": "unspecified",
+    "skills": [
+      "生活信息"
+    ],
+    "exams": [],
+    "formats": [
+      "网页"
+    ],
+    "price": "unknown",
+    "access": "open",
+    "languages": [
+      "德语"
+    ],
+    "sourceName": "kununu",
+    "url": "https://www.kununu.com/de",
+    "canonicalUrl": "https://www.kununu.com/de",
+    "rights": "link-only",
+    "status": "published",
+    "linkStatus": "unchecked",
+    "lastEditorialCheckedAt": "2026-10-04",
+    "providerId": "kununu",
+    "providerType": "commercial",
+    "mediaTypes": [
+      "网页"
+    ],
+    "costNoteZh": "信息入口免费；第三方交易、服务或订阅费用以原站为准。",
+    "accessNoteZh": "部分功能可能要求注册或登录，以原站为准。",
+    "interfaceLanguages": [
+      "德语"
+    ],
+    "levelScope": "information",
+    "aliases": [],
+    "editorialStatus": "partial",
+    "evidence": [
+      {
+        "url": "https://www.kununu.com/de",
+        "fields": [
+          "purpose"
+        ],
+        "checkedAt": "2026-10-04"
+      }
+    ],
+    "howToUseZh": "打开原站，按页面提示查找相关信息；费用、资格和可用性以原站为准。"
+  },
+  {
+    "id": "azubi-de",
+    "slug": "azubi-de",
+    "titleOriginal": "Azubi.de",
+    "titleZh": "Azubi.de Ausbildung 职位",
+    "descriptionZh": "德国职业培训 Ausbildung、实习和入门岗位搜索。",
+    "primaryCategory": "jobs",
+    "tags": [
+      "Ausbildung",
+      "实习",
+      "职业培训"
+    ],
+    "levels": [],
+    "levelBasis": "unspecified",
+    "skills": [
+      "生活信息"
+    ],
+    "exams": [],
+    "formats": [
+      "网页"
+    ],
+    "price": "unknown",
+    "access": "open",
+    "languages": [
+      "德语"
+    ],
+    "sourceName": "Azubi.de",
+    "url": "https://www.azubi.de/",
+    "canonicalUrl": "https://www.azubi.de/",
+    "rights": "link-only",
+    "status": "published",
+    "linkStatus": "unchecked",
+    "lastEditorialCheckedAt": "2026-10-04",
+    "providerId": "azubi-de",
+    "providerType": "commercial",
+    "mediaTypes": [
+      "网页"
+    ],
+    "costNoteZh": "信息入口免费；第三方交易、服务或订阅费用以原站为准。",
+    "accessNoteZh": "部分功能可能要求注册或登录，以原站为准。",
+    "interfaceLanguages": [
+      "德语"
+    ],
+    "levelScope": "information",
+    "aliases": [],
+    "editorialStatus": "partial",
+    "evidence": [
+      {
+        "url": "https://www.azubi.de/",
+        "fields": [
+          "purpose"
+        ],
+        "checkedAt": "2026-10-04"
+      }
+    ],
+    "howToUseZh": "打开原站，按页面提示查找相关信息；费用、资格和可用性以原站为准。"
+  },
+  {
+    "id": "kleinanzeigen",
+    "slug": "kleinanzeigen",
+    "titleOriginal": "Kleinanzeigen",
+    "titleZh": "Kleinanzeigen 德国分类信息",
+    "descriptionZh": "德国常用的二手买卖、赠送、服务和本地交易平台。",
+    "primaryCategory": "classifieds",
+    "tags": [
+      "二手",
+      "买卖",
+      "本地交易"
+    ],
+    "levels": [],
+    "levelBasis": "unspecified",
+    "skills": [
+      "生活信息"
+    ],
+    "exams": [],
+    "formats": [
+      "网页"
+    ],
+    "price": "unknown",
+    "access": "registration",
+    "languages": [
+      "德语"
+    ],
+    "sourceName": "Kleinanzeigen",
+    "url": "https://www.kleinanzeigen.de/",
+    "canonicalUrl": "https://www.kleinanzeigen.de/",
+    "rights": "link-only",
+    "status": "published",
+    "linkStatus": "unchecked",
+    "lastEditorialCheckedAt": "2026-10-04",
+    "providerId": "kleinanzeigen",
+    "providerType": "commercial",
+    "mediaTypes": [
+      "网页"
+    ],
+    "costNoteZh": "信息入口免费；第三方交易、服务或订阅费用以原站为准。",
+    "accessNoteZh": "部分功能可能要求注册或登录，以原站为准。",
+    "interfaceLanguages": [
+      "德语"
+    ],
+    "levelScope": "information",
+    "aliases": [],
+    "editorialStatus": "partial",
+    "evidence": [
+      {
+        "url": "https://www.kleinanzeigen.de/",
+        "fields": [
+          "purpose"
+        ],
+        "checkedAt": "2026-10-04"
+      }
+    ],
+    "howToUseZh": "打开原站，按页面提示查找相关信息；费用、资格和可用性以原站为准。"
+  },
+  {
+    "id": "quoka",
+    "slug": "quoka",
+    "titleOriginal": "Quoka",
+    "titleZh": "Quoka 分类信息",
+    "descriptionZh": "德国二手物品、车辆、房屋和本地服务分类信息。",
+    "primaryCategory": "classifieds",
+    "tags": [
+      "二手",
+      "分类信息",
+      "服务"
+    ],
+    "levels": [],
+    "levelBasis": "unspecified",
+    "skills": [
+      "生活信息"
+    ],
+    "exams": [],
+    "formats": [
+      "网页"
+    ],
+    "price": "unknown",
+    "access": "open",
+    "languages": [
+      "德语"
+    ],
+    "sourceName": "Quoka",
+    "url": "https://www.quoka.de/",
+    "canonicalUrl": "https://www.quoka.de/",
+    "rights": "link-only",
+    "status": "published",
+    "linkStatus": "unchecked",
+    "lastEditorialCheckedAt": "2026-10-04",
+    "providerId": "quoka",
+    "providerType": "commercial",
+    "mediaTypes": [
+      "网页"
+    ],
+    "costNoteZh": "信息入口免费；第三方交易、服务或订阅费用以原站为准。",
+    "accessNoteZh": "部分功能可能要求注册或登录，以原站为准。",
+    "interfaceLanguages": [
+      "德语"
+    ],
+    "levelScope": "information",
+    "aliases": [],
+    "editorialStatus": "partial",
+    "evidence": [
+      {
+        "url": "https://www.quoka.de/",
+        "fields": [
+          "purpose"
+        ],
+        "checkedAt": "2026-10-04"
+      }
+    ],
+    "howToUseZh": "打开原站，按页面提示查找相关信息；费用、资格和可用性以原站为准。"
+  },
+  {
+    "id": "markt-de",
+    "slug": "markt-de",
+    "titleOriginal": "markt.de",
+    "titleZh": "markt.de 分类信息",
+    "descriptionZh": "覆盖二手、房产、汽车、工作和本地服务的分类信息平台。",
+    "primaryCategory": "classifieds",
+    "tags": [
+      "二手",
+      "分类信息",
+      "本地服务"
+    ],
+    "levels": [],
+    "levelBasis": "unspecified",
+    "skills": [
+      "生活信息"
+    ],
+    "exams": [],
+    "formats": [
+      "网页"
+    ],
+    "price": "unknown",
+    "access": "open",
+    "languages": [
+      "德语"
+    ],
+    "sourceName": "markt.de",
+    "url": "https://www.markt.de/",
+    "canonicalUrl": "https://www.markt.de/",
+    "rights": "link-only",
+    "status": "published",
+    "linkStatus": "unchecked",
+    "lastEditorialCheckedAt": "2026-10-04",
+    "providerId": "markt-de",
+    "providerType": "commercial",
+    "mediaTypes": [
+      "网页"
+    ],
+    "costNoteZh": "信息入口免费；第三方交易、服务或订阅费用以原站为准。",
+    "accessNoteZh": "部分功能可能要求注册或登录，以原站为准。",
+    "interfaceLanguages": [
+      "德语"
+    ],
+    "levelScope": "information",
+    "aliases": [],
+    "editorialStatus": "partial",
+    "evidence": [
+      {
+        "url": "https://www.markt.de/",
+        "fields": [
+          "purpose"
+        ],
+        "checkedAt": "2026-10-04"
+      }
+    ],
+    "howToUseZh": "打开原站，按页面提示查找相关信息；费用、资格和可用性以原站为准。"
+  },
+  {
+    "id": "ebay-germany",
+    "slug": "ebay-germany",
+    "titleOriginal": "eBay Deutschland",
+    "titleZh": "eBay 德国",
+    "descriptionZh": "德国在线拍卖和购物平台，适合查找新旧商品。",
+    "primaryCategory": "classifieds",
+    "tags": [
+      "购物",
+      "二手",
+      "拍卖"
+    ],
+    "levels": [],
+    "levelBasis": "unspecified",
+    "skills": [
+      "生活信息"
+    ],
+    "exams": [],
+    "formats": [
+      "网页"
+    ],
+    "price": "unknown",
+    "access": "registration",
+    "languages": [
+      "德语"
+    ],
+    "sourceName": "eBay",
+    "url": "https://www.ebay.de/",
+    "canonicalUrl": "https://www.ebay.de/",
+    "rights": "link-only",
+    "status": "published",
+    "linkStatus": "unchecked",
+    "lastEditorialCheckedAt": "2026-10-04",
+    "providerId": "ebay-germany",
+    "providerType": "commercial",
+    "mediaTypes": [
+      "网页"
+    ],
+    "costNoteZh": "信息入口免费；第三方交易、服务或订阅费用以原站为准。",
+    "accessNoteZh": "部分功能可能要求注册或登录，以原站为准。",
+    "interfaceLanguages": [
+      "德语"
+    ],
+    "levelScope": "information",
+    "aliases": [],
+    "editorialStatus": "partial",
+    "evidence": [
+      {
+        "url": "https://www.ebay.de/",
+        "fields": [
+          "purpose"
+        ],
+        "checkedAt": "2026-10-04"
+      }
+    ],
+    "howToUseZh": "打开原站，按页面提示查找相关信息；费用、资格和可用性以原站为准。"
+  },
+  {
+    "id": "momox",
+    "slug": "momox",
+    "titleOriginal": "momox",
+    "titleZh": "momox 二手书与媒体回收",
+    "descriptionZh": "出售或购买二手书、CD、DVD和游戏的德国平台。",
+    "primaryCategory": "classifieds",
+    "tags": [
+      "二手书",
+      "回收",
+      "买卖"
+    ],
+    "levels": [],
+    "levelBasis": "unspecified",
+    "skills": [
+      "生活信息"
+    ],
+    "exams": [],
+    "formats": [
+      "网页"
+    ],
+    "price": "unknown",
+    "access": "open",
+    "languages": [
+      "德语"
+    ],
+    "sourceName": "momox",
+    "url": "https://www.momox.de/",
+    "canonicalUrl": "https://www.momox.de/",
+    "rights": "link-only",
+    "status": "published",
+    "linkStatus": "unchecked",
+    "lastEditorialCheckedAt": "2026-10-04",
+    "providerId": "momox",
+    "providerType": "commercial",
+    "mediaTypes": [
+      "网页"
+    ],
+    "costNoteZh": "信息入口免费；第三方交易、服务或订阅费用以原站为准。",
+    "accessNoteZh": "部分功能可能要求注册或登录，以原站为准。",
+    "interfaceLanguages": [
+      "德语"
+    ],
+    "levelScope": "information",
+    "aliases": [],
+    "editorialStatus": "partial",
+    "evidence": [
+      {
+        "url": "https://www.momox.de/",
+        "fields": [
+          "purpose"
+        ],
+        "checkedAt": "2026-10-04"
+      }
+    ],
+    "howToUseZh": "打开原站，按页面提示查找相关信息；费用、资格和可用性以原站为准。"
+  },
+  {
+    "id": "swapfiets",
+    "slug": "swapfiets",
+    "titleOriginal": "Swapfiets",
+    "titleZh": "Swapfiets 月租自行车",
+    "descriptionZh": "在德国城市按月租用和维护自行车的服务。",
+    "primaryCategory": "classifieds",
+    "tags": [
+      "租赁",
+      "自行车",
+      "城市生活"
+    ],
+    "levels": [],
+    "levelBasis": "unspecified",
+    "skills": [
+      "生活信息"
+    ],
+    "exams": [],
+    "formats": [
+      "网页"
+    ],
+    "price": "paid",
+    "access": "open",
+    "languages": [
+      "德语"
+    ],
+    "sourceName": "Swapfiets",
+    "url": "https://swapfiets.de/",
+    "canonicalUrl": "https://swapfiets.de/",
+    "rights": "link-only",
+    "status": "published",
+    "linkStatus": "unchecked",
+    "lastEditorialCheckedAt": "2026-10-04",
+    "providerId": "swapfiets",
+    "providerType": "commercial",
+    "mediaTypes": [
+      "网页"
+    ],
+    "costNoteZh": "信息入口免费；第三方交易、服务或订阅费用以原站为准。",
+    "accessNoteZh": "部分功能可能要求注册或登录，以原站为准。",
+    "interfaceLanguages": [
+      "德语"
+    ],
+    "levelScope": "information",
+    "aliases": [],
+    "editorialStatus": "partial",
+    "evidence": [
+      {
+        "url": "https://swapfiets.de/",
+        "fields": [
+          "purpose"
+        ],
+        "checkedAt": "2026-10-04"
+      }
+    ],
+    "howToUseZh": "打开原站，按页面提示查找相关信息；费用、资格和可用性以原站为准。"
+  },
+  {
+    "id": "boels",
+    "slug": "boels",
+    "titleOriginal": "Boels Deutschland",
+    "titleZh": "Boels 工具与设备租赁",
+    "descriptionZh": "在德国租用施工、园艺、活动和家庭使用的设备。",
+    "primaryCategory": "classifieds",
+    "tags": [
+      "设备租赁",
+      "工具",
+      "服务"
+    ],
+    "levels": [],
+    "levelBasis": "unspecified",
+    "skills": [
+      "生活信息"
+    ],
+    "exams": [],
+    "formats": [
+      "网页"
+    ],
+    "price": "paid",
+    "access": "open",
+    "languages": [
+      "德语"
+    ],
+    "sourceName": "Boels",
+    "url": "https://www.boels.com/de-de",
+    "canonicalUrl": "https://www.boels.com/de-de",
+    "rights": "link-only",
+    "status": "published",
+    "linkStatus": "unchecked",
+    "lastEditorialCheckedAt": "2026-10-04",
+    "providerId": "boels",
+    "providerType": "commercial",
+    "mediaTypes": [
+      "网页"
+    ],
+    "costNoteZh": "信息入口免费；第三方交易、服务或订阅费用以原站为准。",
+    "accessNoteZh": "部分功能可能要求注册或登录，以原站为准。",
+    "interfaceLanguages": [
+      "德语"
+    ],
+    "levelScope": "information",
+    "aliases": [],
+    "editorialStatus": "partial",
+    "evidence": [
+      {
+        "url": "https://www.boels.com/de-de",
+        "fields": [
+          "purpose"
+        ],
+        "checkedAt": "2026-10-04"
+      }
+    ],
+    "howToUseZh": "打开原站，按页面提示查找相关信息；费用、资格和可用性以原站为准。"
+  },
+  {
+    "id": "miet24",
+    "slug": "miet24",
+    "titleOriginal": "Miet24",
+    "titleZh": "Miet24 物品租赁搜索",
+    "descriptionZh": "查找德国不同类别的设备、物品和活动用品租赁服务。",
+    "primaryCategory": "classifieds",
+    "tags": [
+      "物品租赁",
+      "设备",
+      "服务"
+    ],
+    "levels": [],
+    "levelBasis": "unspecified",
+    "skills": [
+      "生活信息"
+    ],
+    "exams": [],
+    "formats": [
+      "网页"
+    ],
+    "price": "paid",
+    "access": "open",
+    "languages": [
+      "德语"
+    ],
+    "sourceName": "Miet24",
+    "url": "https://www.miet24.de/",
+    "canonicalUrl": "https://www.miet24.de/",
+    "rights": "link-only",
+    "status": "published",
+    "linkStatus": "unchecked",
+    "lastEditorialCheckedAt": "2026-10-04",
+    "providerId": "miet24",
+    "providerType": "commercial",
+    "mediaTypes": [
+      "网页"
+    ],
+    "costNoteZh": "信息入口免费；第三方交易、服务或订阅费用以原站为准。",
+    "accessNoteZh": "部分功能可能要求注册或登录，以原站为准。",
+    "interfaceLanguages": [
+      "德语"
+    ],
+    "levelScope": "information",
+    "aliases": [],
+    "editorialStatus": "partial",
+    "evidence": [
+      {
+        "url": "https://www.miet24.de/",
+        "fields": [
+          "purpose"
+        ],
+        "checkedAt": "2026-10-04"
+      }
+    ],
+    "howToUseZh": "打开原站，按页面提示查找相关信息；费用、资格和可用性以原站为准。"
+  },
+  {
+    "id": "flixbus",
+    "slug": "flixbus",
+    "titleOriginal": "FlixBus",
+    "titleZh": "FlixBus 德国长途巴士",
+    "descriptionZh": "德国及欧洲城市间长途巴士班次和购票入口。",
+    "primaryCategory": "mobility",
+    "tags": [
+      "巴士",
+      "旅行",
+      "购票"
+    ],
+    "levels": [],
+    "levelBasis": "unspecified",
+    "skills": [
+      "生活信息"
+    ],
+    "exams": [],
+    "formats": [
+      "网页"
+    ],
+    "price": "paid",
+    "access": "open",
+    "languages": [
+      "德语"
+    ],
+    "sourceName": "FlixBus",
+    "url": "https://www.flixbus.de/",
+    "canonicalUrl": "https://www.flixbus.de/",
+    "rights": "link-only",
+    "status": "published",
+    "linkStatus": "unchecked",
+    "lastEditorialCheckedAt": "2026-10-04",
+    "providerId": "flixbus",
+    "providerType": "commercial",
+    "mediaTypes": [
+      "网页"
+    ],
+    "costNoteZh": "信息入口免费；第三方交易、服务或订阅费用以原站为准。",
+    "accessNoteZh": "部分功能可能要求注册或登录，以原站为准。",
+    "interfaceLanguages": [
+      "德语"
+    ],
+    "levelScope": "information",
+    "aliases": [],
+    "editorialStatus": "partial",
+    "evidence": [
+      {
+        "url": "https://www.flixbus.de/",
+        "fields": [
+          "purpose"
+        ],
+        "checkedAt": "2026-10-04"
+      }
+    ],
+    "howToUseZh": "打开原站，按页面提示查找相关信息；费用、资格和可用性以原站为准。"
+  },
+  {
+    "id": "flixtrain",
+    "slug": "flixtrain",
+    "titleOriginal": "FlixTrain",
+    "titleZh": "FlixTrain 德国铁路",
+    "descriptionZh": "德国部分城市间的低价长途列车和购票入口。",
+    "primaryCategory": "mobility",
+    "tags": [
+      "火车",
+      "旅行",
+      "购票"
+    ],
+    "levels": [],
+    "levelBasis": "unspecified",
+    "skills": [
+      "生活信息"
+    ],
+    "exams": [],
+    "formats": [
+      "网页"
+    ],
+    "price": "paid",
+    "access": "open",
+    "languages": [
+      "德语"
+    ],
+    "sourceName": "FlixTrain",
+    "url": "https://www.flixtrain.de/",
+    "canonicalUrl": "https://www.flixtrain.de/",
+    "rights": "link-only",
+    "status": "published",
+    "linkStatus": "unchecked",
+    "lastEditorialCheckedAt": "2026-10-04",
+    "providerId": "flixtrain",
+    "providerType": "commercial",
+    "mediaTypes": [
+      "网页"
+    ],
+    "costNoteZh": "信息入口免费；第三方交易、服务或订阅费用以原站为准。",
+    "accessNoteZh": "部分功能可能要求注册或登录，以原站为准。",
+    "interfaceLanguages": [
+      "德语"
+    ],
+    "levelScope": "information",
+    "aliases": [],
+    "editorialStatus": "partial",
+    "evidence": [
+      {
+        "url": "https://www.flixtrain.de/",
+        "fields": [
+          "purpose"
+        ],
+        "checkedAt": "2026-10-04"
+      }
+    ],
+    "howToUseZh": "打开原站，按页面提示查找相关信息；费用、资格和可用性以原站为准。"
+  },
+  {
+    "id": "deutschlandticket",
+    "slug": "deutschlandticket",
+    "titleOriginal": "Deutschlandticket",
+    "titleZh": "Deutschlandticket 德国通票信息",
+    "descriptionZh": "德国 Deutschlandticket 的官方说明、适用范围和购买入口。",
+    "primaryCategory": "mobility",
+    "tags": [
+      "公共交通",
+      "月票",
+      "出行"
+    ],
+    "levels": [],
+    "levelBasis": "unspecified",
+    "skills": [
+      "生活信息"
+    ],
+    "exams": [],
+    "formats": [
+      "网页"
+    ],
+    "price": "paid",
+    "access": "open",
+    "languages": [
+      "德语"
+    ],
+    "sourceName": "Deutschlandticket",
+    "url": "https://deutschlandticket.de/",
+    "canonicalUrl": "https://deutschlandticket.de/",
+    "rights": "link-only",
+    "status": "published",
+    "linkStatus": "unchecked",
+    "lastEditorialCheckedAt": "2026-10-04",
+    "providerId": "deutschlandticket",
+    "providerType": "commercial",
+    "mediaTypes": [
+      "网页"
+    ],
+    "costNoteZh": "信息入口免费；第三方交易、服务或订阅费用以原站为准。",
+    "accessNoteZh": "部分功能可能要求注册或登录，以原站为准。",
+    "interfaceLanguages": [
+      "德语"
+    ],
+    "levelScope": "information",
+    "aliases": [],
+    "editorialStatus": "partial",
+    "evidence": [
+      {
+        "url": "https://deutschlandticket.de/",
+        "fields": [
+          "purpose"
+        ],
+        "checkedAt": "2026-10-04"
+      }
+    ],
+    "howToUseZh": "打开原站，按页面提示查找相关信息；费用、资格和可用性以原站为准。"
+  },
+  {
+    "id": "bvg",
+    "slug": "bvg",
+    "titleOriginal": "BVG",
+    "titleZh": "柏林 BVG 公共交通",
+    "descriptionZh": "柏林地铁、公交、有轨电车路线、时刻和票务信息。",
+    "primaryCategory": "mobility",
+    "tags": [
+      "柏林",
+      "公共交通",
+      "路线"
+    ],
+    "levels": [],
+    "levelBasis": "unspecified",
+    "skills": [
+      "生活信息"
+    ],
+    "exams": [],
+    "formats": [
+      "网页"
+    ],
+    "price": "paid",
+    "access": "open",
+    "languages": [
+      "德语"
+    ],
+    "sourceName": "BVG",
+    "url": "https://www.bvg.de/",
+    "canonicalUrl": "https://www.bvg.de/",
+    "rights": "link-only",
+    "status": "published",
+    "linkStatus": "unchecked",
+    "lastEditorialCheckedAt": "2026-10-04",
+    "providerId": "bvg",
+    "providerType": "institution",
+    "mediaTypes": [
+      "网页"
+    ],
+    "costNoteZh": "信息入口免费；第三方交易、服务或订阅费用以原站为准。",
+    "accessNoteZh": "部分功能可能要求注册或登录，以原站为准。",
+    "interfaceLanguages": [
+      "德语"
+    ],
+    "levelScope": "information",
+    "aliases": [],
+    "editorialStatus": "partial",
+    "evidence": [
+      {
+        "url": "https://www.bvg.de/",
+        "fields": [
+          "purpose"
+        ],
+        "checkedAt": "2026-10-04"
+      }
+    ],
+    "howToUseZh": "打开原站，按页面提示查找相关信息；费用、资格和可用性以原站为准。"
+  },
+  {
+    "id": "mvg",
+    "slug": "mvg",
+    "titleOriginal": "MVG München",
+    "titleZh": "慕尼黑 MVG 公共交通",
+    "descriptionZh": "慕尼黑地铁、公交和电车路线、票务与实时信息。",
+    "primaryCategory": "mobility",
+    "tags": [
+      "慕尼黑",
+      "公共交通",
+      "路线"
+    ],
+    "levels": [],
+    "levelBasis": "unspecified",
+    "skills": [
+      "生活信息"
+    ],
+    "exams": [],
+    "formats": [
+      "网页"
+    ],
+    "price": "paid",
+    "access": "open",
+    "languages": [
+      "德语"
+    ],
+    "sourceName": "MVG",
+    "url": "https://www.mvg.de/",
+    "canonicalUrl": "https://www.mvg.de/",
+    "rights": "link-only",
+    "status": "published",
+    "linkStatus": "unchecked",
+    "lastEditorialCheckedAt": "2026-10-04",
+    "providerId": "mvg",
+    "providerType": "institution",
+    "mediaTypes": [
+      "网页"
+    ],
+    "costNoteZh": "信息入口免费；第三方交易、服务或订阅费用以原站为准。",
+    "accessNoteZh": "部分功能可能要求注册或登录，以原站为准。",
+    "interfaceLanguages": [
+      "德语"
+    ],
+    "levelScope": "information",
+    "aliases": [],
+    "editorialStatus": "partial",
+    "evidence": [
+      {
+        "url": "https://www.mvg.de/",
+        "fields": [
+          "purpose"
+        ],
+        "checkedAt": "2026-10-04"
+      }
+    ],
+    "howToUseZh": "打开原站，按页面提示查找相关信息；费用、资格和可用性以原站为准。"
+  },
+  {
+    "id": "moovit-germany",
+    "slug": "moovit-germany",
+    "titleOriginal": "Moovit Germany",
+    "titleZh": "Moovit 公共交通规划",
+    "descriptionZh": "规划德国城市公共交通路线并查看出行时间。",
+    "primaryCategory": "mobility",
+    "tags": [
+      "路线规划",
+      "公共交通",
+      "导航"
+    ],
+    "levels": [],
+    "levelBasis": "unspecified",
+    "skills": [
+      "生活信息"
+    ],
+    "exams": [],
+    "formats": [
+      "网页"
+    ],
+    "price": "unknown",
+    "access": "open",
+    "languages": [
+      "英语",
+      "德语"
+    ],
+    "sourceName": "Moovit",
+    "url": "https://moovitapp.com/index/en/public_transit-Germany-1906",
+    "canonicalUrl": "https://moovitapp.com/index/en/public_transit-Germany-1906",
+    "rights": "link-only",
+    "status": "published",
+    "linkStatus": "unchecked",
+    "lastEditorialCheckedAt": "2026-10-04",
+    "providerId": "moovit-germany",
+    "providerType": "commercial",
+    "mediaTypes": [
+      "网页"
+    ],
+    "costNoteZh": "信息入口免费；第三方交易、服务或订阅费用以原站为准。",
+    "accessNoteZh": "部分功能可能要求注册或登录，以原站为准。",
+    "interfaceLanguages": [
+      "德语"
+    ],
+    "levelScope": "information",
+    "aliases": [],
+    "editorialStatus": "partial",
+    "evidence": [
+      {
+        "url": "https://moovitapp.com/index/en/public_transit-Germany-1906",
+        "fields": [
+          "purpose"
+        ],
+        "checkedAt": "2026-10-04"
+      }
+    ],
+    "howToUseZh": "打开原站，按页面提示查找相关信息；费用、资格和可用性以原站为准。"
+  },
+  {
+    "id": "miles",
+    "slug": "miles",
+    "titleOriginal": "MILES Carsharing",
+    "titleZh": "MILES 汽车共享",
+    "descriptionZh": "德国多座城市的按里程计费汽车共享服务。",
+    "primaryCategory": "mobility",
+    "tags": [
+      "共享汽车",
+      "租车",
+      "城市交通"
+    ],
+    "levels": [],
+    "levelBasis": "unspecified",
+    "skills": [
+      "生活信息"
+    ],
+    "exams": [],
+    "formats": [
+      "网页"
+    ],
+    "price": "paid",
+    "access": "registration",
+    "languages": [
+      "德语"
+    ],
+    "sourceName": "MILES",
+    "url": "https://miles-mobility.com/",
+    "canonicalUrl": "https://miles-mobility.com/",
+    "rights": "link-only",
+    "status": "published",
+    "linkStatus": "unchecked",
+    "lastEditorialCheckedAt": "2026-10-04",
+    "providerId": "miles",
+    "providerType": "commercial",
+    "mediaTypes": [
+      "网页"
+    ],
+    "costNoteZh": "信息入口免费；第三方交易、服务或订阅费用以原站为准。",
+    "accessNoteZh": "部分功能可能要求注册或登录，以原站为准。",
+    "interfaceLanguages": [
+      "德语"
+    ],
+    "levelScope": "information",
+    "aliases": [],
+    "editorialStatus": "partial",
+    "evidence": [
+      {
+        "url": "https://miles-mobility.com/",
+        "fields": [
+          "purpose"
+        ],
+        "checkedAt": "2026-10-04"
+      }
+    ],
+    "howToUseZh": "打开原站，按页面提示查找相关信息；费用、资格和可用性以原站为准。"
+  },
+  {
+    "id": "nextbike",
+    "slug": "nextbike",
+    "titleOriginal": "nextbike",
+    "titleZh": "nextbike 公共自行车",
+    "descriptionZh": "德国多个城市的自行车租借和共享单车服务。",
+    "primaryCategory": "mobility",
+    "tags": [
+      "共享单车",
+      "租车",
+      "城市交通"
+    ],
+    "levels": [],
+    "levelBasis": "unspecified",
+    "skills": [
+      "生活信息"
+    ],
+    "exams": [],
+    "formats": [
+      "网页"
+    ],
+    "price": "paid",
+    "access": "registration",
+    "languages": [
+      "德语"
+    ],
+    "sourceName": "nextbike",
+    "url": "https://www.nextbike.de/",
+    "canonicalUrl": "https://www.nextbike.de/",
+    "rights": "link-only",
+    "status": "published",
+    "linkStatus": "unchecked",
+    "lastEditorialCheckedAt": "2026-10-04",
+    "providerId": "nextbike",
+    "providerType": "commercial",
+    "mediaTypes": [
+      "网页"
+    ],
+    "costNoteZh": "信息入口免费；第三方交易、服务或订阅费用以原站为准。",
+    "accessNoteZh": "部分功能可能要求注册或登录，以原站为准。",
+    "interfaceLanguages": [
+      "德语"
+    ],
+    "levelScope": "information",
+    "aliases": [],
+    "editorialStatus": "partial",
+    "evidence": [
+      {
+        "url": "https://www.nextbike.de/",
+        "fields": [
+          "purpose"
+        ],
+        "checkedAt": "2026-10-04"
+      }
+    ],
+    "howToUseZh": "打开原站，按页面提示查找相关信息；费用、资格和可用性以原站为准。"
+  },
+  {
+    "id": "bund-de",
+    "slug": "bund-de",
+    "titleOriginal": "Bund.de",
+    "titleZh": "Bund.de 德国政府服务",
+    "descriptionZh": "德国联邦政府机构、公共服务和办事信息总入口。",
+    "primaryCategory": "government",
+    "tags": [
+      "政府",
+      "办事",
+      "官方"
+    ],
+    "levels": [],
+    "levelBasis": "unspecified",
+    "skills": [
+      "生活信息"
+    ],
+    "exams": [],
+    "formats": [
+      "网页"
+    ],
+    "price": "unknown",
+    "access": "open",
+    "languages": [
+      "德语"
+    ],
+    "sourceName": "Bundesregierung",
+    "url": "https://www.bund.de/",
+    "canonicalUrl": "https://www.bund.de/",
+    "rights": "link-only",
+    "status": "published",
+    "linkStatus": "unchecked",
+    "lastEditorialCheckedAt": "2026-10-04",
+    "providerId": "bund-de",
+    "providerType": "institution",
+    "mediaTypes": [
+      "网页"
+    ],
+    "costNoteZh": "信息入口免费；第三方交易、服务或订阅费用以原站为准。",
+    "accessNoteZh": "部分功能可能要求注册或登录，以原站为准。",
+    "interfaceLanguages": [
+      "德语"
+    ],
+    "levelScope": "information",
+    "aliases": [],
+    "editorialStatus": "partial",
+    "evidence": [
+      {
+        "url": "https://www.bund.de/",
+        "fields": [
+          "purpose"
+        ],
+        "checkedAt": "2026-10-04"
+      }
+    ],
+    "howToUseZh": "打开原站，按页面提示查找相关信息；费用、资格和可用性以原站为准。"
+  },
+  {
+    "id": "service-bund",
+    "slug": "service-bund",
+    "titleOriginal": "Serviceportal Deutschland",
+    "titleZh": "德国公共服务门户",
+    "descriptionZh": "查找德国公共行政服务、表格和地方办事入口。",
+    "primaryCategory": "government",
+    "tags": [
+      "政府",
+      "办事",
+      "表格"
+    ],
+    "levels": [],
+    "levelBasis": "unspecified",
+    "skills": [
+      "生活信息"
+    ],
+    "exams": [],
+    "formats": [
+      "网页"
+    ],
+    "price": "unknown",
+    "access": "open",
+    "languages": [
+      "德语"
+    ],
+    "sourceName": "Bundesregierung",
+    "url": "https://verwaltung.bund.de/",
+    "canonicalUrl": "https://verwaltung.bund.de/",
+    "rights": "link-only",
+    "status": "published",
+    "linkStatus": "unchecked",
+    "lastEditorialCheckedAt": "2026-10-04",
+    "providerId": "service-bund",
+    "providerType": "institution",
+    "mediaTypes": [
+      "网页"
+    ],
+    "costNoteZh": "信息入口免费；第三方交易、服务或订阅费用以原站为准。",
+    "accessNoteZh": "部分功能可能要求注册或登录，以原站为准。",
+    "interfaceLanguages": [
+      "德语"
+    ],
+    "levelScope": "information",
+    "aliases": [],
+    "editorialStatus": "partial",
+    "evidence": [
+      {
+        "url": "https://verwaltung.bund.de/",
+        "fields": [
+          "purpose"
+        ],
+        "checkedAt": "2026-10-04"
+      }
+    ],
+    "howToUseZh": "打开原站，按页面提示查找相关信息；费用、资格和可用性以原站为准。"
+  },
+  {
+    "id": "ausweisapp",
+    "slug": "ausweisapp",
+    "titleOriginal": "AusweisApp",
+    "titleZh": "AusweisApp 电子身份证",
+    "descriptionZh": "德国电子身份证线上身份验证应用和使用说明。",
+    "primaryCategory": "government",
+    "tags": [
+      "身份证",
+      "电子政务",
+      "官方"
+    ],
+    "levels": [],
+    "levelBasis": "unspecified",
+    "skills": [
+      "生活信息"
+    ],
+    "exams": [],
+    "formats": [
+      "网页"
+    ],
+    "price": "unknown",
+    "access": "open",
+    "languages": [
+      "德语"
+    ],
+    "sourceName": "Bundesamt für Sicherheit in der Informationstechnik",
+    "url": "https://www.ausweisapp.bund.de/",
+    "canonicalUrl": "https://www.ausweisapp.bund.de/",
+    "rights": "link-only",
+    "status": "published",
+    "linkStatus": "unchecked",
+    "lastEditorialCheckedAt": "2026-10-04",
+    "providerId": "ausweisapp",
+    "providerType": "institution",
+    "mediaTypes": [
+      "网页",
+      "应用"
+    ],
+    "costNoteZh": "信息入口免费；第三方交易、服务或订阅费用以原站为准。",
+    "accessNoteZh": "部分功能可能要求注册或登录，以原站为准。",
+    "interfaceLanguages": [
+      "德语"
+    ],
+    "levelScope": "information",
+    "aliases": [],
+    "editorialStatus": "partial",
+    "evidence": [
+      {
+        "url": "https://www.ausweisapp.bund.de/",
+        "fields": [
+          "purpose"
+        ],
+        "checkedAt": "2026-10-04"
+      }
+    ],
+    "howToUseZh": "打开原站，按页面提示查找相关信息；费用、资格和可用性以原站为准。"
+  },
+  {
+    "id": "elster",
+    "slug": "elster",
+    "titleOriginal": "ELSTER",
+    "titleZh": "ELSTER 德国电子报税",
+    "descriptionZh": "德国税务申报、税务账户和电子税务服务官方入口。",
+    "primaryCategory": "government",
+    "tags": [
+      "税务",
+      "报税",
+      "官方"
+    ],
+    "levels": [],
+    "levelBasis": "unspecified",
+    "skills": [
+      "生活信息"
+    ],
+    "exams": [],
+    "formats": [
+      "网页"
+    ],
+    "price": "unknown",
+    "access": "registration",
+    "languages": [
+      "德语"
+    ],
+    "sourceName": "Finanzverwaltung Deutschland",
+    "url": "https://www.elster.de/",
+    "canonicalUrl": "https://www.elster.de/",
+    "rights": "link-only",
+    "status": "published",
+    "linkStatus": "unchecked",
+    "lastEditorialCheckedAt": "2026-10-04",
+    "providerId": "elster",
+    "providerType": "institution",
+    "mediaTypes": [
+      "网页"
+    ],
+    "costNoteZh": "信息入口免费；第三方交易、服务或订阅费用以原站为准。",
+    "accessNoteZh": "部分功能可能要求注册或登录，以原站为准。",
+    "interfaceLanguages": [
+      "德语"
+    ],
+    "levelScope": "information",
+    "aliases": [],
+    "editorialStatus": "partial",
+    "evidence": [
+      {
+        "url": "https://www.elster.de/",
+        "fields": [
+          "purpose"
+        ],
+        "checkedAt": "2026-10-04"
+      }
+    ],
+    "howToUseZh": "打开原站，按页面提示查找相关信息；费用、资格和可用性以原站为准。"
+  },
+  {
+    "id": "service-nrw",
+    "slug": "service-nrw",
+    "titleOriginal": "Serviceportal NRW",
+    "titleZh": "北威州 Serviceportal",
+    "descriptionZh": "北莱茵-威斯特法伦州政府办事和公共服务搜索入口。",
+    "primaryCategory": "government",
+    "tags": [
+      "北威州",
+      "办事",
+      "官方"
+    ],
+    "levels": [],
+    "levelBasis": "unspecified",
+    "skills": [
+      "生活信息"
+    ],
+    "exams": [],
+    "formats": [
+      "网页"
+    ],
+    "price": "unknown",
+    "access": "open",
+    "languages": [
+      "德语"
+    ],
+    "sourceName": "Land Nordrhein-Westfalen",
+    "url": "https://service.nrw.de/",
+    "canonicalUrl": "https://service.nrw.de/",
+    "rights": "link-only",
+    "status": "published",
+    "linkStatus": "unchecked",
+    "lastEditorialCheckedAt": "2026-10-04",
+    "providerId": "service-nrw",
+    "providerType": "institution",
+    "mediaTypes": [
+      "网页"
+    ],
+    "costNoteZh": "信息入口免费；第三方交易、服务或订阅费用以原站为准。",
+    "accessNoteZh": "部分功能可能要求注册或登录，以原站为准。",
+    "interfaceLanguages": [
+      "德语"
+    ],
+    "levelScope": "information",
+    "aliases": [],
+    "editorialStatus": "partial",
+    "evidence": [
+      {
+        "url": "https://service.nrw.de/",
+        "fields": [
+          "purpose"
+        ],
+        "checkedAt": "2026-10-04"
+      }
+    ],
+    "howToUseZh": "打开原站，按页面提示查找相关信息；费用、资格和可用性以原站为准。"
+  },
+  {
+    "id": "berlin-de",
+    "slug": "berlin-de",
+    "titleOriginal": "Berlin.de",
+    "titleZh": "Berlin.de 柏林政府服务",
+    "descriptionZh": "柏林州政府、预约、办事和城市公共信息入口。",
+    "primaryCategory": "government",
+    "tags": [
+      "柏林",
+      "办事",
+      "官方"
+    ],
+    "levels": [],
+    "levelBasis": "unspecified",
+    "skills": [
+      "生活信息"
+    ],
+    "exams": [],
+    "formats": [
+      "网页"
+    ],
+    "price": "unknown",
+    "access": "open",
+    "languages": [
+      "德语"
+    ],
+    "sourceName": "Land Berlin",
+    "url": "https://www.berlin.de/",
+    "canonicalUrl": "https://www.berlin.de/",
+    "rights": "link-only",
+    "status": "published",
+    "linkStatus": "unchecked",
+    "lastEditorialCheckedAt": "2026-10-04",
+    "providerId": "berlin-de",
+    "providerType": "institution",
+    "mediaTypes": [
+      "网页"
+    ],
+    "costNoteZh": "信息入口免费；第三方交易、服务或订阅费用以原站为准。",
+    "accessNoteZh": "部分功能可能要求注册或登录，以原站为准。",
+    "interfaceLanguages": [
+      "德语"
+    ],
+    "levelScope": "information",
+    "aliases": [],
+    "editorialStatus": "partial",
+    "evidence": [
+      {
+        "url": "https://www.berlin.de/",
+        "fields": [
+          "purpose"
+        ],
+        "checkedAt": "2026-10-04"
+      }
+    ],
+    "howToUseZh": "打开原站，按页面提示查找相关信息；费用、资格和可用性以原站为准。"
+  },
+  {
+    "id": "deutsche-rentenversicherung",
+    "slug": "deutsche-rentenversicherung",
+    "titleOriginal": "Deutsche Rentenversicherung",
+    "titleZh": "德国养老保险",
+    "descriptionZh": "德国法定养老保险、退休、缴费和咨询信息。",
+    "primaryCategory": "government",
+    "tags": [
+      "养老",
+      "保险",
+      "官方"
+    ],
+    "levels": [],
+    "levelBasis": "unspecified",
+    "skills": [
+      "生活信息"
+    ],
+    "exams": [],
+    "formats": [
+      "网页"
+    ],
+    "price": "unknown",
+    "access": "open",
+    "languages": [
+      "德语"
+    ],
+    "sourceName": "Deutsche Rentenversicherung",
+    "url": "https://www.deutsche-rentenversicherung.de/",
+    "canonicalUrl": "https://www.deutsche-rentenversicherung.de/",
+    "rights": "link-only",
+    "status": "published",
+    "linkStatus": "unchecked",
+    "lastEditorialCheckedAt": "2026-10-04",
+    "providerId": "deutsche-rentenversicherung",
+    "providerType": "institution",
+    "mediaTypes": [
+      "网页"
+    ],
+    "costNoteZh": "信息入口免费；第三方交易、服务或订阅费用以原站为准。",
+    "accessNoteZh": "部分功能可能要求注册或登录，以原站为准。",
+    "interfaceLanguages": [
+      "德语"
+    ],
+    "levelScope": "information",
+    "aliases": [],
+    "editorialStatus": "partial",
+    "evidence": [
+      {
+        "url": "https://www.deutsche-rentenversicherung.de/",
+        "fields": [
+          "purpose"
+        ],
+        "checkedAt": "2026-10-04"
+      }
+    ],
+    "howToUseZh": "打开原站，按页面提示查找相关信息；费用、资格和可用性以原站为准。"
+  },
+  {
+    "id": "bamf-migration",
+    "slug": "bamf-migration",
+    "titleOriginal": "BAMF Migration",
+    "titleZh": "BAMF 移民与融入",
+    "descriptionZh": "德国联邦移民与难民局的移民、居留和融入信息入口。",
+    "primaryCategory": "government",
+    "tags": [
+      "移民",
+      "居留",
+      "官方"
+    ],
+    "levels": [],
+    "levelBasis": "unspecified",
+    "skills": [
+      "生活信息"
+    ],
+    "exams": [],
+    "formats": [
+      "网页"
+    ],
+    "price": "unknown",
+    "access": "open",
+    "languages": [
+      "德语",
+      "英语"
+    ],
+    "sourceName": "BAMF",
+    "url": "https://www.bamf.de/EN/Startseite/startseite_node.html",
+    "canonicalUrl": "https://www.bamf.de/EN/Startseite/startseite_node.html",
+    "rights": "link-only",
+    "status": "published",
+    "linkStatus": "unchecked",
+    "lastEditorialCheckedAt": "2026-10-04",
+    "providerId": "bamf-migration",
+    "providerType": "institution",
+    "mediaTypes": [
+      "网页"
+    ],
+    "costNoteZh": "信息入口免费；第三方交易、服务或订阅费用以原站为准。",
+    "accessNoteZh": "部分功能可能要求注册或登录，以原站为准。",
+    "interfaceLanguages": [
+      "德语"
+    ],
+    "levelScope": "information",
+    "aliases": [],
+    "editorialStatus": "partial",
+    "evidence": [
+      {
+        "url": "https://www.bamf.de/EN/Startseite/startseite_node.html",
+        "fields": [
+          "purpose"
+        ],
+        "checkedAt": "2026-10-04"
+      }
+    ],
+    "howToUseZh": "打开原站，按页面提示查找相关信息；费用、资格和可用性以原站为准。"
+  },
+  {
+    "id": "check24",
+    "slug": "check24",
+    "titleOriginal": "CHECK24",
+    "titleZh": "CHECK24 德国比较平台",
+    "descriptionZh": "比较保险、能源、网络、银行和旅行服务的德国平台。",
+    "primaryCategory": "finance",
+    "tags": [
+      "比较",
+      "保险",
+      "消费"
+    ],
+    "levels": [],
+    "levelBasis": "unspecified",
+    "skills": [
+      "生活信息"
+    ],
+    "exams": [],
+    "formats": [
+      "网页"
+    ],
+    "price": "unknown",
+    "access": "registration",
+    "languages": [
+      "德语"
+    ],
+    "sourceName": "CHECK24",
+    "url": "https://www.check24.de/",
+    "canonicalUrl": "https://www.check24.de/",
+    "rights": "link-only",
+    "status": "published",
+    "linkStatus": "unchecked",
+    "lastEditorialCheckedAt": "2026-10-04",
+    "providerId": "check24",
+    "providerType": "commercial",
+    "mediaTypes": [
+      "网页"
+    ],
+    "costNoteZh": "信息入口免费；第三方交易、服务或订阅费用以原站为准。",
+    "accessNoteZh": "部分功能可能要求注册或登录，以原站为准。",
+    "interfaceLanguages": [
+      "德语"
+    ],
+    "levelScope": "information",
+    "aliases": [],
+    "editorialStatus": "partial",
+    "evidence": [
+      {
+        "url": "https://www.check24.de/",
+        "fields": [
+          "purpose"
+        ],
+        "checkedAt": "2026-10-04"
+      }
+    ],
+    "howToUseZh": "打开原站，按页面提示查找相关信息；费用、资格和可用性以原站为准。"
+  },
+  {
+    "id": "verivox",
+    "slug": "verivox",
+    "titleOriginal": "Verivox",
+    "titleZh": "Verivox 费用比较",
+    "descriptionZh": "比较电力、燃气、网络、手机和保险等生活服务。",
+    "primaryCategory": "finance",
+    "tags": [
+      "比较",
+      "能源",
+      "网络"
+    ],
+    "levels": [],
+    "levelBasis": "unspecified",
+    "skills": [
+      "生活信息"
+    ],
+    "exams": [],
+    "formats": [
+      "网页"
+    ],
+    "price": "unknown",
+    "access": "open",
+    "languages": [
+      "德语"
+    ],
+    "sourceName": "Verivox",
+    "url": "https://www.verivox.de/",
+    "canonicalUrl": "https://www.verivox.de/",
+    "rights": "link-only",
+    "status": "published",
+    "linkStatus": "unchecked",
+    "lastEditorialCheckedAt": "2026-10-04",
+    "providerId": "verivox",
+    "providerType": "commercial",
+    "mediaTypes": [
+      "网页"
+    ],
+    "costNoteZh": "信息入口免费；第三方交易、服务或订阅费用以原站为准。",
+    "accessNoteZh": "部分功能可能要求注册或登录，以原站为准。",
+    "interfaceLanguages": [
+      "德语"
+    ],
+    "levelScope": "information",
+    "aliases": [],
+    "editorialStatus": "partial",
+    "evidence": [
+      {
+        "url": "https://www.verivox.de/",
+        "fields": [
+          "purpose"
+        ],
+        "checkedAt": "2026-10-04"
+      }
+    ],
+    "howToUseZh": "打开原站，按页面提示查找相关信息；费用、资格和可用性以原站为准。"
+  },
+  {
+    "id": "finanztip",
+    "slug": "finanztip",
+    "titleOriginal": "Finanztip",
+    "titleZh": "Finanztip 消费金融指南",
+    "descriptionZh": "提供保险、银行、投资、税务和日常财务的独立信息与比较。",
+    "primaryCategory": "finance",
+    "tags": [
+      "财务信息",
+      "保险",
+      "消费"
+    ],
+    "levels": [],
+    "levelBasis": "unspecified",
+    "skills": [
+      "生活信息"
+    ],
+    "exams": [],
+    "formats": [
+      "网页"
+    ],
+    "price": "unknown",
+    "access": "open",
+    "languages": [
+      "德语"
+    ],
+    "sourceName": "Finanztip",
+    "url": "https://www.finanztip.de/",
+    "canonicalUrl": "https://www.finanztip.de/",
+    "rights": "link-only",
+    "status": "published",
+    "linkStatus": "unchecked",
+    "lastEditorialCheckedAt": "2026-10-04",
+    "providerId": "finanztip",
+    "providerType": "independent",
+    "mediaTypes": [
+      "网页"
+    ],
+    "costNoteZh": "信息入口免费；第三方交易、服务或订阅费用以原站为准。",
+    "accessNoteZh": "部分功能可能要求注册或登录，以原站为准。",
+    "interfaceLanguages": [
+      "德语"
+    ],
+    "levelScope": "information",
+    "aliases": [],
+    "editorialStatus": "partial",
+    "evidence": [
+      {
+        "url": "https://www.finanztip.de/",
+        "fields": [
+          "purpose"
+        ],
+        "checkedAt": "2026-10-04"
+      }
+    ],
+    "howToUseZh": "打开原站，按页面提示查找相关信息；费用、资格和可用性以原站为准。"
+  },
+  {
+    "id": "ba-finanzwissen",
+    "slug": "ba-finanzwissen",
+    "titleOriginal": "BaFin Verbraucher",
+    "titleZh": "BaFin 金融消费者信息",
+    "descriptionZh": "德国金融监管机构面向消费者的账户、投资、保险和诈骗提示。",
+    "primaryCategory": "finance",
+    "tags": [
+      "金融监管",
+      "消费者",
+      "官方"
+    ],
+    "levels": [],
+    "levelBasis": "unspecified",
+    "skills": [
+      "生活信息"
+    ],
+    "exams": [],
+    "formats": [
+      "网页"
+    ],
+    "price": "unknown",
+    "access": "open",
+    "languages": [
+      "英语",
+      "德语"
+    ],
+    "sourceName": "BaFin",
+    "url": "https://www.bafin.de/DE/Verbraucher/verbraucher_node.html",
+    "canonicalUrl": "https://www.bafin.de/DE/Verbraucher/verbraucher_node.html",
+    "rights": "link-only",
+    "status": "published",
+    "linkStatus": "unchecked",
+    "lastEditorialCheckedAt": "2026-10-04",
+    "providerId": "ba-finanzwissen",
+    "providerType": "institution",
+    "mediaTypes": [
+      "网页"
+    ],
+    "costNoteZh": "信息入口免费；第三方交易、服务或订阅费用以原站为准。",
+    "accessNoteZh": "部分功能可能要求注册或登录，以原站为准。",
+    "interfaceLanguages": [
+      "德语"
+    ],
+    "levelScope": "information",
+    "aliases": [],
+    "editorialStatus": "partial",
+    "evidence": [
+      {
+        "url": "https://www.bafin.de/EN/Verbraucher/verbraucher_node_en.html",
+        "fields": [
+          "purpose"
+        ],
+        "checkedAt": "2026-10-04"
+      }
+    ],
+    "howToUseZh": "打开原站，按页面提示查找相关信息；费用、资格和可用性以原站为准。"
+  },
+  {
+    "id": "verbraucherzentrale-finance",
+    "slug": "verbraucherzentrale-finance",
+    "titleOriginal": "Verbraucherzentrale Finanzen",
+    "titleZh": "消费者中心金融与保险",
+    "descriptionZh": "德国消费者中心的保险、合同、银行和金融消费信息。",
+    "primaryCategory": "finance",
+    "tags": [
+      "消费者",
+      "保险",
+      "合同"
+    ],
+    "levels": [],
+    "levelBasis": "unspecified",
+    "skills": [
+      "生活信息"
+    ],
+    "exams": [],
+    "formats": [
+      "网页"
+    ],
+    "price": "unknown",
+    "access": "open",
+    "languages": [
+      "德语"
+    ],
+    "sourceName": "Verbraucherzentrale",
+    "url": "https://www.verbraucherzentrale.de/wissen/geld-versicherungen",
+    "canonicalUrl": "https://www.verbraucherzentrale.de/wissen/geld-versicherungen",
+    "rights": "link-only",
+    "status": "published",
+    "linkStatus": "unchecked",
+    "lastEditorialCheckedAt": "2026-10-04",
+    "providerId": "verbraucherzentrale-finance",
+    "providerType": "institution",
+    "mediaTypes": [
+      "网页"
+    ],
+    "costNoteZh": "信息入口免费；第三方交易、服务或订阅费用以原站为准。",
+    "accessNoteZh": "部分功能可能要求注册或登录，以原站为准。",
+    "interfaceLanguages": [
+      "德语"
+    ],
+    "levelScope": "information",
+    "aliases": [],
+    "editorialStatus": "partial",
+    "evidence": [
+      {
+        "url": "https://www.verbraucherzentrale.de/geld-versicherungen",
+        "fields": [
+          "purpose"
+        ],
+        "checkedAt": "2026-10-04"
+      }
+    ],
+    "howToUseZh": "打开原站，按页面提示查找相关信息；费用、资格和可用性以原站为准。"
+  },
+  {
+    "id": "116117",
+    "slug": "116117",
+    "titleOriginal": "116117",
+    "titleZh": "116117 医疗服务",
+    "descriptionZh": "德国法定医疗服务值班、非急症帮助、医生和心理治疗预约入口。",
+    "primaryCategory": "health",
+    "tags": [
+      "医疗",
+      "医生",
+      "预约"
+    ],
+    "levels": [],
+    "levelBasis": "unspecified",
+    "skills": [
+      "生活信息"
+    ],
+    "exams": [],
+    "formats": [
+      "网页"
+    ],
+    "price": "unknown",
+    "access": "open",
+    "languages": [
+      "德语"
+    ],
+    "sourceName": "Kassenärztliche Bundesvereinigung",
+    "url": "https://www.116117.de/",
+    "canonicalUrl": "https://www.116117.de/",
+    "rights": "link-only",
+    "status": "published",
+    "linkStatus": "unchecked",
+    "lastEditorialCheckedAt": "2026-10-04",
+    "providerId": "116117",
+    "providerType": "institution",
+    "mediaTypes": [
+      "网页"
+    ],
+    "costNoteZh": "信息入口免费；第三方交易、服务或订阅费用以原站为准。",
+    "accessNoteZh": "部分功能可能要求注册或登录，以原站为准。",
+    "interfaceLanguages": [
+      "德语"
+    ],
+    "levelScope": "information",
+    "aliases": [],
+    "editorialStatus": "partial",
+    "evidence": [
+      {
+        "url": "https://www.116117.de/",
+        "fields": [
+          "purpose"
+        ],
+        "checkedAt": "2026-10-04"
+      }
+    ],
+    "howToUseZh": "打开原站，按页面提示查找相关信息；费用、资格和可用性以原站为准。"
+  },
+  {
+    "id": "doctolib",
+    "slug": "doctolib",
+    "titleOriginal": "Doctolib Deutschland",
+    "titleZh": "Doctolib 医生预约",
+    "descriptionZh": "按地点和专科搜索德国医生并预约。",
+    "primaryCategory": "health",
+    "tags": [
+      "医生",
+      "预约",
+      "医疗"
+    ],
+    "levels": [],
+    "levelBasis": "unspecified",
+    "skills": [
+      "生活信息"
+    ],
+    "exams": [],
+    "formats": [
+      "网页"
+    ],
+    "price": "unknown",
+    "access": "registration",
+    "languages": [
+      "德语"
+    ],
+    "sourceName": "Doctolib",
+    "url": "https://www.doctolib.de/",
+    "canonicalUrl": "https://www.doctolib.de/",
+    "rights": "link-only",
+    "status": "published",
+    "linkStatus": "unchecked",
+    "lastEditorialCheckedAt": "2026-10-04",
+    "providerId": "doctolib",
+    "providerType": "commercial",
+    "mediaTypes": [
+      "网页"
+    ],
+    "costNoteZh": "信息入口免费；第三方交易、服务或订阅费用以原站为准。",
+    "accessNoteZh": "部分功能可能要求注册或登录，以原站为准。",
+    "interfaceLanguages": [
+      "德语"
+    ],
+    "levelScope": "information",
+    "aliases": [],
+    "editorialStatus": "partial",
+    "evidence": [
+      {
+        "url": "https://www.doctolib.de/",
+        "fields": [
+          "purpose"
+        ],
+        "checkedAt": "2026-10-04"
+      }
+    ],
+    "howToUseZh": "打开原站，按页面提示查找相关信息；费用、资格和可用性以原站为准。"
+  },
+  {
+    "id": "jameda",
+    "slug": "jameda",
+    "titleOriginal": "jameda",
+    "titleZh": "jameda 医生与诊所",
+    "descriptionZh": "搜索德国医生、诊所、专科和患者评价。",
+    "primaryCategory": "health",
+    "tags": [
+      "医生",
+      "诊所",
+      "评价"
+    ],
+    "levels": [],
+    "levelBasis": "unspecified",
+    "skills": [
+      "生活信息"
+    ],
+    "exams": [],
+    "formats": [
+      "网页"
+    ],
+    "price": "unknown",
+    "access": "open",
+    "languages": [
+      "德语"
+    ],
+    "sourceName": "jameda",
+    "url": "https://www.jameda.de/",
+    "canonicalUrl": "https://www.jameda.de/",
+    "rights": "link-only",
+    "status": "published",
+    "linkStatus": "unchecked",
+    "lastEditorialCheckedAt": "2026-10-04",
+    "providerId": "jameda",
+    "providerType": "commercial",
+    "mediaTypes": [
+      "网页"
+    ],
+    "costNoteZh": "信息入口免费；第三方交易、服务或订阅费用以原站为准。",
+    "accessNoteZh": "部分功能可能要求注册或登录，以原站为准。",
+    "interfaceLanguages": [
+      "德语"
+    ],
+    "levelScope": "information",
+    "aliases": [],
+    "editorialStatus": "partial",
+    "evidence": [
+      {
+        "url": "https://www.jameda.de/",
+        "fields": [
+          "purpose"
+        ],
+        "checkedAt": "2026-10-04"
+      }
+    ],
+    "howToUseZh": "打开原站，按页面提示查找相关信息；费用、资格和可用性以原站为准。"
+  },
+  {
+    "id": "apotheken-umschau",
+    "slug": "apotheken-umschau",
+    "titleOriginal": "Apotheken Umschau",
+    "titleZh": "Apotheken Umschau 健康信息",
+    "descriptionZh": "德国药房杂志的疾病、药物和健康知识入口。",
+    "primaryCategory": "health",
+    "tags": [
+      "健康",
+      "药物",
+      "医学信息"
+    ],
+    "levels": [],
+    "levelBasis": "unspecified",
+    "skills": [
+      "生活信息"
+    ],
+    "exams": [],
+    "formats": [
+      "网页"
+    ],
+    "price": "unknown",
+    "access": "open",
+    "languages": [
+      "德语"
+    ],
+    "sourceName": "Wort & Bild Verlag",
+    "url": "https://www.apotheken-umschau.de/",
+    "canonicalUrl": "https://www.apotheken-umschau.de/",
+    "rights": "link-only",
+    "status": "published",
+    "linkStatus": "unchecked",
+    "lastEditorialCheckedAt": "2026-10-04",
+    "providerId": "apotheken-umschau",
+    "providerType": "publisher",
+    "mediaTypes": [
+      "网页"
+    ],
+    "costNoteZh": "信息入口免费；第三方交易、服务或订阅费用以原站为准。",
+    "accessNoteZh": "部分功能可能要求注册或登录，以原站为准。",
+    "interfaceLanguages": [
+      "德语"
+    ],
+    "levelScope": "information",
+    "aliases": [],
+    "editorialStatus": "partial",
+    "evidence": [
+      {
+        "url": "https://www.apotheken-umschau.de/",
+        "fields": [
+          "purpose"
+        ],
+        "checkedAt": "2026-10-04"
+      }
+    ],
+    "howToUseZh": "打开原站，按页面提示查找相关信息；费用、资格和可用性以原站为准。"
+  },
+  {
+    "id": "gesund-bund-english",
+    "slug": "gesund-bund-english",
+    "titleOriginal": "gesund.bund.de English",
+    "titleZh": "gesund.bund.de 英文健康信息",
+    "descriptionZh": "德国联邦卫生部的疾病、医疗和健康服务信息。",
+    "primaryCategory": "health",
+    "tags": [
+      "健康",
+      "医疗",
+      "官方"
+    ],
+    "levels": [],
+    "levelBasis": "unspecified",
+    "skills": [
+      "生活信息"
+    ],
+    "exams": [],
+    "formats": [
+      "网页"
+    ],
+    "price": "unknown",
+    "access": "open",
+    "languages": [
+      "英语",
+      "德语"
+    ],
+    "sourceName": "Bundesministerium für Gesundheit",
+    "url": "https://gesund.bund.de/en",
+    "canonicalUrl": "https://gesund.bund.de/en",
+    "rights": "link-only",
+    "status": "published",
+    "linkStatus": "unchecked",
+    "lastEditorialCheckedAt": "2026-10-04",
+    "providerId": "gesund-bund-english",
+    "providerType": "institution",
+    "mediaTypes": [
+      "网页"
+    ],
+    "costNoteZh": "信息入口免费；第三方交易、服务或订阅费用以原站为准。",
+    "accessNoteZh": "部分功能可能要求注册或登录，以原站为准。",
+    "interfaceLanguages": [
+      "德语"
+    ],
+    "levelScope": "information",
+    "aliases": [],
+    "editorialStatus": "partial",
+    "evidence": [
+      {
+        "url": "https://gesund.bund.de/en",
+        "fields": [
+          "purpose"
+        ],
+        "checkedAt": "2026-10-04"
+      }
+    ],
+    "howToUseZh": "打开原站，按页面提示查找相关信息；费用、资格和可用性以原站为准。"
+  },
+  {
+    "id": "idealo",
+    "slug": "idealo",
+    "titleOriginal": "idealo Deutschland",
+    "titleZh": "idealo 德国价格比较",
+    "descriptionZh": "比较德国线上商店的商品价格、配送和评价。",
+    "primaryCategory": "shopping",
+    "tags": [
+      "价格比较",
+      "购物",
+      "消费"
+    ],
+    "levels": [],
+    "levelBasis": "unspecified",
+    "skills": [
+      "生活信息"
+    ],
+    "exams": [],
+    "formats": [
+      "网页"
+    ],
+    "price": "unknown",
+    "access": "open",
+    "languages": [
+      "德语"
+    ],
+    "sourceName": "idealo",
+    "url": "https://www.idealo.de/",
+    "canonicalUrl": "https://www.idealo.de/",
+    "rights": "link-only",
+    "status": "published",
+    "linkStatus": "unchecked",
+    "lastEditorialCheckedAt": "2026-10-04",
+    "providerId": "idealo",
+    "providerType": "commercial",
+    "mediaTypes": [
+      "网页"
+    ],
+    "costNoteZh": "信息入口免费；第三方交易、服务或订阅费用以原站为准。",
+    "accessNoteZh": "部分功能可能要求注册或登录，以原站为准。",
+    "interfaceLanguages": [
+      "德语"
+    ],
+    "levelScope": "information",
+    "aliases": [],
+    "editorialStatus": "partial",
+    "evidence": [
+      {
+        "url": "https://www.idealo.de/",
+        "fields": [
+          "purpose"
+        ],
+        "checkedAt": "2026-10-04"
+      }
+    ],
+    "howToUseZh": "打开原站，按页面提示查找相关信息；费用、资格和可用性以原站为准。"
+  },
+  {
+    "id": "geizhals",
+    "slug": "geizhals",
+    "titleOriginal": "Geizhals Deutschland",
+    "titleZh": "Geizhals 电子产品比价",
+    "descriptionZh": "电子产品、家电和电脑配件的德国价格比较与规格信息。",
+    "primaryCategory": "shopping",
+    "tags": [
+      "电子产品",
+      "价格比较",
+      "购物"
+    ],
+    "levels": [],
+    "levelBasis": "unspecified",
+    "skills": [
+      "生活信息"
+    ],
+    "exams": [],
+    "formats": [
+      "网页"
+    ],
+    "price": "unknown",
+    "access": "open",
+    "languages": [
+      "德语"
+    ],
+    "sourceName": "Geizhals",
+    "url": "https://geizhals.de/",
+    "canonicalUrl": "https://geizhals.de/",
+    "rights": "link-only",
+    "status": "published",
+    "linkStatus": "unchecked",
+    "lastEditorialCheckedAt": "2026-10-04",
+    "providerId": "geizhals",
+    "providerType": "commercial",
+    "mediaTypes": [
+      "网页"
+    ],
+    "costNoteZh": "信息入口免费；第三方交易、服务或订阅费用以原站为准。",
+    "accessNoteZh": "部分功能可能要求注册或登录，以原站为准。",
+    "interfaceLanguages": [
+      "德语"
+    ],
+    "levelScope": "information",
+    "aliases": [],
+    "editorialStatus": "partial",
+    "evidence": [
+      {
+        "url": "https://geizhals.de/",
+        "fields": [
+          "purpose"
+        ],
+        "checkedAt": "2026-10-04"
+      }
+    ],
+    "howToUseZh": "打开原站，按页面提示查找相关信息；费用、资格和可用性以原站为准。"
+  },
+  {
+    "id": "dm",
+    "slug": "dm",
+    "titleOriginal": "dm-drogerie markt",
+    "titleZh": "dm 德国日用品",
+    "descriptionZh": "德国常用日用品、护理、药妆和家庭用品商店入口。",
+    "primaryCategory": "shopping",
+    "tags": [
+      "日用品",
+      "药妆",
+      "购物"
+    ],
+    "levels": [],
+    "levelBasis": "unspecified",
+    "skills": [
+      "生活信息"
+    ],
+    "exams": [],
+    "formats": [
+      "网页"
+    ],
+    "price": "unknown",
+    "access": "open",
+    "languages": [
+      "德语"
+    ],
+    "sourceName": "dm",
+    "url": "https://www.dm.de/",
+    "canonicalUrl": "https://www.dm.de/",
+    "rights": "link-only",
+    "status": "published",
+    "linkStatus": "unchecked",
+    "lastEditorialCheckedAt": "2026-10-04",
+    "providerId": "dm",
+    "providerType": "commercial",
+    "mediaTypes": [
+      "网页"
+    ],
+    "costNoteZh": "信息入口免费；第三方交易、服务或订阅费用以原站为准。",
+    "accessNoteZh": "部分功能可能要求注册或登录，以原站为准。",
+    "interfaceLanguages": [
+      "德语"
+    ],
+    "levelScope": "information",
+    "aliases": [],
+    "editorialStatus": "partial",
+    "evidence": [
+      {
+        "url": "https://www.dm.de/",
+        "fields": [
+          "purpose"
+        ],
+        "checkedAt": "2026-10-04"
+      }
+    ],
+    "howToUseZh": "打开原站，按页面提示查找相关信息；费用、资格和可用性以原站为准。"
+  },
+  {
+    "id": "rossmann",
+    "slug": "rossmann",
+    "titleOriginal": "ROSSMANN",
+    "titleZh": "ROSSMANN 德国日用品",
+    "descriptionZh": "德国日用品、护理、家庭和婴幼儿用品商店入口。",
+    "primaryCategory": "shopping",
+    "tags": [
+      "日用品",
+      "家庭",
+      "购物"
+    ],
+    "levels": [],
+    "levelBasis": "unspecified",
+    "skills": [
+      "生活信息"
+    ],
+    "exams": [],
+    "formats": [
+      "网页"
+    ],
+    "price": "unknown",
+    "access": "open",
+    "languages": [
+      "德语"
+    ],
+    "sourceName": "ROSSMANN",
+    "url": "https://www.rossmann.de/",
+    "canonicalUrl": "https://www.rossmann.de/",
+    "rights": "link-only",
+    "status": "published",
+    "linkStatus": "unchecked",
+    "lastEditorialCheckedAt": "2026-10-04",
+    "providerId": "rossmann",
+    "providerType": "commercial",
+    "mediaTypes": [
+      "网页"
+    ],
+    "costNoteZh": "信息入口免费；第三方交易、服务或订阅费用以原站为准。",
+    "accessNoteZh": "部分功能可能要求注册或登录，以原站为准。",
+    "interfaceLanguages": [
+      "德语"
+    ],
+    "levelScope": "information",
+    "aliases": [],
+    "editorialStatus": "partial",
+    "evidence": [
+      {
+        "url": "https://www.rossmann.de/",
+        "fields": [
+          "purpose"
+        ],
+        "checkedAt": "2026-10-04"
+      }
+    ],
+    "howToUseZh": "打开原站，按页面提示查找相关信息；费用、资格和可用性以原站为准。"
+  },
+  {
+    "id": "rewe",
+    "slug": "rewe",
+    "titleOriginal": "REWE",
+    "titleZh": "REWE 德国超市",
+    "descriptionZh": "德国超市、食品配送和门店服务入口。",
+    "primaryCategory": "shopping",
+    "tags": [
+      "超市",
+      "食品",
+      "配送"
+    ],
+    "levels": [],
+    "levelBasis": "unspecified",
+    "skills": [
+      "生活信息"
+    ],
+    "exams": [],
+    "formats": [
+      "网页"
+    ],
+    "price": "unknown",
+    "access": "open",
+    "languages": [
+      "德语"
+    ],
+    "sourceName": "REWE",
+    "url": "https://www.rewe.de/",
+    "canonicalUrl": "https://www.rewe.de/",
+    "rights": "link-only",
+    "status": "published",
+    "linkStatus": "unchecked",
+    "lastEditorialCheckedAt": "2026-10-04",
+    "providerId": "rewe",
+    "providerType": "commercial",
+    "mediaTypes": [
+      "网页"
+    ],
+    "costNoteZh": "信息入口免费；第三方交易、服务或订阅费用以原站为准。",
+    "accessNoteZh": "部分功能可能要求注册或登录，以原站为准。",
+    "interfaceLanguages": [
+      "德语"
+    ],
+    "levelScope": "information",
+    "aliases": [],
+    "editorialStatus": "partial",
+    "evidence": [
+      {
+        "url": "https://www.rewe.de/",
+        "fields": [
+          "purpose"
+        ],
+        "checkedAt": "2026-10-04"
+      }
+    ],
+    "howToUseZh": "打开原站，按页面提示查找相关信息；费用、资格和可用性以原站为准。"
+  },
+  {
+    "id": "lieferando",
+    "slug": "lieferando",
+    "titleOriginal": "Lieferando",
+    "titleZh": "Lieferando 外卖配送",
+    "descriptionZh": "在德国搜索餐厅并进行外卖或自取下单。",
+    "primaryCategory": "shopping",
+    "tags": [
+      "外卖",
+      "餐饮",
+      "配送"
+    ],
+    "levels": [],
+    "levelBasis": "unspecified",
+    "skills": [
+      "生活信息"
+    ],
+    "exams": [],
+    "formats": [
+      "网页"
+    ],
+    "price": "paid",
+    "access": "registration",
+    "languages": [
+      "德语"
+    ],
+    "sourceName": "Lieferando",
+    "url": "https://www.lieferando.de/",
+    "canonicalUrl": "https://www.lieferando.de/",
+    "rights": "link-only",
+    "status": "published",
+    "linkStatus": "unchecked",
+    "lastEditorialCheckedAt": "2026-10-04",
+    "providerId": "lieferando",
+    "providerType": "commercial",
+    "mediaTypes": [
+      "网页"
+    ],
+    "costNoteZh": "信息入口免费；第三方交易、服务或订阅费用以原站为准。",
+    "accessNoteZh": "部分功能可能要求注册或登录，以原站为准。",
+    "interfaceLanguages": [
+      "德语"
+    ],
+    "levelScope": "information",
+    "aliases": [],
+    "editorialStatus": "partial",
+    "evidence": [
+      {
+        "url": "https://www.lieferando.de/",
+        "fields": [
+          "purpose"
+        ],
+        "checkedAt": "2026-10-04"
+      }
+    ],
+    "howToUseZh": "打开原站，按页面提示查找相关信息；费用、资格和可用性以原站为准。"
+  },
+  {
+    "id": "germany-travel",
+    "slug": "germany-travel",
+    "titleOriginal": "Germany Travel",
+    "titleZh": "德国国家旅游局",
+    "descriptionZh": "德国城市、自然、文化和旅行规划官方信息。",
+    "primaryCategory": "travel",
+    "tags": [
+      "旅行",
+      "城市",
+      "官方"
+    ],
+    "levels": [],
+    "levelBasis": "unspecified",
+    "skills": [
+      "生活信息"
+    ],
+    "exams": [],
+    "formats": [
+      "网页"
+    ],
+    "price": "unknown",
+    "access": "open",
+    "languages": [
+      "英语",
+      "德语"
+    ],
+    "sourceName": "German National Tourist Board",
+    "url": "https://www.germany.travel/en/home.html",
+    "canonicalUrl": "https://www.germany.travel/en/home.html",
+    "rights": "link-only",
+    "status": "published",
+    "linkStatus": "unchecked",
+    "lastEditorialCheckedAt": "2026-10-04",
+    "providerId": "germany-travel",
+    "providerType": "institution",
+    "mediaTypes": [
+      "网页"
+    ],
+    "costNoteZh": "信息入口免费；第三方交易、服务或订阅费用以原站为准。",
+    "accessNoteZh": "部分功能可能要求注册或登录，以原站为准。",
+    "interfaceLanguages": [
+      "德语"
+    ],
+    "levelScope": "information",
+    "aliases": [],
+    "editorialStatus": "partial",
+    "evidence": [
+      {
+        "url": "https://www.germany.travel/en/home.html",
+        "fields": [
+          "purpose"
+        ],
+        "checkedAt": "2026-10-04"
+      }
+    ],
+    "howToUseZh": "打开原站，按页面提示查找相关信息；费用、资格和可用性以原站为准。"
+  },
+  {
+    "id": "booking-germany",
+    "slug": "booking-germany",
+    "titleOriginal": "Booking.com Germany",
+    "titleZh": "Booking.com 德国住宿",
+    "descriptionZh": "搜索德国酒店、公寓和短期住宿。",
+    "primaryCategory": "travel",
+    "tags": [
+      "住宿",
+      "旅行",
+      "酒店"
+    ],
+    "levels": [],
+    "levelBasis": "unspecified",
+    "skills": [
+      "生活信息"
+    ],
+    "exams": [],
+    "formats": [
+      "网页"
+    ],
+    "price": "paid",
+    "access": "registration",
+    "languages": [
+      "德语"
+    ],
+    "sourceName": "Booking.com",
+    "url": "https://www.booking.com/country/de.html",
+    "canonicalUrl": "https://www.booking.com/country/de.html",
+    "rights": "link-only",
+    "status": "published",
+    "linkStatus": "unchecked",
+    "lastEditorialCheckedAt": "2026-10-04",
+    "providerId": "booking-germany",
+    "providerType": "commercial",
+    "mediaTypes": [
+      "网页"
+    ],
+    "costNoteZh": "信息入口免费；第三方交易、服务或订阅费用以原站为准。",
+    "accessNoteZh": "部分功能可能要求注册或登录，以原站为准。",
+    "interfaceLanguages": [
+      "德语"
+    ],
+    "levelScope": "information",
+    "aliases": [],
+    "editorialStatus": "partial",
+    "evidence": [
+      {
+        "url": "https://www.booking.com/country/de.html",
+        "fields": [
+          "purpose"
+        ],
+        "checkedAt": "2026-10-04"
+      }
+    ],
+    "howToUseZh": "打开原站，按页面提示查找相关信息；费用、资格和可用性以原站为准。"
+  },
+  {
+    "id": "hostelworld-germany",
+    "slug": "hostelworld-germany",
+    "titleOriginal": "Hostelworld Germany",
+    "titleZh": "Hostelworld 德国青旅",
+    "descriptionZh": "搜索德国青年旅舍和经济型短住。",
+    "primaryCategory": "travel",
+    "tags": [
+      "青旅",
+      "住宿",
+      "旅行"
+    ],
+    "levels": [],
+    "levelBasis": "unspecified",
+    "skills": [
+      "生活信息"
+    ],
+    "exams": [],
+    "formats": [
+      "网页"
+    ],
+    "price": "paid",
+    "access": "registration",
+    "languages": [
+      "德语"
+    ],
+    "sourceName": "Hostelworld",
+    "url": "https://www.hostelworld.com/st/hostels/europe/germany/",
+    "canonicalUrl": "https://www.hostelworld.com/st/hostels/europe/germany/",
+    "rights": "link-only",
+    "status": "published",
+    "linkStatus": "unchecked",
+    "lastEditorialCheckedAt": "2026-10-04",
+    "providerId": "hostelworld-germany",
+    "providerType": "commercial",
+    "mediaTypes": [
+      "网页"
+    ],
+    "costNoteZh": "信息入口免费；第三方交易、服务或订阅费用以原站为准。",
+    "accessNoteZh": "部分功能可能要求注册或登录，以原站为准。",
+    "interfaceLanguages": [
+      "德语"
+    ],
+    "levelScope": "information",
+    "aliases": [],
+    "editorialStatus": "partial",
+    "evidence": [
+      {
+        "url": "https://www.hostelworld.com/st/hostels/europe/germany/",
+        "fields": [
+          "purpose"
+        ],
+        "checkedAt": "2026-10-04"
+      }
+    ],
+    "howToUseZh": "打开原站，按页面提示查找相关信息；费用、资格和可用性以原站为准。"
+  },
+  {
+    "id": "bahn",
+    "slug": "bahn",
+    "titleOriginal": "Deutsche Bahn International",
+    "titleZh": "德国铁路 Deutsche Bahn",
+    "descriptionZh": "德国铁路时刻、购票、长途和区域交通信息。",
+    "primaryCategory": "mobility",
+    "tags": [
+      "火车",
+      "购票",
+      "公共交通"
+    ],
+    "levels": [],
+    "levelBasis": "unspecified",
+    "skills": [
+      "生活信息"
+    ],
+    "exams": [],
+    "formats": [
+      "网页"
+    ],
+    "price": "paid",
+    "access": "open",
+    "languages": [
+      "英语",
+      "德语"
+    ],
+    "sourceName": "Deutsche Bahn",
+    "url": "https://int.bahn.de/en",
+    "canonicalUrl": "https://int.bahn.de/en",
+    "rights": "link-only",
+    "status": "published",
+    "linkStatus": "unchecked",
+    "lastEditorialCheckedAt": "2026-10-04",
+    "providerId": "bahn",
+    "providerType": "commercial",
+    "mediaTypes": [
+      "网页"
+    ],
+    "costNoteZh": "信息入口免费；第三方交易、服务或订阅费用以原站为准。",
+    "accessNoteZh": "部分功能可能要求注册或登录，以原站为准。",
+    "interfaceLanguages": [
+      "德语"
+    ],
+    "levelScope": "information",
+    "aliases": [],
+    "editorialStatus": "partial",
+    "evidence": [
+      {
+        "url": "https://int.bahn.de/en",
+        "fields": [
+          "purpose"
+        ],
+        "checkedAt": "2026-10-04"
+      }
+    ],
+    "howToUseZh": "打开原站，按页面提示查找相关信息；费用、资格和可用性以原站为准。"
   }
 ]

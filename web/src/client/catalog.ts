@@ -156,7 +156,7 @@ function showDetail() {
   }
   const r = items.find((r) => r.slug === location.pathname.split('/')[2]);
   if (!r) { target.innerHTML = '<h1>资源暂不可用</h1><p>这个资源已归档或不属于公开资源目录。</p><a href="/">返回资源目录 →</a>'; return; }
-  document.title = r.titleZh + ' · Deutsch Lernen';
+  document.title = r.titleZh + ' · Deutschland Ressourcen';
   target.innerHTML = resourceDetail(r, categories, returnTo);
   updateFavoriteButtons();
 }

@@ -6,7 +6,7 @@ export function renderDetailDocument(template, resource, categories, url) {
   const section = /<section\b[^>]*\bdata-detail(?:="[^"]*")?[^>]*>[\s\S]*?<\/section>/;
   if (!section.test(template)) throw Error('Detail template is missing');
   const e = escapeHtml;
-  const title = resource.titleZh + ' · Deutsch Lernen';
+  const title = resource.titleZh + ' · Deutschland Ressourcen';
   const canonical = new URL(`/resource/${resource.slug}/`, url.origin).href;
   const returnTo = directoryReturnPath(url.searchParams.get('from'));
   const structuredData = JSON.stringify({
@@ -15,7 +15,7 @@ export function renderDetailDocument(template, resource, categories, url) {
     name: title,
     description: resource.descriptionZh,
     url: canonical,
-    isPartOf: { '@type': 'WebSite', name: 'Deutsch Lernen', url: new URL('/', url.origin).href },
+    isPartOf: { '@type': 'WebSite', name: 'Deutschland Ressourcen', url: new URL('/', url.origin).href },
   }).replace(/</g, '\\u003c');
   return template.replace(section, () => `<section class="live-detail" data-detail data-server-rendered="true" data-resource-id="${e(resource.id)}">${resourceDetail(resource, categories, returnTo)}</section>`)
     .replace(/<meta name="robots" content="noindex, follow"[^>]*>/, '')

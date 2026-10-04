@@ -70,5 +70,65 @@
     "name": "德国生活与留学",
     "description": "大学、申请、签证、求职与德国生活信息。",
     "accent": "生活"
+  },
+  {
+    "id": "social",
+    "name": "社交与社区",
+    "description": "德国社交网络、邻里社区、活动和国际交流。",
+    "accent": "社交"
+  },
+  {
+    "id": "housing",
+    "name": "租房与住房",
+    "description": "租房、合租、房源和住房补贴信息入口。",
+    "accent": "住房"
+  },
+  {
+    "id": "jobs",
+    "name": "工作与职业",
+    "description": "求职、职业社交、培训和雇主信息。",
+    "accent": "工作"
+  },
+  {
+    "id": "classifieds",
+    "name": "二手与租借",
+    "description": "二手交易、分类信息、物品和设备租赁。",
+    "accent": "交易"
+  },
+  {
+    "id": "mobility",
+    "name": "交通与出行",
+    "description": "铁路、巴士、公共交通、共享汽车和自行车。",
+    "accent": "交通"
+  },
+  {
+    "id": "government",
+    "name": "政府与办事",
+    "description": "联邦、州政府、税务、证件和公共服务。",
+    "accent": "办事"
+  },
+  {
+    "id": "finance",
+    "name": "金融与保险",
+    "description": "金融消费者信息、费用比较、保险和财务服务。",
+    "accent": "金融"
+  },
+  {
+    "id": "health",
+    "name": "医疗与健康",
+    "description": "医生预约、医疗服务、健康和药物信息。",
+    "accent": "健康"
+  },
+  {
+    "id": "shopping",
+    "name": "购物与日常",
+    "description": "价格比较、超市、日用品和生活配送。",
+    "accent": "购物"
+  },
+  {
+    "id": "travel",
+    "name": "旅行与短住",
+    "description": "德国旅行、酒店、青年旅舍和短期住宿。",
+    "accent": "旅行"
   }
 ]

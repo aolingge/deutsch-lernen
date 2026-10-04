@@ -121,6 +121,16 @@ a:hover { color: var(--blue); }
 .resource-card[data-category=video] .source-mark { background: #f5e9df; color: #865937; }
 .resource-card[data-category=listening] .source-mark { background: #e8edf5; color: #4b6282; }
 .resource-card[data-category=life] .source-mark { background: #ece9f3; color: #6d5885; }
+.resource-card[data-category=social] .source-mark { background: #e8eef5; color: #496681; }
+.resource-card[data-category=housing] .source-mark { background: #f3eade; color: #886333; }
+.resource-card[data-category=jobs] .source-mark { background: #e8f0e7; color: #3f6b4d; }
+.resource-card[data-category=classifieds] .source-mark { background: #f4e9e7; color: #89564f; }
+.resource-card[data-category=mobility] .source-mark { background: #e8eff0; color: #3f6870; }
+.resource-card[data-category=government] .source-mark { background: #e9edf3; color: #526580; }
+.resource-card[data-category=finance] .source-mark { background: #f1eee2; color: #786833; }
+.resource-card[data-category=health] .source-mark { background: #e7f0ed; color: #3f705f; }
+.resource-card[data-category=shopping] .source-mark { background: #f3e9ed; color: #87536a; }
+.resource-card[data-category=travel] .source-mark { background: #e9edf5; color: #53688b; }
 .source-info { min-width: 0; flex: 1; }
 .source-info span { display: block; font-size: .8125rem; line-height: 1.5; color: #47654e; overflow-wrap: anywhere; }
 .source-info small { display: block; font: .75rem Consolas,monospace; color: var(--muted); margin-top: 4px; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; }
@@ -230,7 +240,8 @@ a:hover { color: var(--blue); }
 @media (max-width: 760px) {
   .shell { width: calc(100% - 36px); }
   .site-header { min-height: 80px; flex-wrap: wrap; gap: 8px; padding-block: 16px 0; }
-  .brand { font-size: 1rem; }
+  .brand { font-size: 1rem; min-width: 0; max-width: 100%; width: min(100%, 284px); white-space: normal; }
+  .brand > span:last-child { min-width: 0; overflow-wrap: anywhere; }
   .brand-mark { width: 38px; height: 38px; }
   .site-header nav { width: 100%; margin: 0; justify-content: space-between; gap: 15px; }
   .site-header nav a { padding: 12px 0; font-size: .8125rem; }
@@ -243,8 +254,8 @@ a:hover { color: var(--blue); }
   .directory-workspace { grid-template-columns: minmax(0,1fr); gap: 14px; }
   .directory-sidebar { position: static; }
   .sidebar-head, .sidebar-saved, .sidebar-note { display: none; }
-  .category-bar { display: flex; gap: 8px; align-items: start; }
-  .directory-sidebar nav { display: flex; overflow-x: auto; gap: 8px; padding-block: 2px 6px; scrollbar-width: thin; flex: 1; min-width: 0; }
+  .category-bar { display: flex; gap: 8px; align-items: start; min-width: 0; max-width: 100%; overflow: hidden; }
+  .directory-sidebar nav { display: flex; overflow-x: auto; gap: 8px; padding-block: 2px 6px; scrollbar-width: thin; flex: 1 1 auto; min-width: 0; max-width: 100%; }
   .category-expand { display: grid; place-items: center; flex-shrink: 0; width: 44px; height: 44px; border: 1px solid var(--line); background: #fff; border-radius: 9px; color: var(--blue); margin-top: 2px; }
   .category-expand[aria-expanded=true] { background: var(--blue); color: #fff; }
   .categories-expanded nav { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); overflow: visible; }

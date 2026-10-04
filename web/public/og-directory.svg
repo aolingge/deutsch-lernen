@@ -5,9 +5,9 @@
   <g font-family="Microsoft YaHei, PingFang SC, sans-serif">
     <rect x="64" y="64" width="66" height="66" rx="18" fill="#245442" />
     <text x="77" y="107" font-size="29" font-family="Georgia,serif" font-weight="700" fill="white">DE</text>
-    <text x="153" y="107" font-size="27" fill="#245442" font-family="Georgia,serif">Deutsch Lernen</text>
-    <text x="64" y="251" font-size="66" fill="#203b31" font-weight="700">德语资源导航<tspan fill="#a17b32">.</tspan></text>
-    <text x="68" y="313" font-size="27" fill="#596e61">课程、词典、播客、考试与德国生活信息</text>
+    <text x="153" y="107" font-size="27" fill="#245442" font-family="Georgia,serif">Deutschland Ressourcen</text>
+    <text x="64" y="251" font-size="66" fill="#203b31" font-weight="700">德国资源导航<tspan fill="#a17b32">.</tspan></text>
+    <text x="68" y="313" font-size="27" fill="#596e61">学习、住房、工作、交通、办事与日常生活资源</text>
     <g fill="white" stroke="#d8e2d8">
       <rect x="64" y="375" width="326" height="118" rx="18" />
       <rect x="413" y="375" width="326" height="118" rx="18" />
@@ -16,7 +16,7 @@
     <g fill="#245442" font-size="25" font-weight="700">
       <text x="90" y="420">Goethe-Institut</text>
       <text x="439" y="420">Deutsche Welle</text>
-      <text x="788" y="420">词典 · 工具 · 生活</text>
+      <text x="788" y="420">住房 · 工作 · 生活</text>
     </g>
     <g fill="#596e61" font-size="21">
       <text x="90" y="460">课程与考试资料</text>

@@ -55,3 +55,11 @@ Authorization: execute all twelve packages, verify and deploy the configured web
 - Local verification: 36 Node tests, Astro check 0/0/0, 149-page build, Chromium/Firefox/WebKit browser flows passed, axe checks passed with no known violations, and laboratory performance samples recorded in `web/.wrangler/qa/performance.json`.
 - Live verification after deployment `9df89422-d766-4f94-9a04-6e61459ede4e`: all 130 detail pages, sitemap and 1200x630 share image passed; live catalog has 130 resources, 16 information-scope records, no editorial-field leaks; link report is 114 ok, 11 restricted, 0 broken, 5 unchecked.
 - Automated checks do not replace a real screen reader, full browser zoom audit, source-by-source editorial reread, field Core Web Vitals, or a real Cloudflare Access admin write session. No Firefox/WebKit or Access limitations are claimed as passed without evidence.
+
+## 2026-10-04 Germany resource portal expansion
+
+- Expanded the public directory from the historical 130 resources / 12 categories to 273 resources / 22 categories, adding a Germany-wide set of entries for social communities, housing, jobs, second-hand and rental marketplaces, mobility, government, finance, health, shopping and travel.
+- Unified visible metadata around the Germany-wide resource portal brand, refreshed the share card, added search aliases for the new life-resource categories, and added restrained category accent colors.
+- Existing favorites, private tasks, reader content, audit history and hand-edited D1 records remain preserved. No Git push, DNS change, payment, account messaging or Cloudflare Access admin write was performed.
+- Link checks remain advisory: restricted, unchecked and login/region-gated sites are retained and labelled rather than treated as confirmed broken links.
+- Final deployment `c16f3142-546f-4da0-ad69-635ebe471be3` passed live readback: 196 public resources, 22 categories, zero evidence leaks, 174 ok / 17 restricted / 0 broken / 5 unchecked links, and all 196 detail pages plus sitemap/share image passed release checks.

@@ -5,7 +5,7 @@ import ResourceCard from './ResourceCard.astro';
 import { categories, resources } from '../data';
 import { selectResources } from '../lib/resource-directory.mjs';
 import { priceLabels } from '../lib/resource-directory.mjs';
-const { title = '德语资源导航', description = '课程、词典、播客、考试与德国生活信息。', category = '', level = '', saved = false } = Astro.props;
+const { title = '德国资源导航', description = '德语学习、住房、工作、交通、办事与德国生活信息。', category = '', level = '', saved = false } = Astro.props;
 const basePath = Astro.url.pathname;
 const params = new URLSearchParams();
 if (category) params.set('category', category);

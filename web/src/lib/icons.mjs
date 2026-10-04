@@ -22,10 +22,20 @@ const paths = {
   "search": "<path d=\"m21,21,-4.34,-4.34\" /> <circle cx=\"11\" cy=\"11\" r=\"8\" />",
   "star": "<path d=\"M11.525,2.295a.53,.53,0,0,1,.95,0l2.31,4.679a2.123,2.123,0,0,0,1.595,1.16l5.166,.756a.53,.53,0,0,1,.294,.904l-3.736,3.638a2.123,2.123,0,0,0,-.611,1.878l.882,5.14a.53,.53,0,0,1,-.771,.56l-4.618,-2.428a2.122,2.122,0,0,0,-1.973,0L6.396,21.01a.53,.53,0,0,1,-.77,-.56l.881,-5.139a2.122,2.122,0,0,0,-.611,-1.879L2.16,9.795a.53,.53,0,0,1,.294,-.906l5.165,-.755a2.122,2.122,0,0,0,1.597,-1.16z\" />",
   "wrench": "<path d=\"M14.7,6.3a1,1,0,0,0,0,1.4l1.6,1.6a1,1,0,0,0,1.4,0l3.106,-3.105c.32,-.322,.863,-.22,.983,.218a6,6,0,0,1,-8.259,7.057l-7.91,7.91a1,1,0,0,1,-2.999,-3l7.91,-7.91a6,6,0,0,1,7.057,-8.259c.438,.12,.54,.662,.219,.984z\" />",
+  "users": "<path d=\"M16,21v-2a4,4,0,0,0,-4,-4H6a4,4,0,0,0,-4,4v2\" /> <circle cx=\"9\" cy=\"7\" r=\"4\" /> <path d=\"M22,21v-2a4,4,0,0,0,-3,-3.87\" /> <path d=\"M16,3.13a4,4,0,0,1,0,7.75\" />",
+  "home": "<path d=\"m3,9 9,-7 9,7v11a2,2,0,0,1,-2,2H5a2,2,0,0,1,-2,-2z\" /> <polyline points=\"9 22 9 12 15 12 15 22\" />",
+  "briefcase": "<rect width=\"20\" height=\"14\" x=\"2\" y=\"7\" rx=\"2\" ry=\"2\" /> <path d=\"M16,21V5a2,2,0,0,0,-2,-2h-4a2,2,0,0,0,-2,2v16\" />",
+  "tag": "<path d=\"m20.59,13.41-7.17,7.17a2,2,0,0,1,-2.83,0L2,12V2h10l8.59,8.59a2,2,0,0,1,0,2.82z\" /> <line x1=\"7\" x2=\"7.01\" y1=\"7\" y2=\"7\" />",
+  "train": "<rect width=\"16\" height=\"13\" x=\"4\" y=\"3\" rx=\"2\" /> <path d=\"M4,11h16\" /> <path d=\"M12,3v8\" /> <path d=\"m8,19,-2,3\" /> <path d=\"m16,19,2,3\" /> <path d=\"M8,15h.01\" /> <path d=\"M16,15h.01\" />",
+  "landmark": "<line x1=\"3\" x2=\"21\" y1=\"22\" y2=\"22\" /> <line x1=\"6\" x2=\"6\" y1=\"18\" y2=\"9\" /> <line x1=\"10\" x2=\"10\" y1=\"18\" y2=\"9\" /> <line x1=\"14\" x2=\"14\" y1=\"18\" y2=\"9\" /> <line x1=\"18\" x2=\"18\" y1=\"18\" y2=\"9\" /> <polygon points=\"3 9 12 2 21 9 3 9\" />",
+  "wallet": "<path d=\"M20,7V6a2,2,0,0,0,-2,-2H5a3,3,0,0,0,0,6h15v9a2,2,0,0,1,-2,2H5a3,3,0,0,1,-3,-3V7\" /> <path d=\"M16,13h.01\" />",
+  "heart-pulse": "<path d=\"M20.84,4.61a5.5,5.5,0,0,0,-7.78,0L12,5.67l-1.06,-1.06a5.5,5.5,0,0,0,-7.78,7.78L12,21.23l8.84,-8.84a5.5,5.5,0,0,0,0,-7.78z\" /> <polyline points=\"3.5 12 7 12 9 8 12 16 14 12 20.5 12\" />",
+  "shopping-bag": "<path d=\"M6,2 3,6v14a2,2,0,0,0,2,2h14a2,2,0,0,0,2,-2V6l-3,-4z\" /> <line x1=\"3\" x2=\"21\" y1=\"6\" y2=\"6\" /> <path d=\"M16,10a4,4,0,0,1,-8,0\" />",
+  "plane": "<path d=\"M17.8,19.2 16,11l3.5,-3.5a2.12,2.12,0,0,0,-3,-3L13,8,4.8,6.2c-.5,-.1,-1,.1,-1.3,.5l-.9,1.4 6.5,3.9-3.9,3.9-2.8,-.6-1,1 3.5,2 2,3.5 1,-1-.6,-2.8 3.9,-3.9 3.9,6.5 1.4,-.9c.4,-.3,.6,-.8,.5,-1.3z\" />",
   "x": "<path d=\"M18,6,6,18\" /> <path d=\"m6,6,12,12\" />"
 };
 /** @type {Record<string, string>} */
-export const categoryIcons = { courses: 'book-open', exams: 'graduation-cap', vocabulary: 'languages', grammar: 'notebook-pen', listening: 'headphones', speaking: 'mic', reading: 'book-text', writing: 'pen-line', news: 'newspaper', video: 'play', tools: 'wrench', life: 'map-pin' };
+export const categoryIcons = { courses: 'book-open', exams: 'graduation-cap', vocabulary: 'languages', grammar: 'notebook-pen', listening: 'headphones', speaking: 'mic', reading: 'book-text', writing: 'pen-line', news: 'newspaper', video: 'play', tools: 'wrench', life: 'map-pin', social: 'users', housing: 'home', jobs: 'briefcase', classifieds: 'tag', mobility: 'train', government: 'landmark', finance: 'wallet', health: 'heart-pulse', shopping: 'shopping-bag', travel: 'plane' };
 /** @param {string} name */
 export function icon(name) {
   return `<svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0,0,24,24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${paths[name] || paths.library}</svg>`;

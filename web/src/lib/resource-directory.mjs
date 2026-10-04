@@ -9,6 +9,15 @@ const normalize = (value) => String(value ?? '').normalize('NFKC').toLocaleLower
 const aliases = [
   ['testdaf', '德福', '德福考试', 'testdaf考试'], ['词典', '字典', 'dictionary', 'wörterbuch', 'worterbuch'],
   ['免费', '免费资源', 'free'], ['播客', 'podcast', 'podcasts'], ['goethe', '歌德'], ['nicos', 'nikos'],
+  ['租房', '住房', 'wohnung', 'wohnungen', 'wg', 'zimmer', '房屋'],
+  ['工作', '职位', '工作岗位', 'job', 'jobs', 'arbeit', 'ausbildung', '实习'],
+  ['二手', '闲置', '租借', 'gebraucht', 'kleinanzeigen', '二手交易'],
+  ['交通', '出行', 'bahn', 'öpnv', 'oepnv', 'verkehr', '公交', '火车'],
+  ['政府', '办事', '机构', 'behörde', 'behoerde', 'amt', 'serviceportal'],
+  ['医疗', '健康', '医生', 'arzt', 'gesundheit', 'apotheke', '医院'],
+  ['社交', '社区', 'community', 'meetup', 'nebenan'],
+  ['购物', '超市', '日常生活', 'einkauf', 'supermarkt', 'lieferdienst'],
+  ['旅行', '旅游', '住宿', 'reise', 'reisen', 'unterkunft', 'hotel'],
 ];
 /** @param {string} word */
 const searchTerms = (word) => aliases.find((group) => group.includes(word)) || [word];
