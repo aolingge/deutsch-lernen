@@ -1,5 +1,9 @@
 # 德语学习站内容与视觉升级计划
 
+Dieser Plan ist historisch und seit 2026-10-04 durch den Auftrag für ein reines Ressourcenverzeichnis ersetzt. Aktuell gilt der [Verbesserungsplan](../superpowers/plans/2026-10-04-resource-directory-improvement.md). Die folgenden Lernwege sind keine aktuellen Produktanforderungen.
+
+本文件为历史计划，已于 2026-10-04 被纯资源目录的需求取代。目前以[资源目录优化计划](../superpowers/plans/2026-10-04-resource-directory-improvement.md)为准。下方学习路线等内容不再属于当前产品要求。
+
 更新时间：2026-09-30
 
 ## 目标

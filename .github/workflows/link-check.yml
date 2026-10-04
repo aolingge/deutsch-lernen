@@ -19,3 +19,11 @@ jobs:
         uses: lycheeverse/lychee-action@e7477775783ea5526144ba13e8db5eec57747ce8 # v2
         with:
           args: --verbose --no-progress --exclude-file .lycheeignore './**/*.md'
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4
+        if: always()
+        with:
+          node-version: 22
+      - name: Check public resource URLs from JSON
+        if: always()
+        working-directory: web
+        run: node scripts/check-resource-links.mjs

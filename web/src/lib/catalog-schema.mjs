@@ -13,7 +13,8 @@ export function validateResource(input) {
   if (!input || typeof input !== 'object' || Array.isArray(input)) throw Error('资源格式不正确');
   const item = Object.fromEntries(fields.map(key => [key, input[key]]).filter(([,value]) => value !== undefined));
   for (const key of ['id','slug']) if (typeof item[key] !== 'string' || !/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(item[key]) || item[key].length > 100) throw Error('ID 和路径只能使用英文小写、数字和连字符');
-  for (const key of ['titleOriginal','titleZh','descriptionZh','howToUseZh','sourceName']) if (typeof item[key] !== 'string' || !item[key].trim() || item[key].length > 3000) throw Error(`缺少或过长的字段：${key}`);
+  for (const key of ['titleOriginal','titleZh','descriptionZh','sourceName']) if (typeof item[key] !== 'string' || !item[key].trim() || item[key].length > 3000) throw Error(`缺少或过长的字段：${key}`);
+  if (item.howToUseZh !== undefined && (typeof item.howToUseZh !== 'string' || item.howToUseZh.length > 3000)) throw Error('历史说明字段格式不正确');
   if (!categoryIds.includes(item.primaryCategory)) throw Error('分类不存在');
   for (const key of ['tags','levels','skills','exams','formats','languages']) if (!Array.isArray(item[key]) || item[key].length > 30 || item[key].some(v => typeof v !== 'string' || v.length > 100)) throw Error(`列表字段格式不正确：${key}`);
   if (!item.tags.length || !item.skills.length || !item.formats.length || !item.languages.length) throw Error('标签、技能、形式、语言不能为空');

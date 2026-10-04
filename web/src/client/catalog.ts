@@ -1,8 +1,8 @@
 import { icon } from '../lib/icons.mjs';
 import type { Resource, Category } from '../types';
-import snapshot from '../../data/resources.json';
+import snapshot from '../../data/public-snapshot.json';
 import snapshotCategories from '../../data/categories.json';
-import { isDirectoryResource, selectResources, resourceCard, escapeHtml, priceLabels, accessLabels } from '../lib/resource-directory.mjs';
+import { isDirectoryResource, selectResources, resourceCard, resourceDetail, directoryReturnPath, escapeHtml, priceLabels, accessLabels } from '../lib/resource-directory.mjs';
 import { getFavorites, toggleFavorite } from './favorites';
 
 let items = snapshot.filter(isDirectoryResource) as Resource[];
@@ -30,14 +30,14 @@ function params() {
   if (savedOnly) value.set('saved', '1');
   return value;
 }
-function syncForm() {
+function syncForm(initial = false) {
   if (!form) return;
   const value = params();
   for (const control of Array.from(form.elements)) {
     if (control instanceof HTMLInputElement || control instanceof HTMLSelectElement) control.value = value.get(control.name) || (control.name === 'sort' ? 'default' : '');
   }
   const advanced = form.querySelector<HTMLDetailsElement>('[data-advanced-filters]');
-  if (advanced && advancedKeys.some((key) => value.get(key))) advanced.open = true;
+  if (initial && advanced && advancedKeys.some((key) => value.get(key))) advanced.open = true;
 }
 function navigate(next: URLSearchParams, replace = false) {
   clearTimeout(timer);
@@ -58,7 +58,7 @@ function updateFavoriteButtons() {
     if (button.classList.contains('bookmark')) {
       button.innerHTML = icon('star');
       button.setAttribute('aria-label', `${saved ? '取消收藏' : '收藏'} ${r?.titleZh || '资源'}`);
-    } else button.textContent = saved ? '★ 已收藏' : '☆ 收藏资源';
+    } else { button.textContent = saved ? '★ 已收藏' : '☆ 收藏资源'; button.setAttribute('aria-label', saved ? '取消收藏资源' : '收藏资源'); }
   });
   document.querySelectorAll('[data-favorite-count]').forEach((node) => { node.textContent = String(items.filter((r) => favorites.includes(r.id)).length); });
 }
@@ -68,6 +68,10 @@ function revealCategory() {
   if (nav && active && nav.scrollWidth > nav.clientWidth) nav.scrollLeft = Math.max(0, active.offsetLeft - nav.offsetLeft - 4);
 }
 function render() {
+  const focused = document.activeElement instanceof HTMLElement ? document.activeElement : null;
+  const pageFocus = focused?.dataset.page;
+  const filterFocus = focused?.dataset.removeFilter;
+  const favoriteFocus = focused?.dataset.save;
   document.querySelectorAll('[data-resource-count]').forEach((node) => { node.textContent = String(items.length); });
   document.querySelectorAll<HTMLElement>('[data-category-count]').forEach((node) => { node.textContent = String(node.dataset.categoryCount ? items.filter((r) => r.primaryCategory === node.dataset.categoryCount).length : items.length); });
   if (!grid || !form) { updateFavoriteButtons(); return; }
@@ -94,7 +98,7 @@ function render() {
   const rawPage = Number(value.get('page'));
   const page = Math.max(1, Math.min(Number.isFinite(rawPage) ? Math.floor(rawPage) : 1, total || 1));
   grid.dataset.view = view === 'list' ? 'list' : 'grid';
-  grid.innerHTML = results.slice((page - 1) * 24, page * 24).map((r) => resourceCard(r, categories, favorites.includes(r.id))).join('') || `<div class="directory-empty"><strong>${savedOnly && !savedCount ? '还没有收藏资源' : '没有匹配资源'}</strong><p>${savedOnly && !savedCount ? '点击资源卡片右上角的 ☆ 即可收藏。' : '试试其他关键词，或清除筛选。'}</p>${savedOnly && !savedCount ? '<a href="/">浏览资源目录 →</a>' : '<button type="button" data-reset>清除筛选</button>'}</div>`;
+  grid.innerHTML = results.slice((page - 1) * 24, page * 24).map((r) => resourceCard(r, categories, favorites.includes(r.id), location.pathname + location.search)).join('') || `<div class="directory-empty"><strong>${savedOnly && !savedCount ? '还没有收藏资源' : '没有匹配资源'}</strong><p>${savedOnly && !savedCount ? '点击资源卡片右上角的 ☆ 即可收藏。' : '试试其他关键词，或移除下方一个筛选条件。'}</p>${savedOnly && !savedCount ? '<a href="/">浏览资源目录 →</a>' : '<button type="button" data-reset>清除筛选</button>'}</div>`;
   const pager = document.querySelector('.catalog-pager')!;
   pager.innerHTML = total > 1 ? Array.from({ length: total }, (_, i) => { const next = new URLSearchParams(value); next.set('page', String(i + 1)); return `<a href="?${e(next.toString())}" data-page="${i + 1}" ${i + 1 === page ? 'aria-current="page"' : ''}>${i + 1}</a>`; }).join('') + `<span class="pager-summary">${(page - 1) * 24 + 1}–${Math.min(page * 24, results.length)} / ${results.length}</span>` : '';
   const chips = document.querySelector('[data-active-filters]')!;
@@ -103,19 +107,31 @@ function render() {
   chips.innerHTML = active.map(([key, val]) => { const label = key === 'category' ? categories.find((c) => c.id === val)?.name || val : key === 'price' ? priceLabels[val as keyof typeof priceLabels] || val : key === 'access' ? accessLabels[val as keyof typeof accessLabels] || val : val; return `<button type="button" data-remove-filter="${key}" aria-label="移除${labels[key]}筛选：${e(label)}">${e(label)} <span aria-hidden="true">×</span></button>`; }).join('') + (active.length ? '<button type="button" data-reset>清除筛选</button>' : '');
   document.querySelectorAll<HTMLElement>('[data-view-toggle]').forEach((button) => { button.setAttribute('aria-pressed', String(button.dataset.viewToggle === grid.dataset.view)); });
   updateFavoriteButtons();
+  if (focused && !focused.isConnected) {
+    const replacement = pageFocus ? pager.querySelector<HTMLElement>(`[data-page="${page}"]`)
+      : filterFocus ? chips.querySelector<HTMLElement>('[data-remove-filter], [data-reset]')
+      : favoriteFocus ? grid.querySelector<HTMLElement>(`[data-save="${CSS.escape(favoriteFocus)}"]`) || grid.querySelector<HTMLElement>('[data-save]') : null;
+    const fallback = document.querySelector<HTMLElement>('[data-directory-heading]');
+    if (fallback) fallback.tabIndex = -1;
+    (replacement || fallback)?.focus({ preventScroll: true });
+  }
 }
 function showDetail() {
   const target = document.querySelector<HTMLElement>('[data-detail]');
   if (!target) return;
+  const returnTo = directoryReturnPath(new URLSearchParams(location.search).get('from'));
+  if (target.dataset.serverRendered === 'true') {
+    target.querySelector<HTMLAnchorElement>('.detail-back')?.setAttribute('href', returnTo);
+    updateFavoriteButtons();
+    return;
+  }
   const r = items.find((r) => r.slug === location.pathname.split('/')[2]);
   if (!r) { target.innerHTML = '<h1>资源暂不可用</h1><p>这个资源已归档或不属于公开资源目录。</p><a href="/">返回资源目录 →</a>'; return; }
   document.title = r.titleZh + ' · Deutsch Lernen';
-  const status = { ok: '链接可访问', restricted: '自动访问受限', broken: '链接异常', unchecked: '待核验' }[r.linkStatus];
-  const facts = [['来源', r.sourceName], ['费用', priceLabels[r.price]], ['访问条件', accessLabels[r.access]], ['参考等级', r.levels.join(' · ') || '未标级'], ['内容形式', r.formats.join(' · ')], ['技能 / 主题', r.skills.join(' · ')], ['语言', r.languages.join(' · ')], ['核验记录', `${status} / ${r.lastEditorialCheckedAt || '暂无日期'}`], ['网站', new URL(r.url).hostname]];
-  target.innerHTML = `<a class="detail-back" href="/resources/">← 返回资源目录</a><div class="detail-header"><div><p class="detail-label">${e(categories.find((c) => c.id === r.primaryCategory)?.name)}</p><h1>${e(r.titleZh)}</h1><p class="original">${e(r.titleOriginal)}</p></div></div><p class="detail-intro">${e(r.descriptionZh)}</p><div class="detail-actions"><a class="action-link" href="${e(r.url)}" target="_blank" rel="noopener noreferrer">打开原站 ↗</a><button type="button" data-save="${e(r.id)}">☆ 收藏资源</button></div><p id="resource-note" role="status" class="detail-note"></p><dl class="detail-facts">${facts.map(([key, val]) => `<div><dt>${e(key)}</dt><dd>${e(val)}</dd></div>`).join('')}</dl><p class="detail-note">等级依据：${r.levelBasis === 'official' ? '来源官网标注' : r.levelBasis === 'editorial' ? '编辑参考，非机构认证' : '未标级'}。费用、可用性与地区限制以原站当前页面为准。</p>`;
+  target.innerHTML = resourceDetail(r, categories, returnTo);
   updateFavoriteButtons();
 }
-syncForm(); render(); showDetail();
+syncForm(true); render(); showDetail();
 form?.addEventListener('submit', (event) => { event.preventDefault(); navigate(fromForm()); });
 form?.addEventListener('change', (event) => { if (event.target instanceof HTMLSelectElement) navigate(fromForm()); });
 const search = form?.querySelector<HTMLInputElement>('[name=q]');
@@ -127,12 +143,16 @@ search?.addEventListener('compositionstart', () => { composing = true; clearTime
 search?.addEventListener('compositionend', () => { composing = false; scheduleSearch(); });
 search?.addEventListener('input', scheduleSearch);
 document.querySelector<HTMLSelectElement>('select[name=sort]')?.addEventListener('change', () => navigate(fromForm()));
-window.addEventListener('popstate', () => { clearTimeout(timer); syncForm(); render(); });
+window.addEventListener('popstate', () => { clearTimeout(timer); syncForm(true); render(); });
 window.addEventListener('storage', () => { try { favorites = getFavorites(); render(); } catch { notify('读取收藏失败。'); } });
 document.addEventListener('keydown', (event) => { if (event.key === '/' && !event.isComposing && search && !event.ctrlKey && !event.metaKey && !(event.target instanceof HTMLInputElement || event.target instanceof HTMLTextAreaElement || event.target instanceof HTMLSelectElement || (event.target instanceof HTMLElement && event.target.isContentEditable))) { event.preventDefault(); search.focus(); } });
 document.addEventListener('click', (event) => {
   const node = event.target instanceof Element ? event.target : null;
   if (!node) return;
+  const detail = node.closest<HTMLAnchorElement>('.detail-link');
+  if (detail && !event.ctrlKey && !event.metaKey && !event.shiftKey && event.button === 0) {
+    try { sessionStorage.setItem('deutsch-hub.directory-return', JSON.stringify({ url: location.pathname + location.search, scroll: scrollY })); } catch {}
+  }
   const expand = node.closest<HTMLElement>('[data-category-expand]');
   if (expand) {
     const opened = expand.getAttribute('aria-expanded') !== 'true';
@@ -166,6 +186,15 @@ async function refresh() {
     items = data.resources.filter(isDirectoryResource); categories = data.categories;
     render(); showDetail();
   } catch { notify('当前显示本地目录，实时更新暂不可用。'); }
-  finally { document.documentElement.dataset.catalogReady = 'true'; }
+  finally {
+    document.documentElement.dataset.catalogReady = 'true';
+    if (workspace) try {
+      const saved = JSON.parse(sessionStorage.getItem('deutsch-hub.directory-return') || 'null');
+      if (saved?.url === location.pathname + location.search && Number.isFinite(saved.scroll)) {
+        sessionStorage.removeItem('deutsch-hub.directory-return');
+        requestAnimationFrame(() => scrollTo({ top: saved.scroll, behavior: 'instant' }));
+      }
+    } catch {}
+  }
 }
 void refresh();

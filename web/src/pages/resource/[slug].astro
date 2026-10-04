@@ -1,7 +1,9 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import { resources } from '../../data';
+import { resourceDetail } from '../../lib/resource-directory.mjs';
+import categories from '../../../data/categories.json';
 export function getStaticPaths() { return resources.map((resource) => ({ params: { slug: resource.slug }, props: { resource } })); }
 const { resource } = Astro.props;
 ---
-<BaseLayout title={resource.titleZh} description={resource.descriptionZh}><section class="live-detail" data-detail><a class="detail-back" href="/resources/">← 返回资源目录</a><h1>{resource.titleZh}</h1><p class="original">{resource.titleOriginal}</p><p class="detail-intro">{resource.descriptionZh}</p><div class="detail-actions"><a class="action-link" href={resource.url} target="_blank" rel="noopener noreferrer">打开原站 ↗</a><button type="button" data-save={resource.id}>☆ 收藏资源</button></div><p id="resource-note" role="status" class="detail-note"></p><noscript>启用 JavaScript 可查看完整资源信息和保存收藏。</noscript></section></BaseLayout>
+<BaseLayout title={resource.titleZh} description={resource.descriptionZh}><section class="live-detail" data-detail set:html={resourceDetail(resource, categories)} /></BaseLayout>

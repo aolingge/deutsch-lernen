@@ -1,0 +1,5 @@
+User-agent: *
+Disallow: /admin/
+Disallow: /api/
+
+Sitemap: https://deutsch-lernen-resource-hub.pirostonelsonrx688.workers.dev/sitemap.xml

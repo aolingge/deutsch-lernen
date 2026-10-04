@@ -2,6 +2,8 @@ import seed from '../data/resources.json';
 import categories from '../data/categories.json';
 import { createRemoteJWKSet, jwtVerify } from 'jose';
 import { validateResource } from '../src/lib/catalog-schema.mjs';
+import { isDirectoryResource, escapeHtml } from '../src/lib/resource-directory.mjs';
+import { renderDetailDocument } from '../src/lib/detail-document.mjs';
 
 interface Statement { bind(...values: unknown[]): Statement; run(): Promise<{meta:{changes:number}}> ; first<T=Record<string,unknown>>():Promise<T|null>; all<T=Record<string,unknown>>():Promise<{results:T[]}>; }
 type Env = { DB?: {prepare(sql:string):Statement}; ASSETS: {fetch(request:Request):Promise<Response>}; VISIT_LIMIT?: {limit(input:{key:string}):Promise<{success:boolean}>}; ACCESS_ISSUER?: string; ACCESS_AUDIENCE?: string; ADMIN_EMAILS?: string };
@@ -24,8 +26,19 @@ export async function adminEmail(request: Request, env: Env) {
 }
 async function publicCatalog(env: Env) {
   if (!env.DB) return { resources: seed.filter(r => r.status === 'published' && r.rights !== 'owned'), categories };
-  const rows = await env.DB.prepare("SELECT payload_json FROM catalog_entries WHERE status = 'published' ORDER BY id").all<{payload_json: string}>();
-  return { resources: rows.results.map(r => validateResource(JSON.parse(r.payload_json))).filter(r => r.rights !== 'owned'), categories };
+  const rows = await env.DB.prepare("SELECT id, payload_json FROM catalog_entries WHERE status = 'published' ORDER BY id").all<{id: string; payload_json: string}>();
+  const resources = rows.results.flatMap((row) => {
+    try { const item = validateResource(JSON.parse(row.payload_json)); return isDirectoryResource(item) ? [item] : []; }
+    catch { console.error('Invalid public catalog record', row.id); return []; }
+  });
+  return { resources, categories };
+}
+function secure(response: Response) {
+  const secured = new Response(response.body, response);
+  secured.headers.set('x-content-type-options', 'nosniff');
+  secured.headers.set('referrer-policy', 'strict-origin-when-cross-origin');
+  secured.headers.set('x-frame-options', 'DENY');
+  return secured;
 }
 async function admin(request: Request, env: Env, path: string) {
   const email = await adminEmail(request, env);
@@ -93,21 +106,29 @@ export default {
       if (path==='/api/visit' && request.method==='POST') return await visit(request,env);
       if (path.startsWith('/api/admin/')) return await admin(request,env,path);
       if (path.startsWith('/api/')) return json({error:'not-found'},404);
+      if (path === '/sitemap.xml') {
+        const { resources } = await publicCatalog(env);
+        const paths = ['/', '/exams/', '/news/', '/sources/', ...resources.map((r) => `/resource/${r.slug}/`)];
+        const xml = '<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">' + paths.map((p) => `<url><loc>${escapeHtml(new URL(p, url.origin).href)}</loc></url>`).join('') + '</urlset>';
+        return secure(new Response(request.method === 'HEAD' ? null : xml, { headers: { 'content-type': 'application/xml; charset=utf-8', 'cache-control': 'public, max-age=30' } }));
+      }
       if (/^\/resource\/[a-z0-9-]+$/.test(path)) {
         const slug=path.split('/')[2]; const {resources}=await publicCatalog(env);
-        if (!resources.some(r=>r.slug===slug)) {
+        const resource = resources.find(r=>r.slug===slug);
+        if (!resource) {
           if (seed.some(r=>r.slug===slug && r.rights==='owned')) return Response.redirect(url.origin+'/resources/',302);
-          return new Response('资源不存在或尚未公开',{status:404});
+          return secure(new Response('资源不存在或尚未公开',{status:404}));
         }
+        const detailURL = new URL(url);
         url.pathname='/resource/view/';
-        return env.ASSETS.fetch(new Request(url,request));
+        url.search = '';
+        const template = await env.ASSETS.fetch(new Request(url, { method: 'GET', headers: request.headers }));
+        if (!template.ok) throw Error('Detail template unavailable');
+        const html = renderDetailDocument(await template.text(), resource, categories, detailURL);
+        return secure(new Response(request.method === 'HEAD' ? null : html, { headers: { 'content-type': 'text/html; charset=utf-8', 'cache-control': 'no-store' } }));
       }
       const response=await env.ASSETS.fetch(request);
-      const secured=new Response(response.body,response);
-      secured.headers.set('x-content-type-options','nosniff');
-      secured.headers.set('referrer-policy','strict-origin-when-cross-origin');
-      secured.headers.set('x-frame-options','DENY');
-      return secured;
+      return secure(response);
     } catch { return json({error:'service-unavailable',message:'服务暂不可用，请稍后重试'},503); }
   }
 };

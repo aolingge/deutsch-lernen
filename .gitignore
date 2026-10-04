@@ -60,3 +60,4 @@ Thumbs.db
 *.m4a
 *.wav
 *.mov
+web/data/public-snapshot.json

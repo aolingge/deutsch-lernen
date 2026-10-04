@@ -5,3 +5,10 @@ import {canonicalize,validateResource} from '../src/lib/catalog-schema.mjs';
 test('URL canonicalization rejects script URLs and strips fragment duplicates',()=>{assert.equal(canonicalize('https://example.invalid/test/?utm_source=x#section'),'https://example.invalid/test');assert.throws(()=>canonicalize('javascript:alert(1)'));assert.throws(()=>canonicalize('https://user:pass'+'@'+'example.invalid/'));});
 test('editor input rejects incorrect levels, scalar arrays and non-string identifiers',()=>{assert.throws(()=>validateResource({...catalog[0],levels:['B3']}));assert.throws(()=>validateResource({...catalog[0],tags:'unsafe'}));assert.throws(()=>validateResource({...catalog[0],id:123}));});
 
+test('resource directory accepts entries without historical instructions and retains existing instructions', () => {
+  const { howToUseZh, ...resource } = catalog[0];
+  assert.ok(!('howToUseZh' in validateResource(resource)));
+  assert.equal(validateResource(catalog[0]).howToUseZh, howToUseZh);
+  assert.throws(() => validateResource({ ...resource, howToUseZh: { invalid: true } }));
+});
+

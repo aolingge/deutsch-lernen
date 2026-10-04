@@ -1,4 +1,5 @@
 import fs from 'node:fs';
+import { validateResource } from '../src/lib/catalog-schema.mjs';
 // @ts-nocheck
 
 const root = new URL('..', import.meta.url);
@@ -13,7 +14,8 @@ const validLevels = new Set(['A1', 'A2', 'B1', 'B2', 'C1', 'C2']);
 const validStatuses = new Set(['published', 'draft', 'archived']);
 
 for (const item of resources) {
-  const required = ['id', 'slug', 'titleOriginal', 'titleZh', 'descriptionZh', 'howToUseZh', 'primaryCategory', 'sourceName', 'url', 'canonicalUrl'];
+  try { validateResource(item); } catch (error) { errors.push(`${item.id ?? '<unknown>'}: ${error.message}`); }
+  const required = ['id', 'slug', 'titleOriginal', 'titleZh', 'descriptionZh', 'primaryCategory', 'sourceName', 'url', 'canonicalUrl'];
   for (const field of required) if (!item[field]) errors.push(`${item.id ?? '<unknown>'}: missing ${field}`);
   if (ids.has(item.id)) errors.push(`${item.id}: duplicate id`);
   if (urls.has(item.canonicalUrl)) errors.push(`${item.id}: duplicate canonicalUrl`);

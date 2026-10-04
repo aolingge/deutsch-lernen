@@ -67,6 +67,7 @@ with sync_playwright() as p:
     expect(page.locator('[data-advanced-count]')).to_have_text('2')
     page.locator('[data-advanced-filters] summary').click()
     page.locator('select[name=price]').select_option('free')
+    assert not page.locator('[data-advanced-filters]').evaluate('(node)=>node.open'), 'manually closed filters reopened'
     assert 'skill=' in page.url and 'access=open' in page.url
     expect(page.locator('select[name=skill]')).to_have_value('听力')
     page.locator('[data-reset]').first.click()
@@ -82,6 +83,25 @@ with sync_playwright() as p:
     expect(page.locator('input[name=q]')).to_have_value('')
     expect(page.locator('.live-card')).to_have_count(24)
     flows.append('advanced filters survive disclosure and URLs; IME composition and pending-search reset')
+    for query, name in [('德福', 'TestDaF'), ('字典', '词典')]:
+        go('/?q=' + query)
+        assert page.locator('.live-card').count() > 0, 'missing alias ' + query
+    go('/?category=grammar&level=B1&price=free')
+    original_url = page.url
+    page.locator('.detail-link').first.click()
+    page.wait_for_function("document.documentElement.dataset.catalogReady === 'true'")
+    page.locator('.detail-back').click()
+    page.wait_for_function("document.documentElement.dataset.catalogReady === 'true'")
+    assert page.url == original_url, 'detail return lost filter context'
+    go('/')
+    page.locator('[data-page="2"]').focus()
+    page.keyboard.press('Enter')
+    expect(page.locator('[data-page="2"]')).to_be_focused()
+    go('/?category=grammar&level=B1')
+    page.locator('[data-remove-filter="level"]').focus()
+    page.keyboard.press('Enter')
+    expect(page.locator('[data-remove-filter="category"]')).to_be_focused()
+    flows.append('search aliases, detail return context, pagination and filter keyboard focus')
     old = {'goal': {'level': 'B1', 'exam': 'Goethe', 'hours': '5'}, 'tasks': [{'id': 'anki', 'title': 'old task', 'minutes': 30, 'done': False}], 'favorites': [next(r['id'] for r in rows if r['rights'] == 'owned')]}
     page.evaluate('(v)=>localStorage.setItem("deutsch-hub.study.v1",JSON.stringify(v))', old)
     go('/resource/anki/')
@@ -97,6 +117,7 @@ with sync_playwright() as p:
     expect(page.locator('.live-card h3')).to_contain_text('Anki')
     page.locator('[data-save=anki]').click()
     expect(page.locator('.directory-empty')).to_contain_text('还没有收藏资源')
+    expect(page.locator('[data-directory-heading]')).to_be_focused()
     go('/my-study/')
     expect(page.locator('main h1')).to_have_text('我的收藏.')
     flows.append('favorites preserved across pages; old private tasks and goals retained')
@@ -114,7 +135,7 @@ with sync_playwright() as p:
             go(route)
             assert page.evaluate('document.documentElement.scrollWidth <= innerWidth'), route + ' overflow ' + str(width)
     page.set_viewport_size({'width': 375, 'height': 812}); go('/')
-    assert page.locator('.live-card').first.bounding_box()['y'] < 620, 'mobile controls bury the resources'
+    assert page.locator('.live-card').first.bounding_box()['y'] < 520, 'mobile controls bury the resources'
     page.get_by_role('button', name='展开全部分类').click()
     expect(page.get_by_role('button', name='收起全部分类')).to_have_attribute('aria-expanded', 'true')
     assert page.locator('.category-link[data-category=life]').bounding_box()['x'] < 375
@@ -136,6 +157,14 @@ with sync_playwright() as p:
     assert page.locator('.live-card').count() > 0
     expect(page.locator('#directory-note')).to_contain_text('实时更新暂不可用')
     flows.append('interactive catalog fallback on API failure')
+    no_js = browser.new_context(java_script_enabled=False)
+    detail_page = no_js.new_page()
+    detail_page.goto(base + '/resource/anki/', wait_until='domcontentloaded')
+    expect(detail_page.locator('main h1')).to_contain_text('Anki')
+    expect(detail_page.locator('.detail-facts')).to_contain_text('来源')
+    assert 'Anki' in detail_page.title(), 'detail title is a loading placeholder'
+    no_js.close()
+    flows.append('complete current resource details without JavaScript')
     assert not errors, errors
     browser.close()
 report = {'baseUrl': base, 'passed': True, 'publicResources': len(public), 'flows': flows, 'pageErrors': errors}

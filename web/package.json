@@ -4,6 +4,9 @@
   "private": true,
   "type": "module",
   "scripts": {
+    "predev": "node scripts/prepare-public-snapshot.mjs",
+    "prebuild": "node scripts/prepare-public-snapshot.mjs",
+    "precheck": "node scripts/prepare-public-snapshot.mjs",
     "dev": "astro dev",
     "build": "astro build && node scripts/prepare-assets.mjs",
     "preview": "astro preview",
