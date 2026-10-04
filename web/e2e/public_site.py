@@ -88,11 +88,14 @@ with sync_playwright() as p:
         assert page.locator('.live-card').count() > 0, 'missing alias ' + query
     go('/?category=grammar&level=B1&price=free')
     original_url = page.url
+    page.evaluate('scrollTo(0, 300)')
+    previous_scroll = page.evaluate('scrollY')
     page.locator('.detail-link').first.click()
-    page.wait_for_function("document.documentElement.dataset.catalogReady === 'true'")
+    page.wait_for_function("document.documentElement?.dataset.catalogReady === 'true'")
     page.locator('.detail-back').click()
-    page.wait_for_function("document.documentElement.dataset.catalogReady === 'true'")
+    page.wait_for_function("document.documentElement?.dataset.catalogReady === 'true'")
     assert page.url == original_url, 'detail return lost filter context'
+    page.wait_for_function('(position) => Math.abs(scrollY - position) < 2', arg=previous_scroll)
     go('/')
     page.locator('[data-page="2"]').focus()
     page.keyboard.press('Enter')
@@ -146,6 +149,13 @@ with sync_playwright() as p:
     page.locator('.category-link[data-category=life]').click()
     assert page.locator('.live-card').count() > 0
     flows.append('12 routes at mobile, tablet and desktop; mobile category scrolling')
+    for width in [320, 375, 768, 1440]:
+        page.set_viewport_size({'width': width, 'height': 1000})
+        for route in ['/', '/resource/anki/', '/?skill=听力&access=open']:
+            go(route)
+            page.add_style_tag(content='html { font-size: 200% !important; }')
+            assert page.evaluate('document.documentElement.scrollWidth <= innerWidth'), 'enlarged text overflow: ' + route + ' ' + str(width)
+    flows.append('200 percent text in twelve narrow and wide views without page overflow')
     page.set_viewport_size({'width': 1440, 'height': 1000}); go('/')
     page.screenshot(path=str(out/'desktop-preview.png'))
     page.keyboard.press('/')
