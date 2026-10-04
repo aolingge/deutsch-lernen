@@ -38,6 +38,7 @@ function secure(response: Response) {
   secured.headers.set('x-content-type-options', 'nosniff');
   secured.headers.set('referrer-policy', 'strict-origin-when-cross-origin');
   secured.headers.set('x-frame-options', 'DENY');
+  secured.headers.set('content-security-policy-report-only', "default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; connect-src 'self'; frame-ancestors 'none'; base-uri 'self'; object-src 'none'");
   return secured;
 }
 async function admin(request: Request, env: Env, path: string) {
