@@ -13,6 +13,9 @@ const workspace = document.querySelector<HTMLElement>('[data-directory]');
 const grid = document.querySelector<HTMLElement>('[data-catalog-grid]');
 const form = document.querySelector<HTMLFormElement>('#resource-filters');
 const savedOnly = workspace?.dataset.savedOnly === 'true';
+const advancedKeys = ['skill', 'exam', 'access', 'format'];
+let timer: ReturnType<typeof setTimeout>;
+let composing = false;
 const e = escapeHtml;
 const notify = (message: string) => {
   const note = document.querySelector('#directory-note, #resource-note');
@@ -33,8 +36,11 @@ function syncForm() {
   for (const control of Array.from(form.elements)) {
     if (control instanceof HTMLInputElement || control instanceof HTMLSelectElement) control.value = value.get(control.name) || (control.name === 'sort' ? 'default' : '');
   }
+  const advanced = form.querySelector<HTMLDetailsElement>('[data-advanced-filters]');
+  if (advanced && advancedKeys.some((key) => value.get(key))) advanced.open = true;
 }
 function navigate(next: URLSearchParams, replace = false) {
+  clearTimeout(timer);
   const url = location.pathname + (next.size ? '?' + next : '');
   if (replace) history.replaceState({}, '', url); else history.pushState({}, '', url);
   syncForm(); render();
@@ -56,11 +62,22 @@ function updateFavoriteButtons() {
   });
   document.querySelectorAll('[data-favorite-count]').forEach((node) => { node.textContent = String(items.filter((r) => favorites.includes(r.id)).length); });
 }
+function revealCategory() {
+  const nav = document.querySelector<HTMLElement>('#category-navigation');
+  const active = nav?.querySelector<HTMLElement>('[aria-current]');
+  if (nav && active && nav.scrollWidth > nav.clientWidth) nav.scrollLeft = Math.max(0, active.offsetLeft - nav.offsetLeft - 4);
+}
 function render() {
   document.querySelectorAll('[data-resource-count]').forEach((node) => { node.textContent = String(items.length); });
   document.querySelectorAll<HTMLElement>('[data-category-count]').forEach((node) => { node.textContent = String(node.dataset.categoryCount ? items.filter((r) => r.primaryCategory === node.dataset.categoryCount).length : items.length); });
   if (!grid || !form) { updateFavoriteButtons(); return; }
   const value = params();
+  const advancedCount = document.querySelector<HTMLElement>('[data-advanced-count]');
+  if (advancedCount) {
+    const count = advancedKeys.filter((key) => value.get(key)).length;
+    advancedCount.hidden = count === 0;
+    advancedCount.textContent = String(count);
+  }
   const results = selectResources(items, value, favorites) as Resource[];
   const savedCount = items.filter((r) => favorites.includes(r.id)).length;
   const category = categories.find((c) => c.id === value.get('category'));
@@ -72,6 +89,7 @@ function render() {
     const next = new URLSearchParams(value); next.set('category', link.dataset.category || ''); next.delete('page');
     link.setAttribute('href', location.pathname + '?' + next);
   });
+  revealCategory();
   const total = Math.ceil(results.length / 24);
   const rawPage = Number(value.get('page'));
   const page = Math.max(1, Math.min(Number.isFinite(rawPage) ? Math.floor(rawPage) : 1, total || 1));
@@ -101,15 +119,29 @@ syncForm(); render(); showDetail();
 form?.addEventListener('submit', (event) => { event.preventDefault(); navigate(fromForm()); });
 form?.addEventListener('change', (event) => { if (event.target instanceof HTMLSelectElement) navigate(fromForm()); });
 const search = form?.querySelector<HTMLInputElement>('[name=q]');
-let timer: ReturnType<typeof setTimeout>;
-search?.addEventListener('input', () => { clearTimeout(timer); timer = setTimeout(() => navigate(fromForm(), true), 180); });
+const scheduleSearch = () => {
+  clearTimeout(timer);
+  if (!composing) timer = setTimeout(() => navigate(fromForm(), true), 180);
+};
+search?.addEventListener('compositionstart', () => { composing = true; clearTimeout(timer); });
+search?.addEventListener('compositionend', () => { composing = false; scheduleSearch(); });
+search?.addEventListener('input', scheduleSearch);
 document.querySelector<HTMLSelectElement>('select[name=sort]')?.addEventListener('change', () => navigate(fromForm()));
-window.addEventListener('popstate', () => { syncForm(); render(); });
+window.addEventListener('popstate', () => { clearTimeout(timer); syncForm(); render(); });
 window.addEventListener('storage', () => { try { favorites = getFavorites(); render(); } catch { notify('读取收藏失败。'); } });
-document.addEventListener('keydown', (event) => { if (event.key === '/' && search && !event.ctrlKey && !event.metaKey && !(event.target instanceof HTMLInputElement || event.target instanceof HTMLTextAreaElement || event.target instanceof HTMLSelectElement || (event.target instanceof HTMLElement && event.target.isContentEditable))) { event.preventDefault(); search.focus(); } });
+document.addEventListener('keydown', (event) => { if (event.key === '/' && !event.isComposing && search && !event.ctrlKey && !event.metaKey && !(event.target instanceof HTMLInputElement || event.target instanceof HTMLTextAreaElement || event.target instanceof HTMLSelectElement || (event.target instanceof HTMLElement && event.target.isContentEditable))) { event.preventDefault(); search.focus(); } });
 document.addEventListener('click', (event) => {
   const node = event.target instanceof Element ? event.target : null;
   if (!node) return;
+  const expand = node.closest<HTMLElement>('[data-category-expand]');
+  if (expand) {
+    const opened = expand.getAttribute('aria-expanded') !== 'true';
+    expand.setAttribute('aria-expanded', String(opened));
+    expand.setAttribute('aria-label', opened ? '收起全部分类' : '展开全部分类');
+    expand.closest('.directory-sidebar')?.classList.toggle('categories-expanded', opened);
+    if (!opened) revealCategory();
+    return;
+  }
   const bookmark = node.closest<HTMLElement>('[data-save]');
   if (bookmark) { try { const saved = toggleFavorite(bookmark.dataset.save!); favorites = getFavorites(); if (savedOnly) render(); else updateFavoriteButtons(); notify(saved ? '已收藏，保存在当前浏览器。' : '已取消收藏。'); } catch { notify('收藏未保存，请检查浏览器存储权限。'); } return; }
   const category = node.closest<HTMLElement>('.category-link');

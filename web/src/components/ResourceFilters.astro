@@ -9,12 +9,17 @@ const { basePath = '/resources/' } = Astro.props;
 <form id="resource-filters" class="filters" action={basePath} method="get">
   <div class="search-row"><label class="search-box"><span aria-hidden="true" class="search-icon" set:html={icon('search')} /><span class="sr-only">搜索资源</span><input type="search" name="q" placeholder="搜索名称、关键词或网站…" autocomplete="off" /><kbd aria-hidden="true">/</kbd></label><button type="submit" class="search-submit">搜索</button></div>
   <input type="hidden" name="category" />
-  <div class="filter-row">
+  <div class="filter-row primary-filters">
     <label><span>等级</span><select name="level"><option value="">全部等级</option>{levelLabels.map((level) => <option value={level}>{level}</option>)}</select></label>
+    <label><span>费用</span><select name="price"><option value="">全部费用</option><option value="free">免费</option><option value="freemium">部分免费</option><option value="paid">付费</option><option value="unknown">待核实</option></select></label>
+  </div>
+  <details class="advanced-filters" data-advanced-filters>
+    <summary><span class="filter-summary-icon" aria-hidden="true" set:html={icon('list')} /><span>更多筛选</span><span class="filter-count" data-advanced-count hidden></span><span class="disclosure-arrow" aria-hidden="true">⌄</span></summary>
+    <div class="filter-row">
     <label><span>技能</span><select name="skill"><option value="">全部技能</option>{skills.map((skill) => <option value={skill}>{skill}</option>)}</select></label>
     <label><span>考试</span><select name="exam"><option value="">全部考试</option>{exams.map((exam) => <option value={exam}>{exam}</option>)}</select></label>
-    <label><span>费用</span><select name="price"><option value="">全部费用</option><option value="free">免费</option><option value="freemium">部分免费</option><option value="paid">付费</option><option value="unknown">待核实</option></select></label>
     <label><span>访问</span><select name="access"><option value="">全部条件</option><option value="open">免注册</option><option value="registration">需注册</option><option value="exam-registration">需报名</option><option value="unknown">待核实</option></select></label>
     <label><span>形式</span><select name="format"><option value="">全部形式</option>{formats.map((format) => <option value={format}>{format}</option>)}</select></label>
-  </div>
+    </div>
+  </details>
 </form>
