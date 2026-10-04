@@ -235,7 +235,7 @@ Dateien: `web/public/directory.css`, `web/src/components/ResourceCard.astro`, `w
 
 ### W08: Zuverlässigkeit und Header / 可靠性及响应头
 
-Dateien: `web/worker/index.ts`, `web/scripts/prepare-assets.mjs`, `web/wrangler.jsonc`, `web/tests/worker.test.mjs`; `web/public/_headers` bei statischem资产路径适用.
+Dateien: `web/worker/index.ts`, `web/scripts/prepare-assets.mjs`, `web/wrangler.jsonc`, `web/tests/worker.test.mjs`; `web/public/_headers` für statische Asset-Pfade.
 
 文件：Worker、静态资产准备脚本、Wrangler 配置及测试；静态资产路径适用时增加 `_headers`。
 
@@ -319,8 +319,28 @@ Die folgenden Primärquellen stützen die jeweiligen Regeln. Suchmaschinenindexi
 | [Goethe B1: Offizielle Übungen](https://www.goethe.de/de/m/spr/prf/ueb/pb1.html) | PDF/Audio und kostenlose Muster getrennt darstellen. / PDF、音频及免费样题清晰展示。 |
 | [Goethe: GER](https://www.goethe.de/ins/de/de/uun/dln/ger.html) | Sprachkompetenzangaben von Servicezulassung unterscheiden. / 语言等级与服务资格区分。 |
 
-## 10. Status dieser Lieferung / 本次交付状态
+## 10. Status der ursprünglichen Analyse / 初次分析交付状态
 
 Analyse und Plan dokumentiert; Produktionscode, Datenbank und Live-Website sind in dieser Planungsphase unverändert. Die Arbeitskästchen beschreiben künftige Umsetzung, nicht bereits abgeschlossene Verbesserungen.
 
 分析及计划已整理；本次规划阶段未修改生产代码、数据库和线上网站。上述复选框是后续执行步骤，不表示对应优化已经完成。
+
+## 11. Erste Umsetzung nach dem Folgeauftrag / 后续委托后的首轮实施
+
+Nach dem Auftrag zur weiteren Optimierung wurden die Kernänderungen umgesetzt und am konfigurierten Standort veröffentlicht. Der [Umsetzungsbericht](../../resource-directory-review.md) enthält die tatsächlichen Ergebnisse, Versionen und Grenzen. Die ursprünglichen Kästchen bleiben als vollständige Abnahmeliste erhalten; die folgende Tabelle beschreibt den aktuellen Umfang.
+
+收到继续优化的委托后，已完成核心改动并发布到既有网站。[实施记录](../../resource-directory-review.md)包含真实结果、版本和局限。原始复选框继续作为完整验收列表保留；下表说明目前完成范围。
+
+| Paket / 工作包 | Stand / 当前状态 |
+| --- | --- |
+| W01 | Historischer Plan gekennzeichnet, Checkliste und Bericht ergänzt; README-Arbeit und weitere Variantenvergleiche offen. / 旧方案已标为历史，发布清单及记录已完善，README 和进一步方案比较仍待做。 |
+| W02 | Filter-, Seiten- und Scrollrückkehr, Tastaturfokus und manuelle Filterfaltung umgesetzt und live geprüft. / 筛选、分页、滚动恢复、焦点及折叠状态已实现并线上验证。 |
+| W03 | Begrenzte Aliasliste und Titel-/Quellenpriorität umgesetzt und geprüft. / 同义词及标题、来源优先排序已实现并验证。 |
+| W04 | Schema vereinheitlicht und historisches Tutorialfeld optional; vollständige Redaktion und Medientaxonomie offen. / 统一校验，教程字段兼容缺省；全量编辑复核及媒体分类仍待做。 |
+| W05 | Aktuelles vollständiges Detail-HTML umgesetzt und ohne JS live geprüft. / 当前数据的完整详情 HTML 已上线，无 JS 已验证。 |
+| W06 | Canonical, individuelle Metadaten, Sitemap und robots umgesetzt und live geprüft. / 规范链接、独立元数据、站点地图及 robots 已上线并验证。 |
+| W07 | Lesbarkeit, Kartenbreiten, kompakte Liste und 200-Prozent-Text geprüft; vollständiger manueller Zoom-/Screenreaderlauf offen. / 字体、卡片宽度、紧凑列表及两倍字号已验证，完整人工缩放与读屏流程待做。 |
+| W08 | Fehlerisolation und HTML-Header umgesetzt; CSP offen. / 数据异常隔离及 HTML 响应头已实现，CSP 待评估。 |
+| W09 | Öffentliches Browserpaket verkleinert, HTML reduziert und Hash-Cache geprüft; vertiefte Leistungsreihen offen. / 已缩减公开浏览器包和 HTML，缓存已验证，深入性能测量待做。 |
+| W10 | JSON-Linkprüfung und Typprüfung vorbereitet und lokal geprüft; Remote-CI nicht synchronisiert, Browser-CI offen. / JSON 链接与类型检查已配置并本地验证，尚未同步远端 CI，浏览器 CI 待接入。 |
+| W11 | Chromium-Regression, 21 Axe-Ansichten, Veröffentlichung und Live-Rücklesen bestanden; andere Browser und manuelle Prüfungen offen. / Chromium 回归、21 个 Axe 视图、发布及线上回读通过，其他浏览器和人工项目待做。 |
