@@ -233,7 +233,15 @@ document.querySelector<HTMLInputElement>('[data-import-favorites]')?.addEventLis
   if (!file) return;
   try {
     if (file.size > 1024 * 1024) throw Error('文件过大');
-    const count = importFavorites(JSON.parse(await file.text()));
+    const backup = JSON.parse(await file.text());
+    const incoming = Array.isArray(backup?.favorites) ? backup.favorites.length : 0;
+    const existing = getFavorites().length;
+    if (!window.confirm(`将导入 ${incoming} 个收藏，并与当前 ${existing} 个收藏合并。继续吗？`)) {
+      notify('已取消导入，原收藏未改变。');
+      input.value = '';
+      return;
+    }
+    const count = importFavorites(backup);
     favorites = getFavorites();
     render();
     notify(`已导入 ${count} 个收藏。`);

@@ -23,7 +23,9 @@ export function exportFavorites(): string {
 }
 export function importFavorites(input: unknown): number {
   if (!input || typeof input !== 'object' || Array.isArray(input)) throw Error('收藏备份格式不正确');
-  const values = (input as { favorites?: unknown }).favorites;
+  const backup = input as { version?: unknown; favorites?: unknown };
+  if (backup.version !== 1) throw Error('不支持的收藏备份版本');
+  const values = backup.favorites;
   if (!Array.isArray(values) || values.length > 500 || values.some((id) => typeof id !== 'string' || !/^[a-z0-9-]{1,100}$/.test(id))) throw Error('收藏备份格式不正确');
   const value = read();
   value.favorites = [...new Set([...getFavorites(), ...values])].slice(0, 500);
