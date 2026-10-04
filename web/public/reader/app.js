@@ -16,7 +16,7 @@
     const query = clean(els.search.value).toLowerCase();
     const level = els.level.value; const length = els.length.value;
     const filtered = books.filter((book) => `${book.title} ${book.germanTitle} ${book.author}`.toLowerCase().includes(query) && (!level || String(book.difficulty || book.level).includes(level)) && (!length || book.length === length));
-    els.count.textContent = `${filtered.length} 本书 · 推荐先读短篇，再进入中长篇`;
+    els.count.textContent = `${filtered.length} / ${books.length} 本书 · 推荐先读短篇，再进入中长篇`;
     els.list.innerHTML = filtered.map((book) => `<button class="book-card ${book.id === state.bookId ? "active" : ""}" type="button" data-book="${book.id}"><span class="book-card-top"><span>${book.id} · ${book.difficulty || book.level}</span><span>${book.length || ""}</span></span><h2>${book.title}</h2><p>${book.germanTitle} · ${book.author}</p><span class="book-status ${book.translationStatus === "not-imported" ? "pending" : ""}">${book.translatedParagraphs ? `已导入 ${book.translatedParagraphs} / ${book.paragraphs.length} 段译文` : "译文待导入"}</span></button>`).join("") || `<p class="library-note">没有匹配的书目。</p>`;
     els.list.querySelectorAll("[data-book]").forEach((button) => button.addEventListener("click", () => { state.bookId = button.dataset.book; save(); renderBooks(); renderReader(); window.scrollTo({ top: 0, behavior: "smooth" }); }));
   }
