@@ -1,80 +1,111 @@
-import json, os, pathlib, sys
+import json, os, pathlib
 from playwright.sync_api import sync_playwright, expect
-base=os.environ.get('E2E_BASE_URL','http://127.0.0.1:8791')
-out=pathlib.Path('.wrangler/qa'); out.mkdir(parents=True,exist_ok=True)
+base = os.environ.get('E2E_BASE_URL', 'http://127.0.0.1:8793')
+out = pathlib.Path('.wrangler/qa-directory'); out.mkdir(parents=True, exist_ok=True)
+rows = json.loads(pathlib.Path('data/resources.json').read_text(encoding='utf-8'))
+public = [r for r in rows if r['status'] == 'published' and r['rights'] != 'owned']
+by_id = {r['id']: r for r in public}
+errors = []; flows = []
 with sync_playwright() as p:
-    browser=p.chromium.launch(channel=os.environ.get('E2E_BROWSER_CHANNEL','msedge'),headless=True)
-    context=browser.new_context(viewport={'width':1440,'height':1000})
-    page=context.new_page()
-    errors=[]
-    page.on('pageerror',lambda error:errors.append(str(error)))
+    browser = p.chromium.launch(channel=os.environ.get('E2E_BROWSER_CHANNEL', 'msedge'), headless=True)
+    context = browser.new_context(viewport={'width': 1440, 'height': 1000})
+    page = context.new_page()
+    page.on('pageerror', lambda error: errors.append(str(error)))
     def go(route):
-        page.goto(base+route,wait_until='domcontentloaded')
+        page.goto(base + route, wait_until='domcontentloaded')
         page.wait_for_function("document.documentElement.dataset.catalogReady === 'true'")
     go('/')
-    expect(page.locator('main h1')).to_be_visible()
-    expect(page.locator('[data-resource-count]')).to_have_text('128')
-    assert page.locator('.category-tile').count()==12
-    assert page.locator('.study-loop li').count()==5
-    assert page.locator('.level-stop').count()==5
-    page.screenshot(path=str(out/'desktop-home.png'))
-    go('/study/')
-    assert page.locator('.level-row').count()==5
-    assert page.locator('.skill-item').count()==4
-    expect(page.locator('.review-clock')).to_contain_text('间隔单位：天')
-    go('/study/b1-week/')
-    assert page.locator('.day-row').count()==7
-    expect(page.locator('.week-facts')).to_contain_text('3 小时 55 分钟')
-    assert page.locator('.day-output strong').count()==7
-    go('/resources/?category=grammar&level=B1')
-    assert page.locator('.live-card').count()>0
-    assert all('语法与练习' in value for value in page.locator('.live-card .card-top').all_text_contents())
-    page.locator('input[name=q]').fill('DW B1')
-    page.locator('select[name=category]').select_option('')
-    page.get_by_role('button',name='应用筛选').click()
-    expect(page.locator('.live-card')).to_have_count(2)
-    expect(page.locator('.live-card h3').filter(has_text='Nicos')).to_have_count(1)
-    page.reload(wait_until='domcontentloaded')
-    expect(page.locator('input[name=q]')).to_have_value('DW B1')
-    go('/resources/?q=NONEXISTENT12345')
-    expect(page.get_by_role('status').filter(has_text='没有匹配资源')).to_be_visible()
-    go('/resources/')
+    assert page.evaluate("getComputedStyle(document.querySelector('.directory-workspace')).display === 'grid'"), 'directory stylesheet missing'
+    expect(page.locator('[data-resource-count]')).to_have_text(str(len(public)))
+    assert page.locator('.category-link').count() == 13
+    assert page.locator('.study-loop,.level-stop,.week-board,.catalog-guide').count() == 0
     expect(page.locator('.live-card')).to_have_count(24)
-    page.locator('.catalog-pager a',has_text='2').click()
+    for href in page.locator('.live-card h3 a').evaluate_all('(nodes)=>nodes.map(n=>n.href)'):
+        assert href.startswith('https://') and not href.startswith(base)
+    page.screenshot(path=str(out/'desktop-home.png'), full_page=True)
+    flows.append('resource-first homepage with original links')
+    page.locator('.category-link[data-category=grammar]').click()
+    assert 'category=grammar' in page.url
+    assert page.locator('.live-card').count() > 0
+    assert all(v == 'grammar' for v in page.locator('.live-card').evaluate_all('(nodes)=>nodes.map(n=>n.dataset.category)'))
+    page.locator('select[name=level]').select_option('B1')
+    page.locator('select[name=price]').select_option('free')
+    for node in page.locator('.live-card').all():
+        expect(node.locator('.chips')).to_contain_text('B1')
+        expect(node.locator('.price')).to_have_text('免费')
+    page.reload(wait_until='domcontentloaded')
+    expect(page.locator('select[name=level]')).to_have_value('B1')
+    expect(page.locator('select[name=price]')).to_have_value('free')
+    page.locator('[data-reset]').first.click()
+    expect(page.locator('.live-card')).to_have_count(24)
+    page.locator('input[name=q]').fill('DW B1')
+    page.wait_for_timeout(300)
+    assert page.locator('.live-card').count() >= 1
+    expect(page.locator('.live-card h3').filter(has_text='Nicos')).to_have_count(1)
+    page.locator('input[name=q]').fill('NONEXISTENT12345')
+    expect(page.locator('.directory-empty')).to_contain_text('没有匹配资源')
+    page.locator('[data-reset]').first.click()
+    expect(page.locator('.live-card')).to_have_count(24)
+    page.locator('[data-page="2"]').click()
     assert 'page=2' in page.url
-    assert page.locator('.live-card').count()==24
+    assert page.locator('.live-card').count() == 24
+    page.go_back()
+    expect(page.locator('input[name=q]')).to_have_value('')
+    page.get_by_role('button', name='列表视图', exact=True).click()
+    expect(page.locator('[data-catalog-grid]')).to_have_attribute('data-view', 'list')
+    page.reload(wait_until='domcontentloaded')
+    expect(page.locator('[data-catalog-grid]')).to_have_attribute('data-view', 'list')
+    page.get_by_role('button', name='卡片视图', exact=True).click()
+    flows.append('categories, combined filters, search, reset, paging, history, persistent display')
+    old = {'goal': {'level': 'B1', 'exam': 'Goethe', 'hours': '5'}, 'tasks': [{'id': 'anki', 'title': 'old task', 'minutes': 30, 'done': False}], 'favorites': [next(r['id'] for r in rows if r['rights'] == 'owned')]}
+    page.evaluate('(v)=>localStorage.setItem("deutsch-hub.study.v1",JSON.stringify(v))', old)
     go('/resource/anki/')
     expect(page.locator('main h1')).to_contain_text('Anki')
-    page.get_by_role('button',name='收藏资源').click()
-    page.get_by_role('button',name='加入本周计划').click()
+    assert page.get_by_text('怎么使用', exact=True).count() == 0
+    assert page.get_by_role('button', name='加入本周计划').count() == 0
+    page.get_by_role('button', name='收藏资源').click()
+    stored = page.evaluate('JSON.parse(localStorage.getItem("deutsch-hub.study.v1"))')
+    assert stored['tasks'] == old['tasks'] and stored['goal'] == old['goal']
+    assert old['favorites'][0] in stored['favorites']
+    go('/favorites/')
+    expect(page.locator('.live-card')).to_have_count(1)
+    expect(page.locator('.live-card h3')).to_contain_text('Anki')
+    page.locator('[data-save=anki]').click()
+    expect(page.locator('.directory-empty')).to_contain_text('还没有收藏资源')
     go('/my-study/')
-    expect(page.locator('#favorite-count')).to_have_text('1 个')
-    expect(page.locator('#task-count')).to_have_text('0 / 1 完成')
-    page.locator('#task-list input[type=checkbox]').check()
-    expect(page.locator('#task-count')).to_have_text('1 / 1 完成')
-    page.locator('#goal-level').select_option('B1')
-    page.locator('#goal-hours').fill('5')
-    page.get_by_role('button',name='保存目标').click()
-    page.reload(wait_until='domcontentloaded')
-    expect(page.locator('#goal-level')).to_have_value('B1')
-    before=page.evaluate("localStorage.getItem('deutsch-hub.study.v1')")
-    page.locator('#import-plan').set_input_files({'name':'invalid.json','mimeType':'application/json','buffer':json.dumps({'favorites':[],'tasks':[{'id':'x','title':'x','minutes':30,'done':'yes'}]}).encode()})
-    expect(page.locator('#plan-note')).to_contain_text('原计划未改变')
-    assert page.evaluate("localStorage.getItem('deutsch-hub.study.v1')")==before
-    with page.expect_download() as download_info:page.get_by_role('button',name='导出学习计划').click()
-    exported=download_info.value
-    exported.save_as(str(out/'study-plan.json'))
-    assert json.loads((out/'study-plan.json').read_text(encoding='utf-8'))['tasks'][0]['done'] is True
+    expect(page.locator('main h1')).to_have_text('我的收藏.')
+    flows.append('favorites preserved across pages; old private tasks and goals retained')
+    go('/exams/')
+    assert all(v == 'exams' for v in page.locator('.live-card').evaluate_all('(nodes)=>nodes.map(n=>n.dataset.category)'))
+    go('/levels/b1/')
+    assert all('B1' in v for v in page.locator('.chips').all_text_contents())
     go('/admin/')
     expect(page.locator('#admin-status')).to_contain_text('管理员验证未通过')
     expect(page.locator('#admin-editor')).not_to_be_visible()
-    for route in ['/','/study/','/study/b1-week/','/resources/','/resource/anki/','/my-study/','/news/','/exams/','/levels/b1/']:
-        for width,height in [(390,844),(768,1024),(1440,1000)]:
-            page.set_viewport_size({'width':width,'height':height})
+    flows.append('exam and level compatibility routes; admin access denied')
+    for route in ['/', '/resources/', '/exams/', '/news/', '/favorites/', '/resource/anki/', '/sources/', '/privacy/', '/levels/b1/', '/study/', '/study/b1-week/', '/my-study/']:
+        for width, height in [(375, 812), (768, 1024), (1440, 1000)]:
+            page.set_viewport_size({'width': width, 'height': height})
             go(route)
-            assert page.evaluate('document.documentElement.scrollWidth <= window.innerWidth'),route+' horizontal overflow at '+str(width)
-    page.screenshot(path=str(out/'mobile-b1.png'),full_page=True)
-    assert not errors,errors
+            assert page.evaluate('document.documentElement.scrollWidth <= innerWidth'), route + ' overflow ' + str(width)
+    page.set_viewport_size({'width': 375, 'height': 812}); go('/')
+    page.screenshot(path=str(out/'mobile-home.png'), full_page=True)
+    page.locator('.category-link[data-category=life]').scroll_into_view_if_needed()
+    page.locator('.category-link[data-category=life]').click()
+    assert page.locator('.live-card').count() > 0
+    flows.append('12 routes at mobile, tablet and desktop; mobile category scrolling')
+    page.set_viewport_size({'width': 1440, 'height': 1000}); go('/')
+    page.keyboard.press('/')
+    expect(page.locator('input[name=q]')).to_be_focused()
+    flows.append('keyboard search shortcut')
+    # Simulate real API failure: the bundled directory must remain interactive.
+    context.route('**/api/public-catalog', lambda route: route.fulfill(status=503, body='{}'))
+    go('/?category=tools&price=free')
+    assert page.locator('.live-card').count() > 0
+    expect(page.locator('#directory-note')).to_contain_text('实时更新暂不可用')
+    flows.append('interactive catalog fallback on API failure')
+    assert not errors, errors
     browser.close()
-print(json.dumps({'passed':True,'flows':['首页学习闭环图','A1-C1 学习路线图','四技能入口','主动回忆与间隔复习说明','B1 七日计划和成果标准','组合筛选','刷新保持','空结果','分页','收藏','计划','打卡','目标保存','错误导入保留原数据','备份导出','管理员拒绝','9页手机/平板/桌面无横向溢出'],'pageErrors':errors},ensure_ascii=False))
-
+report = {'passed': True, 'publicResources': len(public), 'flows': flows, 'pageErrors': errors}
+(out/'report.json').write_text(json.dumps(report, ensure_ascii=False, indent=2), encoding='utf-8')
+print(json.dumps(report, ensure_ascii=False))

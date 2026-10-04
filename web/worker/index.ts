@@ -23,9 +23,9 @@ export async function adminEmail(request: Request, env: Env) {
   } catch { return null; }
 }
 async function publicCatalog(env: Env) {
-  if (!env.DB) return { resources: seed.filter(r => r.status === 'published'), categories };
+  if (!env.DB) return { resources: seed.filter(r => r.status === 'published' && r.rights !== 'owned'), categories };
   const rows = await env.DB.prepare("SELECT payload_json FROM catalog_entries WHERE status = 'published' ORDER BY id").all<{payload_json: string}>();
-  return { resources: rows.results.map(r => validateResource(JSON.parse(r.payload_json))), categories };
+  return { resources: rows.results.map(r => validateResource(JSON.parse(r.payload_json))).filter(r => r.rights !== 'owned'), categories };
 }
 async function admin(request: Request, env: Env, path: string) {
   const email = await adminEmail(request, env);
@@ -95,7 +95,10 @@ export default {
       if (path.startsWith('/api/')) return json({error:'not-found'},404);
       if (/^\/resource\/[a-z0-9-]+$/.test(path)) {
         const slug=path.split('/')[2]; const {resources}=await publicCatalog(env);
-        if (!resources.some(r=>r.slug===slug)) return new Response('资源不存在或尚未公开',{status:404});
+        if (!resources.some(r=>r.slug===slug)) {
+          if (seed.some(r=>r.slug===slug && r.rights==='owned')) return Response.redirect(url.origin+'/resources/',302);
+          return new Response('资源不存在或尚未公开',{status:404});
+        }
         url.pathname='/resource/view/';
         return env.ASSETS.fetch(new Request(url,request));
       }

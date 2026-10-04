@@ -1,14 +1,74 @@
 [
-  {"id":"courses","name":"系统课程与入门","description":"按等级推进的课程、主线学习与基础测评。","accent":"课程"},
-  {"id":"exams","name":"考试与备考","description":"考试介绍、官方样题、评分说明和模块训练。","accent":"考试"},
-  {"id":"vocabulary","name":"词汇与词典","description":"查词、搭配、变位和主题词汇工具。","accent":"词汇"},
-  {"id":"grammar","name":"语法与练习","description":"语法说明、分级练习和纠错入口。","accent":"语法"},
-  {"id":"listening","name":"听力与播客","description":"带文本或音频的听力输入和慢速材料。","accent":"听力"},
-  {"id":"speaking","name":"口语与发音","description":"发音、跟读、口语任务和表达素材。","accent":"口语"},
-  {"id":"reading","name":"阅读与读物","description":"分级文章、短篇读物和合法开放内容。","accent":"阅读"},
-  {"id":"writing","name":"写作与表达","description":"邮件、观点文、摘要和学术表达。","accent":"写作"},
-  {"id":"news","name":"新闻与资讯","description":"适合学习者的新闻和德国社会资讯入口。","accent":"资讯"},
-  {"id":"video","name":"视频与讲解","description":"课程视频、街访和主题讲解。","accent":"视频"},
-  {"id":"tools","name":"学习工具与方法","description":"复习工具、字幕辅助和学习方法。","accent":"工具"},
-  {"id":"life","name":"德国生活与留学","description":"生活场景语言、学习和官方生活信息。","accent":"生活"}
+  {
+    "id": "courses",
+    "name": "课程与平台",
+    "description": "在线课程、多语学习平台与分级课程。",
+    "accent": "课程"
+  },
+  {
+    "id": "exams",
+    "name": "考试与备考",
+    "description": "考试介绍、官方样题、评分说明和模块训练。",
+    "accent": "考试"
+  },
+  {
+    "id": "vocabulary",
+    "name": "词汇与词典",
+    "description": "查词、搭配、变位和主题词汇工具。",
+    "accent": "词汇"
+  },
+  {
+    "id": "grammar",
+    "name": "语法与练习",
+    "description": "语法说明、分级练习和纠错入口。",
+    "accent": "语法"
+  },
+  {
+    "id": "listening",
+    "name": "听力与播客",
+    "description": "带文本或音频的听力输入和慢速材料。",
+    "accent": "听力"
+  },
+  {
+    "id": "speaking",
+    "name": "口语与发音",
+    "description": "发音、跟读、口语任务和表达素材。",
+    "accent": "口语"
+  },
+  {
+    "id": "reading",
+    "name": "阅读与读物",
+    "description": "分级文章、短篇读物和合法开放内容。",
+    "accent": "阅读"
+  },
+  {
+    "id": "writing",
+    "name": "写作与翻译",
+    "description": "拼写检查、翻译、表达润色与学术写作资源。",
+    "accent": "写作"
+  },
+  {
+    "id": "news",
+    "name": "新闻与资讯",
+    "description": "适合学习者的新闻和德国社会资讯入口。",
+    "accent": "资讯"
+  },
+  {
+    "id": "video",
+    "name": "视频与媒体库",
+    "description": "公开视频频道、纪录片与公共电视媒体库。",
+    "accent": "视频"
+  },
+  {
+    "id": "tools",
+    "name": "应用与工具",
+    "description": "词汇应用、阅读查词、字幕和复习工具。",
+    "accent": "工具"
+  },
+  {
+    "id": "life",
+    "name": "德国生活与留学",
+    "description": "大学、申请、签证、求职与德国生活信息。",
+    "accent": "生活"
+  }
 ]

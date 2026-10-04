@@ -1,9 +1,10 @@
 import categoriesJson from '../data/categories.json';
 import resourcesJson from '../data/resources.json';
 import type { Category, Resource } from './types';
+import { isDirectoryResource } from './lib/resource-directory.mjs';
 
 export const categories = categoriesJson as Category[];
-export const resources = resourcesJson as Resource[];
+export const resources = resourcesJson.filter(isDirectoryResource) as Resource[];
 export const categoryById = new Map(categories.map((category) => [category.id, category]));
 
 export const levelLabels = ['A1', 'A2', 'B1', 'B2', 'C1', 'C2'] as const;

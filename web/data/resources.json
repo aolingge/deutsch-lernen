@@ -4,8 +4,8 @@
     "slug": "dw-nicos-weg",
     "titleOriginal": "Nicos Weg",
     "titleZh": "DW Nicos Weg B1：剧情式德语课程",
-    "descriptionZh": "德国之声的分级课程，用连续剧情、词汇、语法和练习组成自学主线。",
-    "howToUseZh": "从 A1 开始按单元完成视频、词汇、语法和练习；不要只观看视频。",
+    "descriptionZh": "德国之声的 B1 剧情式课程，包含视频、词汇、语法与互动练习。",
+    "howToUseZh": "德国之声的 B1 剧情式课程，包含视频、词汇、语法与互动练习。",
     "primaryCategory": "courses",
     "tags": [
       "主线课程",
@@ -40,15 +40,15 @@
     "rights": "link-only",
     "status": "published",
     "linkStatus": "ok",
-    "lastEditorialCheckedAt": "2026-09-30"
+    "lastEditorialCheckedAt": "2026-10-04"
   },
   {
     "id": "vhs-b1-course",
     "slug": "vhs-b1-course",
     "titleOriginal": "B1-Deutschkurs",
     "titleZh": "vhs-Lernportal B1 德语课程",
-    "descriptionZh": "课程化 B1 学习入口，覆盖日常交流所需的词汇、语法、听说读写练习。",
-    "howToUseZh": "已完成 A2 后，每天完成一个小单元，记录不会的表达并回到输出任务中复用。",
+    "descriptionZh": "德国成人教育协会的 B1 在线课程，涵盖日常交流和听说读写练习。",
+    "howToUseZh": "德国成人教育协会的 B1 在线课程，涵盖日常交流和听说读写练习。",
     "primaryCategory": "courses",
     "tags": [
       "主线课程",
@@ -84,7 +84,7 @@
     "rights": "link-only",
     "status": "published",
     "linkStatus": "ok",
-    "lastEditorialCheckedAt": "2026-09-30"
+    "lastEditorialCheckedAt": "2026-10-04"
   },
   {
     "id": "goethe-free-practice",
@@ -92,7 +92,7 @@
     "titleOriginal": "Kostenlos Deutsch üben",
     "titleZh": "歌德学院免费德语练习",
     "descriptionZh": "歌德学院官方练习总入口，按主题覆盖词汇、语法、听力、阅读和生活场景。",
-    "howToUseZh": "每周选择一个主题，完成练习后整理可迁移的词汇和句型。当前自动检查受官网访问限制，请以浏览器打开结果为准。",
+    "howToUseZh": "歌德学院官方练习总入口，按主题覆盖词汇、语法、听力、阅读和生活场景。",
     "primaryCategory": "grammar",
     "tags": [
       "官方",
@@ -138,8 +138,8 @@
     "slug": "goethe-b1-practice",
     "titleOriginal": "Goethe-Zertifikat B1 Prüfungstraining",
     "titleZh": "歌德 B1 官方考试练习",
-    "descriptionZh": "面向 Goethe B1 的官方练习入口，按听、读、写、说准备考试。",
-    "howToUseZh": "先完成一套样题，按模块记录错误，再用计时练习复测。",
+    "descriptionZh": "Goethe B1 官方考试练习材料，包含听、读、写、说模块。",
+    "howToUseZh": "Goethe B1 官方考试练习材料，包含听、读、写、说模块。",
     "primaryCategory": "exams",
     "tags": [
       "官方样题",
@@ -184,7 +184,7 @@
     "titleOriginal": "Prüfungsvorbereitung für den digitalen TestDaF",
     "titleZh": "数字 TestDaF 官方备考材料",
     "descriptionZh": "TestDaF 官方备考页，区分阅读、听力、写作、口语的题型和示例。",
-    "howToUseZh": "先看题型说明，再按模块做官方示例；数字版和纸笔版不要混用。",
+    "howToUseZh": "TestDaF 官方备考页，区分阅读、听力、写作、口语的题型和示例。",
     "primaryCategory": "exams",
     "tags": [
       "官方",
@@ -221,7 +221,7 @@
     "rights": "link-only",
     "status": "published",
     "linkStatus": "ok",
-    "lastEditorialCheckedAt": "2026-09-30"
+    "lastEditorialCheckedAt": "2026-10-04"
   },
   {
     "id": "telc-exams",
@@ -229,7 +229,7 @@
     "titleOriginal": "telc Deutsch-Prüfungen",
     "titleZh": "telc 德语考试官方入口",
     "descriptionZh": "telc 德语考试总入口，用于查看具体等级、考试形式和官方信息。",
-    "howToUseZh": "先选择具体考试等级，再核对当前考试中心、报名和样题信息；不要沿用旧路径。",
+    "howToUseZh": "telc 德语考试总入口，用于查看具体等级、考试形式和官方信息。",
     "primaryCategory": "exams",
     "tags": [
       "官方",
@@ -252,8 +252,8 @@
     "formats": [
       "网页"
     ],
-    "price": "unknown",
-    "access": "unknown",
+    "price": "free",
+    "access": "open",
     "languages": [
       "德语",
       "英语"
@@ -264,15 +264,15 @@
     "rights": "link-only",
     "status": "published",
     "linkStatus": "ok",
-    "lastEditorialCheckedAt": "2026-09-30"
+    "lastEditorialCheckedAt": "2026-10-04"
   },
   {
     "id": "nachrichtenleicht",
     "slug": "nachrichtenleicht",
     "titleOriginal": "Nachrichtenleicht",
     "titleZh": "Deutschlandfunk 简明新闻",
-    "descriptionZh": "用简单德语解释新闻，文章配有音频，适合做短篇阅读、听力和复述。",
-    "howToUseZh": "先读标题和正文，再听音频；记录三句话摘要，不要把简单语言直接等同于某个 CEFR 等级。",
+    "descriptionZh": "以简单德语解释时事新闻，文章配有音频。",
+    "howToUseZh": "以简单德语解释时事新闻，文章配有音频。",
     "primaryCategory": "news",
     "tags": [
       "简明新闻",
@@ -306,7 +306,7 @@
     "rights": "link-only",
     "status": "published",
     "linkStatus": "ok",
-    "lastEditorialCheckedAt": "2026-09-30"
+    "lastEditorialCheckedAt": "2026-10-04"
   },
   {
     "id": "deutsch-perfekt-reading",
@@ -314,7 +314,7 @@
     "titleOriginal": "Deutsch lesen",
     "titleZh": "Deutsch perfekt 分级阅读",
     "descriptionZh": "围绕德国、奥地利和瑞士的生活、文化与社会主题，为德语学习者编写的文章。",
-    "howToUseZh": "先根据文章标注的难度挑选，再用解释和练习扩展词汇；付费内容按具体页面核对。",
+    "howToUseZh": "围绕德国、奥地利和瑞士的生活、文化与社会主题，为德语学习者编写的文章。",
     "primaryCategory": "reading",
     "tags": [
       "主题阅读",
@@ -348,7 +348,7 @@
     "rights": "link-only",
     "status": "published",
     "linkStatus": "ok",
-    "lastEditorialCheckedAt": "2026-09-30"
+    "lastEditorialCheckedAt": "2026-10-04"
   },
   {
     "id": "dwds",
@@ -356,7 +356,7 @@
     "titleOriginal": "Digitales Wörterbuch der deutschen Sprache",
     "titleZh": "DWDS 数字德语词典",
     "descriptionZh": "德语德德词典、语料、词频和搭配查询工具，适合中高级精确理解词义。",
-    "howToUseZh": "先看释义和例句，再查看搭配和语料；中文翻译需求可与双语词典交叉验证。",
+    "howToUseZh": "德语德德词典、语料、词频和搭配查询工具，适合中高级精确理解词义。",
     "primaryCategory": "vocabulary",
     "tags": [
       "德德词典",
@@ -392,15 +392,15 @@
     "rights": "link-only",
     "status": "published",
     "linkStatus": "ok",
-    "lastEditorialCheckedAt": "2026-09-30"
+    "lastEditorialCheckedAt": "2026-10-04"
   },
   {
     "id": "lingolia-grammar",
     "slug": "lingolia-grammar",
     "titleOriginal": "Lingolia Deutsch",
     "titleZh": "Lingolia 德语语法与练习",
-    "descriptionZh": "按主题解释德语语法，并提供例句和练习，适合卡点复习。",
-    "howToUseZh": "遇到一个语法点时先读解释，再回到自己的主线课程完成同主题输出。",
+    "descriptionZh": "按主题组织的德语语法说明、例句与在线练习。",
+    "howToUseZh": "按主题组织的德语语法说明、例句与在线练习。",
     "primaryCategory": "grammar",
     "tags": [
       "语法解释",
@@ -434,15 +434,15 @@
     "rights": "link-only",
     "status": "published",
     "linkStatus": "ok",
-    "lastEditorialCheckedAt": "2026-09-30"
+    "lastEditorialCheckedAt": "2026-10-04"
   },
   {
     "id": "easy-german",
     "slug": "easy-german",
     "titleOriginal": "Easy German",
     "titleZh": "Easy German 街访与自然表达",
-    "descriptionZh": "通过街头采访和真实对话接触日常德语，适合补充听力和口语语感。",
-    "howToUseZh": "先看字幕理解，再隐藏字幕复听，最后用自己的话复述主题。",
+    "descriptionZh": "德语街头采访与真实对话视频，部分附双语字幕及会员资料。",
+    "howToUseZh": "德语街头采访与真实对话视频，部分附双语字幕及会员资料。",
     "primaryCategory": "video",
     "tags": [
       "街访",
@@ -478,15 +478,15 @@
     "rights": "link-only",
     "status": "published",
     "linkStatus": "ok",
-    "lastEditorialCheckedAt": "2026-09-30"
+    "lastEditorialCheckedAt": "2026-10-04"
   },
   {
     "id": "slow-german",
     "slug": "slow-german",
     "titleOriginal": "Slow German",
     "titleZh": "Slow German 慢速德语播客",
-    "descriptionZh": "围绕德国文化和社会主题的慢速德语音频，适合稳定积累听力输入。",
-    "howToUseZh": "先听一遍抓主旨，再看文本核对，最后记录五个可复用表达。",
+    "descriptionZh": "围绕德国文化和社会话题的慢速德语音频及配套文本。",
+    "howToUseZh": "围绕德国文化和社会话题的慢速德语音频及配套文本。",
     "primaryCategory": "listening",
     "tags": [
       "慢速听力",
@@ -517,16 +517,16 @@
     "canonicalUrl": "https://slowgerman.com/",
     "rights": "link-only",
     "status": "published",
-    "linkStatus": "unchecked",
-    "lastEditorialCheckedAt": "2026-09-30"
+    "linkStatus": "ok",
+    "lastEditorialCheckedAt": "2026-10-04"
   },
   {
     "id": "deutschakademie-grammar",
     "slug": "deutschakademie-grammar",
     "titleOriginal": "Online Deutschkurs",
     "titleZh": "DeutschAkademie 在线语法练习",
-    "descriptionZh": "按等级练习德语语法，适合把一个语法主题做成短时复习。",
-    "howToUseZh": "一次只选一个语法主题，做题后整理错误句，不要把刷题数量当成掌握程度。",
+    "descriptionZh": "按等级和语法主题分类的在线练习。",
+    "howToUseZh": "按等级和语法主题分类的在线练习。",
     "primaryCategory": "grammar",
     "tags": [
       "语法题库",
@@ -560,7 +560,7 @@
     "rights": "link-only",
     "status": "published",
     "linkStatus": "ok",
-    "lastEditorialCheckedAt": "2026-09-30"
+    "lastEditorialCheckedAt": "2026-10-04"
   },
   {
     "id": "goethe-speaking-practice",
@@ -568,7 +568,7 @@
     "titleOriginal": "Online Aussprachetrainer",
     "titleZh": "歌德在线德语发音训练",
     "descriptionZh": "歌德学院的在线发音训练，辅助练习德语语音与跟读。",
-    "howToUseZh": "按训练任务练习发音，录音后对照反馈与示范。",
+    "howToUseZh": "歌德学院的在线发音训练，辅助练习德语语音与跟读。",
     "primaryCategory": "speaking",
     "tags": [
       "口语任务",
@@ -609,8 +609,8 @@
     "slug": "anki",
     "titleOriginal": "Anki",
     "titleZh": "Anki 间隔重复词汇工具",
-    "descriptionZh": "基于间隔重复的开源记忆卡片工具，适合建立德语词汇、例句和错题复习系统。",
-    "howToUseZh": "桌面版可免费使用，iOS 官方应用收费。只添加带例句和来源的卡片，每天复习。",
+    "descriptionZh": "开源记忆卡片软件，支持音频、图片、间隔复习与牌组导入。",
+    "howToUseZh": "开源记忆卡片软件，支持音频、图片、间隔复习与牌组导入。",
     "primaryCategory": "tools",
     "tags": [
       "间隔重复",
@@ -646,15 +646,15 @@
     "rights": "link-only",
     "status": "published",
     "linkStatus": "ok",
-    "lastEditorialCheckedAt": "2026-09-30"
+    "lastEditorialCheckedAt": "2026-10-04"
   },
   {
     "id": "make-it-in-germany",
     "slug": "make-it-in-germany",
     "titleOriginal": "Make it in Germany",
     "titleZh": "德国官方工作与生活信息",
-    "descriptionZh": "德国政府官方门户，提供工作、签证、住房和日常生活信息，也适合作为生活德语词汇来源。",
-    "howToUseZh": "先读中文或英语说明，再对照德语页面整理办事词汇；签证规则以当前官方页面为准。",
+    "descriptionZh": "德国政府官方门户，提供就业、签证、住房与生活信息。",
+    "howToUseZh": "德国政府官方门户，提供就业、签证、住房与生活信息。",
     "primaryCategory": "life",
     "tags": [
       "德国生活",
@@ -688,8 +688,8 @@
     "canonicalUrl": "https://www.make-it-in-germany.com/de",
     "rights": "link-only",
     "status": "published",
-    "linkStatus": "restricted",
-    "lastEditorialCheckedAt": "2026-09-30"
+    "linkStatus": "ok",
+    "lastEditorialCheckedAt": "2026-10-04"
   },
   {
     "id": "osd-downloads",
@@ -697,7 +697,7 @@
     "titleOriginal": "ÖSD",
     "titleZh": "ÖSD 官方样题下载",
     "descriptionZh": "按 A1-C2 提供考试样题、说明与下载材料。",
-    "howToUseZh": "选择目标等级下载样题，严格按原站模块要求计时练习。",
+    "howToUseZh": "按 A1-C2 提供考试样题、说明与下载材料。",
     "primaryCategory": "exams",
     "tags": [
       "官方入口",
@@ -740,15 +740,15 @@
     "rights": "link-only",
     "status": "published",
     "linkStatus": "ok",
-    "lastEditorialCheckedAt": "2026-09-30"
+    "lastEditorialCheckedAt": "2026-10-04"
   },
   {
     "id": "osd-placement",
     "slug": "osd-placement",
     "titleOriginal": "ÖSD",
     "titleZh": "ÖSD 德语等级测试",
-    "descriptionZh": "官方线上测试涵盖阅读、听力、词汇和语法，用于选择课程方向。",
-    "howToUseZh": "独立完成测试，结合自己的输出能力选择课程；结果不等于考试证书。",
+    "descriptionZh": "ÖSD 官方在线德语分级测试，涵盖阅读、听力、词汇和语法。",
+    "howToUseZh": "ÖSD 官方在线德语分级测试，涵盖阅读、听力、词汇和语法。",
     "primaryCategory": "courses",
     "tags": [
       "学习入口",
@@ -787,15 +787,15 @@
     "rights": "link-only",
     "status": "published",
     "linkStatus": "ok",
-    "lastEditorialCheckedAt": "2026-09-30"
+    "lastEditorialCheckedAt": "2026-10-04"
   },
   {
     "id": "dsh-fadaf",
     "slug": "dsh-fadaf",
     "titleOriginal": "FaDaF",
     "titleZh": "FaDaF DSH 官方信息",
-    "descriptionZh": "大学德语考试 DSH 的官方说明、规程与机构信息。",
-    "howToUseZh": "先核对目标大学的考试要求，再选择对应学校样题。",
+    "descriptionZh": "FaDaF 提供的 DSH 官方说明、规程与机构信息。",
+    "howToUseZh": "FaDaF 提供的 DSH 官方说明、规程与机构信息。",
     "primaryCategory": "exams",
     "tags": [
       "官方入口",
@@ -826,15 +826,15 @@
     "rights": "link-only",
     "status": "published",
     "linkStatus": "ok",
-    "lastEditorialCheckedAt": "2026-09-30"
+    "lastEditorialCheckedAt": "2026-10-04"
   },
   {
     "id": "dsh-muenster",
     "slug": "dsh-muenster",
     "titleOriginal": "Universität Münster",
     "titleZh": "明斯特大学 DSH 示例考试",
-    "descriptionZh": "大学语言中心的 DSH 示例考试，用于熟悉大学语言测试任务。",
-    "howToUseZh": "阅读说明后限时完成阅读、听力与写作模块，依据评分资料复盘。",
+    "descriptionZh": "明斯特大学语言中心的 DSH 样题及考试说明。",
+    "howToUseZh": "明斯特大学语言中心的 DSH 样题及考试说明。",
     "primaryCategory": "exams",
     "tags": [
       "官方入口",
@@ -871,7 +871,7 @@
     "rights": "link-only",
     "status": "published",
     "linkStatus": "ok",
-    "lastEditorialCheckedAt": "2026-09-30"
+    "lastEditorialCheckedAt": "2026-10-04"
   },
   {
     "id": "duden",
@@ -879,7 +879,7 @@
     "titleOriginal": "Duden",
     "titleZh": "Duden 德语词典与拼写查询",
     "descriptionZh": "查询德语拼写、词性、解释和用法。",
-    "howToUseZh": "查词时同时记录冠词、复数和例句；高级产品费用另查。",
+    "howToUseZh": "查询德语拼写、词性、解释和用法。",
     "primaryCategory": "vocabulary",
     "tags": [
       "学习入口",
@@ -912,7 +912,7 @@
     "rights": "link-only",
     "status": "published",
     "linkStatus": "ok",
-    "lastEditorialCheckedAt": "2026-09-30"
+    "lastEditorialCheckedAt": "2026-10-04"
   },
   {
     "id": "pons",
@@ -920,7 +920,7 @@
     "titleOriginal": "PONS",
     "titleZh": "PONS 德英词典",
     "descriptionZh": "双语词典、例句和表达查询。",
-    "howToUseZh": "先查大意，再用德德词典核对具体语境与搭配。",
+    "howToUseZh": "双语词典、例句和表达查询。",
     "primaryCategory": "vocabulary",
     "tags": [
       "学习入口",
@@ -952,7 +952,7 @@
     "rights": "link-only",
     "status": "published",
     "linkStatus": "ok",
-    "lastEditorialCheckedAt": "2026-09-30"
+    "lastEditorialCheckedAt": "2026-10-04"
   },
   {
     "id": "leo",
@@ -960,7 +960,7 @@
     "titleOriginal": "LEO",
     "titleZh": "LEO 德英词典",
     "descriptionZh": "德英词典和用法讨论入口。",
-    "howToUseZh": "记录固定搭配和词性；讨论区内容应与词典释义交叉核对。",
+    "howToUseZh": "德英词典和用法讨论入口。",
     "primaryCategory": "vocabulary",
     "tags": [
       "学习入口",
@@ -1000,7 +1000,7 @@
     "titleOriginal": "dict.cc",
     "titleZh": "dict.cc 双语词典",
     "descriptionZh": "德英词语、短语和发音查询入口。",
-    "howToUseZh": "选择德英语言对，按语境对照例句。",
+    "howToUseZh": "德英词语、短语和发音查询入口。",
     "primaryCategory": "vocabulary",
     "tags": [
       "学习入口",
@@ -1032,7 +1032,7 @@
     "rights": "link-only",
     "status": "published",
     "linkStatus": "ok",
-    "lastEditorialCheckedAt": "2026-09-30"
+    "lastEditorialCheckedAt": "2026-10-04"
   },
   {
     "id": "verbformen",
@@ -1040,7 +1040,7 @@
     "titleOriginal": "Verbformen",
     "titleZh": "Verbformen 变位与变格工具",
     "descriptionZh": "查询德语动词变位和名词变格。",
-    "howToUseZh": "先自己写出变化，再查询核对并用错词造句。",
+    "howToUseZh": "查询德语动词变位和名词变格。",
     "primaryCategory": "grammar",
     "tags": [
       "学习入口",
@@ -1074,7 +1074,7 @@
     "rights": "link-only",
     "status": "published",
     "linkStatus": "ok",
-    "lastEditorialCheckedAt": "2026-09-30"
+    "lastEditorialCheckedAt": "2026-10-04"
   },
   {
     "id": "grammis",
@@ -1082,7 +1082,7 @@
     "titleOriginal": "Leibniz-Institut für Deutsche Sprache",
     "titleZh": "IDS grammis 德语语法参考",
     "descriptionZh": "语言研究机构的德语语法知识与术语参考。",
-    "howToUseZh": "遇到复杂句法问题时查对应主题，与自己的句子对照。",
+    "howToUseZh": "语言研究机构的德语语法知识与术语参考。",
     "primaryCategory": "grammar",
     "tags": [
       "学习入口",
@@ -1114,7 +1114,7 @@
     "rights": "link-only",
     "status": "published",
     "linkStatus": "ok",
-    "lastEditorialCheckedAt": "2026-09-30"
+    "lastEditorialCheckedAt": "2026-10-04"
   },
   {
     "id": "deutsch-info",
@@ -1122,7 +1122,7 @@
     "titleOriginal": "Deutsch.info",
     "titleZh": "Deutsch.info 多语德语课程",
     "descriptionZh": "多语德语学习平台，整合课程、语法与生活信息。",
-    "howToUseZh": "选择适合的界面语言与课程级别，按单元完成练习。",
+    "howToUseZh": "多语德语学习平台，整合课程、语法与生活信息。",
     "primaryCategory": "courses",
     "tags": [
       "学习入口",
@@ -1153,7 +1153,7 @@
     "rights": "link-only",
     "status": "published",
     "linkStatus": "ok",
-    "lastEditorialCheckedAt": "2026-09-30"
+    "lastEditorialCheckedAt": "2026-10-04"
   },
   {
     "id": "zum-deutsch",
@@ -1161,7 +1161,7 @@
     "titleOriginal": "ZUM",
     "titleZh": "ZUM 德语学习开放材料",
     "descriptionZh": "德语学习开放教学资料与练习目录。",
-    "howToUseZh": "按主题选练习，核对作者和适用等级后使用。",
+    "howToUseZh": "德语学习开放教学资料与练习目录。",
     "primaryCategory": "courses",
     "tags": [
       "学习入口",
@@ -1194,7 +1194,7 @@
     "rights": "link-only",
     "status": "published",
     "linkStatus": "ok",
-    "lastEditorialCheckedAt": "2026-09-30"
+    "lastEditorialCheckedAt": "2026-10-04"
   },
   {
     "id": "schubert-digital",
@@ -1202,7 +1202,7 @@
     "titleOriginal": "SCHUBERT-Verlag",
     "titleZh": "Schubert 出版社数字练习",
     "descriptionZh": "出版社配套线上练习、工作纸和数字教学入口。",
-    "howToUseZh": "根据自己的教材与等级选择配套练习，不跨级随机刷题。",
+    "howToUseZh": "出版社配套线上练习、工作纸和数字教学入口。",
     "primaryCategory": "grammar",
     "tags": [
       "学习入口",
@@ -1237,7 +1237,7 @@
     "rights": "link-only",
     "status": "published",
     "linkStatus": "ok",
-    "lastEditorialCheckedAt": "2026-09-30"
+    "lastEditorialCheckedAt": "2026-10-04"
   },
   {
     "id": "deutschlernerblog",
@@ -1245,7 +1245,7 @@
     "titleOriginal": "Deutschlernerblog",
     "titleZh": "Deutschlernerblog 阅读与学习主题",
     "descriptionZh": "围绕德语表达、阅读和语言学习的主题文章与练习。",
-    "howToUseZh": "每周选一个话题，整理五个表达后写短篇复述。",
+    "howToUseZh": "围绕德语表达、阅读和语言学习的主题文章与练习。",
     "primaryCategory": "reading",
     "tags": [
       "学习入口",
@@ -1278,7 +1278,7 @@
     "rights": "link-only",
     "status": "published",
     "linkStatus": "ok",
-    "lastEditorialCheckedAt": "2026-09-30"
+    "lastEditorialCheckedAt": "2026-10-04"
   },
   {
     "id": "deutsch-to-go",
@@ -1286,7 +1286,7 @@
     "titleOriginal": "Deutsch-to-go",
     "titleZh": "Deutsch-to-go 短篇听力",
     "descriptionZh": "德语短篇听力材料和相关练习入口。",
-    "howToUseZh": "先听抓主旨，再查看题目与文本，最后复听和复述。",
+    "howToUseZh": "德语短篇听力材料和相关练习入口。",
     "primaryCategory": "listening",
     "tags": [
       "学习入口",
@@ -1319,7 +1319,7 @@
     "rights": "link-only",
     "status": "published",
     "linkStatus": "ok",
-    "lastEditorialCheckedAt": "2026-09-30"
+    "lastEditorialCheckedAt": "2026-10-04"
   },
   {
     "id": "14minuten",
@@ -1327,7 +1327,7 @@
     "titleOriginal": "14 Minuten",
     "titleZh": "14 Minuten 日常德语播客",
     "descriptionZh": "针对学习者的日常话题德语音频。",
-    "howToUseZh": "选择熟悉主题精听，记录表达后做一分钟口头摘要；附加产品另查。",
+    "howToUseZh": "针对学习者的日常话题德语音频。",
     "primaryCategory": "listening",
     "tags": [
       "学习入口",
@@ -1358,15 +1358,15 @@
     "rights": "link-only",
     "status": "published",
     "linkStatus": "ok",
-    "lastEditorialCheckedAt": "2026-09-30"
+    "lastEditorialCheckedAt": "2026-10-04"
   },
   {
     "id": "deutschpodcast",
     "slug": "deutschpodcast",
     "titleOriginal": "Deutsch Podcast",
     "titleZh": "Deutsch Podcast 德语对话",
-    "descriptionZh": "语言学习播客与配套学习内容。",
-    "howToUseZh": "先听一段真实对话，再挑选句型练习自己的回答。",
+    "descriptionZh": "德语对话播客与配套材料，围绕日常和社会话题。",
+    "howToUseZh": "德语对话播客与配套材料，围绕日常和社会话题。",
     "primaryCategory": "listening",
     "tags": [
       "学习入口",
@@ -1405,8 +1405,8 @@
     "slug": "forvo",
     "titleOriginal": "Forvo",
     "titleZh": "Forvo 德语词语发音",
-    "descriptionZh": "通过用户录制的词语发音辅助查音与跟读。",
-    "howToUseZh": "听同一词的多位说话者，核对地区差异并录音比较。",
+    "descriptionZh": "用户录制的德语词语发音库，可按词条查找真人音频。",
+    "howToUseZh": "用户录制的德语词语发音库，可按词条查找真人音频。",
     "primaryCategory": "speaking",
     "tags": [
       "学习入口",
@@ -1448,7 +1448,7 @@
     "titleOriginal": "Tandem",
     "titleZh": "Tandem 语言交换",
     "descriptionZh": "寻找语言交换伙伴的交流平台。",
-    "howToUseZh": "先约定主题和互助语言时间，不公开个人联系方式。",
+    "howToUseZh": "寻找语言交换伙伴的交流平台。",
     "primaryCategory": "speaking",
     "tags": [
       "学习入口",
@@ -1481,7 +1481,7 @@
     "rights": "link-only",
     "status": "published",
     "linkStatus": "ok",
-    "lastEditorialCheckedAt": "2026-09-30"
+    "lastEditorialCheckedAt": "2026-10-04"
   },
   {
     "id": "hellotalk",
@@ -1489,7 +1489,7 @@
     "titleOriginal": "HelloTalk",
     "titleZh": "HelloTalk 语言交流",
     "descriptionZh": "提供语言交流、文字与语音练习的社区平台。",
-    "howToUseZh": "选择德语学习方向，以短句互改与语音练习为主。",
+    "howToUseZh": "提供语言交流、文字与语音练习的社区平台。",
     "primaryCategory": "speaking",
     "tags": [
       "学习入口",
@@ -1521,7 +1521,7 @@
     "canonicalUrl": "https://www.hellotalk.com/",
     "rights": "link-only",
     "status": "published",
-    "linkStatus": "ok",
+    "linkStatus": "unchecked",
     "lastEditorialCheckedAt": "2026-09-30"
   },
   {
@@ -1530,7 +1530,7 @@
     "titleOriginal": "LanguageTool",
     "titleZh": "LanguageTool 德语写作检查",
     "descriptionZh": "支持德语的拼写、语法和风格检查工具。",
-    "howToUseZh": "先自行修改草稿，再查看工具建议；不要上传敏感个人材料。",
+    "howToUseZh": "支持德语的拼写、语法和风格检查工具。",
     "primaryCategory": "writing",
     "tags": [
       "学习入口",
@@ -1564,7 +1564,7 @@
     "rights": "link-only",
     "status": "published",
     "linkStatus": "ok",
-    "lastEditorialCheckedAt": "2026-09-30"
+    "lastEditorialCheckedAt": "2026-10-04"
   },
   {
     "id": "deepl-write",
@@ -1572,7 +1572,7 @@
     "titleOriginal": "DeepL",
     "titleZh": "DeepL Write 德语表达改写",
     "descriptionZh": "支持德语文本表达优化的写作辅助工具。",
-    "howToUseZh": "把原句与修改建议逐项比较，学会解释修改原因。",
+    "howToUseZh": "支持德语文本表达优化的写作辅助工具。",
     "primaryCategory": "writing",
     "tags": [
       "学习入口",
@@ -1603,15 +1603,15 @@
     "rights": "link-only",
     "status": "published",
     "linkStatus": "ok",
-    "lastEditorialCheckedAt": "2026-09-30"
+    "lastEditorialCheckedAt": "2026-10-04"
   },
   {
     "id": "projekt-gutenberg",
     "slug": "projekt-gutenberg",
     "titleOriginal": "Projekt Gutenberg-DE",
     "titleZh": "Projekt Gutenberg-DE 德语文学",
-    "descriptionZh": "德语文学文本和作者目录，用于中高级长篇阅读。",
-    "howToUseZh": "先选短篇；阅读与复制权限按原站说明和所在地区规则核对。",
+    "descriptionZh": "德语文学作品与作者目录，提供在线阅读。",
+    "howToUseZh": "德语文学作品与作者目录，提供在线阅读。",
     "primaryCategory": "reading",
     "tags": [
       "学习入口",
@@ -1642,8 +1642,8 @@
     "canonicalUrl": "https://www.projekt-gutenberg.org/",
     "rights": "link-only",
     "status": "published",
-    "linkStatus": "restricted",
-    "lastEditorialCheckedAt": "2026-09-30"
+    "linkStatus": "ok",
+    "lastEditorialCheckedAt": "2026-10-04"
   },
   {
     "id": "lingoni",
@@ -1651,7 +1651,7 @@
     "titleOriginal": "lingoni",
     "titleZh": "lingoni 德语教学视频与课程",
     "descriptionZh": "德语视频讲解和付费课程学习入口。",
-    "howToUseZh": "先使用公开示例，确定适合的课程等级再考虑付费。",
+    "howToUseZh": "德语视频讲解和付费课程学习入口。",
     "primaryCategory": "video",
     "tags": [
       "学习入口",
@@ -1684,7 +1684,7 @@
     "rights": "link-only",
     "status": "published",
     "linkStatus": "ok",
-    "lastEditorialCheckedAt": "2026-09-30"
+    "lastEditorialCheckedAt": "2026-10-04"
   },
   {
     "id": "yourdailygerman",
@@ -1692,7 +1692,7 @@
     "titleOriginal": "Your Daily German",
     "titleZh": "Your Daily German 词汇与语法讲解",
     "descriptionZh": "用英语讲解德语词汇、语法和惯用表达的学习文章。",
-    "howToUseZh": "一次研究一个词或语法主题，记录德语例句与搭配。",
+    "howToUseZh": "用英语讲解德语词汇、语法和惯用表达的学习文章。",
     "primaryCategory": "reading",
     "tags": [
       "学习入口",
@@ -1726,15 +1726,15 @@
     "rights": "link-only",
     "status": "published",
     "linkStatus": "ok",
-    "lastEditorialCheckedAt": "2026-09-30"
+    "lastEditorialCheckedAt": "2026-10-04"
   },
   {
     "id": "language-reactor",
     "slug": "language-reactor",
     "titleOriginal": "Language Reactor",
     "titleZh": "Language Reactor 字幕学习工具",
-    "descriptionZh": "浏览器字幕学习工具，辅助对照文本和整理词汇。",
-    "howToUseZh": "选择有可靠字幕的视频，先听后读，再整理自己的短语卡片。",
+    "descriptionZh": "浏览器双语字幕工具，提供字幕对照、词汇查询等功能。",
+    "howToUseZh": "浏览器双语字幕工具，提供字幕对照、词汇查询等功能。",
     "primaryCategory": "tools",
     "tags": [
       "学习入口",
@@ -1767,7 +1767,7 @@
     "rights": "link-only",
     "status": "published",
     "linkStatus": "ok",
-    "lastEditorialCheckedAt": "2026-09-30"
+    "lastEditorialCheckedAt": "2026-10-04"
   },
   {
     "id": "tagesschau",
@@ -1775,7 +1775,7 @@
     "titleOriginal": "ARD / Tagesschau",
     "titleZh": "Tagesschau 德国新闻",
     "descriptionZh": "德国公共媒体新闻，适合中高级真实德语阅读。",
-    "howToUseZh": "每天只选一篇，把事实、观点和不确定信息分开复述。",
+    "howToUseZh": "德国公共媒体新闻，适合中高级真实德语阅读。",
     "primaryCategory": "news",
     "tags": [
       "学习入口",
@@ -1807,7 +1807,7 @@
     "rights": "link-only",
     "status": "published",
     "linkStatus": "ok",
-    "lastEditorialCheckedAt": "2026-09-30"
+    "lastEditorialCheckedAt": "2026-10-04"
   },
   {
     "id": "logo-news",
@@ -1815,7 +1815,7 @@
     "titleOriginal": "ZDF",
     "titleZh": "ZDF logo! 儿童新闻",
     "descriptionZh": "用面向儿童的说明介绍新闻和社会主题。",
-    "howToUseZh": "选熟悉的话题阅读或观看；儿童内容不直接等于 CEFR 等级。",
+    "howToUseZh": "用面向儿童的说明介绍新闻和社会主题。",
     "primaryCategory": "news",
     "tags": [
       "学习入口",
@@ -1847,7 +1847,7 @@
     "rights": "link-only",
     "status": "published",
     "linkStatus": "ok",
-    "lastEditorialCheckedAt": "2026-09-30"
+    "lastEditorialCheckedAt": "2026-10-04"
   },
   {
     "id": "deutschlandfunk",
@@ -1855,7 +1855,7 @@
     "titleOriginal": "Deutschlandfunk",
     "titleZh": "Deutschlandfunk 电台与节目",
     "descriptionZh": "德国公共广播新闻、访谈与知识节目入口。",
-    "howToUseZh": "选短节目听两遍，标记主题转折后口头复述。",
+    "howToUseZh": "德国公共广播新闻、访谈与知识节目入口。",
     "primaryCategory": "listening",
     "tags": [
       "学习入口",
@@ -1887,7 +1887,7 @@
     "rights": "link-only",
     "status": "published",
     "linkStatus": "ok",
-    "lastEditorialCheckedAt": "2026-09-30"
+    "lastEditorialCheckedAt": "2026-10-04"
   },
   {
     "id": "daad",
@@ -1895,7 +1895,7 @@
     "titleOriginal": "DAAD",
     "titleZh": "DAAD 德国留学官方信息",
     "descriptionZh": "留学、大学和奖学金信息查询入口。",
-    "howToUseZh": "按学习阶段查申请步骤，语言要求以学校最新说明为准。",
+    "howToUseZh": "留学、大学和奖学金信息查询入口。",
     "primaryCategory": "life",
     "tags": [
       "学习入口",
@@ -1928,7 +1928,7 @@
     "rights": "link-only",
     "status": "published",
     "linkStatus": "ok",
-    "lastEditorialCheckedAt": "2026-09-30"
+    "lastEditorialCheckedAt": "2026-10-04"
   },
   {
     "id": "study-in-germany",
@@ -1936,7 +1936,7 @@
     "titleOriginal": "Study in Germany / DAAD",
     "titleZh": "Study in Germany 留学准备",
     "descriptionZh": "德国留学与学生生活信息门户。",
-    "howToUseZh": "按申请、到达、生活阶段建立自己的准备清单。",
+    "howToUseZh": "德国留学与学生生活信息门户。",
     "primaryCategory": "life",
     "tags": [
       "学习入口",
@@ -1969,7 +1969,7 @@
     "rights": "link-only",
     "status": "published",
     "linkStatus": "ok",
-    "lastEditorialCheckedAt": "2026-09-30"
+    "lastEditorialCheckedAt": "2026-10-04"
   },
   {
     "id": "uni-assist",
@@ -1977,7 +1977,7 @@
     "titleOriginal": "uni-assist",
     "titleZh": "uni-assist 国际申请说明",
     "descriptionZh": "国际学生申请审核机构的申请步骤与材料说明。",
-    "howToUseZh": "先读流程，再核对目标大学是否使用该服务；申请本身可能收费。",
+    "howToUseZh": "国际学生申请审核机构的申请步骤与材料说明。",
     "primaryCategory": "life",
     "tags": [
       "学习入口",
@@ -2010,7 +2010,7 @@
     "rights": "link-only",
     "status": "published",
     "linkStatus": "ok",
-    "lastEditorialCheckedAt": "2026-09-30"
+    "lastEditorialCheckedAt": "2026-10-04"
   },
   {
     "id": "aps-china",
@@ -2018,7 +2018,7 @@
     "titleOriginal": "Akademische Prüfstelle",
     "titleZh": "APS 中国留德审核信息",
     "descriptionZh": "中国留德审核流程与官方说明入口。",
-    "howToUseZh": "只以官网当前材料要求、程序和费用为准。",
+    "howToUseZh": "中国留德审核流程与官方说明入口。",
     "primaryCategory": "life",
     "tags": [
       "学习入口",
@@ -2051,7 +2051,7 @@
     "rights": "link-only",
     "status": "published",
     "linkStatus": "ok",
-    "lastEditorialCheckedAt": "2026-09-30"
+    "lastEditorialCheckedAt": "2026-10-04"
   },
   {
     "id": "bamf",
@@ -2059,7 +2059,7 @@
     "titleOriginal": "BAMF",
     "titleZh": "BAMF 官方语言与融入信息",
     "descriptionZh": "德国联邦移民机构的语言课程、融入及居留信息。",
-    "howToUseZh": "先找适用身份和项目，再学习相关办事词汇。",
+    "howToUseZh": "德国联邦移民机构的语言课程、融入及居留信息。",
     "primaryCategory": "life",
     "tags": [
       "学习入口",
@@ -2091,8 +2091,8 @@
     "canonicalUrl": "https://www.bamf.de/DE/Startseite/startseite_node.html",
     "rights": "link-only",
     "status": "published",
-    "linkStatus": "unchecked",
-    "lastEditorialCheckedAt": "2026-09-30"
+    "linkStatus": "ok",
+    "lastEditorialCheckedAt": "2026-10-04"
   },
   {
     "id": "deutsch-welle-media",
@@ -2100,7 +2100,7 @@
     "titleOriginal": "Deutsche Welle",
     "titleZh": "DW 德语新闻与国际资讯",
     "descriptionZh": "德国之声德语新闻与专题入口。",
-    "howToUseZh": "选择一篇短报道，先总结核心信息，再比较不同来源。",
+    "howToUseZh": "德国之声德语新闻与专题入口。",
     "primaryCategory": "news",
     "tags": [
       "学习入口",
@@ -2132,7 +2132,7 @@
     "rights": "link-only",
     "status": "published",
     "linkStatus": "ok",
-    "lastEditorialCheckedAt": "2026-09-30"
+    "lastEditorialCheckedAt": "2026-10-04"
   },
   {
     "id": "guide-a1-c1-roadmap",
@@ -2167,7 +2167,7 @@
     "url": "https://github.com/aolingge/deutsch-lernen/blob/main/docs/learning-paths/a1-c1-roadmap.md",
     "canonicalUrl": "https://github.com/aolingge/deutsch-lernen/blob/main/docs/learning-paths/a1-c1-roadmap.md",
     "rights": "owned",
-    "status": "published",
+    "status": "archived",
     "linkStatus": "ok",
     "lastEditorialCheckedAt": "2026-09-30"
   },
@@ -2204,7 +2204,7 @@
     "url": "https://github.com/aolingge/deutsch-lernen/blob/main/docs/learning-paths/b1-4-week-sprint.md",
     "canonicalUrl": "https://github.com/aolingge/deutsch-lernen/blob/main/docs/learning-paths/b1-4-week-sprint.md",
     "rights": "owned",
-    "status": "published",
+    "status": "archived",
     "linkStatus": "ok",
     "lastEditorialCheckedAt": "2026-09-30"
   },
@@ -2241,7 +2241,7 @@
     "url": "https://github.com/aolingge/deutsch-lernen/blob/main/docs/learning-paths/b1-8-week-plan.md",
     "canonicalUrl": "https://github.com/aolingge/deutsch-lernen/blob/main/docs/learning-paths/b1-8-week-plan.md",
     "rights": "owned",
-    "status": "published",
+    "status": "archived",
     "linkStatus": "ok",
     "lastEditorialCheckedAt": "2026-09-30"
   },
@@ -2278,7 +2278,7 @@
     "url": "https://github.com/aolingge/deutsch-lernen/blob/main/docs/learning-paths/b1-roadmap.md",
     "canonicalUrl": "https://github.com/aolingge/deutsch-lernen/blob/main/docs/learning-paths/b1-roadmap.md",
     "rights": "owned",
-    "status": "published",
+    "status": "archived",
     "linkStatus": "ok",
     "lastEditorialCheckedAt": "2026-09-30"
   },
@@ -2315,7 +2315,7 @@
     "url": "https://github.com/aolingge/deutsch-lernen/blob/main/docs/learning-paths/b1-study-methods.md",
     "canonicalUrl": "https://github.com/aolingge/deutsch-lernen/blob/main/docs/learning-paths/b1-study-methods.md",
     "rights": "owned",
-    "status": "published",
+    "status": "archived",
     "linkStatus": "ok",
     "lastEditorialCheckedAt": "2026-09-30"
   },
@@ -2356,7 +2356,7 @@
     "url": "https://github.com/aolingge/deutsch-lernen/blob/main/docs/learning-paths/grammar-to-output-map.md",
     "canonicalUrl": "https://github.com/aolingge/deutsch-lernen/blob/main/docs/learning-paths/grammar-to-output-map.md",
     "rights": "owned",
-    "status": "published",
+    "status": "archived",
     "linkStatus": "ok",
     "lastEditorialCheckedAt": "2026-09-30"
   },
@@ -2397,7 +2397,7 @@
     "url": "https://github.com/aolingge/deutsch-lernen/blob/main/docs/learning-paths/level-upgrade-method.md",
     "canonicalUrl": "https://github.com/aolingge/deutsch-lernen/blob/main/docs/learning-paths/level-upgrade-method.md",
     "rights": "owned",
-    "status": "published",
+    "status": "archived",
     "linkStatus": "ok",
     "lastEditorialCheckedAt": "2026-09-30"
   },
@@ -2438,7 +2438,7 @@
     "url": "https://github.com/aolingge/deutsch-lernen/blob/main/docs/learning-paths/start-here.md",
     "canonicalUrl": "https://github.com/aolingge/deutsch-lernen/blob/main/docs/learning-paths/start-here.md",
     "rights": "owned",
-    "status": "published",
+    "status": "archived",
     "linkStatus": "ok",
     "lastEditorialCheckedAt": "2026-09-30"
   },
@@ -2479,7 +2479,7 @@
     "url": "https://github.com/aolingge/deutsch-lernen/blob/main/docs/learning-paths/zero-to-b1-30-day-starter.md",
     "canonicalUrl": "https://github.com/aolingge/deutsch-lernen/blob/main/docs/learning-paths/zero-to-b1-30-day-starter.md",
     "rights": "owned",
-    "status": "published",
+    "status": "archived",
     "linkStatus": "ok",
     "lastEditorialCheckedAt": "2026-09-30"
   },
@@ -2516,7 +2516,7 @@
     "url": "https://github.com/aolingge/deutsch-lernen/blob/main/docs/grammar/a1-b1-grammar-checklist.md",
     "canonicalUrl": "https://github.com/aolingge/deutsch-lernen/blob/main/docs/grammar/a1-b1-grammar-checklist.md",
     "rights": "owned",
-    "status": "published",
+    "status": "archived",
     "linkStatus": "ok",
     "lastEditorialCheckedAt": "2026-09-30"
   },
@@ -2553,7 +2553,7 @@
     "url": "https://github.com/aolingge/deutsch-lernen/blob/main/docs/grammar/a1-c1-grammar-progression.md",
     "canonicalUrl": "https://github.com/aolingge/deutsch-lernen/blob/main/docs/grammar/a1-c1-grammar-progression.md",
     "rights": "owned",
-    "status": "published",
+    "status": "archived",
     "linkStatus": "ok",
     "lastEditorialCheckedAt": "2026-09-30"
   },
@@ -2594,7 +2594,7 @@
     "url": "https://github.com/aolingge/deutsch-lernen/blob/main/docs/grammar/adjective-endings.md",
     "canonicalUrl": "https://github.com/aolingge/deutsch-lernen/blob/main/docs/grammar/adjective-endings.md",
     "rights": "owned",
-    "status": "published",
+    "status": "archived",
     "linkStatus": "ok",
     "lastEditorialCheckedAt": "2026-09-30"
   },
@@ -2631,7 +2631,7 @@
     "url": "https://github.com/aolingge/deutsch-lernen/blob/main/docs/grammar/b1-recognition-grammar.md",
     "canonicalUrl": "https://github.com/aolingge/deutsch-lernen/blob/main/docs/grammar/b1-recognition-grammar.md",
     "rights": "owned",
-    "status": "published",
+    "status": "archived",
     "linkStatus": "ok",
     "lastEditorialCheckedAt": "2026-09-30"
   },
@@ -2672,7 +2672,7 @@
     "url": "https://github.com/aolingge/deutsch-lernen/blob/main/docs/grammar/cases-and-pronouns.md",
     "canonicalUrl": "https://github.com/aolingge/deutsch-lernen/blob/main/docs/grammar/cases-and-pronouns.md",
     "rights": "owned",
-    "status": "published",
+    "status": "archived",
     "linkStatus": "ok",
     "lastEditorialCheckedAt": "2026-09-30"
   },
@@ -2713,7 +2713,7 @@
     "url": "https://github.com/aolingge/deutsch-lernen/blob/main/docs/grammar/comparison-and-degree.md",
     "canonicalUrl": "https://github.com/aolingge/deutsch-lernen/blob/main/docs/grammar/comparison-and-degree.md",
     "rights": "owned",
-    "status": "published",
+    "status": "archived",
     "linkStatus": "ok",
     "lastEditorialCheckedAt": "2026-09-30"
   },
@@ -2754,7 +2754,7 @@
     "url": "https://github.com/aolingge/deutsch-lernen/blob/main/docs/grammar/core-grammar.md",
     "canonicalUrl": "https://github.com/aolingge/deutsch-lernen/blob/main/docs/grammar/core-grammar.md",
     "rights": "owned",
-    "status": "published",
+    "status": "archived",
     "linkStatus": "ok",
     "lastEditorialCheckedAt": "2026-09-30"
   },
@@ -2795,7 +2795,7 @@
     "url": "https://github.com/aolingge/deutsch-lernen/blob/main/docs/grammar/negation-system.md",
     "canonicalUrl": "https://github.com/aolingge/deutsch-lernen/blob/main/docs/grammar/negation-system.md",
     "rights": "owned",
-    "status": "published",
+    "status": "archived",
     "linkStatus": "ok",
     "lastEditorialCheckedAt": "2026-09-30"
   },
@@ -2836,7 +2836,7 @@
     "url": "https://github.com/aolingge/deutsch-lernen/blob/main/docs/grammar/nouns-gender-plurals-n-declension.md",
     "canonicalUrl": "https://github.com/aolingge/deutsch-lernen/blob/main/docs/grammar/nouns-gender-plurals-n-declension.md",
     "rights": "owned",
-    "status": "published",
+    "status": "archived",
     "linkStatus": "ok",
     "lastEditorialCheckedAt": "2026-09-30"
   },
@@ -2877,7 +2877,7 @@
     "url": "https://github.com/aolingge/deutsch-lernen/blob/main/docs/grammar/prepositions-and-verb-preposition.md",
     "canonicalUrl": "https://github.com/aolingge/deutsch-lernen/blob/main/docs/grammar/prepositions-and-verb-preposition.md",
     "rights": "owned",
-    "status": "published",
+    "status": "archived",
     "linkStatus": "ok",
     "lastEditorialCheckedAt": "2026-09-30"
   },
@@ -2918,7 +2918,7 @@
     "url": "https://github.com/aolingge/deutsch-lernen/blob/main/docs/grammar/pronouns-and-determiners.md",
     "canonicalUrl": "https://github.com/aolingge/deutsch-lernen/blob/main/docs/grammar/pronouns-and-determiners.md",
     "rights": "owned",
-    "status": "published",
+    "status": "archived",
     "linkStatus": "ok",
     "lastEditorialCheckedAt": "2026-09-30"
   },
@@ -2959,7 +2959,7 @@
     "url": "https://github.com/aolingge/deutsch-lernen/blob/main/docs/grammar/subordinate-clauses.md",
     "canonicalUrl": "https://github.com/aolingge/deutsch-lernen/blob/main/docs/grammar/subordinate-clauses.md",
     "rights": "owned",
-    "status": "published",
+    "status": "archived",
     "linkStatus": "ok",
     "lastEditorialCheckedAt": "2026-09-30"
   },
@@ -3000,7 +3000,7 @@
     "url": "https://github.com/aolingge/deutsch-lernen/blob/main/docs/grammar/verb-tenses-and-modals.md",
     "canonicalUrl": "https://github.com/aolingge/deutsch-lernen/blob/main/docs/grammar/verb-tenses-and-modals.md",
     "rights": "owned",
-    "status": "published",
+    "status": "archived",
     "linkStatus": "ok",
     "lastEditorialCheckedAt": "2026-09-30"
   },
@@ -3041,7 +3041,7 @@
     "url": "https://github.com/aolingge/deutsch-lernen/blob/main/docs/grammar/word-order-and-sentence-frame.md",
     "canonicalUrl": "https://github.com/aolingge/deutsch-lernen/blob/main/docs/grammar/word-order-and-sentence-frame.md",
     "rights": "owned",
-    "status": "published",
+    "status": "archived",
     "linkStatus": "ok",
     "lastEditorialCheckedAt": "2026-09-30"
   },
@@ -3078,7 +3078,7 @@
     "url": "https://github.com/aolingge/deutsch-lernen/blob/main/docs/exam/b1-exam-guide.md",
     "canonicalUrl": "https://github.com/aolingge/deutsch-lernen/blob/main/docs/exam/b1-exam-guide.md",
     "rights": "owned",
-    "status": "published",
+    "status": "archived",
     "linkStatus": "ok",
     "lastEditorialCheckedAt": "2026-09-30"
   },
@@ -3115,7 +3115,7 @@
     "url": "https://github.com/aolingge/deutsch-lernen/blob/main/docs/exam/b2-c1-academic-expression-bank.md",
     "canonicalUrl": "https://github.com/aolingge/deutsch-lernen/blob/main/docs/exam/b2-c1-academic-expression-bank.md",
     "rights": "owned",
-    "status": "published",
+    "status": "archived",
     "linkStatus": "ok",
     "lastEditorialCheckedAt": "2026-09-30"
   },
@@ -3155,7 +3155,7 @@
     "url": "https://github.com/aolingge/deutsch-lernen/blob/main/docs/exam/dsh-12-week-plan.md",
     "canonicalUrl": "https://github.com/aolingge/deutsch-lernen/blob/main/docs/exam/dsh-12-week-plan.md",
     "rights": "owned",
-    "status": "published",
+    "status": "archived",
     "linkStatus": "ok",
     "lastEditorialCheckedAt": "2026-09-30"
   },
@@ -3195,7 +3195,7 @@
     "url": "https://github.com/aolingge/deutsch-lernen/blob/main/docs/exam/dsh-module-drills.md",
     "canonicalUrl": "https://github.com/aolingge/deutsch-lernen/blob/main/docs/exam/dsh-module-drills.md",
     "rights": "owned",
-    "status": "published",
+    "status": "archived",
     "linkStatus": "ok",
     "lastEditorialCheckedAt": "2026-09-30"
   },
@@ -3235,7 +3235,7 @@
     "url": "https://github.com/aolingge/deutsch-lernen/blob/main/docs/exam/dsh-prep-guide.md",
     "canonicalUrl": "https://github.com/aolingge/deutsch-lernen/blob/main/docs/exam/dsh-prep-guide.md",
     "rights": "owned",
-    "status": "published",
+    "status": "archived",
     "linkStatus": "ok",
     "lastEditorialCheckedAt": "2026-09-30"
   },
@@ -3276,7 +3276,7 @@
     "url": "https://github.com/aolingge/deutsch-lernen/blob/main/docs/exam/exam-decision-tree.md",
     "canonicalUrl": "https://github.com/aolingge/deutsch-lernen/blob/main/docs/exam/exam-decision-tree.md",
     "rights": "owned",
-    "status": "published",
+    "status": "archived",
     "linkStatus": "ok",
     "lastEditorialCheckedAt": "2026-09-30"
   },
@@ -3316,7 +3316,7 @@
     "url": "https://github.com/aolingge/deutsch-lernen/blob/main/docs/exam/german-exam-map-a1-c1-dsh.md",
     "canonicalUrl": "https://github.com/aolingge/deutsch-lernen/blob/main/docs/exam/german-exam-map-a1-c1-dsh.md",
     "rights": "owned",
-    "status": "published",
+    "status": "archived",
     "linkStatus": "ok",
     "lastEditorialCheckedAt": "2026-09-30"
   },
@@ -3359,7 +3359,7 @@
     "url": "https://github.com/aolingge/deutsch-lernen/blob/main/docs/exam/goethe-b1-china-registration-and-safety.md",
     "canonicalUrl": "https://github.com/aolingge/deutsch-lernen/blob/main/docs/exam/goethe-b1-china-registration-and-safety.md",
     "rights": "owned",
-    "status": "published",
+    "status": "archived",
     "linkStatus": "ok",
     "lastEditorialCheckedAt": "2026-09-30"
   },
@@ -3402,7 +3402,7 @@
     "url": "https://github.com/aolingge/deutsch-lernen/blob/main/docs/exam/goethe-b1-format-and-strategy.md",
     "canonicalUrl": "https://github.com/aolingge/deutsch-lernen/blob/main/docs/exam/goethe-b1-format-and-strategy.md",
     "rights": "owned",
-    "status": "published",
+    "status": "archived",
     "linkStatus": "ok",
     "lastEditorialCheckedAt": "2026-09-30"
   },
@@ -3445,7 +3445,7 @@
     "url": "https://github.com/aolingge/deutsch-lernen/blob/main/docs/exam/goethe-b1-mock-exam-workflow.md",
     "canonicalUrl": "https://github.com/aolingge/deutsch-lernen/blob/main/docs/exam/goethe-b1-mock-exam-workflow.md",
     "rights": "owned",
-    "status": "published",
+    "status": "archived",
     "linkStatus": "ok",
     "lastEditorialCheckedAt": "2026-09-30"
   },
@@ -3486,7 +3486,7 @@
     "url": "https://github.com/aolingge/deutsch-lernen/blob/main/docs/exam/listening-review-bank.md",
     "canonicalUrl": "https://github.com/aolingge/deutsch-lernen/blob/main/docs/exam/listening-review-bank.md",
     "rights": "owned",
-    "status": "published",
+    "status": "archived",
     "linkStatus": "ok",
     "lastEditorialCheckedAt": "2026-09-30"
   },
@@ -3527,7 +3527,7 @@
     "url": "https://github.com/aolingge/deutsch-lernen/blob/main/docs/exam/listening-strategy.md",
     "canonicalUrl": "https://github.com/aolingge/deutsch-lernen/blob/main/docs/exam/listening-strategy.md",
     "rights": "owned",
-    "status": "published",
+    "status": "archived",
     "linkStatus": "ok",
     "lastEditorialCheckedAt": "2026-09-30"
   },
@@ -3568,7 +3568,7 @@
     "url": "https://github.com/aolingge/deutsch-lernen/blob/main/docs/exam/reading-strategy.md",
     "canonicalUrl": "https://github.com/aolingge/deutsch-lernen/blob/main/docs/exam/reading-strategy.md",
     "rights": "owned",
-    "status": "published",
+    "status": "archived",
     "linkStatus": "ok",
     "lastEditorialCheckedAt": "2026-09-30"
   },
@@ -3609,7 +3609,7 @@
     "url": "https://github.com/aolingge/deutsch-lernen/blob/main/docs/exam/speaking-templates.md",
     "canonicalUrl": "https://github.com/aolingge/deutsch-lernen/blob/main/docs/exam/speaking-templates.md",
     "rights": "owned",
-    "status": "published",
+    "status": "archived",
     "linkStatus": "ok",
     "lastEditorialCheckedAt": "2026-09-30"
   },
@@ -3649,7 +3649,7 @@
     "url": "https://github.com/aolingge/deutsch-lernen/blob/main/docs/exam/testdaf-c1-bridge.md",
     "canonicalUrl": "https://github.com/aolingge/deutsch-lernen/blob/main/docs/exam/testdaf-c1-bridge.md",
     "rights": "owned",
-    "status": "published",
+    "status": "archived",
     "linkStatus": "ok",
     "lastEditorialCheckedAt": "2026-09-30"
   },
@@ -3690,7 +3690,7 @@
     "url": "https://github.com/aolingge/deutsch-lernen/blob/main/docs/exam/writing-templates.md",
     "canonicalUrl": "https://github.com/aolingge/deutsch-lernen/blob/main/docs/exam/writing-templates.md",
     "rights": "owned",
-    "status": "published",
+    "status": "archived",
     "linkStatus": "ok",
     "lastEditorialCheckedAt": "2026-09-30"
   },
@@ -3732,7 +3732,7 @@
     "url": "https://github.com/aolingge/deutsch-lernen/blob/main/docs/templates/daily-b1-training-template.md",
     "canonicalUrl": "https://github.com/aolingge/deutsch-lernen/blob/main/docs/templates/daily-b1-training-template.md",
     "rights": "owned",
-    "status": "published",
+    "status": "archived",
     "linkStatus": "ok",
     "lastEditorialCheckedAt": "2026-09-30"
   },
@@ -3773,7 +3773,7 @@
     "url": "https://github.com/aolingge/deutsch-lernen/blob/main/docs/templates/dsh-hoeren-note-sheet.md",
     "canonicalUrl": "https://github.com/aolingge/deutsch-lernen/blob/main/docs/templates/dsh-hoeren-note-sheet.md",
     "rights": "owned",
-    "status": "published",
+    "status": "archived",
     "linkStatus": "ok",
     "lastEditorialCheckedAt": "2026-09-30"
   },
@@ -3814,7 +3814,7 @@
     "url": "https://github.com/aolingge/deutsch-lernen/blob/main/docs/templates/dsh-lesen-argument-map.md",
     "canonicalUrl": "https://github.com/aolingge/deutsch-lernen/blob/main/docs/templates/dsh-lesen-argument-map.md",
     "rights": "owned",
-    "status": "published",
+    "status": "archived",
     "linkStatus": "ok",
     "lastEditorialCheckedAt": "2026-09-30"
   },
@@ -3855,7 +3855,7 @@
     "url": "https://github.com/aolingge/deutsch-lernen/blob/main/docs/templates/dsh-muendlich-5min-talk.md",
     "canonicalUrl": "https://github.com/aolingge/deutsch-lernen/blob/main/docs/templates/dsh-muendlich-5min-talk.md",
     "rights": "owned",
-    "status": "published",
+    "status": "archived",
     "linkStatus": "ok",
     "lastEditorialCheckedAt": "2026-09-30"
   },
@@ -3896,7 +3896,7 @@
     "url": "https://github.com/aolingge/deutsch-lernen/blob/main/docs/templates/dsh-textproduktion-250w.md",
     "canonicalUrl": "https://github.com/aolingge/deutsch-lernen/blob/main/docs/templates/dsh-textproduktion-250w.md",
     "rights": "owned",
-    "status": "published",
+    "status": "archived",
     "linkStatus": "ok",
     "lastEditorialCheckedAt": "2026-09-30"
   },
@@ -3937,7 +3937,7 @@
     "url": "https://github.com/aolingge/deutsch-lernen/blob/main/docs/templates/dsh-ws-transformation-drills.md",
     "canonicalUrl": "https://github.com/aolingge/deutsch-lernen/blob/main/docs/templates/dsh-ws-transformation-drills.md",
     "rights": "owned",
-    "status": "published",
+    "status": "archived",
     "linkStatus": "ok",
     "lastEditorialCheckedAt": "2026-09-30"
   },
@@ -3979,7 +3979,7 @@
     "url": "https://github.com/aolingge/deutsch-lernen/blob/main/docs/templates/error-review-template.md",
     "canonicalUrl": "https://github.com/aolingge/deutsch-lernen/blob/main/docs/templates/error-review-template.md",
     "rights": "owned",
-    "status": "published",
+    "status": "archived",
     "linkStatus": "ok",
     "lastEditorialCheckedAt": "2026-09-30"
   },
@@ -4021,7 +4021,7 @@
     "url": "https://github.com/aolingge/deutsch-lernen/blob/main/docs/templates/mock-exam-review-template.md",
     "canonicalUrl": "https://github.com/aolingge/deutsch-lernen/blob/main/docs/templates/mock-exam-review-template.md",
     "rights": "owned",
-    "status": "published",
+    "status": "archived",
     "linkStatus": "ok",
     "lastEditorialCheckedAt": "2026-09-30"
   },
@@ -4063,7 +4063,7 @@
     "url": "https://github.com/aolingge/deutsch-lernen/blob/main/docs/templates/weekly-german-study-template.md",
     "canonicalUrl": "https://github.com/aolingge/deutsch-lernen/blob/main/docs/templates/weekly-german-study-template.md",
     "rights": "owned",
-    "status": "published",
+    "status": "archived",
     "linkStatus": "ok",
     "lastEditorialCheckedAt": "2026-09-30"
   },
@@ -4104,7 +4104,7 @@
     "url": "https://github.com/aolingge/deutsch-lernen/blob/main/docs/vocabulary/collocations.md",
     "canonicalUrl": "https://github.com/aolingge/deutsch-lernen/blob/main/docs/vocabulary/collocations.md",
     "rights": "owned",
-    "status": "published",
+    "status": "archived",
     "linkStatus": "ok",
     "lastEditorialCheckedAt": "2026-09-30"
   },
@@ -4145,7 +4145,7 @@
     "url": "https://github.com/aolingge/deutsch-lernen/blob/main/docs/vocabulary/listening-reading-core-vocabulary.md",
     "canonicalUrl": "https://github.com/aolingge/deutsch-lernen/blob/main/docs/vocabulary/listening-reading-core-vocabulary.md",
     "rights": "owned",
-    "status": "published",
+    "status": "archived",
     "linkStatus": "ok",
     "lastEditorialCheckedAt": "2026-09-30"
   },
@@ -4186,7 +4186,7 @@
     "url": "https://github.com/aolingge/deutsch-lernen/blob/main/docs/vocabulary/theme-vocabulary.md",
     "canonicalUrl": "https://github.com/aolingge/deutsch-lernen/blob/main/docs/vocabulary/theme-vocabulary.md",
     "rights": "owned",
-    "status": "published",
+    "status": "archived",
     "linkStatus": "ok",
     "lastEditorialCheckedAt": "2026-09-30"
   },
@@ -4227,7 +4227,7 @@
     "url": "https://github.com/aolingge/deutsch-lernen/blob/main/docs/vocabulary/vocabulary-review-system.md",
     "canonicalUrl": "https://github.com/aolingge/deutsch-lernen/blob/main/docs/vocabulary/vocabulary-review-system.md",
     "rights": "owned",
-    "status": "published",
+    "status": "archived",
     "linkStatus": "ok",
     "lastEditorialCheckedAt": "2026-09-30"
   },
@@ -4264,7 +4264,7 @@
     "url": "https://github.com/aolingge/deutsch-lernen/blob/main/docs/skills/a1-c1-four-skills-training.md",
     "canonicalUrl": "https://github.com/aolingge/deutsch-lernen/blob/main/docs/skills/a1-c1-four-skills-training.md",
     "rights": "owned",
-    "status": "published",
+    "status": "archived",
     "linkStatus": "ok",
     "lastEditorialCheckedAt": "2026-09-30"
   },
@@ -4301,7 +4301,7 @@
     "url": "https://github.com/aolingge/deutsch-lernen/blob/main/docs/levels/a1-self-check.md",
     "canonicalUrl": "https://github.com/aolingge/deutsch-lernen/blob/main/docs/levels/a1-self-check.md",
     "rights": "owned",
-    "status": "published",
+    "status": "archived",
     "linkStatus": "ok",
     "lastEditorialCheckedAt": "2026-09-30"
   },
@@ -4338,7 +4338,7 @@
     "url": "https://github.com/aolingge/deutsch-lernen/blob/main/docs/levels/a1.md",
     "canonicalUrl": "https://github.com/aolingge/deutsch-lernen/blob/main/docs/levels/a1.md",
     "rights": "owned",
-    "status": "published",
+    "status": "archived",
     "linkStatus": "ok",
     "lastEditorialCheckedAt": "2026-09-30"
   },
@@ -4375,7 +4375,7 @@
     "url": "https://github.com/aolingge/deutsch-lernen/blob/main/docs/levels/a2-self-check.md",
     "canonicalUrl": "https://github.com/aolingge/deutsch-lernen/blob/main/docs/levels/a2-self-check.md",
     "rights": "owned",
-    "status": "published",
+    "status": "archived",
     "linkStatus": "ok",
     "lastEditorialCheckedAt": "2026-09-30"
   },
@@ -4412,7 +4412,7 @@
     "url": "https://github.com/aolingge/deutsch-lernen/blob/main/docs/levels/a2.md",
     "canonicalUrl": "https://github.com/aolingge/deutsch-lernen/blob/main/docs/levels/a2.md",
     "rights": "owned",
-    "status": "published",
+    "status": "archived",
     "linkStatus": "ok",
     "lastEditorialCheckedAt": "2026-09-30"
   },
@@ -4449,7 +4449,7 @@
     "url": "https://github.com/aolingge/deutsch-lernen/blob/main/docs/levels/b1-self-check.md",
     "canonicalUrl": "https://github.com/aolingge/deutsch-lernen/blob/main/docs/levels/b1-self-check.md",
     "rights": "owned",
-    "status": "published",
+    "status": "archived",
     "linkStatus": "ok",
     "lastEditorialCheckedAt": "2026-09-30"
   },
@@ -4486,7 +4486,7 @@
     "url": "https://github.com/aolingge/deutsch-lernen/blob/main/docs/levels/b1.md",
     "canonicalUrl": "https://github.com/aolingge/deutsch-lernen/blob/main/docs/levels/b1.md",
     "rights": "owned",
-    "status": "published",
+    "status": "archived",
     "linkStatus": "ok",
     "lastEditorialCheckedAt": "2026-09-30"
   },
@@ -4523,7 +4523,7 @@
     "url": "https://github.com/aolingge/deutsch-lernen/blob/main/docs/levels/b2-self-check.md",
     "canonicalUrl": "https://github.com/aolingge/deutsch-lernen/blob/main/docs/levels/b2-self-check.md",
     "rights": "owned",
-    "status": "published",
+    "status": "archived",
     "linkStatus": "ok",
     "lastEditorialCheckedAt": "2026-09-30"
   },
@@ -4560,7 +4560,7 @@
     "url": "https://github.com/aolingge/deutsch-lernen/blob/main/docs/levels/b2.md",
     "canonicalUrl": "https://github.com/aolingge/deutsch-lernen/blob/main/docs/levels/b2.md",
     "rights": "owned",
-    "status": "published",
+    "status": "archived",
     "linkStatus": "ok",
     "lastEditorialCheckedAt": "2026-09-30"
   },
@@ -4597,7 +4597,7 @@
     "url": "https://github.com/aolingge/deutsch-lernen/blob/main/docs/levels/c1-self-check.md",
     "canonicalUrl": "https://github.com/aolingge/deutsch-lernen/blob/main/docs/levels/c1-self-check.md",
     "rights": "owned",
-    "status": "published",
+    "status": "archived",
     "linkStatus": "ok",
     "lastEditorialCheckedAt": "2026-09-30"
   },
@@ -4634,7 +4634,7 @@
     "url": "https://github.com/aolingge/deutsch-lernen/blob/main/docs/levels/c1.md",
     "canonicalUrl": "https://github.com/aolingge/deutsch-lernen/blob/main/docs/levels/c1.md",
     "rights": "owned",
-    "status": "published",
+    "status": "archived",
     "linkStatus": "ok",
     "lastEditorialCheckedAt": "2026-09-30"
   },
@@ -4676,7 +4676,7 @@
     "url": "https://github.com/aolingge/deutsch-lernen/blob/main/docs/germany-prep/bank-insurance.md",
     "canonicalUrl": "https://github.com/aolingge/deutsch-lernen/blob/main/docs/germany-prep/bank-insurance.md",
     "rights": "owned",
-    "status": "published",
+    "status": "archived",
     "linkStatus": "ok",
     "lastEditorialCheckedAt": "2026-09-30"
   },
@@ -4718,7 +4718,7 @@
     "url": "https://github.com/aolingge/deutsch-lernen/blob/main/docs/germany-prep/daad-aps-uni-assist.md",
     "canonicalUrl": "https://github.com/aolingge/deutsch-lernen/blob/main/docs/germany-prep/daad-aps-uni-assist.md",
     "rights": "owned",
-    "status": "published",
+    "status": "archived",
     "linkStatus": "ok",
     "lastEditorialCheckedAt": "2026-09-30"
   },
@@ -4759,7 +4759,7 @@
     "url": "https://github.com/aolingge/deutsch-lernen/blob/main/docs/germany-prep/glossary.md",
     "canonicalUrl": "https://github.com/aolingge/deutsch-lernen/blob/main/docs/germany-prep/glossary.md",
     "rights": "owned",
-    "status": "published",
+    "status": "archived",
     "linkStatus": "ok",
     "lastEditorialCheckedAt": "2026-09-30"
   },
@@ -4801,7 +4801,7 @@
     "url": "https://github.com/aolingge/deutsch-lernen/blob/main/docs/germany-prep/healthcare.md",
     "canonicalUrl": "https://github.com/aolingge/deutsch-lernen/blob/main/docs/germany-prep/healthcare.md",
     "rights": "owned",
-    "status": "published",
+    "status": "archived",
     "linkStatus": "ok",
     "lastEditorialCheckedAt": "2026-09-30"
   },
@@ -4843,7 +4843,7 @@
     "url": "https://github.com/aolingge/deutsch-lernen/blob/main/docs/germany-prep/housing-anmeldung.md",
     "canonicalUrl": "https://github.com/aolingge/deutsch-lernen/blob/main/docs/germany-prep/housing-anmeldung.md",
     "rights": "owned",
-    "status": "published",
+    "status": "archived",
     "linkStatus": "ok",
     "lastEditorialCheckedAt": "2026-09-30"
   },
@@ -4885,7 +4885,7 @@
     "url": "https://github.com/aolingge/deutsch-lernen/blob/main/docs/germany-prep/recognition-career.md",
     "canonicalUrl": "https://github.com/aolingge/deutsch-lernen/blob/main/docs/germany-prep/recognition-career.md",
     "rights": "owned",
-    "status": "published",
+    "status": "archived",
     "linkStatus": "ok",
     "lastEditorialCheckedAt": "2026-09-30"
   },
@@ -4926,7 +4926,7 @@
     "url": "https://github.com/aolingge/deutsch-lernen/blob/main/docs/germany-prep/scenario-german-phrasebook.md",
     "canonicalUrl": "https://github.com/aolingge/deutsch-lernen/blob/main/docs/germany-prep/scenario-german-phrasebook.md",
     "rights": "owned",
-    "status": "published",
+    "status": "archived",
     "linkStatus": "ok",
     "lastEditorialCheckedAt": "2026-09-30"
   },
@@ -4968,7 +4968,7 @@
     "url": "https://github.com/aolingge/deutsch-lernen/blob/main/docs/germany-prep/timeline-checklist.md",
     "canonicalUrl": "https://github.com/aolingge/deutsch-lernen/blob/main/docs/germany-prep/timeline-checklist.md",
     "rights": "owned",
-    "status": "published",
+    "status": "archived",
     "linkStatus": "ok",
     "lastEditorialCheckedAt": "2026-09-30"
   },
@@ -5010,7 +5010,7 @@
     "url": "https://github.com/aolingge/deutsch-lernen/blob/main/docs/germany-prep/transport.md",
     "canonicalUrl": "https://github.com/aolingge/deutsch-lernen/blob/main/docs/germany-prep/transport.md",
     "rights": "owned",
-    "status": "published",
+    "status": "archived",
     "linkStatus": "ok",
     "lastEditorialCheckedAt": "2026-09-30"
   },
@@ -5052,7 +5052,7 @@
     "url": "https://github.com/aolingge/deutsch-lernen/blob/main/docs/germany-prep/visa-study-residence.md",
     "canonicalUrl": "https://github.com/aolingge/deutsch-lernen/blob/main/docs/germany-prep/visa-study-residence.md",
     "rights": "owned",
-    "status": "published",
+    "status": "archived",
     "linkStatus": "ok",
     "lastEditorialCheckedAt": "2026-09-30"
   },
@@ -5094,7 +5094,7 @@
     "url": "https://github.com/aolingge/deutsch-lernen/blob/main/docs/germany-prep/work-internship.md",
     "canonicalUrl": "https://github.com/aolingge/deutsch-lernen/blob/main/docs/germany-prep/work-internship.md",
     "rights": "owned",
-    "status": "published",
+    "status": "archived",
     "linkStatus": "ok",
     "lastEditorialCheckedAt": "2026-09-30"
   },
@@ -5136,7 +5136,7 @@
     "url": "https://github.com/aolingge/deutsch-lernen/blob/main/docs/life-in-germany/appointments-and-offices.md",
     "canonicalUrl": "https://github.com/aolingge/deutsch-lernen/blob/main/docs/life-in-germany/appointments-and-offices.md",
     "rights": "owned",
-    "status": "published",
+    "status": "archived",
     "linkStatus": "ok",
     "lastEditorialCheckedAt": "2026-09-30"
   },
@@ -5178,7 +5178,7 @@
     "url": "https://github.com/aolingge/deutsch-lernen/blob/main/docs/life-in-germany/official-links-and-scenario-german.md",
     "canonicalUrl": "https://github.com/aolingge/deutsch-lernen/blob/main/docs/life-in-germany/official-links-and-scenario-german.md",
     "rights": "owned",
-    "status": "published",
+    "status": "archived",
     "linkStatus": "ok",
     "lastEditorialCheckedAt": "2026-09-30"
   },
@@ -5220,8 +5220,3160 @@
     "url": "https://github.com/aolingge/deutsch-lernen/blob/main/docs/life-in-germany/study-and-life-prep-checklist.md",
     "canonicalUrl": "https://github.com/aolingge/deutsch-lernen/blob/main/docs/life-in-germany/study-and-life-prep-checklist.md",
     "rights": "owned",
-    "status": "published",
+    "status": "archived",
     "linkStatus": "ok",
     "lastEditorialCheckedAt": "2026-09-30"
+  },
+  {
+    "id": "dw-learn-german",
+    "slug": "dw-learn-german",
+    "titleZh": "DW 德语学习总入口",
+    "titleOriginal": "Deutsch lernen",
+    "sourceName": "Deutsche Welle",
+    "url": "https://learngerman.dw.com/",
+    "canonicalUrl": "https://learngerman.dw.com/",
+    "primaryCategory": "courses",
+    "levels": [
+      "A1",
+      "A2",
+      "B1",
+      "B2",
+      "C1"
+    ],
+    "price": "free",
+    "access": "open",
+    "skills": [
+      "综合",
+      "听力"
+    ],
+    "formats": [
+      "课程",
+      "视频",
+      "练习"
+    ],
+    "descriptionZh": "汇集 Nicos Weg、慢速新闻、日常德语及专题课程。",
+    "howToUseZh": "汇集 Nicos Weg、慢速新闻、日常德语及专题课程。",
+    "tags": [
+      "Deutsche Welle",
+      "courses"
+    ],
+    "exams": [],
+    "levelBasis": "editorial",
+    "languages": [
+      "德语"
+    ],
+    "rights": "link-only",
+    "status": "published",
+    "linkStatus": "ok",
+    "lastEditorialCheckedAt": "2026-10-04"
+  },
+  {
+    "id": "vhs-a1",
+    "slug": "vhs-a1",
+    "titleZh": "vhs-Lernportal A1 课程",
+    "titleOriginal": "A1-Deutschkurs",
+    "sourceName": "vhs-Lernportal",
+    "url": "https://a1.vhs-lernportal.de/",
+    "canonicalUrl": "https://a1.vhs-lernportal.de/",
+    "primaryCategory": "courses",
+    "levels": [
+      "A1"
+    ],
+    "price": "free",
+    "access": "registration",
+    "skills": [
+      "综合"
+    ],
+    "formats": [
+      "课程",
+      "练习"
+    ],
+    "descriptionZh": "德国成人教育协会的 A1 在线课程，提供多语界面与互动练习。",
+    "howToUseZh": "德国成人教育协会的 A1 在线课程，提供多语界面与互动练习。",
+    "tags": [
+      "vhs-Lernportal",
+      "courses"
+    ],
+    "exams": [],
+    "levelBasis": "editorial",
+    "languages": [
+      "德语"
+    ],
+    "rights": "link-only",
+    "status": "published",
+    "linkStatus": "ok",
+    "lastEditorialCheckedAt": "2026-10-04"
+  },
+  {
+    "id": "vhs-a2",
+    "slug": "vhs-a2",
+    "titleZh": "vhs-Lernportal A2 课程",
+    "titleOriginal": "A2-Deutschkurs",
+    "sourceName": "vhs-Lernportal",
+    "url": "https://a2.vhs-lernportal.de/",
+    "canonicalUrl": "https://a2.vhs-lernportal.de/",
+    "primaryCategory": "courses",
+    "levels": [
+      "A2"
+    ],
+    "price": "free",
+    "access": "registration",
+    "skills": [
+      "综合"
+    ],
+    "formats": [
+      "课程",
+      "练习"
+    ],
+    "descriptionZh": "德国成人教育协会的 A2 在线课程，涵盖日常语言情境。",
+    "howToUseZh": "德国成人教育协会的 A2 在线课程，涵盖日常语言情境。",
+    "tags": [
+      "vhs-Lernportal",
+      "courses"
+    ],
+    "exams": [],
+    "levelBasis": "editorial",
+    "languages": [
+      "德语"
+    ],
+    "rights": "link-only",
+    "status": "published",
+    "linkStatus": "ok",
+    "lastEditorialCheckedAt": "2026-10-04"
+  },
+  {
+    "id": "vhs-b2",
+    "slug": "vhs-b2",
+    "titleZh": "vhs-Lernportal B2 职业德语",
+    "titleOriginal": "B2-Deutschkurs Beruf",
+    "sourceName": "vhs-Lernportal",
+    "url": "https://b2-beruf.vhs-lernportal.de/",
+    "canonicalUrl": "https://b2-beruf.vhs-lernportal.de/",
+    "primaryCategory": "courses",
+    "levels": [
+      "B2"
+    ],
+    "price": "free",
+    "access": "registration",
+    "skills": [
+      "综合",
+      "口语"
+    ],
+    "formats": [
+      "课程",
+      "练习"
+    ],
+    "descriptionZh": "面向职场沟通的 B2 在线德语课程。",
+    "howToUseZh": "面向职场沟通的 B2 在线德语课程。",
+    "tags": [
+      "vhs-Lernportal",
+      "courses"
+    ],
+    "exams": [],
+    "levelBasis": "editorial",
+    "languages": [
+      "德语"
+    ],
+    "rights": "link-only",
+    "status": "published",
+    "linkStatus": "ok",
+    "lastEditorialCheckedAt": "2026-10-04"
+  },
+  {
+    "id": "goethe-deutschtrainer",
+    "slug": "goethe-deutschtrainer",
+    "titleZh": "歌德 Deutschtrainer A1",
+    "titleOriginal": "Deutschtrainer A1",
+    "sourceName": "Goethe-Institut",
+    "url": "https://www.goethe.de/de/spr/ueb/dt1.html",
+    "canonicalUrl": "https://www.goethe.de/de/spr/ueb/dt1.html",
+    "primaryCategory": "courses",
+    "levels": [
+      "A1"
+    ],
+    "price": "free",
+    "access": "open",
+    "skills": [
+      "词汇",
+      "听力"
+    ],
+    "formats": [
+      "应用",
+      "练习"
+    ],
+    "descriptionZh": "歌德学院的 A1 练习应用，围绕日常生活主题提供短练习。",
+    "howToUseZh": "歌德学院的 A1 练习应用，围绕日常生活主题提供短练习。",
+    "tags": [
+      "Goethe-Institut",
+      "courses"
+    ],
+    "exams": [],
+    "levelBasis": "editorial",
+    "languages": [
+      "德语"
+    ],
+    "rights": "link-only",
+    "status": "published",
+    "linkStatus": "restricted"
+  },
+  {
+    "id": "deutsch-uni",
+    "slug": "deutsch-uni",
+    "titleZh": "Deutsch-Uni Online 大学德语课程",
+    "titleOriginal": "Deutsch-Uni Online",
+    "sourceName": "Deutsch-Uni Online",
+    "url": "https://www.deutsch-uni.com/",
+    "canonicalUrl": "https://www.deutsch-uni.com/",
+    "primaryCategory": "courses",
+    "levels": [
+      "A1",
+      "A2",
+      "B1",
+      "B2",
+      "C1"
+    ],
+    "price": "paid",
+    "access": "registration",
+    "skills": [
+      "综合",
+      "写作"
+    ],
+    "formats": [
+      "课程"
+    ],
+    "descriptionZh": "大学与学术场景的在线德语课程，提供不同级别和专业方向。",
+    "howToUseZh": "大学与学术场景的在线德语课程，提供不同级别和专业方向。",
+    "tags": [
+      "Deutsch-Uni Online",
+      "courses"
+    ],
+    "exams": [],
+    "levelBasis": "editorial",
+    "languages": [
+      "德语"
+    ],
+    "rights": "link-only",
+    "status": "published",
+    "linkStatus": "ok",
+    "lastEditorialCheckedAt": "2026-10-04"
+  },
+  {
+    "id": "deutsch-interaktiv",
+    "slug": "deutsch-interaktiv",
+    "titleZh": "DW Deutsch Interaktiv",
+    "titleOriginal": "Deutsch Interaktiv",
+    "sourceName": "Deutsche Welle",
+    "url": "https://learngerman.dw.com/de/deutsch-interaktiv/s-9301",
+    "canonicalUrl": "https://learngerman.dw.com/de/deutsch-interaktiv/s-9301",
+    "primaryCategory": "courses",
+    "levels": [
+      "A1",
+      "A2",
+      "B1"
+    ],
+    "price": "free",
+    "access": "registration",
+    "skills": [
+      "综合"
+    ],
+    "formats": [
+      "课程",
+      "练习"
+    ],
+    "descriptionZh": "DW Deutsch Interaktiv 在线德语课程入口。",
+    "howToUseZh": "DW Deutsch Interaktiv 在线德语课程入口。",
+    "tags": [
+      "Deutsche Welle",
+      "courses"
+    ],
+    "exams": [],
+    "levelBasis": "editorial",
+    "languages": [
+      "德语"
+    ],
+    "rights": "link-only",
+    "status": "published",
+    "linkStatus": "ok",
+    "lastEditorialCheckedAt": "2026-10-04"
+  },
+  {
+    "id": "goethe-exams-all",
+    "slug": "goethe-exams-all",
+    "titleZh": "歌德 A1–C2 考试与样题",
+    "titleOriginal": "Goethe-Zertifikat",
+    "sourceName": "Goethe-Institut",
+    "url": "https://www.goethe.de/de/spr/prf.html",
+    "canonicalUrl": "https://www.goethe.de/de/spr/prf.html",
+    "primaryCategory": "exams",
+    "levels": [
+      "A1",
+      "A2",
+      "B1",
+      "B2",
+      "C1",
+      "C2"
+    ],
+    "price": "free",
+    "access": "open",
+    "skills": [
+      "考试"
+    ],
+    "formats": [
+      "样题",
+      "考试信息"
+    ],
+    "descriptionZh": "歌德各级考试的官方总目录，链接考试说明、练习材料和考点信息。",
+    "howToUseZh": "歌德各级考试的官方总目录，链接考试说明、练习材料和考点信息。",
+    "tags": [
+      "Goethe-Institut",
+      "exams"
+    ],
+    "exams": [
+      "Goethe"
+    ],
+    "levelBasis": "editorial",
+    "languages": [
+      "德语"
+    ],
+    "rights": "link-only",
+    "status": "published",
+    "linkStatus": "restricted"
+  },
+  {
+    "id": "testdaf-all",
+    "slug": "testdaf-all",
+    "titleZh": "TestDaF 官方考试信息",
+    "titleOriginal": "TestDaF",
+    "sourceName": "TestDaF-Institut",
+    "url": "https://www.testdaf.de/",
+    "canonicalUrl": "https://www.testdaf.de/",
+    "primaryCategory": "exams",
+    "levels": [
+      "B2",
+      "C1"
+    ],
+    "price": "free",
+    "access": "open",
+    "skills": [
+      "考试"
+    ],
+    "formats": [
+      "考试信息"
+    ],
+    "descriptionZh": "TestDaF 官方网站，涵盖考试形式、报名与备考信息。",
+    "howToUseZh": "TestDaF 官方网站，涵盖考试形式、报名与备考信息。",
+    "tags": [
+      "TestDaF-Institut",
+      "exams"
+    ],
+    "exams": [
+      "TestDaF"
+    ],
+    "levelBasis": "editorial",
+    "languages": [
+      "德语"
+    ],
+    "rights": "link-only",
+    "status": "published",
+    "linkStatus": "ok",
+    "lastEditorialCheckedAt": "2026-10-04"
+  },
+  {
+    "id": "osd-exams",
+    "slug": "osd-exams",
+    "titleZh": "ÖSD 各级考试信息",
+    "titleOriginal": "ÖSD-Prüfungen",
+    "sourceName": "ÖSD",
+    "url": "https://www.osd.at/die-pruefungen/osd-prufungen/",
+    "canonicalUrl": "https://www.osd.at/die-pruefungen/osd-prufungen/",
+    "primaryCategory": "exams",
+    "levels": [
+      "A1",
+      "A2",
+      "B1",
+      "B2",
+      "C1",
+      "C2"
+    ],
+    "price": "free",
+    "access": "open",
+    "skills": [
+      "考试"
+    ],
+    "formats": [
+      "考试信息"
+    ],
+    "descriptionZh": "ÖSD 各级德语考试的官方比较页面，列出对应等级、考试对象与证书类型。",
+    "howToUseZh": "ÖSD 各级德语考试的官方比较页面，列出对应等级、考试对象与证书类型。",
+    "tags": [
+      "ÖSD",
+      "exams"
+    ],
+    "exams": [
+      "ÖSD"
+    ],
+    "levelBasis": "editorial",
+    "languages": [
+      "德语"
+    ],
+    "rights": "link-only",
+    "status": "published",
+    "linkStatus": "ok",
+    "lastEditorialCheckedAt": "2026-10-04"
+  },
+  {
+    "id": "onset",
+    "slug": "onset",
+    "titleZh": "onSET 在线德语分级测试",
+    "titleOriginal": "onSET",
+    "sourceName": "g.a.s.t.",
+    "url": "https://www.onset.de/",
+    "canonicalUrl": "https://www.onset.de/",
+    "primaryCategory": "exams",
+    "levels": [
+      "A2",
+      "B1",
+      "B2",
+      "C1"
+    ],
+    "price": "paid",
+    "access": "registration",
+    "skills": [
+      "考试"
+    ],
+    "formats": [
+      "测评"
+    ],
+    "descriptionZh": "在线语言分级测试，提供测试说明和示例入口；正式测试按考点条件进行。",
+    "howToUseZh": "在线语言分级测试，提供测试说明和示例入口；正式测试按考点条件进行。",
+    "tags": [
+      "g.a.s.t.",
+      "exams"
+    ],
+    "exams": [
+      "onSET"
+    ],
+    "levelBasis": "editorial",
+    "languages": [
+      "德语"
+    ],
+    "rights": "link-only",
+    "status": "published",
+    "linkStatus": "ok",
+    "lastEditorialCheckedAt": "2026-10-04"
+  },
+  {
+    "id": "testas",
+    "slug": "testas",
+    "titleZh": "TestAS 德国大学入学能力测试",
+    "titleOriginal": "TestAS",
+    "sourceName": "g.a.s.t.",
+    "url": "https://www.testas.de/",
+    "canonicalUrl": "https://www.testas.de/",
+    "primaryCategory": "exams",
+    "levels": [
+      "B1",
+      "B2",
+      "C1"
+    ],
+    "price": "freemium",
+    "access": "open",
+    "skills": [
+      "考试"
+    ],
+    "formats": [
+      "样题",
+      "考试信息"
+    ],
+    "descriptionZh": "面向国际申请者的大学学习能力测试，提供官方说明及公开备考资料。",
+    "howToUseZh": "面向国际申请者的大学学习能力测试，提供官方说明及公开备考资料。",
+    "tags": [
+      "g.a.s.t.",
+      "exams"
+    ],
+    "exams": [
+      "TestAS"
+    ],
+    "levelBasis": "editorial",
+    "languages": [
+      "德语"
+    ],
+    "rights": "link-only",
+    "status": "published",
+    "linkStatus": "ok",
+    "lastEditorialCheckedAt": "2026-10-04"
+  },
+  {
+    "id": "dict-duden-shop",
+    "slug": "dict-duden-shop",
+    "titleZh": "Duden 学习词典与参考资料",
+    "titleOriginal": "Duden Shop",
+    "sourceName": "Duden",
+    "url": "https://shop.duden.de/",
+    "canonicalUrl": "https://shop.duden.de/",
+    "primaryCategory": "vocabulary",
+    "levels": [
+      "A1",
+      "A2",
+      "B1",
+      "B2",
+      "C1",
+      "C2"
+    ],
+    "price": "paid",
+    "access": "open",
+    "skills": [
+      "词汇",
+      "语法"
+    ],
+    "formats": [
+      "图书"
+    ],
+    "descriptionZh": "Duden 官方书店，提供德语词典、语法书和语言参考资料。",
+    "howToUseZh": "Duden 官方书店，提供德语词典、语法书和语言参考资料。",
+    "tags": [
+      "Duden",
+      "vocabulary"
+    ],
+    "exams": [],
+    "levelBasis": "editorial",
+    "languages": [
+      "德语"
+    ],
+    "rights": "link-only",
+    "status": "published",
+    "linkStatus": "ok",
+    "lastEditorialCheckedAt": "2026-10-04"
+  },
+  {
+    "id": "wiktionary-de",
+    "slug": "wiktionary-de",
+    "titleZh": "维基词典德语版",
+    "titleOriginal": "Wiktionary",
+    "sourceName": "Wikimedia",
+    "url": "https://de.wiktionary.org/",
+    "canonicalUrl": "https://de.wiktionary.org/",
+    "primaryCategory": "vocabulary",
+    "levels": [
+      "A1",
+      "A2",
+      "B1",
+      "B2",
+      "C1",
+      "C2"
+    ],
+    "price": "free",
+    "access": "open",
+    "skills": [
+      "词汇",
+      "发音"
+    ],
+    "formats": [
+      "词典"
+    ],
+    "descriptionZh": "开放词典，提供词形、释义、语源和部分词条的发音。",
+    "howToUseZh": "开放词典，提供词形、释义、语源和部分词条的发音。",
+    "tags": [
+      "Wikimedia",
+      "vocabulary"
+    ],
+    "exams": [],
+    "levelBasis": "editorial",
+    "languages": [
+      "德语"
+    ],
+    "rights": "link-only",
+    "status": "published",
+    "linkStatus": "ok",
+    "lastEditorialCheckedAt": "2026-10-04"
+  },
+  {
+    "id": "openthesaurus",
+    "slug": "openthesaurus",
+    "titleZh": "OpenThesaurus 德语近义词",
+    "titleOriginal": "OpenThesaurus",
+    "sourceName": "OpenThesaurus",
+    "url": "https://www.openthesaurus.de/",
+    "canonicalUrl": "https://www.openthesaurus.de/",
+    "primaryCategory": "vocabulary",
+    "levels": [
+      "B1",
+      "B2",
+      "C1",
+      "C2"
+    ],
+    "price": "free",
+    "access": "open",
+    "skills": [
+      "词汇",
+      "写作"
+    ],
+    "formats": [
+      "词典"
+    ],
+    "descriptionZh": "德语近义词和相关词查询，收录同义词组与语义关系。",
+    "howToUseZh": "德语近义词和相关词查询，收录同义词组与语义关系。",
+    "tags": [
+      "OpenThesaurus",
+      "vocabulary"
+    ],
+    "exams": [],
+    "levelBasis": "editorial",
+    "languages": [
+      "德语"
+    ],
+    "rights": "link-only",
+    "status": "published",
+    "linkStatus": "ok",
+    "lastEditorialCheckedAt": "2026-10-04"
+  },
+  {
+    "id": "reverso-context",
+    "slug": "reverso-context",
+    "titleZh": "Reverso Context 德语例句",
+    "titleOriginal": "Reverso Context",
+    "sourceName": "Reverso",
+    "url": "https://context.reverso.net/translation/german-english/",
+    "canonicalUrl": "https://context.reverso.net/translation/german-english/",
+    "primaryCategory": "vocabulary",
+    "levels": [
+      "A2",
+      "B1",
+      "B2",
+      "C1"
+    ],
+    "price": "freemium",
+    "access": "open",
+    "skills": [
+      "词汇",
+      "写作"
+    ],
+    "formats": [
+      "词典",
+      "例句"
+    ],
+    "descriptionZh": "双语语境例句搜索；例句来自多种资料，准确性需结合上下文判断。",
+    "howToUseZh": "双语语境例句搜索；例句来自多种资料，准确性需结合上下文判断。",
+    "tags": [
+      "Reverso",
+      "vocabulary"
+    ],
+    "exams": [],
+    "levelBasis": "editorial",
+    "languages": [
+      "德语"
+    ],
+    "rights": "link-only",
+    "status": "published",
+    "linkStatus": "restricted"
+  },
+  {
+    "id": "glosbe-de",
+    "slug": "glosbe-de",
+    "titleZh": "Glosbe 德汉词典",
+    "titleOriginal": "Glosbe",
+    "sourceName": "Glosbe",
+    "url": "https://glosbe.com/de/zh",
+    "canonicalUrl": "https://glosbe.com/de/zh",
+    "primaryCategory": "vocabulary",
+    "levels": [
+      "A1",
+      "A2",
+      "B1",
+      "B2",
+      "C1"
+    ],
+    "price": "freemium",
+    "access": "open",
+    "skills": [
+      "词汇"
+    ],
+    "formats": [
+      "词典",
+      "例句"
+    ],
+    "descriptionZh": "德汉词条、翻译与语料例句查询。",
+    "howToUseZh": "德汉词条、翻译与语料例句查询。",
+    "tags": [
+      "Glosbe",
+      "vocabulary"
+    ],
+    "exams": [],
+    "levelBasis": "editorial",
+    "languages": [
+      "德语"
+    ],
+    "rights": "link-only",
+    "status": "published",
+    "linkStatus": "ok",
+    "lastEditorialCheckedAt": "2026-10-04"
+  },
+  {
+    "id": "pons-verb",
+    "slug": "pons-verb",
+    "titleZh": "PONS 动词变位查询",
+    "titleOriginal": "PONS Verbtabellen",
+    "sourceName": "PONS",
+    "url": "https://de.pons.com/verbtabellen/deutsch",
+    "canonicalUrl": "https://de.pons.com/verbtabellen/deutsch",
+    "primaryCategory": "vocabulary",
+    "levels": [
+      "A1",
+      "A2",
+      "B1",
+      "B2",
+      "C1"
+    ],
+    "price": "free",
+    "access": "open",
+    "skills": [
+      "词汇",
+      "语法"
+    ],
+    "formats": [
+      "词典"
+    ],
+    "descriptionZh": "德语动词时态和人称变位表。",
+    "howToUseZh": "德语动词时态和人称变位表。",
+    "tags": [
+      "PONS",
+      "vocabulary"
+    ],
+    "exams": [],
+    "levelBasis": "editorial",
+    "languages": [
+      "德语"
+    ],
+    "rights": "link-only",
+    "status": "published",
+    "linkStatus": "ok",
+    "lastEditorialCheckedAt": "2026-10-04"
+  },
+  {
+    "id": "mein-deutschbuch",
+    "slug": "mein-deutschbuch",
+    "titleZh": "Mein Deutschbuch 语法资料",
+    "titleOriginal": "Mein Deutschbuch",
+    "sourceName": "Mein Deutschbuch",
+    "url": "https://mein-deutschbuch.de/",
+    "canonicalUrl": "https://mein-deutschbuch.de/",
+    "primaryCategory": "grammar",
+    "levels": [
+      "A1",
+      "A2",
+      "B1",
+      "B2",
+      "C1"
+    ],
+    "price": "freemium",
+    "access": "open",
+    "skills": [
+      "语法",
+      "词汇"
+    ],
+    "formats": [
+      "参考",
+      "练习"
+    ],
+    "descriptionZh": "德语语法说明、动词表与在线练习，部分扩展资料收费。",
+    "howToUseZh": "德语语法说明、动词表与在线练习，部分扩展资料收费。",
+    "tags": [
+      "Mein Deutschbuch",
+      "grammar"
+    ],
+    "exams": [],
+    "levelBasis": "editorial",
+    "languages": [
+      "德语"
+    ],
+    "rights": "link-only",
+    "status": "published",
+    "linkStatus": "ok",
+    "lastEditorialCheckedAt": "2026-10-04"
+  },
+  {
+    "id": "deutschplus",
+    "slug": "deutschplus",
+    "titleZh": "Deutschplus 语法与练习",
+    "titleOriginal": "Deutschplus",
+    "sourceName": "Deutschplus",
+    "url": "https://www.deutschplus.net/",
+    "canonicalUrl": "https://www.deutschplus.net/",
+    "primaryCategory": "grammar",
+    "levels": [
+      "A1",
+      "A2",
+      "B1",
+      "B2",
+      "C1"
+    ],
+    "price": "free",
+    "access": "open",
+    "skills": [
+      "语法"
+    ],
+    "formats": [
+      "参考",
+      "练习"
+    ],
+    "descriptionZh": "按语法主题组织的德语参考和练习网站。",
+    "howToUseZh": "按语法主题组织的德语参考和练习网站。",
+    "tags": [
+      "Deutschplus",
+      "grammar"
+    ],
+    "exams": [],
+    "levelBasis": "editorial",
+    "languages": [
+      "德语"
+    ],
+    "rights": "link-only",
+    "status": "published",
+    "linkStatus": "ok",
+    "lastEditorialCheckedAt": "2026-10-04"
+  },
+  {
+    "id": "deutsch-lernen-com",
+    "slug": "deutsch-lernen-com",
+    "titleZh": "Deutsch-lernen.com 在线练习",
+    "titleOriginal": "Deutsch-lernen.com",
+    "sourceName": "Deutsch-lernen.com",
+    "url": "https://www.deutsch-lernen.com/",
+    "canonicalUrl": "https://www.deutsch-lernen.com/",
+    "primaryCategory": "grammar",
+    "levels": [
+      "A1",
+      "A2",
+      "B1",
+      "B2"
+    ],
+    "price": "free",
+    "access": "open",
+    "skills": [
+      "语法",
+      "词汇"
+    ],
+    "formats": [
+      "练习",
+      "测评"
+    ],
+    "descriptionZh": "提供入门与进阶德语语法练习、词汇和测试入口。",
+    "howToUseZh": "提供入门与进阶德语语法练习、词汇和测试入口。",
+    "tags": [
+      "Deutsch-lernen.com",
+      "grammar"
+    ],
+    "exams": [],
+    "levelBasis": "editorial",
+    "languages": [
+      "德语"
+    ],
+    "rights": "link-only",
+    "status": "published",
+    "linkStatus": "ok",
+    "lastEditorialCheckedAt": "2026-10-04"
+  },
+  {
+    "id": "ubertag",
+    "slug": "ubertag",
+    "titleZh": "Übungskönig 德语练习单",
+    "titleOriginal": "Übungskönig",
+    "sourceName": "Übungskönig",
+    "url": "https://www.uebungskoenig.de/",
+    "canonicalUrl": "https://www.uebungskoenig.de/",
+    "primaryCategory": "grammar",
+    "levels": [
+      "A2",
+      "B1",
+      "B2"
+    ],
+    "price": "freemium",
+    "access": "open",
+    "skills": [
+      "语法",
+      "阅读"
+    ],
+    "formats": [
+      "练习",
+      "PDF"
+    ],
+    "descriptionZh": "德语学校科目练习单与答案，含语法、阅读及写作主题。",
+    "howToUseZh": "德语学校科目练习单与答案，含语法、阅读及写作主题。",
+    "tags": [
+      "Übungskönig",
+      "grammar"
+    ],
+    "exams": [],
+    "levelBasis": "editorial",
+    "languages": [
+      "德语"
+    ],
+    "rights": "link-only",
+    "status": "published",
+    "linkStatus": "ok",
+    "lastEditorialCheckedAt": "2026-10-04"
+  },
+  {
+    "id": "deutschlernerblog-grammar",
+    "slug": "deutschlernerblog-grammar",
+    "titleZh": "Deutschlernerblog 语法专题",
+    "titleOriginal": "Grammatik",
+    "sourceName": "Deutschlernerblog",
+    "url": "https://deutschlernerblog.de/grammatik-deutsch-lernen/",
+    "canonicalUrl": "https://deutschlernerblog.de/grammatik-deutsch-lernen/",
+    "primaryCategory": "grammar",
+    "levels": [
+      "A1",
+      "A2",
+      "B1",
+      "B2",
+      "C1"
+    ],
+    "price": "free",
+    "access": "open",
+    "skills": [
+      "语法"
+    ],
+    "formats": [
+      "参考",
+      "练习"
+    ],
+    "descriptionZh": "按语法主题整理的说明和练习入口。",
+    "howToUseZh": "按语法主题整理的说明和练习入口。",
+    "tags": [
+      "Deutschlernerblog",
+      "grammar"
+    ],
+    "exams": [],
+    "levelBasis": "editorial",
+    "languages": [
+      "德语"
+    ],
+    "rights": "link-only",
+    "status": "published",
+    "linkStatus": "ok",
+    "lastEditorialCheckedAt": "2026-10-04"
+  },
+  {
+    "id": "coffee-break-german",
+    "slug": "coffee-break-german",
+    "titleZh": "Coffee Break German 播客",
+    "titleOriginal": "Coffee Break German",
+    "sourceName": "Coffee Break Languages",
+    "url": "https://coffeebreaklanguages.com/coffeebreakgerman/",
+    "canonicalUrl": "https://coffeebreaklanguages.com/coffeebreakgerman/",
+    "primaryCategory": "listening",
+    "levels": [
+      "A1",
+      "A2",
+      "B1"
+    ],
+    "price": "freemium",
+    "access": "open",
+    "skills": [
+      "听力"
+    ],
+    "formats": [
+      "播客"
+    ],
+    "descriptionZh": "以英语讲解德语的分季音频节目；公开播客免费，配套课程部分收费。",
+    "howToUseZh": "以英语讲解德语的分季音频节目；公开播客免费，配套课程部分收费。",
+    "tags": [
+      "Coffee Break Languages",
+      "listening"
+    ],
+    "exams": [],
+    "levelBasis": "editorial",
+    "languages": [
+      "德语"
+    ],
+    "rights": "link-only",
+    "status": "published",
+    "linkStatus": "ok",
+    "lastEditorialCheckedAt": "2026-10-04"
+  },
+  {
+    "id": "easy-german-podcast",
+    "slug": "easy-german-podcast",
+    "titleZh": "Easy German 日常对话播客",
+    "titleOriginal": "Easy German Podcast",
+    "sourceName": "Easy German",
+    "url": "https://www.easygerman.org/podcast",
+    "canonicalUrl": "https://www.easygerman.org/podcast",
+    "primaryCategory": "listening",
+    "levels": [
+      "B1",
+      "B2",
+      "C1"
+    ],
+    "price": "freemium",
+    "access": "open",
+    "skills": [
+      "听力"
+    ],
+    "formats": [
+      "播客"
+    ],
+    "descriptionZh": "自然德语对话播客；公开音频免费，文字稿及互动资料通常需会员。",
+    "howToUseZh": "自然德语对话播客；公开音频免费，文字稿及互动资料通常需会员。",
+    "tags": [
+      "Easy German",
+      "listening"
+    ],
+    "exams": [],
+    "levelBasis": "editorial",
+    "languages": [
+      "德语"
+    ],
+    "rights": "link-only",
+    "status": "published",
+    "linkStatus": "ok",
+    "lastEditorialCheckedAt": "2026-10-04"
+  },
+  {
+    "id": "radio-dlf-kultur",
+    "slug": "radio-dlf-kultur",
+    "titleZh": "Deutschlandfunk Kultur 电台",
+    "titleOriginal": "Deutschlandfunk Kultur",
+    "sourceName": "Deutschlandradio",
+    "url": "https://www.deutschlandfunkkultur.de/",
+    "canonicalUrl": "https://www.deutschlandfunkkultur.de/",
+    "primaryCategory": "listening",
+    "levels": [
+      "B2",
+      "C1",
+      "C2"
+    ],
+    "price": "free",
+    "access": "open",
+    "skills": [
+      "听力"
+    ],
+    "formats": [
+      "音频",
+      "电台"
+    ],
+    "descriptionZh": "公共文化电台，包含访谈、文化评论、文学和专题节目。",
+    "howToUseZh": "公共文化电台，包含访谈、文化评论、文学和专题节目。",
+    "tags": [
+      "Deutschlandradio",
+      "listening"
+    ],
+    "exams": [],
+    "levelBasis": "editorial",
+    "languages": [
+      "德语"
+    ],
+    "rights": "link-only",
+    "status": "published",
+    "linkStatus": "ok",
+    "lastEditorialCheckedAt": "2026-10-04"
+  },
+  {
+    "id": "radio-dlf-nova",
+    "slug": "radio-dlf-nova",
+    "titleZh": "Deutschlandfunk Nova 电台",
+    "titleOriginal": "Deutschlandfunk Nova",
+    "sourceName": "Deutschlandradio",
+    "url": "https://www.deutschlandfunknova.de/",
+    "canonicalUrl": "https://www.deutschlandfunknova.de/",
+    "primaryCategory": "listening",
+    "levels": [
+      "B1",
+      "B2",
+      "C1"
+    ],
+    "price": "free",
+    "access": "open",
+    "skills": [
+      "听力"
+    ],
+    "formats": [
+      "音频",
+      "电台"
+    ],
+    "descriptionZh": "面向年轻受众的公共电台，提供科学、社会和生活主题节目。",
+    "howToUseZh": "面向年轻受众的公共电台，提供科学、社会和生活主题节目。",
+    "tags": [
+      "Deutschlandradio",
+      "listening"
+    ],
+    "exams": [],
+    "levelBasis": "editorial",
+    "languages": [
+      "德语"
+    ],
+    "rights": "link-only",
+    "status": "published",
+    "linkStatus": "ok",
+    "lastEditorialCheckedAt": "2026-10-04"
+  },
+  {
+    "id": "ard-audiothek",
+    "slug": "ard-audiothek",
+    "titleZh": "ARD Sounds 公共广播音频库",
+    "titleOriginal": "ARD Sounds",
+    "sourceName": "ARD",
+    "url": "https://www.ardsounds.de/",
+    "canonicalUrl": "https://www.ardsounds.de/",
+    "primaryCategory": "listening",
+    "levels": [
+      "B1",
+      "B2",
+      "C1",
+      "C2"
+    ],
+    "price": "free",
+    "access": "open",
+    "skills": [
+      "听力"
+    ],
+    "formats": [
+      "音频",
+      "播客"
+    ],
+    "descriptionZh": "德国公共广播的播客、广播剧、纪实和电台音频目录。",
+    "howToUseZh": "德国公共广播的播客、广播剧、纪实和电台音频目录。",
+    "tags": [
+      "ARD",
+      "listening"
+    ],
+    "exams": [],
+    "levelBasis": "editorial",
+    "languages": [
+      "德语"
+    ],
+    "rights": "link-only",
+    "status": "published",
+    "linkStatus": "ok",
+    "lastEditorialCheckedAt": "2026-10-04"
+  },
+  {
+    "id": "deutsch-warum-nicht",
+    "slug": "deutsch-warum-nicht",
+    "titleZh": "DW Deutsch – warum nicht? 音频课程",
+    "titleOriginal": "Deutsch – warum nicht?",
+    "sourceName": "Deutsche Welle",
+    "url": "https://learngerman.dw.com/de/deutsch-warum-nicht/s-2163",
+    "canonicalUrl": "https://learngerman.dw.com/de/deutsch-warum-nicht/s-2163",
+    "primaryCategory": "listening",
+    "levels": [
+      "A1",
+      "A2",
+      "B1"
+    ],
+    "price": "free",
+    "access": "open",
+    "skills": [
+      "听力",
+      "综合"
+    ],
+    "formats": [
+      "音频",
+      "课程"
+    ],
+    "descriptionZh": "DW 情景音频德语课程入口，提供多语版本与配套资料。",
+    "howToUseZh": "DW 情景音频德语课程入口，提供多语版本与配套资料。",
+    "tags": [
+      "Deutsche Welle",
+      "listening"
+    ],
+    "exams": [],
+    "levelBasis": "editorial",
+    "languages": [
+      "德语"
+    ],
+    "rights": "link-only",
+    "status": "published",
+    "linkStatus": "ok",
+    "lastEditorialCheckedAt": "2026-10-04"
+  },
+  {
+    "id": "youglish-de",
+    "slug": "youglish-de",
+    "titleZh": "YouGlish 德语发音例句",
+    "titleOriginal": "YouGlish German",
+    "sourceName": "YouGlish",
+    "url": "https://youglish.com/german",
+    "canonicalUrl": "https://youglish.com/german",
+    "primaryCategory": "speaking",
+    "levels": [
+      "A2",
+      "B1",
+      "B2",
+      "C1"
+    ],
+    "price": "freemium",
+    "access": "open",
+    "skills": [
+      "发音",
+      "听力"
+    ],
+    "formats": [
+      "视频",
+      "例句"
+    ],
+    "descriptionZh": "通过真实公开视频检索词语在德语语境中的发音。",
+    "howToUseZh": "通过真实公开视频检索词语在德语语境中的发音。",
+    "tags": [
+      "YouGlish",
+      "speaking"
+    ],
+    "exams": [],
+    "levelBasis": "editorial",
+    "languages": [
+      "德语"
+    ],
+    "rights": "link-only",
+    "status": "published",
+    "linkStatus": "restricted"
+  },
+  {
+    "id": "italki-de",
+    "slug": "italki-de",
+    "titleZh": "italki 德语教师目录",
+    "titleOriginal": "italki",
+    "sourceName": "italki",
+    "url": "https://www.italki.com/",
+    "canonicalUrl": "https://www.italki.com/",
+    "primaryCategory": "speaking",
+    "levels": [
+      "A1",
+      "A2",
+      "B1",
+      "B2",
+      "C1",
+      "C2"
+    ],
+    "price": "paid",
+    "access": "registration",
+    "skills": [
+      "口语"
+    ],
+    "formats": [
+      "教师",
+      "课程"
+    ],
+    "descriptionZh": "在线语言教师和一对一课程目录，教师资历、价格和时间由各自页面标注。",
+    "howToUseZh": "在线语言教师和一对一课程目录，教师资历、价格和时间由各自页面标注。",
+    "tags": [
+      "italki",
+      "speaking"
+    ],
+    "exams": [],
+    "levelBasis": "editorial",
+    "languages": [
+      "德语"
+    ],
+    "rights": "link-only",
+    "status": "published",
+    "linkStatus": "ok",
+    "lastEditorialCheckedAt": "2026-10-04"
+  },
+  {
+    "id": "preply-de",
+    "slug": "preply-de",
+    "titleZh": "Preply 德语教师目录",
+    "titleOriginal": "Preply German tutors",
+    "sourceName": "Preply",
+    "url": "https://preply.com/en/online/german-tutors",
+    "canonicalUrl": "https://preply.com/en/online/german-tutors",
+    "primaryCategory": "speaking",
+    "levels": [
+      "A1",
+      "A2",
+      "B1",
+      "B2",
+      "C1"
+    ],
+    "price": "paid",
+    "access": "registration",
+    "skills": [
+      "口语"
+    ],
+    "formats": [
+      "教师",
+      "课程"
+    ],
+    "descriptionZh": "可按费用、可约时间和语言筛选在线德语教师。",
+    "howToUseZh": "可按费用、可约时间和语言筛选在线德语教师。",
+    "tags": [
+      "Preply",
+      "speaking"
+    ],
+    "exams": [],
+    "levelBasis": "editorial",
+    "languages": [
+      "德语"
+    ],
+    "rights": "link-only",
+    "status": "published",
+    "linkStatus": "ok",
+    "lastEditorialCheckedAt": "2026-10-04"
+  },
+  {
+    "id": "conversationexchange",
+    "slug": "conversationexchange",
+    "titleZh": "ConversationExchange 语伴目录",
+    "titleOriginal": "ConversationExchange",
+    "sourceName": "ConversationExchange",
+    "url": "https://www.conversationexchange.com/",
+    "canonicalUrl": "https://www.conversationexchange.com/",
+    "primaryCategory": "speaking",
+    "levels": [
+      "A1",
+      "A2",
+      "B1",
+      "B2",
+      "C1",
+      "C2"
+    ],
+    "price": "free",
+    "access": "registration",
+    "skills": [
+      "口语"
+    ],
+    "formats": [
+      "语伴"
+    ],
+    "descriptionZh": "按城市和语言查找笔友、线上或线下语言交换伙伴。",
+    "howToUseZh": "按城市和语言查找笔友、线上或线下语言交换伙伴。",
+    "tags": [
+      "ConversationExchange",
+      "speaking"
+    ],
+    "exams": [],
+    "levelBasis": "editorial",
+    "languages": [
+      "德语"
+    ],
+    "rights": "link-only",
+    "status": "published",
+    "linkStatus": "ok",
+    "lastEditorialCheckedAt": "2026-10-04"
+  },
+  {
+    "id": "speechling",
+    "slug": "speechling",
+    "titleZh": "Speechling 发音与句子音频",
+    "titleOriginal": "Speechling",
+    "sourceName": "Speechling",
+    "url": "https://speechling.com/",
+    "canonicalUrl": "https://speechling.com/",
+    "primaryCategory": "speaking",
+    "levels": [
+      "A1",
+      "A2",
+      "B1",
+      "B2"
+    ],
+    "price": "freemium",
+    "access": "registration",
+    "skills": [
+      "发音",
+      "口语",
+      "听力"
+    ],
+    "formats": [
+      "应用",
+      "音频"
+    ],
+    "descriptionZh": "提供真人句子音频、录音对照及部分付费发音反馈服务。",
+    "howToUseZh": "提供真人句子音频、录音对照及部分付费发音反馈服务。",
+    "tags": [
+      "Speechling",
+      "speaking"
+    ],
+    "exams": [],
+    "levelBasis": "editorial",
+    "languages": [
+      "德语"
+    ],
+    "rights": "link-only",
+    "status": "published",
+    "linkStatus": "ok",
+    "lastEditorialCheckedAt": "2026-10-04"
+  },
+  {
+    "id": "gutenberg-org-de",
+    "slug": "gutenberg-org-de",
+    "titleZh": "Project Gutenberg 德语电子书",
+    "titleOriginal": "Project Gutenberg German",
+    "sourceName": "Project Gutenberg",
+    "url": "https://www.gutenberg.org/browse/languages/de",
+    "canonicalUrl": "https://www.gutenberg.org/browse/languages/de",
+    "primaryCategory": "reading",
+    "levels": [
+      "B1",
+      "B2",
+      "C1",
+      "C2"
+    ],
+    "price": "free",
+    "access": "open",
+    "skills": [
+      "阅读"
+    ],
+    "formats": [
+      "电子书"
+    ],
+    "descriptionZh": "德语公版电子书目录，提供网页、EPUB 等格式；版权适用范围依所在地区而异。",
+    "howToUseZh": "德语公版电子书目录，提供网页、EPUB 等格式；版权适用范围依所在地区而异。",
+    "tags": [
+      "Project Gutenberg",
+      "reading"
+    ],
+    "exams": [],
+    "levelBasis": "editorial",
+    "languages": [
+      "德语"
+    ],
+    "rights": "link-only",
+    "status": "published",
+    "linkStatus": "ok",
+    "lastEditorialCheckedAt": "2026-10-04"
+  },
+  {
+    "id": "deutschestextarchiv",
+    "slug": "deutschestextarchiv",
+    "titleZh": "德国历史文本档案",
+    "titleOriginal": "Deutsches Textarchiv",
+    "sourceName": "Berlin-Brandenburgische Akademie der Wissenschaften",
+    "url": "https://www.deutschestextarchiv.de/",
+    "canonicalUrl": "https://www.deutschestextarchiv.de/",
+    "primaryCategory": "reading",
+    "levels": [
+      "C1",
+      "C2"
+    ],
+    "price": "free",
+    "access": "open",
+    "skills": [
+      "阅读"
+    ],
+    "formats": [
+      "语料",
+      "电子书"
+    ],
+    "descriptionZh": "历史德语文本、原书影像与转录语料，适合文学和语言研究。",
+    "howToUseZh": "历史德语文本、原书影像与转录语料，适合文学和语言研究。",
+    "tags": [
+      "Berlin-Brandenburgische Akademie der Wissenschaften",
+      "reading"
+    ],
+    "exams": [],
+    "levelBasis": "editorial",
+    "languages": [
+      "德语"
+    ],
+    "rights": "link-only",
+    "status": "published",
+    "linkStatus": "ok",
+    "lastEditorialCheckedAt": "2026-10-04"
+  },
+  {
+    "id": "vorleser",
+    "slug": "vorleser",
+    "titleZh": "Vorleser.net 有声书与原文",
+    "titleOriginal": "Vorleser.net",
+    "sourceName": "Vorleser.net",
+    "url": "https://www.vorleser.net/",
+    "canonicalUrl": "https://www.vorleser.net/",
+    "primaryCategory": "reading",
+    "levels": [
+      "B1",
+      "B2",
+      "C1",
+      "C2"
+    ],
+    "price": "freemium",
+    "access": "open",
+    "skills": [
+      "阅读",
+      "听力"
+    ],
+    "formats": [
+      "有声书"
+    ],
+    "descriptionZh": "德语文学朗读目录，部分作品提供免费音频和原文。",
+    "howToUseZh": "德语文学朗读目录，部分作品提供免费音频和原文。",
+    "tags": [
+      "Vorleser.net",
+      "reading"
+    ],
+    "exams": [],
+    "levelBasis": "editorial",
+    "languages": [
+      "德语"
+    ],
+    "rights": "link-only",
+    "status": "published",
+    "linkStatus": "ok",
+    "lastEditorialCheckedAt": "2026-10-04"
+  },
+  {
+    "id": "lingua-reading",
+    "slug": "lingua-reading",
+    "titleZh": "Lingua 德语短文与理解题",
+    "titleOriginal": "Lingua German texts",
+    "sourceName": "Lingua.com",
+    "url": "https://lingua.com/german/reading/",
+    "canonicalUrl": "https://lingua.com/german/reading/",
+    "primaryCategory": "reading",
+    "levels": [
+      "A1",
+      "A2",
+      "B1",
+      "B2"
+    ],
+    "price": "freemium",
+    "access": "open",
+    "skills": [
+      "阅读"
+    ],
+    "formats": [
+      "文章",
+      "练习"
+    ],
+    "descriptionZh": "按难度整理德语短文及阅读理解题，部分内容属于付费版。",
+    "howToUseZh": "按难度整理德语短文及阅读理解题，部分内容属于付费版。",
+    "tags": [
+      "Lingua.com",
+      "reading"
+    ],
+    "exams": [],
+    "levelBasis": "editorial",
+    "languages": [
+      "德语"
+    ],
+    "rights": "link-only",
+    "status": "published",
+    "linkStatus": "ok",
+    "lastEditorialCheckedAt": "2026-10-04"
+  },
+  {
+    "id": "deutsch-perfekt-audio",
+    "slug": "deutsch-perfekt-audio",
+    "titleZh": "Deutsch perfekt 德语阅读杂志",
+    "titleOriginal": "Deutsch perfekt",
+    "sourceName": "ZEIT SPRACHEN",
+    "url": "https://www.deutsch-perfekt.com/",
+    "canonicalUrl": "https://www.deutsch-perfekt.com/",
+    "primaryCategory": "reading",
+    "levels": [
+      "A2",
+      "B1",
+      "B2",
+      "C1"
+    ],
+    "price": "freemium",
+    "access": "open",
+    "skills": [
+      "阅读",
+      "词汇"
+    ],
+    "formats": [
+      "杂志",
+      "文章"
+    ],
+    "descriptionZh": "带难度标记和词汇解释的德语杂志及在线文章，部分内容收费。",
+    "howToUseZh": "带难度标记和词汇解释的德语杂志及在线文章，部分内容收费。",
+    "tags": [
+      "ZEIT SPRACHEN",
+      "reading"
+    ],
+    "exams": [],
+    "levelBasis": "editorial",
+    "languages": [
+      "德语"
+    ],
+    "rights": "link-only",
+    "status": "published",
+    "linkStatus": "ok",
+    "lastEditorialCheckedAt": "2026-10-04"
+  },
+  {
+    "id": "schreibzentrum-uni",
+    "slug": "schreibzentrum-uni",
+    "titleZh": "比勒费尔德大学写作中心",
+    "titleOriginal": "Schreiblabor",
+    "sourceName": "Universität Bielefeld",
+    "url": "https://www.uni-bielefeld.de/einrichtungen/schreiblabor/",
+    "canonicalUrl": "https://www.uni-bielefeld.de/einrichtungen/schreiblabor/",
+    "primaryCategory": "writing",
+    "levels": [
+      "B2",
+      "C1",
+      "C2"
+    ],
+    "price": "free",
+    "access": "open",
+    "skills": [
+      "写作"
+    ],
+    "formats": [
+      "参考"
+    ],
+    "descriptionZh": "大学学术写作中心，提供写作相关的公开资料和服务信息。",
+    "howToUseZh": "大学学术写作中心，提供写作相关的公开资料和服务信息。",
+    "tags": [
+      "Universität Bielefeld",
+      "writing"
+    ],
+    "exams": [],
+    "levelBasis": "editorial",
+    "languages": [
+      "德语"
+    ],
+    "rights": "link-only",
+    "status": "published",
+    "linkStatus": "ok",
+    "lastEditorialCheckedAt": "2026-10-04"
+  },
+  {
+    "id": "duden-mentor",
+    "slug": "duden-mentor",
+    "titleZh": "Duden Mentor 写作检查",
+    "titleOriginal": "Duden Mentor",
+    "sourceName": "Duden",
+    "url": "https://mentor.duden.de/",
+    "canonicalUrl": "https://mentor.duden.de/",
+    "primaryCategory": "writing",
+    "levels": [
+      "A2",
+      "B1",
+      "B2",
+      "C1",
+      "C2"
+    ],
+    "price": "freemium",
+    "access": "open",
+    "skills": [
+      "写作",
+      "语法"
+    ],
+    "formats": [
+      "工具"
+    ],
+    "descriptionZh": "在线检查德语拼写、语法和部分风格问题，免费版与订阅版功能不同。",
+    "howToUseZh": "在线检查德语拼写、语法和部分风格问题，免费版与订阅版功能不同。",
+    "tags": [
+      "Duden",
+      "writing"
+    ],
+    "exams": [],
+    "levelBasis": "editorial",
+    "languages": [
+      "德语"
+    ],
+    "rights": "link-only",
+    "status": "published",
+    "linkStatus": "ok",
+    "lastEditorialCheckedAt": "2026-10-04"
+  },
+  {
+    "id": "deepl-translator",
+    "slug": "deepl-translator",
+    "titleZh": "DeepL 德语翻译工具",
+    "titleOriginal": "DeepL Translator",
+    "sourceName": "DeepL",
+    "url": "https://www.deepl.com/translator",
+    "canonicalUrl": "https://www.deepl.com/translator",
+    "primaryCategory": "writing",
+    "levels": [
+      "A1",
+      "A2",
+      "B1",
+      "B2",
+      "C1",
+      "C2"
+    ],
+    "price": "freemium",
+    "access": "open",
+    "skills": [
+      "写作",
+      "阅读"
+    ],
+    "formats": [
+      "工具"
+    ],
+    "descriptionZh": "德语与多种语言互译，提供免费网页入口和付费扩展。",
+    "howToUseZh": "德语与多种语言互译，提供免费网页入口和付费扩展。",
+    "tags": [
+      "DeepL",
+      "writing"
+    ],
+    "exams": [],
+    "levelBasis": "editorial",
+    "languages": [
+      "德语"
+    ],
+    "rights": "link-only",
+    "status": "published",
+    "linkStatus": "ok",
+    "lastEditorialCheckedAt": "2026-10-04"
+  },
+  {
+    "id": "quillbot-de",
+    "slug": "quillbot-de",
+    "titleZh": "QuillBot 德语语法检查",
+    "titleOriginal": "QuillBot Grammar Checker",
+    "sourceName": "QuillBot",
+    "url": "https://quillbot.com/grammar-check",
+    "canonicalUrl": "https://quillbot.com/grammar-check",
+    "primaryCategory": "writing",
+    "levels": [
+      "A2",
+      "B1",
+      "B2",
+      "C1"
+    ],
+    "price": "freemium",
+    "access": "open",
+    "skills": [
+      "写作",
+      "语法"
+    ],
+    "formats": [
+      "工具"
+    ],
+    "descriptionZh": "多语在线语法检查工具，包含德语支持；功能与额度依当前版本。",
+    "howToUseZh": "多语在线语法检查工具，包含德语支持；功能与额度依当前版本。",
+    "tags": [
+      "QuillBot",
+      "writing"
+    ],
+    "exams": [],
+    "levelBasis": "editorial",
+    "languages": [
+      "德语"
+    ],
+    "rights": "link-only",
+    "status": "published",
+    "linkStatus": "restricted"
+  },
+  {
+    "id": "bpb",
+    "slug": "bpb",
+    "titleZh": "德国联邦政治教育中心",
+    "titleOriginal": "Bundeszentrale für politische Bildung",
+    "sourceName": "bpb",
+    "url": "https://www.bpb.de/",
+    "canonicalUrl": "https://www.bpb.de/",
+    "primaryCategory": "news",
+    "levels": [
+      "B2",
+      "C1",
+      "C2"
+    ],
+    "price": "free",
+    "access": "open",
+    "skills": [
+      "阅读",
+      "听力"
+    ],
+    "formats": [
+      "文章",
+      "视频",
+      "PDF"
+    ],
+    "descriptionZh": "政治、历史与社会主题的公共教育资料，包括文章、专题和音视频。",
+    "howToUseZh": "政治、历史与社会主题的公共教育资料，包括文章、专题和音视频。",
+    "tags": [
+      "bpb",
+      "news"
+    ],
+    "exams": [],
+    "levelBasis": "editorial",
+    "languages": [
+      "德语"
+    ],
+    "rights": "link-only",
+    "status": "published",
+    "linkStatus": "ok",
+    "lastEditorialCheckedAt": "2026-10-04"
+  },
+  {
+    "id": "bpb-einfach",
+    "slug": "bpb-einfach",
+    "titleZh": "bpb 简明语言资料",
+    "titleOriginal": "Einfach POLITIK",
+    "sourceName": "bpb",
+    "url": "https://www.bpb.de/themen/politik-einfach-fuer-alle/",
+    "canonicalUrl": "https://www.bpb.de/themen/politik-einfach-fuer-alle/",
+    "primaryCategory": "news",
+    "levels": [
+      "A2",
+      "B1",
+      "B2"
+    ],
+    "price": "free",
+    "access": "open",
+    "skills": [
+      "阅读",
+      "听力"
+    ],
+    "formats": [
+      "文章",
+      "PDF"
+    ],
+    "descriptionZh": "以简单或易读语言呈现的政治和社会资料。",
+    "howToUseZh": "以简单或易读语言呈现的政治和社会资料。",
+    "tags": [
+      "bpb",
+      "news"
+    ],
+    "exams": [],
+    "levelBasis": "editorial",
+    "languages": [
+      "德语"
+    ],
+    "rights": "link-only",
+    "status": "published",
+    "linkStatus": "ok",
+    "lastEditorialCheckedAt": "2026-10-04"
+  },
+  {
+    "id": "deutschland-de",
+    "slug": "deutschland-de",
+    "titleZh": "Deutschland.de 德国资讯",
+    "titleOriginal": "Deutschland.de",
+    "sourceName": "Deutschland.de",
+    "url": "https://www.deutschland.de/de",
+    "canonicalUrl": "https://www.deutschland.de/de",
+    "primaryCategory": "news",
+    "levels": [
+      "B1",
+      "B2",
+      "C1"
+    ],
+    "price": "free",
+    "access": "open",
+    "skills": [
+      "阅读"
+    ],
+    "formats": [
+      "文章"
+    ],
+    "descriptionZh": "德国社会、文化、教育和工作资讯，部分文章提供多语版本。",
+    "howToUseZh": "德国社会、文化、教育和工作资讯，部分文章提供多语版本。",
+    "tags": [
+      "Deutschland.de",
+      "news"
+    ],
+    "exams": [],
+    "levelBasis": "editorial",
+    "languages": [
+      "德语"
+    ],
+    "rights": "link-only",
+    "status": "published",
+    "linkStatus": "ok",
+    "lastEditorialCheckedAt": "2026-10-04"
+  },
+  {
+    "id": "zeit",
+    "slug": "zeit",
+    "titleZh": "DIE ZEIT 新闻与长篇阅读",
+    "titleOriginal": "ZEIT ONLINE",
+    "sourceName": "ZEIT ONLINE",
+    "url": "https://www.zeit.de/",
+    "canonicalUrl": "https://www.zeit.de/",
+    "primaryCategory": "news",
+    "levels": [
+      "B2",
+      "C1",
+      "C2"
+    ],
+    "price": "freemium",
+    "access": "open",
+    "skills": [
+      "阅读"
+    ],
+    "formats": [
+      "新闻",
+      "文章"
+    ],
+    "descriptionZh": "德语新闻、评论与长篇报道，部分文章需订阅。",
+    "howToUseZh": "德语新闻、评论与长篇报道，部分文章需订阅。",
+    "tags": [
+      "ZEIT ONLINE",
+      "news"
+    ],
+    "exams": [],
+    "levelBasis": "editorial",
+    "languages": [
+      "德语"
+    ],
+    "rights": "link-only",
+    "status": "published",
+    "linkStatus": "restricted"
+  },
+  {
+    "id": "dw-top-thema",
+    "slug": "dw-top-thema",
+    "titleZh": "DW Top-Thema 新闻与词汇",
+    "titleOriginal": "Top-Thema mit Vokabeln",
+    "sourceName": "Deutsche Welle",
+    "url": "https://learngerman.dw.com/de/top-thema/s-55861562",
+    "canonicalUrl": "https://learngerman.dw.com/de/top-thema/s-55861562",
+    "primaryCategory": "news",
+    "levels": [
+      "B1",
+      "B2"
+    ],
+    "price": "free",
+    "access": "open",
+    "skills": [
+      "听力",
+      "阅读",
+      "词汇"
+    ],
+    "formats": [
+      "音频",
+      "文章",
+      "练习"
+    ],
+    "descriptionZh": "以时事为主题的短音频，配有文本、词汇和练习。",
+    "howToUseZh": "以时事为主题的短音频，配有文本、词汇和练习。",
+    "tags": [
+      "Deutsche Welle",
+      "news"
+    ],
+    "exams": [],
+    "levelBasis": "editorial",
+    "languages": [
+      "德语"
+    ],
+    "rights": "link-only",
+    "status": "published",
+    "linkStatus": "ok",
+    "lastEditorialCheckedAt": "2026-10-04"
+  },
+  {
+    "id": "dw-langsam",
+    "slug": "dw-langsam",
+    "titleZh": "DW 慢速德语新闻",
+    "titleOriginal": "Langsam gesprochene Nachrichten",
+    "sourceName": "Deutsche Welle",
+    "url": "https://learngerman.dw.com/de/langsam-gesprochene-nachrichten/s-60040332",
+    "canonicalUrl": "https://learngerman.dw.com/de/langsam-gesprochene-nachrichten/s-60040332",
+    "primaryCategory": "news",
+    "levels": [
+      "B2",
+      "C1"
+    ],
+    "price": "free",
+    "access": "open",
+    "skills": [
+      "听力",
+      "阅读"
+    ],
+    "formats": [
+      "音频",
+      "新闻"
+    ],
+    "descriptionZh": "以较慢语速播报德语新闻，并提供文字稿。",
+    "howToUseZh": "以较慢语速播报德语新闻，并提供文字稿。",
+    "tags": [
+      "Deutsche Welle",
+      "news"
+    ],
+    "exams": [],
+    "levelBasis": "editorial",
+    "languages": [
+      "德语"
+    ],
+    "rights": "link-only",
+    "status": "published",
+    "linkStatus": "ok",
+    "lastEditorialCheckedAt": "2026-10-04"
+  },
+  {
+    "id": "ard-mediathek",
+    "slug": "ard-mediathek",
+    "titleZh": "ARD 公共电视媒体库",
+    "titleOriginal": "ARD Mediathek",
+    "sourceName": "ARD",
+    "url": "https://www.ardmediathek.de/",
+    "canonicalUrl": "https://www.ardmediathek.de/",
+    "primaryCategory": "video",
+    "levels": [
+      "B1",
+      "B2",
+      "C1",
+      "C2"
+    ],
+    "price": "free",
+    "access": "open",
+    "skills": [
+      "听力"
+    ],
+    "formats": [
+      "视频",
+      "纪录片"
+    ],
+    "descriptionZh": "德国公共电视的电视剧、纪录片和新闻目录，部分视频受地区或播放期限限制。",
+    "howToUseZh": "德国公共电视的电视剧、纪录片和新闻目录，部分视频受地区或播放期限限制。",
+    "tags": [
+      "ARD",
+      "video"
+    ],
+    "exams": [],
+    "levelBasis": "editorial",
+    "languages": [
+      "德语"
+    ],
+    "rights": "link-only",
+    "status": "published",
+    "linkStatus": "ok",
+    "lastEditorialCheckedAt": "2026-10-04"
+  },
+  {
+    "id": "zdf-mediathek",
+    "slug": "zdf-mediathek",
+    "titleZh": "ZDF 公共电视媒体库",
+    "titleOriginal": "ZDF",
+    "sourceName": "ZDF",
+    "url": "https://www.zdf.de/",
+    "canonicalUrl": "https://www.zdf.de/",
+    "primaryCategory": "video",
+    "levels": [
+      "B1",
+      "B2",
+      "C1",
+      "C2"
+    ],
+    "price": "free",
+    "access": "open",
+    "skills": [
+      "听力"
+    ],
+    "formats": [
+      "视频",
+      "纪录片"
+    ],
+    "descriptionZh": "德国公共电视节目库，包含字幕节目、纪录片和新闻；部分内容有地区限制。",
+    "howToUseZh": "德国公共电视节目库，包含字幕节目、纪录片和新闻；部分内容有地区限制。",
+    "tags": [
+      "ZDF",
+      "video"
+    ],
+    "exams": [],
+    "levelBasis": "editorial",
+    "languages": [
+      "德语"
+    ],
+    "rights": "link-only",
+    "status": "published",
+    "linkStatus": "ok",
+    "lastEditorialCheckedAt": "2026-10-04"
+  },
+  {
+    "id": "arte-de",
+    "slug": "arte-de",
+    "titleZh": "ARTE 德语纪录片与文化节目",
+    "titleOriginal": "ARTE",
+    "sourceName": "ARTE",
+    "url": "https://www.arte.tv/de/",
+    "canonicalUrl": "https://www.arte.tv/de/",
+    "primaryCategory": "video",
+    "levels": [
+      "B1",
+      "B2",
+      "C1",
+      "C2"
+    ],
+    "price": "free",
+    "access": "open",
+    "skills": [
+      "听力"
+    ],
+    "formats": [
+      "视频",
+      "纪录片"
+    ],
+    "descriptionZh": "德法公共文化频道的德语节目，涵盖纪录片、艺术和电影，部分受地区限制。",
+    "howToUseZh": "德法公共文化频道的德语节目，涵盖纪录片、艺术和电影，部分受地区限制。",
+    "tags": [
+      "ARTE",
+      "video"
+    ],
+    "exams": [],
+    "levelBasis": "editorial",
+    "languages": [
+      "德语"
+    ],
+    "rights": "link-only",
+    "status": "published",
+    "linkStatus": "ok",
+    "lastEditorialCheckedAt": "2026-10-04"
+  },
+  {
+    "id": "deutsch-fuer-euch",
+    "slug": "deutsch-fuer-euch",
+    "titleZh": "Deutsch für Euch 德语频道",
+    "titleOriginal": "Deutsch für Euch",
+    "sourceName": "Deutsch für Euch",
+    "url": "https://www.youtube.com/@DeutschFuerEuch",
+    "canonicalUrl": "https://www.youtube.com/@DeutschFuerEuch",
+    "primaryCategory": "video",
+    "levels": [
+      "A1",
+      "A2",
+      "B1",
+      "B2"
+    ],
+    "price": "free",
+    "access": "open",
+    "skills": [
+      "语法",
+      "听力"
+    ],
+    "formats": [
+      "视频"
+    ],
+    "descriptionZh": "以英语讲解德语语法、发音和文化的公开视频频道。",
+    "howToUseZh": "以英语讲解德语语法、发音和文化的公开视频频道。",
+    "tags": [
+      "Deutsch für Euch",
+      "video"
+    ],
+    "exams": [],
+    "levelBasis": "editorial",
+    "languages": [
+      "德语"
+    ],
+    "rights": "link-only",
+    "status": "published",
+    "linkStatus": "ok",
+    "lastEditorialCheckedAt": "2026-10-04"
+  },
+  {
+    "id": "learn-german-anja",
+    "slug": "learn-german-anja",
+    "titleZh": "Learn German with Anja",
+    "titleOriginal": "Learn German with Anja",
+    "sourceName": "Learn German with Anja",
+    "url": "https://www.youtube.com/@LearnGermanwithAnja",
+    "canonicalUrl": "https://www.youtube.com/@LearnGermanwithAnja",
+    "primaryCategory": "video",
+    "levels": [
+      "A1",
+      "A2",
+      "B1"
+    ],
+    "price": "freemium",
+    "access": "open",
+    "skills": [
+      "听力",
+      "口语"
+    ],
+    "formats": [
+      "视频"
+    ],
+    "descriptionZh": "情境德语和日常表达视频频道，公开内容与付费课程分开提供。",
+    "howToUseZh": "情境德语和日常表达视频频道，公开内容与付费课程分开提供。",
+    "tags": [
+      "Learn German with Anja",
+      "video"
+    ],
+    "exams": [],
+    "levelBasis": "editorial",
+    "languages": [
+      "德语"
+    ],
+    "rights": "link-only",
+    "status": "published",
+    "linkStatus": "ok",
+    "lastEditorialCheckedAt": "2026-10-04"
+  },
+  {
+    "id": "learn-german",
+    "slug": "learn-german",
+    "titleZh": "Learn German 分级视频",
+    "titleOriginal": "Learn German",
+    "sourceName": "Learn German",
+    "url": "https://www.youtube.com/@LearnGermanOriginal",
+    "canonicalUrl": "https://www.youtube.com/@LearnGermanOriginal",
+    "primaryCategory": "video",
+    "levels": [
+      "A1",
+      "A2",
+      "B1",
+      "B2"
+    ],
+    "price": "free",
+    "access": "open",
+    "skills": [
+      "语法",
+      "听力"
+    ],
+    "formats": [
+      "视频"
+    ],
+    "descriptionZh": "按等级与主题组织的德语讲解和练习视频频道。",
+    "howToUseZh": "按等级与主题组织的德语讲解和练习视频频道。",
+    "tags": [
+      "Learn German",
+      "video"
+    ],
+    "exams": [],
+    "levelBasis": "editorial",
+    "languages": [
+      "德语"
+    ],
+    "rights": "link-only",
+    "status": "published",
+    "linkStatus": "ok",
+    "lastEditorialCheckedAt": "2026-10-04"
+  },
+  {
+    "id": "deutsch-mit-rieke",
+    "slug": "deutsch-mit-rieke",
+    "titleZh": "Deutsch mit Rieke",
+    "titleOriginal": "Deutsch mit Rieke",
+    "sourceName": "Deutsch mit Rieke",
+    "url": "https://www.youtube.com/@DeutschmitRieke",
+    "canonicalUrl": "https://www.youtube.com/@DeutschmitRieke",
+    "primaryCategory": "video",
+    "levels": [
+      "B1",
+      "B2",
+      "C1"
+    ],
+    "price": "freemium",
+    "access": "open",
+    "skills": [
+      "听力",
+      "词汇"
+    ],
+    "formats": [
+      "视频"
+    ],
+    "descriptionZh": "以德语讲解词汇、表达和日常话题的频道，另提供付费材料。",
+    "howToUseZh": "以德语讲解词汇、表达和日常话题的频道，另提供付费材料。",
+    "tags": [
+      "Deutsch mit Rieke",
+      "video"
+    ],
+    "exams": [],
+    "levelBasis": "editorial",
+    "languages": [
+      "德语"
+    ],
+    "rights": "link-only",
+    "status": "published",
+    "linkStatus": "ok",
+    "lastEditorialCheckedAt": "2026-10-04"
+  },
+  {
+    "id": "smarter-german",
+    "slug": "smarter-german",
+    "titleZh": "SmarterGerman",
+    "titleOriginal": "SmarterGerman",
+    "sourceName": "SmarterGerman",
+    "url": "https://smartergerman.com/",
+    "canonicalUrl": "https://smartergerman.com/",
+    "primaryCategory": "courses",
+    "levels": [
+      "A1",
+      "A2",
+      "B1",
+      "B2"
+    ],
+    "price": "paid",
+    "access": "registration",
+    "skills": [
+      "综合"
+    ],
+    "formats": [
+      "课程",
+      "视频"
+    ],
+    "descriptionZh": "在线德语课程平台，提供分级课程和部分公开文章。",
+    "howToUseZh": "在线德语课程平台，提供分级课程和部分公开文章。",
+    "tags": [
+      "SmarterGerman",
+      "video"
+    ],
+    "exams": [],
+    "levelBasis": "editorial",
+    "languages": [
+      "德语"
+    ],
+    "rights": "link-only",
+    "status": "published",
+    "linkStatus": "ok",
+    "lastEditorialCheckedAt": "2026-10-04"
+  },
+  {
+    "id": "duolingo",
+    "slug": "duolingo",
+    "titleZh": "Duolingo 德语应用",
+    "titleOriginal": "Duolingo",
+    "sourceName": "Duolingo",
+    "url": "https://www.duolingo.com/",
+    "canonicalUrl": "https://www.duolingo.com/",
+    "primaryCategory": "tools",
+    "levels": [
+      "A1",
+      "A2",
+      "B1"
+    ],
+    "price": "freemium",
+    "access": "registration",
+    "skills": [
+      "词汇",
+      "综合"
+    ],
+    "formats": [
+      "应用"
+    ],
+    "descriptionZh": "游戏化语言应用，包含德语课程、基础词汇与短练习。",
+    "howToUseZh": "游戏化语言应用，包含德语课程、基础词汇与短练习。",
+    "tags": [
+      "Duolingo",
+      "tools"
+    ],
+    "exams": [],
+    "levelBasis": "editorial",
+    "languages": [
+      "德语"
+    ],
+    "rights": "link-only",
+    "status": "published",
+    "linkStatus": "ok",
+    "lastEditorialCheckedAt": "2026-10-04"
+  },
+  {
+    "id": "busuu",
+    "slug": "busuu",
+    "titleZh": "Busuu 德语应用",
+    "titleOriginal": "Busuu",
+    "sourceName": "Busuu",
+    "url": "https://www.busuu.com/",
+    "canonicalUrl": "https://www.busuu.com/",
+    "primaryCategory": "tools",
+    "levels": [
+      "A1",
+      "A2",
+      "B1",
+      "B2"
+    ],
+    "price": "freemium",
+    "access": "registration",
+    "skills": [
+      "综合"
+    ],
+    "formats": [
+      "应用",
+      "课程"
+    ],
+    "descriptionZh": "分级语言课程和社区互动应用，德语课程的部分功能需订阅。",
+    "howToUseZh": "分级语言课程和社区互动应用，德语课程的部分功能需订阅。",
+    "tags": [
+      "Busuu",
+      "tools"
+    ],
+    "exams": [],
+    "levelBasis": "editorial",
+    "languages": [
+      "德语"
+    ],
+    "rights": "link-only",
+    "status": "published",
+    "linkStatus": "ok",
+    "lastEditorialCheckedAt": "2026-10-04"
+  },
+  {
+    "id": "babbel",
+    "slug": "babbel",
+    "titleZh": "Babbel 德语课程应用",
+    "titleOriginal": "Babbel",
+    "sourceName": "Babbel",
+    "url": "https://www.babbel.com/",
+    "canonicalUrl": "https://www.babbel.com/",
+    "primaryCategory": "tools",
+    "levels": [
+      "A1",
+      "A2",
+      "B1",
+      "B2"
+    ],
+    "price": "paid",
+    "access": "registration",
+    "skills": [
+      "综合",
+      "口语"
+    ],
+    "formats": [
+      "应用",
+      "课程"
+    ],
+    "descriptionZh": "以日常对话为内容的语言课程应用，主要通过订阅使用。",
+    "howToUseZh": "以日常对话为内容的语言课程应用，主要通过订阅使用。",
+    "tags": [
+      "Babbel",
+      "tools"
+    ],
+    "exams": [],
+    "levelBasis": "editorial",
+    "languages": [
+      "德语"
+    ],
+    "rights": "link-only",
+    "status": "published",
+    "linkStatus": "ok",
+    "lastEditorialCheckedAt": "2026-10-04"
+  },
+  {
+    "id": "clozemaster",
+    "slug": "clozemaster",
+    "titleZh": "Clozemaster 语境词汇",
+    "titleOriginal": "Clozemaster",
+    "sourceName": "Clozemaster",
+    "url": "https://www.clozemaster.com/",
+    "canonicalUrl": "https://www.clozemaster.com/",
+    "primaryCategory": "tools",
+    "levels": [
+      "A2",
+      "B1",
+      "B2",
+      "C1"
+    ],
+    "price": "freemium",
+    "access": "registration",
+    "skills": [
+      "词汇",
+      "阅读"
+    ],
+    "formats": [
+      "应用",
+      "练习"
+    ],
+    "descriptionZh": "以句子填空方式呈现多语词汇，包含德语语言组合。",
+    "howToUseZh": "以句子填空方式呈现多语词汇，包含德语语言组合。",
+    "tags": [
+      "Clozemaster",
+      "tools"
+    ],
+    "exams": [],
+    "levelBasis": "editorial",
+    "languages": [
+      "德语"
+    ],
+    "rights": "link-only",
+    "status": "published",
+    "linkStatus": "ok",
+    "lastEditorialCheckedAt": "2026-10-04"
+  },
+  {
+    "id": "readlang",
+    "slug": "readlang",
+    "titleZh": "Readlang 网页阅读查词",
+    "titleOriginal": "Readlang",
+    "sourceName": "Readlang",
+    "url": "https://readlang.com/",
+    "canonicalUrl": "https://readlang.com/",
+    "primaryCategory": "tools",
+    "levels": [
+      "A1",
+      "A2",
+      "B1",
+      "B2",
+      "C1"
+    ],
+    "price": "freemium",
+    "access": "registration",
+    "skills": [
+      "阅读",
+      "词汇"
+    ],
+    "formats": [
+      "工具"
+    ],
+    "descriptionZh": "网页及导入文本的点词翻译工具，支持词汇保存与复习。",
+    "howToUseZh": "网页及导入文本的点词翻译工具，支持词汇保存与复习。",
+    "tags": [
+      "Readlang",
+      "tools"
+    ],
+    "exams": [],
+    "levelBasis": "editorial",
+    "languages": [
+      "德语"
+    ],
+    "rights": "link-only",
+    "status": "published",
+    "linkStatus": "ok",
+    "lastEditorialCheckedAt": "2026-10-04"
+  },
+  {
+    "id": "lingq",
+    "slug": "lingq",
+    "titleZh": "LingQ 德语音频文本库",
+    "titleOriginal": "LingQ",
+    "sourceName": "LingQ",
+    "url": "https://www.lingq.com/",
+    "canonicalUrl": "https://www.lingq.com/",
+    "primaryCategory": "tools",
+    "levels": [
+      "A1",
+      "A2",
+      "B1",
+      "B2",
+      "C1"
+    ],
+    "price": "freemium",
+    "access": "registration",
+    "skills": [
+      "听力",
+      "阅读",
+      "词汇"
+    ],
+    "formats": [
+      "应用",
+      "工具"
+    ],
+    "descriptionZh": "结合音频、文本阅读和词汇记录的平台，可导入自己的材料。",
+    "howToUseZh": "结合音频、文本阅读和词汇记录的平台，可导入自己的材料。",
+    "tags": [
+      "LingQ",
+      "tools"
+    ],
+    "exams": [],
+    "levelBasis": "editorial",
+    "languages": [
+      "德语"
+    ],
+    "rights": "link-only",
+    "status": "published",
+    "linkStatus": "ok",
+    "lastEditorialCheckedAt": "2026-10-04"
+  },
+  {
+    "id": "vocabeo",
+    "slug": "vocabeo",
+    "titleZh": "Vocabeo 德语词汇工具",
+    "titleOriginal": "Vocabeo",
+    "sourceName": "Vocabeo",
+    "url": "https://vocabeo.com/",
+    "canonicalUrl": "https://vocabeo.com/",
+    "primaryCategory": "tools",
+    "levels": [
+      "A1",
+      "A2",
+      "B1",
+      "B2"
+    ],
+    "price": "freemium",
+    "access": "registration",
+    "skills": [
+      "词汇"
+    ],
+    "formats": [
+      "工具",
+      "练习"
+    ],
+    "descriptionZh": "德语词汇查询与复习工具，提供释义、例句和词形信息。",
+    "howToUseZh": "德语词汇查询与复习工具，提供释义、例句和词形信息。",
+    "tags": [
+      "Vocabeo",
+      "tools"
+    ],
+    "exams": [],
+    "levelBasis": "editorial",
+    "languages": [
+      "德语"
+    ],
+    "rights": "link-only",
+    "status": "published",
+    "linkStatus": "ok",
+    "lastEditorialCheckedAt": "2026-10-04"
+  },
+  {
+    "id": "subtitle-edit",
+    "slug": "subtitle-edit",
+    "titleZh": "Subtitle Edit 字幕编辑",
+    "titleOriginal": "Subtitle Edit",
+    "sourceName": "Subtitle Edit",
+    "url": "https://www.nikse.dk/subtitleedit",
+    "canonicalUrl": "https://www.nikse.dk/subtitleedit",
+    "primaryCategory": "tools",
+    "levels": [
+      "B1",
+      "B2",
+      "C1"
+    ],
+    "price": "free",
+    "access": "open",
+    "skills": [
+      "听力"
+    ],
+    "formats": [
+      "工具",
+      "字幕"
+    ],
+    "descriptionZh": "开源字幕编辑软件，可处理字幕时间轴、文本和多种字幕格式。",
+    "howToUseZh": "开源字幕编辑软件，可处理字幕时间轴、文本和多种字幕格式。",
+    "tags": [
+      "Subtitle Edit",
+      "tools"
+    ],
+    "exams": [],
+    "levelBasis": "editorial",
+    "languages": [
+      "德语"
+    ],
+    "rights": "link-only",
+    "status": "published",
+    "linkStatus": "ok",
+    "lastEditorialCheckedAt": "2026-10-04"
+  },
+  {
+    "id": "ankiweb",
+    "slug": "ankiweb",
+    "titleZh": "AnkiWeb 同步与公开牌组",
+    "titleOriginal": "AnkiWeb",
+    "sourceName": "Anki",
+    "url": "https://ankiweb.net/",
+    "canonicalUrl": "https://ankiweb.net/",
+    "primaryCategory": "tools",
+    "levels": [
+      "A1",
+      "A2",
+      "B1",
+      "B2",
+      "C1",
+      "C2"
+    ],
+    "price": "free",
+    "access": "registration",
+    "skills": [
+      "词汇"
+    ],
+    "formats": [
+      "工具",
+      "应用"
+    ],
+    "descriptionZh": "Anki 的网页同步与公开牌组平台；共享牌组由各自作者制作。",
+    "howToUseZh": "Anki 的网页同步与公开牌组平台；共享牌组由各自作者制作。",
+    "tags": [
+      "Anki",
+      "tools"
+    ],
+    "exams": [],
+    "levelBasis": "editorial",
+    "languages": [
+      "德语"
+    ],
+    "rights": "link-only",
+    "status": "published",
+    "linkStatus": "ok",
+    "lastEditorialCheckedAt": "2026-10-04"
+  },
+  {
+    "id": "dict-cc-app",
+    "slug": "dict-cc-app",
+    "titleZh": "dict.cc 离线词典应用",
+    "titleOriginal": "dict.cc Apps",
+    "sourceName": "dict.cc",
+    "url": "https://www.dict.cc/?s=about%3Aapps",
+    "canonicalUrl": "https://www.dict.cc/?s=about%3Aapps",
+    "primaryCategory": "tools",
+    "levels": [
+      "A1",
+      "A2",
+      "B1",
+      "B2",
+      "C1"
+    ],
+    "price": "freemium",
+    "access": "open",
+    "skills": [
+      "词汇"
+    ],
+    "formats": [
+      "应用",
+      "词典"
+    ],
+    "descriptionZh": "dict.cc 官方移动应用入口，支持下载语言包用于离线查询。",
+    "howToUseZh": "dict.cc 官方移动应用入口，支持下载语言包用于离线查询。",
+    "tags": [
+      "dict.cc",
+      "tools"
+    ],
+    "exams": [],
+    "levelBasis": "editorial",
+    "languages": [
+      "德语"
+    ],
+    "rights": "link-only",
+    "status": "published",
+    "linkStatus": "ok",
+    "lastEditorialCheckedAt": "2026-10-04"
+  },
+  {
+    "id": "anabin",
+    "slug": "anabin",
+    "titleZh": "anabin 学历与学校认证查询",
+    "titleOriginal": "anabin",
+    "sourceName": "ZAB / KMK",
+    "url": "https://anabin.kmk.org/",
+    "canonicalUrl": "https://anabin.kmk.org/",
+    "primaryCategory": "life",
+    "levels": [
+      "B1",
+      "B2",
+      "C1"
+    ],
+    "price": "free",
+    "access": "open",
+    "skills": [
+      "综合"
+    ],
+    "formats": [
+      "官方信息"
+    ],
+    "descriptionZh": "德国官方国外教育机构与学历认定信息数据库。",
+    "howToUseZh": "德国官方国外教育机构与学历认定信息数据库。",
+    "tags": [
+      "ZAB / KMK",
+      "life"
+    ],
+    "exams": [],
+    "levelBasis": "editorial",
+    "languages": [
+      "德语"
+    ],
+    "rights": "link-only",
+    "status": "published",
+    "linkStatus": "ok",
+    "lastEditorialCheckedAt": "2026-10-04"
+  },
+  {
+    "id": "hochschulkompass",
+    "slug": "hochschulkompass",
+    "titleZh": "Hochschulkompass 德国大学与专业",
+    "titleOriginal": "Hochschulkompass",
+    "sourceName": "Hochschulrektorenkonferenz",
+    "url": "https://www.hochschulkompass.de/",
+    "canonicalUrl": "https://www.hochschulkompass.de/",
+    "primaryCategory": "life",
+    "levels": [
+      "B1",
+      "B2",
+      "C1"
+    ],
+    "price": "free",
+    "access": "open",
+    "skills": [
+      "阅读"
+    ],
+    "formats": [
+      "官方信息",
+      "检索"
+    ],
+    "descriptionZh": "德国高校与学位课程的官方信息检索平台。",
+    "howToUseZh": "德国高校与学位课程的官方信息检索平台。",
+    "tags": [
+      "Hochschulrektorenkonferenz",
+      "life"
+    ],
+    "exams": [],
+    "levelBasis": "editorial",
+    "languages": [
+      "德语"
+    ],
+    "rights": "link-only",
+    "status": "published",
+    "linkStatus": "unchecked"
+  },
+  {
+    "id": "studycheck",
+    "slug": "studycheck",
+    "titleZh": "StudyCheck 德国大学专业评价",
+    "titleOriginal": "StudyCheck",
+    "sourceName": "StudyCheck",
+    "url": "https://www.studycheck.de/",
+    "canonicalUrl": "https://www.studycheck.de/",
+    "primaryCategory": "life",
+    "levels": [
+      "B1",
+      "B2",
+      "C1"
+    ],
+    "price": "free",
+    "access": "open",
+    "skills": [
+      "阅读"
+    ],
+    "formats": [
+      "检索",
+      "评价"
+    ],
+    "descriptionZh": "德国高校和专业评价目录；评价来自用户，不能替代官方招生说明。",
+    "howToUseZh": "德国高校和专业评价目录；评价来自用户，不能替代官方招生说明。",
+    "tags": [
+      "StudyCheck",
+      "life"
+    ],
+    "exams": [],
+    "levelBasis": "editorial",
+    "languages": [
+      "德语"
+    ],
+    "rights": "link-only",
+    "status": "published",
+    "linkStatus": "ok",
+    "lastEditorialCheckedAt": "2026-10-04"
+  },
+  {
+    "id": "anerkennung",
+    "slug": "anerkennung",
+    "titleZh": "德国职业资格认可门户",
+    "titleOriginal": "Anerkennung in Deutschland",
+    "sourceName": "BIBB",
+    "url": "https://www.anerkennung-in-deutschland.de/",
+    "canonicalUrl": "https://www.anerkennung-in-deutschland.de/",
+    "primaryCategory": "life",
+    "levels": [
+      "B1",
+      "B2",
+      "C1"
+    ],
+    "price": "free",
+    "access": "open",
+    "skills": [
+      "综合"
+    ],
+    "formats": [
+      "官方信息"
+    ],
+    "descriptionZh": "德国职业资格认可官方门户，提供流程、办理机构和咨询入口。",
+    "howToUseZh": "德国职业资格认可官方门户，提供流程、办理机构和咨询入口。",
+    "tags": [
+      "BIBB",
+      "life"
+    ],
+    "exams": [],
+    "levelBasis": "editorial",
+    "languages": [
+      "德语"
+    ],
+    "rights": "link-only",
+    "status": "published",
+    "linkStatus": "ok",
+    "lastEditorialCheckedAt": "2026-10-04"
+  },
+  {
+    "id": "handbook-germany",
+    "slug": "handbook-germany",
+    "titleZh": "Handbook Germany 多语生活信息",
+    "titleOriginal": "Handbook Germany",
+    "sourceName": "Neue deutsche Medienmacher*innen",
+    "url": "https://handbookgermany.de/",
+    "canonicalUrl": "https://handbookgermany.de/",
+    "primaryCategory": "life",
+    "levels": [
+      "A2",
+      "B1",
+      "B2",
+      "C1"
+    ],
+    "price": "free",
+    "access": "open",
+    "skills": [
+      "阅读"
+    ],
+    "formats": [
+      "生活信息"
+    ],
+    "descriptionZh": "多语德国生活信息平台，涵盖居留、教育、住房、工作与医疗。",
+    "howToUseZh": "多语德国生活信息平台，涵盖居留、教育、住房、工作与医疗。",
+    "tags": [
+      "Neue deutsche Medienmacher*innen",
+      "life"
+    ],
+    "exams": [],
+    "levelBasis": "editorial",
+    "languages": [
+      "德语"
+    ],
+    "rights": "link-only",
+    "status": "published",
+    "linkStatus": "ok",
+    "lastEditorialCheckedAt": "2026-10-04"
+  },
+  {
+    "id": "deutsche-bahn",
+    "slug": "deutsche-bahn",
+    "titleZh": "德国铁路出行查询",
+    "titleOriginal": "Deutsche Bahn",
+    "sourceName": "Deutsche Bahn",
+    "url": "https://www.bahn.de/",
+    "canonicalUrl": "https://www.bahn.de/",
+    "primaryCategory": "life",
+    "levels": [
+      "A2",
+      "B1",
+      "B2",
+      "C1"
+    ],
+    "price": "free",
+    "access": "open",
+    "skills": [
+      "阅读"
+    ],
+    "formats": [
+      "出行",
+      "检索"
+    ],
+    "descriptionZh": "德国铁路的车次、票价和出行信息官方入口；查询免费，车票另付费。",
+    "howToUseZh": "德国铁路的车次、票价和出行信息官方入口；查询免费，车票另付费。",
+    "tags": [
+      "Deutsche Bahn",
+      "life"
+    ],
+    "exams": [],
+    "levelBasis": "editorial",
+    "languages": [
+      "德语"
+    ],
+    "rights": "link-only",
+    "status": "published",
+    "linkStatus": "ok",
+    "lastEditorialCheckedAt": "2026-10-04"
+  },
+  {
+    "id": "verbraucherzentrale",
+    "slug": "verbraucherzentrale",
+    "titleZh": "德国消费者中心",
+    "titleOriginal": "Verbraucherzentrale",
+    "sourceName": "Verbraucherzentrale",
+    "url": "https://www.verbraucherzentrale.de/",
+    "canonicalUrl": "https://www.verbraucherzentrale.de/",
+    "primaryCategory": "life",
+    "levels": [
+      "B1",
+      "B2",
+      "C1"
+    ],
+    "price": "free",
+    "access": "open",
+    "skills": [
+      "阅读"
+    ],
+    "formats": [
+      "生活信息"
+    ],
+    "descriptionZh": "合同、住房、保险、消费与网络安全资讯，部分咨询服务收费。",
+    "howToUseZh": "合同、住房、保险、消费与网络安全资讯，部分咨询服务收费。",
+    "tags": [
+      "Verbraucherzentrale",
+      "life"
+    ],
+    "exams": [],
+    "levelBasis": "editorial",
+    "languages": [
+      "德语"
+    ],
+    "rights": "link-only",
+    "status": "published",
+    "linkStatus": "ok",
+    "lastEditorialCheckedAt": "2026-10-04"
+  },
+  {
+    "id": "gesund-bund",
+    "slug": "gesund-bund",
+    "titleZh": "德国联邦健康信息门户",
+    "titleOriginal": "gesund.bund.de",
+    "sourceName": "Bundesministerium für Gesundheit",
+    "url": "https://gesund.bund.de/",
+    "canonicalUrl": "https://gesund.bund.de/",
+    "primaryCategory": "life",
+    "levels": [
+      "B1",
+      "B2",
+      "C1"
+    ],
+    "price": "free",
+    "access": "open",
+    "skills": [
+      "阅读"
+    ],
+    "formats": [
+      "官方信息"
+    ],
+    "descriptionZh": "德国联邦健康信息门户，提供疾病、医疗和健康知识。",
+    "howToUseZh": "德国联邦健康信息门户，提供疾病、医疗和健康知识。",
+    "tags": [
+      "Bundesministerium für Gesundheit",
+      "life"
+    ],
+    "exams": [],
+    "levelBasis": "editorial",
+    "languages": [
+      "德语"
+    ],
+    "rights": "link-only",
+    "status": "published",
+    "linkStatus": "ok",
+    "lastEditorialCheckedAt": "2026-10-04"
+  },
+  {
+    "id": "arbeitsagentur",
+    "slug": "arbeitsagentur",
+    "titleZh": "德国联邦就业局",
+    "titleOriginal": "Bundesagentur für Arbeit",
+    "sourceName": "Bundesagentur für Arbeit",
+    "url": "https://www.arbeitsagentur.de/",
+    "canonicalUrl": "https://www.arbeitsagentur.de/",
+    "primaryCategory": "life",
+    "levels": [
+      "B1",
+      "B2",
+      "C1"
+    ],
+    "price": "free",
+    "access": "open",
+    "skills": [
+      "阅读"
+    ],
+    "formats": [
+      "官方信息",
+      "求职"
+    ],
+    "descriptionZh": "德国就业、职业培训与求职服务官方入口。",
+    "howToUseZh": "德国就业、职业培训与求职服务官方入口。",
+    "tags": [
+      "Bundesagentur für Arbeit",
+      "life"
+    ],
+    "exams": [],
+    "levelBasis": "editorial",
+    "languages": [
+      "德语"
+    ],
+    "rights": "link-only",
+    "status": "published",
+    "linkStatus": "ok",
+    "lastEditorialCheckedAt": "2026-10-04"
+  },
+  {
+    "id": "auswaertiges-amt",
+    "slug": "auswaertiges-amt",
+    "titleZh": "德国外交部签证信息",
+    "titleOriginal": "Auswärtiges Amt",
+    "sourceName": "Auswärtiges Amt",
+    "url": "https://www.auswaertiges-amt.de/",
+    "canonicalUrl": "https://www.auswaertiges-amt.de/",
+    "primaryCategory": "life",
+    "levels": [
+      "B1",
+      "B2",
+      "C1"
+    ],
+    "price": "free",
+    "access": "open",
+    "skills": [
+      "阅读"
+    ],
+    "formats": [
+      "官方信息"
+    ],
+    "descriptionZh": "德国签证、领事服务和驻外机构的官方信息入口。",
+    "howToUseZh": "德国签证、领事服务和驻外机构的官方信息入口。",
+    "tags": [
+      "Auswärtiges Amt",
+      "life"
+    ],
+    "exams": [],
+    "levelBasis": "editorial",
+    "languages": [
+      "德语"
+    ],
+    "rights": "link-only",
+    "status": "published",
+    "linkStatus": "ok",
+    "lastEditorialCheckedAt": "2026-10-04"
+  },
+  {
+    "id": "studierendenwerke",
+    "slug": "studierendenwerke",
+    "titleZh": "德国学生服务机构",
+    "titleOriginal": "Deutsches Studierendenwerk",
+    "sourceName": "Deutsches Studierendenwerk",
+    "url": "https://www.studierendenwerke.de/",
+    "canonicalUrl": "https://www.studierendenwerke.de/",
+    "primaryCategory": "life",
+    "levels": [
+      "B1",
+      "B2",
+      "C1"
+    ],
+    "price": "free",
+    "access": "open",
+    "skills": [
+      "阅读"
+    ],
+    "formats": [
+      "官方信息"
+    ],
+    "descriptionZh": "学生宿舍、资助、学生服务和各地 Studierendenwerk 信息。",
+    "howToUseZh": "学生宿舍、资助、学生服务和各地 Studierendenwerk 信息。",
+    "tags": [
+      "Deutsches Studierendenwerk",
+      "life"
+    ],
+    "exams": [],
+    "levelBasis": "editorial",
+    "languages": [
+      "德语"
+    ],
+    "rights": "link-only",
+    "status": "published",
+    "linkStatus": "restricted"
+  },
+  {
+    "id": "berufenet",
+    "slug": "berufenet",
+    "titleZh": "BERUFENET 德国职业资料库",
+    "titleOriginal": "BERUFENET",
+    "sourceName": "Bundesagentur für Arbeit",
+    "url": "https://web.arbeitsagentur.de/berufenet/",
+    "canonicalUrl": "https://web.arbeitsagentur.de/berufenet/",
+    "primaryCategory": "life",
+    "levels": [
+      "B1",
+      "B2",
+      "C1"
+    ],
+    "price": "free",
+    "access": "open",
+    "skills": [
+      "阅读",
+      "词汇"
+    ],
+    "formats": [
+      "官方信息",
+      "检索"
+    ],
+    "descriptionZh": "德国职业、资格要求、工作内容和培训路径的官方查询数据库。",
+    "howToUseZh": "德国职业、资格要求、工作内容和培训路径的官方查询数据库。",
+    "tags": [
+      "Bundesagentur für Arbeit",
+      "life"
+    ],
+    "exams": [],
+    "levelBasis": "editorial",
+    "languages": [
+      "德语"
+    ],
+    "rights": "link-only",
+    "status": "published",
+    "linkStatus": "ok",
+    "lastEditorialCheckedAt": "2026-10-04"
   }
 ]
