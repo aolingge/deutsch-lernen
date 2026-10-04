@@ -64,9 +64,22 @@ function Read-BookParagraphs([string]$path, [string]$displayTitle) {
   return @($paragraphs | Where-Object { $_.Length -gt 2 -and $_ -notmatch '\*{3}' -and $_ -notmatch 'START\s+OF\s+THE\s+PROJECT\s+GUTENBERG' })
 }
 
+function Read-PlainTextParagraphs([string]$path) {
+  $raw = Get-Content -LiteralPath $path -Raw -Encoding UTF8
+  $start = [regex]::Match($raw, '(?ms)^\*{3}\s+START OF (?:THE )?PROJECT GUTENBERG EBOOK.*?$')
+  if ($start.Success) { $raw = $raw.Substring($start.Index + $start.Length) }
+  $end = [regex]::Match($raw, '(?ms)^\*{3}\s+END OF (?:THE )?PROJECT GUTENBERG EBOOK.*?$')
+  if ($end.Success) { $raw = $raw.Substring(0, $end.Index) }
+  $blocks = $raw -split '(?m)(?:\r?\n){2,}'
+  return @($blocks | ForEach-Object {
+    $value = ($_ -replace '\r?\n', ' ' -replace '\s+', ' ').Trim()
+    if ($value.Length -gt 2 -and $value -notmatch '^\[Illustration' -and $value -notmatch '^Project Gutenberg') { $value }
+  })
+}
+
 $result = foreach ($book in @($books | ForEach-Object { $_ })) {
-  $pdfPath = Join-Path $PdfDirectory ([string]$book.pdf)
-  if (-not (Test-Path -LiteralPath $pdfPath)) { throw "PDF not found for book $($book.id): $pdfPath" }
+  $sourcePath = if ($book.sourceFile) { Join-Path $PSScriptRoot ([string]$book.sourceFile) } else { Join-Path $PdfDirectory ([string]$book.pdf) }
+  if (-not (Test-Path -LiteralPath $sourcePath)) { throw "Source not found for book $($book.id): $sourcePath" }
   $translationPath = if (-not [string]::IsNullOrWhiteSpace([string]$book.translation)) { Join-Path $PdfDirectory ([string]$book.translation) } else { $null }
   $translationMap = Read-TranslationMap $translationPath
   $cachePath = Join-Path $OutputDirectory ('translations/' + $book.id + '.json')
@@ -76,7 +89,7 @@ $result = foreach ($book in @($books | ForEach-Object { $_ })) {
       if ($pair.de -and $pair.zh) { $translationMap[(Normalize $pair.de)] = [string]$pair.zh }
     }
   }
-  $paragraphs = Read-BookParagraphs $pdfPath $book.germanTitle
+  $paragraphs = if ($book.sourceFile) { Read-PlainTextParagraphs $sourcePath } else { Read-BookParagraphs $sourcePath $book.germanTitle }
   $content = foreach ($paragraph in $paragraphs) {
     [ordered]@{
       de = $paragraph
@@ -90,7 +103,13 @@ $result = foreach ($book in @($books | ForEach-Object { $_ })) {
     author = $book.author
     level = $book.level
     study = $book.study
-    source = $book.pdf
+    source = if ($book.sourceFile) { $book.sourceFile } else { $book.pdf }
+    sourceUrl = $book.sourceUrl
+    licenseUrl = $book.licenseUrl
+    difficulty = $book.difficulty
+    length = $book.length
+    genre = $book.genre
+    chapterCount = $book.chapterCount
     translationStatus = if (@($content | Where-Object { $_.zh }).Count -eq @($content).Count) { 'complete' } elseif (@($content | Where-Object { $_.zh }).Count -gt 0) { 'partial-local' } else { 'not-imported' }
     paragraphs = @($content)
   }

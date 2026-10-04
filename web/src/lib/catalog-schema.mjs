@@ -6,7 +6,7 @@ export function validDate(value) {
   const date = new Date(value+'T00:00:00Z');
   return Number.isFinite(date.getTime()) && date.toISOString().slice(0,10) === value;
 }
-export const categoryIds = ['courses','exams','vocabulary','grammar','listening','speaking','reading','writing','news','video','tools','life','social','housing','jobs','classifieds','mobility','government','finance','health','shopping','travel'];
+export const categoryIds = ['courses','exams','vocabulary','grammar','listening','speaking','reading','writing','news','video','tools','life','communication','media','food','social','housing','jobs','classifieds','mobility','government','finance','health','shopping','travel'];
 export function canonicalize(value) {
   const url = new URL(value);
   if (url.protocol !== 'https:' || url.username || url.password) throw Error('链接必须为不含凭据的 HTTPS 地址');

@@ -18,6 +18,13 @@ const aliases = [
   ['社交', '社区', 'community', 'meetup', 'nebenan'],
   ['购物', '超市', '日常生活', 'einkauf', 'supermarkt', 'lieferdienst'],
   ['旅行', '旅游', '住宿', 'reise', 'reisen', 'unterkunft', 'hotel'],
+  ['通讯', '聊天', '社交媒体', 'whatsapp', 'signal', 'telegram', 'messenger', 'social media'],
+  ['网络', '手机', '宽带', 'internet', 'mobilfunk', 'dsl', 'glasfaser', 'sim'],
+  ['媒体', '娱乐', '流媒体', '电影', '音乐', 'streaming', 'film', 'musik', 'wetter'],
+  ['外卖', '餐饮', '配送', 'essen', 'lieferdienst', 'restaurant', 'food'],
+  ['电商', '购物网站', '网购', 'amazon', 'otto', 'zalando', 'online shopping'],
+  ['银行', '支付', '转账', 'konto', 'bank', 'zahlung', 'überweisung', 'ueberweisung'],
+  ['租车', '汽车', '共享汽车', 'mietwagen', 'carsharing', 'auto', 'fahrzeug'],
 ];
 /** @param {string} word */
 const searchTerms = (word) => aliases.find((group) => group.includes(word)) || [word];

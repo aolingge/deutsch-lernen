@@ -6,7 +6,7 @@
   const savedTranslation = localStorage.getItem("gutenberg-translation-v2");
   const state = { bookId: localStorage.getItem("gutenberg-book") || books[0]?.id, translation: savedTranslation === "hide" || savedTranslation === "show" ? savedTranslation : "hover", theme: localStorage.getItem("gutenberg-theme") || "paper", fontSize: Number(localStorage.getItem("gutenberg-font-size") || 20) };
   const $ = (selector) => document.querySelector(selector);
-  const els = { list: $("#bookList"), title: $("#bookTitle"), meta: $("#bookMeta"), number: $("#bookNumber"), content: $("#readingContent"), notice: $("#translationNotice"), bar: $("#progressBar"), progress: $("#progressText"), size: $("#fontSizeLabel"), search: $("#bookSearch") };
+  const els = { list: $("#bookList"), title: $("#bookTitle"), meta: $("#bookMeta"), route: $("#bookRoute"), number: $("#bookNumber"), total: $("#bookTotal"), count: $("#bookCount"), level: $("#levelFilter"), length: $("#lengthFilter"), content: $("#readingContent"), notice: $("#translationNotice"), bar: $("#progressBar"), progress: $("#progressText"), size: $("#fontSizeLabel"), search: $("#bookSearch") };
   const clean = (value) => String(value || "").replace(/\s+/g, " ").trim();
   function currentBook() { return books.find((book) => book.id === state.bookId) || books[0]; }
   function save() { localStorage.setItem("gutenberg-book", state.bookId); localStorage.setItem("gutenberg-translation-v2", state.translation); localStorage.setItem("gutenberg-theme", state.theme); localStorage.setItem("gutenberg-font-size", String(state.fontSize)); }
@@ -14,7 +14,10 @@
   function savePosition() { localStorage.setItem(positionKey(), String(Math.round(window.scrollY))); }
   function renderBooks() {
     const query = clean(els.search.value).toLowerCase();
-    els.list.innerHTML = books.filter((book) => `${book.title} ${book.germanTitle} ${book.author}`.toLowerCase().includes(query)).map((book) => `<button class="book-card ${book.id === state.bookId ? "active" : ""}" type="button" data-book="${book.id}"><span class="book-card-top"><span>${book.id} · ${book.level}</span><span>${book.study}</span></span><h2>${book.title}</h2><p>${book.germanTitle} · ${book.author}</p><span class="book-status ${book.translationStatus === "not-imported" ? "pending" : ""}">${book.translatedParagraphs ? `已导入 ${book.translatedParagraphs} / ${book.paragraphs.length} 段译文` : "译文待导入"}</span></button>`).join("") || `<p class="library-note">没有匹配的书目。</p>`;
+    const level = els.level.value; const length = els.length.value;
+    const filtered = books.filter((book) => `${book.title} ${book.germanTitle} ${book.author}`.toLowerCase().includes(query) && (!level || String(book.difficulty || book.level).includes(level)) && (!length || book.length === length));
+    els.count.textContent = `${filtered.length} 本书 · 推荐先读短篇，再进入中长篇`;
+    els.list.innerHTML = filtered.map((book) => `<button class="book-card ${book.id === state.bookId ? "active" : ""}" type="button" data-book="${book.id}"><span class="book-card-top"><span>${book.id} · ${book.difficulty || book.level}</span><span>${book.length || ""}</span></span><h2>${book.title}</h2><p>${book.germanTitle} · ${book.author}</p><span class="book-status ${book.translationStatus === "not-imported" ? "pending" : ""}">${book.translatedParagraphs ? `已导入 ${book.translatedParagraphs} / ${book.paragraphs.length} 段译文` : "译文待导入"}</span></button>`).join("") || `<p class="library-note">没有匹配的书目。</p>`;
     els.list.querySelectorAll("[data-book]").forEach((button) => button.addEventListener("click", () => { state.bookId = button.dataset.book; save(); renderBooks(); renderReader(); window.scrollTo({ top: 0, behavior: "smooth" }); }));
   }
   function renderReader() {
@@ -22,7 +25,9 @@
     if (!book) return;
     els.title.textContent = book.title;
     els.meta.textContent = `${book.germanTitle} · ${book.author}  /  ${book.level} · ${book.study}`;
+    els.route.textContent = `${book.difficulty || book.level} · ${book.length || "篇幅未标注"} · ${book.genre || "文学"} · ${book.chapterCount ? `${book.chapterCount} 章` : "按段落"}`;
     els.number.textContent = book.id;
+    els.total.textContent = `/ ${books.length}`;
     els.notice.hidden = false;
     els.notice.textContent = book.translatedParagraphs ? `已导入 ${book.translatedParagraphs} / ${book.paragraphs.length} 段译文。中文为机器翻译，遇到疑问请结合德语原文理解；数字、网址等内容可能仅保留原文。` : "这本书的译文尚未导入，可以先阅读德语原文。";
     els.content.dataset.translationMode = state.translation;
@@ -51,6 +56,7 @@
   document.querySelectorAll("[data-theme]").forEach((button) => button.addEventListener("click", () => { state.theme = button.dataset.theme; save(); updateControls(); }));
   document.querySelectorAll("[data-font]").forEach((button) => button.addEventListener("click", () => { state.fontSize = Math.min(30, Math.max(16, state.fontSize + (button.dataset.font === "up" ? 1 : -1))); save(); updateControls(); }));
   els.search.addEventListener("input", renderBooks);
+  els.level.addEventListener("change", renderBooks); els.length.addEventListener("change", renderBooks);
   $("#themeButton").addEventListener("click", () => { state.theme = state.theme === "dark" ? "paper" : "dark"; save(); updateControls(); });
   $("#focusButton").addEventListener("click", () => { const active = document.body.classList.toggle("focus-mode"); $("#focusButton").setAttribute("aria-pressed", String(active)); $("#focusButton").title = active ? "退出专注阅读" : "进入专注阅读"; });
   let scrollSaveTimer;

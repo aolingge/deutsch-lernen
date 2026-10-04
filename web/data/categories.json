@@ -130,5 +130,23 @@
     "name": "旅行与短住",
     "description": "德国旅行、酒店、青年旅舍和短期住宿。",
     "accent": "旅行"
+  },
+  {
+    "id": "communication",
+    "name": "通讯与社交媒体",
+    "description": "即时通讯、社交网络、创作者平台和德国网络服务。",
+    "accent": "通讯"
+  },
+  {
+    "id": "media",
+    "name": "媒体与娱乐",
+    "description": "流媒体、音乐、电影、天气和日常娱乐信息。",
+    "accent": "媒体"
+  },
+  {
+    "id": "food",
+    "name": "餐饮与配送",
+    "description": "外卖、食品配送、餐厅搜索和食材服务。",
+    "accent": "餐饮"
   }
 ]

@@ -7,9 +7,9 @@ const categories = JSON.parse(fs.readFileSync(new URL('../data/categories.json',
 const resources = JSON.parse(fs.readFileSync(new URL('../data/resources.json', import.meta.url), 'utf8'));
 
 test('catalog has the planned category set and enough independently useful entries', () => {
-  assert.equal(categories.length, 22);
+  assert.equal(categories.length, 25);
   assert.ok(resources.length >= 120);
-  assert.equal(new Set(resources.map((item) => item.primaryCategory)).size, 22);
+  assert.equal(new Set(resources.map((item) => item.primaryCategory)).size, 25);
 });
 
 test('published resources have Chinese explanation, source and safe external URLs', () => {

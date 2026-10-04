@@ -121,6 +121,9 @@ a:hover { color: var(--blue); }
 .resource-card[data-category=video] .source-mark { background: #f5e9df; color: #865937; }
 .resource-card[data-category=listening] .source-mark { background: #e8edf5; color: #4b6282; }
 .resource-card[data-category=life] .source-mark { background: #ece9f3; color: #6d5885; }
+.resource-card[data-category=communication] .source-mark { background: #e8eef5; color: #496681; }
+.resource-card[data-category=media] .source-mark { background: #f1e9f0; color: #7a5475; }
+.resource-card[data-category=food] .source-mark { background: #f3ebe1; color: #865f3b; }
 .resource-card[data-category=social] .source-mark { background: #e8eef5; color: #496681; }
 .resource-card[data-category=housing] .source-mark { background: #f3eade; color: #886333; }
 .resource-card[data-category=jobs] .source-mark { background: #e8f0e7; color: #3f6b4d; }
