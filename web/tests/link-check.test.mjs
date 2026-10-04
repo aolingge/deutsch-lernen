@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { validateTarget, isPublicAddress, classifyStatus } from '../scripts/check-resource-links.mjs';
+import { validateTarget, isPublicAddress, classifyStatus, loadCatalog } from '../scripts/check-resource-links.mjs';
 test('resource link checker rejects private destinations and credentialed or nonstandard URLs', () => {
   const ipv4 = (octets) => octets.join('.');
   const loopback = ipv4([127,0,0,1]);
@@ -16,4 +16,14 @@ test('resource link checker separates automation restrictions, actual missing pa
   for (const code of [401,403,429]) assert.equal(classifyStatus(code), 'restricted');
   for (const code of [404,410]) assert.equal(classifyStatus(code), 'broken');
   for (const code of [0,500,503]) assert.equal(classifyStatus(code), 'unchecked');
+});
+test('live catalog loader validates endpoint, schema and resource shape', async () => {
+  const original = globalThis.fetch;
+  try {
+    globalThis.fetch = async () => new Response(JSON.stringify({ schemaVersion: 1, categories: [], resources: [] }), { status: 200 });
+    const loaded = await loadCatalog({ liveUrl: 'https://www.goethe.de/api/public-catalog' });
+    assert.equal(loaded.source, 'https://www.goethe.de/api/public-catalog');
+    assert.deepEqual(loaded.resources, []);
+    await assert.rejects(() => loadCatalog({ liveUrl: 'https://www.goethe.de/not-catalog' }), /live-catalog-path-required/);
+  } finally { globalThis.fetch = original; }
 });

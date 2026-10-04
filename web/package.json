@@ -15,6 +15,10 @@
     "worker:types": "wrangler types",
     "check": "astro check",
     "test": "node scripts/compile-worker-test.mjs && node --test tests/*.test.mjs",
+    "qa:cross-browser": "python tests/cross-browser-smoke.py",
+    "qa:accessibility": "python tests/accessibility-smoke.py",
+    "qa:performance": "python tests/performance-smoke.py",
+    "links:live": "node scripts/check-resource-links.mjs --live=https://deutsch-lernen-resource-hub.pirostonelsonrx688.workers.dev/api/public-catalog --report=.wrangler/resource-links-live.json",
     "validate:catalog": "node scripts/validate-catalog.mjs",
     "verify": "npm run validate:catalog && npm run check && npm run test && npm run build"
   },
