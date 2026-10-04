@@ -1,0 +1,12 @@
+[
+  { "id": "01", "level": "入门", "study": "每日 1 章", "pdf": "01 彼得辰的月亮之旅（入门·每日1章）.pdf", "title": "彼得辰的月亮之旅", "germanTitle": "Peterchens Mondfahrt", "author": "Gerdt von Bassewitz", "translation": "01 彼得辰的月亮之旅（入门·每日1章） - 沉浸式翻译.html" },
+  { "id": "02", "level": "入门", "study": "每日 1 章", "pdf": "02 蜜蜂玛雅历险记（入门·每日1章）.pdf", "title": "蜜蜂玛雅历险记", "germanTitle": "Die Biene Maja und ihre Abenteuer", "author": "Waldemar Bonsels" },
+  { "id": "03", "level": "入门进阶", "study": "每日 1 章", "pdf": "03 汤姆·索亚历险记（入门进阶·每日1章）.pdf", "title": "汤姆·索亚历险记", "germanTitle": "Die Abenteuer Tom Sawyers", "author": "Mark Twain" },
+  { "id": "04", "level": "B1", "study": "每日 1 章并复述", "pdf": "04 海蒂（B1·每日1章并复述）.pdf", "title": "海蒂", "germanTitle": "Heidis Lehr- und Wanderjahre", "author": "Johanna Spyri" },
+  { "id": "05", "level": "B1", "study": "每日 1 章记表达", "pdf": "05 爱丽丝梦游仙境（B1·每日1章记表达）.pdf", "title": "爱丽丝梦游仙境", "germanTitle": "Alice's Abenteuer im Wunderland", "author": "Lewis Carroll" },
+  { "id": "06", "level": "B1 进阶", "study": "每日 1 章", "pdf": "06 金银岛（B1进阶·每日1章）.pdf", "title": "金银岛", "germanTitle": "Die Schatzinsel", "author": "Robert Louis Stevenson" },
+  { "id": "07", "level": "B1 进阶", "study": "每日 1 章", "pdf": "07 骑鹅旅行记（B1进阶·每日1章）.pdf", "title": "骑鹅旅行记", "germanTitle": "Wunderbare Reise des kleinen Nils Holgersson mit den Wildgänsen", "author": "Selma Lagerlöf" },
+  { "id": "08", "level": "B1 进阶", "study": "每日 1 章", "pdf": "08 倔强的姑娘（B1进阶·每日1章）.pdf", "title": "倔强的姑娘", "germanTitle": "Der Trotzkopf", "author": "Emmy von Rhoden" },
+  { "id": "09", "level": "B1+", "study": "每日 1 章", "pdf": "09 鲁滨逊漂流记（B1+·每日1章）.pdf", "title": "鲁滨逊漂流记", "germanTitle": "Robinson Crusoe", "author": "Daniel Defoe" },
+  { "id": "10", "level": "B1+ 到 B2", "study": "最后挑战", "pdf": "10 雾都孤儿（B1+到B2·最后挑战）.pdf", "title": "雾都孤儿", "germanTitle": "Oliver Twist", "author": "Charles Dickens" }
+]

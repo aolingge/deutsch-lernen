@@ -6590,6 +6590,55 @@
     "lastEditorialCheckedAt": "2026-10-04"
   },
   {
+    "id": "local-gutenberg-reader",
+    "slug": "local-gutenberg-reader",
+    "titleZh": "Gutenberg 德语原著沉浸式阅读器",
+    "titleOriginal": "Gutenberg Immersive Reader",
+    "sourceName": "Deutsch Lernen",
+    "url": "https://deutsch-lernen-resource-hub.pirostonelsonrx688.workers.dev/reader/",
+    "canonicalUrl": "https://deutsch-lernen-resource-hub.pirostonelsonrx688.workers.dev/reader/",
+    "primaryCategory": "reading",
+    "levels": [
+      "A2",
+      "B1",
+      "B2"
+    ],
+    "price": "free",
+    "access": "open",
+    "skills": [
+      "阅读",
+      "词汇"
+    ],
+    "formats": [
+      "网页",
+      "电子书"
+    ],
+    "descriptionZh": "按段落阅读 Gutenberg 德语原著；中文译文默认模糊，鼠标悬停或键盘聚焦后显示。",
+    "howToUseZh": "先读德语原文，再按需要查看译文。支持书目搜索、译文显示模式、字号、主题和阅读进度保存。",
+    "tags": [
+      "本站工具",
+      "沉浸式阅读",
+      "悬停译文"
+    ],
+    "exams": [],
+    "levelBasis": "editorial",
+    "languages": [
+      "德语",
+      "中文"
+    ],
+    "rights": "link-only",
+    "status": "published",
+    "linkStatus": "ok",
+    "providerType": "independent",
+    "interfaceLanguages": [
+      "中文"
+    ],
+    "readingDifficultyZh": "A2-B2，按书目不同",
+    "editorialStatus": "partial",
+    "editorialNoteZh": "原文来源与作品版权按 Project Gutenberg 及所在地区规则执行；中文译文为个人学习内容。",
+    "lastEditorialCheckedAt": "2026-10-04"
+  },
+  {
     "id": "gutenberg-org-de",
     "slug": "gutenberg-org-de",
     "titleZh": "Project Gutenberg 德语电子书",

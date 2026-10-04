@@ -41,6 +41,11 @@ a:hover { color: var(--blue); }
 .directory-intro h1 { font: 700 clamp(30px,3.4vw,48px)/1.3 Georgia,"Songti SC","SimSun",serif; letter-spacing: 1px; margin: 0; }
 .title-dot { color: var(--gold); font-family: Georgia,serif; margin-left: 7px; }
 .intro-line { font-size: .875rem; line-height: 1.8; color: var(--muted); margin: 12px 0 0; }
+.reading-entry { display: inline-flex; align-items: center; justify-content: space-between; gap: 28px; width: min(100%, 430px); margin-top: 20px; padding: 13px 16px; border: 1px solid #c7d8c7; border-left: 3px solid var(--gold); border-radius: 9px; background: #ffffffb8; text-decoration: none; color: var(--ink); }
+.reading-entry:hover { color: var(--blue); background: #fff; border-color: var(--blue); }
+.reading-entry strong, .reading-entry small { display: block; }
+.reading-entry strong { font: 700 .875rem Georgia,serif; }
+.reading-entry small { margin-top: 4px; color: var(--muted); font-size: .75rem; }
 .directory-stats { display: flex; flex-wrap: wrap; gap: 22px; color: var(--muted); font-size: .75rem; align-items: center; white-space: nowrap; padding-bottom: 4px; }
 .directory-stats strong { font: 600 1.75rem Georgia,serif; color: var(--blue); margin-right: 6px; font-variant-numeric: tabular-nums; }
 .directory-stats a { font-size: .75rem; text-decoration: none; padding-left: 18px; border-left: 1px solid #cbd8cc; }

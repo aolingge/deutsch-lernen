@@ -67,9 +67,10 @@ export function resourceCard(r, categories, saved = false, returnTo = '') {
   const mark = domainMarks[domain] || (domain.split('.').at(-2) || domain).slice(0, 3).toUpperCase();
   const detailHref = `/resource/${r.slug}/` + (returnTo ? '?' + new URLSearchParams({ from: directoryReturnPath(returnTo) }) : '');
   const media = [...new Set(r.mediaTypes?.length ? r.mediaTypes : r.formats)].slice(0, 2);
+  const internal = r.url.startsWith('/') || r.url.startsWith('https://deutsch-lernen-resource-hub.pirostonelsonrx688.workers.dev/');
   return `<article class="resource-card live-card" data-category="${e(r.primaryCategory)}">
     <div class="card-top"><span class="source-mark" aria-hidden="true">${e(mark)}</span><div class="source-info"><span>${e(r.sourceName)}</span><small>${e(domain)}</small></div><button type="button" class="bookmark" data-save="${e(r.id)}" aria-label="${saved ? '取消收藏' : '收藏'} ${e(r.titleZh)}" aria-pressed="${saved}">${icon('star')}</button></div>
-    <div class="card-body"><h3><a href="${e(r.url)}" target="_blank" rel="noopener noreferrer">${e(r.titleZh)}<span class="out-arrow" aria-hidden="true">${icon('arrow-up-right')}</span></a></h3><p class="description">${e(r.descriptionZh)}</p></div>
+    <div class="card-body"><h3><a href="${e(r.url)}" ${internal ? '' : 'target="_blank" rel="noopener noreferrer"'}>${e(r.titleZh)}<span class="out-arrow" aria-hidden="true">${icon('arrow-up-right')}</span></a></h3><p class="description">${e(r.descriptionZh)}</p></div>
     <div class="chips"><span class="category-chip">${e(category?.name || '资源')}</span>${r.levels.length ? `<span title="${r.levelBasis === 'official' ? '来源标级' : '编辑参考等级'}">${e(r.levels.join(' · '))}</span>` : ''}${media.map((format) => `<span class="format-chip">${e(format)}</span>`).join('')}</div>
     ${r.linkStatus !== 'ok' ? `<p class="link-status ${e(r.linkStatus)}">${e(status)}</p>` : ''}
     <div class="card-bottom"><div class="meta"><span class="price ${e(r.price)}">${priceLabels[r.price]}</span><span>${accessLabels[r.access]}</span></div><a class="detail-link" href="${e(detailHref)}" aria-label="${e(r.titleZh)}的资源信息">详情 <span aria-hidden="true">${icon('arrow-right')}</span></a></div>

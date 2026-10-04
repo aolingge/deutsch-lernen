@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Project Gutenberg 德语原著沉浸式阅读器：原文优先，译文按需显示。">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%233d714f'/%3E%3Ctext x='16' y='23' text-anchor='middle' font-size='22' fill='white'%3EG%3C/text%3E%3C/svg%3E">
+  <title>Gutenberg 德语原著沉浸式阅读 · Deutsch Lernen</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="hover.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#top" aria-label="回到阅读器首页"><span class="brand-mark">G</span><span><strong>GUTENBERG</strong><small>DEUTSCH READER</small></span></a>
+    <div class="topbar-actions"><a class="icon-button" href="/" title="返回德语资源导航">← <span>资源导航</span></a><button class="icon-button" id="themeButton" type="button" title="切换阅读主题">◐ <span>主题</span></button><button class="icon-button" id="focusButton" type="button" title="进入专注阅读">⌗ <span>专注</span></button></div>
+  </header>
+  <div class="app-shell" id="top">
+    <aside class="library" aria-label="书库">
+      <div class="library-heading"><p class="eyebrow">LESEPLAN</p><h1>十本德语原著</h1><p>每天一小段，先读原文，再按需要查看中文。</p></div>
+      <label class="search-label" for="bookSearch">查找书名</label><input id="bookSearch" type="search" placeholder="输入书名或作者" autocomplete="off">
+      <nav id="bookList" class="book-list" aria-label="选择书籍"></nav>
+      <div class="library-note"><span class="note-dot"></span><p>译文只在本地显示。未导入译文的书，会保留原文学习，不会伪造翻译。</p></div>
+    </aside>
+    <main class="reader" id="readerMain">
+      <section class="reader-hero"><div><p class="eyebrow">PROJECT GUTENBERG · ORIGINAL TEXT</p><h2 id="bookTitle">加载中</h2><p id="bookMeta" class="book-meta"></p></div><div class="hero-index"><span id="bookNumber">01</span><small>/ 10</small></div></section>
+      <section class="reader-toolbar" aria-label="阅读设置">
+        <div class="toolbar-group"><span class="toolbar-label">译文</span><div class="segmented" role="group" aria-label="选择译文显示方式"><button type="button" data-translation="hover" aria-pressed="true">悬停显示</button><button type="button" data-translation="show" aria-pressed="false">始终显示</button><button type="button" data-translation="hide" aria-pressed="false">隐藏</button></div></div>
+        <div class="toolbar-group"><span class="toolbar-label">背景</span><div class="segmented" role="group" aria-label="选择背景"><button type="button" data-theme="paper" aria-pressed="true">米白</button><button type="button" data-theme="green" aria-pressed="false">浅绿</button><button type="button" data-theme="dark" aria-pressed="false">深色</button></div></div>
+        <div class="toolbar-group font-controls"><span class="toolbar-label">字级</span><button class="round-button" type="button" data-font="down" aria-label="减小字级">−</button><span id="fontSizeLabel">20</span><button class="round-button" type="button" data-font="up" aria-label="增大字级">+</button></div>
+      </section>
+      <div class="progress-row"><div class="progress-track"><span id="progressBar"></span></div><span id="progressText">0%</span></div>
+      <section id="translationNotice" class="translation-notice" hidden></section>
+      <article id="readingContent" class="reading-content" aria-live="polite"></article>
+      <footer class="reader-footer"><span>Original text from Project Gutenberg</span><span>个人学习译文 · 仅供学习 · 进度保存在当前浏览器</span></footer>
+    </main>
+  </div>
+  <script src="data/books.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
