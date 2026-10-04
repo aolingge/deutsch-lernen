@@ -63,3 +63,12 @@ Authorization: execute all twelve packages, verify and deploy the configured web
 - Existing favorites, private tasks, reader content, audit history and hand-edited D1 records remain preserved. No Git push, DNS change, payment, account messaging or Cloudflare Access admin write was performed.
 - Link checks remain advisory: restricted, unchecked and login/region-gated sites are retained and labelled rather than treated as confirmed broken links.
 - Final deployment `c16f3142-546f-4da0-ad69-635ebe471be3` passed live readback: 196 public resources, 22 categories, zero evidence leaks, 174 ok / 17 restricted / 0 broken / 5 unchecked links, and all 196 detail pages plus sitemap/share image passed release checks.
+
+## 2026-10-05 comprehensive life-resource expansion
+
+- Source catalog now contains 331 resources across 25 categories, including communication/social media, media/entertainment, food/delivery, shopping, finance and car-rental/trading entries.
+- Local verification passed: catalog validation 331/25, Astro check 0/0/0, 36 Node tests, and a 272-page static build.
+- Deployment `bad98e88-709d-4b2b-b5a3-a9caa4920eb6` completed successfully. Remote D1 received 58 guarded inserts and one guarded OBI URL update in six small batches to avoid transient upload failures.
+- Live public API now contains 254 resources across 25 categories; communication 14, media 9 and food 6. WhatsApp, OBI, Wolt, Netflix and N26 records are present, and representative detail/category pages returned 200.
+- Live link report `.wrangler/resource-links-live.json`: 165 ok, 18 restricted, 0 broken, 13 unchecked. Release check passed 196 public details, sitemap and share image.
+- Remaining limitation: third-party login, regional access, anti-bot behavior and the 13 unchecked links require periodic re-checks; these are retained as advisory states.

@@ -25,3 +25,11 @@ The performance numbers are repeatable lab samples without CPU/network throttlin
 - Third-party sites may require login, region access or anti-bot clearance. Link checks classify those responses as `restricted` or `unchecked`; a passing link check does not guarantee service quality or continued availability.
 - Final live deployment `c16f3142-546f-4da0-ad69-635ebe471be3`: the public API returned 196 resources and 22 categories with zero editorial-field leaks; `release-check.mjs` passed all 196 detail pages, sitemap and 1200x630 share image.
 - Final live link check: 174 `ok`, 17 `restricted`, 0 `broken`, 5 `unchecked`. The three stale official URLs found during the first post-deploy check were corrected in D1 with audited `catalog-maintenance` revisions before this final run.
+
+## 2026-10-05 comprehensive life-resource expansion
+
+- Source catalog now contains 331 resources across 25 categories. The expansion adds communication/social media, media/entertainment, food/delivery, shopping, finance and car-rental/trading entries while preserving the existing study, housing, jobs, government, health, mobility and travel records.
+- Deployment `bad98e88-709d-4b2b-b5a3-a9caa4920eb6` passed `release-check.mjs`: 196 public detail pages, sitemap and 1200x630 share image returned valid responses before the D1 refresh.
+- Remote D1 was then updated with 58 guarded `INSERT OR IGNORE` rows plus one guarded OBI canonical URL correction. Live public API now returns 254 resources across 25 categories: communication 14, media 9 and food 6.
+- Live readback: home, resources, all three new category filters, WhatsApp and OBI detail pages, sitemap and robots returned 200. Public catalog contains no editorial evidence or historical instruction fields.
+- Live link check after D1 refresh: 165 `ok`, 18 `restricted`, 0 `broken`, 13 `unchecked`. Restricted and unchecked responses remain advisory and are not treated as service-quality guarantees.
