@@ -45,7 +45,7 @@ Authorization: execute all twelve packages, verify and deploy the configured web
 - QA artifacts: `tests/accessibility-smoke.py`, `tests/cross-browser-smoke.py`, `tests/performance-smoke.py`; Chromium, Firefox, WebKit and keyboard/reflow passed in the final run.
 - OG image, JSON-LD and CSP Report-Only were verified on a live detail response; `/og-directory.png` returned 200.
 - Favorites backup controls were deployed and verified at `/favorites/`; import merges valid IDs and does not overwrite private goals/tasks.
-- Final deployment version before the reader status follow-up: `9df89422-d766-4f94-9a04-6e61459ede4e`; the reader status follow-up is deployed after the final commit below. Live endpoints and key detail pages returned 200. Import checks version 1 and asks for a merge preview before writing.
+- Final deployment version: `d20faad7-d7ce-4d31-a7e4-b76dee160324`; live reader readback confirms translation coverage and the machine-translation note, while the public API remains 130 resources / 12 categories with zero editorial-field leaks. Live endpoints and key detail pages returned 200. Import checks version 1 and asks for a merge preview before writing.
 - Remaining limit: no real Cloudflare Access admin write flow was exercised; no claim is made for that path.
 
 ## 2026-10-04 comprehensive audit closeout
