@@ -70,5 +70,14 @@ Authorization: execute all twelve packages, verify and deploy the configured web
 - Local verification passed: catalog validation 331/25, Astro check 0/0/0, 36 Node tests, and a 272-page static build.
 - Deployment `bad98e88-709d-4b2b-b5a3-a9caa4920eb6` completed successfully. Remote D1 received 58 guarded inserts and one guarded OBI URL update in six small batches to avoid transient upload failures.
 - Live public API now contains 254 resources across 25 categories; communication 14, media 9 and food 6. WhatsApp, OBI, Wolt, Netflix and N26 records are present, and representative detail/category pages returned 200.
-- Live link report `.wrangler/resource-links-live.json`: 165 ok, 18 restricted, 0 broken, 13 unchecked. Release check passed 196 public details, sitemap and share image.
+- Historical 196-record link report `.wrangler/resource-links-live.json`: 165 ok, 18 restricted, 0 broken, 13 unchecked. The checks started before the D1 refresh; this is not a complete audit of the subsequent 254-record catalog. Release check passed 196 public details at that point.
 - Remaining limitation: third-party login, regional access, anti-bot behavior and the 13 unchecked links require periodic re-checks; these are retained as advisory states.
+
+## 2026-10-05 real website icons
+
+- Cached 220 website icons as decoded PNGs, covering 247/254 public records. Seven unavailable icons use a neutral globe. Cards, details and provider rows share the same icon resolver; browser loading errors reveal the fallback. No runtime external logo-service requests.
+- Verified 38 Node tests, Astro diagnostics 0/0/0 and 272-page build. Icon checks and existing flows passed Chromium/Firefox/WebKit; local axe reported no known violations, with existing manual-review items retained.
+- Deployment `4cc1f9ab-ff10-4597-acda-b56179c7cb4a` is live. Icon checks passed all three browsers against the live site; release checks now cover all 254 detail pages plus sitemap/share image with no failures.
+- Project instructions now explicitly permit focused local commits after verification without reconfirmation. No remote Git push or D1 data update was needed for this presentation change.
+- All 220 live PNGs match local SHA-256 hashes; live catalog remains 254/25 with zero editorial leaks. Publication heuristic still reports non-private numeric matches in new provenance URLs/SVG geometry and existing reader data; task-file findings were reviewed manually, without changing the scanner or unrelated reader files.
+- Final mobile text-enlargement check found and fixed provider-index overflow at 320px / 200% text. The expanded icon smoke suite passes the category, sources and detail views in all three browsers after wrapping/grid-track corrections.

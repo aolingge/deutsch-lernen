@@ -54,6 +54,8 @@ Thumbs.db
 *.jpg
 *.jpeg
 *.png
+# Reviewed, publicly sourced website identifiers used by the resource directory.
+!web/public/site-icons/*.png
 *.gif
 *.webp
 *.mp3

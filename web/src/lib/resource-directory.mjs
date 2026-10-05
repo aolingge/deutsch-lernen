@@ -1,4 +1,5 @@
 import { icon } from './icons.mjs';
+import { siteIcon } from './site-icons.mjs';
 // Shared by the static pages and browser. Own study guides remain in the repository.
 /** @param {{ status: string, rights: string }} r */
 export const isDirectoryResource = (r) => r.status === 'published' && r.rights !== 'owned';
@@ -78,14 +79,11 @@ export function resourceCard(r, categories, saved = false, returnTo = '') {
   const category = categories.find((c) => c.id === r.primaryCategory);
   const domain = new URL(r.url).hostname.replace(/^www\./, '');
   const status = { ok: '可访问', restricted: '自动访问受限', unchecked: '待核验', broken: '链接异常' }[r.linkStatus];
-  /** @type {Record<string, string>} */
-  const domainMarks = { 'dw.com': 'DW', 'learngerman.dw.com':'DW', 'goethe.de': 'GI', 'testdaf.de': 'TD', 'telc.net': 'telc', 'duden.de': 'Du', 'deepl.com': 'DL', 'duolingo.com': 'Duo', 'apps.ankiweb.net': 'Anki', 'ankiweb.net':'Anki', 'aps.org.cn':'APS', 'anabin.kmk.org':'KMK', 'arbeitsagentur.de':'BA', 'web.arbeitsagentur.de':'BA', 'daad.de':'DAAD' };
-  const mark = domainMarks[domain] || (domain.split('.').at(-2) || domain).slice(0, 3).toUpperCase();
   const detailHref = `/resource/${r.slug}/` + (returnTo ? '?' + new URLSearchParams({ from: directoryReturnPath(returnTo) }) : '');
   const media = [...new Set(r.mediaTypes?.length ? r.mediaTypes : r.formats)].slice(0, 2);
   const internal = r.url.startsWith('/') || r.url.startsWith('https://deutsch-lernen-resource-hub.pirostonelsonrx688.workers.dev/');
   return `<article class="resource-card live-card" data-category="${e(r.primaryCategory)}">
-    <div class="card-top"><span class="source-mark" aria-hidden="true">${e(mark)}</span><div class="source-info"><span>${e(r.sourceName)}</span><small>${e(domain)}</small></div><button type="button" class="bookmark" data-save="${e(r.id)}" aria-label="${saved ? '取消收藏' : '收藏'} ${e(r.titleZh)}" aria-pressed="${saved}">${icon('star')}</button></div>
+    <div class="card-top">${siteIcon(r.url)}<div class="source-info"><span>${e(r.sourceName)}</span><small>${e(domain)}</small></div><button type="button" class="bookmark" data-save="${e(r.id)}" aria-label="${saved ? '取消收藏' : '收藏'} ${e(r.titleZh)}" aria-pressed="${saved}">${icon('star')}</button></div>
     <div class="card-body"><h3><a href="${e(r.url)}" ${internal ? '' : 'target="_blank" rel="noopener noreferrer"'}>${e(r.titleZh)}<span class="out-arrow" aria-hidden="true">${icon('arrow-up-right')}</span></a></h3><p class="description">${e(r.descriptionZh)}</p></div>
     <div class="chips"><span class="category-chip">${e(category?.name || '资源')}</span>${r.levels.length ? `<span title="${r.levelBasis === 'official' ? '来源标级' : '编辑参考等级'}">${e(r.levels.join(' · '))}</span>` : ''}${media.map((format) => `<span class="format-chip">${e(format)}</span>`).join('')}</div>
     ${r.linkStatus !== 'ok' ? `<p class="link-status ${e(r.linkStatus)}">${e(status)}</p>` : ''}
@@ -100,5 +98,5 @@ export function resourceDetail(r, categories, returnTo = '/resources/') {
   const status = { ok: '链接可访问', restricted: '自动访问受限', broken: '链接异常', unchecked: '待核验' }[r.linkStatus];
   const scope = r.levelScope === 'information' ? '信息服务，不限制语言等级' : r.levelScope === 'any' ? '不限制语言等级' : r.levels.join(' · ') || '未标级';
   const facts = [['来源', r.sourceName], ['费用', [priceLabels[r.price], r.costNoteZh].filter(Boolean).join('；')], ['访问条件', [accessLabels[r.access], r.accessNoteZh].filter(Boolean).join('；')], ['参考等级', scope], ['内容形式', (r.mediaTypes?.length ? r.mediaTypes : r.formats).join(' · ')], ['技能 / 主题', r.skills.join(' · ')], ['语言', r.languages.join(' · ')], ['资料核验日期', r.lastEditorialCheckedAt || '暂无日期'], ['链接检查', `${status} / ${r.lastLinkCheckedAt || '暂无链接检查日期'}`], ['网站', new URL(r.url).hostname]];
-  return `<a class="detail-back" href="${e(directoryReturnPath(returnTo))}">← 返回资源目录</a><div class="detail-header"><div><p class="detail-label">${e(categories.find((c) => c.id === r.primaryCategory)?.name)}</p><h1>${e(r.titleZh)}</h1><p class="original">${e(r.titleOriginal)}</p></div></div><p class="detail-intro">${e(r.descriptionZh)}</p><div class="detail-actions"><a class="action-link" href="${e(r.url)}" target="_blank" rel="noopener noreferrer">打开原站 ↗</a><button type="button" data-save="${e(r.id)}" aria-label="收藏资源" aria-pressed="false">☆ 收藏资源</button></div><p id="resource-note" role="status" class="detail-note"></p><dl class="detail-facts">${facts.map(([key, val]) => `<div><dt>${e(key)}</dt><dd>${e(val)}</dd></div>`).join('')}</dl><p class="detail-note">等级依据：${r.levelBasis === 'official' ? '来源官网标注' : r.levelBasis === 'editorial' ? '编辑参考，非机构认证' : '未标级'}。费用、可用性与地区限制以原站当前页面为准。</p>`;
+  return `<a class="detail-back" href="${e(directoryReturnPath(returnTo))}">← 返回资源目录</a><div class="detail-header">${siteIcon(r.url)}<div><p class="detail-label">${e(categories.find((c) => c.id === r.primaryCategory)?.name)}</p><h1>${e(r.titleZh)}</h1><p class="original">${e(r.titleOriginal)}</p></div></div><p class="detail-intro">${e(r.descriptionZh)}</p><div class="detail-actions"><a class="action-link" href="${e(r.url)}" target="_blank" rel="noopener noreferrer">打开原站 ↗</a><button type="button" data-save="${e(r.id)}" aria-label="收藏资源" aria-pressed="false">☆ 收藏资源</button></div><p id="resource-note" role="status" class="detail-note"></p><dl class="detail-facts">${facts.map(([key, val]) => `<div><dt>${e(key)}</dt><dd>${e(val)}</dd></div>`).join('')}</dl><p class="detail-note">等级依据：${r.levelBasis === 'official' ? '来源官网标注' : r.levelBasis === 'editorial' ? '编辑参考，非机构认证' : '未标级'}。费用、可用性与地区限制以原站当前页面为准。</p>`;
 }

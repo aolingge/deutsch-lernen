@@ -32,4 +32,15 @@ The performance numbers are repeatable lab samples without CPU/network throttlin
 - Deployment `bad98e88-709d-4b2b-b5a3-a9caa4920eb6` passed `release-check.mjs`: 196 public detail pages, sitemap and 1200x630 share image returned valid responses before the D1 refresh.
 - Remote D1 was then updated with 58 guarded `INSERT OR IGNORE` rows plus one guarded OBI canonical URL correction. Live public API now returns 254 resources across 25 categories: communication 14, media 9 and food 6.
 - Live readback: home, resources, all three new category filters, WhatsApp and OBI detail pages, sitemap and robots returned 200. Public catalog contains no editorial evidence or historical instruction fields.
-- Live link check after D1 refresh: 165 `ok`, 18 `restricted`, 0 `broken`, 13 `unchecked`. Restricted and unchecked responses remain advisory and are not treated as service-quality guarantees.
+- Historical link report for the 196-record snapshot: 165 `ok`, 18 `restricted`, 0 `broken`, 13 `unchecked`. This report started before the D1 refresh and does not cover all 254 current records. Restricted and unchecked responses remain advisory and are not treated as service-quality guarantees.
+
+## 2026-10-05 real website icons
+
+- Replaced generated domain initials with locally cached website favicons on cards, detail pages and the provider index. 220 hosts have icons, covering 247 of 254 public records; seven records use a neutral globe. Original and indexed icon provenance is documented in `site-icons.md`.
+- `npm run verify`: 38 Node tests passed, Astro check 0 errors/warnings/hints, 272 static pages built.
+- Local Chromium, Firefox and WebKit checks passed existing directory/reader flows and the icon-specific suite: original image decoding, local-only image requests, grid/list sizing, 320/375/768/1440 reflow and an injected 404 revealing the neutral fallback.
+- A final 320px / 200% text check found provider-index overflow from intrinsic grid sizing and long names. Zero-minimum grid tracks and wrapping fixed it; the icon suite now covers 200% text on category, source and detail views in all three browsers.
+- Local accessibility smoke found no known axe violations; manual-review items for ARIA/color contrast remain incomplete and do not constitute a full screen-reader audit.
+- Deployment `4cc1f9ab-ff10-4597-acda-b56179c7cb4a` completed. The live icon-specific suite passed in all three browsers. Release checks passed all 254 public detail pages, sitemap and 1200x630 share image with no failures.
+- All 220 deployed PNGs were retrieved and SHA-256 compared to the local assets: no mismatches. Public API readback remains 254 resources / 25 categories with no editorial-field leaks.
+- `tools/publication-check.ps1` remains red because its phone-number heuristic matches public favicon URL timestamps/asset IDs, the documented loopback address, SVG coordinates and pre-existing reader content. Findings in the changed files were manually reviewed as non-private numbers; no successful full privacy-scan result is claimed.

@@ -1,4 +1,5 @@
 import { icon } from '../lib/icons.mjs';
+import { siteIcon } from '../lib/site-icons.mjs';
 import type { Resource, Category } from '../types';
 import snapshot from '../../data/public-snapshot.json';
 import snapshotCategories from '../../data/categories.json';
@@ -20,6 +21,15 @@ const advancedKeys = ['skill', 'exam', 'access', 'format', 'provider'];
 let timer: ReturnType<typeof setTimeout>;
 let composing = false;
 const e = escapeHtml;
+// Capture image errors on both static markup and later catalog renders.
+document.addEventListener('error', (event) => {
+  if (event.target instanceof HTMLImageElement && event.target.hasAttribute('data-site-icon')) {
+    event.target.hidden = true;
+  }
+}, true);
+document.querySelectorAll<HTMLImageElement>('img[data-site-icon]').forEach((img) => {
+  if (img.complete && !img.naturalWidth) img.hidden = true;
+});
 const favoriteError = (error: unknown) => error instanceof DOMException ? '浏览器存储不可用，请检查存储权限或剩余空间' : error instanceof Error ? error.message : '收藏操作失败';
 const notify = (message: string) => {
   const note = document.querySelector('#favorites-note, #directory-note, #resource-note');
@@ -93,7 +103,8 @@ function render() {
   const sourceIndex=document.querySelector('.provider-index');
   if (sourceIndex) {
     const providers=providerIndex(items);
-    sourceIndex.innerHTML=providers.map(p=>`<li><a href="/resources/?provider=${encodeURIComponent(p.id)}">${e(p.name)}</a><span>${p.count} 个资源</span></li>`).join('');
+    const providerUrls = new Map(items.map(r => [providerKey(r), r.url]));
+    sourceIndex.innerHTML=providers.map(p=>`<li><a href="/resources/?provider=${encodeURIComponent(p.id)}">${siteIcon(providerUrls.get(p.id) || '')}${e(p.name)}</a><span>${p.count} 个资源</span></li>`).join('');
     const facts=document.querySelectorAll('.source-facts strong');
     if(facts[1])facts[1].textContent=String(counts.categories);
     if(facts[2])facts[2].textContent=String(providers.length);

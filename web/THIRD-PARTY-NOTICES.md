@@ -1,5 +1,9 @@
 # Third-party notices
 
+## Website favicons
+
+`public/site-icons/` contains small brand identifiers for linked websites. Source URLs are recorded in `data/site-icons.json`; these marks remain the property of their respective owners and are not covered by the Lucide license below. The directory uses them to identify the external sources, without implying affiliation. See `../docs/site-icons.md` for retrieval and fallback details.
+
 ## Lucide icons
 
 Selected SVG icons are embedded in `src/lib/icons.mjs`. Source: [Lucide](https://lucide.dev/) and its [source repository](https://github.com/lucide-icons/lucide). Retrieved 2026-10-04. The complete upstream license below includes ISC and the license for icons derived from Feather.
