@@ -251,6 +251,12 @@
     "path": "/site-icons/bvg.de.png",
     "source": "https://www.bvg.de/favicon.ico"
   },
+  "callabike.de": {
+    "path": "/site-icons/callabike.de.png",
+    "source": "https://www.callabike.de/favicons/cab/favicon-32x32.png",
+    "retrievedAt": "2026-10-05",
+    "kind": "original"
+  },
   "cambio-carsharing.de": {
     "path": "/site-icons/cambio-carsharing.de.png",
     "source": "https://www.cambio-carsharing.de/typo3conf/ext/auw_project/Resources/Public/mandant/assets/apple-touch-icon-57x57.png"
@@ -437,6 +443,12 @@
     "path": "/site-icons/doctolib.de.png",
     "source": "https://www.doctolib.de/favicon.ico"
   },
+  "donkey.bike": {
+    "path": "/site-icons/donkey.bike.png",
+    "source": "https://cdn.prod.website-files.com/67d0211d11a8ca1987f129df/67dd7f726300a6b7129a1358_donkeyrepublic-webclip.png",
+    "retrievedAt": "2026-10-05",
+    "kind": "original"
+  },
   "dpd.com": {
     "path": "/site-icons/dpd.com.png",
     "source": "https://www.dpd.com/wp-content/uploads/sites/59/2019/02/cropped-favicon-194x194-32x32.png",
@@ -466,6 +478,18 @@
   "easygerman.org": {
     "path": "/site-icons/easygerman.org.png",
     "source": "https://images.squarespace-cdn.com/content/v1/5d6fac900590760001b18dbf/1570203601799-MS8F5DLBB93SYS9RIM95/favicon.ico?format=100w"
+  },
+  "easypark.com": {
+    "path": "/site-icons/easypark.com.png",
+    "source": "https://www.easypark.com/static/easypark/apple-touch-icon.png",
+    "retrievedAt": "2026-10-05",
+    "kind": "original"
+  },
+  "eausleihe.onleihe.de": {
+    "path": "/site-icons/eausleihe.onleihe.de.png",
+    "source": "https://eausleihe.onleihe.de/favicon.ico",
+    "retrievedAt": "2026-10-05",
+    "kind": "original"
   },
   "ebay.de": {
     "path": "/site-icons/ebay.de.png",
@@ -523,9 +547,21 @@
     "retrievedAt": "2026-10-05",
     "kind": "original"
   },
+  "filmfriend.de": {
+    "path": "/site-icons/filmfriend.de.png",
+    "source": "https://filmwerte-vod.b-cdn.net/tenant-groups/219/21960588-0518-4dd3-89e5-f25ba5bf5631/favicons/3179d284-c62f-41a5-bccd-583d568493bd.ico",
+    "retrievedAt": "2026-10-05",
+    "kind": "original"
+  },
   "finanztip.de": {
     "path": "/site-icons/finanztip.de.png",
     "source": "https://cdn3-static.finanztip.de/a0007/699/_assets/b41fe5d88b3f5961583ad988eb6cf029/Icons/Favicon/favicon.ico"
+  },
+  "firefox.com": {
+    "path": "/site-icons/firefox.com.png",
+    "source": "https://www.firefox.com/media/img/favicons/firefox/browser/apple-touch-icon.79c2abeb4e35.png",
+    "retrievedAt": "2026-10-05",
+    "kind": "original"
   },
   "flixbus.de": {
     "path": "/site-icons/flixbus.de.png",
@@ -635,9 +671,21 @@
     "path": "/site-icons/hostelworld.com.png",
     "source": "https://www.hostelworld.com/favicon.ico"
   },
+  "hrs.de": {
+    "path": "/site-icons/hrs.de.png",
+    "source": "https://www.hrs.de/static/icons/favicon-16x16.png",
+    "retrievedAt": "2026-10-05",
+    "kind": "original"
+  },
   "huk.de": {
     "path": "/site-icons/huk.de.png",
     "source": "https://static.c.huk.de/content/dam/hukde/images/technisch/icons/favicon.ico",
+    "retrievedAt": "2026-10-05",
+    "kind": "original"
+  },
+  "hvv.de": {
+    "path": "/site-icons/hvv.de.png",
+    "source": "https://www.hvv.de/resource/crblob/50032/0b252ea3eb5daaf705dd4fd0db4273fb/favicon-16x16-png-data.png",
     "retrievedAt": "2026-10-05",
     "kind": "original"
   },
@@ -701,6 +749,12 @@
     "path": "/site-icons/joinmastodon.org.png",
     "source": "https://joinmastodon.org/_next/static/media/favicon-32x32.3a702fe9.png"
   },
+  "joplinapp.org": {
+    "path": "/site-icons/joplinapp.org.png",
+    "source": "https://joplinapp.org/images/favicon.png",
+    "retrievedAt": "2026-10-05",
+    "kind": "original"
+  },
   "joyn.de": {
     "path": "/site-icons/joyn.de.png",
     "source": "https://www.joyn.de/icons/apple-touch-icon-57x57.png"
@@ -755,6 +809,12 @@
     "path": "/site-icons/learngerman.dw.com.png",
     "source": "https://learngerman.dw.com/favicon.png"
   },
+  "libbyapp.com": {
+    "path": "/site-icons/libbyapp.com.png",
+    "source": "https://libbyapp.com/icons/libby-icon-android-192.png",
+    "retrievedAt": "2026-10-05",
+    "kind": "original"
+  },
   "lidl.de": {
     "path": "/site-icons/lidl.de.png",
     "source": "https://www.lidl.de/apple-touch-icon.png"
@@ -799,6 +859,12 @@
     "retrievedAt": "2026-10-05",
     "kind": "indexed"
   },
+  "meet.jit.si": {
+    "path": "/site-icons/meet.jit.si.png",
+    "source": "https://meet.jit.si/images/apple-touch-icon.png",
+    "retrievedAt": "2026-10-05",
+    "kind": "original"
+  },
   "meetup.com": {
     "path": "/site-icons/meetup.com.png",
     "source": "https://secure.meetupstatic.com/next/images/favicon.ico"
@@ -816,6 +882,12 @@
   "mentor.duden.de": {
     "path": "/site-icons/mentor.duden.de.png",
     "source": "https://mentor.duden.de/sites/default/res/D.png"
+  },
+  "microsoft.com": {
+    "path": "/site-icons/microsoft.com.png",
+    "source": "https://www.microsoft.com/favicon.ico?v2",
+    "retrievedAt": "2026-10-05",
+    "kind": "original"
   },
   "miet24.de": {
     "path": "/site-icons/miet24.de.png",
@@ -915,6 +987,12 @@
     "path": "/site-icons/obi.de.png",
     "source": "https://www.obi.de/assets/discover/head-fragment/public/de_DE/favicon.ico"
   },
+  "obsidian.md": {
+    "path": "/site-icons/obsidian.md.png",
+    "source": "https://obsidian.md/favicon.ico",
+    "retrievedAt": "2026-10-05",
+    "kind": "original"
+  },
   "octopusenergy.de": {
     "path": "/site-icons/octopusenergy.de.png",
     "source": "https://octopusenergy.de/favicon-512x512.png",
@@ -942,6 +1020,12 @@
   "otto.de": {
     "path": "/site-icons/otto.de.png",
     "source": "https://static.otto.de/assets-static/global-favicons/favicon.ico"
+  },
+  "parkster.com": {
+    "path": "/site-icons/parkster.com.png",
+    "source": "https://www.parkster.com/de/wp-content/uploads/sites/3/2025/06/cropped-app-icon-150x150.webp",
+    "retrievedAt": "2026-10-05",
+    "kind": "original"
   },
   "paypal.com": {
     "path": "/site-icons/paypal.com.png",
@@ -1030,6 +1114,12 @@
   "rewe.de": {
     "path": "/site-icons/rewe.de.png",
     "source": "https://www.rewe.de/favicon.ico"
+  },
+  "rmv.de": {
+    "path": "/site-icons/rmv.de.png",
+    "source": "https://www.rmv.de/c/typo3conf/ext/rmvtemplate/Resources/Public/Images/favicon.png",
+    "retrievedAt": "2026-10-05",
+    "kind": "original"
   },
   "rossmann.de": {
     "path": "/site-icons/rossmann.de.png",
@@ -1197,6 +1287,18 @@
     "retrievedAt": "2026-10-05",
     "kind": "original"
   },
+  "threema.com": {
+    "path": "/site-icons/threema.com.png",
+    "source": "https://threema.com/build/assets/apple-icon-180x180-Dmg5Cyre.png",
+    "retrievedAt": "2026-10-05",
+    "kind": "original"
+  },
+  "thunderbird.net": {
+    "path": "/site-icons/thunderbird.net.png",
+    "source": "https://www.thunderbird.net/media/img/thunderbird/ios-icon-180.png",
+    "retrievedAt": "2026-10-05",
+    "kind": "original"
+  },
   "tiktok.com": {
     "path": "/site-icons/tiktok.com.png",
     "source": "https://www.tiktok.com/favicon.ico"
@@ -1265,6 +1367,12 @@
     "retrievedAt": "2026-10-05",
     "kind": "indexed"
   },
+  "vbb.de": {
+    "path": "/site-icons/vbb.de.png",
+    "source": "https://www.vbb.de/_assets/102f6df7fd2497a19ad0baf203d51961/Icons/Favicon/favicon.ico",
+    "retrievedAt": "2026-10-05",
+    "kind": "original"
+  },
   "verbformen.de": {
     "path": "/site-icons/verbformen.de.png",
     "source": "https://www.verbformen.de/apple-touch-icon.png"
@@ -1306,6 +1414,18 @@
     "source": "https://www.vr.de/etc.clientlibs/vr/clientlibs/clientlib-site/resources/favicon.ico",
     "retrievedAt": "2026-10-05",
     "kind": "original"
+  },
+  "vrr.de": {
+    "path": "/site-icons/vrr.de.png",
+    "source": "https://www.vrr.de/assets/img/favicon.ico",
+    "retrievedAt": "2026-10-05",
+    "kind": "original"
+  },
+  "vvs.de": {
+    "path": "/site-icons/vvs.de.png",
+    "source": "https://t1.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://www.vvs.de&size=64",
+    "retrievedAt": "2026-10-05",
+    "kind": "indexed"
   },
   "waze.com": {
     "path": "/site-icons/waze.com.png",
@@ -1357,6 +1477,12 @@
     "path": "/site-icons/wolt.com.png",
     "source": "https://wolt-com-static-assets.wolt.com/favicon.ico"
   },
+  "workspace.google.com": {
+    "path": "/site-icons/workspace.google.com.png",
+    "source": "https://www.gstatic.com/images/branding/googleg_gradient/1x/googleg_gradient_standard_20dp.png",
+    "retrievedAt": "2026-10-05",
+    "kind": "indexed"
+  },
   "x.com": {
     "path": "/site-icons/x.com.png",
     "source": "https://x.com/favicon.ico",
@@ -1392,6 +1518,12 @@
   "zeit.de": {
     "path": "/site-icons/zeit.de.png",
     "source": "https://static.zeit.de/p/zeit.web/icons/favicon-96x96.png"
+  },
+  "zoom.us": {
+    "path": "/site-icons/zoom.us.png",
+    "source": "https://st1.zoom.us/zoom.ico",
+    "retrievedAt": "2026-10-05",
+    "kind": "original"
   },
   "zooplus.de": {
     "path": "/site-icons/zooplus.de.png",

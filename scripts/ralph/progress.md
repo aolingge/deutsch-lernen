@@ -90,3 +90,15 @@ Authorization: execute all twelve packages, verify and deploy the configured web
 - D1 applied 76 guarded additions + four seed-only updates in eight batches, retaining audit/history and unrelated online edits. Final deployment dc102080-09e7-4961-a6b6-6b087ee0488f. Public readback 330/28, zero editorial leaks. Release 330 details/sitemap/share image and all 295 PNG hashes passed.
 - Full live link report 258 ok /61 restricted /1 raw broken (OBI browser 200) /10 unchecked. Seven icon fallbacks remain. Publication heuristic still red on 71 non-private numeric contexts, including unchanged reader data; all findings were context-reviewed without modifying unrelated content or the scanner.
 - Evidence: docs/everyday-resource-audit-2026-10-05.md and docs/resource-directory-qa.md. No Git push, DNS, payment or real-account messages.
+
+## 2026-10-05 regional applications, libraries and detail-query follow-up
+
+- Source 430/28; live 353/28; effective application filter 106 (mediaTypes with formats fallback). Added 23 official entries for regional transit, parking, bicycles, digital libraries, browser/email, office/notes/meetings and hotels. Nine existing application tags verified; Swapfiets deduplicated.
+- Link audit for 32 changed records: 30 ok /1 restricted (REWE 403) /1 unchecked (VVS timeout; independent strict TLS failure). Eligibility and region/cost notes remain explicit. 317 local real favicons cover 346/353; seven neutral fallbacks.
+- Vertical desktop category visibility and Chinese/German aliases improved. Local existing, everyday and icon flows passed Chromium/Firefox/WebKit, 320px/200% text; live everyday flows passed all three. Axe no known violations, existing manual items retained.
+- 44 Node tests, Astro 0/0/0, 371 static pages passed. D1 inserted 23 and updated nine untouched seed rows in four guarded batches; all 32 changes matched live readback. Existing authentication loaded through established shell profile, no credential changes.
+- Initial deployment 7eb62a01-b6d4-42da-8132-895b6a087953. All 317 published icons matched local SHA-256. Full release checks initially had 25 then 14 detail failures; second run identified HTTP503 and a sitemap failure. Raw reports preserved.
+- Detail route now fetches only the current published row via existing unique slug index, with draft/corrupt/evidence/database-failure regressions; no cache/schema change. Release diagnostics report actual HTTP status and mark sitemap/image checks successful only after validation. Index SEARCH verified with EXPLAIN QUERY PLAN.
+- Final deployment 795773b9-4efc-499f-85bb-912f6732eb0a passed all 353 details, full sitemap, 1200x630 PNG and public-field privacy at unchanged four-request concurrency. Exact earlier 503 cause remains unproven; no universal uptime claim.
+- Publication checker still red on 73 phone-like matches, no other finding types. New public favicon asset IDs context-reviewed; unchanged reader/loopback/SVG/public identifier contexts retained. No scanner bypass or unrelated reader changes, Git push, DNS/payment or account messaging.
+- Evidence: docs/regional-and-tools-audit-2026-10-05.md and docs/resource-directory-qa.md.

@@ -2,9 +2,9 @@
 
 The directory renders real website favicons on resource cards, detail pages and the provider index. The Chinese source name remains the accessible label; decorative images have empty alt text. Grid, list and narrow-screen views retain fixed icon containers and contain the image without changing its aspect ratio.
 
-On 2026-10-05, 295 of the 302 public resource hostnames have local PNG icons (323 of 330 resource records). The remaining seven hosts show a neutral globe, as do newly added hosts without a cached icon. Image loading errors also reveal the globe, without retry loops or inline event handlers.
+On 2026-10-05, 317 of the 324 public resource hostnames have local PNG icons (346 of 353 resource records). The remaining seven hosts show a neutral globe, as do newly added hosts without a cached icon. Image loading errors also reveal the globe, without retry loops or inline event handlers.
 
-249 icons were retrieved directly from the original websites. For 46 sites whose direct retrieval failed, a manually enabled build-time fallback retrieved the indexed website favicon through Google. Visitors load every icon from this website; their browser does not contact Google or an external logo service for these images. Provenance URLs are recorded in `web/data/site-icons.json`. Indexed favicons can lag behind a website's current branding.
+269 icons were retrieved directly from the original websites. For 48 sites whose direct retrieval failed, a manually enabled build-time fallback retrieved the indexed website favicon through Google. Visitors load every icon from this website; their browser does not contact Google or an external logo service for these images. Provenance URLs are recorded in `web/data/site-icons.json`. Indexed favicons can lag behind a website's current branding.
 
 Maintenance from `web/`:
 

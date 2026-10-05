@@ -51,6 +51,27 @@ test('live detail response renders current database content and metadata', async
   db.close();
 });
 
+test('detail views use an isolated current lookup and keep drafts and corrupt records private', async () => {
+  const {db,adapter}=database();
+  const good={...catalog.find(r=>r.id==='anki'),titleZh:'当前单条资源',evidence:[{url:'https://example.invalid/evidence',fields:['purpose'],checkedAt:'2026-10-05'}]};
+  const insert=db.prepare('INSERT INTO catalog_entries(id,slug,canonical_url,category,status,payload_json,updated_at) VALUES(?,?,?,?,?,?,?)');
+  for(const item of [good,{...good,id:'hidden-draft',slug:'hidden-draft',canonicalUrl:'https://example.invalid/draft',status:'draft'},{...good,id:'corrupt-detail',slug:'corrupt-detail',canonicalUrl:'https://example.invalid/corrupt',levels:['B3']}]) insert.run(item.id,item.slug,item.canonicalUrl,item.primaryCategory,item.status,JSON.stringify(item),now);
+  const DB={prepare(sql){const statement=adapter.prepare(sql);statement.all=async()=>{throw Error('Bulk catalog reads unavailable');};return statement;}};
+  const ASSETS={async fetch(){return new Response('<head><title>旧</title></head><section data-detail>加载中</section>');}};
+  const originalError=console.error;
+  console.error=()=>{};
+  try {
+    const result=await worker.fetch(request('/resource/anki/'),{DB,ASSETS});
+    assert.equal(result.status,200);
+    const html=await result.text();
+    assert.ok(html.includes('<h1>当前单条资源</h1>'));
+    assert.ok(!html.includes('example.invalid/evidence'));
+    for(const slug of ['hidden-draft','corrupt-detail','missing-detail']) assert.equal((await worker.fetch(request('/resource/'+slug),{DB,ASSETS})).status,404);
+    const unavailable={prepare(){throw Error('Database unavailable');}};
+    assert.equal((await worker.fetch(request('/resource/anki/'),{DB:unavailable,ASSETS})).status,503);
+  } finally {console.error=originalError;db.close();}
+});
+
 test('public responses exclude editorial evidence and historical instructions while protected data stays intact', async () => {
   const {db,adapter}=database();
   const item={...catalog.find(r=>r.id==='anki'),howToUseZh:'historical instruction',evidence:[{url:'https://example.invalid/source',fields:['purpose'],checkedAt:'2026-10-04'}]};

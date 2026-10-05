@@ -27,6 +27,11 @@ with sync_playwright() as p:
         page.locator('input[name="q"]').fill('报税')
         page.wait_for_function("document.querySelector('[data-active-filters]').textContent.includes('报税')")
         assert 'Taxfix' in page.locator('[data-catalog-grid]').inner_text()
+        ready(page, base, '/resources/?q=bibliothek&format=%E5%BA%94%E7%94%A8')
+        assert 'Libby' in page.locator('[data-catalog-grid]').inner_text()
+        ready(page, base, '/resources/?category=courses')
+        active = page.locator('a.category-link[aria-current]')
+        assert active.evaluate("el=>{const b=el.getBoundingClientRect(),n=el.closest('nav').getBoundingClientRect();return b.top>=n.top&&b.bottom<=n.bottom}"), 'active desktop category hidden'
         for category in ('postal', 'household', 'leisure'):
             ready(page, base, '/resources/?category=' + category)
             assert page.locator('.resource-card').count() >= 5
@@ -46,6 +51,6 @@ with sync_playwright() as p:
             page.set_viewport_size({'width': 375, 'height': 900})
             page.wait_for_function("document.querySelector('a.category-link[aria-current]').getBoundingClientRect().left >= 0 && document.querySelector('a.category-link[aria-current]').getBoundingClientRect().right <= innerWidth")
             page.screenshot(path=str(ROOT / '.wrangler/everyday-mobile.png'), full_page=True)
-        report.append({'browser': name, 'status': 'passed', 'flows': ['app filter/back/reset', 'tax search', 'new categories', 'mobile expand', '320px/200% text']})
+        report.append({'browser': name, 'status': 'passed', 'flows': ['app filter/back/reset', 'tax search', 'library app search', 'active desktop category', 'new categories', 'mobile expand', '320px/200% text']})
         browser.close()
 print(json.dumps(report))

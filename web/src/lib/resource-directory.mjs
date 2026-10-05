@@ -34,6 +34,11 @@ const aliases = [
   ['地图', '导航', 'maps', 'karte', 'navigation'],
   ['医保', '医疗保险', 'krankenkasse', 'krankenversicherung'],
   ['应用', '软件', 'app', 'apps'],
+  ['停车', '停车费', 'parken', 'parkplatz', 'parking'],
+  ['自行车', '骑行', '共享单车', 'fahrrad', 'bike', 'cycling'],
+  ['图书馆', '数字借阅', 'bibliothek', 'library'],
+  ['视频会议', '会议', 'videokonferenz', 'meeting'],
+  ['浏览器', 'browser'],
 ];
 /** @param {string} word */
 const searchTerms = (word) => aliases.find((group) => group.includes(word)) || [word];

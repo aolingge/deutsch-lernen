@@ -38,6 +38,19 @@ async function publicCatalog(env: Env) {
   });
   return { resources, categories };
 }
+async function publicResource(env: Env, slug: string) {
+  if (!env.DB) {
+    const item = seed.find(r => r.slug === slug && isDirectoryResource(r));
+    return item ? publicRecord(item) : null;
+  }
+  // slug is unique and indexed; detail views need only their current record.
+  const row = await env.DB.prepare("SELECT id, payload_json FROM catalog_entries WHERE slug = ? AND status = 'published' LIMIT 1").bind(slug).first<{id:string;payload_json:string}>();
+  if (!row) return null;
+  try {
+    const item = validateResource(JSON.parse(row.payload_json));
+    return item.slug === slug && isDirectoryResource(item) ? publicRecord(item) : null;
+  } catch { console.error('Invalid public catalog record', row.id); return null; }
+}
 function secure(response: Response) {
   const secured = new Response(response.body, response);
   secured.headers.set('x-content-type-options', 'nosniff');
@@ -119,8 +132,8 @@ export default {
         return secure(new Response(request.method === 'HEAD' ? null : xml, { headers: { 'content-type': 'application/xml; charset=utf-8', 'cache-control': 'public, max-age=30' } }));
       }
       if (/^\/resource\/[a-z0-9-]+$/.test(path)) {
-        const slug=path.split('/')[2]; const {resources}=await publicCatalog(env);
-        const resource = resources.find(r=>r.slug===slug);
+        const slug=path.split('/')[2];
+        const resource = await publicResource(env, slug);
         if (!resource) {
           if (seed.some(r=>r.slug===slug && r.rights==='owned')) return Response.redirect(url.origin+'/resources/',302);
           return secure(new Response('资源不存在或尚未公开',{status:404}));

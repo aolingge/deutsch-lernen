@@ -92,6 +92,11 @@ function revealCategory() {
   const nav = document.querySelector<HTMLElement>('#category-navigation');
   const active = nav?.querySelector<HTMLElement>('[aria-current]');
   if (nav && active && nav.scrollWidth > nav.clientWidth) nav.scrollLeft = Math.max(0, active.offsetLeft - nav.offsetLeft - 4);
+  if (nav && active && nav.scrollHeight > nav.clientHeight) {
+    const bounds = nav.getBoundingClientRect(), current = active.getBoundingClientRect();
+    if (current.top < bounds.top) nav.scrollTop += current.top - bounds.top;
+    else if (current.bottom > bounds.bottom) nav.scrollTop += current.bottom - bounds.bottom;
+  }
 }
 function render() {
   const focused = document.activeElement instanceof HTMLElement ? document.activeElement : null;

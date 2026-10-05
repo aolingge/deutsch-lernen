@@ -27,3 +27,15 @@ test('Chinese and German everyday search terms find relevant services', () => {
     assert.ok(selectResources(resources,new URLSearchParams({q:query})).some(r=>r.id===id),query);
   }
 });
+
+test('regional transport and existing provider clients are discoverable as applications', () => {
+  const apps=selectResources(resources,new URLSearchParams({format:'应用'}));
+  for(const id of ['hvv-app','vrr-app','rmvgo','vbb-app','vvs-app','bahn','dm','rossmann','rewe','discord','flixbus','spotify-germany']) assert.ok(apps.some(r=>r.id===id),id);
+  for(const [query,id] of [['parking','parkster'],['fahrrad','call-a-bike'],['bibliothek','onleihe-libraries'],['videokonferenz','jitsi-meet'],['browser','firefox']]) assert.ok(selectResources(resources,new URLSearchParams({q:query})).some(r=>r.id===id),query);
+  for(const id of ['onleihe-libraries','libby-libraries','filmfriend']) {
+    const row=resources.find(r=>r.id===id);
+    assert.equal(row.access,'registration');
+    assert.ok(row.accessNoteZh.includes('图书馆'));
+    assert.notEqual(row.price,'free');
+  }
+});
