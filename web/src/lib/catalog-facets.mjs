@@ -19,6 +19,9 @@ export function catalogCounts(rows) {
 }
 /** @param {import('../types').Resource[]} items @param {URLSearchParams} params @param {string[]} favorites */
 export function buildFacets(items,params=new URLSearchParams(),favorites=[]) {
+  const live = items.filter(isDirectoryResource);
+  /** @type {Map<string, import('../types').Resource[]>} */
+  const matching = new Map();
   /** @type {Record<string, (r: import('../types').Resource) => string[]>} */
   const values = {
     level: r=>r.levelScope==='any'||r.levelScope==='information'?['A1','A2','B1','B2','C1','C2']:r.levels,
@@ -26,12 +29,19 @@ export function buildFacets(items,params=new URLSearchParams(),favorites=[]) {
     format:r=>r.mediaTypes?.length?r.mediaTypes:r.formats, provider:r=>[providerKey(r)],
   };
   return Object.fromEntries(Object.entries(values).map(([key,get])=>{
-    const all=[...new Set(items.filter(isDirectoryResource).flatMap(get))];
+    const all=[...new Set(live.flatMap(get))];
     const selected=params.get(key);
     const available=new Set(all);
     if (selected && !available.has(selected)) all.push(selected);
     const other=new URLSearchParams(params);other.delete(key);
-    const relevant=selectResources(items,other,favorites);
-    return [key,all.sort((a,b)=>a.localeCompare(b,'zh-CN')).map(value=>({value,count:relevant.filter(r=>get(r).includes(value)).length,available:available.has(value)}))];
+    // Counts do not depend on ordering or pagination. Reuse identical queries.
+    other.delete('page'); other.set('sort','facet-count'); other.sort();
+    const query = other.toString();
+    let relevant = matching.get(query);
+    if (!relevant) { relevant = selectResources(live,other,favorites); matching.set(query,relevant); }
+    /** @type {Map<string, number>} */
+    const counts = new Map();
+    for (const row of relevant) for (const value of new Set(get(row))) counts.set(value,(counts.get(value)||0)+1);
+    return [key,all.sort((a,b)=>a.localeCompare(b,'zh-CN')).map(value=>({value,count:counts.get(value)||0,available:available.has(value)}))];
   }));
 }

@@ -81,3 +81,12 @@ Authorization: execute all twelve packages, verify and deploy the configured web
 - Project instructions now explicitly permit focused local commits after verification without reconfirmation. No remote Git push or D1 data update was needed for this presentation change.
 - All 220 live PNGs match local SHA-256 hashes; live catalog remains 254/25 with zero editorial leaks. Publication heuristic still reports non-private numeric matches in new provenance URLs/SVG geometry and existing reader data; task-file findings were reviewed manually, without changing the scanner or unrelated reader files.
 - Final mobile text-enlargement check found and fixed provider-index overflow at 320px / 200% text. The expanded icon smoke suite passes the category, sources and detail views in all three browsers after wrapping/grid-track corrections.
+
+## 2026-10-05 comprehensive everyday-directory audit and expansion
+
+- Added 76 original-service entry points; source 407/28, live public 330/28, applications 65. New categories postal/household/leisure; daily-life and language navigation groups, primary application filter, Chinese/German aliases, bounded desktop category navigation and mobile breakpoint positioning.
+- Corrected Omio's unrelated .de lookalike to official .com, removed the wrong icon, and confirmed OBI's raw 404 is browser-dependent (isolated browser 200). UPS 200 Access Denied is restricted. No deletion or fabricated zero-error link report.
+- 42 Node tests, Astro 0/0/0, 348-page build passed. Three-browser everyday and existing flows passed; 320px/200% text and icon checks passed. Facet aggregation avoids repeated per-provider scans and duplicate form calculations; median microbenchmark 20.10 -> 1.20 ms.
+- D1 applied 76 guarded additions + four seed-only updates in eight batches, retaining audit/history and unrelated online edits. Final deployment dc102080-09e7-4961-a6b6-6b087ee0488f. Public readback 330/28, zero editorial leaks. Release 330 details/sitemap/share image and all 295 PNG hashes passed.
+- Full live link report 258 ok /61 restricted /1 raw broken (OBI browser 200) /10 unchecked. Seven icon fallbacks remain. Publication heuristic still red on 71 non-private numeric contexts, including unchanged reader data; all findings were context-reviewed without modifying unrelated content or the scanner.
+- Evidence: docs/everyday-resource-audit-2026-10-05.md and docs/resource-directory-qa.md. No Git push, DNS, payment or real-account messages.

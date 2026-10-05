@@ -35,7 +35,7 @@ const paths = {
   "x": "<path d=\"M18,6,6,18\" /> <path d=\"m6,6,12,12\" />"
 };
 /** @type {Record<string, string>} */
-export const categoryIcons = { courses: 'book-open', exams: 'graduation-cap', vocabulary: 'languages', grammar: 'notebook-pen', listening: 'headphones', speaking: 'mic', reading: 'book-text', writing: 'pen-line', news: 'newspaper', video: 'play', tools: 'wrench', life: 'map-pin', communication: 'users', media: 'newspaper', food: 'shopping-bag', social: 'users', housing: 'home', jobs: 'briefcase', classifieds: 'tag', mobility: 'train', government: 'landmark', finance: 'wallet', health: 'heart-pulse', shopping: 'shopping-bag', travel: 'plane' };
+export const categoryIcons = { courses: 'book-open', exams: 'graduation-cap', vocabulary: 'languages', grammar: 'notebook-pen', listening: 'headphones', speaking: 'mic', reading: 'book-text', writing: 'pen-line', news: 'newspaper', video: 'play', tools: 'wrench', life: 'map-pin', communication: 'users', media: 'newspaper', food: 'shopping-bag', social: 'users', housing: 'home', jobs: 'briefcase', classifieds: 'tag', mobility: 'train', government: 'landmark', finance: 'wallet', health: 'heart-pulse', shopping: 'shopping-bag', travel: 'plane', postal: 'tag', household: 'home', leisure: 'map-pin' };
 /** @param {string} name */
 export function icon(name) {
   return `<svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0,0,24,24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${paths[name] || paths.library}</svg>`;

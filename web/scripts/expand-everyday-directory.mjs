@@ -1,0 +1,105 @@
+import fs from 'node:fs';
+import { canonicalize, validateResource } from '../src/lib/catalog-schema.mjs';
+
+// Reviewed original-service entry points, not affiliate links or APK mirrors.
+// [id, category, name, Chinese title, purpose, URL, tags, app, access, price]
+export const candidates = [
+  ['post-dhl','postal','Post & DHL','Post & DHL 邮政与包裹','包裹追踪、寄件、邮局与 Packstation 服务及官方应用入口。','https://www.dhl.de/de/privatkunden/kampagnenseiten/dhl-app.html','快递|邮政|包裹|Packstation',true],
+  ['dpd','postal','DPD','DPD 包裹服务','包裹追踪、收件安排、寄件及 myDPD 应用信息。','https://www.dpd.com/de/de/empfangen/dpd-app/','快递|包裹|Paket',true],
+  ['hermes','postal','Hermes','Hermes 寄件与追踪','德国包裹寄送、包裹店查询和物流追踪入口。','https://www.myhermes.de/','快递|包裹|Paketshop',true],
+  ['gls','postal','GLS','GLS 包裹与包裹店','个人包裹寄送、收件、物流查询及 GLS Pakete 应用入口。','https://www.gls-pakete.de/','快递|包裹|Paket',true],
+  ['ups-germany','postal','UPS','UPS 德国包裹服务','德国及国际包裹寄送、追踪和服务网点入口。','https://www.ups.com/de/de/home','快递|国际包裹|物流',true],
+  ['eon','household','E.ON','E.ON 电力与燃气','家庭电力、燃气、合同与客户服务入口。','https://www.eon.de/de/pk.html','电力|燃气|Strom|Gas',false,'open','paid'],
+  ['enbw-energy','household','EnBW','EnBW 家庭能源','家庭电力、燃气及客户服务信息。','https://www.enbw.com/','电力|燃气|能源',false,'open','paid'],
+  ['vattenfall','household','Vattenfall','Vattenfall 电力与燃气','家庭电力与燃气服务、套餐和客户账户入口。','https://www.vattenfall.de/','电力|燃气|能源',false,'open','paid'],
+  ['octopus-energy','household','Octopus Energy','Octopus Energy 德国家庭能源','德国电力、燃气及能源客户服务入口。','https://octopusenergy.de/','电力|燃气|能源',false,'open','paid'],
+  ['energy-consumer-agency','household','Bundesnetzagentur','联邦网络局能源消费者信息','官方电力与燃气消费者信息及能源服务问题入口。','https://www.bundesnetzagentur.de/DE/Vportal/Energie/start.html','电力|燃气|消费者权益|官方',false,'open','free'],
+  ['myhammer','household','MyHammer','MyHammer 家庭维修与工匠','寻找装修、维修、搬家等家庭服务商并发布服务需求。','https://www.my-hammer.de/','维修|装修|搬家|工匠',false,'registration'],
+  ['taskrabbit','household','Taskrabbit','Taskrabbit 家具组装与家庭服务','家具组装、搬运及其他家庭服务的当地服务商入口。','https://www.taskrabbit.de/','家具组装|搬运|家庭服务',true,'registration'],
+  ['eventim','leisure','EVENTIM','EVENTIM 演出与门票','音乐会、戏剧、体育与其他活动的门票信息。','https://www.eventim.de/','门票|演唱会|活动|Konzert',true],
+  ['eventbrite','leisure','Eventbrite','Eventbrite 活动与报名','查找德国及其他地区的社区、文化和专业活动。','https://www.eventbrite.de/','活动|门票|社区|Event',true],
+  ['komoot','leisure','komoot','komoot 徒步与骑行路线','徒步、骑行路线规划、户外地图及导航应用。','https://www.komoot.com/de-de','徒步|骑行|户外|Wandern',true,'registration','freemium'],
+  ['alltrails','leisure','AllTrails','AllTrails 户外路线','徒步路线、户外地图及路线社区应用。','https://www.alltrails.com/de/','徒步|户外|路线|Wandern',true,'registration','freemium'],
+  ['strava','leisure','Strava','Strava 运动与社交','记录跑步、骑行等运动并参加运动社区。','https://www.strava.com/','运动|跑步|骑行|Fitness',true,'registration','freemium'],
+  ['urban-sports-club','leisure','Urban Sports Club','Urban Sports Club 运动场馆','多种运动与合作场馆的会员服务；覆盖和资格以城市与套餐为准。','https://urbansportsclub.com/de','健身|运动|瑜伽|场馆',true,'registration','paid'],
+  ['alpenverein','leisure','Deutscher Alpenverein','德国登山协会 DAV','德国登山、徒步、山屋和协会活动信息。','https://www.alpenverein.de/','徒步|登山|山屋|协会',false],
+  ['disney-plus','media','Disney+','Disney+ 德国影视','电影、电视剧及其他影视内容的官方流媒体入口。','https://www.disneyplus.com/de-de','电影|电视剧|流媒体',true,'registration','paid'],
+  ['steam','media','Steam','Steam 游戏平台','电脑游戏商店、游戏库及玩家社区。','https://store.steampowered.com/?l=german','游戏|电脑游戏|社区',true],
+  ['epic-games','media','Epic Games Store','Epic Games 游戏商店','电脑游戏商店和官方游戏客户端入口。','https://store.epicgames.com/de/','游戏|电脑游戏|商店',true],
+  ['airbnb','travel','Airbnb','Airbnb 住宿','德国与国际民宿、短住和住宿搜索。','https://www.airbnb.de/','住宿|民宿|旅行',true],
+  ['omio','travel','Omio','Omio 跨国交通比较','搜索铁路、巴士与航班方案及票务入口。','https://www.omio.com/','旅行|铁路|巴士|机票',true],
+  ['trainline','travel','Trainline','Trainline 欧洲铁路','欧洲火车和巴士车票搜索与预订入口。','https://www.thetrainline.com/de','旅行|铁路|火车票',true],
+  ['getyourguide','travel','GetYourGuide','GetYourGuide 景点与活动','旅行景点门票、导览与目的地活动搜索。','https://www.getyourguide.de/','旅行|景点|门票|活动',true],
+  ['djh','travel','Deutsches Jugendherbergswerk','德国青年旅舍 DJH','德国青年旅舍查询、住宿和会员资格信息。','https://www.jugendherberge.de/','住宿|青年旅舍|家庭旅行',false],
+  ['pincamp','travel','PiNCAMP','PiNCAMP 露营地','德国及欧洲露营地和露营住宿搜索。','https://www.pincamp.de/','露营|房车|旅行',false],
+  ['google-maps','mobility','Google Maps','Google Maps 地图','地点搜索、路线规划和公共交通信息；实时功能因地区而异。','https://www.google.com/maps','地图|导航|路线|Maps',true,'open','free'],
+  ['here-wego','mobility','HERE WeGo','HERE WeGo 地图与导航','地图、路线规划和导航应用的官方入口。','https://wego.here.com/','地图|导航|路线',true,'open','free'],
+  ['waze','mobility','Waze','Waze 驾车导航','驾车路线、交通状况和导航应用。','https://www.waze.com/de/','地图|驾车|导航',true,'open','free'],
+  ['blablacar','mobility','BlaBlaCar','BlaBlaCar 拼车','城际拼车与部分巴士线路的搜索入口。','https://www.blablacar.de/','拼车|巴士|Mitfahrgelegenheit',true],
+  ['uber-germany','mobility','Uber','Uber 德国出行','德国服务城市的叫车入口；车型和覆盖范围因城市而异。','https://www.uber.com/de/de/','叫车|出租车|出行',true,'registration'],
+  ['bolt','mobility','Bolt','Bolt 城市出行','服务城市的叫车及共享出行入口；具体服务以所在地为准。','https://bolt.eu/de-de/','叫车|共享出行|城市',true,'registration'],
+  ['freenow','mobility','FREENOW','FREENOW 出租车','德国服务城市的出租车预约和出行应用。','https://www.free-now.com/de/','出租车|叫车|出行',true,'registration'],
+  ['adac-drive','mobility','ADAC Drive','ADAC Drive 油价与路线','德国加油价格查询、路线规划和充电信息应用。','https://www.adac.de/services/apps/drive/','油价|加油|充电|Spritpreise',true,'open','free'],
+  ['enbw-mobility-plus','mobility','EnBW mobility+','EnBW mobility+ 电动车充电','电动车充电站查询与充电服务应用。','https://www.enbw.com/elektromobilitaet/produkte/mobilityplus-app','电动车|充电|Ladesäule',true,'registration'],
+  ['bundid','government','BundID','BundID 官方办事账户','德国在线行政服务的个人账户与身份认证入口。','https://id.bund.de/de','办事|身份认证|官方',false,'registration','free'],
+  ['nina','government','Bundesamt für Bevölkerungsschutz','NINA 官方预警应用','德国官方灾害与危险预警信息及 NINA 应用入口。','https://www.bbk.bund.de/DE/Warnung-Vorsorge/Warn-App-NINA/warn-app-nina_node.html','预警|灾害|天气|官方',true,'open','free'],
+  ['familienportal','government','Familienportal des Bundes','德国家庭服务官方门户','家庭补助、育儿及相关公共服务的官方信息。','https://familienportal.de/','家庭|育儿|补助|官方',false,'open','free'],
+  ['tk-app','health','Techniker Krankenkasse','TK 医保应用','TK 参保人账户、保险文件和线上医保服务入口。','https://www.tk.de/techniker/versicherung/krankenkasse-anliegen-online-erledigen/tk-app-2027886','医保|医疗保险|健康账户',true,'registration','free'],
+  ['meine-aok','health','AOK','Meine AOK 医保服务','AOK 参保人的在线账户与医保服务；功能因所属 AOK 而异。','https://meine.aok.de/','医保|医疗保险|健康账户',true,'registration','free'],
+  ['meine-barmer','health','BARMER','Meine BARMER 医保服务','BARMER 参保人的账户、保险文件及线上服务。','https://www.barmer.de/unsere-leistungen/leistungen-a-z/meine-barmer','医保|医疗保险|健康账户',true,'registration','free'],
+  ['e-rezept','health','gematik','德国官方电子处方应用','德国 E-Rezept 官方应用与电子处方服务信息。','https://www.das-e-rezept-fuer-deutschland.de/app','处方|药房|医疗|E-Rezept',true,'open','free'],
+  ['pharmacy-emergency','health','aponet.de','药房夜间与值班查询','德国药房值班和紧急药房查询入口。','https://www.aponet.de/apotheke/notdienstsuche','药房|值班|Notdienst',false,'open','free'],
+  ['edeka','shopping','EDEKA','EDEKA 超市与门店','德国超市门店、商品及官方购物应用信息。','https://www.edeka.de/','超市|食品|日用品',true],
+  ['penny','shopping','PENNY','PENNY 折扣超市','德国折扣超市、门店与商品信息。','https://www.penny.de/','超市|食品|折扣',true],
+  ['netto','shopping','Netto Marken-Discount','Netto 超市','德国 Netto Marken-Discount 门店、商品与购物入口。','https://www.netto-online.de/','超市|食品|折扣',true],
+  ['mydealz','shopping','mydealz','mydealz 优惠社区','德国用户分享购物优惠、价格信息和促销讨论的社区。','https://www.mydealz.de/','优惠|购物|折扣|社区',true,'open','free'],
+  ['refurbed','shopping','refurbed','refurbed 翻新电子产品','翻新电子产品及其他商品的德国市场入口。','https://www.refurbed.de/','翻新|电子产品|购物',false],
+  ['back-market','shopping','Back Market','Back Market 翻新设备','翻新手机、电脑和电子设备交易平台。','https://www.backmarket.de/de-de','翻新|手机|电脑',true],
+  ['fressnapf','shopping','Fressnapf','Fressnapf 宠物用品','德国宠物食品、用品与门店查询入口。','https://www.fressnapf.de/','宠物|食品|用品',true],
+  ['tchibo','shopping','Tchibo','Tchibo 咖啡与日用品','咖啡、日用品及德国门店信息。','https://www.tchibo.de/','咖啡|日用品|购物',true],
+  ['picnic','food','Picnic','Picnic 食品配送','德国覆盖地区的超市商品配送应用；需按地址核实服务范围。','https://picnic.app/de/','食品|超市|配送',true,'registration'],
+  ['knuspr','food','Knuspr','Knuspr 食品配送','服务地区的食品和日用品配送；覆盖范围以邮编查询为准。','https://www.knuspr.de/','食品|超市|配送',true],
+  ['chefkoch','food','Chefkoch','Chefkoch 食谱社区','德语食谱搜索、烹饪内容与食谱应用。','https://www.chefkoch.de/','食谱|做饭|烹饪|Rezepte',true,'open','freemium'],
+  ['thefork','food','TheFork','TheFork 餐厅预约','德国及其他市场的餐厅查询和预约入口；覆盖因城市而异。','https://www.thefork.de/','餐厅|预约|餐饮',true],
+  ['bluesky','communication','Bluesky','Bluesky 社交网络','公开动态、社群和兴趣讨论的社交平台。','https://bsky.app/','社交媒体|动态|社区',true,'registration','free'],
+  ['threads','communication','Threads','Threads 社交网络','文字动态、公开讨论和创作者信息平台。','https://www.threads.com/','社交媒体|动态|讨论',true,'registration'],
+  ['x-social','communication','X','X 社交平台','公开动态、新闻讨论与社交账号信息入口。','https://x.com/','社交媒体|动态|新闻',true,'registration','freemium'],
+  ['snapchat','communication','Snapchat','Snapchat 图片与聊天','图片、视频消息与朋友聊天的官方平台。','https://www.snapchat.com/','社交媒体|聊天|图片',true,'registration','freemium'],
+  ['pinterest','communication','Pinterest','Pinterest 灵感收藏','图片灵感、家居、穿搭与主题收藏平台。','https://www.pinterest.de/','图片|灵感|收藏',true,'registration','free'],
+  ['gmx','communication','GMX','GMX 德国电子邮箱','德国电子邮箱、邮件管理与官方邮箱应用。','https://www.gmx.net/','邮箱|邮件|E-Mail',true,'registration','freemium'],
+  ['webde','communication','WEB.DE','WEB.DE 德国电子邮箱','德国电子邮箱、邮件管理与账户入口。','https://web.de/','邮箱|邮件|E-Mail',true,'registration','freemium'],
+  ['proton-mail','communication','Proton Mail','Proton Mail 电子邮箱','提供邮件账户、网页邮箱和邮件应用的服务。','https://proton.me/de/mail','邮箱|邮件|隐私',true,'registration','freemium'],
+  ['sparkasse','finance','Sparkasse','Sparkasse 储蓄银行','德国地方储蓄银行、账户及银行应用信息入口。','https://www.sparkasse.de/','银行|账户|网银',true],
+  ['vr-banks','finance','Volksbanken Raiffeisenbanken','德国合作银行 VR','德国地方合作银行、账户与数字银行服务入口。','https://www.vr.de/','银行|账户|网银',true],
+  ['allianz','finance','Allianz','Allianz 德国保险','德国保险产品、客户服务与保险信息入口。','https://www.allianz.de/','保险|客户服务',false],
+  ['huk-coburg','finance','HUK-COBURG','HUK-COBURG 保险','德国汽车与其他保险服务的官方入口。','https://www.huk.de/','保险|汽车保险|客户服务',false],
+  ['taxfix','finance','Taxfix','Taxfix 报税服务','德国报税应用与相关服务；适用税务情形及费用以原站为准。','https://taxfix.de/','报税|税务|Steuer',true,'registration'],
+  ['wiso-steuer','finance','Buhl','WISO Steuer 报税工具','德国报税软件、网页与应用服务入口。','https://www.buhl.de/steuer/','报税|税务|Steuer',true,'registration','paid'],
+  ['bitwarden','tools','Bitwarden','Bitwarden 密码管理','跨设备密码管理和官方客户端入口。','https://bitwarden.com/','密码管理|数字工具|安全',true,'registration','freemium'],
+  ['notion','tools','Notion','Notion 笔记与协作','笔记、文档、任务与协作工作区。','https://www.notion.com/de','笔记|协作|任务',true,'registration','freemium'],
+  ['libreoffice','tools','The Document Foundation','LibreOffice 办公软件','开源文字处理、表格和演示软件的官方入口。','https://de.libreoffice.org/','办公|文档|表格|开源',true,'open','free'],
+  ['nextcloud','tools','Nextcloud','Nextcloud 文件与协作','文件同步和协作平台；需要自建实例或选择服务提供商。','https://nextcloud.com/','云盘|文件|协作|开源',true],
+  ['breitbandmessung','tools','Bundesnetzagentur','官方宽带测速工具','德国联邦网络局的网络测速与桌面应用入口。','https://www.breitbandmessung.de/desktop-app','测速|宽带|网络|官方',true,'open','free'],
+];
+
+const date = '2026-10-05';
+const path = new URL('../data/resources.json', import.meta.url);
+const existing = JSON.parse(fs.readFileSync(path, 'utf8'));
+const ids = new Set(existing.map(r=>r.id));
+const urls = new Set(existing.map(r=>canonicalize(r.canonicalUrl)));
+const additions = candidates.filter(([id])=>!ids.has(id)).map(([id,primaryCategory,name,titleZh,descriptionZh,url,tags,app,access='open',price='unknown']) => validateResource({
+  id,slug:id,titleOriginal:name,titleZh,descriptionZh,primaryCategory,url,canonicalUrl:url,
+  sourceName:name,providerId:id,providerType: ['energy-consumer-agency','bundid','nina','familienportal','e-rezept'].includes(id) ? 'institution' : 'unspecified',
+  tags:tags.split('|'),levels:[],levelBasis:'unspecified',levelScope:'information',skills:['生活信息'],exams:[],
+  formats:app?['网页','应用']:['网页'],mediaTypes:app?['网页','应用']:['网页'],languages:['德语'],interfaceLanguages:['德语'],
+  price,access,rights:'link-only',status:'published',linkStatus:'unchecked',lastEditorialCheckedAt:date,editorialStatus:'partial',
+  aliases:[],costNoteZh: ['tk-app','meine-aok','meine-barmer'].includes(id) ? '参保人服务应用；保险费用及服务资格以所属医保机构为准。' : price==='free' ? '所链接公开信息或基础工具免费；第三方商品、会员或服务另计。' : '查询入口、软件与实际服务可能采用不同收费方式，费用以原站为准。',
+  accessNoteZh: ['tk-app','meine-aok','meine-barmer'].includes(id) ? '需要相应医保机构的参保资格、账户及身份验证。' : access==='registration' ? '办理或使用核心功能需要账户，部分服务还要求身份验证或所在地资格。' : '公开信息可浏览；购买、预约、个人账户或应用功能可能需要登录。',
+  evidence:[{url,fields:['name','purpose'],checkedAt:date}],
+}));
+for(const row of additions) {
+  if(urls.has(row.canonicalUrl))throw Error(`Duplicate canonical URL: ${row.id}`);
+  urls.add(row.canonicalUrl);
+}
+fs.writeFileSync(path,JSON.stringify([...existing,...additions],null,2)+'\n');
+console.log(JSON.stringify({added:additions.length,total:existing.length+additions.length}));

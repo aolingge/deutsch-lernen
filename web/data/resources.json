@@ -12246,7 +12246,8 @@
     ],
     "exams": [],
     "formats": [
-      "网页"
+      "网页",
+      "应用"
     ],
     "price": "unknown",
     "access": "registration",
@@ -12260,11 +12261,12 @@
     "rights": "link-only",
     "status": "published",
     "linkStatus": "unchecked",
-    "lastEditorialCheckedAt": "2026-10-04",
+    "lastEditorialCheckedAt": "2026-10-05",
     "providerId": "whatsapp",
     "providerType": "commercial",
     "mediaTypes": [
-      "网页"
+      "网页",
+      "应用"
     ],
     "costNoteZh": "信息入口免费；第三方交易、服务或订阅费用以原站为准。",
     "accessNoteZh": "部分功能可能要求注册或登录，以原站为准。",
@@ -12281,6 +12283,13 @@
           "purpose"
         ],
         "checkedAt": "2026-10-04"
+      },
+      {
+        "url": "https://www.whatsapp.com/download/",
+        "fields": [
+          "media"
+        ],
+        "checkedAt": "2026-10-05"
       }
     ],
     "howToUseZh": "打开原站，按页面提示查找相关信息；费用、资格和可用性以原站为准。"
@@ -12304,7 +12313,8 @@
     ],
     "exams": [],
     "formats": [
-      "网页"
+      "网页",
+      "应用"
     ],
     "price": "unknown",
     "access": "registration",
@@ -12318,11 +12328,12 @@
     "rights": "link-only",
     "status": "published",
     "linkStatus": "unchecked",
-    "lastEditorialCheckedAt": "2026-10-04",
+    "lastEditorialCheckedAt": "2026-10-05",
     "providerId": "signal",
     "providerType": "commercial",
     "mediaTypes": [
-      "网页"
+      "网页",
+      "应用"
     ],
     "costNoteZh": "信息入口免费；第三方交易、服务或订阅费用以原站为准。",
     "accessNoteZh": "部分功能可能要求注册或登录，以原站为准。",
@@ -12339,6 +12350,13 @@
           "purpose"
         ],
         "checkedAt": "2026-10-04"
+      },
+      {
+        "url": "https://signal.org/download/",
+        "fields": [
+          "media"
+        ],
+        "checkedAt": "2026-10-05"
       }
     ],
     "howToUseZh": "打开原站，按页面提示查找相关信息；费用、资格和可用性以原站为准。"
@@ -12362,7 +12380,8 @@
     ],
     "exams": [],
     "formats": [
-      "网页"
+      "网页",
+      "应用"
     ],
     "price": "unknown",
     "access": "registration",
@@ -12376,11 +12395,12 @@
     "rights": "link-only",
     "status": "published",
     "linkStatus": "unchecked",
-    "lastEditorialCheckedAt": "2026-10-04",
+    "lastEditorialCheckedAt": "2026-10-05",
     "providerId": "telegram",
     "providerType": "commercial",
     "mediaTypes": [
-      "网页"
+      "网页",
+      "应用"
     ],
     "costNoteZh": "信息入口免费；第三方交易、服务或订阅费用以原站为准。",
     "accessNoteZh": "部分功能可能要求注册或登录，以原站为准。",
@@ -12397,6 +12417,13 @@
           "purpose"
         ],
         "checkedAt": "2026-10-04"
+      },
+      {
+        "url": "https://www.telegram.org/apps?setln=de",
+        "fields": [
+          "media"
+        ],
+        "checkedAt": "2026-10-05"
       }
     ],
     "howToUseZh": "打开原站，按页面提示查找相关信息；费用、资格和可用性以原站为准。"
@@ -14663,7 +14690,7 @@
     "canonicalUrl": "https://www.obi.de/baumarkt/",
     "rights": "link-only",
     "status": "published",
-    "linkStatus": "unchecked",
+    "linkStatus": "restricted",
     "lastEditorialCheckedAt": "2026-10-04",
     "providerId": "obi",
     "providerType": "commercial",
@@ -14671,7 +14698,7 @@
       "网页"
     ],
     "costNoteZh": "信息入口免费；第三方交易、服务或订阅费用以原站为准。",
-    "accessNoteZh": "部分功能可能要求注册或登录，以原站为准。",
+    "accessNoteZh": "普通浏览器可访问；本轮自动 HTTP 检查返回 404，属于访问限制差异。",
     "interfaceLanguages": [
       "德语"
     ],
@@ -14687,7 +14714,8 @@
         "checkedAt": "2026-10-04"
       }
     ],
-    "howToUseZh": "打开原站，按页面提示查找相关信息；费用、资格和可用性以原站为准。"
+    "howToUseZh": "打开原站，按页面提示查找相关信息；费用、资格和可用性以原站为准。",
+    "lastLinkCheckedAt": "2026-10-05"
   },
   {
     "id": "hornbach",
@@ -15543,5 +15571,4557 @@
       }
     ],
     "howToUseZh": "打开原站，按页面提示查找相关信息；费用、资格和可用性以原站为准。"
+  },
+  {
+    "id": "post-dhl",
+    "slug": "post-dhl",
+    "titleOriginal": "Post & DHL",
+    "titleZh": "Post & DHL 邮政与包裹",
+    "descriptionZh": "包裹追踪、寄件、邮局与 Packstation 服务及官方应用入口。",
+    "primaryCategory": "postal",
+    "tags": [
+      "快递",
+      "邮政",
+      "包裹",
+      "Packstation"
+    ],
+    "levels": [],
+    "levelBasis": "unspecified",
+    "skills": [
+      "生活信息"
+    ],
+    "exams": [],
+    "formats": [
+      "网页",
+      "应用"
+    ],
+    "price": "unknown",
+    "access": "open",
+    "languages": [
+      "德语"
+    ],
+    "sourceName": "Post & DHL",
+    "url": "https://www.dhl.de/de/privatkunden/kampagnenseiten/dhl-app.html",
+    "canonicalUrl": "https://www.dhl.de/de/privatkunden/kampagnenseiten/dhl-app.html",
+    "rights": "link-only",
+    "status": "published",
+    "linkStatus": "ok",
+    "lastEditorialCheckedAt": "2026-10-05",
+    "providerId": "post-dhl",
+    "providerType": "unspecified",
+    "mediaTypes": [
+      "网页",
+      "应用"
+    ],
+    "costNoteZh": "查询入口、软件与实际服务可能采用不同收费方式，费用以原站为准。",
+    "accessNoteZh": "公开信息可浏览；购买、预约、个人账户或应用功能可能需要登录。",
+    "interfaceLanguages": [
+      "德语"
+    ],
+    "levelScope": "information",
+    "aliases": [],
+    "editorialStatus": "partial",
+    "evidence": [
+      {
+        "url": "https://www.dhl.de/de/privatkunden/kampagnenseiten/dhl-app.html",
+        "fields": [
+          "name",
+          "purpose"
+        ],
+        "checkedAt": "2026-10-05"
+      }
+    ],
+    "lastLinkCheckedAt": "2026-10-05"
+  },
+  {
+    "id": "dpd",
+    "slug": "dpd",
+    "titleOriginal": "DPD",
+    "titleZh": "DPD 包裹服务",
+    "descriptionZh": "包裹追踪、收件安排、寄件及 myDPD 应用信息。",
+    "primaryCategory": "postal",
+    "tags": [
+      "快递",
+      "包裹",
+      "Paket"
+    ],
+    "levels": [],
+    "levelBasis": "unspecified",
+    "skills": [
+      "生活信息"
+    ],
+    "exams": [],
+    "formats": [
+      "网页",
+      "应用"
+    ],
+    "price": "unknown",
+    "access": "open",
+    "languages": [
+      "德语"
+    ],
+    "sourceName": "DPD",
+    "url": "https://www.dpd.com/de/de/empfangen/dpd-app/",
+    "canonicalUrl": "https://www.dpd.com/de/de/empfangen/dpd-app",
+    "rights": "link-only",
+    "status": "published",
+    "linkStatus": "ok",
+    "lastEditorialCheckedAt": "2026-10-05",
+    "providerId": "dpd",
+    "providerType": "unspecified",
+    "mediaTypes": [
+      "网页",
+      "应用"
+    ],
+    "costNoteZh": "查询入口、软件与实际服务可能采用不同收费方式，费用以原站为准。",
+    "accessNoteZh": "公开信息可浏览；购买、预约、个人账户或应用功能可能需要登录。",
+    "interfaceLanguages": [
+      "德语"
+    ],
+    "levelScope": "information",
+    "aliases": [],
+    "editorialStatus": "partial",
+    "evidence": [
+      {
+        "url": "https://www.dpd.com/de/de/empfangen/dpd-app/",
+        "fields": [
+          "name",
+          "purpose"
+        ],
+        "checkedAt": "2026-10-05"
+      }
+    ],
+    "lastLinkCheckedAt": "2026-10-05"
+  },
+  {
+    "id": "hermes",
+    "slug": "hermes",
+    "titleOriginal": "Hermes",
+    "titleZh": "Hermes 寄件与追踪",
+    "descriptionZh": "德国包裹寄送、包裹店查询和物流追踪入口。",
+    "primaryCategory": "postal",
+    "tags": [
+      "快递",
+      "包裹",
+      "Paketshop"
+    ],
+    "levels": [],
+    "levelBasis": "unspecified",
+    "skills": [
+      "生活信息"
+    ],
+    "exams": [],
+    "formats": [
+      "网页",
+      "应用"
+    ],
+    "price": "unknown",
+    "access": "open",
+    "languages": [
+      "德语"
+    ],
+    "sourceName": "Hermes",
+    "url": "https://www.myhermes.de/",
+    "canonicalUrl": "https://www.myhermes.de/",
+    "rights": "link-only",
+    "status": "published",
+    "linkStatus": "ok",
+    "lastEditorialCheckedAt": "2026-10-05",
+    "providerId": "hermes",
+    "providerType": "unspecified",
+    "mediaTypes": [
+      "网页",
+      "应用"
+    ],
+    "costNoteZh": "查询入口、软件与实际服务可能采用不同收费方式，费用以原站为准。",
+    "accessNoteZh": "公开信息可浏览；购买、预约、个人账户或应用功能可能需要登录。",
+    "interfaceLanguages": [
+      "德语"
+    ],
+    "levelScope": "information",
+    "aliases": [],
+    "editorialStatus": "partial",
+    "evidence": [
+      {
+        "url": "https://www.myhermes.de/",
+        "fields": [
+          "name",
+          "purpose"
+        ],
+        "checkedAt": "2026-10-05"
+      }
+    ],
+    "lastLinkCheckedAt": "2026-10-05"
+  },
+  {
+    "id": "gls",
+    "slug": "gls",
+    "titleOriginal": "GLS",
+    "titleZh": "GLS 包裹与包裹店",
+    "descriptionZh": "个人包裹寄送、收件、物流查询及 GLS Pakete 应用入口。",
+    "primaryCategory": "postal",
+    "tags": [
+      "快递",
+      "包裹",
+      "Paket"
+    ],
+    "levels": [],
+    "levelBasis": "unspecified",
+    "skills": [
+      "生活信息"
+    ],
+    "exams": [],
+    "formats": [
+      "网页",
+      "应用"
+    ],
+    "price": "unknown",
+    "access": "open",
+    "languages": [
+      "德语"
+    ],
+    "sourceName": "GLS",
+    "url": "https://www.gls-pakete.de/",
+    "canonicalUrl": "https://www.gls-pakete.de/",
+    "rights": "link-only",
+    "status": "published",
+    "linkStatus": "restricted",
+    "lastEditorialCheckedAt": "2026-10-05",
+    "providerId": "gls",
+    "providerType": "unspecified",
+    "mediaTypes": [
+      "网页",
+      "应用"
+    ],
+    "costNoteZh": "查询入口、软件与实际服务可能采用不同收费方式，费用以原站为准。",
+    "accessNoteZh": "公开信息可浏览；购买、预约、个人账户或应用功能可能需要登录。",
+    "interfaceLanguages": [
+      "德语"
+    ],
+    "levelScope": "information",
+    "aliases": [],
+    "editorialStatus": "partial",
+    "evidence": [
+      {
+        "url": "https://www.gls-pakete.de/",
+        "fields": [
+          "name",
+          "purpose"
+        ],
+        "checkedAt": "2026-10-05"
+      }
+    ],
+    "lastLinkCheckedAt": "2026-10-05"
+  },
+  {
+    "id": "ups-germany",
+    "slug": "ups-germany",
+    "titleOriginal": "UPS",
+    "titleZh": "UPS 德国包裹服务",
+    "descriptionZh": "德国及国际包裹寄送、追踪和服务网点入口。",
+    "primaryCategory": "postal",
+    "tags": [
+      "快递",
+      "国际包裹",
+      "物流"
+    ],
+    "levels": [],
+    "levelBasis": "unspecified",
+    "skills": [
+      "生活信息"
+    ],
+    "exams": [],
+    "formats": [
+      "网页",
+      "应用"
+    ],
+    "price": "unknown",
+    "access": "open",
+    "languages": [
+      "德语"
+    ],
+    "sourceName": "UPS",
+    "url": "https://www.ups.com/de/de/home",
+    "canonicalUrl": "https://www.ups.com/de/de/home",
+    "rights": "link-only",
+    "status": "published",
+    "linkStatus": "restricted",
+    "lastEditorialCheckedAt": "2026-10-05",
+    "providerId": "ups-germany",
+    "providerType": "unspecified",
+    "mediaTypes": [
+      "网页",
+      "应用"
+    ],
+    "costNoteZh": "查询入口、软件与实际服务可能采用不同收费方式，费用以原站为准。",
+    "accessNoteZh": "公开信息可浏览；购买、预约、个人账户或应用功能可能需要登录。",
+    "interfaceLanguages": [
+      "德语"
+    ],
+    "levelScope": "information",
+    "aliases": [],
+    "editorialStatus": "partial",
+    "evidence": [
+      {
+        "url": "https://www.ups.com/de/de/home",
+        "fields": [
+          "name",
+          "purpose"
+        ],
+        "checkedAt": "2026-10-05"
+      }
+    ],
+    "lastLinkCheckedAt": "2026-10-05"
+  },
+  {
+    "id": "eon",
+    "slug": "eon",
+    "titleOriginal": "E.ON",
+    "titleZh": "E.ON 电力与燃气",
+    "descriptionZh": "家庭电力、燃气、合同与客户服务入口。",
+    "primaryCategory": "household",
+    "tags": [
+      "电力",
+      "燃气",
+      "Strom",
+      "Gas"
+    ],
+    "levels": [],
+    "levelBasis": "unspecified",
+    "skills": [
+      "生活信息"
+    ],
+    "exams": [],
+    "formats": [
+      "网页"
+    ],
+    "price": "paid",
+    "access": "open",
+    "languages": [
+      "德语"
+    ],
+    "sourceName": "E.ON",
+    "url": "https://www.eon.de/de/pk.html",
+    "canonicalUrl": "https://www.eon.de/de/pk.html",
+    "rights": "link-only",
+    "status": "published",
+    "linkStatus": "restricted",
+    "lastEditorialCheckedAt": "2026-10-05",
+    "providerId": "eon",
+    "providerType": "unspecified",
+    "mediaTypes": [
+      "网页"
+    ],
+    "costNoteZh": "查询入口、软件与实际服务可能采用不同收费方式，费用以原站为准。",
+    "accessNoteZh": "公开信息可浏览；购买、预约、个人账户或应用功能可能需要登录。",
+    "interfaceLanguages": [
+      "德语"
+    ],
+    "levelScope": "information",
+    "aliases": [],
+    "editorialStatus": "partial",
+    "evidence": [
+      {
+        "url": "https://www.eon.de/de/pk.html",
+        "fields": [
+          "name",
+          "purpose"
+        ],
+        "checkedAt": "2026-10-05"
+      }
+    ],
+    "lastLinkCheckedAt": "2026-10-05"
+  },
+  {
+    "id": "enbw-energy",
+    "slug": "enbw-energy",
+    "titleOriginal": "EnBW",
+    "titleZh": "EnBW 家庭能源",
+    "descriptionZh": "家庭电力、燃气及客户服务信息。",
+    "primaryCategory": "household",
+    "tags": [
+      "电力",
+      "燃气",
+      "能源"
+    ],
+    "levels": [],
+    "levelBasis": "unspecified",
+    "skills": [
+      "生活信息"
+    ],
+    "exams": [],
+    "formats": [
+      "网页"
+    ],
+    "price": "paid",
+    "access": "open",
+    "languages": [
+      "德语"
+    ],
+    "sourceName": "EnBW",
+    "url": "https://www.enbw.com/",
+    "canonicalUrl": "https://www.enbw.com/",
+    "rights": "link-only",
+    "status": "published",
+    "linkStatus": "ok",
+    "lastEditorialCheckedAt": "2026-10-05",
+    "providerId": "enbw-energy",
+    "providerType": "unspecified",
+    "mediaTypes": [
+      "网页"
+    ],
+    "costNoteZh": "查询入口、软件与实际服务可能采用不同收费方式，费用以原站为准。",
+    "accessNoteZh": "公开信息可浏览；购买、预约、个人账户或应用功能可能需要登录。",
+    "interfaceLanguages": [
+      "德语"
+    ],
+    "levelScope": "information",
+    "aliases": [],
+    "editorialStatus": "partial",
+    "evidence": [
+      {
+        "url": "https://www.enbw.com/",
+        "fields": [
+          "name",
+          "purpose"
+        ],
+        "checkedAt": "2026-10-05"
+      }
+    ],
+    "lastLinkCheckedAt": "2026-10-05"
+  },
+  {
+    "id": "vattenfall",
+    "slug": "vattenfall",
+    "titleOriginal": "Vattenfall",
+    "titleZh": "Vattenfall 电力与燃气",
+    "descriptionZh": "家庭电力与燃气服务、套餐和客户账户入口。",
+    "primaryCategory": "household",
+    "tags": [
+      "电力",
+      "燃气",
+      "能源"
+    ],
+    "levels": [],
+    "levelBasis": "unspecified",
+    "skills": [
+      "生活信息"
+    ],
+    "exams": [],
+    "formats": [
+      "网页"
+    ],
+    "price": "paid",
+    "access": "open",
+    "languages": [
+      "德语"
+    ],
+    "sourceName": "Vattenfall",
+    "url": "https://www.vattenfall.de/",
+    "canonicalUrl": "https://www.vattenfall.de/",
+    "rights": "link-only",
+    "status": "published",
+    "linkStatus": "restricted",
+    "lastEditorialCheckedAt": "2026-10-05",
+    "providerId": "vattenfall",
+    "providerType": "unspecified",
+    "mediaTypes": [
+      "网页"
+    ],
+    "costNoteZh": "查询入口、软件与实际服务可能采用不同收费方式，费用以原站为准。",
+    "accessNoteZh": "公开信息可浏览；购买、预约、个人账户或应用功能可能需要登录。",
+    "interfaceLanguages": [
+      "德语"
+    ],
+    "levelScope": "information",
+    "aliases": [],
+    "editorialStatus": "partial",
+    "evidence": [
+      {
+        "url": "https://www.vattenfall.de/",
+        "fields": [
+          "name",
+          "purpose"
+        ],
+        "checkedAt": "2026-10-05"
+      }
+    ],
+    "lastLinkCheckedAt": "2026-10-05"
+  },
+  {
+    "id": "octopus-energy",
+    "slug": "octopus-energy",
+    "titleOriginal": "Octopus Energy",
+    "titleZh": "Octopus Energy 德国家庭能源",
+    "descriptionZh": "德国电力、燃气及能源客户服务入口。",
+    "primaryCategory": "household",
+    "tags": [
+      "电力",
+      "燃气",
+      "能源"
+    ],
+    "levels": [],
+    "levelBasis": "unspecified",
+    "skills": [
+      "生活信息"
+    ],
+    "exams": [],
+    "formats": [
+      "网页"
+    ],
+    "price": "paid",
+    "access": "open",
+    "languages": [
+      "德语"
+    ],
+    "sourceName": "Octopus Energy",
+    "url": "https://octopusenergy.de/",
+    "canonicalUrl": "https://octopusenergy.de/",
+    "rights": "link-only",
+    "status": "published",
+    "linkStatus": "ok",
+    "lastEditorialCheckedAt": "2026-10-05",
+    "providerId": "octopus-energy",
+    "providerType": "unspecified",
+    "mediaTypes": [
+      "网页"
+    ],
+    "costNoteZh": "查询入口、软件与实际服务可能采用不同收费方式，费用以原站为准。",
+    "accessNoteZh": "公开信息可浏览；购买、预约、个人账户或应用功能可能需要登录。",
+    "interfaceLanguages": [
+      "德语"
+    ],
+    "levelScope": "information",
+    "aliases": [],
+    "editorialStatus": "partial",
+    "evidence": [
+      {
+        "url": "https://octopusenergy.de/",
+        "fields": [
+          "name",
+          "purpose"
+        ],
+        "checkedAt": "2026-10-05"
+      }
+    ],
+    "lastLinkCheckedAt": "2026-10-05"
+  },
+  {
+    "id": "energy-consumer-agency",
+    "slug": "energy-consumer-agency",
+    "titleOriginal": "Bundesnetzagentur",
+    "titleZh": "联邦网络局能源消费者信息",
+    "descriptionZh": "官方电力与燃气消费者信息及能源服务问题入口。",
+    "primaryCategory": "household",
+    "tags": [
+      "电力",
+      "燃气",
+      "消费者权益",
+      "官方"
+    ],
+    "levels": [],
+    "levelBasis": "unspecified",
+    "skills": [
+      "生活信息"
+    ],
+    "exams": [],
+    "formats": [
+      "网页"
+    ],
+    "price": "free",
+    "access": "open",
+    "languages": [
+      "德语"
+    ],
+    "sourceName": "Bundesnetzagentur",
+    "url": "https://www.bundesnetzagentur.de/DE/Vportal/Energie/start.html",
+    "canonicalUrl": "https://www.bundesnetzagentur.de/DE/Vportal/Energie/start.html",
+    "rights": "link-only",
+    "status": "published",
+    "linkStatus": "ok",
+    "lastEditorialCheckedAt": "2026-10-05",
+    "providerId": "energy-consumer-agency",
+    "providerType": "institution",
+    "mediaTypes": [
+      "网页"
+    ],
+    "costNoteZh": "所链接公开信息或基础工具免费；第三方商品、会员或服务另计。",
+    "accessNoteZh": "公开信息可浏览；购买、预约、个人账户或应用功能可能需要登录。",
+    "interfaceLanguages": [
+      "德语"
+    ],
+    "levelScope": "information",
+    "aliases": [],
+    "editorialStatus": "partial",
+    "evidence": [
+      {
+        "url": "https://www.bundesnetzagentur.de/DE/Vportal/Energie/start.html",
+        "fields": [
+          "name",
+          "purpose"
+        ],
+        "checkedAt": "2026-10-05"
+      }
+    ],
+    "lastLinkCheckedAt": "2026-10-05"
+  },
+  {
+    "id": "myhammer",
+    "slug": "myhammer",
+    "titleOriginal": "MyHammer",
+    "titleZh": "MyHammer 家庭维修与工匠",
+    "descriptionZh": "寻找装修、维修、搬家等家庭服务商并发布服务需求。",
+    "primaryCategory": "household",
+    "tags": [
+      "维修",
+      "装修",
+      "搬家",
+      "工匠"
+    ],
+    "levels": [],
+    "levelBasis": "unspecified",
+    "skills": [
+      "生活信息"
+    ],
+    "exams": [],
+    "formats": [
+      "网页"
+    ],
+    "price": "unknown",
+    "access": "registration",
+    "languages": [
+      "德语"
+    ],
+    "sourceName": "MyHammer",
+    "url": "https://www.my-hammer.de/",
+    "canonicalUrl": "https://www.my-hammer.de/",
+    "rights": "link-only",
+    "status": "published",
+    "linkStatus": "restricted",
+    "lastEditorialCheckedAt": "2026-10-05",
+    "providerId": "myhammer",
+    "providerType": "unspecified",
+    "mediaTypes": [
+      "网页"
+    ],
+    "costNoteZh": "查询入口、软件与实际服务可能采用不同收费方式，费用以原站为准。",
+    "accessNoteZh": "办理或使用核心功能需要账户，部分服务还要求身份验证或所在地资格。",
+    "interfaceLanguages": [
+      "德语"
+    ],
+    "levelScope": "information",
+    "aliases": [],
+    "editorialStatus": "partial",
+    "evidence": [
+      {
+        "url": "https://www.my-hammer.de/",
+        "fields": [
+          "name",
+          "purpose"
+        ],
+        "checkedAt": "2026-10-05"
+      }
+    ],
+    "lastLinkCheckedAt": "2026-10-05"
+  },
+  {
+    "id": "taskrabbit",
+    "slug": "taskrabbit",
+    "titleOriginal": "Taskrabbit",
+    "titleZh": "Taskrabbit 家具组装与家庭服务",
+    "descriptionZh": "家具组装、搬运及其他家庭服务的当地服务商入口。",
+    "primaryCategory": "household",
+    "tags": [
+      "家具组装",
+      "搬运",
+      "家庭服务"
+    ],
+    "levels": [],
+    "levelBasis": "unspecified",
+    "skills": [
+      "生活信息"
+    ],
+    "exams": [],
+    "formats": [
+      "网页",
+      "应用"
+    ],
+    "price": "unknown",
+    "access": "registration",
+    "languages": [
+      "德语"
+    ],
+    "sourceName": "Taskrabbit",
+    "url": "https://www.taskrabbit.de/",
+    "canonicalUrl": "https://www.taskrabbit.de/",
+    "rights": "link-only",
+    "status": "published",
+    "linkStatus": "ok",
+    "lastEditorialCheckedAt": "2026-10-05",
+    "providerId": "taskrabbit",
+    "providerType": "unspecified",
+    "mediaTypes": [
+      "网页",
+      "应用"
+    ],
+    "costNoteZh": "查询入口、软件与实际服务可能采用不同收费方式，费用以原站为准。",
+    "accessNoteZh": "办理或使用核心功能需要账户，部分服务还要求身份验证或所在地资格。",
+    "interfaceLanguages": [
+      "德语"
+    ],
+    "levelScope": "information",
+    "aliases": [],
+    "editorialStatus": "partial",
+    "evidence": [
+      {
+        "url": "https://www.taskrabbit.de/",
+        "fields": [
+          "name",
+          "purpose"
+        ],
+        "checkedAt": "2026-10-05"
+      }
+    ],
+    "lastLinkCheckedAt": "2026-10-05"
+  },
+  {
+    "id": "eventim",
+    "slug": "eventim",
+    "titleOriginal": "EVENTIM",
+    "titleZh": "EVENTIM 演出与门票",
+    "descriptionZh": "音乐会、戏剧、体育与其他活动的门票信息。",
+    "primaryCategory": "leisure",
+    "tags": [
+      "门票",
+      "演唱会",
+      "活动",
+      "Konzert"
+    ],
+    "levels": [],
+    "levelBasis": "unspecified",
+    "skills": [
+      "生活信息"
+    ],
+    "exams": [],
+    "formats": [
+      "网页",
+      "应用"
+    ],
+    "price": "unknown",
+    "access": "open",
+    "languages": [
+      "德语"
+    ],
+    "sourceName": "EVENTIM",
+    "url": "https://www.eventim.de/",
+    "canonicalUrl": "https://www.eventim.de/",
+    "rights": "link-only",
+    "status": "published",
+    "linkStatus": "unchecked",
+    "lastEditorialCheckedAt": "2026-10-05",
+    "providerId": "eventim",
+    "providerType": "unspecified",
+    "mediaTypes": [
+      "网页",
+      "应用"
+    ],
+    "costNoteZh": "查询入口、软件与实际服务可能采用不同收费方式，费用以原站为准。",
+    "accessNoteZh": "公开信息可浏览；购买、预约、个人账户或应用功能可能需要登录。",
+    "interfaceLanguages": [
+      "德语"
+    ],
+    "levelScope": "information",
+    "aliases": [],
+    "editorialStatus": "partial",
+    "evidence": [
+      {
+        "url": "https://www.eventim.de/",
+        "fields": [
+          "name",
+          "purpose"
+        ],
+        "checkedAt": "2026-10-05"
+      }
+    ],
+    "lastLinkCheckedAt": "2026-10-05"
+  },
+  {
+    "id": "eventbrite",
+    "slug": "eventbrite",
+    "titleOriginal": "Eventbrite",
+    "titleZh": "Eventbrite 活动与报名",
+    "descriptionZh": "查找德国及其他地区的社区、文化和专业活动。",
+    "primaryCategory": "leisure",
+    "tags": [
+      "活动",
+      "门票",
+      "社区",
+      "Event"
+    ],
+    "levels": [],
+    "levelBasis": "unspecified",
+    "skills": [
+      "生活信息"
+    ],
+    "exams": [],
+    "formats": [
+      "网页",
+      "应用"
+    ],
+    "price": "unknown",
+    "access": "open",
+    "languages": [
+      "德语"
+    ],
+    "sourceName": "Eventbrite",
+    "url": "https://www.eventbrite.de/",
+    "canonicalUrl": "https://www.eventbrite.de/",
+    "rights": "link-only",
+    "status": "published",
+    "linkStatus": "ok",
+    "lastEditorialCheckedAt": "2026-10-05",
+    "providerId": "eventbrite",
+    "providerType": "unspecified",
+    "mediaTypes": [
+      "网页",
+      "应用"
+    ],
+    "costNoteZh": "查询入口、软件与实际服务可能采用不同收费方式，费用以原站为准。",
+    "accessNoteZh": "公开信息可浏览；购买、预约、个人账户或应用功能可能需要登录。",
+    "interfaceLanguages": [
+      "德语"
+    ],
+    "levelScope": "information",
+    "aliases": [],
+    "editorialStatus": "partial",
+    "evidence": [
+      {
+        "url": "https://www.eventbrite.de/",
+        "fields": [
+          "name",
+          "purpose"
+        ],
+        "checkedAt": "2026-10-05"
+      }
+    ],
+    "lastLinkCheckedAt": "2026-10-05"
+  },
+  {
+    "id": "komoot",
+    "slug": "komoot",
+    "titleOriginal": "komoot",
+    "titleZh": "komoot 徒步与骑行路线",
+    "descriptionZh": "徒步、骑行路线规划、户外地图及导航应用。",
+    "primaryCategory": "leisure",
+    "tags": [
+      "徒步",
+      "骑行",
+      "户外",
+      "Wandern"
+    ],
+    "levels": [],
+    "levelBasis": "unspecified",
+    "skills": [
+      "生活信息"
+    ],
+    "exams": [],
+    "formats": [
+      "网页",
+      "应用"
+    ],
+    "price": "freemium",
+    "access": "registration",
+    "languages": [
+      "德语"
+    ],
+    "sourceName": "komoot",
+    "url": "https://www.komoot.com/de-de",
+    "canonicalUrl": "https://www.komoot.com/de-de",
+    "rights": "link-only",
+    "status": "published",
+    "linkStatus": "ok",
+    "lastEditorialCheckedAt": "2026-10-05",
+    "providerId": "komoot",
+    "providerType": "unspecified",
+    "mediaTypes": [
+      "网页",
+      "应用"
+    ],
+    "costNoteZh": "查询入口、软件与实际服务可能采用不同收费方式，费用以原站为准。",
+    "accessNoteZh": "办理或使用核心功能需要账户，部分服务还要求身份验证或所在地资格。",
+    "interfaceLanguages": [
+      "德语"
+    ],
+    "levelScope": "information",
+    "aliases": [],
+    "editorialStatus": "partial",
+    "evidence": [
+      {
+        "url": "https://www.komoot.com/de-de",
+        "fields": [
+          "name",
+          "purpose"
+        ],
+        "checkedAt": "2026-10-05"
+      }
+    ],
+    "lastLinkCheckedAt": "2026-10-05"
+  },
+  {
+    "id": "alltrails",
+    "slug": "alltrails",
+    "titleOriginal": "AllTrails",
+    "titleZh": "AllTrails 户外路线",
+    "descriptionZh": "徒步路线、户外地图及路线社区应用。",
+    "primaryCategory": "leisure",
+    "tags": [
+      "徒步",
+      "户外",
+      "路线",
+      "Wandern"
+    ],
+    "levels": [],
+    "levelBasis": "unspecified",
+    "skills": [
+      "生活信息"
+    ],
+    "exams": [],
+    "formats": [
+      "网页",
+      "应用"
+    ],
+    "price": "freemium",
+    "access": "registration",
+    "languages": [
+      "德语"
+    ],
+    "sourceName": "AllTrails",
+    "url": "https://www.alltrails.com/de/",
+    "canonicalUrl": "https://www.alltrails.com/de",
+    "rights": "link-only",
+    "status": "published",
+    "linkStatus": "restricted",
+    "lastEditorialCheckedAt": "2026-10-05",
+    "providerId": "alltrails",
+    "providerType": "unspecified",
+    "mediaTypes": [
+      "网页",
+      "应用"
+    ],
+    "costNoteZh": "查询入口、软件与实际服务可能采用不同收费方式，费用以原站为准。",
+    "accessNoteZh": "办理或使用核心功能需要账户，部分服务还要求身份验证或所在地资格。",
+    "interfaceLanguages": [
+      "德语"
+    ],
+    "levelScope": "information",
+    "aliases": [],
+    "editorialStatus": "partial",
+    "evidence": [
+      {
+        "url": "https://www.alltrails.com/de/",
+        "fields": [
+          "name",
+          "purpose"
+        ],
+        "checkedAt": "2026-10-05"
+      }
+    ],
+    "lastLinkCheckedAt": "2026-10-05"
+  },
+  {
+    "id": "strava",
+    "slug": "strava",
+    "titleOriginal": "Strava",
+    "titleZh": "Strava 运动与社交",
+    "descriptionZh": "记录跑步、骑行等运动并参加运动社区。",
+    "primaryCategory": "leisure",
+    "tags": [
+      "运动",
+      "跑步",
+      "骑行",
+      "Fitness"
+    ],
+    "levels": [],
+    "levelBasis": "unspecified",
+    "skills": [
+      "生活信息"
+    ],
+    "exams": [],
+    "formats": [
+      "网页",
+      "应用"
+    ],
+    "price": "freemium",
+    "access": "registration",
+    "languages": [
+      "德语"
+    ],
+    "sourceName": "Strava",
+    "url": "https://www.strava.com/",
+    "canonicalUrl": "https://www.strava.com/",
+    "rights": "link-only",
+    "status": "published",
+    "linkStatus": "ok",
+    "lastEditorialCheckedAt": "2026-10-05",
+    "providerId": "strava",
+    "providerType": "unspecified",
+    "mediaTypes": [
+      "网页",
+      "应用"
+    ],
+    "costNoteZh": "查询入口、软件与实际服务可能采用不同收费方式，费用以原站为准。",
+    "accessNoteZh": "办理或使用核心功能需要账户，部分服务还要求身份验证或所在地资格。",
+    "interfaceLanguages": [
+      "德语"
+    ],
+    "levelScope": "information",
+    "aliases": [],
+    "editorialStatus": "partial",
+    "evidence": [
+      {
+        "url": "https://www.strava.com/",
+        "fields": [
+          "name",
+          "purpose"
+        ],
+        "checkedAt": "2026-10-05"
+      }
+    ],
+    "lastLinkCheckedAt": "2026-10-05"
+  },
+  {
+    "id": "urban-sports-club",
+    "slug": "urban-sports-club",
+    "titleOriginal": "Urban Sports Club",
+    "titleZh": "Urban Sports Club 运动场馆",
+    "descriptionZh": "多种运动与合作场馆的会员服务；覆盖和资格以城市与套餐为准。",
+    "primaryCategory": "leisure",
+    "tags": [
+      "健身",
+      "运动",
+      "瑜伽",
+      "场馆"
+    ],
+    "levels": [],
+    "levelBasis": "unspecified",
+    "skills": [
+      "生活信息"
+    ],
+    "exams": [],
+    "formats": [
+      "网页",
+      "应用"
+    ],
+    "price": "paid",
+    "access": "registration",
+    "languages": [
+      "德语"
+    ],
+    "sourceName": "Urban Sports Club",
+    "url": "https://urbansportsclub.com/de",
+    "canonicalUrl": "https://urbansportsclub.com/de",
+    "rights": "link-only",
+    "status": "published",
+    "linkStatus": "ok",
+    "lastEditorialCheckedAt": "2026-10-05",
+    "providerId": "urban-sports-club",
+    "providerType": "unspecified",
+    "mediaTypes": [
+      "网页",
+      "应用"
+    ],
+    "costNoteZh": "查询入口、软件与实际服务可能采用不同收费方式，费用以原站为准。",
+    "accessNoteZh": "办理或使用核心功能需要账户，部分服务还要求身份验证或所在地资格。",
+    "interfaceLanguages": [
+      "德语"
+    ],
+    "levelScope": "information",
+    "aliases": [],
+    "editorialStatus": "partial",
+    "evidence": [
+      {
+        "url": "https://urbansportsclub.com/de",
+        "fields": [
+          "name",
+          "purpose"
+        ],
+        "checkedAt": "2026-10-05"
+      }
+    ],
+    "lastLinkCheckedAt": "2026-10-05"
+  },
+  {
+    "id": "alpenverein",
+    "slug": "alpenverein",
+    "titleOriginal": "Deutscher Alpenverein",
+    "titleZh": "德国登山协会 DAV",
+    "descriptionZh": "德国登山、徒步、山屋和协会活动信息。",
+    "primaryCategory": "leisure",
+    "tags": [
+      "徒步",
+      "登山",
+      "山屋",
+      "协会"
+    ],
+    "levels": [],
+    "levelBasis": "unspecified",
+    "skills": [
+      "生活信息"
+    ],
+    "exams": [],
+    "formats": [
+      "网页"
+    ],
+    "price": "unknown",
+    "access": "open",
+    "languages": [
+      "德语"
+    ],
+    "sourceName": "Deutscher Alpenverein",
+    "url": "https://www.alpenverein.de/",
+    "canonicalUrl": "https://www.alpenverein.de/",
+    "rights": "link-only",
+    "status": "published",
+    "linkStatus": "ok",
+    "lastEditorialCheckedAt": "2026-10-05",
+    "providerId": "alpenverein",
+    "providerType": "unspecified",
+    "mediaTypes": [
+      "网页"
+    ],
+    "costNoteZh": "查询入口、软件与实际服务可能采用不同收费方式，费用以原站为准。",
+    "accessNoteZh": "公开信息可浏览；购买、预约、个人账户或应用功能可能需要登录。",
+    "interfaceLanguages": [
+      "德语"
+    ],
+    "levelScope": "information",
+    "aliases": [],
+    "editorialStatus": "partial",
+    "evidence": [
+      {
+        "url": "https://www.alpenverein.de/",
+        "fields": [
+          "name",
+          "purpose"
+        ],
+        "checkedAt": "2026-10-05"
+      }
+    ],
+    "lastLinkCheckedAt": "2026-10-05"
+  },
+  {
+    "id": "disney-plus",
+    "slug": "disney-plus",
+    "titleOriginal": "Disney+",
+    "titleZh": "Disney+ 德国影视",
+    "descriptionZh": "电影、电视剧及其他影视内容的官方流媒体入口。",
+    "primaryCategory": "media",
+    "tags": [
+      "电影",
+      "电视剧",
+      "流媒体"
+    ],
+    "levels": [],
+    "levelBasis": "unspecified",
+    "skills": [
+      "生活信息"
+    ],
+    "exams": [],
+    "formats": [
+      "网页",
+      "应用"
+    ],
+    "price": "paid",
+    "access": "registration",
+    "languages": [
+      "德语"
+    ],
+    "sourceName": "Disney+",
+    "url": "https://www.disneyplus.com/de-de",
+    "canonicalUrl": "https://www.disneyplus.com/de-de",
+    "rights": "link-only",
+    "status": "published",
+    "linkStatus": "ok",
+    "lastEditorialCheckedAt": "2026-10-05",
+    "providerId": "disney-plus",
+    "providerType": "unspecified",
+    "mediaTypes": [
+      "网页",
+      "应用"
+    ],
+    "costNoteZh": "查询入口、软件与实际服务可能采用不同收费方式，费用以原站为准。",
+    "accessNoteZh": "办理或使用核心功能需要账户，部分服务还要求身份验证或所在地资格。",
+    "interfaceLanguages": [
+      "德语"
+    ],
+    "levelScope": "information",
+    "aliases": [],
+    "editorialStatus": "partial",
+    "evidence": [
+      {
+        "url": "https://www.disneyplus.com/de-de",
+        "fields": [
+          "name",
+          "purpose"
+        ],
+        "checkedAt": "2026-10-05"
+      }
+    ],
+    "lastLinkCheckedAt": "2026-10-05"
+  },
+  {
+    "id": "steam",
+    "slug": "steam",
+    "titleOriginal": "Steam",
+    "titleZh": "Steam 游戏平台",
+    "descriptionZh": "电脑游戏商店、游戏库及玩家社区。",
+    "primaryCategory": "media",
+    "tags": [
+      "游戏",
+      "电脑游戏",
+      "社区"
+    ],
+    "levels": [],
+    "levelBasis": "unspecified",
+    "skills": [
+      "生活信息"
+    ],
+    "exams": [],
+    "formats": [
+      "网页",
+      "应用"
+    ],
+    "price": "unknown",
+    "access": "open",
+    "languages": [
+      "德语"
+    ],
+    "sourceName": "Steam",
+    "url": "https://store.steampowered.com/?l=german",
+    "canonicalUrl": "https://store.steampowered.com/?l=german",
+    "rights": "link-only",
+    "status": "published",
+    "linkStatus": "ok",
+    "lastEditorialCheckedAt": "2026-10-05",
+    "providerId": "steam",
+    "providerType": "unspecified",
+    "mediaTypes": [
+      "网页",
+      "应用"
+    ],
+    "costNoteZh": "查询入口、软件与实际服务可能采用不同收费方式，费用以原站为准。",
+    "accessNoteZh": "公开信息可浏览；购买、预约、个人账户或应用功能可能需要登录。",
+    "interfaceLanguages": [
+      "德语"
+    ],
+    "levelScope": "information",
+    "aliases": [],
+    "editorialStatus": "partial",
+    "evidence": [
+      {
+        "url": "https://store.steampowered.com/?l=german",
+        "fields": [
+          "name",
+          "purpose"
+        ],
+        "checkedAt": "2026-10-05"
+      }
+    ],
+    "lastLinkCheckedAt": "2026-10-05"
+  },
+  {
+    "id": "epic-games",
+    "slug": "epic-games",
+    "titleOriginal": "Epic Games Store",
+    "titleZh": "Epic Games 游戏商店",
+    "descriptionZh": "电脑游戏商店和官方游戏客户端入口。",
+    "primaryCategory": "media",
+    "tags": [
+      "游戏",
+      "电脑游戏",
+      "商店"
+    ],
+    "levels": [],
+    "levelBasis": "unspecified",
+    "skills": [
+      "生活信息"
+    ],
+    "exams": [],
+    "formats": [
+      "网页",
+      "应用"
+    ],
+    "price": "unknown",
+    "access": "open",
+    "languages": [
+      "德语"
+    ],
+    "sourceName": "Epic Games Store",
+    "url": "https://store.epicgames.com/de/",
+    "canonicalUrl": "https://store.epicgames.com/de",
+    "rights": "link-only",
+    "status": "published",
+    "linkStatus": "restricted",
+    "lastEditorialCheckedAt": "2026-10-05",
+    "providerId": "epic-games",
+    "providerType": "unspecified",
+    "mediaTypes": [
+      "网页",
+      "应用"
+    ],
+    "costNoteZh": "查询入口、软件与实际服务可能采用不同收费方式，费用以原站为准。",
+    "accessNoteZh": "公开信息可浏览；购买、预约、个人账户或应用功能可能需要登录。",
+    "interfaceLanguages": [
+      "德语"
+    ],
+    "levelScope": "information",
+    "aliases": [],
+    "editorialStatus": "partial",
+    "evidence": [
+      {
+        "url": "https://store.epicgames.com/de/",
+        "fields": [
+          "name",
+          "purpose"
+        ],
+        "checkedAt": "2026-10-05"
+      }
+    ],
+    "lastLinkCheckedAt": "2026-10-05"
+  },
+  {
+    "id": "airbnb",
+    "slug": "airbnb",
+    "titleOriginal": "Airbnb",
+    "titleZh": "Airbnb 住宿",
+    "descriptionZh": "德国与国际民宿、短住和住宿搜索。",
+    "primaryCategory": "travel",
+    "tags": [
+      "住宿",
+      "民宿",
+      "旅行"
+    ],
+    "levels": [],
+    "levelBasis": "unspecified",
+    "skills": [
+      "生活信息"
+    ],
+    "exams": [],
+    "formats": [
+      "网页",
+      "应用"
+    ],
+    "price": "unknown",
+    "access": "open",
+    "languages": [
+      "德语"
+    ],
+    "sourceName": "Airbnb",
+    "url": "https://www.airbnb.de/",
+    "canonicalUrl": "https://www.airbnb.de/",
+    "rights": "link-only",
+    "status": "published",
+    "linkStatus": "ok",
+    "lastEditorialCheckedAt": "2026-10-05",
+    "providerId": "airbnb",
+    "providerType": "unspecified",
+    "mediaTypes": [
+      "网页",
+      "应用"
+    ],
+    "costNoteZh": "查询入口、软件与实际服务可能采用不同收费方式，费用以原站为准。",
+    "accessNoteZh": "公开信息可浏览；购买、预约、个人账户或应用功能可能需要登录。",
+    "interfaceLanguages": [
+      "德语"
+    ],
+    "levelScope": "information",
+    "aliases": [],
+    "editorialStatus": "partial",
+    "evidence": [
+      {
+        "url": "https://www.airbnb.de/",
+        "fields": [
+          "name",
+          "purpose"
+        ],
+        "checkedAt": "2026-10-05"
+      }
+    ],
+    "lastLinkCheckedAt": "2026-10-05"
+  },
+  {
+    "id": "omio",
+    "slug": "omio",
+    "titleOriginal": "Omio",
+    "titleZh": "Omio 跨国交通比较",
+    "descriptionZh": "搜索铁路、巴士与航班方案及票务入口。",
+    "primaryCategory": "travel",
+    "tags": [
+      "旅行",
+      "铁路",
+      "巴士",
+      "机票"
+    ],
+    "levels": [],
+    "levelBasis": "unspecified",
+    "skills": [
+      "生活信息"
+    ],
+    "exams": [],
+    "formats": [
+      "网页",
+      "应用"
+    ],
+    "price": "unknown",
+    "access": "open",
+    "languages": [
+      "德语"
+    ],
+    "sourceName": "Omio",
+    "url": "https://www.omio.com/",
+    "canonicalUrl": "https://www.omio.com/",
+    "rights": "link-only",
+    "status": "published",
+    "linkStatus": "restricted",
+    "lastEditorialCheckedAt": "2026-10-05",
+    "providerId": "omio",
+    "providerType": "unspecified",
+    "mediaTypes": [
+      "网页",
+      "应用"
+    ],
+    "costNoteZh": "查询入口、软件与实际服务可能采用不同收费方式，费用以原站为准。",
+    "accessNoteZh": "公开信息可浏览；购买、预约、个人账户或应用功能可能需要登录。",
+    "interfaceLanguages": [
+      "德语"
+    ],
+    "levelScope": "information",
+    "aliases": [],
+    "editorialStatus": "partial",
+    "evidence": [
+      {
+        "url": "https://www.omio.com/",
+        "fields": [
+          "name",
+          "purpose"
+        ],
+        "checkedAt": "2026-10-05"
+      }
+    ],
+    "lastLinkCheckedAt": "2026-10-05"
+  },
+  {
+    "id": "trainline",
+    "slug": "trainline",
+    "titleOriginal": "Trainline",
+    "titleZh": "Trainline 欧洲铁路",
+    "descriptionZh": "欧洲火车和巴士车票搜索与预订入口。",
+    "primaryCategory": "travel",
+    "tags": [
+      "旅行",
+      "铁路",
+      "火车票"
+    ],
+    "levels": [],
+    "levelBasis": "unspecified",
+    "skills": [
+      "生活信息"
+    ],
+    "exams": [],
+    "formats": [
+      "网页",
+      "应用"
+    ],
+    "price": "unknown",
+    "access": "open",
+    "languages": [
+      "德语"
+    ],
+    "sourceName": "Trainline",
+    "url": "https://www.thetrainline.com/de",
+    "canonicalUrl": "https://www.thetrainline.com/de",
+    "rights": "link-only",
+    "status": "published",
+    "linkStatus": "ok",
+    "lastEditorialCheckedAt": "2026-10-05",
+    "providerId": "trainline",
+    "providerType": "unspecified",
+    "mediaTypes": [
+      "网页",
+      "应用"
+    ],
+    "costNoteZh": "查询入口、软件与实际服务可能采用不同收费方式，费用以原站为准。",
+    "accessNoteZh": "公开信息可浏览；购买、预约、个人账户或应用功能可能需要登录。",
+    "interfaceLanguages": [
+      "德语"
+    ],
+    "levelScope": "information",
+    "aliases": [],
+    "editorialStatus": "partial",
+    "evidence": [
+      {
+        "url": "https://www.thetrainline.com/de",
+        "fields": [
+          "name",
+          "purpose"
+        ],
+        "checkedAt": "2026-10-05"
+      }
+    ],
+    "lastLinkCheckedAt": "2026-10-05"
+  },
+  {
+    "id": "getyourguide",
+    "slug": "getyourguide",
+    "titleOriginal": "GetYourGuide",
+    "titleZh": "GetYourGuide 景点与活动",
+    "descriptionZh": "旅行景点门票、导览与目的地活动搜索。",
+    "primaryCategory": "travel",
+    "tags": [
+      "旅行",
+      "景点",
+      "门票",
+      "活动"
+    ],
+    "levels": [],
+    "levelBasis": "unspecified",
+    "skills": [
+      "生活信息"
+    ],
+    "exams": [],
+    "formats": [
+      "网页",
+      "应用"
+    ],
+    "price": "unknown",
+    "access": "open",
+    "languages": [
+      "德语"
+    ],
+    "sourceName": "GetYourGuide",
+    "url": "https://www.getyourguide.de/",
+    "canonicalUrl": "https://www.getyourguide.de/",
+    "rights": "link-only",
+    "status": "published",
+    "linkStatus": "restricted",
+    "lastEditorialCheckedAt": "2026-10-05",
+    "providerId": "getyourguide",
+    "providerType": "unspecified",
+    "mediaTypes": [
+      "网页",
+      "应用"
+    ],
+    "costNoteZh": "查询入口、软件与实际服务可能采用不同收费方式，费用以原站为准。",
+    "accessNoteZh": "公开信息可浏览；购买、预约、个人账户或应用功能可能需要登录。",
+    "interfaceLanguages": [
+      "德语"
+    ],
+    "levelScope": "information",
+    "aliases": [],
+    "editorialStatus": "partial",
+    "evidence": [
+      {
+        "url": "https://www.getyourguide.de/",
+        "fields": [
+          "name",
+          "purpose"
+        ],
+        "checkedAt": "2026-10-05"
+      }
+    ],
+    "lastLinkCheckedAt": "2026-10-05"
+  },
+  {
+    "id": "djh",
+    "slug": "djh",
+    "titleOriginal": "Deutsches Jugendherbergswerk",
+    "titleZh": "德国青年旅舍 DJH",
+    "descriptionZh": "德国青年旅舍查询、住宿和会员资格信息。",
+    "primaryCategory": "travel",
+    "tags": [
+      "住宿",
+      "青年旅舍",
+      "家庭旅行"
+    ],
+    "levels": [],
+    "levelBasis": "unspecified",
+    "skills": [
+      "生活信息"
+    ],
+    "exams": [],
+    "formats": [
+      "网页"
+    ],
+    "price": "unknown",
+    "access": "open",
+    "languages": [
+      "德语"
+    ],
+    "sourceName": "Deutsches Jugendherbergswerk",
+    "url": "https://www.jugendherberge.de/",
+    "canonicalUrl": "https://www.jugendherberge.de/",
+    "rights": "link-only",
+    "status": "published",
+    "linkStatus": "ok",
+    "lastEditorialCheckedAt": "2026-10-05",
+    "providerId": "djh",
+    "providerType": "unspecified",
+    "mediaTypes": [
+      "网页"
+    ],
+    "costNoteZh": "查询入口、软件与实际服务可能采用不同收费方式，费用以原站为准。",
+    "accessNoteZh": "公开信息可浏览；购买、预约、个人账户或应用功能可能需要登录。",
+    "interfaceLanguages": [
+      "德语"
+    ],
+    "levelScope": "information",
+    "aliases": [],
+    "editorialStatus": "partial",
+    "evidence": [
+      {
+        "url": "https://www.jugendherberge.de/",
+        "fields": [
+          "name",
+          "purpose"
+        ],
+        "checkedAt": "2026-10-05"
+      }
+    ],
+    "lastLinkCheckedAt": "2026-10-05"
+  },
+  {
+    "id": "pincamp",
+    "slug": "pincamp",
+    "titleOriginal": "PiNCAMP",
+    "titleZh": "PiNCAMP 露营地",
+    "descriptionZh": "德国及欧洲露营地和露营住宿搜索。",
+    "primaryCategory": "travel",
+    "tags": [
+      "露营",
+      "房车",
+      "旅行"
+    ],
+    "levels": [],
+    "levelBasis": "unspecified",
+    "skills": [
+      "生活信息"
+    ],
+    "exams": [],
+    "formats": [
+      "网页"
+    ],
+    "price": "unknown",
+    "access": "open",
+    "languages": [
+      "德语"
+    ],
+    "sourceName": "PiNCAMP",
+    "url": "https://www.pincamp.de/",
+    "canonicalUrl": "https://www.pincamp.de/",
+    "rights": "link-only",
+    "status": "published",
+    "linkStatus": "ok",
+    "lastEditorialCheckedAt": "2026-10-05",
+    "providerId": "pincamp",
+    "providerType": "unspecified",
+    "mediaTypes": [
+      "网页"
+    ],
+    "costNoteZh": "查询入口、软件与实际服务可能采用不同收费方式，费用以原站为准。",
+    "accessNoteZh": "公开信息可浏览；购买、预约、个人账户或应用功能可能需要登录。",
+    "interfaceLanguages": [
+      "德语"
+    ],
+    "levelScope": "information",
+    "aliases": [],
+    "editorialStatus": "partial",
+    "evidence": [
+      {
+        "url": "https://www.pincamp.de/",
+        "fields": [
+          "name",
+          "purpose"
+        ],
+        "checkedAt": "2026-10-05"
+      }
+    ],
+    "lastLinkCheckedAt": "2026-10-05"
+  },
+  {
+    "id": "google-maps",
+    "slug": "google-maps",
+    "titleOriginal": "Google Maps",
+    "titleZh": "Google Maps 地图",
+    "descriptionZh": "地点搜索、路线规划和公共交通信息；实时功能因地区而异。",
+    "primaryCategory": "mobility",
+    "tags": [
+      "地图",
+      "导航",
+      "路线",
+      "Maps"
+    ],
+    "levels": [],
+    "levelBasis": "unspecified",
+    "skills": [
+      "生活信息"
+    ],
+    "exams": [],
+    "formats": [
+      "网页",
+      "应用"
+    ],
+    "price": "free",
+    "access": "open",
+    "languages": [
+      "德语"
+    ],
+    "sourceName": "Google Maps",
+    "url": "https://www.google.com/maps",
+    "canonicalUrl": "https://www.google.com/maps",
+    "rights": "link-only",
+    "status": "published",
+    "linkStatus": "ok",
+    "lastEditorialCheckedAt": "2026-10-05",
+    "providerId": "google-maps",
+    "providerType": "unspecified",
+    "mediaTypes": [
+      "网页",
+      "应用"
+    ],
+    "costNoteZh": "所链接公开信息或基础工具免费；第三方商品、会员或服务另计。",
+    "accessNoteZh": "公开信息可浏览；购买、预约、个人账户或应用功能可能需要登录。",
+    "interfaceLanguages": [
+      "德语"
+    ],
+    "levelScope": "information",
+    "aliases": [],
+    "editorialStatus": "partial",
+    "evidence": [
+      {
+        "url": "https://www.google.com/maps",
+        "fields": [
+          "name",
+          "purpose"
+        ],
+        "checkedAt": "2026-10-05"
+      }
+    ],
+    "lastLinkCheckedAt": "2026-10-05"
+  },
+  {
+    "id": "here-wego",
+    "slug": "here-wego",
+    "titleOriginal": "HERE WeGo",
+    "titleZh": "HERE WeGo 地图与导航",
+    "descriptionZh": "地图、路线规划和导航应用的官方入口。",
+    "primaryCategory": "mobility",
+    "tags": [
+      "地图",
+      "导航",
+      "路线"
+    ],
+    "levels": [],
+    "levelBasis": "unspecified",
+    "skills": [
+      "生活信息"
+    ],
+    "exams": [],
+    "formats": [
+      "网页",
+      "应用"
+    ],
+    "price": "free",
+    "access": "open",
+    "languages": [
+      "德语"
+    ],
+    "sourceName": "HERE WeGo",
+    "url": "https://wego.here.com/",
+    "canonicalUrl": "https://wego.here.com/",
+    "rights": "link-only",
+    "status": "published",
+    "linkStatus": "ok",
+    "lastEditorialCheckedAt": "2026-10-05",
+    "providerId": "here-wego",
+    "providerType": "unspecified",
+    "mediaTypes": [
+      "网页",
+      "应用"
+    ],
+    "costNoteZh": "所链接公开信息或基础工具免费；第三方商品、会员或服务另计。",
+    "accessNoteZh": "公开信息可浏览；购买、预约、个人账户或应用功能可能需要登录。",
+    "interfaceLanguages": [
+      "德语"
+    ],
+    "levelScope": "information",
+    "aliases": [],
+    "editorialStatus": "partial",
+    "evidence": [
+      {
+        "url": "https://wego.here.com/",
+        "fields": [
+          "name",
+          "purpose"
+        ],
+        "checkedAt": "2026-10-05"
+      }
+    ],
+    "lastLinkCheckedAt": "2026-10-05"
+  },
+  {
+    "id": "waze",
+    "slug": "waze",
+    "titleOriginal": "Waze",
+    "titleZh": "Waze 驾车导航",
+    "descriptionZh": "驾车路线、交通状况和导航应用。",
+    "primaryCategory": "mobility",
+    "tags": [
+      "地图",
+      "驾车",
+      "导航"
+    ],
+    "levels": [],
+    "levelBasis": "unspecified",
+    "skills": [
+      "生活信息"
+    ],
+    "exams": [],
+    "formats": [
+      "网页",
+      "应用"
+    ],
+    "price": "free",
+    "access": "open",
+    "languages": [
+      "德语"
+    ],
+    "sourceName": "Waze",
+    "url": "https://www.waze.com/de/",
+    "canonicalUrl": "https://www.waze.com/de/",
+    "rights": "link-only",
+    "status": "published",
+    "linkStatus": "restricted",
+    "lastEditorialCheckedAt": "2026-10-05",
+    "providerId": "waze",
+    "providerType": "unspecified",
+    "mediaTypes": [
+      "网页",
+      "应用"
+    ],
+    "costNoteZh": "所链接公开信息或基础工具免费；第三方商品、会员或服务另计。",
+    "accessNoteZh": "公开信息可浏览；购买、预约、个人账户或应用功能可能需要登录。",
+    "interfaceLanguages": [
+      "德语"
+    ],
+    "levelScope": "information",
+    "aliases": [],
+    "editorialStatus": "partial",
+    "evidence": [
+      {
+        "url": "https://www.waze.com/de/",
+        "fields": [
+          "name",
+          "purpose"
+        ],
+        "checkedAt": "2026-10-05"
+      }
+    ],
+    "lastLinkCheckedAt": "2026-10-05"
+  },
+  {
+    "id": "blablacar",
+    "slug": "blablacar",
+    "titleOriginal": "BlaBlaCar",
+    "titleZh": "BlaBlaCar 拼车",
+    "descriptionZh": "城际拼车与部分巴士线路的搜索入口。",
+    "primaryCategory": "mobility",
+    "tags": [
+      "拼车",
+      "巴士",
+      "Mitfahrgelegenheit"
+    ],
+    "levels": [],
+    "levelBasis": "unspecified",
+    "skills": [
+      "生活信息"
+    ],
+    "exams": [],
+    "formats": [
+      "网页",
+      "应用"
+    ],
+    "price": "unknown",
+    "access": "open",
+    "languages": [
+      "德语"
+    ],
+    "sourceName": "BlaBlaCar",
+    "url": "https://www.blablacar.de/",
+    "canonicalUrl": "https://www.blablacar.de/",
+    "rights": "link-only",
+    "status": "published",
+    "linkStatus": "restricted",
+    "lastEditorialCheckedAt": "2026-10-05",
+    "providerId": "blablacar",
+    "providerType": "unspecified",
+    "mediaTypes": [
+      "网页",
+      "应用"
+    ],
+    "costNoteZh": "查询入口、软件与实际服务可能采用不同收费方式，费用以原站为准。",
+    "accessNoteZh": "公开信息可浏览；购买、预约、个人账户或应用功能可能需要登录。",
+    "interfaceLanguages": [
+      "德语"
+    ],
+    "levelScope": "information",
+    "aliases": [],
+    "editorialStatus": "partial",
+    "evidence": [
+      {
+        "url": "https://www.blablacar.de/",
+        "fields": [
+          "name",
+          "purpose"
+        ],
+        "checkedAt": "2026-10-05"
+      }
+    ],
+    "lastLinkCheckedAt": "2026-10-05"
+  },
+  {
+    "id": "uber-germany",
+    "slug": "uber-germany",
+    "titleOriginal": "Uber",
+    "titleZh": "Uber 德国出行",
+    "descriptionZh": "德国服务城市的叫车入口；车型和覆盖范围因城市而异。",
+    "primaryCategory": "mobility",
+    "tags": [
+      "叫车",
+      "出租车",
+      "出行"
+    ],
+    "levels": [],
+    "levelBasis": "unspecified",
+    "skills": [
+      "生活信息"
+    ],
+    "exams": [],
+    "formats": [
+      "网页",
+      "应用"
+    ],
+    "price": "unknown",
+    "access": "registration",
+    "languages": [
+      "德语"
+    ],
+    "sourceName": "Uber",
+    "url": "https://www.uber.com/de/de/",
+    "canonicalUrl": "https://www.uber.com/de/de",
+    "rights": "link-only",
+    "status": "published",
+    "linkStatus": "unchecked",
+    "lastEditorialCheckedAt": "2026-10-05",
+    "providerId": "uber-germany",
+    "providerType": "unspecified",
+    "mediaTypes": [
+      "网页",
+      "应用"
+    ],
+    "costNoteZh": "查询入口、软件与实际服务可能采用不同收费方式，费用以原站为准。",
+    "accessNoteZh": "办理或使用核心功能需要账户，部分服务还要求身份验证或所在地资格。",
+    "interfaceLanguages": [
+      "德语"
+    ],
+    "levelScope": "information",
+    "aliases": [],
+    "editorialStatus": "partial",
+    "evidence": [
+      {
+        "url": "https://www.uber.com/de/de/",
+        "fields": [
+          "name",
+          "purpose"
+        ],
+        "checkedAt": "2026-10-05"
+      }
+    ],
+    "lastLinkCheckedAt": "2026-10-05"
+  },
+  {
+    "id": "bolt",
+    "slug": "bolt",
+    "titleOriginal": "Bolt",
+    "titleZh": "Bolt 城市出行",
+    "descriptionZh": "服务城市的叫车及共享出行入口；具体服务以所在地为准。",
+    "primaryCategory": "mobility",
+    "tags": [
+      "叫车",
+      "共享出行",
+      "城市"
+    ],
+    "levels": [],
+    "levelBasis": "unspecified",
+    "skills": [
+      "生活信息"
+    ],
+    "exams": [],
+    "formats": [
+      "网页",
+      "应用"
+    ],
+    "price": "unknown",
+    "access": "registration",
+    "languages": [
+      "德语"
+    ],
+    "sourceName": "Bolt",
+    "url": "https://bolt.eu/de-de/",
+    "canonicalUrl": "https://bolt.eu/de-de",
+    "rights": "link-only",
+    "status": "published",
+    "linkStatus": "ok",
+    "lastEditorialCheckedAt": "2026-10-05",
+    "providerId": "bolt",
+    "providerType": "unspecified",
+    "mediaTypes": [
+      "网页",
+      "应用"
+    ],
+    "costNoteZh": "查询入口、软件与实际服务可能采用不同收费方式，费用以原站为准。",
+    "accessNoteZh": "办理或使用核心功能需要账户，部分服务还要求身份验证或所在地资格。",
+    "interfaceLanguages": [
+      "德语"
+    ],
+    "levelScope": "information",
+    "aliases": [],
+    "editorialStatus": "partial",
+    "evidence": [
+      {
+        "url": "https://bolt.eu/de-de/",
+        "fields": [
+          "name",
+          "purpose"
+        ],
+        "checkedAt": "2026-10-05"
+      }
+    ],
+    "lastLinkCheckedAt": "2026-10-05"
+  },
+  {
+    "id": "freenow",
+    "slug": "freenow",
+    "titleOriginal": "FREENOW",
+    "titleZh": "FREENOW 出租车",
+    "descriptionZh": "德国服务城市的出租车预约和出行应用。",
+    "primaryCategory": "mobility",
+    "tags": [
+      "出租车",
+      "叫车",
+      "出行"
+    ],
+    "levels": [],
+    "levelBasis": "unspecified",
+    "skills": [
+      "生活信息"
+    ],
+    "exams": [],
+    "formats": [
+      "网页",
+      "应用"
+    ],
+    "price": "unknown",
+    "access": "registration",
+    "languages": [
+      "德语"
+    ],
+    "sourceName": "FREENOW",
+    "url": "https://www.free-now.com/de/",
+    "canonicalUrl": "https://www.free-now.com/de",
+    "rights": "link-only",
+    "status": "published",
+    "linkStatus": "restricted",
+    "lastEditorialCheckedAt": "2026-10-05",
+    "providerId": "freenow",
+    "providerType": "unspecified",
+    "mediaTypes": [
+      "网页",
+      "应用"
+    ],
+    "costNoteZh": "查询入口、软件与实际服务可能采用不同收费方式，费用以原站为准。",
+    "accessNoteZh": "办理或使用核心功能需要账户，部分服务还要求身份验证或所在地资格。",
+    "interfaceLanguages": [
+      "德语"
+    ],
+    "levelScope": "information",
+    "aliases": [],
+    "editorialStatus": "partial",
+    "evidence": [
+      {
+        "url": "https://www.free-now.com/de/",
+        "fields": [
+          "name",
+          "purpose"
+        ],
+        "checkedAt": "2026-10-05"
+      }
+    ],
+    "lastLinkCheckedAt": "2026-10-05"
+  },
+  {
+    "id": "adac-drive",
+    "slug": "adac-drive",
+    "titleOriginal": "ADAC Drive",
+    "titleZh": "ADAC Drive 油价与路线",
+    "descriptionZh": "德国加油价格查询、路线规划和充电信息应用。",
+    "primaryCategory": "mobility",
+    "tags": [
+      "油价",
+      "加油",
+      "充电",
+      "Spritpreise"
+    ],
+    "levels": [],
+    "levelBasis": "unspecified",
+    "skills": [
+      "生活信息"
+    ],
+    "exams": [],
+    "formats": [
+      "网页",
+      "应用"
+    ],
+    "price": "free",
+    "access": "open",
+    "languages": [
+      "德语"
+    ],
+    "sourceName": "ADAC Drive",
+    "url": "https://www.adac.de/services/apps/drive/",
+    "canonicalUrl": "https://www.adac.de/services/apps/drive",
+    "rights": "link-only",
+    "status": "published",
+    "linkStatus": "ok",
+    "lastEditorialCheckedAt": "2026-10-05",
+    "providerId": "adac-drive",
+    "providerType": "unspecified",
+    "mediaTypes": [
+      "网页",
+      "应用"
+    ],
+    "costNoteZh": "所链接公开信息或基础工具免费；第三方商品、会员或服务另计。",
+    "accessNoteZh": "公开信息可浏览；购买、预约、个人账户或应用功能可能需要登录。",
+    "interfaceLanguages": [
+      "德语"
+    ],
+    "levelScope": "information",
+    "aliases": [],
+    "editorialStatus": "partial",
+    "evidence": [
+      {
+        "url": "https://www.adac.de/services/apps/drive/",
+        "fields": [
+          "name",
+          "purpose"
+        ],
+        "checkedAt": "2026-10-05"
+      }
+    ],
+    "lastLinkCheckedAt": "2026-10-05"
+  },
+  {
+    "id": "enbw-mobility-plus",
+    "slug": "enbw-mobility-plus",
+    "titleOriginal": "EnBW mobility+",
+    "titleZh": "EnBW mobility+ 电动车充电",
+    "descriptionZh": "电动车充电站查询与充电服务应用。",
+    "primaryCategory": "mobility",
+    "tags": [
+      "电动车",
+      "充电",
+      "Ladesäule"
+    ],
+    "levels": [],
+    "levelBasis": "unspecified",
+    "skills": [
+      "生活信息"
+    ],
+    "exams": [],
+    "formats": [
+      "网页",
+      "应用"
+    ],
+    "price": "unknown",
+    "access": "registration",
+    "languages": [
+      "德语"
+    ],
+    "sourceName": "EnBW mobility+",
+    "url": "https://www.enbw.com/elektromobilitaet/produkte/mobilityplus-app",
+    "canonicalUrl": "https://www.enbw.com/elektromobilitaet/produkte/mobilityplus-app",
+    "rights": "link-only",
+    "status": "published",
+    "linkStatus": "ok",
+    "lastEditorialCheckedAt": "2026-10-05",
+    "providerId": "enbw-mobility-plus",
+    "providerType": "unspecified",
+    "mediaTypes": [
+      "网页",
+      "应用"
+    ],
+    "costNoteZh": "查询入口、软件与实际服务可能采用不同收费方式，费用以原站为准。",
+    "accessNoteZh": "办理或使用核心功能需要账户，部分服务还要求身份验证或所在地资格。",
+    "interfaceLanguages": [
+      "德语"
+    ],
+    "levelScope": "information",
+    "aliases": [],
+    "editorialStatus": "partial",
+    "evidence": [
+      {
+        "url": "https://www.enbw.com/elektromobilitaet/produkte/mobilityplus-app",
+        "fields": [
+          "name",
+          "purpose"
+        ],
+        "checkedAt": "2026-10-05"
+      }
+    ],
+    "lastLinkCheckedAt": "2026-10-05"
+  },
+  {
+    "id": "bundid",
+    "slug": "bundid",
+    "titleOriginal": "BundID",
+    "titleZh": "BundID 官方办事账户",
+    "descriptionZh": "德国在线行政服务的个人账户与身份认证入口。",
+    "primaryCategory": "government",
+    "tags": [
+      "办事",
+      "身份认证",
+      "官方"
+    ],
+    "levels": [],
+    "levelBasis": "unspecified",
+    "skills": [
+      "生活信息"
+    ],
+    "exams": [],
+    "formats": [
+      "网页"
+    ],
+    "price": "free",
+    "access": "registration",
+    "languages": [
+      "德语"
+    ],
+    "sourceName": "BundID",
+    "url": "https://id.bund.de/de",
+    "canonicalUrl": "https://id.bund.de/de",
+    "rights": "link-only",
+    "status": "published",
+    "linkStatus": "ok",
+    "lastEditorialCheckedAt": "2026-10-05",
+    "providerId": "bundid",
+    "providerType": "institution",
+    "mediaTypes": [
+      "网页"
+    ],
+    "costNoteZh": "所链接公开信息或基础工具免费；第三方商品、会员或服务另计。",
+    "accessNoteZh": "办理或使用核心功能需要账户，部分服务还要求身份验证或所在地资格。",
+    "interfaceLanguages": [
+      "德语"
+    ],
+    "levelScope": "information",
+    "aliases": [],
+    "editorialStatus": "partial",
+    "evidence": [
+      {
+        "url": "https://id.bund.de/de",
+        "fields": [
+          "name",
+          "purpose"
+        ],
+        "checkedAt": "2026-10-05"
+      }
+    ],
+    "lastLinkCheckedAt": "2026-10-05"
+  },
+  {
+    "id": "nina",
+    "slug": "nina",
+    "titleOriginal": "Bundesamt für Bevölkerungsschutz",
+    "titleZh": "NINA 官方预警应用",
+    "descriptionZh": "德国官方灾害与危险预警信息及 NINA 应用入口。",
+    "primaryCategory": "government",
+    "tags": [
+      "预警",
+      "灾害",
+      "天气",
+      "官方"
+    ],
+    "levels": [],
+    "levelBasis": "unspecified",
+    "skills": [
+      "生活信息"
+    ],
+    "exams": [],
+    "formats": [
+      "网页",
+      "应用"
+    ],
+    "price": "free",
+    "access": "open",
+    "languages": [
+      "德语"
+    ],
+    "sourceName": "Bundesamt für Bevölkerungsschutz",
+    "url": "https://www.bbk.bund.de/DE/Warnung-Vorsorge/Warn-App-NINA/warn-app-nina_node.html",
+    "canonicalUrl": "https://www.bbk.bund.de/DE/Warnung-Vorsorge/Warn-App-NINA/warn-app-nina_node.html",
+    "rights": "link-only",
+    "status": "published",
+    "linkStatus": "ok",
+    "lastEditorialCheckedAt": "2026-10-05",
+    "providerId": "nina",
+    "providerType": "institution",
+    "mediaTypes": [
+      "网页",
+      "应用"
+    ],
+    "costNoteZh": "所链接公开信息或基础工具免费；第三方商品、会员或服务另计。",
+    "accessNoteZh": "公开信息可浏览；购买、预约、个人账户或应用功能可能需要登录。",
+    "interfaceLanguages": [
+      "德语"
+    ],
+    "levelScope": "information",
+    "aliases": [],
+    "editorialStatus": "partial",
+    "evidence": [
+      {
+        "url": "https://www.bbk.bund.de/DE/Warnung-Vorsorge/Warn-App-NINA/warn-app-nina_node.html",
+        "fields": [
+          "name",
+          "purpose"
+        ],
+        "checkedAt": "2026-10-05"
+      }
+    ],
+    "lastLinkCheckedAt": "2026-10-05"
+  },
+  {
+    "id": "familienportal",
+    "slug": "familienportal",
+    "titleOriginal": "Familienportal des Bundes",
+    "titleZh": "德国家庭服务官方门户",
+    "descriptionZh": "家庭补助、育儿及相关公共服务的官方信息。",
+    "primaryCategory": "government",
+    "tags": [
+      "家庭",
+      "育儿",
+      "补助",
+      "官方"
+    ],
+    "levels": [],
+    "levelBasis": "unspecified",
+    "skills": [
+      "生活信息"
+    ],
+    "exams": [],
+    "formats": [
+      "网页"
+    ],
+    "price": "free",
+    "access": "open",
+    "languages": [
+      "德语"
+    ],
+    "sourceName": "Familienportal des Bundes",
+    "url": "https://familienportal.de/",
+    "canonicalUrl": "https://familienportal.de/",
+    "rights": "link-only",
+    "status": "published",
+    "linkStatus": "ok",
+    "lastEditorialCheckedAt": "2026-10-05",
+    "providerId": "familienportal",
+    "providerType": "institution",
+    "mediaTypes": [
+      "网页"
+    ],
+    "costNoteZh": "所链接公开信息或基础工具免费；第三方商品、会员或服务另计。",
+    "accessNoteZh": "公开信息可浏览；购买、预约、个人账户或应用功能可能需要登录。",
+    "interfaceLanguages": [
+      "德语"
+    ],
+    "levelScope": "information",
+    "aliases": [],
+    "editorialStatus": "partial",
+    "evidence": [
+      {
+        "url": "https://familienportal.de/",
+        "fields": [
+          "name",
+          "purpose"
+        ],
+        "checkedAt": "2026-10-05"
+      }
+    ],
+    "lastLinkCheckedAt": "2026-10-05"
+  },
+  {
+    "id": "tk-app",
+    "slug": "tk-app",
+    "titleOriginal": "Techniker Krankenkasse",
+    "titleZh": "TK 医保应用",
+    "descriptionZh": "TK 参保人账户、保险文件和线上医保服务入口。",
+    "primaryCategory": "health",
+    "tags": [
+      "医保",
+      "医疗保险",
+      "健康账户"
+    ],
+    "levels": [],
+    "levelBasis": "unspecified",
+    "skills": [
+      "生活信息"
+    ],
+    "exams": [],
+    "formats": [
+      "网页",
+      "应用"
+    ],
+    "price": "free",
+    "access": "registration",
+    "languages": [
+      "德语"
+    ],
+    "sourceName": "Techniker Krankenkasse",
+    "url": "https://www.tk.de/techniker/versicherung/krankenkasse-anliegen-online-erledigen/tk-app-2027886",
+    "canonicalUrl": "https://www.tk.de/techniker/versicherung/krankenkasse-anliegen-online-erledigen/tk-app-2027886",
+    "rights": "link-only",
+    "status": "published",
+    "linkStatus": "ok",
+    "lastEditorialCheckedAt": "2026-10-05",
+    "providerId": "tk-app",
+    "providerType": "unspecified",
+    "mediaTypes": [
+      "网页",
+      "应用"
+    ],
+    "costNoteZh": "参保人服务应用；保险费用及服务资格以所属医保机构为准。",
+    "accessNoteZh": "需要相应医保机构的参保资格、账户及身份验证。",
+    "interfaceLanguages": [
+      "德语"
+    ],
+    "levelScope": "information",
+    "aliases": [],
+    "editorialStatus": "partial",
+    "evidence": [
+      {
+        "url": "https://www.tk.de/techniker/versicherung/krankenkasse-anliegen-online-erledigen/tk-app-2027886",
+        "fields": [
+          "name",
+          "purpose"
+        ],
+        "checkedAt": "2026-10-05"
+      }
+    ],
+    "lastLinkCheckedAt": "2026-10-05"
+  },
+  {
+    "id": "meine-aok",
+    "slug": "meine-aok",
+    "titleOriginal": "AOK",
+    "titleZh": "Meine AOK 医保服务",
+    "descriptionZh": "AOK 参保人的在线账户与医保服务；功能因所属 AOK 而异。",
+    "primaryCategory": "health",
+    "tags": [
+      "医保",
+      "医疗保险",
+      "健康账户"
+    ],
+    "levels": [],
+    "levelBasis": "unspecified",
+    "skills": [
+      "生活信息"
+    ],
+    "exams": [],
+    "formats": [
+      "网页",
+      "应用"
+    ],
+    "price": "free",
+    "access": "registration",
+    "languages": [
+      "德语"
+    ],
+    "sourceName": "AOK",
+    "url": "https://meine.aok.de/",
+    "canonicalUrl": "https://meine.aok.de/",
+    "rights": "link-only",
+    "status": "published",
+    "linkStatus": "ok",
+    "lastEditorialCheckedAt": "2026-10-05",
+    "providerId": "meine-aok",
+    "providerType": "unspecified",
+    "mediaTypes": [
+      "网页",
+      "应用"
+    ],
+    "costNoteZh": "参保人服务应用；保险费用及服务资格以所属医保机构为准。",
+    "accessNoteZh": "需要相应医保机构的参保资格、账户及身份验证。",
+    "interfaceLanguages": [
+      "德语"
+    ],
+    "levelScope": "information",
+    "aliases": [],
+    "editorialStatus": "partial",
+    "evidence": [
+      {
+        "url": "https://meine.aok.de/",
+        "fields": [
+          "name",
+          "purpose"
+        ],
+        "checkedAt": "2026-10-05"
+      }
+    ],
+    "lastLinkCheckedAt": "2026-10-05"
+  },
+  {
+    "id": "meine-barmer",
+    "slug": "meine-barmer",
+    "titleOriginal": "BARMER",
+    "titleZh": "Meine BARMER 医保服务",
+    "descriptionZh": "BARMER 参保人的账户、保险文件及线上服务。",
+    "primaryCategory": "health",
+    "tags": [
+      "医保",
+      "医疗保险",
+      "健康账户"
+    ],
+    "levels": [],
+    "levelBasis": "unspecified",
+    "skills": [
+      "生活信息"
+    ],
+    "exams": [],
+    "formats": [
+      "网页",
+      "应用"
+    ],
+    "price": "free",
+    "access": "registration",
+    "languages": [
+      "德语"
+    ],
+    "sourceName": "BARMER",
+    "url": "https://www.barmer.de/unsere-leistungen/leistungen-a-z/meine-barmer",
+    "canonicalUrl": "https://www.barmer.de/unsere-leistungen/leistungen-a-z/meine-barmer",
+    "rights": "link-only",
+    "status": "published",
+    "linkStatus": "ok",
+    "lastEditorialCheckedAt": "2026-10-05",
+    "providerId": "meine-barmer",
+    "providerType": "unspecified",
+    "mediaTypes": [
+      "网页",
+      "应用"
+    ],
+    "costNoteZh": "参保人服务应用；保险费用及服务资格以所属医保机构为准。",
+    "accessNoteZh": "需要相应医保机构的参保资格、账户及身份验证。",
+    "interfaceLanguages": [
+      "德语"
+    ],
+    "levelScope": "information",
+    "aliases": [],
+    "editorialStatus": "partial",
+    "evidence": [
+      {
+        "url": "https://www.barmer.de/unsere-leistungen/leistungen-a-z/meine-barmer",
+        "fields": [
+          "name",
+          "purpose"
+        ],
+        "checkedAt": "2026-10-05"
+      }
+    ],
+    "lastLinkCheckedAt": "2026-10-05"
+  },
+  {
+    "id": "e-rezept",
+    "slug": "e-rezept",
+    "titleOriginal": "gematik",
+    "titleZh": "德国官方电子处方应用",
+    "descriptionZh": "德国 E-Rezept 官方应用与电子处方服务信息。",
+    "primaryCategory": "health",
+    "tags": [
+      "处方",
+      "药房",
+      "医疗",
+      "E-Rezept"
+    ],
+    "levels": [],
+    "levelBasis": "unspecified",
+    "skills": [
+      "生活信息"
+    ],
+    "exams": [],
+    "formats": [
+      "网页",
+      "应用"
+    ],
+    "price": "free",
+    "access": "open",
+    "languages": [
+      "德语"
+    ],
+    "sourceName": "gematik",
+    "url": "https://www.das-e-rezept-fuer-deutschland.de/app",
+    "canonicalUrl": "https://www.das-e-rezept-fuer-deutschland.de/app",
+    "rights": "link-only",
+    "status": "published",
+    "linkStatus": "ok",
+    "lastEditorialCheckedAt": "2026-10-05",
+    "providerId": "e-rezept",
+    "providerType": "institution",
+    "mediaTypes": [
+      "网页",
+      "应用"
+    ],
+    "costNoteZh": "所链接公开信息或基础工具免费；第三方商品、会员或服务另计。",
+    "accessNoteZh": "公开信息可浏览；购买、预约、个人账户或应用功能可能需要登录。",
+    "interfaceLanguages": [
+      "德语"
+    ],
+    "levelScope": "information",
+    "aliases": [],
+    "editorialStatus": "partial",
+    "evidence": [
+      {
+        "url": "https://www.das-e-rezept-fuer-deutschland.de/app",
+        "fields": [
+          "name",
+          "purpose"
+        ],
+        "checkedAt": "2026-10-05"
+      }
+    ],
+    "lastLinkCheckedAt": "2026-10-05"
+  },
+  {
+    "id": "pharmacy-emergency",
+    "slug": "pharmacy-emergency",
+    "titleOriginal": "aponet.de",
+    "titleZh": "药房夜间与值班查询",
+    "descriptionZh": "德国药房值班和紧急药房查询入口。",
+    "primaryCategory": "health",
+    "tags": [
+      "药房",
+      "值班",
+      "Notdienst"
+    ],
+    "levels": [],
+    "levelBasis": "unspecified",
+    "skills": [
+      "生活信息"
+    ],
+    "exams": [],
+    "formats": [
+      "网页"
+    ],
+    "price": "free",
+    "access": "open",
+    "languages": [
+      "德语"
+    ],
+    "sourceName": "aponet.de",
+    "url": "https://www.aponet.de/apotheke/notdienstsuche",
+    "canonicalUrl": "https://www.aponet.de/apotheke/notdienstsuche",
+    "rights": "link-only",
+    "status": "published",
+    "linkStatus": "ok",
+    "lastEditorialCheckedAt": "2026-10-05",
+    "providerId": "pharmacy-emergency",
+    "providerType": "unspecified",
+    "mediaTypes": [
+      "网页"
+    ],
+    "costNoteZh": "所链接公开信息或基础工具免费；第三方商品、会员或服务另计。",
+    "accessNoteZh": "公开信息可浏览；购买、预约、个人账户或应用功能可能需要登录。",
+    "interfaceLanguages": [
+      "德语"
+    ],
+    "levelScope": "information",
+    "aliases": [],
+    "editorialStatus": "partial",
+    "evidence": [
+      {
+        "url": "https://www.aponet.de/apotheke/notdienstsuche",
+        "fields": [
+          "name",
+          "purpose"
+        ],
+        "checkedAt": "2026-10-05"
+      }
+    ],
+    "lastLinkCheckedAt": "2026-10-05"
+  },
+  {
+    "id": "edeka",
+    "slug": "edeka",
+    "titleOriginal": "EDEKA",
+    "titleZh": "EDEKA 超市与门店",
+    "descriptionZh": "德国超市门店、商品及官方购物应用信息。",
+    "primaryCategory": "shopping",
+    "tags": [
+      "超市",
+      "食品",
+      "日用品"
+    ],
+    "levels": [],
+    "levelBasis": "unspecified",
+    "skills": [
+      "生活信息"
+    ],
+    "exams": [],
+    "formats": [
+      "网页",
+      "应用"
+    ],
+    "price": "unknown",
+    "access": "open",
+    "languages": [
+      "德语"
+    ],
+    "sourceName": "EDEKA",
+    "url": "https://www.edeka.de/",
+    "canonicalUrl": "https://www.edeka.de/",
+    "rights": "link-only",
+    "status": "published",
+    "linkStatus": "restricted",
+    "lastEditorialCheckedAt": "2026-10-05",
+    "providerId": "edeka",
+    "providerType": "unspecified",
+    "mediaTypes": [
+      "网页",
+      "应用"
+    ],
+    "costNoteZh": "查询入口、软件与实际服务可能采用不同收费方式，费用以原站为准。",
+    "accessNoteZh": "公开信息可浏览；购买、预约、个人账户或应用功能可能需要登录。",
+    "interfaceLanguages": [
+      "德语"
+    ],
+    "levelScope": "information",
+    "aliases": [],
+    "editorialStatus": "partial",
+    "evidence": [
+      {
+        "url": "https://www.edeka.de/",
+        "fields": [
+          "name",
+          "purpose"
+        ],
+        "checkedAt": "2026-10-05"
+      }
+    ],
+    "lastLinkCheckedAt": "2026-10-05"
+  },
+  {
+    "id": "penny",
+    "slug": "penny",
+    "titleOriginal": "PENNY",
+    "titleZh": "PENNY 折扣超市",
+    "descriptionZh": "德国折扣超市、门店与商品信息。",
+    "primaryCategory": "shopping",
+    "tags": [
+      "超市",
+      "食品",
+      "折扣"
+    ],
+    "levels": [],
+    "levelBasis": "unspecified",
+    "skills": [
+      "生活信息"
+    ],
+    "exams": [],
+    "formats": [
+      "网页",
+      "应用"
+    ],
+    "price": "unknown",
+    "access": "open",
+    "languages": [
+      "德语"
+    ],
+    "sourceName": "PENNY",
+    "url": "https://www.penny.de/",
+    "canonicalUrl": "https://www.penny.de/",
+    "rights": "link-only",
+    "status": "published",
+    "linkStatus": "ok",
+    "lastEditorialCheckedAt": "2026-10-05",
+    "providerId": "penny",
+    "providerType": "unspecified",
+    "mediaTypes": [
+      "网页",
+      "应用"
+    ],
+    "costNoteZh": "查询入口、软件与实际服务可能采用不同收费方式，费用以原站为准。",
+    "accessNoteZh": "公开信息可浏览；购买、预约、个人账户或应用功能可能需要登录。",
+    "interfaceLanguages": [
+      "德语"
+    ],
+    "levelScope": "information",
+    "aliases": [],
+    "editorialStatus": "partial",
+    "evidence": [
+      {
+        "url": "https://www.penny.de/",
+        "fields": [
+          "name",
+          "purpose"
+        ],
+        "checkedAt": "2026-10-05"
+      }
+    ],
+    "lastLinkCheckedAt": "2026-10-05"
+  },
+  {
+    "id": "netto",
+    "slug": "netto",
+    "titleOriginal": "Netto Marken-Discount",
+    "titleZh": "Netto 超市",
+    "descriptionZh": "德国 Netto Marken-Discount 门店、商品与购物入口。",
+    "primaryCategory": "shopping",
+    "tags": [
+      "超市",
+      "食品",
+      "折扣"
+    ],
+    "levels": [],
+    "levelBasis": "unspecified",
+    "skills": [
+      "生活信息"
+    ],
+    "exams": [],
+    "formats": [
+      "网页",
+      "应用"
+    ],
+    "price": "unknown",
+    "access": "open",
+    "languages": [
+      "德语"
+    ],
+    "sourceName": "Netto Marken-Discount",
+    "url": "https://www.netto-online.de/",
+    "canonicalUrl": "https://www.netto-online.de/",
+    "rights": "link-only",
+    "status": "published",
+    "linkStatus": "restricted",
+    "lastEditorialCheckedAt": "2026-10-05",
+    "providerId": "netto",
+    "providerType": "unspecified",
+    "mediaTypes": [
+      "网页",
+      "应用"
+    ],
+    "costNoteZh": "查询入口、软件与实际服务可能采用不同收费方式，费用以原站为准。",
+    "accessNoteZh": "公开信息可浏览；购买、预约、个人账户或应用功能可能需要登录。",
+    "interfaceLanguages": [
+      "德语"
+    ],
+    "levelScope": "information",
+    "aliases": [],
+    "editorialStatus": "partial",
+    "evidence": [
+      {
+        "url": "https://www.netto-online.de/",
+        "fields": [
+          "name",
+          "purpose"
+        ],
+        "checkedAt": "2026-10-05"
+      }
+    ],
+    "lastLinkCheckedAt": "2026-10-05"
+  },
+  {
+    "id": "mydealz",
+    "slug": "mydealz",
+    "titleOriginal": "mydealz",
+    "titleZh": "mydealz 优惠社区",
+    "descriptionZh": "德国用户分享购物优惠、价格信息和促销讨论的社区。",
+    "primaryCategory": "shopping",
+    "tags": [
+      "优惠",
+      "购物",
+      "折扣",
+      "社区"
+    ],
+    "levels": [],
+    "levelBasis": "unspecified",
+    "skills": [
+      "生活信息"
+    ],
+    "exams": [],
+    "formats": [
+      "网页",
+      "应用"
+    ],
+    "price": "free",
+    "access": "open",
+    "languages": [
+      "德语"
+    ],
+    "sourceName": "mydealz",
+    "url": "https://www.mydealz.de/",
+    "canonicalUrl": "https://www.mydealz.de/",
+    "rights": "link-only",
+    "status": "published",
+    "linkStatus": "restricted",
+    "lastEditorialCheckedAt": "2026-10-05",
+    "providerId": "mydealz",
+    "providerType": "unspecified",
+    "mediaTypes": [
+      "网页",
+      "应用"
+    ],
+    "costNoteZh": "所链接公开信息或基础工具免费；第三方商品、会员或服务另计。",
+    "accessNoteZh": "公开信息可浏览；购买、预约、个人账户或应用功能可能需要登录。",
+    "interfaceLanguages": [
+      "德语"
+    ],
+    "levelScope": "information",
+    "aliases": [],
+    "editorialStatus": "partial",
+    "evidence": [
+      {
+        "url": "https://www.mydealz.de/",
+        "fields": [
+          "name",
+          "purpose"
+        ],
+        "checkedAt": "2026-10-05"
+      }
+    ],
+    "lastLinkCheckedAt": "2026-10-05"
+  },
+  {
+    "id": "refurbed",
+    "slug": "refurbed",
+    "titleOriginal": "refurbed",
+    "titleZh": "refurbed 翻新电子产品",
+    "descriptionZh": "翻新电子产品及其他商品的德国市场入口。",
+    "primaryCategory": "shopping",
+    "tags": [
+      "翻新",
+      "电子产品",
+      "购物"
+    ],
+    "levels": [],
+    "levelBasis": "unspecified",
+    "skills": [
+      "生活信息"
+    ],
+    "exams": [],
+    "formats": [
+      "网页"
+    ],
+    "price": "unknown",
+    "access": "open",
+    "languages": [
+      "德语"
+    ],
+    "sourceName": "refurbed",
+    "url": "https://www.refurbed.de/",
+    "canonicalUrl": "https://www.refurbed.de/",
+    "rights": "link-only",
+    "status": "published",
+    "linkStatus": "ok",
+    "lastEditorialCheckedAt": "2026-10-05",
+    "providerId": "refurbed",
+    "providerType": "unspecified",
+    "mediaTypes": [
+      "网页"
+    ],
+    "costNoteZh": "查询入口、软件与实际服务可能采用不同收费方式，费用以原站为准。",
+    "accessNoteZh": "公开信息可浏览；购买、预约、个人账户或应用功能可能需要登录。",
+    "interfaceLanguages": [
+      "德语"
+    ],
+    "levelScope": "information",
+    "aliases": [],
+    "editorialStatus": "partial",
+    "evidence": [
+      {
+        "url": "https://www.refurbed.de/",
+        "fields": [
+          "name",
+          "purpose"
+        ],
+        "checkedAt": "2026-10-05"
+      }
+    ],
+    "lastLinkCheckedAt": "2026-10-05"
+  },
+  {
+    "id": "back-market",
+    "slug": "back-market",
+    "titleOriginal": "Back Market",
+    "titleZh": "Back Market 翻新设备",
+    "descriptionZh": "翻新手机、电脑和电子设备交易平台。",
+    "primaryCategory": "shopping",
+    "tags": [
+      "翻新",
+      "手机",
+      "电脑"
+    ],
+    "levels": [],
+    "levelBasis": "unspecified",
+    "skills": [
+      "生活信息"
+    ],
+    "exams": [],
+    "formats": [
+      "网页",
+      "应用"
+    ],
+    "price": "unknown",
+    "access": "open",
+    "languages": [
+      "德语"
+    ],
+    "sourceName": "Back Market",
+    "url": "https://www.backmarket.de/de-de",
+    "canonicalUrl": "https://www.backmarket.de/de-de",
+    "rights": "link-only",
+    "status": "published",
+    "linkStatus": "unchecked",
+    "lastEditorialCheckedAt": "2026-10-05",
+    "providerId": "back-market",
+    "providerType": "unspecified",
+    "mediaTypes": [
+      "网页",
+      "应用"
+    ],
+    "costNoteZh": "查询入口、软件与实际服务可能采用不同收费方式，费用以原站为准。",
+    "accessNoteZh": "公开信息可浏览；购买、预约、个人账户或应用功能可能需要登录。",
+    "interfaceLanguages": [
+      "德语"
+    ],
+    "levelScope": "information",
+    "aliases": [],
+    "editorialStatus": "partial",
+    "evidence": [
+      {
+        "url": "https://www.backmarket.de/de-de",
+        "fields": [
+          "name",
+          "purpose"
+        ],
+        "checkedAt": "2026-10-05"
+      }
+    ],
+    "lastLinkCheckedAt": "2026-10-05"
+  },
+  {
+    "id": "fressnapf",
+    "slug": "fressnapf",
+    "titleOriginal": "Fressnapf",
+    "titleZh": "Fressnapf 宠物用品",
+    "descriptionZh": "德国宠物食品、用品与门店查询入口。",
+    "primaryCategory": "shopping",
+    "tags": [
+      "宠物",
+      "食品",
+      "用品"
+    ],
+    "levels": [],
+    "levelBasis": "unspecified",
+    "skills": [
+      "生活信息"
+    ],
+    "exams": [],
+    "formats": [
+      "网页",
+      "应用"
+    ],
+    "price": "unknown",
+    "access": "open",
+    "languages": [
+      "德语"
+    ],
+    "sourceName": "Fressnapf",
+    "url": "https://www.fressnapf.de/",
+    "canonicalUrl": "https://www.fressnapf.de/",
+    "rights": "link-only",
+    "status": "published",
+    "linkStatus": "ok",
+    "lastEditorialCheckedAt": "2026-10-05",
+    "providerId": "fressnapf",
+    "providerType": "unspecified",
+    "mediaTypes": [
+      "网页",
+      "应用"
+    ],
+    "costNoteZh": "查询入口、软件与实际服务可能采用不同收费方式，费用以原站为准。",
+    "accessNoteZh": "公开信息可浏览；购买、预约、个人账户或应用功能可能需要登录。",
+    "interfaceLanguages": [
+      "德语"
+    ],
+    "levelScope": "information",
+    "aliases": [],
+    "editorialStatus": "partial",
+    "evidence": [
+      {
+        "url": "https://www.fressnapf.de/",
+        "fields": [
+          "name",
+          "purpose"
+        ],
+        "checkedAt": "2026-10-05"
+      }
+    ],
+    "lastLinkCheckedAt": "2026-10-05"
+  },
+  {
+    "id": "tchibo",
+    "slug": "tchibo",
+    "titleOriginal": "Tchibo",
+    "titleZh": "Tchibo 咖啡与日用品",
+    "descriptionZh": "咖啡、日用品及德国门店信息。",
+    "primaryCategory": "shopping",
+    "tags": [
+      "咖啡",
+      "日用品",
+      "购物"
+    ],
+    "levels": [],
+    "levelBasis": "unspecified",
+    "skills": [
+      "生活信息"
+    ],
+    "exams": [],
+    "formats": [
+      "网页",
+      "应用"
+    ],
+    "price": "unknown",
+    "access": "open",
+    "languages": [
+      "德语"
+    ],
+    "sourceName": "Tchibo",
+    "url": "https://www.tchibo.de/",
+    "canonicalUrl": "https://www.tchibo.de/",
+    "rights": "link-only",
+    "status": "published",
+    "linkStatus": "ok",
+    "lastEditorialCheckedAt": "2026-10-05",
+    "providerId": "tchibo",
+    "providerType": "unspecified",
+    "mediaTypes": [
+      "网页",
+      "应用"
+    ],
+    "costNoteZh": "查询入口、软件与实际服务可能采用不同收费方式，费用以原站为准。",
+    "accessNoteZh": "公开信息可浏览；购买、预约、个人账户或应用功能可能需要登录。",
+    "interfaceLanguages": [
+      "德语"
+    ],
+    "levelScope": "information",
+    "aliases": [],
+    "editorialStatus": "partial",
+    "evidence": [
+      {
+        "url": "https://www.tchibo.de/",
+        "fields": [
+          "name",
+          "purpose"
+        ],
+        "checkedAt": "2026-10-05"
+      }
+    ],
+    "lastLinkCheckedAt": "2026-10-05"
+  },
+  {
+    "id": "picnic",
+    "slug": "picnic",
+    "titleOriginal": "Picnic",
+    "titleZh": "Picnic 食品配送",
+    "descriptionZh": "德国覆盖地区的超市商品配送应用；需按地址核实服务范围。",
+    "primaryCategory": "food",
+    "tags": [
+      "食品",
+      "超市",
+      "配送"
+    ],
+    "levels": [],
+    "levelBasis": "unspecified",
+    "skills": [
+      "生活信息"
+    ],
+    "exams": [],
+    "formats": [
+      "网页",
+      "应用"
+    ],
+    "price": "unknown",
+    "access": "registration",
+    "languages": [
+      "德语"
+    ],
+    "sourceName": "Picnic",
+    "url": "https://picnic.app/de/",
+    "canonicalUrl": "https://picnic.app/de",
+    "rights": "link-only",
+    "status": "published",
+    "linkStatus": "ok",
+    "lastEditorialCheckedAt": "2026-10-05",
+    "providerId": "picnic",
+    "providerType": "unspecified",
+    "mediaTypes": [
+      "网页",
+      "应用"
+    ],
+    "costNoteZh": "查询入口、软件与实际服务可能采用不同收费方式，费用以原站为准。",
+    "accessNoteZh": "办理或使用核心功能需要账户，部分服务还要求身份验证或所在地资格。",
+    "interfaceLanguages": [
+      "德语"
+    ],
+    "levelScope": "information",
+    "aliases": [],
+    "editorialStatus": "partial",
+    "evidence": [
+      {
+        "url": "https://picnic.app/de/",
+        "fields": [
+          "name",
+          "purpose"
+        ],
+        "checkedAt": "2026-10-05"
+      }
+    ],
+    "lastLinkCheckedAt": "2026-10-05"
+  },
+  {
+    "id": "knuspr",
+    "slug": "knuspr",
+    "titleOriginal": "Knuspr",
+    "titleZh": "Knuspr 食品配送",
+    "descriptionZh": "服务地区的食品和日用品配送；覆盖范围以邮编查询为准。",
+    "primaryCategory": "food",
+    "tags": [
+      "食品",
+      "超市",
+      "配送"
+    ],
+    "levels": [],
+    "levelBasis": "unspecified",
+    "skills": [
+      "生活信息"
+    ],
+    "exams": [],
+    "formats": [
+      "网页",
+      "应用"
+    ],
+    "price": "unknown",
+    "access": "open",
+    "languages": [
+      "德语"
+    ],
+    "sourceName": "Knuspr",
+    "url": "https://www.knuspr.de/",
+    "canonicalUrl": "https://www.knuspr.de/",
+    "rights": "link-only",
+    "status": "published",
+    "linkStatus": "restricted",
+    "lastEditorialCheckedAt": "2026-10-05",
+    "providerId": "knuspr",
+    "providerType": "unspecified",
+    "mediaTypes": [
+      "网页",
+      "应用"
+    ],
+    "costNoteZh": "查询入口、软件与实际服务可能采用不同收费方式，费用以原站为准。",
+    "accessNoteZh": "公开信息可浏览；购买、预约、个人账户或应用功能可能需要登录。",
+    "interfaceLanguages": [
+      "德语"
+    ],
+    "levelScope": "information",
+    "aliases": [],
+    "editorialStatus": "partial",
+    "evidence": [
+      {
+        "url": "https://www.knuspr.de/",
+        "fields": [
+          "name",
+          "purpose"
+        ],
+        "checkedAt": "2026-10-05"
+      }
+    ],
+    "lastLinkCheckedAt": "2026-10-05"
+  },
+  {
+    "id": "chefkoch",
+    "slug": "chefkoch",
+    "titleOriginal": "Chefkoch",
+    "titleZh": "Chefkoch 食谱社区",
+    "descriptionZh": "德语食谱搜索、烹饪内容与食谱应用。",
+    "primaryCategory": "food",
+    "tags": [
+      "食谱",
+      "做饭",
+      "烹饪",
+      "Rezepte"
+    ],
+    "levels": [],
+    "levelBasis": "unspecified",
+    "skills": [
+      "生活信息"
+    ],
+    "exams": [],
+    "formats": [
+      "网页",
+      "应用"
+    ],
+    "price": "freemium",
+    "access": "open",
+    "languages": [
+      "德语"
+    ],
+    "sourceName": "Chefkoch",
+    "url": "https://www.chefkoch.de/",
+    "canonicalUrl": "https://www.chefkoch.de/",
+    "rights": "link-only",
+    "status": "published",
+    "linkStatus": "restricted",
+    "lastEditorialCheckedAt": "2026-10-05",
+    "providerId": "chefkoch",
+    "providerType": "unspecified",
+    "mediaTypes": [
+      "网页",
+      "应用"
+    ],
+    "costNoteZh": "查询入口、软件与实际服务可能采用不同收费方式，费用以原站为准。",
+    "accessNoteZh": "公开信息可浏览；购买、预约、个人账户或应用功能可能需要登录。",
+    "interfaceLanguages": [
+      "德语"
+    ],
+    "levelScope": "information",
+    "aliases": [],
+    "editorialStatus": "partial",
+    "evidence": [
+      {
+        "url": "https://www.chefkoch.de/",
+        "fields": [
+          "name",
+          "purpose"
+        ],
+        "checkedAt": "2026-10-05"
+      }
+    ],
+    "lastLinkCheckedAt": "2026-10-05"
+  },
+  {
+    "id": "thefork",
+    "slug": "thefork",
+    "titleOriginal": "TheFork",
+    "titleZh": "TheFork 餐厅预约",
+    "descriptionZh": "德国及其他市场的餐厅查询和预约入口；覆盖因城市而异。",
+    "primaryCategory": "food",
+    "tags": [
+      "餐厅",
+      "预约",
+      "餐饮"
+    ],
+    "levels": [],
+    "levelBasis": "unspecified",
+    "skills": [
+      "生活信息"
+    ],
+    "exams": [],
+    "formats": [
+      "网页",
+      "应用"
+    ],
+    "price": "unknown",
+    "access": "open",
+    "languages": [
+      "德语"
+    ],
+    "sourceName": "TheFork",
+    "url": "https://www.thefork.de/",
+    "canonicalUrl": "https://www.thefork.de/",
+    "rights": "link-only",
+    "status": "published",
+    "linkStatus": "restricted",
+    "lastEditorialCheckedAt": "2026-10-05",
+    "providerId": "thefork",
+    "providerType": "unspecified",
+    "mediaTypes": [
+      "网页",
+      "应用"
+    ],
+    "costNoteZh": "查询入口、软件与实际服务可能采用不同收费方式，费用以原站为准。",
+    "accessNoteZh": "公开信息可浏览；购买、预约、个人账户或应用功能可能需要登录。",
+    "interfaceLanguages": [
+      "德语"
+    ],
+    "levelScope": "information",
+    "aliases": [],
+    "editorialStatus": "partial",
+    "evidence": [
+      {
+        "url": "https://www.thefork.de/",
+        "fields": [
+          "name",
+          "purpose"
+        ],
+        "checkedAt": "2026-10-05"
+      }
+    ],
+    "lastLinkCheckedAt": "2026-10-05"
+  },
+  {
+    "id": "bluesky",
+    "slug": "bluesky",
+    "titleOriginal": "Bluesky",
+    "titleZh": "Bluesky 社交网络",
+    "descriptionZh": "公开动态、社群和兴趣讨论的社交平台。",
+    "primaryCategory": "communication",
+    "tags": [
+      "社交媒体",
+      "动态",
+      "社区"
+    ],
+    "levels": [],
+    "levelBasis": "unspecified",
+    "skills": [
+      "生活信息"
+    ],
+    "exams": [],
+    "formats": [
+      "网页",
+      "应用"
+    ],
+    "price": "free",
+    "access": "registration",
+    "languages": [
+      "德语"
+    ],
+    "sourceName": "Bluesky",
+    "url": "https://bsky.app/",
+    "canonicalUrl": "https://bsky.app/",
+    "rights": "link-only",
+    "status": "published",
+    "linkStatus": "ok",
+    "lastEditorialCheckedAt": "2026-10-05",
+    "providerId": "bluesky",
+    "providerType": "unspecified",
+    "mediaTypes": [
+      "网页",
+      "应用"
+    ],
+    "costNoteZh": "所链接公开信息或基础工具免费；第三方商品、会员或服务另计。",
+    "accessNoteZh": "办理或使用核心功能需要账户，部分服务还要求身份验证或所在地资格。",
+    "interfaceLanguages": [
+      "德语"
+    ],
+    "levelScope": "information",
+    "aliases": [],
+    "editorialStatus": "partial",
+    "evidence": [
+      {
+        "url": "https://bsky.app/",
+        "fields": [
+          "name",
+          "purpose"
+        ],
+        "checkedAt": "2026-10-05"
+      }
+    ],
+    "lastLinkCheckedAt": "2026-10-05"
+  },
+  {
+    "id": "threads",
+    "slug": "threads",
+    "titleOriginal": "Threads",
+    "titleZh": "Threads 社交网络",
+    "descriptionZh": "文字动态、公开讨论和创作者信息平台。",
+    "primaryCategory": "communication",
+    "tags": [
+      "社交媒体",
+      "动态",
+      "讨论"
+    ],
+    "levels": [],
+    "levelBasis": "unspecified",
+    "skills": [
+      "生活信息"
+    ],
+    "exams": [],
+    "formats": [
+      "网页",
+      "应用"
+    ],
+    "price": "unknown",
+    "access": "registration",
+    "languages": [
+      "德语"
+    ],
+    "sourceName": "Threads",
+    "url": "https://www.threads.com/",
+    "canonicalUrl": "https://www.threads.com/",
+    "rights": "link-only",
+    "status": "published",
+    "linkStatus": "ok",
+    "lastEditorialCheckedAt": "2026-10-05",
+    "providerId": "threads",
+    "providerType": "unspecified",
+    "mediaTypes": [
+      "网页",
+      "应用"
+    ],
+    "costNoteZh": "查询入口、软件与实际服务可能采用不同收费方式，费用以原站为准。",
+    "accessNoteZh": "办理或使用核心功能需要账户，部分服务还要求身份验证或所在地资格。",
+    "interfaceLanguages": [
+      "德语"
+    ],
+    "levelScope": "information",
+    "aliases": [],
+    "editorialStatus": "partial",
+    "evidence": [
+      {
+        "url": "https://www.threads.com/",
+        "fields": [
+          "name",
+          "purpose"
+        ],
+        "checkedAt": "2026-10-05"
+      }
+    ],
+    "lastLinkCheckedAt": "2026-10-05"
+  },
+  {
+    "id": "x-social",
+    "slug": "x-social",
+    "titleOriginal": "X",
+    "titleZh": "X 社交平台",
+    "descriptionZh": "公开动态、新闻讨论与社交账号信息入口。",
+    "primaryCategory": "communication",
+    "tags": [
+      "社交媒体",
+      "动态",
+      "新闻"
+    ],
+    "levels": [],
+    "levelBasis": "unspecified",
+    "skills": [
+      "生活信息"
+    ],
+    "exams": [],
+    "formats": [
+      "网页",
+      "应用"
+    ],
+    "price": "freemium",
+    "access": "registration",
+    "languages": [
+      "德语"
+    ],
+    "sourceName": "X",
+    "url": "https://x.com/",
+    "canonicalUrl": "https://x.com/",
+    "rights": "link-only",
+    "status": "published",
+    "linkStatus": "ok",
+    "lastEditorialCheckedAt": "2026-10-05",
+    "providerId": "x-social",
+    "providerType": "unspecified",
+    "mediaTypes": [
+      "网页",
+      "应用"
+    ],
+    "costNoteZh": "查询入口、软件与实际服务可能采用不同收费方式，费用以原站为准。",
+    "accessNoteZh": "办理或使用核心功能需要账户，部分服务还要求身份验证或所在地资格。",
+    "interfaceLanguages": [
+      "德语"
+    ],
+    "levelScope": "information",
+    "aliases": [],
+    "editorialStatus": "partial",
+    "evidence": [
+      {
+        "url": "https://x.com/",
+        "fields": [
+          "name",
+          "purpose"
+        ],
+        "checkedAt": "2026-10-05"
+      }
+    ],
+    "lastLinkCheckedAt": "2026-10-05"
+  },
+  {
+    "id": "snapchat",
+    "slug": "snapchat",
+    "titleOriginal": "Snapchat",
+    "titleZh": "Snapchat 图片与聊天",
+    "descriptionZh": "图片、视频消息与朋友聊天的官方平台。",
+    "primaryCategory": "communication",
+    "tags": [
+      "社交媒体",
+      "聊天",
+      "图片"
+    ],
+    "levels": [],
+    "levelBasis": "unspecified",
+    "skills": [
+      "生活信息"
+    ],
+    "exams": [],
+    "formats": [
+      "网页",
+      "应用"
+    ],
+    "price": "freemium",
+    "access": "registration",
+    "languages": [
+      "德语"
+    ],
+    "sourceName": "Snapchat",
+    "url": "https://www.snapchat.com/",
+    "canonicalUrl": "https://www.snapchat.com/",
+    "rights": "link-only",
+    "status": "published",
+    "linkStatus": "ok",
+    "lastEditorialCheckedAt": "2026-10-05",
+    "providerId": "snapchat",
+    "providerType": "unspecified",
+    "mediaTypes": [
+      "网页",
+      "应用"
+    ],
+    "costNoteZh": "查询入口、软件与实际服务可能采用不同收费方式，费用以原站为准。",
+    "accessNoteZh": "办理或使用核心功能需要账户，部分服务还要求身份验证或所在地资格。",
+    "interfaceLanguages": [
+      "德语"
+    ],
+    "levelScope": "information",
+    "aliases": [],
+    "editorialStatus": "partial",
+    "evidence": [
+      {
+        "url": "https://www.snapchat.com/",
+        "fields": [
+          "name",
+          "purpose"
+        ],
+        "checkedAt": "2026-10-05"
+      }
+    ],
+    "lastLinkCheckedAt": "2026-10-05"
+  },
+  {
+    "id": "pinterest",
+    "slug": "pinterest",
+    "titleOriginal": "Pinterest",
+    "titleZh": "Pinterest 灵感收藏",
+    "descriptionZh": "图片灵感、家居、穿搭与主题收藏平台。",
+    "primaryCategory": "communication",
+    "tags": [
+      "图片",
+      "灵感",
+      "收藏"
+    ],
+    "levels": [],
+    "levelBasis": "unspecified",
+    "skills": [
+      "生活信息"
+    ],
+    "exams": [],
+    "formats": [
+      "网页",
+      "应用"
+    ],
+    "price": "free",
+    "access": "registration",
+    "languages": [
+      "德语"
+    ],
+    "sourceName": "Pinterest",
+    "url": "https://www.pinterest.de/",
+    "canonicalUrl": "https://www.pinterest.de/",
+    "rights": "link-only",
+    "status": "published",
+    "linkStatus": "ok",
+    "lastEditorialCheckedAt": "2026-10-05",
+    "providerId": "pinterest",
+    "providerType": "unspecified",
+    "mediaTypes": [
+      "网页",
+      "应用"
+    ],
+    "costNoteZh": "所链接公开信息或基础工具免费；第三方商品、会员或服务另计。",
+    "accessNoteZh": "办理或使用核心功能需要账户，部分服务还要求身份验证或所在地资格。",
+    "interfaceLanguages": [
+      "德语"
+    ],
+    "levelScope": "information",
+    "aliases": [],
+    "editorialStatus": "partial",
+    "evidence": [
+      {
+        "url": "https://www.pinterest.de/",
+        "fields": [
+          "name",
+          "purpose"
+        ],
+        "checkedAt": "2026-10-05"
+      }
+    ],
+    "lastLinkCheckedAt": "2026-10-05"
+  },
+  {
+    "id": "gmx",
+    "slug": "gmx",
+    "titleOriginal": "GMX",
+    "titleZh": "GMX 德国电子邮箱",
+    "descriptionZh": "德国电子邮箱、邮件管理与官方邮箱应用。",
+    "primaryCategory": "communication",
+    "tags": [
+      "邮箱",
+      "邮件",
+      "E-Mail"
+    ],
+    "levels": [],
+    "levelBasis": "unspecified",
+    "skills": [
+      "生活信息"
+    ],
+    "exams": [],
+    "formats": [
+      "网页",
+      "应用"
+    ],
+    "price": "freemium",
+    "access": "registration",
+    "languages": [
+      "德语"
+    ],
+    "sourceName": "GMX",
+    "url": "https://www.gmx.net/",
+    "canonicalUrl": "https://www.gmx.net/",
+    "rights": "link-only",
+    "status": "published",
+    "linkStatus": "ok",
+    "lastEditorialCheckedAt": "2026-10-05",
+    "providerId": "gmx",
+    "providerType": "unspecified",
+    "mediaTypes": [
+      "网页",
+      "应用"
+    ],
+    "costNoteZh": "查询入口、软件与实际服务可能采用不同收费方式，费用以原站为准。",
+    "accessNoteZh": "办理或使用核心功能需要账户，部分服务还要求身份验证或所在地资格。",
+    "interfaceLanguages": [
+      "德语"
+    ],
+    "levelScope": "information",
+    "aliases": [],
+    "editorialStatus": "partial",
+    "evidence": [
+      {
+        "url": "https://www.gmx.net/",
+        "fields": [
+          "name",
+          "purpose"
+        ],
+        "checkedAt": "2026-10-05"
+      }
+    ],
+    "lastLinkCheckedAt": "2026-10-05"
+  },
+  {
+    "id": "webde",
+    "slug": "webde",
+    "titleOriginal": "WEB.DE",
+    "titleZh": "WEB.DE 德国电子邮箱",
+    "descriptionZh": "德国电子邮箱、邮件管理与账户入口。",
+    "primaryCategory": "communication",
+    "tags": [
+      "邮箱",
+      "邮件",
+      "E-Mail"
+    ],
+    "levels": [],
+    "levelBasis": "unspecified",
+    "skills": [
+      "生活信息"
+    ],
+    "exams": [],
+    "formats": [
+      "网页",
+      "应用"
+    ],
+    "price": "freemium",
+    "access": "registration",
+    "languages": [
+      "德语"
+    ],
+    "sourceName": "WEB.DE",
+    "url": "https://web.de/",
+    "canonicalUrl": "https://web.de/",
+    "rights": "link-only",
+    "status": "published",
+    "linkStatus": "ok",
+    "lastEditorialCheckedAt": "2026-10-05",
+    "providerId": "webde",
+    "providerType": "unspecified",
+    "mediaTypes": [
+      "网页",
+      "应用"
+    ],
+    "costNoteZh": "查询入口、软件与实际服务可能采用不同收费方式，费用以原站为准。",
+    "accessNoteZh": "办理或使用核心功能需要账户，部分服务还要求身份验证或所在地资格。",
+    "interfaceLanguages": [
+      "德语"
+    ],
+    "levelScope": "information",
+    "aliases": [],
+    "editorialStatus": "partial",
+    "evidence": [
+      {
+        "url": "https://web.de/",
+        "fields": [
+          "name",
+          "purpose"
+        ],
+        "checkedAt": "2026-10-05"
+      }
+    ],
+    "lastLinkCheckedAt": "2026-10-05"
+  },
+  {
+    "id": "proton-mail",
+    "slug": "proton-mail",
+    "titleOriginal": "Proton Mail",
+    "titleZh": "Proton Mail 电子邮箱",
+    "descriptionZh": "提供邮件账户、网页邮箱和邮件应用的服务。",
+    "primaryCategory": "communication",
+    "tags": [
+      "邮箱",
+      "邮件",
+      "隐私"
+    ],
+    "levels": [],
+    "levelBasis": "unspecified",
+    "skills": [
+      "生活信息"
+    ],
+    "exams": [],
+    "formats": [
+      "网页",
+      "应用"
+    ],
+    "price": "freemium",
+    "access": "registration",
+    "languages": [
+      "德语"
+    ],
+    "sourceName": "Proton Mail",
+    "url": "https://proton.me/de/mail",
+    "canonicalUrl": "https://proton.me/de/mail",
+    "rights": "link-only",
+    "status": "published",
+    "linkStatus": "ok",
+    "lastEditorialCheckedAt": "2026-10-05",
+    "providerId": "proton-mail",
+    "providerType": "unspecified",
+    "mediaTypes": [
+      "网页",
+      "应用"
+    ],
+    "costNoteZh": "查询入口、软件与实际服务可能采用不同收费方式，费用以原站为准。",
+    "accessNoteZh": "办理或使用核心功能需要账户，部分服务还要求身份验证或所在地资格。",
+    "interfaceLanguages": [
+      "德语"
+    ],
+    "levelScope": "information",
+    "aliases": [],
+    "editorialStatus": "partial",
+    "evidence": [
+      {
+        "url": "https://proton.me/de/mail",
+        "fields": [
+          "name",
+          "purpose"
+        ],
+        "checkedAt": "2026-10-05"
+      }
+    ],
+    "lastLinkCheckedAt": "2026-10-05"
+  },
+  {
+    "id": "sparkasse",
+    "slug": "sparkasse",
+    "titleOriginal": "Sparkasse",
+    "titleZh": "Sparkasse 储蓄银行",
+    "descriptionZh": "德国地方储蓄银行、账户及银行应用信息入口。",
+    "primaryCategory": "finance",
+    "tags": [
+      "银行",
+      "账户",
+      "网银"
+    ],
+    "levels": [],
+    "levelBasis": "unspecified",
+    "skills": [
+      "生活信息"
+    ],
+    "exams": [],
+    "formats": [
+      "网页",
+      "应用"
+    ],
+    "price": "unknown",
+    "access": "open",
+    "languages": [
+      "德语"
+    ],
+    "sourceName": "Sparkasse",
+    "url": "https://www.sparkasse.de/",
+    "canonicalUrl": "https://www.sparkasse.de/",
+    "rights": "link-only",
+    "status": "published",
+    "linkStatus": "ok",
+    "lastEditorialCheckedAt": "2026-10-05",
+    "providerId": "sparkasse",
+    "providerType": "unspecified",
+    "mediaTypes": [
+      "网页",
+      "应用"
+    ],
+    "costNoteZh": "查询入口、软件与实际服务可能采用不同收费方式，费用以原站为准。",
+    "accessNoteZh": "公开信息可浏览；购买、预约、个人账户或应用功能可能需要登录。",
+    "interfaceLanguages": [
+      "德语"
+    ],
+    "levelScope": "information",
+    "aliases": [],
+    "editorialStatus": "partial",
+    "evidence": [
+      {
+        "url": "https://www.sparkasse.de/",
+        "fields": [
+          "name",
+          "purpose"
+        ],
+        "checkedAt": "2026-10-05"
+      }
+    ],
+    "lastLinkCheckedAt": "2026-10-05"
+  },
+  {
+    "id": "vr-banks",
+    "slug": "vr-banks",
+    "titleOriginal": "Volksbanken Raiffeisenbanken",
+    "titleZh": "德国合作银行 VR",
+    "descriptionZh": "德国地方合作银行、账户与数字银行服务入口。",
+    "primaryCategory": "finance",
+    "tags": [
+      "银行",
+      "账户",
+      "网银"
+    ],
+    "levels": [],
+    "levelBasis": "unspecified",
+    "skills": [
+      "生活信息"
+    ],
+    "exams": [],
+    "formats": [
+      "网页",
+      "应用"
+    ],
+    "price": "unknown",
+    "access": "open",
+    "languages": [
+      "德语"
+    ],
+    "sourceName": "Volksbanken Raiffeisenbanken",
+    "url": "https://www.vr.de/",
+    "canonicalUrl": "https://www.vr.de/",
+    "rights": "link-only",
+    "status": "published",
+    "linkStatus": "ok",
+    "lastEditorialCheckedAt": "2026-10-05",
+    "providerId": "vr-banks",
+    "providerType": "unspecified",
+    "mediaTypes": [
+      "网页",
+      "应用"
+    ],
+    "costNoteZh": "查询入口、软件与实际服务可能采用不同收费方式，费用以原站为准。",
+    "accessNoteZh": "公开信息可浏览；购买、预约、个人账户或应用功能可能需要登录。",
+    "interfaceLanguages": [
+      "德语"
+    ],
+    "levelScope": "information",
+    "aliases": [],
+    "editorialStatus": "partial",
+    "evidence": [
+      {
+        "url": "https://www.vr.de/",
+        "fields": [
+          "name",
+          "purpose"
+        ],
+        "checkedAt": "2026-10-05"
+      }
+    ],
+    "lastLinkCheckedAt": "2026-10-05"
+  },
+  {
+    "id": "allianz",
+    "slug": "allianz",
+    "titleOriginal": "Allianz",
+    "titleZh": "Allianz 德国保险",
+    "descriptionZh": "德国保险产品、客户服务与保险信息入口。",
+    "primaryCategory": "finance",
+    "tags": [
+      "保险",
+      "客户服务"
+    ],
+    "levels": [],
+    "levelBasis": "unspecified",
+    "skills": [
+      "生活信息"
+    ],
+    "exams": [],
+    "formats": [
+      "网页"
+    ],
+    "price": "unknown",
+    "access": "open",
+    "languages": [
+      "德语"
+    ],
+    "sourceName": "Allianz",
+    "url": "https://www.allianz.de/",
+    "canonicalUrl": "https://www.allianz.de/",
+    "rights": "link-only",
+    "status": "published",
+    "linkStatus": "restricted",
+    "lastEditorialCheckedAt": "2026-10-05",
+    "providerId": "allianz",
+    "providerType": "unspecified",
+    "mediaTypes": [
+      "网页"
+    ],
+    "costNoteZh": "查询入口、软件与实际服务可能采用不同收费方式，费用以原站为准。",
+    "accessNoteZh": "公开信息可浏览；购买、预约、个人账户或应用功能可能需要登录。",
+    "interfaceLanguages": [
+      "德语"
+    ],
+    "levelScope": "information",
+    "aliases": [],
+    "editorialStatus": "partial",
+    "evidence": [
+      {
+        "url": "https://www.allianz.de/",
+        "fields": [
+          "name",
+          "purpose"
+        ],
+        "checkedAt": "2026-10-05"
+      }
+    ],
+    "lastLinkCheckedAt": "2026-10-05"
+  },
+  {
+    "id": "huk-coburg",
+    "slug": "huk-coburg",
+    "titleOriginal": "HUK-COBURG",
+    "titleZh": "HUK-COBURG 保险",
+    "descriptionZh": "德国汽车与其他保险服务的官方入口。",
+    "primaryCategory": "finance",
+    "tags": [
+      "保险",
+      "汽车保险",
+      "客户服务"
+    ],
+    "levels": [],
+    "levelBasis": "unspecified",
+    "skills": [
+      "生活信息"
+    ],
+    "exams": [],
+    "formats": [
+      "网页"
+    ],
+    "price": "unknown",
+    "access": "open",
+    "languages": [
+      "德语"
+    ],
+    "sourceName": "HUK-COBURG",
+    "url": "https://www.huk.de/",
+    "canonicalUrl": "https://www.huk.de/",
+    "rights": "link-only",
+    "status": "published",
+    "linkStatus": "ok",
+    "lastEditorialCheckedAt": "2026-10-05",
+    "providerId": "huk-coburg",
+    "providerType": "unspecified",
+    "mediaTypes": [
+      "网页"
+    ],
+    "costNoteZh": "查询入口、软件与实际服务可能采用不同收费方式，费用以原站为准。",
+    "accessNoteZh": "公开信息可浏览；购买、预约、个人账户或应用功能可能需要登录。",
+    "interfaceLanguages": [
+      "德语"
+    ],
+    "levelScope": "information",
+    "aliases": [],
+    "editorialStatus": "partial",
+    "evidence": [
+      {
+        "url": "https://www.huk.de/",
+        "fields": [
+          "name",
+          "purpose"
+        ],
+        "checkedAt": "2026-10-05"
+      }
+    ],
+    "lastLinkCheckedAt": "2026-10-05"
+  },
+  {
+    "id": "taxfix",
+    "slug": "taxfix",
+    "titleOriginal": "Taxfix",
+    "titleZh": "Taxfix 报税服务",
+    "descriptionZh": "德国报税应用与相关服务；适用税务情形及费用以原站为准。",
+    "primaryCategory": "finance",
+    "tags": [
+      "报税",
+      "税务",
+      "Steuer"
+    ],
+    "levels": [],
+    "levelBasis": "unspecified",
+    "skills": [
+      "生活信息"
+    ],
+    "exams": [],
+    "formats": [
+      "网页",
+      "应用"
+    ],
+    "price": "unknown",
+    "access": "registration",
+    "languages": [
+      "德语"
+    ],
+    "sourceName": "Taxfix",
+    "url": "https://taxfix.de/",
+    "canonicalUrl": "https://taxfix.de/",
+    "rights": "link-only",
+    "status": "published",
+    "linkStatus": "ok",
+    "lastEditorialCheckedAt": "2026-10-05",
+    "providerId": "taxfix",
+    "providerType": "unspecified",
+    "mediaTypes": [
+      "网页",
+      "应用"
+    ],
+    "costNoteZh": "查询入口、软件与实际服务可能采用不同收费方式，费用以原站为准。",
+    "accessNoteZh": "办理或使用核心功能需要账户，部分服务还要求身份验证或所在地资格。",
+    "interfaceLanguages": [
+      "德语"
+    ],
+    "levelScope": "information",
+    "aliases": [],
+    "editorialStatus": "partial",
+    "evidence": [
+      {
+        "url": "https://taxfix.de/",
+        "fields": [
+          "name",
+          "purpose"
+        ],
+        "checkedAt": "2026-10-05"
+      }
+    ],
+    "lastLinkCheckedAt": "2026-10-05"
+  },
+  {
+    "id": "wiso-steuer",
+    "slug": "wiso-steuer",
+    "titleOriginal": "Buhl",
+    "titleZh": "WISO Steuer 报税工具",
+    "descriptionZh": "德国报税软件、网页与应用服务入口。",
+    "primaryCategory": "finance",
+    "tags": [
+      "报税",
+      "税务",
+      "Steuer"
+    ],
+    "levels": [],
+    "levelBasis": "unspecified",
+    "skills": [
+      "生活信息"
+    ],
+    "exams": [],
+    "formats": [
+      "网页",
+      "应用"
+    ],
+    "price": "paid",
+    "access": "registration",
+    "languages": [
+      "德语"
+    ],
+    "sourceName": "Buhl",
+    "url": "https://www.buhl.de/steuer/",
+    "canonicalUrl": "https://www.buhl.de/steuer",
+    "rights": "link-only",
+    "status": "published",
+    "linkStatus": "ok",
+    "lastEditorialCheckedAt": "2026-10-05",
+    "providerId": "wiso-steuer",
+    "providerType": "unspecified",
+    "mediaTypes": [
+      "网页",
+      "应用"
+    ],
+    "costNoteZh": "查询入口、软件与实际服务可能采用不同收费方式，费用以原站为准。",
+    "accessNoteZh": "办理或使用核心功能需要账户，部分服务还要求身份验证或所在地资格。",
+    "interfaceLanguages": [
+      "德语"
+    ],
+    "levelScope": "information",
+    "aliases": [],
+    "editorialStatus": "partial",
+    "evidence": [
+      {
+        "url": "https://www.buhl.de/steuer/",
+        "fields": [
+          "name",
+          "purpose"
+        ],
+        "checkedAt": "2026-10-05"
+      }
+    ],
+    "lastLinkCheckedAt": "2026-10-05"
+  },
+  {
+    "id": "bitwarden",
+    "slug": "bitwarden",
+    "titleOriginal": "Bitwarden",
+    "titleZh": "Bitwarden 密码管理",
+    "descriptionZh": "跨设备密码管理和官方客户端入口。",
+    "primaryCategory": "tools",
+    "tags": [
+      "密码管理",
+      "数字工具",
+      "安全"
+    ],
+    "levels": [],
+    "levelBasis": "unspecified",
+    "skills": [
+      "生活信息"
+    ],
+    "exams": [],
+    "formats": [
+      "网页",
+      "应用"
+    ],
+    "price": "freemium",
+    "access": "registration",
+    "languages": [
+      "德语"
+    ],
+    "sourceName": "Bitwarden",
+    "url": "https://bitwarden.com/",
+    "canonicalUrl": "https://bitwarden.com/",
+    "rights": "link-only",
+    "status": "published",
+    "linkStatus": "ok",
+    "lastEditorialCheckedAt": "2026-10-05",
+    "providerId": "bitwarden",
+    "providerType": "unspecified",
+    "mediaTypes": [
+      "网页",
+      "应用"
+    ],
+    "costNoteZh": "查询入口、软件与实际服务可能采用不同收费方式，费用以原站为准。",
+    "accessNoteZh": "办理或使用核心功能需要账户，部分服务还要求身份验证或所在地资格。",
+    "interfaceLanguages": [
+      "德语"
+    ],
+    "levelScope": "information",
+    "aliases": [],
+    "editorialStatus": "partial",
+    "evidence": [
+      {
+        "url": "https://bitwarden.com/",
+        "fields": [
+          "name",
+          "purpose"
+        ],
+        "checkedAt": "2026-10-05"
+      }
+    ],
+    "lastLinkCheckedAt": "2026-10-05"
+  },
+  {
+    "id": "notion",
+    "slug": "notion",
+    "titleOriginal": "Notion",
+    "titleZh": "Notion 笔记与协作",
+    "descriptionZh": "笔记、文档、任务与协作工作区。",
+    "primaryCategory": "tools",
+    "tags": [
+      "笔记",
+      "协作",
+      "任务"
+    ],
+    "levels": [],
+    "levelBasis": "unspecified",
+    "skills": [
+      "生活信息"
+    ],
+    "exams": [],
+    "formats": [
+      "网页",
+      "应用"
+    ],
+    "price": "freemium",
+    "access": "registration",
+    "languages": [
+      "德语"
+    ],
+    "sourceName": "Notion",
+    "url": "https://www.notion.com/de",
+    "canonicalUrl": "https://www.notion.com/de",
+    "rights": "link-only",
+    "status": "published",
+    "linkStatus": "ok",
+    "lastEditorialCheckedAt": "2026-10-05",
+    "providerId": "notion",
+    "providerType": "unspecified",
+    "mediaTypes": [
+      "网页",
+      "应用"
+    ],
+    "costNoteZh": "查询入口、软件与实际服务可能采用不同收费方式，费用以原站为准。",
+    "accessNoteZh": "办理或使用核心功能需要账户，部分服务还要求身份验证或所在地资格。",
+    "interfaceLanguages": [
+      "德语"
+    ],
+    "levelScope": "information",
+    "aliases": [],
+    "editorialStatus": "partial",
+    "evidence": [
+      {
+        "url": "https://www.notion.com/de",
+        "fields": [
+          "name",
+          "purpose"
+        ],
+        "checkedAt": "2026-10-05"
+      }
+    ],
+    "lastLinkCheckedAt": "2026-10-05"
+  },
+  {
+    "id": "libreoffice",
+    "slug": "libreoffice",
+    "titleOriginal": "The Document Foundation",
+    "titleZh": "LibreOffice 办公软件",
+    "descriptionZh": "开源文字处理、表格和演示软件的官方入口。",
+    "primaryCategory": "tools",
+    "tags": [
+      "办公",
+      "文档",
+      "表格",
+      "开源"
+    ],
+    "levels": [],
+    "levelBasis": "unspecified",
+    "skills": [
+      "生活信息"
+    ],
+    "exams": [],
+    "formats": [
+      "网页",
+      "应用"
+    ],
+    "price": "free",
+    "access": "open",
+    "languages": [
+      "德语"
+    ],
+    "sourceName": "The Document Foundation",
+    "url": "https://de.libreoffice.org/",
+    "canonicalUrl": "https://de.libreoffice.org/",
+    "rights": "link-only",
+    "status": "published",
+    "linkStatus": "ok",
+    "lastEditorialCheckedAt": "2026-10-05",
+    "providerId": "libreoffice",
+    "providerType": "unspecified",
+    "mediaTypes": [
+      "网页",
+      "应用"
+    ],
+    "costNoteZh": "所链接公开信息或基础工具免费；第三方商品、会员或服务另计。",
+    "accessNoteZh": "公开信息可浏览；购买、预约、个人账户或应用功能可能需要登录。",
+    "interfaceLanguages": [
+      "德语"
+    ],
+    "levelScope": "information",
+    "aliases": [],
+    "editorialStatus": "partial",
+    "evidence": [
+      {
+        "url": "https://de.libreoffice.org/",
+        "fields": [
+          "name",
+          "purpose"
+        ],
+        "checkedAt": "2026-10-05"
+      }
+    ],
+    "lastLinkCheckedAt": "2026-10-05"
+  },
+  {
+    "id": "nextcloud",
+    "slug": "nextcloud",
+    "titleOriginal": "Nextcloud",
+    "titleZh": "Nextcloud 文件与协作",
+    "descriptionZh": "文件同步和协作平台；需要自建实例或选择服务提供商。",
+    "primaryCategory": "tools",
+    "tags": [
+      "云盘",
+      "文件",
+      "协作",
+      "开源"
+    ],
+    "levels": [],
+    "levelBasis": "unspecified",
+    "skills": [
+      "生活信息"
+    ],
+    "exams": [],
+    "formats": [
+      "网页",
+      "应用"
+    ],
+    "price": "unknown",
+    "access": "open",
+    "languages": [
+      "德语"
+    ],
+    "sourceName": "Nextcloud",
+    "url": "https://nextcloud.com/",
+    "canonicalUrl": "https://nextcloud.com/",
+    "rights": "link-only",
+    "status": "published",
+    "linkStatus": "ok",
+    "lastEditorialCheckedAt": "2026-10-05",
+    "providerId": "nextcloud",
+    "providerType": "unspecified",
+    "mediaTypes": [
+      "网页",
+      "应用"
+    ],
+    "costNoteZh": "查询入口、软件与实际服务可能采用不同收费方式，费用以原站为准。",
+    "accessNoteZh": "公开信息可浏览；购买、预约、个人账户或应用功能可能需要登录。",
+    "interfaceLanguages": [
+      "德语"
+    ],
+    "levelScope": "information",
+    "aliases": [],
+    "editorialStatus": "partial",
+    "evidence": [
+      {
+        "url": "https://nextcloud.com/",
+        "fields": [
+          "name",
+          "purpose"
+        ],
+        "checkedAt": "2026-10-05"
+      }
+    ],
+    "lastLinkCheckedAt": "2026-10-05"
+  },
+  {
+    "id": "breitbandmessung",
+    "slug": "breitbandmessung",
+    "titleOriginal": "Bundesnetzagentur",
+    "titleZh": "官方宽带测速工具",
+    "descriptionZh": "德国联邦网络局的网络测速与桌面应用入口。",
+    "primaryCategory": "tools",
+    "tags": [
+      "测速",
+      "宽带",
+      "网络",
+      "官方"
+    ],
+    "levels": [],
+    "levelBasis": "unspecified",
+    "skills": [
+      "生活信息"
+    ],
+    "exams": [],
+    "formats": [
+      "网页",
+      "应用"
+    ],
+    "price": "free",
+    "access": "open",
+    "languages": [
+      "德语"
+    ],
+    "sourceName": "Bundesnetzagentur",
+    "url": "https://www.breitbandmessung.de/desktop-app",
+    "canonicalUrl": "https://www.breitbandmessung.de/desktop-app",
+    "rights": "link-only",
+    "status": "published",
+    "linkStatus": "ok",
+    "lastEditorialCheckedAt": "2026-10-05",
+    "providerId": "breitbandmessung",
+    "providerType": "unspecified",
+    "mediaTypes": [
+      "网页",
+      "应用"
+    ],
+    "costNoteZh": "所链接公开信息或基础工具免费；第三方商品、会员或服务另计。",
+    "accessNoteZh": "公开信息可浏览；购买、预约、个人账户或应用功能可能需要登录。",
+    "interfaceLanguages": [
+      "德语"
+    ],
+    "levelScope": "information",
+    "aliases": [],
+    "editorialStatus": "partial",
+    "evidence": [
+      {
+        "url": "https://www.breitbandmessung.de/desktop-app",
+        "fields": [
+          "name",
+          "purpose"
+        ],
+        "checkedAt": "2026-10-05"
+      }
+    ],
+    "lastLinkCheckedAt": "2026-10-05"
   }
 ]

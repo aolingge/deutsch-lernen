@@ -54,10 +54,11 @@ a:hover { color: var(--blue); }
 .directory-sidebar { position: sticky; top: 24px; min-width: 0; }
 .sidebar-head { display: flex; justify-content: space-between; padding: 4px 12px 15px; font-size: .75rem; font-weight: 650; border-bottom: 1px solid var(--line); margin-bottom: 10px; }
 .sidebar-index { color: var(--muted); font: .6875rem Consolas,monospace; letter-spacing: 1px; }
-.directory-sidebar nav { display: grid; gap: 4px; }
+.directory-sidebar nav { display: grid; gap: 4px; max-height: calc(100vh - 210px); overflow-y: auto; scrollbar-width: thin; }
 .category-expand { display: none; }
 .category-link { display: flex; align-items: center; gap: 10px; padding: 11px 12px; text-decoration: none; border: 1px solid transparent; border-radius: 9px; font-size: .8125rem; color: #4f6556; transition: background .15s; }
 .category-link:hover { background: #e7eddf; }
+.category-group-label { margin: 18px 12px 7px; font-size: .6875rem; color: var(--muted); letter-spacing: .04em; }
 .category-icon { width: 19px; flex-shrink: 0; color: #607760; }
 .category-icon .icon { width: 18px; height: 18px; }
 .category-link small { font: .6875rem Consolas,monospace; color: var(--muted); margin-left: auto; font-variant-numeric: tabular-nums; }
@@ -134,6 +135,9 @@ a:hover { color: var(--blue); }
 .resource-card[data-category=health] .source-mark { background: #e7f0ed; color: #3f705f; }
 .resource-card[data-category=shopping] .source-mark { background: #f3e9ed; color: #87536a; }
 .resource-card[data-category=travel] .source-mark { background: #e9edf5; color: #53688b; }
+.resource-card[data-category=postal] .source-mark { background: #f5eee0; color: #7d6035; }
+.resource-card[data-category=household] .source-mark { background: #ebefe5; color: #526744; }
+.resource-card[data-category=leisure] .source-mark { background: #e5efed; color: #416a64; }
 .source-mark { position: relative; overflow: hidden; }
 .source-mark img { width: 72%; height: 72%; object-fit: contain; }
 .source-mark img[hidden] { display: none; }
@@ -267,8 +271,9 @@ a:hover { color: var(--blue); }
   .directory-workspace { grid-template-columns: minmax(0,1fr); gap: 14px; }
   .directory-sidebar { position: static; }
   .sidebar-head, .sidebar-saved, .sidebar-note { display: none; }
+  .category-group-label { display: none; }
   .category-bar { display: flex; gap: 8px; align-items: start; min-width: 0; max-width: 100%; overflow: hidden; }
-  .directory-sidebar nav { display: flex; overflow-x: auto; gap: 8px; padding-block: 2px 6px; scrollbar-width: thin; flex: 1 1 auto; min-width: 0; max-width: 100%; }
+  .directory-sidebar nav { display: flex; overflow-x: auto; gap: 8px; padding-block: 2px 6px; scrollbar-width: thin; flex: 1 1 auto; min-width: 0; max-width: 100%; max-height: none; }
   .category-expand { display: grid; place-items: center; flex-shrink: 0; width: 44px; height: 44px; border: 1px solid var(--line); background: #fff; border-radius: 9px; color: var(--blue); margin-top: 2px; }
   .category-expand[aria-expanded=true] { background: var(--blue); color: #fff; }
   .categories-expanded nav { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); overflow: visible; }

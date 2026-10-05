@@ -26,6 +26,14 @@ const aliases = [
   ['电商', '购物网站', '网购', 'amazon', 'otto', 'zalando', 'online shopping'],
   ['银行', '支付', '转账', 'konto', 'bank', 'zahlung', 'überweisung', 'ueberweisung'],
   ['租车', '汽车', '共享汽车', 'mietwagen', 'carsharing', 'auto', 'fahrzeug'],
+  ['快递', '邮政', '包裹', 'paket', 'pakete', 'post', 'paketshop'],
+  ['电力', '电费', 'strom', '能源', 'energie'],
+  ['燃气', 'gas', '煤气'],
+  ['徒步', 'wandern', 'hiking', '户外'],
+  ['报税', '税务', 'steuer', 'steuererklärung', '税'],
+  ['地图', '导航', 'maps', 'karte', 'navigation'],
+  ['医保', '医疗保险', 'krankenkasse', 'krankenversicherung'],
+  ['应用', '软件', 'app', 'apps'],
 ];
 /** @param {string} word */
 const searchTerms = (word) => aliases.find((group) => group.includes(word)) || [word];

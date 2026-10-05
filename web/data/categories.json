@@ -61,8 +61,8 @@
   },
   {
     "id": "tools",
-    "name": "应用与工具",
-    "description": "词汇应用、阅读查词、字幕和复习工具。",
+    "name": "应用与数字工具",
+    "description": "学习应用、办公、笔记、密码管理与数字工具。",
     "accent": "工具"
   },
   {
@@ -148,5 +148,23 @@
     "name": "餐饮与配送",
     "description": "外卖、食品配送、餐厅搜索和食材服务。",
     "accent": "餐饮"
+  },
+  {
+    "id": "postal",
+    "name": "邮政与快递",
+    "description": "包裹追踪、寄件、邮政、包裹店与自助取件。",
+    "accent": "邮政"
+  },
+  {
+    "id": "household",
+    "name": "能源与家庭服务",
+    "description": "家庭电力、燃气、维修、装修与家庭服务。",
+    "accent": "家庭"
+  },
+  {
+    "id": "leisure",
+    "name": "休闲与运动",
+    "description": "活动门票、健身、徒步、骑行与户外活动。",
+    "accent": "休闲"
   }
 ]
