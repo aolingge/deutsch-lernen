@@ -24,6 +24,16 @@
       </div>
       <p id="bookCount" class="book-count" role="status"></p>
       <p id="readingTime" class="reading-time" role="status"></p>
+      <details class="study-guide" open>
+        <summary>20 分钟学习法</summary>
+        <ol>
+          <li>2 分钟预览，不查词</li>
+          <li>7 分钟静读德语原文</li>
+          <li>5 分钟朗读跟读</li>
+          <li>3 分钟显示译文核对</li>
+          <li>3 分钟用德语复述</li>
+        </ol>
+      </details>
       <nav id="bookList" class="book-list" aria-label="选择书籍"></nav>
       <div class="library-note"><span class="note-dot"></span><p>中文为机器译文，鼠标悬停时显示，手机可点击查看。遇到疑问请结合德语原文理解。</p></div>
     </aside>
@@ -33,6 +43,11 @@
         <div class="toolbar-group"><span class="toolbar-label">译文</span><div class="segmented" role="group" aria-label="选择译文显示方式"><button type="button" data-translation="hover" aria-pressed="true">悬停显示</button><button type="button" data-translation="show" aria-pressed="false">始终显示</button><button type="button" data-translation="hide" aria-pressed="false">隐藏</button></div></div>
         <div class="toolbar-group"><span class="toolbar-label">背景</span><div class="segmented" role="group" aria-label="选择背景"><button type="button" data-theme="paper" aria-pressed="true">米白</button><button type="button" data-theme="green" aria-pressed="false">浅绿</button><button type="button" data-theme="dark" aria-pressed="false">深色</button></div></div>
         <div class="toolbar-group font-controls"><span class="toolbar-label">字级</span><button class="round-button" type="button" data-font="down" aria-label="减小字级">−</button><span id="fontSizeLabel">20</span><button class="round-button" type="button" data-font="up" aria-label="增大字级">+</button></div>
+        <div class="speech-panel" aria-label="德语朗读">
+          <div class="speech-row"><span class="toolbar-label">朗读</span><button class="speech-button" id="speechPlay" type="button">朗读当前段</button><button class="speech-button" id="speechPause" type="button" disabled>暂停</button><button class="speech-button" id="speechStop" type="button" disabled>停止</button><label class="speech-check"><input id="speechAutoplay" type="checkbox">连续读</label></div>
+          <div class="speech-row speech-options"><label for="speechVoice">声音</label><select id="speechVoice" aria-label="选择德语声音"><option value="">系统默认德语</option></select><label for="speechRate">速度</label><select id="speechRate" aria-label="选择朗读速度"><option value="0.75">0.75×</option><option value="0.9">0.9×</option><option value="1" selected>1.0×</option><option value="1.1">1.1×</option><option value="1.25">1.25×</option></select></div>
+          <p id="speechStatus" class="speech-status" role="status" aria-live="polite">朗读准备中</p>
+        </div>
       </section>
       <div class="progress-row"><div class="progress-track"><span id="progressBar"></span></div><span id="progressText">0%</span></div>
       <section id="translationNotice" class="translation-notice" hidden></section>
