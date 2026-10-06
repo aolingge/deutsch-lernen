@@ -17,7 +17,7 @@
   const speechState = { token: 0, chunks: [], chunkIndex: 0, blockIndex: null, blockEndIndex: null, selectedBlockIndex: null, active: false, previewing: false, rangeActive: false, selectedText: "", rate: normalizedSpeechRate, voiceName: localStorage.getItem("gutenberg-speech-voice") || "", autoplay: localStorage.getItem("gutenberg-speech-autoplay") === "true", follow: localStorage.getItem("gutenberg-speech-follow") !== "false", scope: storedSpeechScope === "selection" || storedSpeechScope === "range" ? storedSpeechScope : "current", rangeFrom: Number.isFinite(storedSpeechFrom) ? Math.max(1, Math.round(storedSpeechFrom)) : 1, rangeTo: Number.isFinite(storedSpeechTo) ? Math.max(1, Math.round(storedSpeechTo)) : 1 };
   let currentBlockElement = null;
   const $ = (selector) => document.querySelector(selector);
-  const els = { list: $("#bookList"), title: $("#bookTitle"), meta: $("#bookMeta"), route: $("#bookRoute"), number: $("#bookNumber"), total: $("#bookTotal"), count: $("#bookCount"), readingTime: $("#readingTime"), libraryTitle: $("#libraryTitle"), level: $("#levelFilter"), length: $("#lengthFilter"), content: $("#readingContent"), notice: $("#translationNotice"), bar: $("#progressBar"), progress: $("#progressText"), size: $("#fontSizeLabel"), search: $("#bookSearch"), speechSelect: $("#speechSelect"), speechPrev: $("#speechPrev"), speechNext: $("#speechNext"), speechPlay: $("#speechPlay"), speechPause: $("#speechPause"), speechStop: $("#speechStop"), speechPreview: $("#speechPreview"), speechScope: $("#speechScope"), speechTarget: $("#speechTarget"), speechRange: $("#speechRange"), speechFrom: $("#speechFrom"), speechTo: $("#speechTo"), speechVoice: $("#speechVoice"), speechVoiceInfo: $("#speechVoiceInfo"), speechRate: $("#speechRate"), speechRateValue: $("#speechRateValue"), speechAutoplay: $("#speechAutoplay"), speechFollow: $("#speechFollow"), speechStatus: $("#speechStatus") };
+  const els = { list: $("#bookList"), title: $("#bookTitle"), meta: $("#bookMeta"), route: $("#bookRoute"), number: $("#bookNumber"), total: $("#bookTotal"), count: $("#bookCount"), readingTime: $("#readingTime"), libraryTitle: $("#libraryTitle"), level: $("#levelFilter"), length: $("#lengthFilter"), content: $("#readingContent"), notice: $("#translationNotice"), bar: $("#progressBar"), progress: $("#progressText"), size: $("#fontSizeLabel"), search: $("#bookSearch"), speechToggle: $("#speechToggle"), speechMenu: $("#speechOptions"), speechSelect: $("#speechSelect"), speechPrev: $("#speechPrev"), speechNext: $("#speechNext"), speechPlay: $("#speechPlay"), speechPause: $("#speechPause"), speechStop: $("#speechStop"), speechPreview: $("#speechPreview"), speechScope: $("#speechScope"), speechTarget: $("#speechTarget"), speechRange: $("#speechRange"), speechFrom: $("#speechFrom"), speechTo: $("#speechTo"), speechVoice: $("#speechVoice"), speechVoiceInfo: $("#speechVoiceInfo"), speechRate: $("#speechRate"), speechRateValue: $("#speechRateValue"), speechAutoplay: $("#speechAutoplay"), speechFollow: $("#speechFollow"), speechStatus: $("#speechStatus") };
   const clean = (value) => String(value || "").replace(/\s+/g, " ").trim();
   function currentBook() { return books.find((book) => book.id === state.bookId) || books[0]; }
   const totalWords = books.reduce((sum, book) => sum + Number(book.wordCount || 0), 0);
@@ -41,6 +41,7 @@
     const book = currentBook();
     if (!book) return;
     if (speechState.active) stopSpeech("已停止朗读");
+    setSpeechMenuOpen(false);
     speechState.selectedText = "";
     const savedBlockIndex = localStorage.getItem(selectedBlockKey());
     speechState.selectedBlockIndex = savedBlockIndex !== null && /^\d+$/.test(savedBlockIndex) ? Number(savedBlockIndex) : null;
@@ -92,6 +93,7 @@
   function restoreSelectedBlock() { const block = selectedReadingBlock(); if (block) block.classList.add("is-selected"); updateSpeechLabels(); }
   function updateCurrentBlock() { const block = currentReadingBlock(); if (!block) return null; const index = Number(block.dataset.index); if (currentBlockElement !== block) { currentBlockElement?.classList.remove("is-current"); block.classList.add("is-current"); currentBlockElement = block; } if (!speechState.active) speechState.blockIndex = index; return block; }
   function setSpeechStatus(message) { if (els.speechStatus) els.speechStatus.textContent = message; }
+  function setSpeechMenuOpen(open) { if (!els.speechToggle || !els.speechMenu) return; els.speechMenu.hidden = !open; els.speechToggle.setAttribute("aria-expanded", String(open)); els.speechToggle.classList.toggle("is-open", open); }
   function formatRate(rate) { return `${Number(rate).toFixed(2)}×`; }
   function speechChunks(text) {
     const sentences = String(text || "").replace(/\s+/g, " ").trim().match(/[^.!?。！？;；:：]+[.!?。！？;；:：]+|[^.!?。！？;；:：]+$/gu) || [];
@@ -122,6 +124,7 @@
   function updateSpeechButtons() {
     if (!els.speechPlay) return;
     els.speechPlay.disabled = !speechSupported; els.speechSelect.disabled = !speechSupported; els.speechPrev.disabled = !speechSupported; els.speechNext.disabled = !speechSupported; els.speechPause.disabled = !speechSupported || !speechState.active; els.speechStop.disabled = !speechSupported || (!speechState.active && !speechState.previewing); els.speechPreview.disabled = !speechSupported; els.speechPause.textContent = speechEngine && speechEngine.paused ? "继续" : "暂停"; els.speechVoice.disabled = !speechSupported; els.speechRate.disabled = !speechSupported; els.speechScope.disabled = !speechSupported; els.speechAutoplay.disabled = !speechSupported; els.speechFollow.disabled = !speechSupported; els.speechFrom.disabled = !speechSupported; els.speechTo.disabled = !speechSupported; updateSpeechLabels();
+    if (els.speechToggle) els.speechToggle.classList.toggle("is-speaking", speechState.active || speechState.previewing);
   }
   function finishSpeech(message) { speechState.active = false; speechState.previewing = false; speechState.rangeActive = false; speechState.blockEndIndex = null; speechState.chunks = []; speechState.chunkIndex = 0; updateSpeechButtons(); if (message) setSpeechStatus(message); }
   function stopSpeech(message = "已停止朗读") { speechState.token += 1; if (speechEngine) speechEngine.cancel(); finishSpeech(message); }
@@ -157,6 +160,9 @@
   document.querySelectorAll("[data-font]").forEach((button) => button.addEventListener("click", () => { state.fontSize = Math.min(30, Math.max(16, state.fontSize + (button.dataset.font === "up" ? 1 : -1))); save(); updateControls(); }));
   els.search.addEventListener("input", renderBooks);
   els.level.addEventListener("change", renderBooks); els.length.addEventListener("change", renderBooks);
+  els.speechToggle.addEventListener("click", () => { setSpeechMenuOpen(els.speechMenu.hidden); if (!els.speechMenu.hidden) setTimeout(() => els.speechSelect.focus(), 0); });
+  document.addEventListener("click", event => { if (!event.target.closest(".speech-panel")) setSpeechMenuOpen(false); });
+  document.addEventListener("keydown", event => { if (event.key === "Escape" && !els.speechMenu.hidden) { setSpeechMenuOpen(false); els.speechToggle.focus(); } });
   els.speechSelect.addEventListener("click", () => { const block = currentReadingBlock(); if (block) { selectReadingBlock(block); block.scrollIntoView({ block: "center", behavior: "smooth" }); } });
   els.speechPrev.addEventListener("click", () => moveSelectedBlock(-1));
   els.speechNext.addEventListener("click", () => moveSelectedBlock(1));

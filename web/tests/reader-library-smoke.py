@@ -67,6 +67,11 @@ with sync_playwright() as p:
         page.get_by_role('link', name='下载完整 TXT').click()
     assert event.value.suggested_filename.endswith('.txt')
     page.locator('[data-book="13"]').click()
+    assert '朗读' in page.locator('#speechToggle').inner_text()
+    assert page.locator('#speechOptions').is_hidden()
+    page.locator('#speechToggle').click()
+    assert page.locator('#speechToggle').get_attribute('aria-expanded') == 'true'
+    assert page.locator('#speechOptions').is_visible()
     page.locator('#speechVoice').select_option(label='Deutsch Teststimme · de-DE')
     page.locator('#speechScope').select_option('selection')
     page.locator('#speechRate').fill('0.9')
@@ -88,6 +93,7 @@ with sync_playwright() as p:
     assert not page.evaluate('speechSynthesis.paused')
     page.locator('#speechStop').click()
     assert page.locator('#speechStatus').inner_text() == '已停止朗读'
+    assert page.locator('#speechStatus').evaluate("e => e.offsetWidth === 1 && getComputedStyle(e).position === 'absolute'")
     assert page.evaluate('speechSynthesis.cancelCount') >= 1
     page.locator('#speechScope').select_option('current')
     page.locator('#speechSelect').click()
@@ -99,6 +105,9 @@ with sync_playwright() as p:
     preview = page.evaluate('({text:speechSynthesis.last.text,lang:speechSynthesis.last.lang,rate:speechSynthesis.last.rate,voice:speechSynthesis.last.voice?.name})')
     assert preview['text'].startswith('Guten Tag') and preview['lang'] == 'de-DE' and preview['rate'] == 1.35 and preview['voice'] == 'Deutsch Teststimme'
     page.locator('#speechStop').click()
+    page.locator('#speechToggle').click()
+    assert page.locator('#speechOptions').is_hidden()
+    page.locator('#speechToggle').click()
     assert page.locator('#speechFollow').is_checked()
     page.locator('#speechScope').select_option('range')
     page.locator('#speechFrom').fill('2')
