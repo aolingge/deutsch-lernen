@@ -2,7 +2,7 @@
 
 [简体中文](README.md) | English
 
-A Chinese-language directory of German language and Germany study/life resources. Resource titles open original websites directly. The current source catalog contains **407 source records across 28 categories**; the live public API currently exposes 330 entries across 28 categories after excluding owned/archive and unpublished records and hiding internal editorial fields.
+A Chinese-language directory of German language and Germany study/life resources. Resource titles open original websites directly. The current source catalog contains **436 source records across 28 categories**; the live public API currently exposes 359 entries across 28 categories after excluding owned/archive and unpublished records and hiding internal editorial fields.
 
 [Open the website](https://deutsch-lernen-resource-hub.pirostonelsonrx688.workers.dev/)
 

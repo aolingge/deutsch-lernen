@@ -6639,7 +6639,7 @@
       "电子书",
       "浏览器朗读"
     ],
-    "descriptionZh": "20 本德语读物，含初学者读本、格林与豪夫童话、旅行小说；新增 8 本仅德语原文，共约 56 小时学习阅读量（120 词/分钟估算）。支持悬停译文、本机浏览器朗读、连续读、书目筛选和完整 TXT 下载。",
+    "descriptionZh": "20 本德语读物，含初学者读本、格林与豪夫童话、旅行小说；新增 8 本仅德语原文，共约 161.4 小时原文阅读量（1,162,218 词、120 词/分钟估算）。支持悬停译文、本机浏览器朗读、连续读、书目筛选和完整 TXT 下载。",
     "howToUseZh": "先读初学者童话与故事第一册，再进入第二册和原著选读。支持等级和篇幅筛选、搜索、字号、主题及进度保存；可朗读当前段或选中文本，调节德语声音和速度。新增 8 本无中文译文，已有译文可按需显示。历史读本含旧拼写，等级为编辑估计。",
     "tags": [
       "本站工具",
@@ -6664,7 +6664,7 @@
     "readingDifficultyZh": "A2-B2 编辑估计；初学者读本先读，经典原著作为进阶选读",
     "editorialStatus": "partial",
     "editorialNoteZh": "原文来源与作品版权按 Project Gutenberg 及所在地区规则执行；中文译文为个人学习内容。",
-    "lastEditorialCheckedAt": "2026-10-04"
+    "lastEditorialCheckedAt": "2026-10-06"
   },
   {
     "id": "gutenberg-org-de",
@@ -14780,19 +14780,19 @@
       "德语"
     ],
     "sourceName": "OBI",
-    "url": "https://www.obi.de/baumarkt/",
-    "canonicalUrl": "https://www.obi.de/baumarkt/",
+    "url": "https://www.obi.de/markt",
+    "canonicalUrl": "https://www.obi.de/markt",
     "rights": "link-only",
     "status": "published",
     "linkStatus": "restricted",
-    "lastEditorialCheckedAt": "2026-10-04",
+    "lastEditorialCheckedAt": "2026-10-06",
     "providerId": "obi",
     "providerType": "commercial",
     "mediaTypes": [
       "网页"
     ],
     "costNoteZh": "信息入口免费；第三方交易、服务或订阅费用以原站为准。",
-    "accessNoteZh": "普通浏览器可访问；本轮自动 HTTP 检查返回 404，属于访问限制差异。",
+    "accessNoteZh": "普通浏览器可访问；自动探测可能因 OBI 的 CloudFront 访问策略返回 404，商品、门店和服务条件以原站为准。",
     "interfaceLanguages": [
       "德语"
     ],
@@ -14801,15 +14801,15 @@
     "editorialStatus": "partial",
     "evidence": [
       {
-        "url": "https://www.obi.de/baumarkt/",
+        "url": "https://www.obi.de/markt",
         "fields": [
           "purpose"
         ],
-        "checkedAt": "2026-10-04"
+        "checkedAt": "2026-10-06"
       }
     ],
     "howToUseZh": "打开原站，按页面提示查找相关信息；费用、资格和可用性以原站为准。",
-    "lastLinkCheckedAt": "2026-10-05"
+    "lastLinkCheckedAt": "2026-10-06"
   },
   {
     "id": "hornbach",
@@ -21622,5 +21622,396 @@
       }
     ],
     "lastLinkCheckedAt": "2026-10-05"
+  },
+  {
+    "id": "dw-kurz-leicht",
+    "slug": "dw-kurz-leicht",
+    "titleOriginal": "Kurz und leicht",
+    "titleZh": "DW Kurz und leicht 简易短文",
+    "descriptionZh": "德国之声面向初级学习者的简短德语内容入口，适合先听后读，再用练习巩固词汇和理解。",
+    "howToUseZh": "先听一遍，再看文本；每篇只记录 3 个高价值词，最后用 2 句德语复述。",
+    "primaryCategory": "reading",
+    "tags": [
+      "Deutsche Welle",
+      "A2",
+      "短文",
+      "音频"
+    ],
+    "levels": [
+      "A2"
+    ],
+    "levelBasis": "editorial",
+    "skills": [
+      "阅读",
+      "听力",
+      "词汇"
+    ],
+    "exams": [],
+    "formats": [
+      "文章",
+      "音频",
+      "练习"
+    ],
+    "price": "free",
+    "access": "open",
+    "languages": [
+      "德语"
+    ],
+    "sourceName": "Deutsche Welle",
+    "url": "https://learngerman.dw.com/de/kurz-und-leicht/s-69137519",
+    "canonicalUrl": "https://learngerman.dw.com/de/kurz-und-leicht/s-69137519",
+    "rights": "link-only",
+    "status": "published",
+    "linkStatus": "ok",
+    "lastEditorialCheckedAt": "2026-10-06",
+    "readingDifficultyZh": "DW 的初级短文入口；A2 是本站编辑建议，不是考试等级认证",
+    "accessNoteZh": "内容由原站提供，本站只保留外链，不复制文章或音频。",
+    "evidence": [
+      {
+        "url": "https://learngerman.dw.com/de/kurz-und-leicht/s-69137519",
+        "fields": [
+          "name",
+          "purpose",
+          "levels",
+          "media"
+        ],
+        "checkedAt": "2026-10-06"
+      }
+    ]
+  },
+  {
+    "id": "german-net-reading",
+    "slug": "german-net-reading",
+    "titleOriginal": "German.net Reading",
+    "titleZh": "German.net 分级阅读与听读练习",
+    "descriptionZh": "按 CEFR A1–C2 列出德语短文；免费条目可配合朗读、MP3、工作纸和理解题，其他内容可能需要 Premium。",
+    "howToUseZh": "先筛选标为 free 的 A2–B2 短文；听一遍后读文本，再完成理解题。",
+    "primaryCategory": "reading",
+    "tags": [
+      "CEFR",
+      "免费子集",
+      "MP3",
+      "理解题"
+    ],
+    "levels": [
+      "A1",
+      "A2",
+      "B1",
+      "B2",
+      "C1",
+      "C2"
+    ],
+    "levelBasis": "official",
+    "skills": [
+      "阅读",
+      "听力",
+      "词汇"
+    ],
+    "exams": [],
+    "formats": [
+      "文章",
+      "音频",
+      "PDF",
+      "练习"
+    ],
+    "price": "freemium",
+    "access": "open",
+    "languages": [
+      "德语",
+      "英语"
+    ],
+    "sourceName": "German.net",
+    "url": "https://german.net/reading/",
+    "canonicalUrl": "https://german.net/reading/",
+    "rights": "link-only",
+    "status": "published",
+    "linkStatus": "ok",
+    "lastEditorialCheckedAt": "2026-10-06",
+    "readingDifficultyZh": "原站按 CEFR 列表；免费文章数量和 Premium 范围会变化",
+    "accessNoteZh": "免费标记的文章可直接使用；注册、Premium 和下载条件以原站为准。",
+    "costNoteZh": "免费子集与付费内容并存。",
+    "evidence": [
+      {
+        "url": "https://german.net/reading/",
+        "fields": [
+          "name",
+          "purpose",
+          "price",
+          "access",
+          "levels",
+          "media"
+        ],
+        "checkedAt": "2026-10-06"
+      },
+      {
+        "url": "https://german.net/reading/mueritzsee/",
+        "fields": [
+          "purpose",
+          "levels",
+          "media"
+        ],
+        "checkedAt": "2026-10-06"
+      }
+    ]
+  },
+  {
+    "id": "schubert-reading-exercises",
+    "slug": "schubert-reading-exercises",
+    "titleOriginal": "Online-Aufgaben Deutsch als Fremdsprache",
+    "titleZh": "Schubert 出版社分级阅读练习",
+    "descriptionZh": "Schubert 出版社按 A1–C2 整理的免费在线练习，包含文本、听力和理解任务，可脱离教材单独练习。",
+    "howToUseZh": "从 A2 页面开始，每次完成一篇文本和一项听力；页面材料只在原站使用。",
+    "primaryCategory": "reading",
+    "tags": [
+      "Schubert-Verlag",
+      "A2–B2",
+      "文本练习",
+      "听力"
+    ],
+    "levels": [
+      "A1",
+      "A2",
+      "B1",
+      "B2",
+      "C1",
+      "C2"
+    ],
+    "levelBasis": "official",
+    "skills": [
+      "阅读",
+      "听力",
+      "语法",
+      "词汇"
+    ],
+    "exams": [],
+    "formats": [
+      "网页",
+      "文章",
+      "音频",
+      "练习"
+    ],
+    "price": "free",
+    "access": "open",
+    "languages": [
+      "德语"
+    ],
+    "sourceName": "SCHUBERT-Verlag",
+    "url": "https://www.schubert-verlag.de/aufgaben/uebungen_a2/a2_uebungen_index.htm",
+    "canonicalUrl": "https://www.schubert-verlag.de/aufgaben/uebungen_a2/a2_uebungen_index.htm",
+    "rights": "link-only",
+    "status": "published",
+    "linkStatus": "ok",
+    "lastEditorialCheckedAt": "2026-10-06",
+    "readingDifficultyZh": "目录提供 A1–C2 分级；本站建议先从 A2/B1 文本练习开始",
+    "accessNoteZh": "在线练习公开可用；材料复制和商业使用受出版社条款限制。",
+    "evidence": [
+      {
+        "url": "https://www.schubert-verlag.de/aufgaben/",
+        "fields": [
+          "name",
+          "purpose",
+          "levels",
+          "media"
+        ],
+        "checkedAt": "2026-10-06"
+      },
+      {
+        "url": "https://www.schubert-verlag.de/aufgaben/uebungen_a2/a2_uebungen_index.htm",
+        "fields": [
+          "purpose",
+          "levels",
+          "media"
+        ],
+        "checkedAt": "2026-10-06"
+      }
+    ]
+  },
+  {
+    "id": "apoll-zeitung",
+    "slug": "apoll-zeitung",
+    "titleOriginal": "APOLL-Zeitung",
+    "titleZh": "APOLL 简易德语报纸",
+    "descriptionZh": "vhs-Lernportal 的易读报纸，每期用短消息介绍政治、体育和社会话题，并保留 PDF 归档。",
+    "howToUseZh": "每次读 2–3 条短消息，圈出不懂的词，再用一句德语说出消息要点。",
+    "primaryCategory": "reading",
+    "tags": [
+      "简易新闻",
+      "短文",
+      "PDF",
+      "vhs-Lernportal"
+    ],
+    "levels": [
+      "A2",
+      "B1"
+    ],
+    "levelBasis": "editorial",
+    "skills": [
+      "阅读",
+      "词汇",
+      "口语"
+    ],
+    "exams": [],
+    "formats": [
+      "新闻",
+      "PDF",
+      "文章"
+    ],
+    "price": "free",
+    "access": "open",
+    "languages": [
+      "德语"
+    ],
+    "sourceName": "vhs-Lernportal",
+    "url": "https://schreiben.vhs-lernportal.de/wws/apoll-zeitung.php",
+    "canonicalUrl": "https://schreiben.vhs-lernportal.de/wws/apoll-zeitung.php",
+    "rights": "link-only",
+    "status": "published",
+    "linkStatus": "ok",
+    "lastEditorialCheckedAt": "2026-10-06",
+    "readingDifficultyZh": "原站未给 CEFR；“易读短文”对应 A2–B1 是本站编辑估计",
+    "accessNoteZh": "PDF 和归档由原站维护，本站只提供入口，不下载或镜像报纸。",
+    "evidence": [
+      {
+        "url": "https://schreiben.vhs-lernportal.de/wws/apoll-zeitung.php",
+        "fields": [
+          "name",
+          "purpose",
+          "price",
+          "access",
+          "media"
+        ],
+        "checkedAt": "2026-10-06"
+      }
+    ]
+  },
+  {
+    "id": "wikisource-de",
+    "slug": "wikisource-de",
+    "titleOriginal": "Deutsche Wikisource",
+    "titleZh": "德语维基文库",
+    "descriptionZh": "德语自由文献库，收录公版或自由许可的文学、历史文献、扫描和转录；适合挑选短篇和童话进阶阅读。",
+    "howToUseZh": "只挑选标注清楚的短篇或童话；先读转录文本，遇到旧拼写再查看扫描和注释。",
+    "primaryCategory": "reading",
+    "tags": [
+      "自由文献",
+      "公版",
+      "童话",
+      "原文"
+    ],
+    "levels": [
+      "B1",
+      "B2",
+      "C1"
+    ],
+    "levelBasis": "editorial",
+    "skills": [
+      "阅读",
+      "词汇"
+    ],
+    "exams": [],
+    "formats": [
+      "网页",
+      "电子书",
+      "图书"
+    ],
+    "price": "free",
+    "access": "open",
+    "languages": [
+      "德语"
+    ],
+    "sourceName": "Wikisource",
+    "url": "https://de.wikisource.org/wiki/Hauptseite",
+    "canonicalUrl": "https://de.wikisource.org/wiki/Hauptseite",
+    "rights": "link-only",
+    "status": "published",
+    "linkStatus": "ok",
+    "lastEditorialCheckedAt": "2026-10-06",
+    "readingDifficultyZh": "整体无 CEFR 分级；旧德语和历史文献较多，本站建议 B1 以上选篇阅读",
+    "accessNoteZh": "每篇作品的许可和版权说明不同；只在原站查看和下载，先核对具体页面。",
+    "evidence": [
+      {
+        "url": "https://de.wikisource.org/wiki/Hauptseite",
+        "fields": [
+          "name",
+          "purpose",
+          "media"
+        ],
+        "checkedAt": "2026-10-06"
+      },
+      {
+        "url": "https://de.wikisource.org/wiki/Wikisource:%C3%9Cber_Wikisource",
+        "fields": [
+          "purpose",
+          "purpose"
+        ],
+        "checkedAt": "2026-10-06"
+      }
+    ]
+  },
+  {
+    "id": "librivox-german-winnetou",
+    "slug": "librivox-german-winnetou",
+    "titleOriginal": "Winnetou I (German)",
+    "titleZh": "LibriVox 德语有声书：Winnetou I",
+    "descriptionZh": "德语长篇有声书示例，提供章节 MP3、在线文本和整书时长，适合把外部朗读与本站原文阅读配对。",
+    "howToUseZh": "先在本站读一小段，再打开对应章节听读；不要下载整包或把音频重新上传到本站。",
+    "primaryCategory": "reading",
+    "tags": [
+      "有声书",
+      "听读",
+      "长篇小说",
+      "LibriVox"
+    ],
+    "levels": [
+      "B1",
+      "B2",
+      "C1"
+    ],
+    "levelBasis": "editorial",
+    "skills": [
+      "阅读",
+      "听力"
+    ],
+    "exams": [],
+    "formats": [
+      "音频",
+      "电子书",
+      "图书"
+    ],
+    "price": "free",
+    "access": "open",
+    "languages": [
+      "德语"
+    ],
+    "sourceName": "LibriVox",
+    "url": "https://librivox.org/winnetou-i-by-karl-may/",
+    "canonicalUrl": "https://librivox.org/winnetou-i-by-karl-may/",
+    "rights": "link-only",
+    "status": "published",
+    "linkStatus": "ok",
+    "lastEditorialCheckedAt": "2026-10-06",
+    "readingDifficultyZh": "原站无 CEFR；长篇历史小说按本站编辑估计更适合 B1 进阶至 C1",
+    "accessNoteZh": "LibriVox 版权说明以美国公版为基础；在所在地使用前需自行核对版权。",
+    "costNoteZh": "免费外链；志愿者录音质量和语速可能不同。",
+    "evidence": [
+      {
+        "url": "https://librivox.org/winnetou-i-by-karl-may/",
+        "fields": [
+          "name",
+          "purpose",
+          "price",
+          "access",
+          "media"
+        ],
+        "checkedAt": "2026-10-06"
+      },
+      {
+        "url": "https://librivox.org/pages/public-domain/",
+        "fields": [
+          "purpose"
+        ],
+        "checkedAt": "2026-10-06"
+      }
+    ]
   }
 ]
