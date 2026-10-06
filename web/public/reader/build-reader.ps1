@@ -1,7 +1,8 @@
 param(
   [string]$PdfDirectory = (Split-Path -Parent $PSScriptRoot),
   [string]$OutputDirectory = (Join-Path $PSScriptRoot 'data'),
-  [string]$ManifestPath = (Join-Path $PSScriptRoot 'books-manifest.json')
+  [string]$ManifestPath = (Join-Path $PSScriptRoot 'books-manifest.json'),
+  [switch]$ReuseExistingPdfData
 )
 
 $ErrorActionPreference = 'Stop'
@@ -64,20 +65,53 @@ function Read-BookParagraphs([string]$path, [string]$displayTitle) {
   return @($paragraphs | Where-Object { $_.Length -gt 2 -and $_ -notmatch '\*{3}' -and $_ -notmatch 'START\s+OF\s+THE\s+PROJECT\s+GUTENBERG' })
 }
 
-function Read-PlainTextParagraphs([string]$path) {
+function Read-PlainTextParagraphs([string]$path, $book) {
   $raw = Get-Content -LiteralPath $path -Raw -Encoding UTF8
+  $raw = $raw -replace "`r`n", "`n"
   $start = [regex]::Match($raw, '(?ms)^\*{3}\s+START OF (?:THE )?PROJECT GUTENBERG EBOOK.*?$')
   if ($start.Success) { $raw = $raw.Substring($start.Index + $start.Length) }
   $end = [regex]::Match($raw, '(?ms)^\*{3}\s+END OF (?:THE )?PROJECT GUTENBERG EBOOK.*?$')
   if ($end.Success) { $raw = $raw.Substring(0, $end.Index) }
+  $backMatter = switch ([string]$book.id) {
+    '15' { '(?m)^\s*Inhalt\s*$' }
+    '19' { '(?m)^Druck von Breitkopf' }
+    '20' { '(?m)^Inhalt\.' }
+    default { $null }
+  }
+  if ($backMatter) {
+    $end = [regex]::Match($raw, $backMatter)
+    if (-not $end.Success) { throw "Back matter marker missing: $($book.id)" }
+    $raw = $raw.Substring(0, $end.Index)
+  }
+  if ($book.contentStart) {
+    $start = [regex]::Match($raw, [string]$book.contentStart)
+    if (-not $start.Success) { throw "Content start missing: $($book.id)" }
+    $raw = $raw.Substring($start.Index)
+  }
+  if ($book.contentEnd) {
+    $end = [regex]::Match($raw, [string]$book.contentEnd)
+    if (-not $end.Success) { throw "Content end missing: $($book.id)" }
+    $raw = $raw.Substring(0, $end.Index)
+  }
   $blocks = $raw -split '(?m)(?:\r?\n){2,}'
   return @($blocks | ForEach-Object {
     $value = ($_ -replace '\r?\n', ' ' -replace '\s+', ' ').Trim()
-    if ($value.Length -gt 2 -and $value -notmatch '^\[Illustration' -and $value -notmatch '^Project Gutenberg') { $value }
+    if ($value.Length -gt 2 -and $value -notmatch '^\[Illustration' -and $value -notmatch '^Project Gutenberg' -and $value -notmatch '^The Project Gutenberg' -and $value -notmatch '^This eBook is for the use' -and $value -notmatch '^You may copy it' -and $value -notmatch '^Language:\s+German' -and $value -notmatch '^Release date:' -and $value -notmatch '^Credits:' -and $value -notmatch '^Other information and formats:' -and $value -notmatch '^\[ ?Transcrib') { $value }
   })
 }
 
+$existing = @{}
+if ($ReuseExistingPdfData) {
+  $oldPath = Join-Path $OutputDirectory 'books.js'
+  $oldJson = (Get-Content $oldPath -Raw -Encoding UTF8) -replace '^\s*window.GUTENBERG_BOOKS\s*=\s*', '' -replace ';\s*$', ''
+  foreach ($oldBook in ($oldJson | ConvertFrom-Json)) { $existing[$oldBook.id] = $oldBook }
+}
 $result = foreach ($book in @($books | ForEach-Object { $_ })) {
+  if ($ReuseExistingPdfData -and -not $book.sourceFile) {
+    if (-not $existing.ContainsKey($book.id) -or $existing[$book.id].paragraphs.Count -eq 0) { throw "Existing PDF content missing: $($book.id)" }
+    $existing[$book.id]
+    continue
+  }
   $sourcePath = if ($book.sourceFile) { Join-Path $PSScriptRoot ([string]$book.sourceFile) } else { Join-Path $PdfDirectory ([string]$book.pdf) }
   if (-not (Test-Path -LiteralPath $sourcePath)) { throw "Source not found for book $($book.id): $sourcePath" }
   $translationPath = if (-not [string]::IsNullOrWhiteSpace([string]$book.translation)) { Join-Path $PdfDirectory ([string]$book.translation) } else { $null }
@@ -89,7 +123,8 @@ $result = foreach ($book in @($books | ForEach-Object { $_ })) {
       if ($pair.de -and $pair.zh) { $translationMap[(Normalize $pair.de)] = [string]$pair.zh }
     }
   }
-  $paragraphs = if ($book.sourceFile) { Read-PlainTextParagraphs $sourcePath } else { Read-BookParagraphs $sourcePath $book.germanTitle }
+  $paragraphs = if ($book.sourceFile) { Read-PlainTextParagraphs $sourcePath $book } else { Read-BookParagraphs $sourcePath $book.germanTitle }
+  if ($paragraphs.Count -eq 0) { throw "Empty book: $($book.id)" }
   $content = foreach ($paragraph in $paragraphs) {
     [ordered]@{
       de = $paragraph
@@ -106,6 +141,7 @@ $result = foreach ($book in @($books | ForEach-Object { $_ })) {
     source = if ($book.sourceFile) { $book.sourceFile } else { $book.pdf }
     sourceUrl = $book.sourceUrl
     licenseUrl = $book.licenseUrl
+    downloadUrl = if ($book.downloadUrl) { $book.sourceFile } else { $null }
     difficulty = $book.difficulty
     length = $book.length
     genre = $book.genre
@@ -115,6 +151,14 @@ $result = foreach ($book in @($books | ForEach-Object { $_ })) {
   }
 }
 
+foreach ($item in $result) {
+  $wordCount = 0
+  foreach ($paragraph in $item.paragraphs) {
+    $wordCount += [regex]::Matches([string]$paragraph.de, "\p{L}+(?:[-'’]\p{L}+)*").Count
+  }
+  if ($item -is [System.Collections.IDictionary]) { $item.wordCount = $wordCount }
+  else { $item | Add-Member -NotePropertyName wordCount -NotePropertyValue $wordCount -Force }
+}
 $json = @($result) | ConvertTo-Json -Depth 6 -Compress
 Set-Content -LiteralPath (Join-Path $OutputDirectory 'books.js') -Encoding UTF8 -Value ('window.GUTENBERG_BOOKS = ' + $json + ';')
 $summary = $result | ForEach-Object { '{0}: {1} paragraphs, {2}' -f $_.id, $_.paragraphs.Count, $_.translationStatus }

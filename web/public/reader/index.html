@@ -16,18 +16,19 @@
   </header>
   <div class="app-shell" id="top">
     <aside class="library" aria-label="书库">
-      <div class="library-heading"><p class="eyebrow">LESEPLAN</p><h1>十二本德语原著</h1><p>按 A2 到 B2 分级：先读短篇，再进入中长篇。每天一小段，先读原文，再按需要查看中文。</p></div>
+      <div class="library-heading"><p class="eyebrow">LESEPLAN</p><h1 id="libraryTitle">德语阅读库</h1><p>按 A2 到 B2 分级：先读短篇，再进入中长篇。每天一小段，先读原文，再按需要查看中文。</p></div>
       <label class="search-label" for="bookSearch">查找书名</label><input id="bookSearch" type="search" placeholder="输入书名或作者" autocomplete="off">
       <div class="library-filters" aria-label="筛选书目">
         <label for="levelFilter">等级</label><select id="levelFilter"><option value="">全部等级</option><option value="A2">A2</option><option value="B1">B1</option><option value="B1+">B1+</option><option value="B2">B2</option></select>
         <label for="lengthFilter">篇幅</label><select id="lengthFilter"><option value="">全部篇幅</option><option value="短篇">短篇</option><option value="中篇">中篇</option><option value="长篇">长篇</option></select>
       </div>
       <p id="bookCount" class="book-count" role="status"></p>
+      <p id="readingTime" class="reading-time" role="status"></p>
       <nav id="bookList" class="book-list" aria-label="选择书籍"></nav>
       <div class="library-note"><span class="note-dot"></span><p>中文为机器译文，鼠标悬停时显示，手机可点击查看。遇到疑问请结合德语原文理解。</p></div>
     </aside>
     <main class="reader" id="readerMain">
-      <section class="reader-hero"><div><p class="eyebrow">PROJECT GUTENBERG · ORIGINAL TEXT</p><h2 id="bookTitle">加载中</h2><p id="bookMeta" class="book-meta"></p><p id="bookRoute" class="book-route"></p></div><div class="hero-index"><span id="bookNumber">01</span><small id="bookTotal">/ 12</small></div></section>
+      <section class="reader-hero"><div><p class="eyebrow">PROJECT GUTENBERG · ORIGINAL TEXT</p><h2 id="bookTitle">加载中</h2><p id="bookMeta" class="book-meta"></p><p id="bookRoute" class="book-route"></p></div><div class="hero-index"><span id="bookNumber">01</span><small id="bookTotal">/ 00</small></div></section>
       <section class="reader-toolbar" aria-label="阅读设置">
         <div class="toolbar-group"><span class="toolbar-label">译文</span><div class="segmented" role="group" aria-label="选择译文显示方式"><button type="button" data-translation="hover" aria-pressed="true">悬停显示</button><button type="button" data-translation="show" aria-pressed="false">始终显示</button><button type="button" data-translation="hide" aria-pressed="false">隐藏</button></div></div>
         <div class="toolbar-group"><span class="toolbar-label">背景</span><div class="segmented" role="group" aria-label="选择背景"><button type="button" data-theme="paper" aria-pressed="true">米白</button><button type="button" data-theme="green" aria-pressed="false">浅绿</button><button type="button" data-theme="dark" aria-pressed="false">深色</button></div></div>
@@ -35,6 +36,7 @@
       </section>
       <div class="progress-row"><div class="progress-track"><span id="progressBar"></span></div><span id="progressText">0%</span></div>
       <section id="translationNotice" class="translation-notice" hidden></section>
+      <nav id="bookSources" class="book-sources" aria-label="原文来源与下载"></nav>
       <article id="readingContent" class="reading-content" aria-live="polite"></article>
       <footer class="reader-footer"><span>Original text from Project Gutenberg</span><span>个人学习译文 · 仅供学习 · 进度保存在当前浏览器</span></footer>
     </main>
