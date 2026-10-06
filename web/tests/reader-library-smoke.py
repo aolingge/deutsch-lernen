@@ -68,7 +68,8 @@ with sync_playwright() as p:
     assert event.value.suggested_filename.endswith('.txt')
     page.locator('[data-book="13"]').click()
     page.locator('#speechVoice').select_option(label='Deutsch Teststimme · de-DE')
-    page.locator('#speechRate').select_option('0.9')
+    page.locator('#speechScope').select_option('selection')
+    page.locator('#speechRate').fill('0.9')
     page.evaluate("""() => {
       const text = document.querySelector('.german').firstChild;
       const range = document.createRange();
@@ -88,6 +89,24 @@ with sync_playwright() as p:
     page.locator('#speechStop').click()
     assert page.locator('#speechStatus').inner_text() == '已停止朗读'
     assert page.evaluate('speechSynthesis.cancelCount') >= 1
+    page.locator('#speechScope').select_option('current')
+    page.locator('#speechSelect').click()
+    assert page.locator('.reading-block.is-selected').count() == 1
+    page.locator('#speechRate').fill('1.35')
+    assert page.locator('#speechRateValue').inner_text() == '1.35×'
+    page.locator('#speechPreview').click()
+    page.wait_for_function('speechSynthesis.records.length === 2')
+    preview = page.evaluate('({text:speechSynthesis.last.text,lang:speechSynthesis.last.lang,rate:speechSynthesis.last.rate,voice:speechSynthesis.last.voice?.name})')
+    assert preview['text'].startswith('Guten Tag') and preview['lang'] == 'de-DE' and preview['rate'] == 1.35 and preview['voice'] == 'Deutsch Teststimme'
+    page.locator('#speechStop').click()
+    assert page.locator('#speechFollow').is_checked()
+    page.locator('#speechScope').select_option('range')
+    page.locator('#speechFrom').fill('2')
+    page.locator('#speechTo').fill('3')
+    page.locator('#speechPlay').click()
+    page.wait_for_function('speechSynthesis.records.length === 3')
+    assert '第 2–3 段' in page.locator('#speechStatus').inner_text()
+    page.locator('#speechStop').click()
     page.locator('[data-theme="dark"]').click()
     page.reload(wait_until='load')
     assert page.locator('body').evaluate('e => e.classList.contains("theme-dark")')
