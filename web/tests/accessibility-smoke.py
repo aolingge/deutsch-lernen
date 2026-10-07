@@ -13,6 +13,8 @@ def main():
         axe=ROOT/'node_modules/axe-core/axe.min.js'
         for path in ('/','/resources/','/favorites/','/sources/','/exams/','/news/','/privacy/','/resource/anki/','/admin/','/reader/'):
             ready(page,base,path) if path != '/reader/' else page.goto(base.rstrip('/')+path,wait_until='load')
+            if path == '/reader/':
+                page.wait_for_function("document.querySelector('#readingContent').dataset.ready==='true'")
             if page.locator('[data-advanced-filters]').count():
                 page.locator('[data-advanced-filters]').evaluate('el=>el.open=true')
             page.add_script_tag(path=str(axe))
@@ -22,6 +24,7 @@ def main():
             if path=='/reader/':
                 # Inspect revealed translations in all supported themes too.
                 page.locator('[data-translation=show]').click()
+                page.wait_for_function("document.querySelector('#readingContent').dataset.ready==='true'")
                 for theme in ('paper','green','dark'):
                     page.locator(f'[data-theme={theme}]').click()
                     # The book cards animate their background for 200 ms.

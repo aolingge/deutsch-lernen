@@ -33,14 +33,16 @@ with sync_playwright() as p:
     response = page.goto(args.base.rstrip('/') + '/reader/?book=13', wait_until='load')
     assert response.status == 200
     page.wait_for_function('window.GUTENBERG_BOOKS?.length === 20')
+    page.wait_for_function("document.querySelector('#readingContent').dataset.ready==='true'")
     assert page.locator('.book-card').count() == 20
     assert page.locator('#libraryTitle').inner_text() == '20 本德语读物'
     assert '161.4' in page.locator('#readingTime').inner_text()
-    books = page.evaluate('window.GUTENBERG_BOOKS.map(b => ({id:b.id, paragraphs:b.paragraphs.length, difficulty:b.difficulty}))')
+    books = page.evaluate('window.GUTENBERG_BOOKS.map(b => ({id:b.id, paragraphs:b.paragraphCount || b.paragraphs.length, difficulty:b.difficulty}))')
     records = page.evaluate("fetch('/reader/data/source-records.json').then(async response => { if (!response.ok) throw new Error('Source records unavailable'); return response.json(); })")
     checked = []
     for book in books[12:]:
         page.locator(f'[data-book="{book["id"]}"]').click()
+        page.wait_for_function("(book) => document.querySelector('#bookNumber').textContent===book.id && document.querySelector('#readingContent').dataset.ready==='true'", arg=book)
         assert page.locator('.german').count() == book['paragraphs']
         assert page.locator('.translation').count() == 0
         link = page.get_by_role('link', name='下载完整 TXT')
@@ -118,6 +120,7 @@ with sync_playwright() as p:
     page.locator('#speechStop').click()
     page.locator('[data-theme="dark"]').click()
     page.reload(wait_until='load')
+    page.wait_for_function("document.querySelector('#readingContent').dataset.ready==='true'")
     assert page.locator('body').evaluate('e => e.classList.contains("theme-dark")')
     assert '13' in page.locator('#bookNumber').inner_text()
     page.locator('[data-theme="paper"]').click()

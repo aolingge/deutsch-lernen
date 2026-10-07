@@ -6,7 +6,7 @@ const canonicalPath = ['/', '/resources/', '/study/'].includes(path) ? '/' : pat
 const canonical = new URL(canonicalPath, Astro.site);
 const privatePage = ['/favorites/', '/my-study/', '/admin/', '/resource/view/'].includes(path);
 const catalog = ['/', '/resources/', '/study/'].includes(path) || path.startsWith('/resource/') || path.startsWith('/levels/');
-const collectionPage = ['/', '/resources/', '/study/', '/exams/', '/news/', '/sources/', '/reading/'].includes(path) || path.startsWith('/levels/');
+const collectionPage = ['/', '/resources/', '/study/', '/exams/', '/news/', '/sources/', '/reading/', '/apps/'].includes(path) || path.startsWith('/levels/');
 const structuredData = JSON.stringify({
   '@context': 'https://schema.org',
   '@type': collectionPage ? 'CollectionPage' : 'WebPage',

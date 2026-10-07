@@ -1,20 +1,23 @@
 // @ts-nocheck
 (function () {
   "use strict";
+  function storageUnavailable() { const note = document.querySelector(".reader-footer span:last-child"); if (note) note.textContent = "浏览器存储不可用：当前进度与设置无法保存，请先备份生词。"; }
+  function readSetting(key) { try { return localStorage.getItem(key); } catch { storageUnavailable(); return null; } }
+  function writeSetting(key, value) { try { localStorage.setItem(key, value); return true; } catch { storageUnavailable(); return false; } }
   const books = window.GUTENBERG_BOOKS || [];
-  books.forEach(book => { book.translatedParagraphs = book.paragraphs.filter(item => String(item.zh || '').trim()).length; });
-  const savedTranslation = localStorage.getItem("gutenberg-translation-v2");
+  books.forEach(book => { book.translatedParagraphs = book.paragraphs ? book.paragraphs.filter(item => String(item.zh || '').trim()).length : book.translatedParagraphs || 0; });
+  const savedTranslation = readSetting("gutenberg-translation-v2");
   const requestedBook = new URLSearchParams(window.location.search).get("book");
-  const initialBook = books.find(book => book.id === requestedBook)?.id || books.find(book => book.id === localStorage.getItem("gutenberg-book"))?.id || books[0]?.id;
-  const state = { bookId: initialBook, translation: savedTranslation === "hide" || savedTranslation === "show" ? savedTranslation : "hover", theme: localStorage.getItem("gutenberg-theme") || "paper", fontSize: Number(localStorage.getItem("gutenberg-font-size") || 20) };
+  const initialBook = books.find(book => book.id === requestedBook)?.id || books.find(book => book.id === readSetting("gutenberg-book"))?.id || books[0]?.id;
+  const state = { bookId: initialBook, translation: savedTranslation === "hide" || savedTranslation === "show" ? savedTranslation : "hover", theme: readSetting("gutenberg-theme") || "paper", fontSize: Number(readSetting("gutenberg-font-size") || 20) };
   const speechEngine = "speechSynthesis" in window ? window.speechSynthesis : null;
   const speechSupported = Boolean(speechEngine && "SpeechSynthesisUtterance" in window);
-  const storedSpeechRate = Number(localStorage.getItem("gutenberg-speech-rate") || 1);
+  const storedSpeechRate = Number(readSetting("gutenberg-speech-rate") || 1);
   const normalizedSpeechRate = Number.isFinite(storedSpeechRate) ? Math.min(1.8, Math.max(0.5, Math.round(storedSpeechRate * 20) / 20)) : 1;
-  const storedSpeechScope = localStorage.getItem("gutenberg-speech-scope");
-  const storedSpeechFrom = Number(localStorage.getItem("gutenberg-speech-from") || 1);
-  const storedSpeechTo = Number(localStorage.getItem("gutenberg-speech-to") || 1);
-  const speechState = { token: 0, chunks: [], chunkIndex: 0, blockIndex: null, blockEndIndex: null, selectedBlockIndex: null, active: false, previewing: false, rangeActive: false, selectedText: "", rate: normalizedSpeechRate, voiceName: localStorage.getItem("gutenberg-speech-voice") || "", autoplay: localStorage.getItem("gutenberg-speech-autoplay") === "true", follow: localStorage.getItem("gutenberg-speech-follow") !== "false", scope: storedSpeechScope === "selection" || storedSpeechScope === "range" ? storedSpeechScope : "current", rangeFrom: Number.isFinite(storedSpeechFrom) ? Math.max(1, Math.round(storedSpeechFrom)) : 1, rangeTo: Number.isFinite(storedSpeechTo) ? Math.max(1, Math.round(storedSpeechTo)) : 1 };
+  const storedSpeechScope = readSetting("gutenberg-speech-scope");
+  const storedSpeechFrom = Number(readSetting("gutenberg-speech-from") || 1);
+  const storedSpeechTo = Number(readSetting("gutenberg-speech-to") || 1);
+  const speechState = { token: 0, chunks: [], chunkIndex: 0, blockIndex: null, blockEndIndex: null, selectedBlockIndex: null, active: false, previewing: false, rangeActive: false, selectedText: "", rate: normalizedSpeechRate, voiceName: readSetting("gutenberg-speech-voice") || "", autoplay: readSetting("gutenberg-speech-autoplay") === "true", follow: readSetting("gutenberg-speech-follow") !== "false", scope: storedSpeechScope === "selection" || storedSpeechScope === "range" ? storedSpeechScope : "current", rangeFrom: Number.isFinite(storedSpeechFrom) ? Math.max(1, Math.round(storedSpeechFrom)) : 1, rangeTo: Number.isFinite(storedSpeechTo) ? Math.max(1, Math.round(storedSpeechTo)) : 1 };
   let currentBlockElement = null;
   const $ = (selector) => document.querySelector(selector);
   const els = { list: $("#bookList"), title: $("#bookTitle"), meta: $("#bookMeta"), route: $("#bookRoute"), number: $("#bookNumber"), total: $("#bookTotal"), count: $("#bookCount"), readingTime: $("#readingTime"), libraryTitle: $("#libraryTitle"), level: $("#levelFilter"), length: $("#lengthFilter"), content: $("#readingContent"), notice: $("#translationNotice"), bar: $("#progressBar"), progress: $("#progressText"), size: $("#fontSizeLabel"), search: $("#bookSearch"), speechToggle: $("#speechToggle"), speechMenu: $("#speechOptions"), speechSelect: $("#speechSelect"), speechPrev: $("#speechPrev"), speechNext: $("#speechNext"), speechPlay: $("#speechPlay"), speechPause: $("#speechPause"), speechStop: $("#speechStop"), speechPreview: $("#speechPreview"), speechScope: $("#speechScope"), speechTarget: $("#speechTarget"), speechRange: $("#speechRange"), speechFrom: $("#speechFrom"), speechTo: $("#speechTo"), speechVoice: $("#speechVoice"), speechVoiceInfo: $("#speechVoiceInfo"), speechRate: $("#speechRate"), speechRateValue: $("#speechRateValue"), speechAutoplay: $("#speechAutoplay"), speechFollow: $("#speechFollow"), speechStatus: $("#speechStatus") };
@@ -23,10 +26,10 @@
   const totalWords = books.reduce((sum, book) => sum + Number(book.wordCount || 0), 0);
   const totalHours = totalWords / 120 / 60;
   function readingTimeText() { return `原文 ${totalWords.toLocaleString("zh-CN")} 词 · 约 ${totalHours.toFixed(1)} 小时（120 词/分钟）`; }
-  function save() { localStorage.setItem("gutenberg-book", state.bookId); localStorage.setItem("gutenberg-translation-v2", state.translation); localStorage.setItem("gutenberg-theme", state.theme); localStorage.setItem("gutenberg-font-size", String(state.fontSize)); localStorage.setItem("gutenberg-speech-rate", String(speechState.rate)); localStorage.setItem("gutenberg-speech-voice", speechState.voiceName); localStorage.setItem("gutenberg-speech-autoplay", String(speechState.autoplay)); localStorage.setItem("gutenberg-speech-follow", String(speechState.follow)); localStorage.setItem("gutenberg-speech-scope", speechState.scope); localStorage.setItem("gutenberg-speech-from", String(speechState.rangeFrom)); localStorage.setItem("gutenberg-speech-to", String(speechState.rangeTo)); const url = new URL(window.location.href); url.searchParams.set("book", state.bookId); history.replaceState(null, "", url); }
+  function save() { writeSetting("gutenberg-book", state.bookId); writeSetting("gutenberg-translation-v2", state.translation); writeSetting("gutenberg-theme", state.theme); writeSetting("gutenberg-font-size", String(state.fontSize)); writeSetting("gutenberg-speech-rate", String(speechState.rate)); writeSetting("gutenberg-speech-voice", speechState.voiceName); writeSetting("gutenberg-speech-autoplay", String(speechState.autoplay)); writeSetting("gutenberg-speech-follow", String(speechState.follow)); writeSetting("gutenberg-speech-scope", speechState.scope); writeSetting("gutenberg-speech-from", String(speechState.rangeFrom)); writeSetting("gutenberg-speech-to", String(speechState.rangeTo)); const url = new URL(window.location.href); if (url.searchParams.get("book") && url.searchParams.get("book") !== state.bookId) url.hash = ""; url.searchParams.set("book", state.bookId); history.replaceState(null, "", url); }
   function positionKey() { return `gutenberg-position-${state.bookId}`; }
   function selectedBlockKey() { return `gutenberg-reading-block-${state.bookId}`; }
-  function savePosition() { localStorage.setItem(positionKey(), String(Math.round(window.scrollY))); }
+  function savePosition() { if (els.content.dataset.ready === "false") return; writeSetting(positionKey(), String(Math.round(window.scrollY))); }
   function renderBooks() {
     const query = clean(els.search.value).toLowerCase();
     const level = els.level.value; const length = els.length.value;
@@ -34,16 +37,32 @@
     els.count.textContent = `${filtered.length} / ${books.length} 本书 · 推荐先读短篇，再进入中长篇`;
     els.readingTime.textContent = readingTimeText();
     els.libraryTitle.textContent = `${books.length} 本德语读物`;
-    els.list.innerHTML = filtered.map((book) => `<button class="book-card ${book.id === state.bookId ? "active" : ""}" type="button" data-book="${book.id}"><span class="book-card-top"><span>${book.id} · ${book.difficulty || book.level}</span><span>${book.length || ""}</span></span><h2>${book.title}</h2><p>${book.germanTitle} · ${book.author}</p><span class="book-status ${book.translationStatus === "not-imported" ? "pending" : ""}">${book.translatedParagraphs ? `已导入 ${book.translatedParagraphs} / ${book.paragraphs.length} 段译文` : "德语原文"} · 约 ${(book.wordCount / 7200).toFixed(1)} 小时</span></button>`).join("") || `<p class="library-note">没有匹配的书目。</p>`;
+    els.list.innerHTML = filtered.map((book) => `<button class="book-card ${book.id === state.bookId ? "active" : ""}" type="button" data-book="${book.id}"><span class="book-card-top"><span>${book.id} · ${book.difficulty || book.level}</span><span>${book.length || ""}</span></span><h2>${book.title}</h2><p>${book.germanTitle} · ${book.author}</p><span class="book-status ${book.translationStatus === "not-imported" ? "pending" : ""}">${book.translatedParagraphs ? `已导入 ${book.translatedParagraphs} / ${book.paragraphCount || book.paragraphs.length} 段译文` : "德语原文"} · 约 ${(book.wordCount / 7200).toFixed(1)} 小时</span></button>`).join("") || `<p class="library-note">没有匹配的书目。</p>`;
     els.list.querySelectorAll("[data-book]").forEach((button) => button.addEventListener("click", () => { stopSpeech("已停止朗读"); savePosition(); clearTimeout(scrollSaveTimer); state.bookId = button.dataset.book; save(); renderBooks(); renderReader(); }));
   }
-  function renderReader() {
+  const bookRequests = new Map();
+  let readerRequest = 0;
+  async function loadBook(book) {
+    if (book.paragraphs) return;
+    if (!bookRequests.has(book.id)) {
+      const request = fetch(book.dataUrl).then(async response => {
+        if (!response.ok) throw new Error("Book unavailable");
+        const data = await response.json();
+        if (data.id !== book.id || !Array.isArray(data.paragraphs) || data.paragraphs.length !== book.paragraphCount || data.paragraphs.some(p => typeof p.de !== "string" || (p.zh != null && typeof p.zh !== "string"))) throw new Error("Invalid book data");
+        book.paragraphs = data.paragraphs;
+      }).catch(error => { bookRequests.delete(book.id); throw error; });
+      bookRequests.set(book.id, request);
+    }
+    await bookRequests.get(book.id);
+  }
+  async function renderReader() {
     const book = currentBook();
     if (!book) return;
+    const request = ++readerRequest;
     if (speechState.active) stopSpeech("已停止朗读");
     setSpeechMenuOpen(false);
     speechState.selectedText = "";
-    const savedBlockIndex = localStorage.getItem(selectedBlockKey());
+    const savedBlockIndex = readSetting(selectedBlockKey());
     speechState.selectedBlockIndex = savedBlockIndex !== null && /^\d+$/.test(savedBlockIndex) ? Number(savedBlockIndex) : null;
     currentBlockElement = null;
     els.title.textContent = book.title;
@@ -52,7 +71,7 @@
     els.number.textContent = book.id;
     els.total.textContent = `/ ${books.length}`;
     els.notice.hidden = false;
-    els.notice.textContent = book.translatedParagraphs ? `已导入 ${book.translatedParagraphs} / ${book.paragraphs.length} 段译文。中文为机器翻译，遇到疑问请结合德语原文理解；数字、网址等内容可能仅保留原文。` : "德语原文 · 无中文译文。等级为编辑估计，历史原著可能含旧拼写。阅读时长按每分钟 120 词估算。";
+    els.notice.textContent = book.translatedParagraphs ? `已导入 ${book.translatedParagraphs} / ${book.paragraphCount || book.paragraphs.length} 段译文。中文为机器翻译，遇到疑问请结合德语原文理解；数字、网址等内容可能仅保留原文。` : "德语原文 · 无中文译文。等级为编辑估计，历史原著可能含旧拼写。阅读时长按每分钟 120 词估算。";
     const sourceLinks = $("#bookSources");
     sourceLinks.replaceChildren();
     [["原文来源", book.sourceUrl], ["许可说明", book.licenseUrl], ["下载完整 TXT", book.downloadUrl]].forEach(([label, href]) => {
@@ -64,19 +83,35 @@
       else { link.target = "_blank"; link.rel = "noopener noreferrer"; }
       sourceLinks.append(link);
     });
+    els.content.dataset.ready = "false";
+    els.content.setAttribute("aria-busy", "true");
+    els.content.textContent = "正在加载这本书的德语原文…";
+    updateControls(); updateSpeechButtons();
+    try { await loadBook(book); }
+    catch {
+      if (request !== readerRequest) return;
+      els.content.setAttribute("aria-busy", "false");
+      els.content.textContent = "本书暂时无法加载，可以重试或下载完整 TXT。 ";
+      const retry = document.createElement("button"); retry.type = "button"; retry.className = "speech-button"; retry.textContent = "重新加载";
+      retry.addEventListener("click", renderReader); els.content.append(retry); return;
+    }
+    if (request !== readerRequest || state.bookId !== book.id) return;
     els.content.dataset.translationMode = state.translation;
-    els.content.innerHTML = book.paragraphs.map((item, index) => { const text = clean(item.de); const translation = clean(item.zh); const heading = text.length < 100 && (/^(Kapitel|Erstes|Zweites|Drittes|Viertes|Fünftes|Sechstes|Siebentes|Achtes|Neuntes|Zehntes|Inhalt|Personen|Gestalten|Teil|Das Ende)/i.test(text) || /^[A-ZÄÖÜ][^.!?]{2,70}$/.test(text)); const longTranslation = translation.length > 92 || text.length > 150; return `<section class="reading-block ${heading ? "is-heading" : ""}" data-index="${index}" data-reading-block="true" tabindex="0" aria-label="第 ${index + 1} 段${heading ? "，标题" : "，选择朗读"}"><p class="german">${escapeHtml(text)}</p>${translation ? `<span class="translation ${longTranslation ? "long" : "short"}" tabindex="0" role="button" aria-label="悬停或点击显示译文" ${state.translation === "hide" ? "hidden" : ""}>${escapeHtml(translation)}</span>` : ""}</section>`; }).join("");
+    els.content.innerHTML = book.paragraphs.map((item, index) => { const text = clean(item.de); const translation = clean(item.zh); const heading = text.length < 100 && (/^(Kapitel|Erstes|Zweites|Drittes|Viertes|Fünftes|Sechstes|Siebentes|Achtes|Neuntes|Zehntes|Inhalt|Personen|Gestalten|Teil|Das Ende)/i.test(text) || /^[A-ZÄÖÜ][^.!?]{2,70}$/.test(text)); const longTranslation = translation.length > 92 || text.length > 150; return `<section id="paragraph-${index + 1}" class="reading-block ${heading ? "is-heading" : ""}" data-index="${index}" data-reading-block="true" tabindex="0" aria-label="第 ${index + 1} 段${heading ? "，标题" : "，选择朗读"}"><p class="german">${escapeHtml(text)}</p>${translation ? `<span class="translation ${longTranslation ? "long" : "short"}" tabindex="0" role="button" aria-label="悬停或点击显示译文" ${state.translation === "hide" ? "hidden" : ""}>${escapeHtml(translation)}</span>` : ""}</section>`; }).join("");
     els.content.querySelectorAll(".translation").forEach((translation) => {
       translation.setAttribute("aria-expanded", String(state.translation === "show"));
       if (state.translation === "show") { translation.removeAttribute("role"); translation.removeAttribute("tabindex"); translation.removeAttribute("aria-label"); translation.removeAttribute("aria-expanded"); }
       translation.addEventListener("click", () => { if (state.translation === "hover") { const expanded=translation.classList.toggle("is-revealed"); translation.setAttribute("aria-expanded",String(expanded)); } });
       translation.addEventListener("keydown", event => { if(state.translation === "hover" && (event.key === "Enter" || event.key === " ")) { event.preventDefault(); translation.click(); } });
     });
+    els.content.dataset.ready = "true";
+    els.content.setAttribute("aria-busy", "false");
     restoreSelectedBlock();
+    updateSpeechButtons();
     updateControls();
     updateProgress();
-    const savedPosition = Number(localStorage.getItem(positionKey()) || 0);
-    requestAnimationFrame(() => { window.scrollTo({ top: savedPosition, behavior: "instant" }); updateProgress(); updateCurrentBlock(); });
+    const savedPosition = Number(readSetting(positionKey()) || 0);
+    requestAnimationFrame(() => { const target = /^#paragraph-\d+$/.test(location.hash) ? document.getElementById(location.hash.slice(1)) : null; if (target) target.scrollIntoView({ block: "center" }); else window.scrollTo({ top: savedPosition, behavior: "instant" }); updateProgress(); updateCurrentBlock(); });
   }
   function escapeHtml(value) { return value.replace(/[&<>"']/g, (char) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[char])); }
   function updateControls() {
@@ -89,7 +124,7 @@
   function updateProgress() { const max = document.documentElement.scrollHeight - window.innerHeight; const percent = max > 0 ? Math.round((window.scrollY / max) * 100) : 0; els.bar.style.width = `${percent}%`; els.progress.textContent = `${percent}%`; }
   function currentReadingBlock() { const x = Math.floor(window.innerWidth * 0.62); const toolbarBottom = document.querySelector(".reader-toolbar")?.getBoundingClientRect().bottom || 0; const y = Math.min(Math.max(150, toolbarBottom + 20), window.innerHeight - 1); const block = document.elementFromPoint(x, y)?.closest(".reading-block"); return block && els.content.contains(block) ? block : currentBlockElement?.isConnected ? currentBlockElement : els.content.querySelector(".reading-block"); }
   function selectedReadingBlock() { if (!Number.isInteger(speechState.selectedBlockIndex)) return null; return els.content.querySelector(`[data-reading-block][data-index="${speechState.selectedBlockIndex}"]`); }
-  function selectReadingBlock(block, announce = true) { if (!block || !els.content.contains(block)) return null; els.content.querySelectorAll(".reading-block.is-selected").forEach(item => item.classList.remove("is-selected")); block.classList.add("is-selected"); speechState.selectedBlockIndex = Number(block.dataset.index); localStorage.setItem(selectedBlockKey(), String(speechState.selectedBlockIndex)); updateSpeechLabels(); if (announce) setSpeechStatus(`已选择第 ${speechState.selectedBlockIndex + 1} 段；可朗读当前段或勾选连续读`); return block; }
+  function selectReadingBlock(block, announce = true) { if (!block || !els.content.contains(block)) return null; els.content.querySelectorAll(".reading-block.is-selected").forEach(item => item.classList.remove("is-selected")); block.classList.add("is-selected"); speechState.selectedBlockIndex = Number(block.dataset.index); writeSetting(selectedBlockKey(), String(speechState.selectedBlockIndex)); updateSpeechLabels(); if (announce) setSpeechStatus(`已选择第 ${speechState.selectedBlockIndex + 1} 段；可朗读当前段或勾选连续读`); return block; }
   function restoreSelectedBlock() { const block = selectedReadingBlock(); if (block) block.classList.add("is-selected"); updateSpeechLabels(); }
   function updateCurrentBlock() { const block = currentReadingBlock(); if (!block) return null; const index = Number(block.dataset.index); if (currentBlockElement !== block) { currentBlockElement?.classList.remove("is-current"); block.classList.add("is-current"); currentBlockElement = block; } if (!speechState.active) speechState.blockIndex = index; return block; }
   function setSpeechStatus(message) { if (els.speechStatus) els.speechStatus.textContent = message; }
@@ -123,7 +158,8 @@
   function updateSpeechLabels() { if (!els.speechPlay || !els.speechScope) return; const scope = els.speechScope.value; els.speechPlay.textContent = scope === "selection" ? "朗读选中文本" : scope === "range" ? "朗读指定范围" : els.speechAutoplay.checked ? "连续朗读" : "朗读当前段"; if (els.speechRange) els.speechRange.hidden = scope !== "range"; if (els.speechTarget) { const count = els.content.querySelectorAll(".reading-block").length; els.speechTarget.textContent = scope === "range" ? `共 ${count} 段` : speechState.selectedBlockIndex !== null ? `已选第 ${speechState.selectedBlockIndex + 1} 段` : "点击正文段落选择起点"; } }
   function updateSpeechButtons() {
     if (!els.speechPlay) return;
-    els.speechPlay.disabled = !speechSupported; els.speechSelect.disabled = !speechSupported; els.speechPrev.disabled = !speechSupported; els.speechNext.disabled = !speechSupported; els.speechPause.disabled = !speechSupported || !speechState.active; els.speechStop.disabled = !speechSupported || (!speechState.active && !speechState.previewing); els.speechPreview.disabled = !speechSupported; els.speechPause.textContent = speechEngine && speechEngine.paused ? "继续" : "暂停"; els.speechVoice.disabled = !speechSupported; els.speechRate.disabled = !speechSupported; els.speechScope.disabled = !speechSupported; els.speechAutoplay.disabled = !speechSupported; els.speechFollow.disabled = !speechSupported; els.speechFrom.disabled = !speechSupported; els.speechTo.disabled = !speechSupported; updateSpeechLabels();
+    const readingReady = els.content.dataset.ready === "true";
+    els.speechPlay.disabled = !speechSupported || !readingReady; els.speechSelect.disabled = !speechSupported || !readingReady; els.speechPrev.disabled = !speechSupported || !readingReady; els.speechNext.disabled = !speechSupported || !readingReady; els.speechPause.disabled = !speechSupported || !speechState.active; els.speechStop.disabled = !speechSupported || (!speechState.active && !speechState.previewing); els.speechPreview.disabled = !speechSupported; els.speechPause.textContent = speechEngine && speechEngine.paused ? "继续" : "暂停"; els.speechVoice.disabled = !speechSupported; els.speechRate.disabled = !speechSupported; els.speechScope.disabled = !speechSupported; els.speechAutoplay.disabled = !speechSupported; els.speechFollow.disabled = !speechSupported; els.speechFrom.disabled = !speechSupported; els.speechTo.disabled = !speechSupported; updateSpeechLabels();
     if (els.speechToggle) els.speechToggle.classList.toggle("is-speaking", speechState.active || speechState.previewing);
   }
   function finishSpeech(message) { speechState.active = false; speechState.previewing = false; speechState.rangeActive = false; speechState.blockEndIndex = null; speechState.chunks = []; speechState.chunkIndex = 0; updateSpeechButtons(); if (message) setSpeechStatus(message); }

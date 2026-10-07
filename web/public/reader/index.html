@@ -8,6 +8,7 @@
   <title>Gutenberg 德语原著沉浸式阅读 · Deutschland Ressourcen</title>
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="hover.css">
+  <link rel="stylesheet" href="vocabulary.css">
 </head>
 <body>
   <header class="topbar">
@@ -52,9 +53,10 @@
             <div class="speech-row speech-options"><label for="speechScope">范围</label><select id="speechScope" aria-label="选择朗读范围"><option value="current">当前段落</option><option value="selection">选中文本</option><option value="range">指定段落范围</option></select><span id="speechTarget" class="speech-target"></span><div id="speechRange" class="speech-range" hidden><label for="speechFrom">从第</label><input id="speechFrom" type="number" min="1" step="1" value="1" aria-label="开始段落"><label for="speechTo">段至第</label><input id="speechTo" type="number" min="1" step="1" value="1" aria-label="结束段落"><span>段</span></div></div>
             <div class="speech-row speech-options"><label for="speechVoice">声音</label><select id="speechVoice" aria-label="选择德语声音"><option value="">自动选择德语声音</option></select><button class="speech-button" id="speechPreview" type="button">试听声音</button><span id="speechVoiceInfo" class="speech-voice-info"></span></div>
             <div class="speech-row speech-options speech-speed"><label for="speechRate">速度</label><input id="speechRate" type="range" min="0.5" max="1.8" step="0.05" value="1" list="speechRateMarks" aria-label="选择朗读速度"><datalist id="speechRateMarks"><option value="0.5"></option><option value="0.75"></option><option value="1"></option><option value="1.25"></option><option value="1.5"></option><option value="1.8"></option></datalist><output id="speechRateValue" for="speechRate">1.00×</output></div>
-            <p id="speechStatus" class="speech-status" role="status" aria-live="polite">朗读准备中</p>
           </div>
         </div>
+        <button class="speech-toggle" id="vocabularyToggle" type="button" aria-haspopup="dialog" aria-controls="vocabularyDialog" disabled>查词 · 生词本</button>
+        <p id="speechStatus" class="reader-sr-only" role="status" aria-live="polite">朗读准备中</p>
       </section>
       <div class="progress-row"><div class="progress-track"><span id="progressBar"></span></div><span id="progressText">0%</span></div>
       <section id="translationNotice" class="translation-notice" hidden></section>
@@ -63,7 +65,25 @@
       <footer class="reader-footer"><span>Original text from Project Gutenberg</span><span>个人学习译文 · 仅供学习 · 进度保存在当前浏览器</span></footer>
     </main>
   </div>
-  <script src="data/books.js"></script>
-  <script src="app.js"></script>
+  <dialog id="vocabularyDialog" class="vocabulary-dialog" aria-labelledby="vocabularyTitle">
+    <header class="vocabulary-header"><h2 id="vocabularyTitle">查词 · 生词本</h2><form method="dialog"><button class="speech-button" aria-label="关闭生词本">关闭 ×</button></form></header>
+    <p class="vocabulary-hint">选中原文里的词或短语，再打开这里。也可以直接输入；中文释义由你填写。</p>
+    <div class="vocabulary-layout">
+      <form id="vocabularyForm" class="vocabulary-editor">
+        <label for="vocabularyTerm">德语词或短语</label><input id="vocabularyTerm" maxlength="160" required autocomplete="off" lang="de">
+        <nav id="vocabularyDictionaries" class="vocabulary-links" aria-label="词典查询"></nav>
+        <small>点击词典时，会在新标签页查询这个词。</small>
+        <label for="vocabularyMeaning">中文释义 / 自己的笔记</label><textarea id="vocabularyMeaning" maxlength="1000" rows="3" placeholder="查词后填写，可以留空"></textarea>
+        <label for="vocabularyContext">原文上下文</label><textarea id="vocabularyContext" maxlength="1200" rows="4" lang="de"></textarea>
+        <a id="vocabularySource" class="vocabulary-source" hidden>回到原文段落 →</a>
+        <button class="speech-button speech-primary" type="submit">保存生词</button>
+      </form>
+      <section class="vocabulary-saved" aria-label="已保存的生词"><h3>已保存 <span id="vocabularyCount">0</span></h3><label for="vocabularySearch">搜索生词</label><input id="vocabularySearch" type="search" placeholder="词语或中文释义"><div id="vocabularyList" class="vocabulary-list"></div></section>
+    </div>
+    <p id="vocabularyStatus" class="vocabulary-status" role="status" aria-live="polite"></p>
+    <details class="vocabulary-transfer"><summary>导出与备份</summary><div class="vocabulary-links"><button class="speech-button" id="vocabularyAnki" type="button">导出 Anki TSV</button><button class="speech-button" id="vocabularyBackup" type="button">备份 JSON</button><label for="vocabularyImport">合并导入备份</label><input id="vocabularyImport" type="file" accept=".json,application/json"></div><p>TSV 在桌面 Anki 中导入：选择“基本”笔记，第一列对应正面、第二列对应背面；背面包含笔记、原文与来源。JSON 可迁移到另一个浏览器，合并时保留已有词。生词只存当前浏览器，建议定期备份。</p><a href="/apps/">相关应用与费用 →</a></details>
+  </dialog>
+  <script src="data/catalog.js"></script>
+  <script src="bootstrap.js"></script>
 </body>
 </html>
