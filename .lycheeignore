@@ -20,3 +20,36 @@ https://slowgerman.com/en/
 https://slowgerman.com/wortschatz-b1/
 https://www.sprachenzentrum.fu-berlin.de/slz/sprachen-links/deutsch/daf_portale/index.html
 https://lingoni.com/
+
+# Individually verified publisher pages, 2026-10-08: CI requests return 403.
+# Exact URLs only; moved/404 pages were repaired instead of excluded.
+^https://dict\.leo\.org/german\-english/$
+^https://onlinelibrary\.wiley\.com/doi/abs/10\.1111/lang\.12479$
+^https://www\.coe\.int/en/web/common\-european\-framework\-reference\-languages/action\-orientation\-in\-the\-classroom$
+^https://www\.daad\.de/en/studying\-in\-germany/$
+^https://www\.daad\.de/en/studying\-in\-germany/living\-in\-germany/accommodation\-finder/$
+^https://www\.daad\.de/en/studying\-in\-germany/living\-in\-germany/german\-language/$
+^https://www\.daad\.de/en/studying\-in\-germany/living\-in\-germany/health\-insurance/$
+^https://www\.daad\.de/en/studying\-in\-germany/requirements/application\-process/$
+^https://www\.daad\.de/en/studying\-in\-germany/requirements/enrolling/$
+^https://www\.daad\.de/en/studying\-in\-germany/work\-career/side\-jobs/$
+^https://www\.goethe\.de/de/m/spr/prf/ueb/pb1\.html$
+^https://www\.goethe\.de/de/spr/ueb\.html$
+^https://www\.goethe\.de/de/spr/ueb/24h\.html$
+^https://www\.goethe\.de/de/spr/ueb/lua\.html$
+^https://www\.goethe\.de/en/spr/kur/stu\.html$
+^https://www\.goethe\.de/en/spr/prf\.html$
+^https://www\.goethe\.de/en/spr/ueb\.html$
+^https://www\.goethe\.de/ins/cn/de/ueb/koo/slz\.html$
+^https://www\.goethe\.de/ins/cn/zh/m/ueb/koo/pfz\.html$
+^https://www\.goethe\.de/ins/cn/zh/spr/prf/anm\.html$
+^https://www\.goethe\.de/ins/cn/zh/spr/prf/erg\.html$
+^https://www\.goethe\.de/ins/cn/zh/spr/prf/zb1\.html$
+^https://www\.goethe\.de/ins/cn/zh/spr/prf/zb1/wei\.html$
+^https://www\.goethe\.de/ins/de/de/m/prf/prf/gzb1\.html$
+^https://www\.goethe\.de/ins/de/de/m/prf/prf/gzb1/ueb\.html$
+^https://www\.goethe\.de/ins/de/en/kur/typ/dto\.html$
+^https://www\.goethe\.de/ins/de/en/uun/dln/ger\.html$
+^https://www\.goethe\.de/ins/pt/en/spr/prf/testdaf/inf\.html$
+^https://www\.goethe\.de/ins/sha/de/spr/prf\.html$
+^https://www\.goethe\.de/prj/dfd/en/home\.cfm$

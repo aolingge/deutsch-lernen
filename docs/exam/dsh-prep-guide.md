@@ -102,7 +102,7 @@ DSH 形式由各注册高校执行，题型会有差异，但通常围绕这些�
 
 ## 样题和训练入口
 
-- [Universitaet Kassel DSH Musterpruefung](https://www.uni-kassel.de/einrichtung/isz-/-sprachenzentrum/dsh/musterpruefung-dsh)
+- [Universitaet Kassel DSH Musterpruefung](https://www.uni-kassel.de/einrichtung/internationales-studienzentrum-sprachenzentrum/studienvorbereitung-dsh/uebungsmaterial-und-musterpruefung.html)
 - [Universitaet Muenster DSH Beispielpruefung](https://www.uni-muenster.de/Sprachenzentrum/ldaf/dsh/dshbeispielpruefung.html)
 - [Universitaet Duisburg-Essen DSH Beispielaufgaben](https://www.uni-due.de/dsh-info/beispielaufgabentypen.php)
 
