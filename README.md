@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="https://raw.githubusercontent.com/aolingge/aolingge/main/assets/language-cover.png" alt="语言学习主题装饰插画" width="100%" />
+</p>
+
 <div align="center">
 
 # 德语学习路线与资源地图
@@ -13,6 +17,15 @@
 </div>
 
 > 先确定现在的水平和目标，再选一条课程主线。每次学习都留下可检查的结果：一次复述、一封邮件、一段录音或一份错题复盘。
+
+## 项目速览
+
+| 项目 | 说明 |
+| --- | --- |
+| **适合谁** | 中文母语的德语学习者，尤其是需要系统路线、考试选择与赴德准备的人。 |
+| **怎么使用** | 先定位等级与目标，再选择课程主线，把听说读写任务与每周复盘串起来。 |
+| **资料与工具** | A1–C1 路线、考试地图、德国生活资料，以及支持筛选、收藏和本地计划的在线资源站。 |
+| **直接开始** | [学习路线](docs/README.md) · [资料目录](docs/resources/public-resources.md) · [在线学习站](https://deutsch-lernen-resource-hub.pirostonelsonrx688.workers.dev/) |
 
 ## 这个项目适合谁
 
