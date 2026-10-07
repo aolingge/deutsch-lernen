@@ -19,7 +19,7 @@
 - [TestDaF](https://www.testdaf.de/de/)
 - [FaDaF DSH](https://www.fadaf.de/dsh/start/was-ist-die-dsh/)
 - [HRK Sprachnachweis Deutsch](https://www.hrk.de/themen/internationales/internationale-studierende-und-forschende/hochschulzugang-fuer-internationale-studierende/sprachnachweis-deutsch/)
-- [DAAD German language](https://www.daad.de/en/study-and-research-in-germany/plan-your-studies/the-german-language/)
+- [DAAD German language](https://www.daad.de/en/studying-in-germany/living-in-germany/german-language/)
 
 ## 第一步：你为什么考试
 

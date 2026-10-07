@@ -29,7 +29,7 @@ Last checked: 2026-04-22
 
 | 主题 | 官方入口 | 适合先查什么 |
 | --- | --- | --- |
-| 融入课程和附近课程 | [BAMF Integration courses](https://www.bamf.de/EN/Themen/Integration/ZugewanderteTeilnehmende/Integrationskurse/integrationskurse-node.html) | Integrationskurs 是什么、课程内容、费用和附近课程查询 |
+| 融入课程和附近课程 | [Make it in Germany: Integration courses](https://www.make-it-in-germany.com/en/living-in-germany/learn-german/integration-courses) | Integrationskurs 是什么、课程内容、费用和附近课程查询 |
 | 成人移民咨询 | [BAMF Advice for adults](https://www.bamf.de/EN/Themen/Integration/ZugewanderteTeilnehmende/BeratungErwachsene/beratung-erwachsene-node.html) | 哪里可以咨询德语课、住房、工作、医保、家庭等问题 |
 | 工作、签证和定居 | [Make it in Germany](https://www.make-it-in-germany.com/en/) | 面向技术工人、学生和职业培训方向的德国官方信息入口 |
 | 签证基本规则 | [Federal Foreign Office: Visa information](https://www.auswaertiges-amt.de/en/visa-service/visabestimmungen-node) | 是否需要签证、申请地点、签证类型和基本流程 |
