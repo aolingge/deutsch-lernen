@@ -42,6 +42,7 @@ a:hover { color: var(--blue); }
 .title-dot { color: var(--gold); font-family: Georgia,serif; margin-left: 7px; }
 .intro-line { font-size: .875rem; line-height: 1.8; color: var(--muted); margin: 12px 0 0; }
 .directory-extras:not(:empty) { margin-bottom: 24px; }
+.directory-extras { display: flex; flex-wrap: wrap; gap: 12px; }
 .reading-entry { display: flex; align-items: center; justify-content: space-between; gap: 28px; width: min(100%, 430px); padding: 13px 16px; border: 1px solid #c7d8c7; border-left: 3px solid var(--gold); border-radius: 9px; background: #ffffffb8; text-decoration: none; color: var(--ink); }
 .reading-entry:hover { color: var(--blue); background: #fff; border-color: var(--blue); }
 .reading-entry strong, .reading-entry small { display: block; }

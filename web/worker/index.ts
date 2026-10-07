@@ -127,7 +127,7 @@ export default {
       if (path.startsWith('/api/')) return json({error:'not-found'},404);
       if (path === '/sitemap.xml') {
         const { resources } = await publicCatalog(env);
-        const paths = ['/', '/exams/', '/news/', '/sources/', ...resources.map((r) => `/resource/${r.slug}/`)];
+        const paths = ['/', '/exams/', '/news/', '/sources/', '/reading/', ...resources.map((r) => `/resource/${r.slug}/`)];
         const xml = '<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">' + paths.map((p) => `<url><loc>${escapeHtml(new URL(p, url.origin).href)}</loc></url>`).join('') + '</urlset>';
         return secure(new Response(request.method === 'HEAD' ? null : xml, { headers: { 'content-type': 'application/xml; charset=utf-8', 'cache-control': 'public, max-age=30' } }));
       }

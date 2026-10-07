@@ -22013,5 +22013,704 @@
         "checkedAt": "2026-10-06"
       }
     ]
+  },
+  {
+    "id": "german-project-stories",
+    "slug": "german-project-stories",
+    "titleOriginal": "The German Project · German Stories",
+    "titleZh": "免费德语童话与真人慢速音频",
+    "descriptionZh": "熟悉的童话改写为德语，搭配母语者慢速录音；可选英文对照。",
+    "primaryCategory": "reading",
+    "tags": [
+      "The German Project",
+      "听读",
+      "故事",
+      "阅读资源"
+    ],
+    "levels": [
+      "A2",
+      "B1"
+    ],
+    "levelBasis": "editorial",
+    "skills": [
+      "阅读",
+      "听力"
+    ],
+    "exams": [],
+    "formats": [
+      "网页",
+      "音频"
+    ],
+    "price": "free",
+    "access": "open",
+    "languages": [
+      "德语"
+    ],
+    "sourceName": "The German Project",
+    "url": "https://www.thegermanproject.com/stories",
+    "canonicalUrl": "https://www.thegermanproject.com/stories",
+    "rights": "link-only",
+    "status": "published",
+    "linkStatus": "ok",
+    "lastEditorialCheckedAt": "2026-10-07",
+    "costNoteZh": "公开故事免费阅读和听音频。",
+    "accessNoteZh": "无需账号；页面和辅助翻译以英文为主，没有中文对照。",
+    "levelScope": "learning",
+    "readingDifficultyZh": "A2–B1 为编辑参考，按故事调整。",
+    "evidence": [
+      {
+        "url": "https://www.thegermanproject.com/stories",
+        "fields": [
+          "name",
+          "purpose",
+          "price",
+          "access",
+          "media"
+        ],
+        "checkedAt": "2026-10-07"
+      }
+    ],
+    "lastLinkCheckedAt": "2026-10-07T06:10:21Z"
+  },
+  {
+    "id": "fable-cottage-german",
+    "slug": "fable-cottage-german",
+    "titleOriginal": "The Fable Cottage · German",
+    "titleZh": "德语动画故事与听读",
+    "descriptionZh": "童话、寓言与短篇故事，配慢速德语录音和可选英文译文；部分有动画。",
+    "primaryCategory": "reading",
+    "tags": [
+      "The Fable Cottage",
+      "听读",
+      "故事",
+      "阅读资源"
+    ],
+    "levels": [
+      "A2",
+      "B1"
+    ],
+    "levelBasis": "editorial",
+    "skills": [
+      "阅读",
+      "听力"
+    ],
+    "exams": [],
+    "formats": [
+      "网页",
+      "音频",
+      "视频"
+    ],
+    "price": "freemium",
+    "access": "open",
+    "languages": [
+      "德语"
+    ],
+    "sourceName": "The Fable Cottage",
+    "url": "https://www.thefablecottage.com/languages/german",
+    "canonicalUrl": "https://www.thefablecottage.com/languages/german",
+    "rights": "link-only",
+    "status": "published",
+    "linkStatus": "ok",
+    "lastEditorialCheckedAt": "2026-10-07",
+    "costNoteZh": "有免费故事和免费章节；完整会员内容收费。",
+    "accessNoteZh": "免费内容可公开访问，会员内容需要注册。",
+    "levelScope": "learning",
+    "readingDifficultyZh": "A2–B1 为编辑参考，长篇比短寓言更难。",
+    "evidence": [
+      {
+        "url": "https://www.thefablecottage.com/languages/german",
+        "fields": [
+          "name",
+          "purpose",
+          "price",
+          "access",
+          "media"
+        ],
+        "checkedAt": "2026-10-07"
+      }
+    ],
+    "lastLinkCheckedAt": "2026-10-07T06:10:21Z"
+  },
+  {
+    "id": "amira-reading",
+    "slug": "amira-reading",
+    "titleOriginal": "AMIRA · Leseprogramm",
+    "titleZh": "简单插画故事与慢速朗读",
+    "descriptionZh": "面向阅读入门的插画故事，短句、基本词汇和母语者慢速朗读；提供手机与离线版本。",
+    "primaryCategory": "reading",
+    "tags": [
+      "AMIRA",
+      "听读",
+      "故事",
+      "阅读资源"
+    ],
+    "levels": [
+      "A1",
+      "A2"
+    ],
+    "levelBasis": "editorial",
+    "skills": [
+      "阅读",
+      "听力"
+    ],
+    "exams": [],
+    "formats": [
+      "网页",
+      "音频",
+      "PDF"
+    ],
+    "price": "free",
+    "access": "open",
+    "languages": [
+      "德语"
+    ],
+    "sourceName": "AMIRA",
+    "url": "https://www.amira-lesen.de/index/index.html",
+    "canonicalUrl": "https://www.amira-lesen.de/index/index.html",
+    "rights": "link-only",
+    "status": "published",
+    "linkStatus": "ok",
+    "lastEditorialCheckedAt": "2026-10-07",
+    "costNoteZh": "在线阅读免费；纸质故事册收费。",
+    "accessNoteZh": "无需注册；多语种对照不含中文。",
+    "levelScope": "learning",
+    "readingDifficultyZh": "A1–A2 为编辑参考；原站使用三种阅读阶段，不是 CEFR。",
+    "evidence": [
+      {
+        "url": "https://www.amira-lesen.de/index/index.html",
+        "fields": [
+          "name",
+          "purpose",
+          "price",
+          "access",
+          "media"
+        ],
+        "checkedAt": "2026-10-07"
+      }
+    ],
+    "lastLinkCheckedAt": "2026-10-07T06:10:21Z"
+  },
+  {
+    "id": "goethe-onleihe",
+    "slug": "goethe-onleihe",
+    "titleOriginal": "Goethe-Institut · Onleihe",
+    "titleZh": "歌德学院免费数字图书馆",
+    "descriptionZh": "歌德学院提供德语电子书、有声书、学习材料和报刊的数字借阅；可在浏览器和 Onleihe 3 应用使用。",
+    "primaryCategory": "reading",
+    "tags": [
+      "Goethe-Institut",
+      "听读",
+      "故事",
+      "阅读资源"
+    ],
+    "levels": [],
+    "levelBasis": "unspecified",
+    "skills": [
+      "阅读",
+      "听力"
+    ],
+    "exams": [],
+    "formats": [
+      "电子书",
+      "音频",
+      "网页",
+      "应用"
+    ],
+    "price": "free",
+    "access": "registration",
+    "languages": [
+      "德语"
+    ],
+    "sourceName": "Goethe-Institut",
+    "url": "https://www.goethe.de/de/kul/bib/onl.html",
+    "canonicalUrl": "https://www.goethe.de/de/kul/bib/onl.html",
+    "rights": "link-only",
+    "status": "published",
+    "linkStatus": "restricted",
+    "lastEditorialCheckedAt": "2026-10-07",
+    "costNoteZh": "歌德学院数字借阅服务免费。",
+    "accessNoteZh": "先注册 Mein goethe.de 并激活 Onleihe；按馆藏、借阅期限和可借状态使用。",
+    "levelScope": "any",
+    "readingDifficultyZh": "等级因作品而异，图书馆不统一标级。",
+    "evidence": [
+      {
+        "url": "https://www.goethe.de/de/kul/bib/onl.html",
+        "fields": [
+          "name",
+          "purpose",
+          "price",
+          "access",
+          "media"
+        ],
+        "checkedAt": "2026-10-07"
+      }
+    ],
+    "lastLinkCheckedAt": "2026-10-07T06:10:21Z"
+  },
+  {
+    "id": "hueber-adult-readers",
+    "slug": "hueber-adult-readers",
+    "titleOriginal": "Hueber · Lektüre für Erwachsene",
+    "titleZh": "Hueber 成人分级小说与短篇",
+    "descriptionZh": "按 A1、A2、B1 编写的成人故事，含阅读理解练习；配套完整朗读提供免费 MP3 下载。",
+    "primaryCategory": "reading",
+    "tags": [
+      "Hueber Verlag",
+      "听读",
+      "故事",
+      "阅读资源"
+    ],
+    "levels": [
+      "A1",
+      "A2",
+      "B1"
+    ],
+    "levelBasis": "official",
+    "skills": [
+      "阅读",
+      "听力"
+    ],
+    "exams": [],
+    "formats": [
+      "图书",
+      "电子书",
+      "音频"
+    ],
+    "price": "paid",
+    "access": "open",
+    "languages": [
+      "德语"
+    ],
+    "sourceName": "Hueber Verlag",
+    "url": "https://www.hueber.de/reihe/lektuere-fuer-erwachsene",
+    "canonicalUrl": "https://www.hueber.de/reihe/lektuere-fuer-erwachsene",
+    "rights": "link-only",
+    "status": "published",
+    "linkStatus": "ok",
+    "lastEditorialCheckedAt": "2026-10-07",
+    "costNoteZh": "完整纸书和电子书收费；配套 MP3 免费，部分书目有阅读样章。",
+    "accessNoteZh": "可公开查看目录和样章；购买与音频入口以具体书目为准。",
+    "levelScope": "learning",
+    "readingDifficultyZh": "出版社官方标级；可关注 A2《Eine Nacht in Berlin》和 B1 短篇。",
+    "evidence": [
+      {
+        "url": "https://www.hueber.de/reihe/lektuere-fuer-erwachsene",
+        "fields": [
+          "name",
+          "purpose",
+          "price",
+          "access",
+          "media"
+        ],
+        "checkedAt": "2026-10-07"
+      }
+    ],
+    "lastLinkCheckedAt": "2026-10-07T06:10:21Z"
+  },
+  {
+    "id": "hueber-reader-audio",
+    "slug": "hueber-reader-audio",
+    "titleOriginal": "Hueber Audioservice · Lektüren",
+    "titleZh": "Hueber 官方配套朗读下载",
+    "descriptionZh": "官方听力下载服务中的读物分类，可按书名或 ISBN 找到配套朗读 ZIP 文件。",
+    "primaryCategory": "listening",
+    "tags": [
+      "Hueber Verlag",
+      "听读",
+      "故事",
+      "阅读资源"
+    ],
+    "levels": [],
+    "levelBasis": "unspecified",
+    "skills": [
+      "阅读",
+      "听力"
+    ],
+    "exams": [],
+    "formats": [
+      "音频"
+    ],
+    "price": "free",
+    "access": "open",
+    "languages": [
+      "德语"
+    ],
+    "sourceName": "Hueber Verlag",
+    "url": "https://legacy.hueber.de/audioservice?lehrwerk=lektueren&lehrwerk_1=leichtelit&livefilter=false&search=&sprache=daf&sprache_1=daf",
+    "canonicalUrl": "https://legacy.hueber.de/audioservice?lehrwerk=lektueren&lehrwerk_1=leichtelit&livefilter=false&search=&sprache=daf&sprache_1=daf",
+    "rights": "link-only",
+    "status": "published",
+    "linkStatus": "ok",
+    "lastEditorialCheckedAt": "2026-10-07",
+    "costNoteZh": "已公开的配套录音免费；对应书籍并不因此免费。",
+    "accessNoteZh": "公开下载可免注册；其他资料可能有访问码，按条目提示操作。",
+    "levelScope": "any",
+    "readingDifficultyZh": "与具体读物等级一致，音频目录不单独标级。",
+    "evidence": [
+      {
+        "url": "https://legacy.hueber.de/audioservice?lehrwerk=lektueren&lehrwerk_1=leichtelit&livefilter=false&search=&sprache=daf&sprache_1=daf",
+        "fields": [
+          "name",
+          "purpose",
+          "price",
+          "access",
+          "media"
+        ],
+        "checkedAt": "2026-10-07"
+      }
+    ],
+    "lastLinkCheckedAt": "2026-10-07T06:10:21Z"
+  },
+  {
+    "id": "cideb-german-readers",
+    "slug": "cideb-german-readers",
+    "titleOriginal": "Black Cat · CIDEB German Graded Readers",
+    "titleZh": "CIDEB 德语分级读物",
+    "descriptionZh": "德语分级故事、改编文学与学习读物目录，可按官方 A1–B2 标签选择；另有配套资源入口。",
+    "primaryCategory": "reading",
+    "tags": [
+      "Black Cat CIDEB",
+      "听读",
+      "故事",
+      "阅读资源"
+    ],
+    "levels": [
+      "A1",
+      "A2",
+      "B1",
+      "B2"
+    ],
+    "levelBasis": "official",
+    "skills": [
+      "阅读"
+    ],
+    "exams": [],
+    "formats": [
+      "图书",
+      "电子书"
+    ],
+    "price": "paid",
+    "access": "open",
+    "languages": [
+      "德语"
+    ],
+    "sourceName": "Black Cat CIDEB",
+    "url": "https://www.blackcat-cideb.com/en/catalogue/german/",
+    "canonicalUrl": "https://www.blackcat-cideb.com/en/catalogue/german",
+    "rights": "link-only",
+    "status": "published",
+    "linkStatus": "ok",
+    "lastEditorialCheckedAt": "2026-10-07",
+    "costNoteZh": "完整读物收费，部分配套资源免费。",
+    "accessNoteZh": "目录可公开浏览；音频与数字资源的获取方式随版本变化。",
+    "levelScope": "learning",
+    "readingDifficultyZh": "出版社官方标级；选择作品时核对具体版本的等级和配套音频。",
+    "evidence": [
+      {
+        "url": "https://www.blackcat-cideb.com/en/catalogue/german/",
+        "fields": [
+          "name",
+          "purpose",
+          "price",
+          "access",
+          "media"
+        ],
+        "checkedAt": "2026-10-07"
+      }
+    ],
+    "lastLinkCheckedAt": "2026-10-07T06:10:21Z"
+  },
+  {
+    "id": "klett-b1-readers",
+    "slug": "klett-b1-readers",
+    "titleOriginal": "Klett Sprachen · B1 Lektüren",
+    "titleZh": "Klett B1 故事与简写小说",
+    "descriptionZh": "B1 读物目录，包含悬疑故事、短篇和简写小说；各书目说明音频或数字附件。",
+    "primaryCategory": "reading",
+    "tags": [
+      "Ernst Klett Sprachen",
+      "听读",
+      "故事",
+      "阅读资源"
+    ],
+    "levels": [
+      "B1"
+    ],
+    "levelBasis": "official",
+    "skills": [
+      "阅读",
+      "听力"
+    ],
+    "exams": [],
+    "formats": [
+      "图书",
+      "电子书",
+      "音频"
+    ],
+    "price": "paid",
+    "access": "open",
+    "languages": [
+      "德语"
+    ],
+    "sourceName": "Ernst Klett Sprachen",
+    "url": "https://www.klett-sprachen.de/lektueren/daf-und-daz/deutsch-als-fremdsprache/b1/c-487",
+    "canonicalUrl": "https://www.klett-sprachen.de/lektueren/daf-und-daz/deutsch-als-fremdsprache/b1/c-487",
+    "rights": "link-only",
+    "status": "published",
+    "linkStatus": "ok",
+    "lastEditorialCheckedAt": "2026-10-07",
+    "costNoteZh": "读物收费；不同版本可能附音频、数字 extras 或限期 allango 授权。",
+    "accessNoteZh": "公开浏览目录；购买、数字音频及授权条件按书目核对。",
+    "levelScope": "learning",
+    "readingDifficultyZh": "该入口为官方 B1 分类，不将全部目录当作免费读物。",
+    "evidence": [
+      {
+        "url": "https://www.klett-sprachen.de/lektueren/daf-und-daz/deutsch-als-fremdsprache/b1/c-487",
+        "fields": [
+          "name",
+          "purpose",
+          "price",
+          "access",
+          "media"
+        ],
+        "checkedAt": "2026-10-07"
+      }
+    ],
+    "lastLinkCheckedAt": "2026-10-07T06:10:21Z"
+  },
+  {
+    "id": "dino-lernt-deutsch",
+    "slug": "dino-lernt-deutsch",
+    "titleOriginal": "LearnOutLive · Dino lernt Deutsch",
+    "titleZh": "Dino 日常故事与同步听读",
+    "descriptionZh": "以 Dino 的城市生活为线索的短篇系列，提供电子书、有声书和 TalkingBook；官网有免费同步听读预览。",
+    "primaryCategory": "reading",
+    "tags": [
+      "LearnOutLive / André Klein",
+      "听读",
+      "故事",
+      "阅读资源"
+    ],
+    "levels": [
+      "A2",
+      "B1"
+    ],
+    "levelBasis": "editorial",
+    "skills": [
+      "阅读",
+      "听力"
+    ],
+    "exams": [],
+    "formats": [
+      "电子书",
+      "音频",
+      "网页"
+    ],
+    "price": "paid",
+    "access": "open",
+    "languages": [
+      "德语"
+    ],
+    "sourceName": "LearnOutLive / André Klein",
+    "url": "https://books.learnoutlive.com/",
+    "canonicalUrl": "https://books.learnoutlive.com/",
+    "rights": "link-only",
+    "status": "published",
+    "linkStatus": "ok",
+    "lastEditorialCheckedAt": "2026-10-07",
+    "costNoteZh": "完整书籍和录音收费；免费预览只覆盖部分内容。",
+    "accessNoteZh": "目录与预览可公开打开；购买版本、音频和账号要求按商品说明选择。",
+    "levelScope": "learning",
+    "readingDifficultyZh": "A2–B1 为编辑参考；出版社称为面向初学者的故事，并非每册都有 CEFR 标级。",
+    "evidence": [
+      {
+        "url": "https://books.learnoutlive.com/",
+        "fields": [
+          "name",
+          "purpose",
+          "price",
+          "access",
+          "media"
+        ],
+        "checkedAt": "2026-10-07"
+      }
+    ],
+    "lastLinkCheckedAt": "2026-10-07T06:10:21Z"
+  },
+  {
+    "id": "german-stories-podcast",
+    "slug": "german-stories-podcast",
+    "titleOriginal": "German Stories · Free Audio Course",
+    "titleZh": "连续剧情德语音频课程",
+    "descriptionZh": "连续故事形式的德语音频课程，在剧情中逐步讲词汇和语法；可通过公开页面或播客平台收听。",
+    "primaryCategory": "listening",
+    "tags": [
+      "German Stories",
+      "听读",
+      "故事",
+      "阅读资源"
+    ],
+    "levels": [
+      "A1",
+      "A2"
+    ],
+    "levelBasis": "official",
+    "skills": [
+      "阅读",
+      "听力"
+    ],
+    "exams": [],
+    "formats": [
+      "网页",
+      "音频"
+    ],
+    "price": "freemium",
+    "access": "open",
+    "languages": [
+      "德语"
+    ],
+    "sourceName": "German Stories",
+    "url": "https://german-stories.com/learn-german-podcast/",
+    "canonicalUrl": "https://german-stories.com/learn-german-podcast",
+    "rights": "link-only",
+    "status": "published",
+    "linkStatus": "ok",
+    "lastEditorialCheckedAt": "2026-10-07",
+    "costNoteZh": "公开音频课程免费；动态文稿、课程和部分 PDF 资料收费。",
+    "accessNoteZh": "免费播客可公开访问；会员资料需注册，讲解含英文。",
+    "levelScope": "learning",
+    "readingDifficultyZh": "官方课程目标为 A1、A2；不把完成课程视作考试认证。",
+    "evidence": [
+      {
+        "url": "https://german-stories.com/learn-german-podcast/",
+        "fields": [
+          "name",
+          "purpose",
+          "price",
+          "access",
+          "media"
+        ],
+        "checkedAt": "2026-10-07"
+      }
+    ],
+    "lastLinkCheckedAt": "2026-10-07T06:10:21Z"
+  },
+  {
+    "id": "readle-german",
+    "slug": "readle-german",
+    "titleOriginal": "Readle · formerly Langster",
+    "titleZh": "Readle 分级听读与点词解释",
+    "descriptionZh": "现成的分级新闻与故事阅读应用，提供点词解释、逐句音频和词汇复习；支持德语。",
+    "primaryCategory": "tools",
+    "tags": [
+      "Readle / A-Type Technologies",
+      "听读",
+      "故事",
+      "阅读资源"
+    ],
+    "levels": [
+      "A1",
+      "A2",
+      "B1",
+      "B2",
+      "C1"
+    ],
+    "levelBasis": "official",
+    "skills": [
+      "阅读",
+      "听力",
+      "词汇"
+    ],
+    "exams": [],
+    "formats": [
+      "应用",
+      "网页",
+      "音频"
+    ],
+    "price": "paid",
+    "access": "registration",
+    "languages": [
+      "德语"
+    ],
+    "sourceName": "Readle / A-Type Technologies",
+    "url": "https://readle-app.com/en/",
+    "canonicalUrl": "https://readle-app.com/en",
+    "rights": "link-only",
+    "status": "published",
+    "linkStatus": "ok",
+    "lastEditorialCheckedAt": "2026-10-07",
+    "costNoteZh": "官网提供限期免费试用，完整使用需订阅；不是永久免费服务。",
+    "accessNoteZh": "需账号；Web 和手机入口可用，中文解释与中文界面支持未确认。",
+    "levelScope": "learning",
+    "readingDifficultyZh": "官方说明 A1–C1；实际德语内容数量随等级变化。",
+    "evidence": [
+      {
+        "url": "https://readle-app.com/en/",
+        "fields": [
+          "name",
+          "purpose",
+          "price",
+          "access",
+          "media"
+        ],
+        "checkedAt": "2026-10-07"
+      }
+    ],
+    "lastLinkCheckedAt": "2026-10-07T06:10:21Z"
+  },
+  {
+    "id": "lute-reader",
+    "slug": "lute-reader",
+    "titleOriginal": "Lute · Learning Using Texts",
+    "titleZh": "Lute 开源阅读与生词管理",
+    "descriptionZh": "可自行安装的开源阅读工具，支持文本与 EPUB 导入、词典查询、多词短语及词形关系管理。",
+    "primaryCategory": "tools",
+    "tags": [
+      "LuteOrg",
+      "听读",
+      "故事",
+      "阅读资源"
+    ],
+    "levels": [],
+    "levelBasis": "unspecified",
+    "skills": [
+      "阅读",
+      "词汇"
+    ],
+    "exams": [],
+    "formats": [
+      "工具",
+      "网页"
+    ],
+    "price": "free",
+    "access": "open",
+    "languages": [
+      "德语"
+    ],
+    "sourceName": "LuteOrg",
+    "url": "https://luteorg.github.io/lute-manual/",
+    "canonicalUrl": "https://luteorg.github.io/lute-manual",
+    "rights": "link-only",
+    "status": "published",
+    "linkStatus": "ok",
+    "lastEditorialCheckedAt": "2026-10-07",
+    "costNoteZh": "MIT 开源软件免费；自行部署的设备或服务费用另计。",
+    "accessNoteZh": "这是需自行安装的工具说明，不是即开即用的公共读书网站。",
+    "levelScope": "any",
+    "readingDifficultyZh": "工具不限等级；难度由自己导入的文本决定。",
+    "evidence": [
+      {
+        "url": "https://luteorg.github.io/lute-manual/",
+        "fields": [
+          "name",
+          "purpose",
+          "price",
+          "access",
+          "media"
+        ],
+        "checkedAt": "2026-10-07"
+      }
+    ],
+    "lastLinkCheckedAt": "2026-10-07T06:10:21Z"
   }
 ]

@@ -1,0 +1,7 @@
+[
+  {"id":"stories","title":"短故事 · 边读边听","description":"熟悉的情节、短篇幅和理解练习，适合先找容易读完的一篇。","resources":["german-project-stories","fable-cottage-german","amira-reading","lingua-reading","german-net-reading","dw-kurz-leicht"]},
+  {"id":"graded","title":"分级小说 · 按难度选书","description":"出版社和作者的现成故事系列。完整书籍通常付费，可先查看样章、试听与版本说明。","resources":["hueber-adult-readers","cideb-german-readers","klett-b1-readers","dino-lernt-deutsch"]},
+  {"id":"audio","title":"真人录音 · 听故事和短文","description":"故事播客、慢速短文和读物配套音频。是否提供免费全文，见各条目的费用说明。","resources":["german-stories-podcast","slow-german","deutsch-to-go","hueber-reader-audio"]},
+  {"id":"library","title":"电子书与长篇 · 图书馆和原著","description":"数字借阅、公版原文和有声书。作品难度不同，古典作品可能包含旧拼写。","resources":["goethe-onleihe","librivox-german-winnetou","vorleser","gutenberg-org-de","wikisource-de"]},
+  {"id":"tools","title":"现成阅读器 · 查词与生词复习","description":"想导入自己的文本、点词查询或收集生词，可比较这些工具。Lute 需要自行安装。","resources":["readlang","lingq","readle-german","lute-reader","dwds"]}
+]
