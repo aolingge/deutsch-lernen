@@ -20,6 +20,11 @@
     "jose": "^6.1.0",
     "typescript": "^5.9.3"
   },
+  "overrides": {
+    "miniflare": {
+      "sharp": "0.35.5"
+    }
+  },
   "devDependencies": {
     "@astrojs/check": "^0.9.4",
     "@types/node": "^22.15.0",
