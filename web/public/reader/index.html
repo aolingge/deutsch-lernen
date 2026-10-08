@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="hover.css">
   <link rel="stylesheet" href="vocabulary.css">
+  <link rel="stylesheet" href="reader-tools.css">
 </head>
 <body>
   <header class="topbar">
@@ -16,11 +17,13 @@
     <div class="topbar-actions"><a class="icon-button" href="/" title="返回德国资源导航">← <span>资源导航</span></a><button class="icon-button" id="themeButton" type="button" title="切换阅读主题">◐ <span>主题</span></button><button class="icon-button" id="focusButton" type="button" title="进入专注阅读">⌗ <span>专注</span></button></div>
   </header>
   <div class="app-shell" id="top">
-    <aside class="library" aria-label="书库">
+    <aside class="library" aria-label="书库" id="libraryPanel">
+      <button id="libraryToggle" class="speech-toggle library-toggle" type="button" aria-expanded="false" aria-controls="libraryBody">选择书籍 · 书库</button>
+      <div id="libraryBody" class="library-body">
       <div class="library-heading"><p class="eyebrow">LESEPLAN</p><h1 id="libraryTitle">德语阅读库</h1><p>按 A2 到 B2 分级：先读短篇，再进入中长篇。每天一小段，先读原文，再按需要查看中文。</p></div>
       <label class="search-label" for="bookSearch">查找书名</label><input id="bookSearch" type="search" placeholder="输入书名或作者" autocomplete="off">
       <div class="library-filters" aria-label="筛选书目">
-        <label for="levelFilter">等级</label><select id="levelFilter"><option value="">全部等级</option><option value="A2">A2</option><option value="B1">B1</option><option value="B1+">B1+</option><option value="B2">B2</option></select>
+        <label for="levelFilter">等级</label><select id="levelFilter"><option value="">全部等级</option><option value="A2">A2</option><option value="B1">B1</option><option value="B1+">B1+</option><option value="B2">B2</option><option value="自导入">自导入</option></select>
         <label for="lengthFilter">篇幅</label><select id="lengthFilter"><option value="">全部篇幅</option><option value="短篇">短篇</option><option value="中篇">中篇</option><option value="长篇">长篇</option></select>
       </div>
       <p id="bookCount" class="book-count" role="status"></p>
@@ -38,30 +41,37 @@
       </details>
       <nav id="bookList" class="book-list" aria-label="选择书籍"></nav>
       <div class="library-note"><span class="note-dot"></span><p>中文为机器译文，鼠标悬停时显示，手机可点击查看。遇到疑问请结合德语原文理解。</p></div>
+      </div>
     </aside>
     <main class="reader" id="readerMain">
       <section class="reader-hero"><div><p class="eyebrow">PROJECT GUTENBERG · ORIGINAL TEXT</p><h2 id="bookTitle">加载中</h2><p id="bookMeta" class="book-meta"></p><p id="bookRoute" class="book-route"></p></div><div class="hero-index"><span id="bookNumber">01</span><small id="bookTotal">/ 00</small></div></section>
       <section class="reader-toolbar" aria-label="阅读设置">
+        <div class="display-panel"><button class="speech-toggle" id="displayToggle" type="button" aria-controls="displayOptions" aria-expanded="false">显示</button><div id="displayOptions" class="display-menu" hidden>
         <div class="toolbar-group"><span class="toolbar-label">译文</span><div class="segmented" role="group" aria-label="选择译文显示方式"><button type="button" data-translation="hover" aria-pressed="true">悬停显示</button><button type="button" data-translation="show" aria-pressed="false">始终显示</button><button type="button" data-translation="hide" aria-pressed="false">隐藏</button></div></div>
         <div class="toolbar-group"><span class="toolbar-label">背景</span><div class="segmented" role="group" aria-label="选择背景"><button type="button" data-theme="paper" aria-pressed="true">米白</button><button type="button" data-theme="green" aria-pressed="false">浅绿</button><button type="button" data-theme="dark" aria-pressed="false">深色</button></div></div>
         <div class="toolbar-group font-controls"><span class="toolbar-label">字级</span><button class="round-button" type="button" data-font="down" aria-label="减小字级">−</button><span id="fontSizeLabel">20</span><button class="round-button" type="button" data-font="up" aria-label="增大字级">+</button></div>
+        </div></div>
         <div class="speech-panel" aria-label="德语朗读">
           <button class="speech-toggle" id="speechToggle" type="button" aria-expanded="false" aria-controls="speechOptions"><span aria-hidden="true">◖</span><span>朗读</span></button>
           <div class="speech-menu" id="speechOptions" hidden>
             <div class="speech-menu-header"><strong>朗读设置</strong><span>选择段落、声音和速度</span></div>
             <div class="speech-row speech-main-controls"><button class="speech-button" id="speechSelect" type="button">选择当前段</button><button class="speech-button" id="speechPrev" type="button" title="选择上一段" aria-label="选择上一段">↑</button><button class="speech-button" id="speechNext" type="button" title="选择下一段" aria-label="选择下一段">↓</button><button class="speech-button speech-primary" id="speechPlay" type="button">朗读当前段</button><button class="speech-button" id="speechPause" type="button" disabled>暂停</button><button class="speech-button" id="speechStop" type="button" disabled>停止</button><label class="speech-check"><input id="speechAutoplay" type="checkbox">连续读</label><label class="speech-check"><input id="speechFollow" type="checkbox" checked>跟随朗读</label></div>
             <div class="speech-row speech-options"><label for="speechScope">范围</label><select id="speechScope" aria-label="选择朗读范围"><option value="current">当前段落</option><option value="selection">选中文本</option><option value="range">指定段落范围</option></select><span id="speechTarget" class="speech-target"></span><div id="speechRange" class="speech-range" hidden><label for="speechFrom">从第</label><input id="speechFrom" type="number" min="1" step="1" value="1" aria-label="开始段落"><label for="speechTo">段至第</label><input id="speechTo" type="number" min="1" step="1" value="1" aria-label="结束段落"><span>段</span></div></div>
-            <div class="speech-row speech-options"><label for="speechVoice">声音</label><select id="speechVoice" aria-label="选择德语声音"><option value="">自动选择德语声音</option></select><button class="speech-button" id="speechPreview" type="button">试听声音</button><span id="speechVoiceInfo" class="speech-voice-info"></span></div>
+            <div class="speech-row speech-options"><label for="speechVoice">声音</label><select id="speechVoice" aria-label="选择德语声音"><option value="">自动选择德语声音</option></select><button class="speech-button" id="speechPreview" type="button">试听声音</button><button class="speech-button" id="speechNatural" type="button">优先自然 / 在线声音</button><a class="speech-button" id="naturalReader" href="?listen=1">纯原文 · Edge 朗读</a><span id="speechVoiceInfo" class="speech-voice-info"></span></div>
             <div class="speech-row speech-options speech-speed"><label for="speechRate">速度</label><input id="speechRate" type="range" min="0.5" max="1.8" step="0.05" value="1" list="speechRateMarks" aria-label="选择朗读速度"><datalist id="speechRateMarks"><option value="0.5"></option><option value="0.75"></option><option value="1"></option><option value="1.25"></option><option value="1.5"></option><option value="1.8"></option></datalist><output id="speechRateValue" for="speechRate">1.00×</output></div>
           </div>
         </div>
-        <button class="speech-toggle" id="vocabularyToggle" type="button" aria-haspopup="dialog" aria-controls="vocabularyDialog" disabled>查词 · 生词本</button>
+        <button class="speech-toggle" id="vocabularyToggle" type="button" aria-haspopup="dialog" aria-controls="vocabularyDialog" title="查词 · 生词本" aria-label="查词 · 生词本" disabled>生词</button>
+        <button class="speech-toggle" id="readerToolsToggle" type="button" aria-haspopup="dialog" aria-controls="readerToolsDialog" title="目录 · 导入 · 分享" aria-label="目录 · 导入 · 分享" disabled>书籍</button>
+        <button class="speech-toggle" id="readerSyncToggle" type="button" aria-haspopup="dialog" aria-controls="readerSyncDialog" title="跨设备同步" aria-label="跨设备同步" disabled>同步</button>
         <p id="speechStatus" class="reader-sr-only" role="status" aria-live="polite">朗读准备中</p>
       </section>
       <div class="progress-row"><div class="progress-track"><span id="progressBar"></span></div><span id="progressText">0%</span></div>
+      <nav class="chapter-navigation" aria-label="阅读分段导航"><button type="button" id="chapterPrevious" data-chapter-step="-1">← 上一分段</button><span id="chapterLabel"></span><button type="button" id="chapterNext" data-chapter-step="1">下一分段 →</button></nav>
       <section id="translationNotice" class="translation-notice" hidden></section>
       <nav id="bookSources" class="book-sources" aria-label="原文来源与下载"></nav>
       <article id="readingContent" class="reading-content" aria-live="polite"></article>
+      <nav class="chapter-navigation chapter-bottom" aria-label="正文末尾分段导航"><button type="button" data-chapter-step="-1">← 上一分段</button><span>读完后继续下一分段</span><button type="button" data-chapter-step="1">下一分段 →</button></nav>
       <footer class="reader-footer"><span>Original text from Project Gutenberg</span><span>个人学习译文 · 仅供学习 · 进度保存在当前浏览器</span></footer>
     </main>
   </div>

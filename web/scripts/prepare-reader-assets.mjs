@@ -1,6 +1,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
+import '../public/reader/reader-core.js';
 
 export function prepareReaderAssets(root = fileURLToPath(new URL('../public/reader/', import.meta.url))) {
   const source = fs.readFileSync(path.join(root, 'data/books.js'), 'utf8');
@@ -18,7 +19,13 @@ export function prepareReaderAssets(root = fileURLToPath(new URL('../public/read
   const metadata = books.map(book => {
     const { paragraphs, ...fields } = book;
     fs.writeFileSync(path.join(destination, `${book.id}.json`), JSON.stringify(book));
-    return { ...fields, paragraphCount: paragraphs.length, translatedParagraphs: paragraphs.filter(p => String(p.zh || '').trim()).length, dataUrl: `data/books/${book.id}.json` };
+    const folder = path.join(destination, book.id); fs.mkdirSync(folder, { recursive: true });
+    const chapters = globalThis.ReaderCore.segments(paragraphs).map((part, index) => {
+      const filename = String(index + 1).padStart(3, '0') + '.json';
+      fs.writeFileSync(path.join(folder, filename), JSON.stringify({ id: book.id, from: part.from, paragraphs: paragraphs.slice(part.from, part.to + 1) }));
+      return { ...part, url: `data/books/${book.id}/${filename}` };
+    });
+    return { ...fields, paragraphCount: paragraphs.length, chapters, translatedParagraphs: paragraphs.filter(p => String(p.zh || '').trim()).length, dataUrl: `data/books/${book.id}.json` };
   });
   const catalog = '// @ts-nocheck\nwindow.GUTENBERG_BOOKS = ' + JSON.stringify(metadata).replace(/</g, '\\u003c') + ';\n';
   fs.writeFileSync(path.join(root, 'data/catalog.js'), catalog);

@@ -43,7 +43,7 @@ with sync_playwright() as p:
     for book in books[12:]:
         page.locator(f'[data-book="{book["id"]}"]').click()
         page.wait_for_function("(book) => document.querySelector('#bookNumber').textContent===book.id && document.querySelector('#readingContent').dataset.ready==='true'", arg=book)
-        assert page.locator('.german').count() == book['paragraphs']
+        assert page.locator('.german').count() == page.evaluate("readerAPI.currentBook().chapters[0].to + 1")
         assert page.locator('.translation').count() == 0
         link = page.get_by_role('link', name='下载完整 TXT')
         source_url = page.evaluate('(href) => new URL(href, location.href).href', link.get_attribute('href'))
@@ -118,12 +118,15 @@ with sync_playwright() as p:
     page.wait_for_function('speechSynthesis.records.length === 3')
     assert '第 2–3 段' in page.locator('#speechStatus').inner_text()
     page.locator('#speechStop').click()
+    if page.locator('#displayOptions').is_hidden(): page.locator('#displayToggle').click()
     page.locator('[data-theme="dark"]').click()
     page.reload(wait_until='load')
     page.wait_for_function("document.querySelector('#readingContent').dataset.ready==='true'")
     assert page.locator('body').evaluate('e => e.classList.contains("theme-dark")')
     assert '13' in page.locator('#bookNumber').inner_text()
+    if page.locator('#displayOptions').is_hidden(): page.locator('#displayToggle').click()
     page.locator('[data-theme="paper"]').click()
+    page.keyboard.press('Escape')
     layouts = []
     for width in (320, 375, 768, 1440):
         page.set_viewport_size({'width': width, 'height': 900})
@@ -134,9 +137,13 @@ with sync_playwright() as p:
         layouts.append(width)
     page.set_viewport_size({'width': 1440, 'height': 1000})
     page.set_viewport_size({'width': 375, 'height': 900})
+    page.locator('#libraryToggle').click()
     page.locator('[data-book="01"]').click()
+    page.wait_for_function("document.querySelector('#readingContent').dataset.ready==='true'")
+    if page.locator('#displayOptions').is_hidden(): page.locator('#displayToggle').click()
     page.locator('[data-translation="show"]').click()
     assert page.evaluate('document.documentElement.scrollWidth <= window.innerWidth'), 'Translation overflow at 375px'
+    if page.locator('#displayOptions').is_hidden(): page.locator('#displayToggle').click()
     page.locator('[data-translation="hover"]').click()
     page.set_viewport_size({'width': 1440, 'height': 1000})
     page.locator('[data-book="01"]').click()
@@ -144,12 +151,14 @@ with sync_playwright() as p:
     translation.focus()
     page.keyboard.press('Enter')
     assert translation.get_attribute('aria-expanded') == 'true'
+    if page.locator('#displayOptions').is_hidden(): page.locator('#displayToggle').click()
     page.locator('[data-translation="hide"]').click()
     assert page.locator('.translation:visible').count() == 0
+    if page.locator('#displayOptions').is_hidden(): page.locator('#displayToggle').click()
     page.locator('[data-translation="hover"]').click()
     page.locator('[data-book="13"]').click()
     page.wait_for_timeout(200)
-    page.locator('.german').nth(40).scroll_into_view_if_needed()
+    page.locator('.german').nth(min(15, page.locator('.german').count()-1)).scroll_into_view_if_needed()
     page.wait_for_timeout(500)
     assert int(page.evaluate('localStorage.getItem("gutenberg-position-13")')) > 0
     page.reload(wait_until='load')

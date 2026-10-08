@@ -10,7 +10,7 @@
 
 [阅读与听书资源](https://deutsch-lernen-resource-hub.pirostonelsonrx688.workers.dev/reading/) 整合 24 个精选入口，涵盖短故事、真人录音、分级小说、数字借阅和阅读工具，标注费用、访问条件及等级依据。调查依据见 [扩展记录](docs/reading-resource-expansion-20261007.md)。
 
-[关联应用](https://deutsch-lernen-resource-hub.pirostonelsonrx688.workers.dev/apps/) 集合 10 个已收录工具，注明文件导入、复习、词典与字幕的关联方式。阅读器增加按需打开的查词/生词本、Anki TSV 和 JSON 备份；精选阅读支持关键词、等级和费用筛选。检查、优先级和后续候选见 [优化计划](docs/site-optimization-plan-20261008.md)。
+[关联应用](https://deutsch-lernen-resource-hub.pirostonelsonrx688.workers.dev/apps/) 集合 10 个已收录工具，注明文件导入、复习、词典与字幕的关联方式。阅读器增加按需打开的查词/生词本、Anki TSV 和 JSON 备份；精选阅读支持关键词、等级和费用筛选。阅读器已支持按分段加载、手机收起书库、段落分享、本地 EPUB 导入、原文 EPUB 导出与可选加密同步；显示设置也按需展开。自然朗读提供浏览器声音优先选择及 Edge 纯原文入口，独立云端 TTS 仍待服务与预算选择。检查、优先级和交付边界见 [优化计划](docs/site-optimization-plan-20261008.md)。
 
 本站以资源整合为核心，不展示学习路线、训练计划或使用教程。以前的原创指南保留在 [历史文档目录](docs/README.md) 与归档数据中，不计入公开资源数。旧版浏览器中的目标、任务与收藏数据保留。
 
