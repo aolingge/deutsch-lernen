@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="https://aolingge.github.io/open-source-portfolio/showcase/language-cover.png?v=51dfa17" alt="Original language-learning illustration" width="100%" />
+</p>
+
 # German Resource Directory
 
 [简体中文](README.md) | English

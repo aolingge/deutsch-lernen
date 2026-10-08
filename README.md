@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="https://aolingge.github.io/open-source-portfolio/showcase/language-cover.png?v=51dfa17" alt="语言学习主题原创装饰插画" width="100%" />
+</p>
+
 # 德语资源导航
 
 为中文用户整理的德语与德国生活资源目录。按分类、等级、技能、考试、费用、访问条件和内容形式查找，点击资源名称直接打开原站。

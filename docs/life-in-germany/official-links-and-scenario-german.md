@@ -13,7 +13,7 @@ Last checked: 2026-05-05
 | uni-assist | [uni-assist](https://www.uni-assist.de/en/) | 国际申请材料审核和申请平台 |
 | APS 中国 | [APS 一般国内申请人程序](https://www.aps.org.cn/zh/verfahren-und-services-deutschland/chinaverfahren) | 中国申请人材料审核与证书 |
 | 签证 | [Federal Foreign Office visa](https://www.auswaertiges-amt.de/en/visa-service) | 签证类型、流程和使领馆入口 |
-| 医疗保险 | [DAAD health insurance](https://www.daad.de/en/study-and-research-in-germany/plan-your-studies/health-insurance/) | 学生保险要求和就医基础 |
+| 医疗保险 | [DAAD health insurance](https://www.daad.de/en/studying-in-germany/living-in-germany/health-insurance/) | 学生保险要求和就医基础 |
 | 入学注册 | [DAAD enrolling](https://www.daad.de/en/studying-in-germany/requirements/enrolling/) | Immatrikulation 和注册材料 |
 | 工作和职业 | [Make it in Germany](https://www.make-it-in-germany.com/en/) | 工作、签证、职业培训、认可 |
 | 资格认可 | [Anerkennung in Deutschland](https://www.anerkennung-in-deutschland.de/html/en/index.php) | 职业资格认证 |

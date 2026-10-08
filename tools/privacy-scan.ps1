@@ -1,6 +1,7 @@
 param(
     [Parameter(Position = 0)]
-    [string]$Path = "."
+    [string]$Path = ".",
+    [string]$ReportPath
 )
 
 $ErrorActionPreference = "Stop"
@@ -8,11 +9,11 @@ $ErrorActionPreference = "Stop"
 $root = Resolve-Path -LiteralPath $Path
 $patterns = @(
     @{ Name = "email"; Regex = "[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}" },
-    @{ Name = "phone-like"; Regex = "(\+?\d[\d\s().-]{7,}\d)" },
+    @{ Name = "phone-like"; Regex = "(\+?\d[\d \t().-]{7,}\d)" },
     @{ Name = "id-card-like"; Regex = "\b\d{17}[\dXx]\b" },
     @{ Name = "token-like"; Regex = "(ghp_|gho_|sk-(?:proj-|svcacct-)?[A-Za-z0-9_-]{20,}|xox[baprs]-|AKIA[0-9A-Z]{16})" },
     @{ Name = "private-key"; Regex = "BEGIN (RSA |OPENSSH |EC |DSA )?PRIVATE KEY" },
-    @{ Name = "password-word"; Regex = "(?i)(password|passwd|pwd|secret|token|cookie|api[_-]?key)\s*[:=]" },
+    @{ Name = "password-word"; Regex = "(?i)(password|passwd|pwd|secret|token|cookie|api[_-]?key)\s*(?::|=(?!=|>))" },
     @{ Name = "windows-private-path"; Regex = "[A-Z]:\\Users\\[^\\\s]+" },
     @{ Name = "obsidian-private-path"; Regex = "[A-Z]:\\笔记保存obstian|[A-Z]:\\.*Obsidian|[A-Z]:\\.*OneNote" }
 )
@@ -46,22 +47,49 @@ $files = Get-ChildItem -LiteralPath $root -Recurse -File -Force |
 
 $hits = @()
 
+function Test-ContainedHit {
+    param([string]$Line, [int]$Index, [int]$Length, [string]$Expression)
+    foreach ($context in [regex]::Matches($Line, $Expression)) {
+        $range = if ($context.Groups['safe'].Success) { $context.Groups['safe'] } else { $context }
+        if ($Index -ge $range.Index -and ($Index + $Length) -le ($range.Index + $range.Length)) { return $true }
+    }
+    return $false
+}
+
 function Test-AllowedHit {
     param(
         [string]$File,
         [string]$Type,
         [string]$Line,
-        [string]$Value
+        [string]$Value,
+        [int]$Index
     )
 
     $normalized = $File -replace "/", "\"
     # Allow only exact reviewed non-private numbers, not every match on a line.
     if ($Type -eq 'phone-like') {
+        $technicalRanges = @(
+            '(?i)\b[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}\b',
+            '\b\d{4}-\d{2}-\d{2}(?:T\d{2}:\d{2}:\d{2}(?:\.\d+)?(?:Z|[+-]\d{2}:\d{2}))?',
+            'https?://127\.0\.0\.1(?::\d+)?(?:/[^\s"''<>`]*)?',
+            'https?://[^\s"''<>`]+/(?:[^\s"''<>`]*/)*(?:assets|_Resources|Static|Packages|media|images|icons)/[^\s"''<>`]+',
+            '(?i)\b(?:viewBox|points|d)\s*=\s*\\?["''](?<safe>[0-9a-z.,+ \t-]+)\\?["'']',
+            '(?i)"(?:sha256|exportSha256)"\s*:\s*"(?<safe>[a-f0-9]{64})"'
+        )
+        foreach ($expression in $technicalRanges) {
+            if (Test-ContainedHit -Line $Line -Index $Index -Length $Value.Length -Expression $expression) { return $true }
+        }
+        if ($normalized -match '\\web\\data\\site-icons\.json$' -and
+            (Test-ContainedHit -Line $Line -Index $Index -Length $Value.Length -Expression '"source"\s*:\s*"(?<safe>https?://[^"\s]+)"')) { return $true }
+        if ($normalized -match '\\docs\\reading-resource-expansion-20261007\.md$' -and
+            (Test-ContainedHit -Line $Line -Index $Index -Length $Value.Length -Expression 'https://www\.klett-sprachen\.de/[^\s)]+/97[89]\d{10}')) { return $true }
+        if ($normalized -match '\\web\\public\\reader\\data\\reading-stats\.json$' -and
+            (Test-ContainedHit -Line $Line -Index $Index -Length $Value.Length -Expression '"(?:totalHoursAt\d+Wpm|addedHoursAt\d+Wpm|hoursAt\d+Wpm)"\s*:\s*(?<safe>\d+\.\d+)')) { return $true }
         if ($Value -eq '127.0.0.1' -and $normalized -match '\\web\\tests\\[^\\]+\.py$') { return $true }
         if ($normalized -match '\\web\\public\\og-directory\.svg$' -and $Value -eq '0 0 1200 630' -and $Line -match 'viewBox="0 0 1200 630"') { return $true }
         if ($normalized -match '\\web\\public\\reader\\index\.html$' -and $Value -eq '0 0 32 32' -and $Line -match "viewBox='0 0 32 32'") { return $true }
-        if ($normalized -match '\\web\\public\\reader\\data\\books\.js$' -and
-            $Value -in @('64-6221541', '+1 (862) 621-9288') -and $Line -match 'Project Gutenberg Literary Archive Foundation') { return $true }
+        if ($normalized -match '\\web\\public\\reader\\data\\(?:books\.js|(?:books|translations)\\\d+\.json)$' -and
+            $Value -in @('64-6221541', '+1 (862) 621-9288')) { return $true }
     }
     if ($Type -eq "phone-like" -and $Line -match '127\.0\.0\.1' -and $normalized -match '\\web\\e2e\\public_site\.py$') { return $true }
     if ($Type -eq "phone-like" -and $normalized -match "\\README(\.en)?\.md$" -and $Line -match "shields\.io") { return $true }
@@ -85,6 +113,9 @@ function Test-AllowedHit {
     if ($Type -ne "password-word") {
         return $false
     }
+
+    if ($normalized -match '\\web\\public\\reader\\app\.js$' -and
+        (Test-ContainedHit -Line $Line -Index $Index -Length $Value.Length -Expression '\btoken\s*(?::\s*0\b|=\s*(?:\+\+)?speechState\.token\b)')) { return $true }
 
     if ($normalized -match "\\.github\\workflows\\" -and $Line -match "secrets\.GITHUB_TOKEN") {
         return $true
@@ -112,7 +143,8 @@ foreach ($file in $files) {
 
             $lineNumber = ($text.Substring(0, $match.Index) -split "`n").Count
             $line = ($text -split "`r?`n")[$lineNumber - 1]
-            if (Test-AllowedHit -File $file.FullName -Type $pattern.Name -Line $line -Value $match.Value) {
+            $lineStart = $text.LastIndexOf("`n", [Math]::Max(0, $match.Index - 1)) + 1
+            if (Test-AllowedHit -File $file.FullName -Type $pattern.Name -Line $line -Value $match.Value -Index ($match.Index - $lineStart)) {
                 continue
             }
 
@@ -127,8 +159,16 @@ foreach ($file in $files) {
 }
 
 if ($hits.Count -gt 0) {
-    $hits | Format-Table -AutoSize
+    $safeHits = @($hits | Select-Object File, Line, Type)
+    if ($ReportPath) {
+        ConvertTo-Json -InputObject $safeHits -Depth 3 | Set-Content -LiteralPath $ReportPath -Encoding UTF8
+    }
+    $safeHits | Format-Table -AutoSize
     Write-Error "Privacy scan found suspicious content. Review before publishing."
+}
+
+if ($ReportPath) {
+    '[]' | Set-Content -LiteralPath $ReportPath -Encoding UTF8
 }
 
 Write-Host "Privacy scan passed for $root"
