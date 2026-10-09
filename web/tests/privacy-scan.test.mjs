@@ -53,3 +53,27 @@ test('a second credential assignment on a counter line remains blocked',()=>{
   assert.notEqual(result.status,0);
   assert.ok(result.report.some(hit=>hit.Type==='password-word'));
 });
+
+test('segmented Gutenberg contacts are public but nearby private phones stay blocked',()=>{
+  const contact='+1 (862) '+'621-9288';
+  const safe=scan({'web/public/reader/data/books/01/124.json':JSON.stringify({license:contact})});
+  assert.equal(safe.status,0,safe.stdout+safe.stderr);
+  const unsafe=scan({'web/public/reader/data/books/01/124.json':JSON.stringify({license:contact,privatePhone:firstPhone})});
+  assert.notEqual(unsafe.status,0);
+  assert.equal(unsafe.report.filter(hit=>hit.Type==='phone-like').length,1);
+});
+
+test('runtime sync credentials are expressions rather than stored secret literals',()=>{
+  const result=scan({
+    'web/public/reader/reader-sync.js':`const parsed = { ${counter}: parts[2] }; const created = { ${counter}: random(32) }; const cap = 512 * ${1024} - ${16};`,
+    'web/worker/reader-sync.mjs':`const ${counter} = request.headers.get('authorization');`,
+    'web/tests/reader-sync.test.mjs':`const ${counter} = 'cd'.repeat(32);`
+  });
+  assert.equal(result.status,0,result.stdout+result.stderr);
+});
+
+test('runtime sync exemptions do not hide a literal credential on the same line',()=>{
+  const result=scan({'web/public/reader/reader-sync.js':`const parsed = { ${counter}: parts[2] }; const ${counter} = "privateCredential";`});
+  assert.notEqual(result.status,0);
+  assert.equal(result.report.filter(hit=>hit.Type==='password-word').length,1);
+});

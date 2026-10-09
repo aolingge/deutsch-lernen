@@ -102,3 +102,12 @@ Authorization: execute all twelve packages, verify and deploy the configured web
 - Final deployment 795773b9-4efc-499f-85bb-912f6732eb0a passed all 353 details, full sitemap, 1200x630 PNG and public-field privacy at unchanged four-request concurrency. Exact earlier 503 cause remains unproven; no universal uptime claim.
 - Publication checker still red on 73 phone-like matches, no other finding types. New public favicon asset IDs context-reviewed; unchanged reader/loopback/SVG/public identifier contexts retained. No scanner bypass or unrelated reader changes, Git push, DNS/payment or account messaging.
 - Evidence: docs/regional-and-tools-audit-2026-10-05.md and docs/resource-directory-qa.md.
+
+## 2026-10-08 reader plan completion and live verification
+
+- Reader: 20 original books, 529 bounded segments; compact display/speech menus, collapsed mobile library, paragraph anchors and real old-layout migration. Local EPUB import/export, paragraph sharing and free browser/Edge natural-reading path delivered. Independent cloud TTS remains pending provider/budget selection.
+- Optional manual sync: gzip + AES-GCM in browser, capability hash/ciphertext/revision in existing D1, bounded record count/body/rate, merge and conflict handling. Imported books and linked vocabulary contexts excluded. Migration 0006 applied remotely through established deployment authentication. No new paid resource or credentials.
+- Verification: 50 Node tests, Astro 0/0/0, 391 pages; loading/library/completion/migration/accessibility/connections flows passed locally in three browsers where applicable. Actual old pixel migration checked at 375/1440 in all three engines.
+- Live version 4fdb80c1-0041-4320-b07d-241ee804db69: eight routes HTTP 200, twelve asset hashes match dist, public catalog 371/28 unchanged. Completion and connections flows passed Chromium/Firefox/WebKit; Chromium two isolated profiles validated real remote encrypted sync, merge, wrong key rejection and local-book exclusion.
+- Voice controls use API mocks; device voice quality and native mobile share chooser remain unverified. No universal EPUB-device compatibility claim. Repository publication heuristic remains red on historical research/cache/numeric contexts; changed-file private-data scan and diff checks passed. No Git push or DNS/payment/account-message actions.
+- Evidence and boundaries: docs/site-optimization-plan-20261008.md; local reports under web/output/reader-completion-qa and web/output/site-connections-qa (not committed).

@@ -23,9 +23,11 @@ def main():
             results.append({'path':path,'duplicates':duplicates,**scan})
             if path=='/reader/':
                 # Inspect revealed translations in all supported themes too.
+                if page.locator('#displayOptions').is_hidden(): page.locator('#displayToggle').click()
                 page.locator('[data-translation=show]').click()
                 page.wait_for_function("document.querySelector('#readingContent').dataset.ready==='true'")
                 for theme in ('paper','green','dark'):
+                    if page.locator('#displayOptions').is_hidden(): page.locator('#displayToggle').click()
                     page.locator(f'[data-theme={theme}]').click()
                     # The book cards animate their background for 200 ms.
                     page.wait_for_timeout(300)

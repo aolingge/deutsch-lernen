@@ -88,8 +88,10 @@ function Test-AllowedHit {
         if ($Value -eq '127.0.0.1' -and $normalized -match '\\web\\tests\\[^\\]+\.py$') { return $true }
         if ($normalized -match '\\web\\public\\og-directory\.svg$' -and $Value -eq '0 0 1200 630' -and $Line -match 'viewBox="0 0 1200 630"') { return $true }
         if ($normalized -match '\\web\\public\\reader\\index\.html$' -and $Value -eq '0 0 32 32' -and $Line -match "viewBox='0 0 32 32'") { return $true }
-        if ($normalized -match '\\web\\public\\reader\\data\\(?:books\.js|(?:books|translations)\\\d+\.json)$' -and
+        if ($normalized -match '\\web\\public\\reader\\data\\(?:books\.js|(?:books|translations)\\\d+(?:\\\d+)?\.json)$' -and
             $Value -in @('64-6221541', '+1 (862) 621-9288')) { return $true }
+        if ($normalized -match '\\web\\public\\reader\\reader-sync\.js$' -and
+            (Test-ContainedHit -Line $Line -Index $Index -Length $Value.Length -Expression '\b512\s*\*\s*(?<safe>1024\s*-\s*16)\b')) { return $true }
     }
     if ($Type -eq "phone-like" -and $Line -match '127\.0\.0\.1' -and $normalized -match '\\web\\e2e\\public_site\.py$') { return $true }
     if ($Type -eq "phone-like" -and $normalized -match "\\README(\.en)?\.md$" -and $Line -match "shields\.io") { return $true }
@@ -116,6 +118,13 @@ function Test-AllowedHit {
 
     if ($normalized -match '\\web\\public\\reader\\app\.js$' -and
         (Test-ContainedHit -Line $Line -Index $Index -Length $Value.Length -Expression '\btoken\s*(?::\s*0\b|=\s*(?:\+\+)?speechState\.token\b)')) { return $true }
+
+    if ($normalized -match '\\web\\public\\reader\\reader-sync\.js$' -and
+        (Test-ContainedHit -Line $Line -Index $Index -Length $Value.Length -Expression '\btoken\s*:\s*(?:parts\[2\]|random\(32\))')) { return $true }
+    if ($normalized -match '\\web\\worker\\reader-sync\.mjs$' -and
+        (Test-ContainedHit -Line $Line -Index $Index -Length $Value.Length -Expression '\btoken\s*=\s*request\.headers\.get\(''authorization''\)')) { return $true }
+    if ($normalized -match '\\web\\tests\\reader-sync\.test\.mjs$' -and
+        (Test-ContainedHit -Line $Line -Index $Index -Length $Value.Length -Expression '\btoken\s*=\s*''cd''\.repeat\(32\)')) { return $true }
 
     if ($normalized -match "\\.github\\workflows\\" -and $Line -match "secrets\.GITHUB_TOKEN") {
         return $true

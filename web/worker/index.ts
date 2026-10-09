@@ -5,9 +5,10 @@ import { validateResource } from '../src/lib/catalog-schema.mjs';
 import { isDirectoryResource, escapeHtml } from '../src/lib/resource-directory.mjs';
 import { renderDetailDocument } from '../src/lib/detail-document.mjs';
 import { readBody } from './read-body.mjs';
+import { readerSync } from './reader-sync.mjs';
 
 interface Statement { bind(...values: unknown[]): Statement; run(): Promise<{meta:{changes:number}}> ; first<T=Record<string,unknown>>():Promise<T|null>; all<T=Record<string,unknown>>():Promise<{results:T[]}>; }
-type Env = { DB?: {prepare(sql:string):Statement}; ASSETS: {fetch(request:Request):Promise<Response>}; VISIT_LIMIT?: {limit(input:{key:string}):Promise<{success:boolean}>}; ACCESS_ISSUER?: string; ACCESS_AUDIENCE?: string; ADMIN_EMAILS?: string };
+export type Env = { DB?: {prepare(sql:string):Statement}; ASSETS: {fetch(request:Request):Promise<Response>}; SYNC_LIMIT?: {limit(input:{key:string}):Promise<{success:boolean}>}; VISIT_LIMIT?: {limit(input:{key:string}):Promise<{success:boolean}>}; ACCESS_ISSUER?: string; ACCESS_AUDIENCE?: string; ADMIN_EMAILS?: string };
 const json = (body: unknown, status = 200, headers: Record<string,string> = {}) => new Response(JSON.stringify(body), { status, headers: { 'content-type': 'application/json; charset=utf-8', 'cache-control': 'no-store', 'x-content-type-options': 'nosniff', ...headers } });
 const jwksByIssuer = new Map<string, ReturnType<typeof createRemoteJWKSet>>();
 function publicRecord(item: ReturnType<typeof validateResource>) {
@@ -123,6 +124,7 @@ export default {
       if (path==='/api/public-catalog' && request.method==='GET') return json({schemaVersion:1,...(await publicCatalog(env))},200,{'cache-control':'public, max-age=30'});
       if (path==='/api/stats' && request.method==='GET') return await stats(env);
       if (path==='/api/visit' && request.method==='POST') return await visit(request,env);
+      if (path==='/api/reader-sync') return await readerSync(request,env);
       if (path.startsWith('/api/admin/')) return await admin(request,env,path);
       if (path.startsWith('/api/')) return json({error:'not-found'},404);
       if (path === '/sitemap.xml') {

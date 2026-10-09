@@ -6,6 +6,7 @@
   const dialog = $("vocabularyDialog"), term = $("vocabularyTerm"), meaning = $("vocabularyMeaning"), context = $("vocabularyContext"), list = $("vocabularyList"), status = $("vocabularyStatus"), source = $("vocabularySource");
   const tidy = (value, max) => String(value || "").replace(/\s+/g, " ").trim().normalize("NFC").slice(0, max);
   const identity = value => tidy(value, 160).toLocaleLowerCase("de");
+  const isPrivate = item => item?.privateSource === true || String(item?.bookId || "").startsWith("local-");
   const dictionaries = [["PONS 德中", "https://zh.pons.com/翻译/德语-中文/"], ["LEO 德中", "https://dict.leo.org/chinesisch-deutsch/"], ["DWDS 德语释义", "https://www.dwds.de/wb/"]];
   const books = window.GUTENBERG_BOOKS || [];
   let items = [], selected = null, origin = null, storageError = "", unreadableBackup = false;
@@ -14,8 +15,10 @@
     const word = tidy(item.term, 160);
     if (!word) return null;
     const book = books.find(book => book.id === item.bookId);
+    const localBookId = typeof item.bookId === "string" && /^local-[a-f0-9]{32}$/.test(item.bookId) ? item.bookId : "";
+    const context = tidy(item.context, 1200);
     const paragraph = Number(item.paragraph);
-    return { term: word, meaning: tidy(item.meaning, 1000), context: tidy(item.context, 1200), bookId: book?.id || "", paragraph: book && Number.isInteger(paragraph) && paragraph > 0 && paragraph <= (book.paragraphCount || book.paragraphs?.length || 0) ? paragraph : null };
+    return { term: word, meaning: tidy(item.meaning, 1000), context, bookId: book?.id || localBookId, privateSource: item.privateSource === true || Boolean(localBookId) || (!book && Boolean(context)), paragraph: book && Number.isInteger(paragraph) && paragraph > 0 && paragraph <= (book.paragraphCount || book.paragraphs?.length || 0) ? paragraph : null };
   }
   try {
     const saved = JSON.parse(localStorage.getItem(key) || "[]");
@@ -78,7 +81,7 @@
   new MutationObserver(() => { selected = null; }).observe($("readingContent"), { childList: true });
   $("vocabularyToggle").addEventListener("click", () => {
     captureSelection();
-    if (selected) { const existing = items.find(item => identity(item.term) === identity(selected.term)); loadItem({ ...selected, meaning: existing?.meaning || "" }); }
+    if (selected) { const existing = items.find(item => identity(item.term) === identity(selected.term)); loadItem({ ...selected, meaning: existing?.meaning || "", privateSource: isPrivate(existing) }); }
     else { origin = null; term.value = meaning.value = context.value = ""; updateDictionaries(); updateSource(); }
     status.textContent = storageError; render(); dialog.showModal(); term.focus();
   });
@@ -127,5 +130,26 @@
     } catch { status.textContent = "导入失败：请选择本站导出的 JSON 备份（最多 2000 条、8 MB）。原有生词保持不变。"; }
     finally { input.value = ""; }
   });
+  window.ReaderVocabulary = {
+    exportItems: () => { if (unreadableBackup) throw Error('原有生词损坏，请先恢复有效 JSON 备份。'); return items.map(item => ({...item})); },
+    mergeItems(incoming, persist = false, base = items) {
+      if (unreadableBackup) throw Error('原有生词损坏，请先恢复有效 JSON 备份。');
+      if (!Array.isArray(incoming) || incoming.length > 2000) throw Error('生词数据格式错误。');
+      const cleanItems = incoming.map(sanitize); if (cleanItems.some(item => !item)) throw Error('生词数据格式错误。');
+      const merged = new Map(base.map(item => [identity(item.term), {...item}]));
+      for (const item of cleanItems) {
+        const old = merged.get(identity(item.term));
+        if (!old) merged.set(identity(item.term), item);
+        else {
+          const notes = old.meaning.split(' / ').filter(Boolean);
+          for (const note of item.meaning.split(' / ').filter(Boolean)) if (!notes.includes(note)) notes.push(note);
+          const meaning = notes.join(' / '); if (meaning.length > 1000) throw Error('合并释义过长，请用 JSON 备份保留两份数据。');
+          merged.set(identity(item.term), {...(old.context ? old : item), meaning, privateSource: isPrivate(old) || isPrivate(item)});
+        }
+      }
+      if (merged.size > 2000) throw Error('合并超过 2000 条，请先备份并整理生词。');
+      const next = [...merged.values()]; if (persist) { if (!store(next)) throw Error('生词保存失败，请保留备份。'); render(); } return next;
+    }
+  };
   $("vocabularyToggle").disabled = false;
 })();
