@@ -1,0 +1,74 @@
+[
+  {
+    "id": "13",
+    "title": "Märchen und Erzählungen für Anfänger. Erster Teil",
+    "sourceUrl": "https://www.gutenberg.org/ebooks/35794",
+    "downloadUrl": "https://www.gutenberg.org/ebooks/35794.txt.utf-8",
+    "licenseUrl": "https://www.gutenberg.org/policy/license.html",
+    "downloadedAt": "2026-10-06T10:36:41.7328033Z",
+    "sha256": "8d9695cdb2cba0458f2b5dd949c83d837e241943dfc0fc9e425b885312588228"
+  },
+  {
+    "id": "14",
+    "title": "Märchen und Erzählungen für Anfänger. Zweiter Teil",
+    "sourceUrl": "https://www.gutenberg.org/ebooks/45189",
+    "downloadUrl": "https://www.gutenberg.org/ebooks/45189.txt.utf-8",
+    "licenseUrl": "https://www.gutenberg.org/policy/license.html",
+    "downloadedAt": "2026-10-06T10:36:45.6116301Z",
+    "sha256": "1aad45fba9d7cb717bd9374baa79f6998d0c37b0f4772e43c2b5fd9cbf1bd85c"
+  },
+  {
+    "id": "15",
+    "title": "Deutsche Märchen gesammelt durch die Brüder Grimm",
+    "sourceUrl": "https://www.gutenberg.org/ebooks/77905",
+    "downloadUrl": "https://www.gutenberg.org/ebooks/77905.txt.utf-8",
+    "licenseUrl": "https://www.gutenberg.org/policy/license.html",
+    "downloadedAt": "2026-10-06T10:36:49.0152187Z",
+    "sha256": "3cc443c1f71bc23a6a33f566b8de3dca7c49604d81be1696d1aef5137c579e3f"
+  },
+  {
+    "id": "16",
+    "title": "Märchen-Almanach auf das Jahr 1826",
+    "sourceUrl": "https://www.gutenberg.org/ebooks/6638",
+    "downloadUrl": "https://www.gutenberg.org/ebooks/6638.txt.utf-8",
+    "licenseUrl": "https://www.gutenberg.org/policy/license.html",
+    "downloadedAt": "2026-10-06T10:36:52.0294689Z",
+    "sha256": "0d585c02732f1efcf4fac238e647ec95ab7efd59438e0bbefae04eed5fbbcdb4"
+  },
+  {
+    "id": "17",
+    "title": "Märchen-Almanach auf das Jahr 1827",
+    "sourceUrl": "https://www.gutenberg.org/ebooks/6639",
+    "downloadUrl": "https://www.gutenberg.org/ebooks/6639.txt.utf-8",
+    "licenseUrl": "https://www.gutenberg.org/policy/license.html",
+    "downloadedAt": "2026-10-06T10:36:54.8156620Z",
+    "sha256": "76b72947c9fef3198ad76b4525d9e6b3bfa5907148ab142f675a4f4292bf5197"
+  },
+  {
+    "id": "18",
+    "title": "Märchen-Almanach auf das Jahr 1828",
+    "sourceUrl": "https://www.gutenberg.org/ebooks/6640",
+    "downloadUrl": "https://www.gutenberg.org/ebooks/6640.txt.utf-8",
+    "licenseUrl": "https://www.gutenberg.org/policy/license.html",
+    "downloadedAt": "2026-10-06T10:36:57.8242359Z",
+    "sha256": "1e12446a6519fad121fc581c7d29bd36f59dce2e49e373d8d6cfa2787b7e2d28"
+  },
+  {
+    "id": "19",
+    "title": "Aus dem Leben eines Taugenichts",
+    "sourceUrl": "https://www.gutenberg.org/ebooks/35312",
+    "downloadUrl": "https://www.gutenberg.org/ebooks/35312.txt.utf-8",
+    "licenseUrl": "https://www.gutenberg.org/policy/license.html",
+    "downloadedAt": "2026-10-06T10:37:00.7906276Z",
+    "sha256": "de657654648ca6f8dcda1ce2a289b5f9376e7f67c3f6a30eb241c2fcd51fbd25"
+  },
+  {
+    "id": "20",
+    "title": "Ludwig Bechsteins Märchenbuch",
+    "sourceUrl": "https://www.gutenberg.org/ebooks/63465",
+    "downloadUrl": "https://www.gutenberg.org/ebooks/63465.txt.utf-8",
+    "licenseUrl": "https://www.gutenberg.org/policy/license.html",
+    "downloadedAt": "2026-10-06T10:37:03.8335857Z",
+    "sha256": "8fa8dc709df0b92b2db914a70f79e2cb6ba717c47f194bfa48e062ba2bdf6ea0"
+  }
+]

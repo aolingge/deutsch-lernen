@@ -1,22 +1,6 @@
 ---
-// @ts-nocheck
-import { accessLabels, categoryById, priceLabels } from '../data';
-const { resource, compact = false } = Astro.props;
-/** @type {import('../types').Resource} */
-const item = resource;
-const category = categoryById.get(item.primaryCategory);
-const statusLabel = item.linkStatus === 'restricted' ? '自动检查受限' : item.linkStatus === 'broken' ? '待替换' : item.linkStatus === 'ok' ? '已核验' : '待核验';
+import { categories } from '../data';
+import { resourceCard } from '../lib/resource-directory.mjs';
+const { resource } = Astro.props;
 ---
-<article class:list={['resource-card', { compact }]}>
-  <div class="card-top"><span class="eyebrow">{category?.accent ?? '资源'}</span><span class:list={['check-status', item.linkStatus]}>{statusLabel}</span></div>
-  <h3><a href={`/resource/${item.slug}/`}>{item.titleZh}</a></h3>
-  {item.titleOriginal && <p class="original">{item.titleOriginal}</p>}
-  <p class="description">{item.descriptionZh}</p>
-  <p class="use-tip"><span>怎么用</span>{item.howToUseZh}</p>
-  <div class="chips">{item.levels.map((level: string) => <span>{level}</span>)}{item.skills.slice(0, 2).map((skill: string) => <span>{skill}</span>)}</div>
-  <div class="card-meta"><span>{priceLabels[item.price]}</span><span>{accessLabels[item.access]}</span><span>{item.sourceName}</span></div>
-  <div class="card-actions"><a class="text-link" href={`/resource/${item.slug}/`}>查看说明 <span>↗</span></a><a class="external" href={item.url} target="_blank" rel="noreferrer">打开原站</a></div>
-</article>
-<style>
-.resource-card{background:white;border:1px solid var(--line);border-radius:4px;padding:20px;display:flex;flex-direction:column;min-height:350px;box-shadow:0 7px 20px rgba(27,46,41,.035);transition:border-color .16s,box-shadow .16s,transform .16s}.resource-card:hover{border-color:#c48679;box-shadow:0 12px 25px rgba(27,46,41,.08);transform:translateY(-2px)}.resource-card.compact{min-height:270px;padding:17px}.card-top,.card-meta,.card-actions{display:flex;align-items:center;justify-content:space-between;gap:10px}.eyebrow{font:700 11px 'DM Mono',monospace;color:var(--blue);text-transform:uppercase;letter-spacing:0}.check-status{font:500 10px 'DM Mono',monospace;color:#2e7b53}.check-status.restricted{color:#9a6b16}.check-status.broken{color:var(--red)}h3{font-size:19px;line-height:1.3;margin:17px 0 2px;letter-spacing:0}h3 a{text-decoration:none}.original{color:var(--muted);font:11px 'DM Mono',monospace;margin:0 0 11px}.description{color:#5b6679;font-size:13px;line-height:1.7;margin:0 0 10px}.use-tip{font-size:11px;line-height:1.65;color:#4d6053;background:#f0eee5;border-left:2px solid #d1ad43;padding:8px 9px;margin:0 0 13px}.use-tip span{display:block;font:700 9px 'DM Mono',monospace;color:#9b4939;margin-bottom:3px}.chips{display:flex;flex-wrap:wrap;gap:6px;margin:auto 0 16px}.chips span{background:#e7efe8;border-radius:3px;color:#3e6048;font-size:11px;padding:4px 7px}.card-meta{border-top:1px solid #edf0f5;padding-top:12px;color:#7a8494;font-size:11px;flex-wrap:wrap;justify-content:flex-start}.card-actions{border-top:1px solid #edf0f5;margin-top:14px;padding-top:13px;font-size:12px}.text-link{font-weight:700;color:var(--blue);text-decoration:none}.text-link span{font-size:15px}.external{color:#7a8494;text-decoration:none}.external:hover{text-decoration:underline}
-</style>
+<Fragment set:html={resourceCard(resource, categories)} />

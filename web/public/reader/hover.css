@@ -1,0 +1,11 @@
+.reading-content[data-translation-mode="show"] .translation{filter:none;cursor:text;user-select:text}
+.reading-content[data-translation-mode="hide"] .translation{display:none}
+.reading-content[data-translation-mode="hover"] .translation{filter:blur(7px)}
+.reading-content[data-translation-mode="hover"] .translation:hover,.reading-content[data-translation-mode="hover"] .translation:focus-visible,.reading-content[data-translation-mode="hover"] .translation.is-revealed{filter:none}
+.reading-content[data-translation-mode="hover"] .reading-block:hover .translation{filter:none}
+.reading-content .translation{font-family:"Noto Serif SC","Songti SC",serif;font-size:.68em;line-height:1.7;color:var(--muted);cursor:help;vertical-align:baseline;transition:none;user-select:none}
+.reading-content .translation.short{display:inline-block;margin-left:.45em}
+.reading-content .translation.long{display:block;border-left:2px solid var(--accent-soft);padding:5px 0 5px 16px;margin-top:8px}
+.reading-content .translation[hidden]{display:none}
+.reading-content .translation:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+@media(max-width:600px){.reading-content .translation{cursor:pointer}.reading-content[data-translation-mode="hover"] .translation:hover{filter:blur(7px)}.reading-content[data-translation-mode="hover"] .translation:focus-visible,.reading-content[data-translation-mode="hover"] .translation.is-revealed{filter:none}}

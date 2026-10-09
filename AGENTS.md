@@ -8,6 +8,7 @@ Primary language: PowerShell
 ## Default Workflow
 
 - Keep changes small and focused.
+- After task-specific verification, create a focused local commit without asking again; stage only related changes. Push and other remote Git actions require explicit authorization.
 - Read existing README, package files, build scripts, and workflow files before editing.
 - Prefer existing project conventions over introducing new structure.
 - Do not add secrets, tokens, cookies, private URLs, private paths, or credentials to repository files, issue comments, PR comments, fixtures, or docs.

@@ -1,0 +1,35 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { resources, priceLabels, accessLabels } from '../../data';
+const connections = [
+  { title: '生词与复习', description: '把阅读中遇到的词带到你喜欢的复习工具。', entries: [
+    ['anki', '本站生词本 → Anki TSV', '桌面 Anki 支持文本导入；AnkiMobile iOS 是另购应用。'],
+    ['ankiweb', 'Anki 的跨设备同步', '需 Anki 账号；本站生词通过文件导入，不自动同步。'],
+    ['readlang', '本站 TXT → 导入阅读', '查词、词汇复习和文本导入；需注册，额度以原站为准。'],
+    ['lingq', '本站原文 → 手动导入', '音频文本库、导入和词汇复习；部分能力需订阅。'],
+    ['lute-reader', '本站 TXT → 本地阅读器', '开源生词管理，需要自行安装；其直连 Anki 需要额外配置。'],
+  ]},
+  { title: '视频与字幕', description: '从文字阅读延伸到真实语速的字幕和听力。', entries: [
+    ['language-reactor', '视频 → 字幕查词', '浏览器扩展与字幕工具；部分保存和翻译功能收费。'],
+  ]},
+  { title: '词典与表达', description: '查原词、词形、例句和表达，按需要打开原站。', entries: [
+    ['dwds', '德语词 → 德语释义与语料', '本站生词本可打开对应查询；不是德中翻译。'],
+    ['dict-cc-app', '手机 → 离线词典', '离线词库由原站应用提供；具体语言对和费用请先查看。'],
+    ['deepl-translator', '原文 → 文本翻译', '进入原站后自行粘贴；本站不自动发送原文。'],
+    ['deepl-write', '自己的德语 → 表达改写', '进入原站后自行粘贴；免费与付费额度以原站为准。'],
+  ]},
+];
+const byId = new Map(resources.map(resource => [resource.id, resource]));
+const groups = connections.map(group => ({ ...group, entries: group.entries.map(([id, connection, note]) => {
+  const resource = byId.get(id); if (!resource) throw new Error(`Missing app resource: ${id}`);
+  return { resource, connection, note };
+}) }));
+---
+<BaseLayout title="德语学习关联应用" description="阅读、生词、Anki、词典、字幕与表达工具，标注本站关联方式、费用和访问条件。" styles={['/reading.css']}>
+  <section class="reading-intro shell"><div><p class="eyebrow">APPS & CONNECTIONS</p><h1>把工具连起来<span>.</span></h1><p>阅读、查词、复习与字幕工具。先看能做什么，再打开原站。</p><div class="reading-actions"><a class="reading-primary" href="/reader/">阅读与生词本 →</a><a href="/reading/">阅读与听书资源 →</a></div></div><div class="reading-count"><strong>10</strong><span>应用与工具</span><small>复用主站已收录资源</small></div></section>
+  <div class="reading-layout shell"><nav class="reading-index" aria-label="应用主题"><p>按需要寻找</p>{groups.map((group, index) => <a href={`#apps-${index}`}><span aria-hidden="true">0{index + 1}</span>{group.title}</a>)}<a class="reading-home" href="/">← 返回主站目录</a></nav><div class="reading-groups">
+    {groups.map((group, index) => <section id={`apps-${index}`} class="reading-collection" aria-labelledby={`apps-title-${index}`}><header><h2 id={`apps-title-${index}`}>{group.title}</h2><p>{group.description}</p></header><div class="reading-resources">{group.entries.map(({resource, connection, note}) => <article class="reading-resource" data-app-resource={resource.id}><div class="reading-resource-top"><span>{priceLabels[resource.price]}</span><span>{accessLabels[resource.access]}</span></div><h3><a href={resource.url} target="_blank" rel="noopener noreferrer">{resource.titleZh}<span aria-hidden="true">↗</span></a></h3><p class="reading-original">{resource.titleOriginal}</p><div class="reading-tags"><span>{connection}</span></div><p class="reading-description">{note}</p><details><summary>费用与访问详情</summary><p>{resource.costNoteZh || priceLabels[resource.price]}</p><p>{resource.accessNoteZh || accessLabels[resource.access]}</p><a href={`/resource/${resource.slug}/`}>查看资源信息 →</a></details></article>)}</div></section>)}
+    <section class="reading-collection" aria-labelledby="native-reader-title"><header><h2 id="native-reader-title">自然朗读与电子书</h2><p>阅读器支持德语原文 EPUB 导出和设备本地 EPUB 导入。</p></header><div class="reading-resources"><article class="reading-resource"><h3><a href="https://www.microsoft.com/en-us/edge/features/read-aloud" target="_blank" rel="noopener noreferrer">Microsoft Edge 朗读 ↗</a></h3><p class="reading-description">在 Edge 中打开本站纯原文视图，右键正文选择“朗读”。自然音色通常需要联网；可用声音由设备和浏览器决定，本站不会伪装成云端语音服务。</p><a href="/reader/?listen=1">打开纯原文视图 →</a></article><article class="reading-resource"><h3>EPUB 与电子书设备</h3><p class="reading-description">本站“目录 · 导入 · 分享”可下载整本德语原文 EPUB。导入你的电子书应用或阅读器，字体、语音和同步能力由应用提供。本站导入限无加密文字 EPUB，不包含图片排版。</p><a href="/reader/">下载或导入 EPUB →</a></article></div></section>
+    <p class="reading-footnote">本站提供入口和文件导出。账号、付费、安装及第三方同步由你在原站选择。<a href="/reader/">查词入口在阅读器的「查词 · 生词本」中 →</a></p>
+  </div></div>
+</BaseLayout>

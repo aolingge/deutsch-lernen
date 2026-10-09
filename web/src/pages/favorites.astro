@@ -1,0 +1,5 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import ResourceDirectory from '../components/ResourceDirectory.astro';
+---
+<BaseLayout title="我的收藏"><ResourceDirectory title="我的收藏" description="收藏保存在当前浏览器，无需登录。" saved><div class="favorites-tools" slot="tools" aria-label="收藏备份"><button type="button" data-export-favorites>导出收藏</button><label class="file-button">导入收藏<input type="file" accept="application/json,.json" data-import-favorites aria-label="导入收藏 JSON 文件" /></label><span id="favorites-note" role="status" aria-atomic="true"></span></div></ResourceDirectory></BaseLayout>

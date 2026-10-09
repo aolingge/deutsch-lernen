@@ -4,6 +4,9 @@
   "private": true,
   "type": "module",
   "scripts": {
+    "predev": "node scripts/prepare-public-snapshot.mjs",
+    "prebuild": "node scripts/prepare-public-snapshot.mjs",
+    "precheck": "node scripts/prepare-public-snapshot.mjs",
     "dev": "astro dev",
     "build": "astro build && node scripts/prepare-assets.mjs",
     "preview": "astro preview",
@@ -12,6 +15,10 @@
     "worker:types": "wrangler types",
     "check": "astro check",
     "test": "node scripts/compile-worker-test.mjs && node --test tests/*.test.mjs",
+    "qa:cross-browser": "python tests/cross-browser-smoke.py",
+    "qa:accessibility": "python tests/accessibility-smoke.py",
+    "qa:performance": "python tests/performance-smoke.py",
+    "links:live": "node scripts/check-resource-links.mjs --live=https://deutsch-lernen-resource-hub.pirostonelsonrx688.workers.dev/api/public-catalog --report=.wrangler/resource-links-live.json",
     "validate:catalog": "node scripts/validate-catalog.mjs",
     "verify": "npm run validate:catalog && npm run check && npm run test && npm run build"
   },
@@ -20,13 +27,14 @@
     "jose": "^6.1.0",
     "typescript": "^5.9.3"
   },
-  "overrides": {
-    "sharp": "0.35.5"
-  },
   "devDependencies": {
+    "axe-core": "4.13.0",
     "@astrojs/check": "^0.9.4",
     "@types/node": "^22.15.0",
     "wrangler": "4.144.0",
     "esbuild": "0.28.2"
+  },
+  "overrides": {
+    "sharp": "0.35.5"
   }
 }

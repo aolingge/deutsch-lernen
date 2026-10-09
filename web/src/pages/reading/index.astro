@@ -1,0 +1,46 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { resources, priceLabels, accessLabels } from '../../data';
+import collections from '../../../data/reading-collections.json';
+const byId = new Map(resources.map(resource => [resource.id, resource]));
+const groups = collections.map(group => ({...group, entries: group.resources.map(id => {
+  const entry = byId.get(id);
+  if (!entry) throw new Error(`Missing reading collection resource: ${id}`);
+  return entry;
+})}));
+const count = new Set(collections.flatMap(group => group.resources)).size;
+---
+<BaseLayout title="德语阅读与听书" description="德语短故事、真人朗读、分级小说、电子书借阅和现成阅读工具，附费用、访问与等级说明。" styles={['/reading.css']}>
+  <section class="reading-intro shell">
+    <div><p class="eyebrow">LESEN & HÖREN / STORIES, BOOKS, READERS</p><h1>找一本想读的书<span>.</span></h1><p>短故事、真人朗读、分级小说与现成阅读器。<br />从原站打开，先看费用和难度，再选喜欢的内容。</p>
+      <div class="reading-actions"><a class="reading-primary" href="/reader/">打开本站阅读库 →</a><a href="/?category=reading">全部阅读资源 ↗</a></div>
+    </div>
+    <div class="reading-count"><strong>{count}</strong><span>精选入口</span><small>5 个主题 · A1 到进阶原著</small></div>
+  </section>
+  <form class="reading-filters shell" id="readingFilters" role="search" aria-label="筛选精选阅读资源">
+    <label>关键词<input name="q" type="search" placeholder="书名、作者、故事或工具" autocomplete="off" /></label>
+    <label>等级<select name="level"><option value="">全部等级</option>{['A1','A2','B1','B2','C1','C2'].map(level => <option>{level}</option>)}</select></label>
+    <label>费用<select name="price"><option value="">全部费用</option>{Object.entries(priceLabels).map(([value, label]) => <option value={value}>{label}</option>)}</select></label>
+    <button type="reset">清除筛选</button><span id="readingFilterCount" role="status" aria-live="polite">{count} 个入口</span>
+  </form>
+  <div class="reading-layout shell">
+    <nav class="reading-index" aria-label="阅读资源主题"><p>按需要寻找</p>{groups.map((group, index) => <a href={`#${group.id}`}><span aria-hidden="true">0{index + 1}</span>{group.title.split(' · ')[0]}</a>)}<a class="reading-home" href="/">← 返回主站目录</a></nav>
+    <div class="reading-groups">
+      {groups.map((group, index) => <section id={group.id} class="reading-collection" aria-labelledby={`${group.id}-title`}>
+        <header><p class="eyebrow">COLLECTION / 0{index + 1}</p><h2 id={`${group.id}-title`}>{group.title}</h2><p>{group.description}</p></header>
+        <div class="reading-resources">{group.entries.map(entry => <article class="reading-resource" data-reading-resource={entry.id} data-search={`${entry.titleZh} ${entry.titleOriginal} ${entry.descriptionZh} ${entry.sourceName}`} data-levels={entry.levels.join(',')} data-price={entry.price}>
+          <div class="reading-resource-top"><span>{priceLabels[entry.price]}</span><span>{accessLabels[entry.access]}</span></div>
+          <h3><a href={entry.url} target="_blank" rel="noopener noreferrer">{entry.titleZh}<span aria-hidden="true">↗</span></a></h3>
+          <p class="reading-original">{entry.titleOriginal}</p>
+          <p class="reading-description">{entry.descriptionZh}</p>
+          <div class="reading-tags"><span>{entry.levels.length ? entry.levels.join(' · ') : '按作品选难度'}</span><span>{entry.levelBasis === 'official' ? '官方标级' : entry.levelBasis === 'editorial' ? '编辑参考' : '未统一标级'}</span><span>{(entry.mediaTypes?.length ? entry.mediaTypes : entry.formats).join(' · ')}</span></div>
+          {entry.costNoteZh && <p class="reading-cost">{entry.costNoteZh}</p>}
+          <details><summary>访问与资源信息</summary><p>{entry.accessNoteZh || accessLabels[entry.access]}</p>{entry.readingDifficultyZh && <p>{entry.readingDifficultyZh}</p>}{entry.linkStatus !== 'ok' && <p>{entry.linkStatus === 'restricted' ? '原站限制自动访问，普通浏览器的访问结果可能不同。' : entry.linkStatus === 'broken' ? '链接检查发现异常，详情中保留核验记录。' : '链接尚未完成直接核验。'}</p>}<a href={`/resource/${entry.slug}/`}>查看完整资源信息 →</a></details>
+        </article>)}</div>
+      </section>)}
+      <p id="readingEmpty" hidden>没有匹配的资源。可减少关键词或清除筛选。</p>
+      <p class="reading-footnote">本站连接原站。第三方费用、试用、借阅和使用条件以原站为准；参考等级不代表你的测评结果。<a href="/apps/">关联应用 →</a> · <a href="/sources/">收录说明 →</a></p>
+    </div>
+  </div>
+</BaseLayout>
+<script is:inline src="/reading-filters.js" defer></script>

@@ -1,16 +1,31 @@
 ---
-import { categories, levelLabels, resources } from '../data';
-const skills = [...new Set(resources.flatMap((resource) => resource.skills))].sort();
-const exams = [...new Set(resources.flatMap((resource) => resource.exams))].filter(Boolean).sort();
+import { icon } from '../lib/icons.mjs';
+import { levelLabels, resources } from '../data';
+import { priceLabels, accessLabels } from '../lib/resource-directory.mjs';
+import { providerKey } from '../lib/catalog-facets.mjs';
+const prices = [...new Set(resources.map((r) => r.price))];
+const access = [...new Set(resources.map((r) => r.access))];
+const skills = [...new Set(resources.flatMap((r) => r.skills))].sort();
+const exams = [...new Set(resources.flatMap((r) => r.exams))].filter((v) => v && v !== '非考试专项').sort();
+const formats = [...new Set(resources.flatMap((r) => r.mediaTypes?.length ? r.mediaTypes : r.formats))].sort();
+const providers = [...new Map(resources.map(r => [providerKey(r), r.sourceName]))].sort((a, b) => a[1].localeCompare(b[1], 'de'));
 const { basePath = '/resources/' } = Astro.props;
 ---
-<form class="filters" action={basePath} method="get">
-  <label class="search-label"><span>搜索资源</span><input name="q" value={Astro.url.searchParams.get('q') ?? ''} placeholder="课程、B1、听力、词典…" /></label>
-  <label><span>等级</span><select name="level"><option value="">全部等级</option>{levelLabels.map((level) => <option value={level} selected={Astro.url.searchParams.get('level') === level}>{level}</option>)}</select></label>
-  <label><span>分类</span><select name="category"><option value="">全部类别</option>{categories.map((category) => <option value={category.id} selected={Astro.url.searchParams.get('category') === category.id}>{category.name}</option>)}</select></label>
-  <label><span>技能</span><select name="skill"><option value="">全部技能</option>{skills.map((skill) => <option value={skill} selected={Astro.url.searchParams.get('skill') === skill}>{skill}</option>)}</select></label>
-  <label><span>考试</span><select name="exam"><option value="">全部考试</option>{exams.map((exam) => <option value={exam} selected={Astro.url.searchParams.get('exam') === exam}>{exam}</option>)}</select></label>
-  <label><span>费用</span><select name="price"><option value="">全部费用</option><option value="free">免费</option><option value="freemium">部分免费</option><option value="paid">付费</option><option value="unknown">待核实</option></select></label><button type="submit">应用筛选</button><a class="reset" href={basePath}>重置</a>
+<form id="resource-filters" class="filters" action={basePath} method="get">
+  <div class="search-row"><label class="search-box"><span aria-hidden="true" class="search-icon" set:html={icon('search')} /><span class="sr-only">搜索资源</span><input type="search" name="q" placeholder="搜索名称、关键词或网站…" autocomplete="off" /><kbd aria-hidden="true">/</kbd></label><button type="submit" class="search-submit">搜索</button></div>
+  <input type="hidden" name="category" />
+  <div class="filter-row primary-filters">
+    <label><span>形式</span><select name="format" aria-label="资源形式"><option value="">全部形式</option>{formats.map((format) => <option value={format}>{format}</option>)}</select></label>
+    <label><span>费用</span><select name="price" aria-label="费用"><option value="">全部费用</option>{prices.map((price) => <option value={price}>{priceLabels[price]}</option>)}</select></label>
+  </div>
+  <details class="advanced-filters" data-advanced-filters>
+    <summary><span class="filter-summary-icon" aria-hidden="true" set:html={icon('list')} /><span>更多筛选</span><span class="filter-count" data-advanced-count hidden></span><span class="disclosure-arrow" aria-hidden="true">⌄</span></summary>
+    <div class="filter-row">
+    <label><span>语言等级</span><select name="level" aria-label="等级"><option value="">全部等级</option>{levelLabels.map((level) => <option value={level}>{level}</option>)}</select></label>
+    <label><span>技能 / 主题</span><select name="skill"><option value="">全部主题</option>{skills.map((skill) => <option value={skill}>{skill}</option>)}</select></label>
+    <label><span>考试</span><select name="exam"><option value="">全部考试</option>{exams.map((exam) => <option value={exam}>{exam}</option>)}</select></label>
+    <label><span>访问</span><select name="access"><option value="">全部条件</option>{access.map((value) => <option value={value}>{accessLabels[value]}</option>)}</select></label>
+    <label><span>来源</span><select name="provider"><option value="">全部来源</option>{providers.map(([id, name]) => <option value={id}>{name}</option>)}</select></label>
+    </div>
+  </details>
 </form>
-<style>.filters{background:#eef3fa;border:1px solid #d7e0ee;border-radius:10px;padding:15px;display:flex;gap:10px;align-items:end;flex-wrap:wrap}.filters label{display:flex;flex-direction:column;gap:5px;flex:1;min-width:125px}.filters label span{font:500 10px 'DM Mono',monospace;color:#607089;text-transform:uppercase;letter-spacing:.06em}.filters input,.filters select{height:39px;border:1px solid #cfd9e8;border-radius:6px;background:white;padding:0 10px;color:var(--ink);font:13px Manrope}.filters .search-label{flex:2;min-width:220px}.filters button{height:39px;border:0;border-radius:6px;background:var(--blue);color:white;font-weight:700;padding:0 17px;cursor:pointer}.reset{font-size:12px;color:#627087;text-decoration:none;padding:12px 3px}.reset:hover{text-decoration:underline}@media(max-width:600px){.filters label,.filters .search-label{min-width:calc(50% - 5px)}.filters button{width:100%}.reset{margin:auto}}
-</style>

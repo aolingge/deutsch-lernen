@@ -1,32 +1,23 @@
 ---
-// @ts-nocheck
-const { title = '德语学习导航', description = '把德语课程、考试、新闻和学习工具整理成一张清晰的地图。' } = Astro.props;
+const { title = '德国资源导航', description = '德语学习、德国生活、住房、工作、交通、办事与社区资源目录。', styles = [] } = Astro.props;
 import PageViewTracker from '../components/PageViewTracker.astro';
-import '../client/catalog.css';
-const currentPath = Astro.url.pathname;
+const path = Astro.url.pathname;
+const canonicalPath = ['/', '/resources/', '/study/'].includes(path) ? '/' : path;
+const canonical = new URL(canonicalPath, Astro.site);
+const privatePage = ['/favorites/', '/my-study/', '/admin/', '/resource/view/'].includes(path);
+const catalog = ['/', '/resources/', '/study/'].includes(path) || path.startsWith('/resource/') || path.startsWith('/levels/');
+const collectionPage = ['/', '/resources/', '/study/', '/exams/', '/news/', '/sources/', '/reading/', '/apps/'].includes(path) || path.startsWith('/levels/');
+const structuredData = JSON.stringify({
+  '@context': 'https://schema.org',
+  '@type': collectionPage ? 'CollectionPage' : 'WebPage',
+  name: `${title} · Deutschland Ressourcen`,
+  description,
+  url: canonical.href,
+  isPartOf: { '@type': 'WebSite', name: 'Deutschland Ressourcen', url: new URL('/', Astro.site).href },
+}).replace(/</g, '\\u003c');
 ---
 <!doctype html>
 <html lang="zh-CN">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
-    <meta name="description" content={description} />
-    <title>{title} · Deutsch Lernen</title>
-    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231d4ed8'/%3E%3Cpath d='M17 18h30v8H26v6h17v8H26v6h21v8H17z' fill='white'/%3E%3C/svg%3E" />
-  </head>
-  <body>
-    <a class="skip-link" href="#main-content">跳到主要内容</a>
-    <header class="site-header">
-      <a class="brand" href="/"><span class="brand-mark">DE</span><span>德语学习导航<small>Deutsch Lernen</small></span></a>
-      <nav aria-label="主导航"><a class:active={currentPath.startsWith('/study')} aria-current={currentPath.startsWith('/study') ? 'page' : undefined} href="/study/">学习路线</a><a class:active={currentPath.startsWith('/resources') || currentPath.startsWith('/resource/')} aria-current={currentPath.startsWith('/resources') || currentPath.startsWith('/resource/') ? 'page' : undefined} href="/resources/">资源库</a><a class:active={currentPath.startsWith('/exams')} aria-current={currentPath.startsWith('/exams') ? 'page' : undefined} href="/exams/">考试专区</a><a class:active={currentPath.startsWith('/my-study')} aria-current={currentPath.startsWith('/my-study') ? 'page' : undefined} href="/my-study/">我的学习</a></nav>
-    </header>
-    <main id="main-content"><slot /></main>
-    <footer class="site-footer"><div><strong>Deutsch Lernen</strong><p>为中文学习者整理的德语学习与考试资源地图。</p></div><div><a href="/sources/">来源与核验</a><a href="/privacy/">隐私说明</a><a href="/admin/">资源管理</a><a href="https://github.com/aolingge/deutsch-lernen">GitHub 仓库</a></div><p class="footer-note">链接由原站提供，本网站不镜像第三方教材或课程内容。</p></footer>
-    <PageViewTracker />
-  </body>
-</html>
+<head><meta charset="UTF-8" /><meta name="viewport" content="width=device-width" /><meta name="description" content={description} /><link rel="canonical" href={canonical} /><meta property="og:title" content={`${title} · Deutschland Ressourcen`} /><meta property="og:description" content={description} /><meta property="og:url" content={canonical} /><meta property="og:type" content="website" /><meta property="og:locale" content="zh_CN" /><meta property="og:image" content={new URL('/og-directory.png', Astro.site)} /><meta name="twitter:card" content="summary_large_image" /><meta name="twitter:image" content={new URL('/og-directory.png', Astro.site)} />{privatePage && <meta name="robots" content="noindex, follow" />}<link rel="stylesheet" href="/directory.css" />{styles.map((href: string) => <link rel="stylesheet" href={href} />)}<meta name="theme-color" content="#214e40" /><title>{title} · Deutschland Ressourcen</title><script type="application/ld+json" set:html={structuredData}></script><link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%23214e40'/%3E%3Cpath d='M17 18h30v8H26v6h17v8H26v6h21v8H17z' fill='white'/%3E%3C/svg%3E" /></head>
+<body><a class="skip-link" href="#main-content">跳到主要内容</a><header class="site-header shell"><a class="brand" href="/"><span class="brand-mark" aria-hidden="true">DE<span></span></span><span>德国资源导航<small>Deutschland Ressourcen</small></span></a><nav aria-label="主导航"><a href="/" aria-current={catalog ? 'page' : undefined}>资源目录</a><a href="/reader/" aria-current={path === '/reader/' ? 'page' : undefined}>沉浸式阅读</a><a href="/exams/" aria-current={path === '/exams/' ? 'page' : undefined}>考试资料</a><a href="/news/" aria-current={path === '/news/' ? 'page' : undefined}>新闻媒体</a><a href="/favorites/" aria-current={['/favorites/', '/my-study/'].includes(path) ? 'page' : undefined}>我的收藏</a></nav><a class="header-source" href="https://github.com/aolingge/deutsch-lernen" target="_blank" rel="noopener noreferrer">GitHub ↗</a></header><main id="main-content" tabindex="-1"><slot /></main><footer class="site-footer shell"><div><strong>Deutschland Ressourcen<span> / 德国资源导航</span></strong><p>只整理资源，直接连接原站。</p></div><div class="footer-links"><a href="/sources/">收录说明</a><a href="/privacy/">隐私</a><a href="https://github.com/aolingge/deutsch-lernen/issues" target="_blank" rel="noopener noreferrer">反馈 / 推荐资源 ↗</a></div><p class="footer-note">第三方内容的版权、费用和访问条件以原站为准。</p></footer><PageViewTracker /></body></html>
 <script>import '../client/catalog';</script>
-<style is:global>
-:root{--ink:#17251f;--muted:#68756b;--line:#d7dfd6;--paper:#fbfbf7;--blue:#a63e30;--blue-deep:#19362b;--mint:#e7efe8;--gold:#d1ad43;--red:#b54438}*{box-sizing:border-box}html{background:var(--paper);color:var(--ink);font-family:Manrope,ui-sans-serif,sans-serif}body{margin:0;min-width:320px}a{color:inherit}.skip-link{position:absolute;left:18px;top:-50px;background:#f0ca59;color:#17251f;padding:10px 14px;z-index:20;font-size:12px;font-weight:800}.skip-link:focus{top:12px}.site-header{max-width:1260px;margin:auto;padding:18px 28px;border-bottom:1px solid #e0e5dd;display:flex;align-items:center;justify-content:space-between;gap:28px}.brand{display:flex;align-items:center;gap:10px;text-decoration:none;font-weight:800;letter-spacing:0}.brand small{display:block;color:var(--muted);font-family:'DM Mono',monospace;font-size:10px;letter-spacing:0;margin-top:2px}.brand-mark{background:#1d3c31;color:white;border-radius:4px;padding:9px 7px;font:500 13px 'DM Mono',monospace}.site-header nav{display:flex;gap:20px;font-size:13px;font-weight:700}.site-header nav a{text-decoration:none;color:#46554a;padding:8px 0;border-bottom:2px solid transparent}.site-header nav a:hover,.site-header nav a.active{color:#a63e30;border-bottom-color:#a63e30}main{min-height:68vh}a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible{outline:3px solid #e5c75a;outline-offset:3px}.site-footer{max-width:1260px;margin:80px auto 0;padding:30px 28px 45px;border-top:1px solid var(--line);display:flex;gap:40px;flex-wrap:wrap;color:var(--muted);font-size:13px}.site-footer strong{color:var(--ink)}.site-footer p{margin:8px 0}.site-footer a{margin-right:18px}.footer-note{flex-basis:100%;font-size:11px}@media(max-width:760px){.site-header{padding:15px 18px;align-items:flex-start}.site-header nav{gap:12px;overflow:auto;white-space:nowrap;padding-top:6px;font-size:11px}.site-header nav a:nth-child(n+5){display:none}.site-footer{padding:24px 18px}.footer-note{margin-top:0}}
-</style>
-

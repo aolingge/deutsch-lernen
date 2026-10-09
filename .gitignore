@@ -36,6 +36,7 @@ id_ed25519
 tmp/
 temp/
 .cache/
+__pycache__/
 .DS_Store
 Thumbs.db
 
@@ -53,6 +54,8 @@ Thumbs.db
 *.jpg
 *.jpeg
 *.png
+# Reviewed, publicly sourced website identifiers used by the resource directory.
+!web/public/site-icons/*.png
 *.gif
 *.webp
 *.mp3
@@ -60,3 +63,11 @@ Thumbs.db
 *.m4a
 *.wav
 *.mov
+web/data/public-snapshot.json
+
+# Reader imports and generated summaries stay local; the public-domain source
+# texts under web/public/reader/data/sources are explicitly reviewed and tracked.
+tools/reader/input/
+web/public/reader/data/BUILD-SUMMARY.txt
+web/public/reader/data/catalog.js
+web/public/reader/data/books/

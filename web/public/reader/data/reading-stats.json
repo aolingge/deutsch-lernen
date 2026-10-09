@@ -1,0 +1,173 @@
+{
+  "wordsPerMinute": [
+    120,
+    240
+  ],
+  "totalWords": 1162218,
+  "addedWords": 405594,
+  "totalHoursAt120Wpm": 161.41916666666665,
+  "addedHoursAt120Wpm": 56.3325,
+  "addedHoursAt240Wpm": 28.16625,
+  "books": [
+    {
+      "id": "01",
+      "title": "Peterchens Mondfahrt",
+      "paragraphs": 2652,
+      "wordCount": 20868,
+      "hoursAt120Wpm": 2.8983333333333334,
+      "hoursAt240Wpm": 1.4491666666666667
+    },
+    {
+      "id": "02",
+      "title": "Die Biene Maja und ihre Abenteuer",
+      "paragraphs": 1159,
+      "wordCount": 39632,
+      "hoursAt120Wpm": 5.504444444444444,
+      "hoursAt240Wpm": 2.752222222222222
+    },
+    {
+      "id": "03",
+      "title": "Die Abenteuer Tom Sawyers",
+      "paragraphs": 1837,
+      "wordCount": 70527,
+      "hoursAt120Wpm": 9.795416666666666,
+      "hoursAt240Wpm": 4.897708333333333
+    },
+    {
+      "id": "04",
+      "title": "Heidis Lehr- und Wanderjahre",
+      "paragraphs": 951,
+      "wordCount": 54181,
+      "hoursAt120Wpm": 7.525138888888889,
+      "hoursAt240Wpm": 3.7625694444444444
+    },
+    {
+      "id": "05",
+      "title": "Alice's Abenteuer im Wunderland",
+      "paragraphs": 1027,
+      "wordCount": 28282,
+      "hoursAt120Wpm": 3.9280555555555554,
+      "hoursAt240Wpm": 1.9640277777777777
+    },
+    {
+      "id": "06",
+      "title": "Die Schatzinsel",
+      "paragraphs": 1553,
+      "wordCount": 67773,
+      "hoursAt120Wpm": 9.412916666666666,
+      "hoursAt240Wpm": 4.706458333333333
+    },
+    {
+      "id": "07",
+      "title": "Wunderbare Reise des kleinen Nils Holgersson mit den Wildgänsen",
+      "paragraphs": 4236,
+      "wordCount": 209239,
+      "hoursAt120Wpm": 29.060972222222222,
+      "hoursAt240Wpm": 14.530486111111111
+    },
+    {
+      "id": "08",
+      "title": "Der Trotzkopf",
+      "paragraphs": 2275,
+      "wordCount": 73282,
+      "hoursAt120Wpm": 10.178055555555556,
+      "hoursAt240Wpm": 5.089027777777778
+    },
+    {
+      "id": "09",
+      "title": "Robinson Crusoe",
+      "paragraphs": 1019,
+      "wordCount": 64810,
+      "hoursAt120Wpm": 9.001388888888888,
+      "hoursAt240Wpm": 4.500694444444444
+    },
+    {
+      "id": "10",
+      "title": "Oliver Twist",
+      "paragraphs": 3340,
+      "wordCount": 122878,
+      "hoursAt120Wpm": 17.066388888888888,
+      "hoursAt240Wpm": 8.533194444444444
+    },
+    {
+      "id": "11",
+      "title": "Max und Moritz",
+      "paragraphs": 127,
+      "wordCount": 2176,
+      "hoursAt120Wpm": 0.3022222222222222,
+      "hoursAt240Wpm": 0.1511111111111111
+    },
+    {
+      "id": "12",
+      "title": "Der Struwwelpeter",
+      "paragraphs": 89,
+      "wordCount": 2976,
+      "hoursAt120Wpm": 0.41333333333333333,
+      "hoursAt240Wpm": 0.20666666666666667
+    },
+    {
+      "id": "13",
+      "title": "Märchen und Erzählungen für Anfänger. Erster Teil",
+      "paragraphs": 816,
+      "wordCount": 21691,
+      "hoursAt120Wpm": 3.012638888888889,
+      "hoursAt240Wpm": 1.5063194444444445
+    },
+    {
+      "id": "14",
+      "title": "Märchen und Erzählungen für Anfänger. Zweiter Teil",
+      "paragraphs": 987,
+      "wordCount": 29633,
+      "hoursAt120Wpm": 4.115694444444444,
+      "hoursAt240Wpm": 2.057847222222222
+    },
+    {
+      "id": "15",
+      "title": "Deutsche Märchen gesammelt durch die Brüder Grimm",
+      "paragraphs": 601,
+      "wordCount": 88445,
+      "hoursAt120Wpm": 12.284027777777778,
+      "hoursAt240Wpm": 6.142013888888889
+    },
+    {
+      "id": "16",
+      "title": "Märchen-Almanach auf das Jahr 1826",
+      "paragraphs": 468,
+      "wordCount": 41424,
+      "hoursAt120Wpm": 5.753333333333333,
+      "hoursAt240Wpm": 2.8766666666666665
+    },
+    {
+      "id": "17",
+      "title": "Märchen-Almanach auf das Jahr 1827",
+      "paragraphs": 431,
+      "wordCount": 33156,
+      "hoursAt120Wpm": 4.605,
+      "hoursAt240Wpm": 2.3025
+    },
+    {
+      "id": "18",
+      "title": "Märchen-Almanach auf das Jahr 1828",
+      "paragraphs": 697,
+      "wordCount": 53281,
+      "hoursAt120Wpm": 7.400138888888889,
+      "hoursAt240Wpm": 3.7000694444444444
+    },
+    {
+      "id": "19",
+      "title": "Aus dem Leben eines Taugenichts",
+      "paragraphs": 249,
+      "wordCount": 31149,
+      "hoursAt120Wpm": 4.32625,
+      "hoursAt240Wpm": 2.163125
+    },
+    {
+      "id": "20",
+      "title": "Ludwig Bechsteins Märchenbuch",
+      "paragraphs": 969,
+      "wordCount": 106815,
+      "hoursAt120Wpm": 14.835416666666667,
+      "hoursAt240Wpm": 7.417708333333334
+    }
+  ]
+}

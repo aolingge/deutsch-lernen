@@ -19,3 +19,29 @@ jobs:
         uses: lycheeverse/lychee-action@e7477775783ea5526144ba13e8db5eec57747ce8 # v2
         with:
           args: --verbose --no-progress --exclude-file .lycheeignore './**/*.md'
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4
+        if: always()
+        with:
+          node-version: 22
+      - name: Check public resource URLs from JSON
+        if: always()
+        working-directory: web
+        run: node scripts/check-resource-links.mjs --report=.wrangler/resource-links.json
+      - name: Upload link report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: resource-link-report
+          path: web/.wrangler/resource-links.json
+          if-no-files-found: warn
+      - name: Check live public catalog URLs
+        if: always()
+        working-directory: web
+        run: node scripts/check-resource-links.mjs --live=https://deutsch-lernen-resource-hub.pirostonelsonrx688.workers.dev/api/public-catalog --report=.wrangler/resource-links-live.json
+      - name: Upload live link report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: resource-link-report-live
+          path: web/.wrangler/resource-links-live.json
+          if-no-files-found: warn
