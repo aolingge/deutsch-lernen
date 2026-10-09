@@ -1,0 +1,5227 @@
+[
+  {
+    "id": "dw-nicos-weg",
+    "slug": "dw-nicos-weg",
+    "titleOriginal": "Nicos Weg",
+    "titleZh": "DW Nicos Weg B1：剧情式德语课程",
+    "descriptionZh": "德国之声的分级课程，用连续剧情、词汇、语法和练习组成自学主线。",
+    "howToUseZh": "从 A1 开始按单元完成视频、词汇、语法和练习；不要只观看视频。",
+    "primaryCategory": "courses",
+    "tags": [
+      "主线课程",
+      "免费",
+      "视频课程"
+    ],
+    "levels": [
+      "B1"
+    ],
+    "levelBasis": "official",
+    "skills": [
+      "综合",
+      "听力",
+      "词汇",
+      "语法"
+    ],
+    "exams": [],
+    "formats": [
+      "课程",
+      "视频",
+      "练习"
+    ],
+    "price": "free",
+    "access": "open",
+    "languages": [
+      "德语",
+      "英语"
+    ],
+    "sourceName": "Deutsche Welle",
+    "url": "https://learngerman.dw.com/de/c-36519687",
+    "canonicalUrl": "https://learngerman.dw.com/de/c-36519687",
+    "rights": "link-only",
+    "status": "published",
+    "linkStatus": "ok",
+    "lastEditorialCheckedAt": "2026-09-30"
+  },
+  {
+    "id": "vhs-b1-course",
+    "slug": "vhs-b1-course",
+    "titleOriginal": "B1-Deutschkurs",
+    "titleZh": "vhs-Lernportal B1 德语课程",
+    "descriptionZh": "课程化 B1 学习入口，覆盖日常交流所需的词汇、语法、听说读写练习。",
+    "howToUseZh": "已完成 A2 后，每天完成一个小单元，记录不会的表达并回到输出任务中复用。",
+    "primaryCategory": "courses",
+    "tags": [
+      "主线课程",
+      "免费",
+      "大量练习"
+    ],
+    "levels": [
+      "B1"
+    ],
+    "levelBasis": "official",
+    "skills": [
+      "综合",
+      "听力",
+      "阅读",
+      "写作"
+    ],
+    "exams": [
+      "非考试专项"
+    ],
+    "formats": [
+      "课程",
+      "练习"
+    ],
+    "price": "free",
+    "access": "registration",
+    "languages": [
+      "德语",
+      "中文等多语"
+    ],
+    "sourceName": "vhs-Lernportal",
+    "url": "https://b1.vhs-lernportal.de/wws/home.php",
+    "canonicalUrl": "https://b1.vhs-lernportal.de/wws/home.php",
+    "rights": "link-only",
+    "status": "published",
+    "linkStatus": "ok",
+    "lastEditorialCheckedAt": "2026-09-30"
+  },
+  {
+    "id": "goethe-free-practice",
+    "slug": "goethe-free-practice",
+    "titleOriginal": "Kostenlos Deutsch üben",
+    "titleZh": "歌德学院免费德语练习",
+    "descriptionZh": "歌德学院官方练习总入口，按主题覆盖词汇、语法、听力、阅读和生活场景。",
+    "howToUseZh": "每周选择一个主题，完成练习后整理可迁移的词汇和句型。当前自动检查受官网访问限制，请以浏览器打开结果为准。",
+    "primaryCategory": "grammar",
+    "tags": [
+      "官方",
+      "免费",
+      "主题练习"
+    ],
+    "levels": [
+      "A1",
+      "A2",
+      "B1",
+      "B2",
+      "C1"
+    ],
+    "levelBasis": "official",
+    "skills": [
+      "综合",
+      "语法",
+      "词汇",
+      "阅读",
+      "听力"
+    ],
+    "exams": [],
+    "formats": [
+      "网页",
+      "练习"
+    ],
+    "price": "free",
+    "access": "open",
+    "languages": [
+      "德语",
+      "英语"
+    ],
+    "sourceName": "Goethe-Institut",
+    "url": "https://www.goethe.de/de/spr/ueb.html",
+    "canonicalUrl": "https://www.goethe.de/de/spr/ueb.html",
+    "rights": "link-only",
+    "status": "published",
+    "linkStatus": "restricted",
+    "lastEditorialCheckedAt": "2026-09-30"
+  },
+  {
+    "id": "goethe-b1-practice",
+    "slug": "goethe-b1-practice",
+    "titleOriginal": "Goethe-Zertifikat B1 Prüfungstraining",
+    "titleZh": "歌德 B1 官方考试练习",
+    "descriptionZh": "面向 Goethe B1 的官方练习入口，按听、读、写、说准备考试。",
+    "howToUseZh": "先完成一套样题，按模块记录错误，再用计时练习复测。",
+    "primaryCategory": "exams",
+    "tags": [
+      "官方样题",
+      "四项技能",
+      "B1"
+    ],
+    "levels": [
+      "B1"
+    ],
+    "levelBasis": "official",
+    "skills": [
+      "听力",
+      "阅读",
+      "写作",
+      "口语"
+    ],
+    "exams": [
+      "Goethe"
+    ],
+    "formats": [
+      "样题",
+      "音频",
+      "PDF"
+    ],
+    "price": "free",
+    "access": "open",
+    "languages": [
+      "德语",
+      "英语"
+    ],
+    "sourceName": "Goethe-Institut",
+    "url": "https://www.goethe.de/de/spr/prf/ueb/pb1.html",
+    "canonicalUrl": "https://www.goethe.de/de/spr/prf/ueb/pb1.html",
+    "rights": "link-only",
+    "status": "published",
+    "linkStatus": "restricted",
+    "lastEditorialCheckedAt": "2026-09-30"
+  },
+  {
+    "id": "testdaf-digital-prep",
+    "slug": "testdaf-digital-prep",
+    "titleOriginal": "Prüfungsvorbereitung für den digitalen TestDaF",
+    "titleZh": "数字 TestDaF 官方备考材料",
+    "descriptionZh": "TestDaF 官方备考页，区分阅读、听力、写作、口语的题型和示例。",
+    "howToUseZh": "先看题型说明，再按模块做官方示例；数字版和纸笔版不要混用。",
+    "primaryCategory": "exams",
+    "tags": [
+      "官方",
+      "数字版",
+      "B2-C1"
+    ],
+    "levels": [
+      "B2",
+      "C1"
+    ],
+    "levelBasis": "official",
+    "skills": [
+      "听力",
+      "阅读",
+      "写作",
+      "口语"
+    ],
+    "exams": [
+      "TestDaF"
+    ],
+    "formats": [
+      "样题",
+      "音频",
+      "视频"
+    ],
+    "price": "free",
+    "access": "registration",
+    "languages": [
+      "德语"
+    ],
+    "sourceName": "TestDaF / g.a.s.t.",
+    "url": "https://www.testdaf.de/de/teilnehmende/der-digitale-testdaf/vorbereitung-auf-den-digitalen-testdaf/",
+    "canonicalUrl": "https://www.testdaf.de/de/teilnehmende/der-digitale-testdaf/vorbereitung-auf-den-digitalen-testdaf",
+    "rights": "link-only",
+    "status": "published",
+    "linkStatus": "ok",
+    "lastEditorialCheckedAt": "2026-09-30"
+  },
+  {
+    "id": "telc-exams",
+    "slug": "telc-exams",
+    "titleOriginal": "telc Deutsch-Prüfungen",
+    "titleZh": "telc 德语考试官方入口",
+    "descriptionZh": "telc 德语考试总入口，用于查看具体等级、考试形式和官方信息。",
+    "howToUseZh": "先选择具体考试等级，再核对当前考试中心、报名和样题信息；不要沿用旧路径。",
+    "primaryCategory": "exams",
+    "tags": [
+      "官方",
+      "考试选择"
+    ],
+    "levels": [
+      "A1",
+      "A2",
+      "B1",
+      "B2",
+      "C1"
+    ],
+    "levelBasis": "official",
+    "skills": [
+      "综合"
+    ],
+    "exams": [
+      "telc"
+    ],
+    "formats": [
+      "网页"
+    ],
+    "price": "unknown",
+    "access": "unknown",
+    "languages": [
+      "德语",
+      "英语"
+    ],
+    "sourceName": "telc",
+    "url": "https://www.telc.net/sprachpruefungen/zertifikatspruefung/deutsch/",
+    "canonicalUrl": "https://www.telc.net/sprachpruefungen/zertifikatspruefung/deutsch",
+    "rights": "link-only",
+    "status": "published",
+    "linkStatus": "ok",
+    "lastEditorialCheckedAt": "2026-09-30"
+  },
+  {
+    "id": "nachrichtenleicht",
+    "slug": "nachrichtenleicht",
+    "titleOriginal": "Nachrichtenleicht",
+    "titleZh": "Deutschlandfunk 简明新闻",
+    "descriptionZh": "用简单德语解释新闻，文章配有音频，适合做短篇阅读、听力和复述。",
+    "howToUseZh": "先读标题和正文，再听音频；记录三句话摘要，不要把简单语言直接等同于某个 CEFR 等级。",
+    "primaryCategory": "news",
+    "tags": [
+      "简明新闻",
+      "音频",
+      "复述"
+    ],
+    "levels": [
+      "A2",
+      "B1"
+    ],
+    "levelBasis": "editorial",
+    "skills": [
+      "听力",
+      "阅读",
+      "口语"
+    ],
+    "exams": [],
+    "formats": [
+      "新闻",
+      "音频",
+      "RSS"
+    ],
+    "price": "free",
+    "access": "open",
+    "languages": [
+      "德语"
+    ],
+    "sourceName": "Deutschlandfunk",
+    "url": "https://www.nachrichtenleicht.de/",
+    "canonicalUrl": "https://www.nachrichtenleicht.de/",
+    "rights": "link-only",
+    "status": "published",
+    "linkStatus": "ok",
+    "lastEditorialCheckedAt": "2026-09-30"
+  },
+  {
+    "id": "deutsch-perfekt-reading",
+    "slug": "deutsch-perfekt-reading",
+    "titleOriginal": "Deutsch lesen",
+    "titleZh": "Deutsch perfekt 分级阅读",
+    "descriptionZh": "围绕德国、奥地利和瑞士的生活、文化与社会主题，为德语学习者编写的文章。",
+    "howToUseZh": "先根据文章标注的难度挑选，再用解释和练习扩展词汇；付费内容按具体页面核对。",
+    "primaryCategory": "reading",
+    "tags": [
+      "主题阅读",
+      "文化",
+      "难度标记"
+    ],
+    "levels": [
+      "B1",
+      "B2",
+      "C1"
+    ],
+    "levelBasis": "official",
+    "skills": [
+      "阅读",
+      "词汇"
+    ],
+    "exams": [],
+    "formats": [
+      "文章",
+      "练习",
+      "PDF"
+    ],
+    "price": "freemium",
+    "access": "open",
+    "languages": [
+      "德语"
+    ],
+    "sourceName": "Deutsch perfekt",
+    "url": "https://www.deutsch-perfekt.com/deutsch-lesen",
+    "canonicalUrl": "https://www.deutsch-perfekt.com/deutsch-lesen",
+    "rights": "link-only",
+    "status": "published",
+    "linkStatus": "ok",
+    "lastEditorialCheckedAt": "2026-09-30"
+  },
+  {
+    "id": "dwds",
+    "slug": "dwds",
+    "titleOriginal": "Digitales Wörterbuch der deutschen Sprache",
+    "titleZh": "DWDS 数字德语词典",
+    "descriptionZh": "德语德德词典、语料、词频和搭配查询工具，适合中高级精确理解词义。",
+    "howToUseZh": "先看释义和例句，再查看搭配和语料；中文翻译需求可与双语词典交叉验证。",
+    "primaryCategory": "vocabulary",
+    "tags": [
+      "德德词典",
+      "语料",
+      "搭配"
+    ],
+    "levels": [
+      "B1",
+      "B2",
+      "C1",
+      "C2"
+    ],
+    "levelBasis": "editorial",
+    "skills": [
+      "词汇",
+      "阅读",
+      "写作"
+    ],
+    "exams": [],
+    "formats": [
+      "词典",
+      "语料库",
+      "工具"
+    ],
+    "price": "free",
+    "access": "open",
+    "languages": [
+      "德语"
+    ],
+    "sourceName": "BBAW / DWDS",
+    "url": "https://www.dwds.de/",
+    "canonicalUrl": "https://www.dwds.de/",
+    "rights": "link-only",
+    "status": "published",
+    "linkStatus": "ok",
+    "lastEditorialCheckedAt": "2026-09-30"
+  },
+  {
+    "id": "lingolia-grammar",
+    "slug": "lingolia-grammar",
+    "titleOriginal": "Lingolia Deutsch",
+    "titleZh": "Lingolia 德语语法与练习",
+    "descriptionZh": "按主题解释德语语法，并提供例句和练习，适合卡点复习。",
+    "howToUseZh": "遇到一个语法点时先读解释，再回到自己的主线课程完成同主题输出。",
+    "primaryCategory": "grammar",
+    "tags": [
+      "语法解释",
+      "交互练习"
+    ],
+    "levels": [
+      "A1",
+      "A2",
+      "B1",
+      "B2"
+    ],
+    "levelBasis": "editorial",
+    "skills": [
+      "语法",
+      "阅读"
+    ],
+    "exams": [],
+    "formats": [
+      "网页",
+      "练习"
+    ],
+    "price": "freemium",
+    "access": "open",
+    "languages": [
+      "德语",
+      "英语"
+    ],
+    "sourceName": "Lingolia",
+    "url": "https://deutsch.lingolia.com/de/",
+    "canonicalUrl": "https://deutsch.lingolia.com/de",
+    "rights": "link-only",
+    "status": "published",
+    "linkStatus": "ok",
+    "lastEditorialCheckedAt": "2026-09-30"
+  },
+  {
+    "id": "easy-german",
+    "slug": "easy-german",
+    "titleOriginal": "Easy German",
+    "titleZh": "Easy German 街访与自然表达",
+    "descriptionZh": "通过街头采访和真实对话接触日常德语，适合补充听力和口语语感。",
+    "howToUseZh": "先看字幕理解，再隐藏字幕复听，最后用自己的话复述主题。",
+    "primaryCategory": "video",
+    "tags": [
+      "街访",
+      "字幕",
+      "自然表达"
+    ],
+    "levels": [
+      "A2",
+      "B1",
+      "B2",
+      "C1"
+    ],
+    "levelBasis": "editorial",
+    "skills": [
+      "听力",
+      "口语",
+      "词汇"
+    ],
+    "exams": [],
+    "formats": [
+      "视频",
+      "播客"
+    ],
+    "price": "freemium",
+    "access": "open",
+    "languages": [
+      "德语",
+      "英语"
+    ],
+    "sourceName": "Easy German",
+    "url": "https://easygerman.org/",
+    "canonicalUrl": "https://easygerman.org/",
+    "rights": "link-only",
+    "status": "published",
+    "linkStatus": "ok",
+    "lastEditorialCheckedAt": "2026-09-30"
+  },
+  {
+    "id": "slow-german",
+    "slug": "slow-german",
+    "titleOriginal": "Slow German",
+    "titleZh": "Slow German 慢速德语播客",
+    "descriptionZh": "围绕德国文化和社会主题的慢速德语音频，适合稳定积累听力输入。",
+    "howToUseZh": "先听一遍抓主旨，再看文本核对，最后记录五个可复用表达。",
+    "primaryCategory": "listening",
+    "tags": [
+      "慢速听力",
+      "播客",
+      "文化"
+    ],
+    "levels": [
+      "B1",
+      "B2"
+    ],
+    "levelBasis": "editorial",
+    "skills": [
+      "听力",
+      "词汇"
+    ],
+    "exams": [],
+    "formats": [
+      "播客",
+      "文章"
+    ],
+    "price": "free",
+    "access": "open",
+    "languages": [
+      "德语"
+    ],
+    "sourceName": "Slow German",
+    "url": "https://slowgerman.com/",
+    "canonicalUrl": "https://slowgerman.com/",
+    "rights": "link-only",
+    "status": "published",
+    "linkStatus": "unchecked",
+    "lastEditorialCheckedAt": "2026-09-30"
+  },
+  {
+    "id": "deutschakademie-grammar",
+    "slug": "deutschakademie-grammar",
+    "titleOriginal": "Online Deutschkurs",
+    "titleZh": "DeutschAkademie 在线语法练习",
+    "descriptionZh": "按等级练习德语语法，适合把一个语法主题做成短时复习。",
+    "howToUseZh": "一次只选一个语法主题，做题后整理错误句，不要把刷题数量当成掌握程度。",
+    "primaryCategory": "grammar",
+    "tags": [
+      "语法题库",
+      "分级练习"
+    ],
+    "levels": [
+      "A1",
+      "A2",
+      "B1",
+      "B2",
+      "C1"
+    ],
+    "levelBasis": "editorial",
+    "skills": [
+      "语法"
+    ],
+    "exams": [],
+    "formats": [
+      "网页",
+      "练习"
+    ],
+    "price": "free",
+    "access": "open",
+    "languages": [
+      "德语",
+      "英语"
+    ],
+    "sourceName": "DeutschAkademie",
+    "url": "https://www.deutschakademie.de/online-deutschkurs/",
+    "canonicalUrl": "https://www.deutschakademie.de/online-deutschkurs",
+    "rights": "link-only",
+    "status": "published",
+    "linkStatus": "ok",
+    "lastEditorialCheckedAt": "2026-09-30"
+  },
+  {
+    "id": "goethe-speaking-practice",
+    "slug": "goethe-speaking-practice",
+    "titleOriginal": "Online Aussprachetrainer",
+    "titleZh": "歌德在线德语发音训练",
+    "descriptionZh": "歌德学院的在线发音训练，辅助练习德语语音与跟读。",
+    "howToUseZh": "按训练任务练习发音，录音后对照反馈与示范。",
+    "primaryCategory": "speaking",
+    "tags": [
+      "口语任务",
+      "官方",
+      "录音复述"
+    ],
+    "levels": [
+      "A1",
+      "A2",
+      "B1",
+      "B2"
+    ],
+    "levelBasis": "official",
+    "skills": [
+      "口语"
+    ],
+    "exams": [],
+    "formats": [
+      "网页",
+      "练习"
+    ],
+    "price": "free",
+    "access": "open",
+    "languages": [
+      "德语",
+      "英语"
+    ],
+    "sourceName": "Goethe-Institut",
+    "url": "https://www.goethe.de/de/spr/ueb/ast.html",
+    "canonicalUrl": "https://www.goethe.de/de/spr/ueb/ast.html",
+    "rights": "link-only",
+    "status": "published",
+    "linkStatus": "restricted",
+    "lastEditorialCheckedAt": "2026-09-30"
+  },
+  {
+    "id": "anki",
+    "slug": "anki",
+    "titleOriginal": "Anki",
+    "titleZh": "Anki 间隔重复词汇工具",
+    "descriptionZh": "基于间隔重复的开源记忆卡片工具，适合建立德语词汇、例句和错题复习系统。",
+    "howToUseZh": "桌面版可免费使用，iOS 官方应用收费。只添加带例句和来源的卡片，每天复习。",
+    "primaryCategory": "tools",
+    "tags": [
+      "间隔重复",
+      "词汇",
+      "开源工具"
+    ],
+    "levels": [
+      "A1",
+      "A2",
+      "B1",
+      "B2",
+      "C1",
+      "C2"
+    ],
+    "levelBasis": "editorial",
+    "skills": [
+      "词汇"
+    ],
+    "exams": [],
+    "formats": [
+      "工具",
+      "应用"
+    ],
+    "price": "freemium",
+    "access": "open",
+    "languages": [
+      "德语",
+      "英语"
+    ],
+    "sourceName": "Anki",
+    "url": "https://apps.ankiweb.net/",
+    "canonicalUrl": "https://apps.ankiweb.net/",
+    "rights": "link-only",
+    "status": "published",
+    "linkStatus": "ok",
+    "lastEditorialCheckedAt": "2026-09-30"
+  },
+  {
+    "id": "make-it-in-germany",
+    "slug": "make-it-in-germany",
+    "titleOriginal": "Make it in Germany",
+    "titleZh": "德国官方工作与生活信息",
+    "descriptionZh": "德国政府官方门户，提供工作、签证、住房和日常生活信息，也适合作为生活德语词汇来源。",
+    "howToUseZh": "先读中文或英语说明，再对照德语页面整理办事词汇；签证规则以当前官方页面为准。",
+    "primaryCategory": "life",
+    "tags": [
+      "德国生活",
+      "官方信息",
+      "留学工作"
+    ],
+    "levels": [
+      "B1",
+      "B2",
+      "C1"
+    ],
+    "levelBasis": "editorial",
+    "skills": [
+      "阅读",
+      "词汇"
+    ],
+    "exams": [],
+    "formats": [
+      "网页",
+      "资讯"
+    ],
+    "price": "free",
+    "access": "open",
+    "languages": [
+      "德语",
+      "英语",
+      "中文"
+    ],
+    "sourceName": "德国联邦政府",
+    "url": "https://www.make-it-in-germany.com/de/",
+    "canonicalUrl": "https://www.make-it-in-germany.com/de",
+    "rights": "link-only",
+    "status": "published",
+    "linkStatus": "restricted",
+    "lastEditorialCheckedAt": "2026-09-30"
+  },
+  {
+    "id": "osd-downloads",
+    "slug": "osd-downloads",
+    "titleOriginal": "ÖSD",
+    "titleZh": "ÖSD 官方样题下载",
+    "descriptionZh": "按 A1-C2 提供考试样题、说明与下载材料。",
+    "howToUseZh": "选择目标等级下载样题，严格按原站模块要求计时练习。",
+    "primaryCategory": "exams",
+    "tags": [
+      "官方入口",
+      "综合",
+      "听力",
+      "阅读",
+      "写作",
+      "口语"
+    ],
+    "levels": [
+      "A1",
+      "A2",
+      "B1",
+      "B2",
+      "C1",
+      "C2"
+    ],
+    "levelBasis": "official",
+    "skills": [
+      "综合",
+      "听力",
+      "阅读",
+      "写作",
+      "口语"
+    ],
+    "exams": [
+      "ÖSD"
+    ],
+    "formats": [
+      "网页"
+    ],
+    "price": "free",
+    "access": "open",
+    "languages": [
+      "德语"
+    ],
+    "sourceName": "ÖSD",
+    "url": "https://osd.at/downloads/",
+    "canonicalUrl": "https://osd.at/downloads",
+    "rights": "link-only",
+    "status": "published",
+    "linkStatus": "ok",
+    "lastEditorialCheckedAt": "2026-09-30"
+  },
+  {
+    "id": "osd-placement",
+    "slug": "osd-placement",
+    "titleOriginal": "ÖSD",
+    "titleZh": "ÖSD 德语等级测试",
+    "descriptionZh": "官方线上测试涵盖阅读、听力、词汇和语法，用于选择课程方向。",
+    "howToUseZh": "独立完成测试，结合自己的输出能力选择课程；结果不等于考试证书。",
+    "primaryCategory": "courses",
+    "tags": [
+      "学习入口",
+      "综合",
+      "词汇",
+      "语法"
+    ],
+    "levels": [
+      "A1",
+      "A2",
+      "B1",
+      "B2",
+      "C1",
+      "C2"
+    ],
+    "levelBasis": "official",
+    "skills": [
+      "综合",
+      "词汇",
+      "语法"
+    ],
+    "exams": [
+      "ÖSD"
+    ],
+    "formats": [
+      "网页"
+    ],
+    "price": "free",
+    "access": "open",
+    "languages": [
+      "德语"
+    ],
+    "sourceName": "ÖSD",
+    "url": "https://einstufungstest.osd.at/",
+    "canonicalUrl": "https://einstufungstest.osd.at/",
+    "rights": "link-only",
+    "status": "published",
+    "linkStatus": "ok",
+    "lastEditorialCheckedAt": "2026-09-30"
+  },
+  {
+    "id": "dsh-fadaf",
+    "slug": "dsh-fadaf",
+    "titleOriginal": "FaDaF",
+    "titleZh": "FaDaF DSH 官方信息",
+    "descriptionZh": "大学德语考试 DSH 的官方说明、规程与机构信息。",
+    "howToUseZh": "先核对目标大学的考试要求，再选择对应学校样题。",
+    "primaryCategory": "exams",
+    "tags": [
+      "官方入口",
+      "综合"
+    ],
+    "levels": [
+      "B2",
+      "C1"
+    ],
+    "levelBasis": "editorial",
+    "skills": [
+      "综合"
+    ],
+    "exams": [
+      "DSH"
+    ],
+    "formats": [
+      "网页"
+    ],
+    "price": "free",
+    "access": "open",
+    "languages": [
+      "德语"
+    ],
+    "sourceName": "FaDaF",
+    "url": "https://www.dsh-fadaf.de/",
+    "canonicalUrl": "https://www.dsh-fadaf.de/",
+    "rights": "link-only",
+    "status": "published",
+    "linkStatus": "ok",
+    "lastEditorialCheckedAt": "2026-09-30"
+  },
+  {
+    "id": "dsh-muenster",
+    "slug": "dsh-muenster",
+    "titleOriginal": "Universität Münster",
+    "titleZh": "明斯特大学 DSH 示例考试",
+    "descriptionZh": "大学语言中心的 DSH 示例考试，用于熟悉大学语言测试任务。",
+    "howToUseZh": "阅读说明后限时完成阅读、听力与写作模块，依据评分资料复盘。",
+    "primaryCategory": "exams",
+    "tags": [
+      "官方入口",
+      "阅读",
+      "听力",
+      "写作",
+      "口语"
+    ],
+    "levels": [
+      "B2",
+      "C1"
+    ],
+    "levelBasis": "editorial",
+    "skills": [
+      "阅读",
+      "听力",
+      "写作",
+      "口语"
+    ],
+    "exams": [
+      "DSH"
+    ],
+    "formats": [
+      "网页"
+    ],
+    "price": "free",
+    "access": "open",
+    "languages": [
+      "德语"
+    ],
+    "sourceName": "Universität Münster",
+    "url": "https://www.uni-muenster.de/Sprachenzentrum/ldaf/dsh/dshbeispielpruefung.html",
+    "canonicalUrl": "https://www.uni-muenster.de/Sprachenzentrum/ldaf/dsh/dshbeispielpruefung.html",
+    "rights": "link-only",
+    "status": "published",
+    "linkStatus": "ok",
+    "lastEditorialCheckedAt": "2026-09-30"
+  },
+  {
+    "id": "duden",
+    "slug": "duden",
+    "titleOriginal": "Duden",
+    "titleZh": "Duden 德语词典与拼写查询",
+    "descriptionZh": "查询德语拼写、词性、解释和用法。",
+    "howToUseZh": "查词时同时记录冠词、复数和例句；高级产品费用另查。",
+    "primaryCategory": "vocabulary",
+    "tags": [
+      "学习入口",
+      "词汇",
+      "写作"
+    ],
+    "levels": [
+      "B1",
+      "B2",
+      "C1",
+      "C2"
+    ],
+    "levelBasis": "editorial",
+    "skills": [
+      "词汇",
+      "写作"
+    ],
+    "exams": [],
+    "formats": [
+      "网页"
+    ],
+    "price": "freemium",
+    "access": "open",
+    "languages": [
+      "德语"
+    ],
+    "sourceName": "Duden",
+    "url": "https://www.duden.de/woerterbuch",
+    "canonicalUrl": "https://www.duden.de/woerterbuch",
+    "rights": "link-only",
+    "status": "published",
+    "linkStatus": "ok",
+    "lastEditorialCheckedAt": "2026-09-30"
+  },
+  {
+    "id": "pons",
+    "slug": "pons",
+    "titleOriginal": "PONS",
+    "titleZh": "PONS 德英词典",
+    "descriptionZh": "双语词典、例句和表达查询。",
+    "howToUseZh": "先查大意，再用德德词典核对具体语境与搭配。",
+    "primaryCategory": "vocabulary",
+    "tags": [
+      "学习入口",
+      "词汇"
+    ],
+    "levels": [
+      "A1",
+      "A2",
+      "B1",
+      "B2",
+      "C1"
+    ],
+    "levelBasis": "editorial",
+    "skills": [
+      "词汇"
+    ],
+    "exams": [],
+    "formats": [
+      "网页"
+    ],
+    "price": "freemium",
+    "access": "open",
+    "languages": [
+      "德语"
+    ],
+    "sourceName": "PONS",
+    "url": "https://en.pons.com/translate/german-english",
+    "canonicalUrl": "https://en.pons.com/translate/german-english",
+    "rights": "link-only",
+    "status": "published",
+    "linkStatus": "ok",
+    "lastEditorialCheckedAt": "2026-09-30"
+  },
+  {
+    "id": "leo",
+    "slug": "leo",
+    "titleOriginal": "LEO",
+    "titleZh": "LEO 德英词典",
+    "descriptionZh": "德英词典和用法讨论入口。",
+    "howToUseZh": "记录固定搭配和词性；讨论区内容应与词典释义交叉核对。",
+    "primaryCategory": "vocabulary",
+    "tags": [
+      "学习入口",
+      "词汇"
+    ],
+    "levels": [
+      "A1",
+      "A2",
+      "B1",
+      "B2",
+      "C1"
+    ],
+    "levelBasis": "editorial",
+    "skills": [
+      "词汇"
+    ],
+    "exams": [],
+    "formats": [
+      "网页"
+    ],
+    "price": "free",
+    "access": "open",
+    "languages": [
+      "德语"
+    ],
+    "sourceName": "LEO",
+    "url": "https://dict.leo.org/german-english/",
+    "canonicalUrl": "https://dict.leo.org/german-english",
+    "rights": "link-only",
+    "status": "published",
+    "linkStatus": "restricted",
+    "lastEditorialCheckedAt": "2026-09-30"
+  },
+  {
+    "id": "dictcc",
+    "slug": "dictcc",
+    "titleOriginal": "dict.cc",
+    "titleZh": "dict.cc 双语词典",
+    "descriptionZh": "德英词语、短语和发音查询入口。",
+    "howToUseZh": "选择德英语言对，按语境对照例句。",
+    "primaryCategory": "vocabulary",
+    "tags": [
+      "学习入口",
+      "词汇"
+    ],
+    "levels": [
+      "A1",
+      "A2",
+      "B1",
+      "B2",
+      "C1"
+    ],
+    "levelBasis": "editorial",
+    "skills": [
+      "词汇"
+    ],
+    "exams": [],
+    "formats": [
+      "网页"
+    ],
+    "price": "freemium",
+    "access": "open",
+    "languages": [
+      "德语"
+    ],
+    "sourceName": "dict.cc",
+    "url": "https://www.dict.cc/",
+    "canonicalUrl": "https://www.dict.cc/",
+    "rights": "link-only",
+    "status": "published",
+    "linkStatus": "ok",
+    "lastEditorialCheckedAt": "2026-09-30"
+  },
+  {
+    "id": "verbformen",
+    "slug": "verbformen",
+    "titleOriginal": "Verbformen",
+    "titleZh": "Verbformen 变位与变格工具",
+    "descriptionZh": "查询德语动词变位和名词变格。",
+    "howToUseZh": "先自己写出变化，再查询核对并用错词造句。",
+    "primaryCategory": "grammar",
+    "tags": [
+      "学习入口",
+      "语法",
+      "词汇"
+    ],
+    "levels": [
+      "A1",
+      "A2",
+      "B1",
+      "B2",
+      "C1"
+    ],
+    "levelBasis": "editorial",
+    "skills": [
+      "语法",
+      "词汇"
+    ],
+    "exams": [],
+    "formats": [
+      "网页"
+    ],
+    "price": "freemium",
+    "access": "open",
+    "languages": [
+      "德语"
+    ],
+    "sourceName": "Verbformen",
+    "url": "https://www.verbformen.de/",
+    "canonicalUrl": "https://www.verbformen.de/",
+    "rights": "link-only",
+    "status": "published",
+    "linkStatus": "ok",
+    "lastEditorialCheckedAt": "2026-09-30"
+  },
+  {
+    "id": "grammis",
+    "slug": "grammis",
+    "titleOriginal": "Leibniz-Institut für Deutsche Sprache",
+    "titleZh": "IDS grammis 德语语法参考",
+    "descriptionZh": "语言研究机构的德语语法知识与术语参考。",
+    "howToUseZh": "遇到复杂句法问题时查对应主题，与自己的句子对照。",
+    "primaryCategory": "grammar",
+    "tags": [
+      "学习入口",
+      "语法",
+      "写作"
+    ],
+    "levels": [
+      "B2",
+      "C1",
+      "C2"
+    ],
+    "levelBasis": "editorial",
+    "skills": [
+      "语法",
+      "写作"
+    ],
+    "exams": [],
+    "formats": [
+      "网页"
+    ],
+    "price": "free",
+    "access": "open",
+    "languages": [
+      "德语"
+    ],
+    "sourceName": "Leibniz-Institut für Deutsche Sprache",
+    "url": "https://grammis.ids-mannheim.de/",
+    "canonicalUrl": "https://grammis.ids-mannheim.de/",
+    "rights": "link-only",
+    "status": "published",
+    "linkStatus": "ok",
+    "lastEditorialCheckedAt": "2026-09-30"
+  },
+  {
+    "id": "deutsch-info",
+    "slug": "deutsch-info",
+    "titleOriginal": "Deutsch.info",
+    "titleZh": "Deutsch.info 多语德语课程",
+    "descriptionZh": "多语德语学习平台，整合课程、语法与生活信息。",
+    "howToUseZh": "选择适合的界面语言与课程级别，按单元完成练习。",
+    "primaryCategory": "courses",
+    "tags": [
+      "学习入口",
+      "综合"
+    ],
+    "levels": [
+      "A1",
+      "A2",
+      "B1",
+      "B2"
+    ],
+    "levelBasis": "editorial",
+    "skills": [
+      "综合"
+    ],
+    "exams": [],
+    "formats": [
+      "网页"
+    ],
+    "price": "free",
+    "access": "registration",
+    "languages": [
+      "德语"
+    ],
+    "sourceName": "Deutsch.info",
+    "url": "https://deutsch.info/",
+    "canonicalUrl": "https://deutsch.info/",
+    "rights": "link-only",
+    "status": "published",
+    "linkStatus": "ok",
+    "lastEditorialCheckedAt": "2026-09-30"
+  },
+  {
+    "id": "zum-deutsch",
+    "slug": "zum-deutsch",
+    "titleOriginal": "ZUM",
+    "titleZh": "ZUM 德语学习开放材料",
+    "descriptionZh": "德语学习开放教学资料与练习目录。",
+    "howToUseZh": "按主题选练习，核对作者和适用等级后使用。",
+    "primaryCategory": "courses",
+    "tags": [
+      "学习入口",
+      "综合",
+      "语法"
+    ],
+    "levels": [
+      "A1",
+      "A2",
+      "B1",
+      "B2"
+    ],
+    "levelBasis": "editorial",
+    "skills": [
+      "综合",
+      "语法"
+    ],
+    "exams": [],
+    "formats": [
+      "网页"
+    ],
+    "price": "free",
+    "access": "open",
+    "languages": [
+      "德语"
+    ],
+    "sourceName": "ZUM",
+    "url": "https://deutsch-lernen.zum.de/",
+    "canonicalUrl": "https://deutsch-lernen.zum.de/",
+    "rights": "link-only",
+    "status": "published",
+    "linkStatus": "ok",
+    "lastEditorialCheckedAt": "2026-09-30"
+  },
+  {
+    "id": "schubert-digital",
+    "slug": "schubert-digital",
+    "titleOriginal": "SCHUBERT-Verlag",
+    "titleZh": "Schubert 出版社数字练习",
+    "descriptionZh": "出版社配套线上练习、工作纸和数字教学入口。",
+    "howToUseZh": "根据自己的教材与等级选择配套练习，不跨级随机刷题。",
+    "primaryCategory": "grammar",
+    "tags": [
+      "学习入口",
+      "语法",
+      "词汇"
+    ],
+    "levels": [
+      "A1",
+      "A2",
+      "B1",
+      "B2",
+      "C1",
+      "C2"
+    ],
+    "levelBasis": "editorial",
+    "skills": [
+      "语法",
+      "词汇"
+    ],
+    "exams": [],
+    "formats": [
+      "网页"
+    ],
+    "price": "freemium",
+    "access": "open",
+    "languages": [
+      "德语"
+    ],
+    "sourceName": "SCHUBERT-Verlag",
+    "url": "https://www.schubert-verlag.de/digital.php",
+    "canonicalUrl": "https://www.schubert-verlag.de/digital.php",
+    "rights": "link-only",
+    "status": "published",
+    "linkStatus": "ok",
+    "lastEditorialCheckedAt": "2026-09-30"
+  },
+  {
+    "id": "deutschlernerblog",
+    "slug": "deutschlernerblog",
+    "titleOriginal": "Deutschlernerblog",
+    "titleZh": "Deutschlernerblog 阅读与学习主题",
+    "descriptionZh": "围绕德语表达、阅读和语言学习的主题文章与练习。",
+    "howToUseZh": "每周选一个话题，整理五个表达后写短篇复述。",
+    "primaryCategory": "reading",
+    "tags": [
+      "学习入口",
+      "阅读",
+      "词汇"
+    ],
+    "levels": [
+      "A2",
+      "B1",
+      "B2",
+      "C1"
+    ],
+    "levelBasis": "editorial",
+    "skills": [
+      "阅读",
+      "词汇"
+    ],
+    "exams": [],
+    "formats": [
+      "网页"
+    ],
+    "price": "free",
+    "access": "open",
+    "languages": [
+      "德语"
+    ],
+    "sourceName": "Deutschlernerblog",
+    "url": "https://deutschlernerblog.de/",
+    "canonicalUrl": "https://deutschlernerblog.de/",
+    "rights": "link-only",
+    "status": "published",
+    "linkStatus": "ok",
+    "lastEditorialCheckedAt": "2026-09-30"
+  },
+  {
+    "id": "deutsch-to-go",
+    "slug": "deutsch-to-go",
+    "titleOriginal": "Deutsch-to-go",
+    "titleZh": "Deutsch-to-go 短篇听力",
+    "descriptionZh": "德语短篇听力材料和相关练习入口。",
+    "howToUseZh": "先听抓主旨，再查看题目与文本，最后复听和复述。",
+    "primaryCategory": "listening",
+    "tags": [
+      "学习入口",
+      "听力",
+      "阅读"
+    ],
+    "levels": [
+      "A2",
+      "B1",
+      "B2",
+      "C1"
+    ],
+    "levelBasis": "editorial",
+    "skills": [
+      "听力",
+      "阅读"
+    ],
+    "exams": [],
+    "formats": [
+      "网页"
+    ],
+    "price": "free",
+    "access": "open",
+    "languages": [
+      "德语"
+    ],
+    "sourceName": "Deutsch-to-go",
+    "url": "https://deutsch-to-go.de/",
+    "canonicalUrl": "https://deutsch-to-go.de/",
+    "rights": "link-only",
+    "status": "published",
+    "linkStatus": "ok",
+    "lastEditorialCheckedAt": "2026-09-30"
+  },
+  {
+    "id": "14minuten",
+    "slug": "14minuten",
+    "titleOriginal": "14 Minuten",
+    "titleZh": "14 Minuten 日常德语播客",
+    "descriptionZh": "针对学习者的日常话题德语音频。",
+    "howToUseZh": "选择熟悉主题精听，记录表达后做一分钟口头摘要；附加产品另查。",
+    "primaryCategory": "listening",
+    "tags": [
+      "学习入口",
+      "听力",
+      "口语"
+    ],
+    "levels": [
+      "B1",
+      "B2"
+    ],
+    "levelBasis": "editorial",
+    "skills": [
+      "听力",
+      "口语"
+    ],
+    "exams": [],
+    "formats": [
+      "网页"
+    ],
+    "price": "freemium",
+    "access": "open",
+    "languages": [
+      "德语"
+    ],
+    "sourceName": "14 Minuten",
+    "url": "https://14minuten.de/",
+    "canonicalUrl": "https://14minuten.de/",
+    "rights": "link-only",
+    "status": "published",
+    "linkStatus": "ok",
+    "lastEditorialCheckedAt": "2026-09-30"
+  },
+  {
+    "id": "deutschpodcast",
+    "slug": "deutschpodcast",
+    "titleOriginal": "Deutsch Podcast",
+    "titleZh": "Deutsch Podcast 德语对话",
+    "descriptionZh": "语言学习播客与配套学习内容。",
+    "howToUseZh": "先听一段真实对话，再挑选句型练习自己的回答。",
+    "primaryCategory": "listening",
+    "tags": [
+      "学习入口",
+      "听力",
+      "口语"
+    ],
+    "levels": [
+      "B1",
+      "B2",
+      "C1"
+    ],
+    "levelBasis": "editorial",
+    "skills": [
+      "听力",
+      "口语"
+    ],
+    "exams": [],
+    "formats": [
+      "网页"
+    ],
+    "price": "freemium",
+    "access": "open",
+    "languages": [
+      "德语"
+    ],
+    "sourceName": "Deutsch Podcast",
+    "url": "https://deutschpodcast.de/",
+    "canonicalUrl": "https://deutschpodcast.de/",
+    "rights": "link-only",
+    "status": "published",
+    "linkStatus": "unchecked",
+    "lastEditorialCheckedAt": "2026-09-30"
+  },
+  {
+    "id": "forvo",
+    "slug": "forvo",
+    "titleOriginal": "Forvo",
+    "titleZh": "Forvo 德语词语发音",
+    "descriptionZh": "通过用户录制的词语发音辅助查音与跟读。",
+    "howToUseZh": "听同一词的多位说话者，核对地区差异并录音比较。",
+    "primaryCategory": "speaking",
+    "tags": [
+      "学习入口",
+      "口语",
+      "词汇"
+    ],
+    "levels": [
+      "A1",
+      "A2",
+      "B1",
+      "B2",
+      "C1"
+    ],
+    "levelBasis": "editorial",
+    "skills": [
+      "口语",
+      "词汇"
+    ],
+    "exams": [],
+    "formats": [
+      "网页"
+    ],
+    "price": "freemium",
+    "access": "open",
+    "languages": [
+      "德语"
+    ],
+    "sourceName": "Forvo",
+    "url": "https://forvo.com/languages/de/",
+    "canonicalUrl": "https://forvo.com/languages/de",
+    "rights": "link-only",
+    "status": "published",
+    "linkStatus": "restricted",
+    "lastEditorialCheckedAt": "2026-09-30"
+  },
+  {
+    "id": "tandem",
+    "slug": "tandem",
+    "titleOriginal": "Tandem",
+    "titleZh": "Tandem 语言交换",
+    "descriptionZh": "寻找语言交换伙伴的交流平台。",
+    "howToUseZh": "先约定主题和互助语言时间，不公开个人联系方式。",
+    "primaryCategory": "speaking",
+    "tags": [
+      "学习入口",
+      "口语",
+      "写作"
+    ],
+    "levels": [
+      "A2",
+      "B1",
+      "B2",
+      "C1"
+    ],
+    "levelBasis": "editorial",
+    "skills": [
+      "口语",
+      "写作"
+    ],
+    "exams": [],
+    "formats": [
+      "网页"
+    ],
+    "price": "freemium",
+    "access": "registration",
+    "languages": [
+      "德语"
+    ],
+    "sourceName": "Tandem",
+    "url": "https://www.tandem.net/",
+    "canonicalUrl": "https://www.tandem.net/",
+    "rights": "link-only",
+    "status": "published",
+    "linkStatus": "ok",
+    "lastEditorialCheckedAt": "2026-09-30"
+  },
+  {
+    "id": "hellotalk",
+    "slug": "hellotalk",
+    "titleOriginal": "HelloTalk",
+    "titleZh": "HelloTalk 语言交流",
+    "descriptionZh": "提供语言交流、文字与语音练习的社区平台。",
+    "howToUseZh": "选择德语学习方向，以短句互改与语音练习为主。",
+    "primaryCategory": "speaking",
+    "tags": [
+      "学习入口",
+      "口语",
+      "写作"
+    ],
+    "levels": [
+      "A2",
+      "B1",
+      "B2",
+      "C1"
+    ],
+    "levelBasis": "editorial",
+    "skills": [
+      "口语",
+      "写作"
+    ],
+    "exams": [],
+    "formats": [
+      "网页"
+    ],
+    "price": "freemium",
+    "access": "registration",
+    "languages": [
+      "德语"
+    ],
+    "sourceName": "HelloTalk",
+    "url": "https://www.hellotalk.com/",
+    "canonicalUrl": "https://www.hellotalk.com/",
+    "rights": "link-only",
+    "status": "published",
+    "linkStatus": "ok",
+    "lastEditorialCheckedAt": "2026-09-30"
+  },
+  {
+    "id": "languagetool",
+    "slug": "languagetool",
+    "titleOriginal": "LanguageTool",
+    "titleZh": "LanguageTool 德语写作检查",
+    "descriptionZh": "支持德语的拼写、语法和风格检查工具。",
+    "howToUseZh": "先自行修改草稿，再查看工具建议；不要上传敏感个人材料。",
+    "primaryCategory": "writing",
+    "tags": [
+      "学习入口",
+      "写作",
+      "语法"
+    ],
+    "levels": [
+      "A2",
+      "B1",
+      "B2",
+      "C1",
+      "C2"
+    ],
+    "levelBasis": "editorial",
+    "skills": [
+      "写作",
+      "语法"
+    ],
+    "exams": [],
+    "formats": [
+      "网页"
+    ],
+    "price": "freemium",
+    "access": "open",
+    "languages": [
+      "德语"
+    ],
+    "sourceName": "LanguageTool",
+    "url": "https://languagetool.org/de",
+    "canonicalUrl": "https://languagetool.org/de",
+    "rights": "link-only",
+    "status": "published",
+    "linkStatus": "ok",
+    "lastEditorialCheckedAt": "2026-09-30"
+  },
+  {
+    "id": "deepl-write",
+    "slug": "deepl-write",
+    "titleOriginal": "DeepL",
+    "titleZh": "DeepL Write 德语表达改写",
+    "descriptionZh": "支持德语文本表达优化的写作辅助工具。",
+    "howToUseZh": "把原句与修改建议逐项比较，学会解释修改原因。",
+    "primaryCategory": "writing",
+    "tags": [
+      "学习入口",
+      "写作"
+    ],
+    "levels": [
+      "B1",
+      "B2",
+      "C1",
+      "C2"
+    ],
+    "levelBasis": "editorial",
+    "skills": [
+      "写作"
+    ],
+    "exams": [],
+    "formats": [
+      "网页"
+    ],
+    "price": "freemium",
+    "access": "open",
+    "languages": [
+      "德语"
+    ],
+    "sourceName": "DeepL",
+    "url": "https://www.deepl.com/write",
+    "canonicalUrl": "https://www.deepl.com/write",
+    "rights": "link-only",
+    "status": "published",
+    "linkStatus": "ok",
+    "lastEditorialCheckedAt": "2026-09-30"
+  },
+  {
+    "id": "projekt-gutenberg",
+    "slug": "projekt-gutenberg",
+    "titleOriginal": "Projekt Gutenberg-DE",
+    "titleZh": "Projekt Gutenberg-DE 德语文学",
+    "descriptionZh": "德语文学文本和作者目录，用于中高级长篇阅读。",
+    "howToUseZh": "先选短篇；阅读与复制权限按原站说明和所在地区规则核对。",
+    "primaryCategory": "reading",
+    "tags": [
+      "学习入口",
+      "阅读",
+      "词汇"
+    ],
+    "levels": [
+      "B2",
+      "C1",
+      "C2"
+    ],
+    "levelBasis": "editorial",
+    "skills": [
+      "阅读",
+      "词汇"
+    ],
+    "exams": [],
+    "formats": [
+      "网页"
+    ],
+    "price": "free",
+    "access": "open",
+    "languages": [
+      "德语"
+    ],
+    "sourceName": "Projekt Gutenberg-DE",
+    "url": "https://www.projekt-gutenberg.org/",
+    "canonicalUrl": "https://www.projekt-gutenberg.org/",
+    "rights": "link-only",
+    "status": "published",
+    "linkStatus": "restricted",
+    "lastEditorialCheckedAt": "2026-09-30"
+  },
+  {
+    "id": "lingoni",
+    "slug": "lingoni",
+    "titleOriginal": "lingoni",
+    "titleZh": "lingoni 德语教学视频与课程",
+    "descriptionZh": "德语视频讲解和付费课程学习入口。",
+    "howToUseZh": "先使用公开示例，确定适合的课程等级再考虑付费。",
+    "primaryCategory": "video",
+    "tags": [
+      "学习入口",
+      "听力",
+      "语法"
+    ],
+    "levels": [
+      "A1",
+      "A2",
+      "B1",
+      "B2"
+    ],
+    "levelBasis": "editorial",
+    "skills": [
+      "听力",
+      "语法"
+    ],
+    "exams": [],
+    "formats": [
+      "网页"
+    ],
+    "price": "freemium",
+    "access": "registration",
+    "languages": [
+      "德语"
+    ],
+    "sourceName": "lingoni",
+    "url": "https://lingoni.com/",
+    "canonicalUrl": "https://lingoni.com/",
+    "rights": "link-only",
+    "status": "published",
+    "linkStatus": "ok",
+    "lastEditorialCheckedAt": "2026-09-30"
+  },
+  {
+    "id": "yourdailygerman",
+    "slug": "yourdailygerman",
+    "titleOriginal": "Your Daily German",
+    "titleZh": "Your Daily German 词汇与语法讲解",
+    "descriptionZh": "用英语讲解德语词汇、语法和惯用表达的学习文章。",
+    "howToUseZh": "一次研究一个词或语法主题，记录德语例句与搭配。",
+    "primaryCategory": "reading",
+    "tags": [
+      "学习入口",
+      "阅读",
+      "词汇",
+      "语法"
+    ],
+    "levels": [
+      "A2",
+      "B1",
+      "B2"
+    ],
+    "levelBasis": "editorial",
+    "skills": [
+      "阅读",
+      "词汇",
+      "语法"
+    ],
+    "exams": [],
+    "formats": [
+      "网页"
+    ],
+    "price": "freemium",
+    "access": "open",
+    "languages": [
+      "德语"
+    ],
+    "sourceName": "Your Daily German",
+    "url": "https://yourdailygerman.com/",
+    "canonicalUrl": "https://yourdailygerman.com/",
+    "rights": "link-only",
+    "status": "published",
+    "linkStatus": "ok",
+    "lastEditorialCheckedAt": "2026-09-30"
+  },
+  {
+    "id": "language-reactor",
+    "slug": "language-reactor",
+    "titleOriginal": "Language Reactor",
+    "titleZh": "Language Reactor 字幕学习工具",
+    "descriptionZh": "浏览器字幕学习工具，辅助对照文本和整理词汇。",
+    "howToUseZh": "选择有可靠字幕的视频，先听后读，再整理自己的短语卡片。",
+    "primaryCategory": "tools",
+    "tags": [
+      "学习入口",
+      "听力",
+      "词汇"
+    ],
+    "levels": [
+      "A2",
+      "B1",
+      "B2",
+      "C1"
+    ],
+    "levelBasis": "editorial",
+    "skills": [
+      "听力",
+      "词汇"
+    ],
+    "exams": [],
+    "formats": [
+      "工具"
+    ],
+    "price": "freemium",
+    "access": "open",
+    "languages": [
+      "德语"
+    ],
+    "sourceName": "Language Reactor",
+    "url": "https://www.languagereactor.com/",
+    "canonicalUrl": "https://www.languagereactor.com/",
+    "rights": "link-only",
+    "status": "published",
+    "linkStatus": "ok",
+    "lastEditorialCheckedAt": "2026-09-30"
+  },
+  {
+    "id": "tagesschau",
+    "slug": "tagesschau",
+    "titleOriginal": "ARD / Tagesschau",
+    "titleZh": "Tagesschau 德国新闻",
+    "descriptionZh": "德国公共媒体新闻，适合中高级真实德语阅读。",
+    "howToUseZh": "每天只选一篇，把事实、观点和不确定信息分开复述。",
+    "primaryCategory": "news",
+    "tags": [
+      "学习入口",
+      "阅读",
+      "听力"
+    ],
+    "levels": [
+      "B2",
+      "C1",
+      "C2"
+    ],
+    "levelBasis": "editorial",
+    "skills": [
+      "阅读",
+      "听力"
+    ],
+    "exams": [],
+    "formats": [
+      "网页"
+    ],
+    "price": "free",
+    "access": "open",
+    "languages": [
+      "德语"
+    ],
+    "sourceName": "ARD / Tagesschau",
+    "url": "https://www.tagesschau.de/",
+    "canonicalUrl": "https://www.tagesschau.de/",
+    "rights": "link-only",
+    "status": "published",
+    "linkStatus": "ok",
+    "lastEditorialCheckedAt": "2026-09-30"
+  },
+  {
+    "id": "logo-news",
+    "slug": "logo-news",
+    "titleOriginal": "ZDF",
+    "titleZh": "ZDF logo! 儿童新闻",
+    "descriptionZh": "用面向儿童的说明介绍新闻和社会主题。",
+    "howToUseZh": "选熟悉的话题阅读或观看；儿童内容不直接等于 CEFR 等级。",
+    "primaryCategory": "news",
+    "tags": [
+      "学习入口",
+      "阅读",
+      "听力"
+    ],
+    "levels": [
+      "A2",
+      "B1",
+      "B2"
+    ],
+    "levelBasis": "editorial",
+    "skills": [
+      "阅读",
+      "听力"
+    ],
+    "exams": [],
+    "formats": [
+      "网页"
+    ],
+    "price": "free",
+    "access": "open",
+    "languages": [
+      "德语"
+    ],
+    "sourceName": "ZDF",
+    "url": "https://www.logo.de/",
+    "canonicalUrl": "https://www.logo.de/",
+    "rights": "link-only",
+    "status": "published",
+    "linkStatus": "ok",
+    "lastEditorialCheckedAt": "2026-09-30"
+  },
+  {
+    "id": "deutschlandfunk",
+    "slug": "deutschlandfunk",
+    "titleOriginal": "Deutschlandfunk",
+    "titleZh": "Deutschlandfunk 电台与节目",
+    "descriptionZh": "德国公共广播新闻、访谈与知识节目入口。",
+    "howToUseZh": "选短节目听两遍，标记主题转折后口头复述。",
+    "primaryCategory": "listening",
+    "tags": [
+      "学习入口",
+      "听力",
+      "阅读"
+    ],
+    "levels": [
+      "B2",
+      "C1",
+      "C2"
+    ],
+    "levelBasis": "editorial",
+    "skills": [
+      "听力",
+      "阅读"
+    ],
+    "exams": [],
+    "formats": [
+      "网页"
+    ],
+    "price": "free",
+    "access": "open",
+    "languages": [
+      "德语"
+    ],
+    "sourceName": "Deutschlandfunk",
+    "url": "https://www.deutschlandfunk.de/",
+    "canonicalUrl": "https://www.deutschlandfunk.de/",
+    "rights": "link-only",
+    "status": "published",
+    "linkStatus": "ok",
+    "lastEditorialCheckedAt": "2026-09-30"
+  },
+  {
+    "id": "daad",
+    "slug": "daad",
+    "titleOriginal": "DAAD",
+    "titleZh": "DAAD 德国留学官方信息",
+    "descriptionZh": "留学、大学和奖学金信息查询入口。",
+    "howToUseZh": "按学习阶段查申请步骤，语言要求以学校最新说明为准。",
+    "primaryCategory": "life",
+    "tags": [
+      "学习入口",
+      "阅读",
+      "词汇"
+    ],
+    "levels": [
+      "B1",
+      "B2",
+      "C1"
+    ],
+    "levelBasis": "editorial",
+    "skills": [
+      "阅读",
+      "词汇"
+    ],
+    "exams": [],
+    "formats": [
+      "网页"
+    ],
+    "price": "free",
+    "access": "open",
+    "languages": [
+      "德语",
+      "英语"
+    ],
+    "sourceName": "DAAD",
+    "url": "https://www.daad.de/en/studying-in-germany/",
+    "canonicalUrl": "https://www.daad.de/en/studying-in-germany",
+    "rights": "link-only",
+    "status": "published",
+    "linkStatus": "ok",
+    "lastEditorialCheckedAt": "2026-09-30"
+  },
+  {
+    "id": "study-in-germany",
+    "slug": "study-in-germany",
+    "titleOriginal": "Study in Germany / DAAD",
+    "titleZh": "Study in Germany 留学准备",
+    "descriptionZh": "德国留学与学生生活信息门户。",
+    "howToUseZh": "按申请、到达、生活阶段建立自己的准备清单。",
+    "primaryCategory": "life",
+    "tags": [
+      "学习入口",
+      "阅读",
+      "词汇"
+    ],
+    "levels": [
+      "B1",
+      "B2",
+      "C1"
+    ],
+    "levelBasis": "editorial",
+    "skills": [
+      "阅读",
+      "词汇"
+    ],
+    "exams": [],
+    "formats": [
+      "网页"
+    ],
+    "price": "free",
+    "access": "open",
+    "languages": [
+      "德语",
+      "英语"
+    ],
+    "sourceName": "Study in Germany / DAAD",
+    "url": "https://www.study-in-germany.com/en/",
+    "canonicalUrl": "https://www.study-in-germany.com/en/",
+    "rights": "link-only",
+    "status": "published",
+    "linkStatus": "ok",
+    "lastEditorialCheckedAt": "2026-09-30"
+  },
+  {
+    "id": "uni-assist",
+    "slug": "uni-assist",
+    "titleOriginal": "uni-assist",
+    "titleZh": "uni-assist 国际申请说明",
+    "descriptionZh": "国际学生申请审核机构的申请步骤与材料说明。",
+    "howToUseZh": "先读流程，再核对目标大学是否使用该服务；申请本身可能收费。",
+    "primaryCategory": "life",
+    "tags": [
+      "学习入口",
+      "阅读",
+      "词汇"
+    ],
+    "levels": [
+      "B1",
+      "B2",
+      "C1"
+    ],
+    "levelBasis": "editorial",
+    "skills": [
+      "阅读",
+      "词汇"
+    ],
+    "exams": [],
+    "formats": [
+      "网页"
+    ],
+    "price": "free",
+    "access": "open",
+    "languages": [
+      "德语",
+      "英语"
+    ],
+    "sourceName": "uni-assist",
+    "url": "https://www.uni-assist.de/en/",
+    "canonicalUrl": "https://www.uni-assist.de/en",
+    "rights": "link-only",
+    "status": "published",
+    "linkStatus": "ok",
+    "lastEditorialCheckedAt": "2026-09-30"
+  },
+  {
+    "id": "aps-china",
+    "slug": "aps-china",
+    "titleOriginal": "Akademische Prüfstelle",
+    "titleZh": "APS 中国留德审核信息",
+    "descriptionZh": "中国留德审核流程与官方说明入口。",
+    "howToUseZh": "只以官网当前材料要求、程序和费用为准。",
+    "primaryCategory": "life",
+    "tags": [
+      "学习入口",
+      "阅读",
+      "词汇"
+    ],
+    "levels": [
+      "B1",
+      "B2",
+      "C1"
+    ],
+    "levelBasis": "editorial",
+    "skills": [
+      "阅读",
+      "词汇"
+    ],
+    "exams": [],
+    "formats": [
+      "网页"
+    ],
+    "price": "free",
+    "access": "open",
+    "languages": [
+      "德语",
+      "英语"
+    ],
+    "sourceName": "Akademische Prüfstelle",
+    "url": "https://www.aps.org.cn/",
+    "canonicalUrl": "https://www.aps.org.cn/",
+    "rights": "link-only",
+    "status": "published",
+    "linkStatus": "ok",
+    "lastEditorialCheckedAt": "2026-09-30"
+  },
+  {
+    "id": "bamf",
+    "slug": "bamf",
+    "titleOriginal": "BAMF",
+    "titleZh": "BAMF 官方语言与融入信息",
+    "descriptionZh": "德国联邦移民机构的语言课程、融入及居留信息。",
+    "howToUseZh": "先找适用身份和项目，再学习相关办事词汇。",
+    "primaryCategory": "life",
+    "tags": [
+      "学习入口",
+      "阅读",
+      "词汇"
+    ],
+    "levels": [
+      "B1",
+      "B2",
+      "C1"
+    ],
+    "levelBasis": "editorial",
+    "skills": [
+      "阅读",
+      "词汇"
+    ],
+    "exams": [],
+    "formats": [
+      "网页"
+    ],
+    "price": "free",
+    "access": "open",
+    "languages": [
+      "德语",
+      "英语"
+    ],
+    "sourceName": "BAMF",
+    "url": "https://www.bamf.de/DE/Startseite/startseite_node.html",
+    "canonicalUrl": "https://www.bamf.de/DE/Startseite/startseite_node.html",
+    "rights": "link-only",
+    "status": "published",
+    "linkStatus": "unchecked",
+    "lastEditorialCheckedAt": "2026-09-30"
+  },
+  {
+    "id": "deutsch-welle-media",
+    "slug": "deutsch-welle-media",
+    "titleOriginal": "Deutsche Welle",
+    "titleZh": "DW 德语新闻与国际资讯",
+    "descriptionZh": "德国之声德语新闻与专题入口。",
+    "howToUseZh": "选择一篇短报道，先总结核心信息，再比较不同来源。",
+    "primaryCategory": "news",
+    "tags": [
+      "学习入口",
+      "阅读",
+      "听力"
+    ],
+    "levels": [
+      "B2",
+      "C1",
+      "C2"
+    ],
+    "levelBasis": "editorial",
+    "skills": [
+      "阅读",
+      "听力"
+    ],
+    "exams": [],
+    "formats": [
+      "网页"
+    ],
+    "price": "free",
+    "access": "open",
+    "languages": [
+      "德语"
+    ],
+    "sourceName": "Deutsche Welle",
+    "url": "https://www.dw.com/de/themen/s-9077",
+    "canonicalUrl": "https://www.dw.com/de/themen/s-9077",
+    "rights": "link-only",
+    "status": "published",
+    "linkStatus": "ok",
+    "lastEditorialCheckedAt": "2026-09-30"
+  },
+  {
+    "id": "guide-a1-c1-roadmap",
+    "slug": "guide-a1-c1-roadmap",
+    "titleOriginal": "A1-C1 德语总路线",
+    "titleZh": "A1-C1 德语总路线",
+    "descriptionZh": "这页把德语学习从 A1 到 C1 拆成可执行阶段。目标不是收藏很多材料，而是知道每一级要解决什么问题、用什么资源、怎么证明自己真的会用。",
+    "howToUseZh": "先阅读说明，按文中任务做一次练习或整理自己的清单，再复盘未完成项目。",
+    "primaryCategory": "courses",
+    "tags": [
+      "中文资料",
+      "本站文档"
+    ],
+    "levels": [
+      "A1"
+    ],
+    "levelBasis": "editorial",
+    "skills": [
+      "综合"
+    ],
+    "exams": [],
+    "formats": [
+      "中文指南"
+    ],
+    "price": "free",
+    "access": "open",
+    "languages": [
+      "中文",
+      "德语"
+    ],
+    "sourceName": "Deutsch Lernen 公开学习文档",
+    "url": "https://github.com/aolingge/deutsch-lernen/blob/main/docs/learning-paths/a1-c1-roadmap.md",
+    "canonicalUrl": "https://github.com/aolingge/deutsch-lernen/blob/main/docs/learning-paths/a1-c1-roadmap.md",
+    "rights": "owned",
+    "status": "published",
+    "linkStatus": "ok",
+    "lastEditorialCheckedAt": "2026-09-30"
+  },
+  {
+    "id": "guide-b1-4-week-sprint",
+    "slug": "guide-b1-4-week-sprint",
+    "titleOriginal": "B1 四周冲刺路线",
+    "titleZh": "B1 四周冲刺路线",
+    "descriptionZh": "适合离考试很近、目标是先稳稳通过 B1 的情况。原则：先修最影响得分的问题，再做题型训练。",
+    "howToUseZh": "先阅读说明，按文中任务做一次练习或整理自己的清单，再复盘未完成项目。",
+    "primaryCategory": "courses",
+    "tags": [
+      "中文资料",
+      "本站文档"
+    ],
+    "levels": [
+      "B1"
+    ],
+    "levelBasis": "editorial",
+    "skills": [
+      "综合"
+    ],
+    "exams": [],
+    "formats": [
+      "中文指南"
+    ],
+    "price": "free",
+    "access": "open",
+    "languages": [
+      "中文",
+      "德语"
+    ],
+    "sourceName": "Deutsch Lernen 公开学习文档",
+    "url": "https://github.com/aolingge/deutsch-lernen/blob/main/docs/learning-paths/b1-4-week-sprint.md",
+    "canonicalUrl": "https://github.com/aolingge/deutsch-lernen/blob/main/docs/learning-paths/b1-4-week-sprint.md",
+    "rights": "owned",
+    "status": "published",
+    "linkStatus": "ok",
+    "lastEditorialCheckedAt": "2026-09-30"
+  },
+  {
+    "id": "guide-b1-8-week-plan",
+    "slug": "guide-b1-8-week-plan",
+    "titleOriginal": "B1 八周稳固路线",
+    "titleZh": "B1 八周稳固路线",
+    "descriptionZh": "适合想真正把 B1 学扎实，而不是只靠模板冲过去的学习者。八周路线的核心是：每周都有输入、输出和复盘。",
+    "howToUseZh": "先阅读说明，按文中任务做一次练习或整理自己的清单，再复盘未完成项目。",
+    "primaryCategory": "courses",
+    "tags": [
+      "中文资料",
+      "本站文档"
+    ],
+    "levels": [
+      "B1"
+    ],
+    "levelBasis": "editorial",
+    "skills": [
+      "综合"
+    ],
+    "exams": [],
+    "formats": [
+      "中文指南"
+    ],
+    "price": "free",
+    "access": "open",
+    "languages": [
+      "中文",
+      "德语"
+    ],
+    "sourceName": "Deutsch Lernen 公开学习文档",
+    "url": "https://github.com/aolingge/deutsch-lernen/blob/main/docs/learning-paths/b1-8-week-plan.md",
+    "canonicalUrl": "https://github.com/aolingge/deutsch-lernen/blob/main/docs/learning-paths/b1-8-week-plan.md",
+    "rights": "owned",
+    "status": "published",
+    "linkStatus": "ok",
+    "lastEditorialCheckedAt": "2026-09-30"
+  },
+  {
+    "id": "guide-b1-roadmap",
+    "slug": "guide-b1-roadmap",
+    "titleOriginal": "B1 学习路线",
+    "titleZh": "B1 学习路线",
+    "descriptionZh": "B1 的目标不是“背完一本书”，而是能在常见生活、学习和工作场景里表达需求、理解主旨、写出结构清楚的短文。",
+    "howToUseZh": "先阅读说明，按文中任务做一次练习或整理自己的清单，再复盘未完成项目。",
+    "primaryCategory": "courses",
+    "tags": [
+      "中文资料",
+      "本站文档"
+    ],
+    "levels": [
+      "B1"
+    ],
+    "levelBasis": "editorial",
+    "skills": [
+      "综合"
+    ],
+    "exams": [],
+    "formats": [
+      "中文指南"
+    ],
+    "price": "free",
+    "access": "open",
+    "languages": [
+      "中文",
+      "德语"
+    ],
+    "sourceName": "Deutsch Lernen 公开学习文档",
+    "url": "https://github.com/aolingge/deutsch-lernen/blob/main/docs/learning-paths/b1-roadmap.md",
+    "canonicalUrl": "https://github.com/aolingge/deutsch-lernen/blob/main/docs/learning-paths/b1-roadmap.md",
+    "rights": "owned",
+    "status": "published",
+    "linkStatus": "ok",
+    "lastEditorialCheckedAt": "2026-09-30"
+  },
+  {
+    "id": "guide-b1-study-methods",
+    "slug": "guide-b1-study-methods",
+    "titleOriginal": "德语 B1 学习方法总览",
+    "titleZh": "德语 B1 学习方法总览",
+    "descriptionZh": "B1 最稳路线是“官方模考定目标 + 语法错题闭环 + 每日听说输出 + 每周限时模考”。资料越多，越要让它们进入固定流程。",
+    "howToUseZh": "先阅读说明，按文中任务做一次练习或整理自己的清单，再复盘未完成项目。",
+    "primaryCategory": "courses",
+    "tags": [
+      "中文资料",
+      "本站文档"
+    ],
+    "levels": [
+      "B1"
+    ],
+    "levelBasis": "editorial",
+    "skills": [
+      "综合"
+    ],
+    "exams": [],
+    "formats": [
+      "中文指南"
+    ],
+    "price": "free",
+    "access": "open",
+    "languages": [
+      "中文",
+      "德语"
+    ],
+    "sourceName": "Deutsch Lernen 公开学习文档",
+    "url": "https://github.com/aolingge/deutsch-lernen/blob/main/docs/learning-paths/b1-study-methods.md",
+    "canonicalUrl": "https://github.com/aolingge/deutsch-lernen/blob/main/docs/learning-paths/b1-study-methods.md",
+    "rights": "owned",
+    "status": "published",
+    "linkStatus": "ok",
+    "lastEditorialCheckedAt": "2026-09-30"
+  },
+  {
+    "id": "guide-grammar-to-output-map",
+    "slug": "guide-grammar-to-output-map",
+    "titleOriginal": "语法到输出地图",
+    "titleZh": "语法到输出地图",
+    "descriptionZh": "语法不是为了背术语，而是为了完成表达任务。这页把常见语法点和真实输出连接起来。",
+    "howToUseZh": "先阅读说明，按文中任务做一次练习或整理自己的清单，再复盘未完成项目。",
+    "primaryCategory": "courses",
+    "tags": [
+      "中文资料",
+      "本站文档"
+    ],
+    "levels": [
+      "A1",
+      "A2",
+      "B1",
+      "B2",
+      "C1"
+    ],
+    "levelBasis": "editorial",
+    "skills": [
+      "综合"
+    ],
+    "exams": [],
+    "formats": [
+      "中文指南"
+    ],
+    "price": "free",
+    "access": "open",
+    "languages": [
+      "中文",
+      "德语"
+    ],
+    "sourceName": "Deutsch Lernen 公开学习文档",
+    "url": "https://github.com/aolingge/deutsch-lernen/blob/main/docs/learning-paths/grammar-to-output-map.md",
+    "canonicalUrl": "https://github.com/aolingge/deutsch-lernen/blob/main/docs/learning-paths/grammar-to-output-map.md",
+    "rights": "owned",
+    "status": "published",
+    "linkStatus": "ok",
+    "lastEditorialCheckedAt": "2026-09-30"
+  },
+  {
+    "id": "guide-level-upgrade-method",
+    "slug": "guide-level-upgrade-method",
+    "titleOriginal": "等级升级方法：从 A1 到 C1 怎么学",
+    "titleZh": "等级升级方法：从 A1 到 C1 怎么学",
+    "descriptionZh": "很多人卡住，不是因为资源不够，而是每一级用了同一种学习方法。A1 可以靠模仿，B1 必须开始输出，B2-C1 必须处理长文本和抽象逻辑。",
+    "howToUseZh": "先阅读说明，按文中任务做一次练习或整理自己的清单，再复盘未完成项目。",
+    "primaryCategory": "courses",
+    "tags": [
+      "中文资料",
+      "本站文档"
+    ],
+    "levels": [
+      "A1",
+      "A2",
+      "B1",
+      "B2",
+      "C1"
+    ],
+    "levelBasis": "editorial",
+    "skills": [
+      "综合"
+    ],
+    "exams": [],
+    "formats": [
+      "中文指南"
+    ],
+    "price": "free",
+    "access": "open",
+    "languages": [
+      "中文",
+      "德语"
+    ],
+    "sourceName": "Deutsch Lernen 公开学习文档",
+    "url": "https://github.com/aolingge/deutsch-lernen/blob/main/docs/learning-paths/level-upgrade-method.md",
+    "canonicalUrl": "https://github.com/aolingge/deutsch-lernen/blob/main/docs/learning-paths/level-upgrade-method.md",
+    "rights": "owned",
+    "status": "published",
+    "linkStatus": "ok",
+    "lastEditorialCheckedAt": "2026-09-30"
+  },
+  {
+    "id": "guide-start-here",
+    "slug": "guide-start-here",
+    "titleOriginal": "新手学习入口",
+    "titleZh": "新手学习入口",
+    "descriptionZh": "如果你第一次打开这个仓库，先不要读完全部目录。用这页完成三件事：定位等级、选主线、开始今天的最小训练。",
+    "howToUseZh": "先阅读说明，按文中任务做一次练习或整理自己的清单，再复盘未完成项目。",
+    "primaryCategory": "courses",
+    "tags": [
+      "中文资料",
+      "本站文档"
+    ],
+    "levels": [
+      "A1",
+      "A2",
+      "B1",
+      "B2",
+      "C1"
+    ],
+    "levelBasis": "editorial",
+    "skills": [
+      "综合"
+    ],
+    "exams": [],
+    "formats": [
+      "中文指南"
+    ],
+    "price": "free",
+    "access": "open",
+    "languages": [
+      "中文",
+      "德语"
+    ],
+    "sourceName": "Deutsch Lernen 公开学习文档",
+    "url": "https://github.com/aolingge/deutsch-lernen/blob/main/docs/learning-paths/start-here.md",
+    "canonicalUrl": "https://github.com/aolingge/deutsch-lernen/blob/main/docs/learning-paths/start-here.md",
+    "rights": "owned",
+    "status": "published",
+    "linkStatus": "ok",
+    "lastEditorialCheckedAt": "2026-09-30"
+  },
+  {
+    "id": "guide-zero-to-b1-30-day-starter",
+    "slug": "guide-zero-to-b1-30-day-starter",
+    "titleOriginal": "从零到 B1 的前 30 天启动计划",
+    "titleZh": "从零到 B1 的前 30 天启动计划",
+    "descriptionZh": "这不是 30 天通过 B1 的承诺，而是帮新手建立正确学习动作。30 天后，你应该知道怎么学、怎么复盘、怎么继续走 A1-A2-B1。",
+    "howToUseZh": "先阅读说明，按文中任务做一次练习或整理自己的清单，再复盘未完成项目。",
+    "primaryCategory": "courses",
+    "tags": [
+      "中文资料",
+      "本站文档"
+    ],
+    "levels": [
+      "A1",
+      "A2",
+      "B1",
+      "B2",
+      "C1"
+    ],
+    "levelBasis": "editorial",
+    "skills": [
+      "综合"
+    ],
+    "exams": [],
+    "formats": [
+      "中文指南"
+    ],
+    "price": "free",
+    "access": "open",
+    "languages": [
+      "中文",
+      "德语"
+    ],
+    "sourceName": "Deutsch Lernen 公开学习文档",
+    "url": "https://github.com/aolingge/deutsch-lernen/blob/main/docs/learning-paths/zero-to-b1-30-day-starter.md",
+    "canonicalUrl": "https://github.com/aolingge/deutsch-lernen/blob/main/docs/learning-paths/zero-to-b1-30-day-starter.md",
+    "rights": "owned",
+    "status": "published",
+    "linkStatus": "ok",
+    "lastEditorialCheckedAt": "2026-09-30"
+  },
+  {
+    "id": "guide-a1-b1-grammar-checklist",
+    "slug": "guide-a1-b1-grammar-checklist",
+    "titleOriginal": "A1-B1 全语法点清单",
+    "titleZh": "A1-B1 全语法点清单",
+    "descriptionZh": "这页是查漏表，不是一次性背诵表。每个语法点都要完成四步：能在阅读/听力里认出，能用中文说清用途，能写 3 个自己的例句，能放进写作或口语任务。",
+    "howToUseZh": "先阅读规则和例句，做主题练习，再用该结构写五个自己的句子。",
+    "primaryCategory": "grammar",
+    "tags": [
+      "中文资料",
+      "本站文档"
+    ],
+    "levels": [
+      "A1"
+    ],
+    "levelBasis": "editorial",
+    "skills": [
+      "语法"
+    ],
+    "exams": [],
+    "formats": [
+      "中文指南"
+    ],
+    "price": "free",
+    "access": "open",
+    "languages": [
+      "中文",
+      "德语"
+    ],
+    "sourceName": "Deutsch Lernen 公开学习文档",
+    "url": "https://github.com/aolingge/deutsch-lernen/blob/main/docs/grammar/a1-b1-grammar-checklist.md",
+    "canonicalUrl": "https://github.com/aolingge/deutsch-lernen/blob/main/docs/grammar/a1-b1-grammar-checklist.md",
+    "rights": "owned",
+    "status": "published",
+    "linkStatus": "ok",
+    "lastEditorialCheckedAt": "2026-09-30"
+  },
+  {
+    "id": "guide-a1-c1-grammar-progression",
+    "slug": "guide-a1-c1-grammar-progression",
+    "titleOriginal": "A1-C1 语法升级路线",
+    "titleZh": "A1-C1 语法升级路线",
+    "descriptionZh": "语法学习不要按“术语难度”排序，而要按“表达任务”排序。A1 先能说完整句，B1 能解释理由，B2-C1 能处理抽象逻辑和学术表达。",
+    "howToUseZh": "先阅读规则和例句，做主题练习，再用该结构写五个自己的句子。",
+    "primaryCategory": "grammar",
+    "tags": [
+      "中文资料",
+      "本站文档"
+    ],
+    "levels": [
+      "A1"
+    ],
+    "levelBasis": "editorial",
+    "skills": [
+      "语法"
+    ],
+    "exams": [],
+    "formats": [
+      "中文指南"
+    ],
+    "price": "free",
+    "access": "open",
+    "languages": [
+      "中文",
+      "德语"
+    ],
+    "sourceName": "Deutsch Lernen 公开学习文档",
+    "url": "https://github.com/aolingge/deutsch-lernen/blob/main/docs/grammar/a1-c1-grammar-progression.md",
+    "canonicalUrl": "https://github.com/aolingge/deutsch-lernen/blob/main/docs/grammar/a1-c1-grammar-progression.md",
+    "rights": "owned",
+    "status": "published",
+    "linkStatus": "ok",
+    "lastEditorialCheckedAt": "2026-09-30"
+  },
+  {
+    "id": "guide-adjective-endings",
+    "slug": "guide-adjective-endings",
+    "titleOriginal": "形容词词尾",
+    "titleZh": "形容词词尾",
+    "descriptionZh": "形容词词尾不是为了背表而背。它的作用是告诉读者：这个名词的性、数、格已经由冠词表达了吗？如果冠词表达不够，形容词就要补信息。",
+    "howToUseZh": "先阅读规则和例句，做主题练习，再用该结构写五个自己的句子。",
+    "primaryCategory": "grammar",
+    "tags": [
+      "中文资料",
+      "本站文档"
+    ],
+    "levels": [
+      "A1",
+      "A2",
+      "B1",
+      "B2",
+      "C1"
+    ],
+    "levelBasis": "editorial",
+    "skills": [
+      "语法"
+    ],
+    "exams": [],
+    "formats": [
+      "中文指南"
+    ],
+    "price": "free",
+    "access": "open",
+    "languages": [
+      "中文",
+      "德语"
+    ],
+    "sourceName": "Deutsch Lernen 公开学习文档",
+    "url": "https://github.com/aolingge/deutsch-lernen/blob/main/docs/grammar/adjective-endings.md",
+    "canonicalUrl": "https://github.com/aolingge/deutsch-lernen/blob/main/docs/grammar/adjective-endings.md",
+    "rights": "owned",
+    "status": "published",
+    "linkStatus": "ok",
+    "lastEditorialCheckedAt": "2026-09-30"
+  },
+  {
+    "id": "guide-b1-recognition-grammar",
+    "slug": "guide-b1-recognition-grammar",
+    "titleOriginal": "B1 识别型语法补充",
+    "titleZh": "B1 识别型语法补充",
+    "descriptionZh": "有些语法 B1 不一定要大量输出，但阅读和听力中要认得。先做到“看懂不慌”，再决定是否主动使用。",
+    "howToUseZh": "先阅读规则和例句，做主题练习，再用该结构写五个自己的句子。",
+    "primaryCategory": "grammar",
+    "tags": [
+      "中文资料",
+      "本站文档"
+    ],
+    "levels": [
+      "B1"
+    ],
+    "levelBasis": "editorial",
+    "skills": [
+      "语法"
+    ],
+    "exams": [],
+    "formats": [
+      "中文指南"
+    ],
+    "price": "free",
+    "access": "open",
+    "languages": [
+      "中文",
+      "德语"
+    ],
+    "sourceName": "Deutsch Lernen 公开学习文档",
+    "url": "https://github.com/aolingge/deutsch-lernen/blob/main/docs/grammar/b1-recognition-grammar.md",
+    "canonicalUrl": "https://github.com/aolingge/deutsch-lernen/blob/main/docs/grammar/b1-recognition-grammar.md",
+    "rights": "owned",
+    "status": "published",
+    "linkStatus": "ok",
+    "lastEditorialCheckedAt": "2026-09-30"
+  },
+  {
+    "id": "guide-cases-and-pronouns",
+    "slug": "guide-cases-and-pronouns",
+    "titleOriginal": "冠词、格和代词",
+    "titleZh": "冠词、格和代词",
+    "descriptionZh": "德语名词前面的冠词会随着“性、数、格”变化。初学时不要急着一次记完所有细节，先记住这些格在句子里做什么。",
+    "howToUseZh": "先阅读规则和例句，做主题练习，再用该结构写五个自己的句子。",
+    "primaryCategory": "grammar",
+    "tags": [
+      "中文资料",
+      "本站文档"
+    ],
+    "levels": [
+      "A1",
+      "A2",
+      "B1",
+      "B2",
+      "C1"
+    ],
+    "levelBasis": "editorial",
+    "skills": [
+      "语法"
+    ],
+    "exams": [],
+    "formats": [
+      "中文指南"
+    ],
+    "price": "free",
+    "access": "open",
+    "languages": [
+      "中文",
+      "德语"
+    ],
+    "sourceName": "Deutsch Lernen 公开学习文档",
+    "url": "https://github.com/aolingge/deutsch-lernen/blob/main/docs/grammar/cases-and-pronouns.md",
+    "canonicalUrl": "https://github.com/aolingge/deutsch-lernen/blob/main/docs/grammar/cases-and-pronouns.md",
+    "rights": "owned",
+    "status": "published",
+    "linkStatus": "ok",
+    "lastEditorialCheckedAt": "2026-09-30"
+  },
+  {
+    "id": "guide-comparison-and-degree",
+    "slug": "guide-comparison-and-degree",
+    "titleOriginal": "比较级、最高级和程度表达",
+    "titleZh": "比较级、最高级和程度表达",
+    "descriptionZh": "比较级和最高级在 B1 写作口语里很有用，尤其是表达优缺点、选择理由、城市/工作/生活方式比较。",
+    "howToUseZh": "先阅读规则和例句，做主题练习，再用该结构写五个自己的句子。",
+    "primaryCategory": "grammar",
+    "tags": [
+      "中文资料",
+      "本站文档"
+    ],
+    "levels": [
+      "A1",
+      "A2",
+      "B1",
+      "B2",
+      "C1"
+    ],
+    "levelBasis": "editorial",
+    "skills": [
+      "语法"
+    ],
+    "exams": [],
+    "formats": [
+      "中文指南"
+    ],
+    "price": "free",
+    "access": "open",
+    "languages": [
+      "中文",
+      "德语"
+    ],
+    "sourceName": "Deutsch Lernen 公开学习文档",
+    "url": "https://github.com/aolingge/deutsch-lernen/blob/main/docs/grammar/comparison-and-degree.md",
+    "canonicalUrl": "https://github.com/aolingge/deutsch-lernen/blob/main/docs/grammar/comparison-and-degree.md",
+    "rights": "owned",
+    "status": "published",
+    "linkStatus": "ok",
+    "lastEditorialCheckedAt": "2026-09-30"
+  },
+  {
+    "id": "guide-core-grammar",
+    "slug": "guide-core-grammar",
+    "titleOriginal": "德语核心语法",
+    "titleZh": "德语核心语法",
+    "descriptionZh": "如果你不知道某个语法点应该怎么用于写作或口语，先看 语法到输出地图。语法学习的目标是能完成表达任务，而不是只记术语。",
+    "howToUseZh": "先阅读规则和例句，做主题练习，再用该结构写五个自己的句子。",
+    "primaryCategory": "grammar",
+    "tags": [
+      "中文资料",
+      "本站文档"
+    ],
+    "levels": [
+      "A1",
+      "A2",
+      "B1",
+      "B2",
+      "C1"
+    ],
+    "levelBasis": "editorial",
+    "skills": [
+      "语法"
+    ],
+    "exams": [],
+    "formats": [
+      "中文指南"
+    ],
+    "price": "free",
+    "access": "open",
+    "languages": [
+      "中文",
+      "德语"
+    ],
+    "sourceName": "Deutsch Lernen 公开学习文档",
+    "url": "https://github.com/aolingge/deutsch-lernen/blob/main/docs/grammar/core-grammar.md",
+    "canonicalUrl": "https://github.com/aolingge/deutsch-lernen/blob/main/docs/grammar/core-grammar.md",
+    "rights": "owned",
+    "status": "published",
+    "linkStatus": "ok",
+    "lastEditorialCheckedAt": "2026-09-30"
+  },
+  {
+    "id": "guide-negation-system",
+    "slug": "guide-negation-system",
+    "titleOriginal": "否定系统与 nicht 位置",
+    "titleZh": "否定系统与 nicht 位置",
+    "descriptionZh": "德语否定先判断“否定名词”还是“否定动作/状态/句子成分”。名词常用 `kein`，其他多用 `nicht`。",
+    "howToUseZh": "先阅读规则和例句，做主题练习，再用该结构写五个自己的句子。",
+    "primaryCategory": "grammar",
+    "tags": [
+      "中文资料",
+      "本站文档"
+    ],
+    "levels": [
+      "A1",
+      "A2",
+      "B1",
+      "B2",
+      "C1"
+    ],
+    "levelBasis": "editorial",
+    "skills": [
+      "语法"
+    ],
+    "exams": [],
+    "formats": [
+      "中文指南"
+    ],
+    "price": "free",
+    "access": "open",
+    "languages": [
+      "中文",
+      "德语"
+    ],
+    "sourceName": "Deutsch Lernen 公开学习文档",
+    "url": "https://github.com/aolingge/deutsch-lernen/blob/main/docs/grammar/negation-system.md",
+    "canonicalUrl": "https://github.com/aolingge/deutsch-lernen/blob/main/docs/grammar/negation-system.md",
+    "rights": "owned",
+    "status": "published",
+    "linkStatus": "ok",
+    "lastEditorialCheckedAt": "2026-09-30"
+  },
+  {
+    "id": "guide-nouns-gender-plurals-n-declension",
+    "slug": "guide-nouns-gender-plurals-n-declension",
+    "titleOriginal": "名词性别、复数和 n-Deklination",
+    "titleZh": "名词性别、复数和 n-Deklination",
+    "descriptionZh": "B1 阶段名词不要只背中文意思，要一起背 `性别 + 复数 + 常用搭配`。性别决定冠词，复数影响听读判断，`n-Deklination` 会在阅读里改变词形。",
+    "howToUseZh": "先阅读规则和例句，做主题练习，再用该结构写五个自己的句子。",
+    "primaryCategory": "grammar",
+    "tags": [
+      "中文资料",
+      "本站文档"
+    ],
+    "levels": [
+      "A1",
+      "A2",
+      "B1",
+      "B2",
+      "C1"
+    ],
+    "levelBasis": "editorial",
+    "skills": [
+      "语法"
+    ],
+    "exams": [],
+    "formats": [
+      "中文指南"
+    ],
+    "price": "free",
+    "access": "open",
+    "languages": [
+      "中文",
+      "德语"
+    ],
+    "sourceName": "Deutsch Lernen 公开学习文档",
+    "url": "https://github.com/aolingge/deutsch-lernen/blob/main/docs/grammar/nouns-gender-plurals-n-declension.md",
+    "canonicalUrl": "https://github.com/aolingge/deutsch-lernen/blob/main/docs/grammar/nouns-gender-plurals-n-declension.md",
+    "rights": "owned",
+    "status": "published",
+    "linkStatus": "ok",
+    "lastEditorialCheckedAt": "2026-09-30"
+  },
+  {
+    "id": "guide-prepositions-and-verb-preposition",
+    "slug": "guide-prepositions-and-verb-preposition",
+    "titleOriginal": "介词和动词介词搭配",
+    "titleZh": "介词和动词介词搭配",
+    "descriptionZh": "介词决定格，也决定句子的场景关系。B1 最重要的不是背中文意思，而是知道它后面常接哪一格、表示位置还是方向、和哪些动词固定搭配。",
+    "howToUseZh": "先阅读规则和例句，做主题练习，再用该结构写五个自己的句子。",
+    "primaryCategory": "grammar",
+    "tags": [
+      "中文资料",
+      "本站文档"
+    ],
+    "levels": [
+      "A1",
+      "A2",
+      "B1",
+      "B2",
+      "C1"
+    ],
+    "levelBasis": "editorial",
+    "skills": [
+      "语法"
+    ],
+    "exams": [],
+    "formats": [
+      "中文指南"
+    ],
+    "price": "free",
+    "access": "open",
+    "languages": [
+      "中文",
+      "德语"
+    ],
+    "sourceName": "Deutsch Lernen 公开学习文档",
+    "url": "https://github.com/aolingge/deutsch-lernen/blob/main/docs/grammar/prepositions-and-verb-preposition.md",
+    "canonicalUrl": "https://github.com/aolingge/deutsch-lernen/blob/main/docs/grammar/prepositions-and-verb-preposition.md",
+    "rights": "owned",
+    "status": "published",
+    "linkStatus": "ok",
+    "lastEditorialCheckedAt": "2026-09-30"
+  },
+  {
+    "id": "guide-pronouns-and-determiners",
+    "slug": "guide-pronouns-and-determiners",
+    "titleOriginal": "代词与限定词系统",
+    "titleZh": "代词与限定词系统",
+    "descriptionZh": "代词的核心不是背表，而是看懂“它指谁、是什么格、替代哪个名词”。B1 阅读和听力常考指代，写作口语常因代词格出错。",
+    "howToUseZh": "先阅读规则和例句，做主题练习，再用该结构写五个自己的句子。",
+    "primaryCategory": "grammar",
+    "tags": [
+      "中文资料",
+      "本站文档"
+    ],
+    "levels": [
+      "A1",
+      "A2",
+      "B1",
+      "B2",
+      "C1"
+    ],
+    "levelBasis": "editorial",
+    "skills": [
+      "语法"
+    ],
+    "exams": [],
+    "formats": [
+      "中文指南"
+    ],
+    "price": "free",
+    "access": "open",
+    "languages": [
+      "中文",
+      "德语"
+    ],
+    "sourceName": "Deutsch Lernen 公开学习文档",
+    "url": "https://github.com/aolingge/deutsch-lernen/blob/main/docs/grammar/pronouns-and-determiners.md",
+    "canonicalUrl": "https://github.com/aolingge/deutsch-lernen/blob/main/docs/grammar/pronouns-and-determiners.md",
+    "rights": "owned",
+    "status": "published",
+    "linkStatus": "ok",
+    "lastEditorialCheckedAt": "2026-09-30"
+  },
+  {
+    "id": "guide-subordinate-clauses",
+    "slug": "guide-subordinate-clauses",
+    "titleOriginal": "B1 必考从句",
+    "titleZh": "B1 必考从句",
+    "descriptionZh": "德语从句最重要的规则：从句里的变位动词一般放在句尾。",
+    "howToUseZh": "先阅读规则和例句，做主题练习，再用该结构写五个自己的句子。",
+    "primaryCategory": "grammar",
+    "tags": [
+      "中文资料",
+      "本站文档"
+    ],
+    "levels": [
+      "A1",
+      "A2",
+      "B1",
+      "B2",
+      "C1"
+    ],
+    "levelBasis": "editorial",
+    "skills": [
+      "语法"
+    ],
+    "exams": [],
+    "formats": [
+      "中文指南"
+    ],
+    "price": "free",
+    "access": "open",
+    "languages": [
+      "中文",
+      "德语"
+    ],
+    "sourceName": "Deutsch Lernen 公开学习文档",
+    "url": "https://github.com/aolingge/deutsch-lernen/blob/main/docs/grammar/subordinate-clauses.md",
+    "canonicalUrl": "https://github.com/aolingge/deutsch-lernen/blob/main/docs/grammar/subordinate-clauses.md",
+    "rights": "owned",
+    "status": "published",
+    "linkStatus": "ok",
+    "lastEditorialCheckedAt": "2026-09-30"
+  },
+  {
+    "id": "guide-verb-tenses-and-modals",
+    "slug": "guide-verb-tenses-and-modals",
+    "titleOriginal": "动词时态和情态动词",
+    "titleZh": "动词时态和情态动词",
+    "descriptionZh": "B1 阶段最常用的是现在时、现在完成时、少量过去时，以及情态动词。",
+    "howToUseZh": "先阅读规则和例句，做主题练习，再用该结构写五个自己的句子。",
+    "primaryCategory": "grammar",
+    "tags": [
+      "中文资料",
+      "本站文档"
+    ],
+    "levels": [
+      "A1",
+      "A2",
+      "B1",
+      "B2",
+      "C1"
+    ],
+    "levelBasis": "editorial",
+    "skills": [
+      "语法"
+    ],
+    "exams": [],
+    "formats": [
+      "中文指南"
+    ],
+    "price": "free",
+    "access": "open",
+    "languages": [
+      "中文",
+      "德语"
+    ],
+    "sourceName": "Deutsch Lernen 公开学习文档",
+    "url": "https://github.com/aolingge/deutsch-lernen/blob/main/docs/grammar/verb-tenses-and-modals.md",
+    "canonicalUrl": "https://github.com/aolingge/deutsch-lernen/blob/main/docs/grammar/verb-tenses-and-modals.md",
+    "rights": "owned",
+    "status": "published",
+    "linkStatus": "ok",
+    "lastEditorialCheckedAt": "2026-09-30"
+  },
+  {
+    "id": "guide-word-order-and-sentence-frame",
+    "slug": "guide-word-order-and-sentence-frame",
+    "titleOriginal": "语序、句框和 TeKaMoLo",
+    "titleZh": "语序、句框和 TeKaMoLo",
+    "descriptionZh": "德语句子先学“动词位置”，再学“信息顺序”。B1 写作和口语不需要句子很长，但需要动词位置稳定、逻辑关系清楚。",
+    "howToUseZh": "先阅读规则和例句，做主题练习，再用该结构写五个自己的句子。",
+    "primaryCategory": "grammar",
+    "tags": [
+      "中文资料",
+      "本站文档"
+    ],
+    "levels": [
+      "A1",
+      "A2",
+      "B1",
+      "B2",
+      "C1"
+    ],
+    "levelBasis": "editorial",
+    "skills": [
+      "语法"
+    ],
+    "exams": [],
+    "formats": [
+      "中文指南"
+    ],
+    "price": "free",
+    "access": "open",
+    "languages": [
+      "中文",
+      "德语"
+    ],
+    "sourceName": "Deutsch Lernen 公开学习文档",
+    "url": "https://github.com/aolingge/deutsch-lernen/blob/main/docs/grammar/word-order-and-sentence-frame.md",
+    "canonicalUrl": "https://github.com/aolingge/deutsch-lernen/blob/main/docs/grammar/word-order-and-sentence-frame.md",
+    "rights": "owned",
+    "status": "published",
+    "linkStatus": "ok",
+    "lastEditorialCheckedAt": "2026-09-30"
+  },
+  {
+    "id": "guide-b1-exam-guide",
+    "slug": "guide-b1-exam-guide",
+    "titleOriginal": "B1 考试备考",
+    "titleZh": "B1 考试备考",
+    "descriptionZh": "配套页：",
+    "howToUseZh": "先阅读说明，按文中任务做一次练习或整理自己的清单，再复盘未完成项目。",
+    "primaryCategory": "exams",
+    "tags": [
+      "中文资料",
+      "本站文档"
+    ],
+    "levels": [
+      "B1"
+    ],
+    "levelBasis": "editorial",
+    "skills": [
+      "综合"
+    ],
+    "exams": [],
+    "formats": [
+      "中文指南"
+    ],
+    "price": "free",
+    "access": "open",
+    "languages": [
+      "中文",
+      "德语"
+    ],
+    "sourceName": "Deutsch Lernen 公开学习文档",
+    "url": "https://github.com/aolingge/deutsch-lernen/blob/main/docs/exam/b1-exam-guide.md",
+    "canonicalUrl": "https://github.com/aolingge/deutsch-lernen/blob/main/docs/exam/b1-exam-guide.md",
+    "rights": "owned",
+    "status": "published",
+    "linkStatus": "ok",
+    "lastEditorialCheckedAt": "2026-09-30"
+  },
+  {
+    "id": "guide-b2-c1-academic-expression-bank",
+    "slug": "guide-b2-c1-academic-expression-bank",
+    "titleOriginal": "B2-C1 学术表达库",
+    "titleZh": "B2-C1 学术表达库",
+    "descriptionZh": "这页服务 B2、C1、DSH、TestDaF 和 telc C1 Hochschule。不要把表达当万能模板硬套；先确定段落功能，再选句型。",
+    "howToUseZh": "先阅读说明，按文中任务做一次练习或整理自己的清单，再复盘未完成项目。",
+    "primaryCategory": "writing",
+    "tags": [
+      "中文资料",
+      "本站文档"
+    ],
+    "levels": [
+      "B2"
+    ],
+    "levelBasis": "editorial",
+    "skills": [
+      "写作"
+    ],
+    "exams": [],
+    "formats": [
+      "中文指南"
+    ],
+    "price": "free",
+    "access": "open",
+    "languages": [
+      "中文",
+      "德语"
+    ],
+    "sourceName": "Deutsch Lernen 公开学习文档",
+    "url": "https://github.com/aolingge/deutsch-lernen/blob/main/docs/exam/b2-c1-academic-expression-bank.md",
+    "canonicalUrl": "https://github.com/aolingge/deutsch-lernen/blob/main/docs/exam/b2-c1-academic-expression-bank.md",
+    "rights": "owned",
+    "status": "published",
+    "linkStatus": "ok",
+    "lastEditorialCheckedAt": "2026-09-30"
+  },
+  {
+    "id": "guide-dsh-12-week-plan",
+    "slug": "guide-dsh-12-week-plan",
+    "titleOriginal": "DSH-2 十二周备考路线",
+    "titleZh": "DSH-2 十二周备考路线",
+    "descriptionZh": "这条路线假设你已有 B2 后期基础，目标是向 DSH-2 靠近。具体考试形式、报名和要求必须以目标大学或注册 DSH 考点为准。",
+    "howToUseZh": "先阅读说明，按文中任务做一次练习或整理自己的清单，再复盘未完成项目。",
+    "primaryCategory": "exams",
+    "tags": [
+      "中文资料",
+      "本站文档"
+    ],
+    "levels": [
+      "B2",
+      "C1"
+    ],
+    "levelBasis": "editorial",
+    "skills": [
+      "综合"
+    ],
+    "exams": [
+      "DSH"
+    ],
+    "formats": [
+      "中文指南"
+    ],
+    "price": "free",
+    "access": "open",
+    "languages": [
+      "中文",
+      "德语"
+    ],
+    "sourceName": "Deutsch Lernen 公开学习文档",
+    "url": "https://github.com/aolingge/deutsch-lernen/blob/main/docs/exam/dsh-12-week-plan.md",
+    "canonicalUrl": "https://github.com/aolingge/deutsch-lernen/blob/main/docs/exam/dsh-12-week-plan.md",
+    "rights": "owned",
+    "status": "published",
+    "linkStatus": "ok",
+    "lastEditorialCheckedAt": "2026-09-30"
+  },
+  {
+    "id": "guide-dsh-module-drills",
+    "slug": "guide-dsh-module-drills",
+    "titleOriginal": "DSH 模块原创练习",
+    "titleZh": "DSH 模块原创练习",
+    "descriptionZh": "这页提供原创训练材料，用来练 DSH 常见能力：听讲座、读学术文本、学术语言结构、写作和口试。它不是任何大学样题，不复制真题、音频、答案或 PDF。",
+    "howToUseZh": "先阅读说明，按文中任务做一次练习或整理自己的清单，再复盘未完成项目。",
+    "primaryCategory": "exams",
+    "tags": [
+      "中文资料",
+      "本站文档"
+    ],
+    "levels": [
+      "B2",
+      "C1"
+    ],
+    "levelBasis": "editorial",
+    "skills": [
+      "综合"
+    ],
+    "exams": [
+      "DSH"
+    ],
+    "formats": [
+      "中文指南"
+    ],
+    "price": "free",
+    "access": "open",
+    "languages": [
+      "中文",
+      "德语"
+    ],
+    "sourceName": "Deutsch Lernen 公开学习文档",
+    "url": "https://github.com/aolingge/deutsch-lernen/blob/main/docs/exam/dsh-module-drills.md",
+    "canonicalUrl": "https://github.com/aolingge/deutsch-lernen/blob/main/docs/exam/dsh-module-drills.md",
+    "rights": "owned",
+    "status": "published",
+    "linkStatus": "ok",
+    "lastEditorialCheckedAt": "2026-09-30"
+  },
+  {
+    "id": "guide-dsh-prep-guide",
+    "slug": "guide-dsh-prep-guide",
+    "titleOriginal": "DSH 备考指南",
+    "titleZh": "DSH 备考指南",
+    "descriptionZh": "`DSH = Deutsche Sprachprüfung für den Hochschulzugang / 德国高校入学德语考试 / 用来证明非母语申请者具备德语授课大学学习能力。`",
+    "howToUseZh": "先阅读说明，按文中任务做一次练习或整理自己的清单，再复盘未完成项目。",
+    "primaryCategory": "exams",
+    "tags": [
+      "中文资料",
+      "本站文档"
+    ],
+    "levels": [
+      "B2",
+      "C1"
+    ],
+    "levelBasis": "editorial",
+    "skills": [
+      "综合"
+    ],
+    "exams": [
+      "DSH"
+    ],
+    "formats": [
+      "中文指南"
+    ],
+    "price": "free",
+    "access": "open",
+    "languages": [
+      "中文",
+      "德语"
+    ],
+    "sourceName": "Deutsch Lernen 公开学习文档",
+    "url": "https://github.com/aolingge/deutsch-lernen/blob/main/docs/exam/dsh-prep-guide.md",
+    "canonicalUrl": "https://github.com/aolingge/deutsch-lernen/blob/main/docs/exam/dsh-prep-guide.md",
+    "rights": "owned",
+    "status": "published",
+    "linkStatus": "ok",
+    "lastEditorialCheckedAt": "2026-09-30"
+  },
+  {
+    "id": "guide-exam-decision-tree",
+    "slug": "guide-exam-decision-tree",
+    "titleOriginal": "德语考试选择树",
+    "titleZh": "德语考试选择树",
+    "descriptionZh": "考试选择先看用途，再看等级。不要先问“哪个考试简单”，要先问“我的目标机构承认哪个考试”。",
+    "howToUseZh": "先阅读说明，按文中任务做一次练习或整理自己的清单，再复盘未完成项目。",
+    "primaryCategory": "exams",
+    "tags": [
+      "中文资料",
+      "本站文档"
+    ],
+    "levels": [
+      "A1",
+      "A2",
+      "B1",
+      "B2",
+      "C1"
+    ],
+    "levelBasis": "editorial",
+    "skills": [
+      "综合"
+    ],
+    "exams": [],
+    "formats": [
+      "中文指南"
+    ],
+    "price": "free",
+    "access": "open",
+    "languages": [
+      "中文",
+      "德语"
+    ],
+    "sourceName": "Deutsch Lernen 公开学习文档",
+    "url": "https://github.com/aolingge/deutsch-lernen/blob/main/docs/exam/exam-decision-tree.md",
+    "canonicalUrl": "https://github.com/aolingge/deutsch-lernen/blob/main/docs/exam/exam-decision-tree.md",
+    "rights": "owned",
+    "status": "published",
+    "linkStatus": "ok",
+    "lastEditorialCheckedAt": "2026-09-30"
+  },
+  {
+    "id": "guide-german-exam-map-a1-c1-dsh",
+    "slug": "guide-german-exam-map-a1-c1-dsh",
+    "titleOriginal": "德语考试地图：A1-C1、TestDaF、DSH",
+    "titleZh": "德语考试地图：A1-C1、TestDaF、DSH",
+    "descriptionZh": "这页帮助你判断该准备哪个考试。考试事实会变化，报名、费用、考位和承认规则必须回官方页面或目标大学页面确认。",
+    "howToUseZh": "先阅读说明，按文中任务做一次练习或整理自己的清单，再复盘未完成项目。",
+    "primaryCategory": "exams",
+    "tags": [
+      "中文资料",
+      "本站文档"
+    ],
+    "levels": [
+      "B2",
+      "C1"
+    ],
+    "levelBasis": "editorial",
+    "skills": [
+      "综合"
+    ],
+    "exams": [
+      "DSH"
+    ],
+    "formats": [
+      "中文指南"
+    ],
+    "price": "free",
+    "access": "open",
+    "languages": [
+      "中文",
+      "德语"
+    ],
+    "sourceName": "Deutsch Lernen 公开学习文档",
+    "url": "https://github.com/aolingge/deutsch-lernen/blob/main/docs/exam/german-exam-map-a1-c1-dsh.md",
+    "canonicalUrl": "https://github.com/aolingge/deutsch-lernen/blob/main/docs/exam/german-exam-map-a1-c1-dsh.md",
+    "rights": "owned",
+    "status": "published",
+    "linkStatus": "ok",
+    "lastEditorialCheckedAt": "2026-09-30"
+  },
+  {
+    "id": "guide-goethe-b1-china-registration-and-safety",
+    "slug": "guide-goethe-b1-china-registration-and-safety",
+    "titleOriginal": "Goethe B1 中国报名、考点和防诈骗入口",
+    "titleZh": "Goethe B1 中国报名、考点和防诈骗入口",
+    "descriptionZh": "这页只做官方入口导航。考试日期、费用、是否接受分模块报名、证书领取方式都会变化，报名动作必须回到 Goethe-Institut 或官方合作考点页面实时确认。",
+    "howToUseZh": "先阅读说明，按文中任务做一次练习或整理自己的清单，再复盘未完成项目。",
+    "primaryCategory": "exams",
+    "tags": [
+      "中文资料",
+      "本站文档"
+    ],
+    "levels": [
+      "A1",
+      "A2",
+      "B1",
+      "B2",
+      "C1"
+    ],
+    "levelBasis": "editorial",
+    "skills": [
+      "综合"
+    ],
+    "exams": [
+      "Goethe"
+    ],
+    "formats": [
+      "中文指南"
+    ],
+    "price": "free",
+    "access": "open",
+    "languages": [
+      "中文",
+      "德语"
+    ],
+    "sourceName": "Deutsch Lernen 公开学习文档",
+    "url": "https://github.com/aolingge/deutsch-lernen/blob/main/docs/exam/goethe-b1-china-registration-and-safety.md",
+    "canonicalUrl": "https://github.com/aolingge/deutsch-lernen/blob/main/docs/exam/goethe-b1-china-registration-and-safety.md",
+    "rights": "owned",
+    "status": "published",
+    "linkStatus": "ok",
+    "lastEditorialCheckedAt": "2026-09-30"
+  },
+  {
+    "id": "guide-goethe-b1-format-and-strategy",
+    "slug": "guide-goethe-b1-format-and-strategy",
+    "titleOriginal": "Goethe B1 四项题型与得分策略",
+    "titleZh": "Goethe B1 四项题型与得分策略",
+    "descriptionZh": "Goethe-Zertifikat B1 的难点不在题型形式，而在任务点不能漏、关键词不能听丢、语法错误不能影响理解。学习时要把每个 Teil 转成可重复的考试动作。",
+    "howToUseZh": "先阅读说明，按文中任务做一次练习或整理自己的清单，再复盘未完成项目。",
+    "primaryCategory": "exams",
+    "tags": [
+      "中文资料",
+      "本站文档"
+    ],
+    "levels": [
+      "A1",
+      "A2",
+      "B1",
+      "B2",
+      "C1"
+    ],
+    "levelBasis": "editorial",
+    "skills": [
+      "综合"
+    ],
+    "exams": [
+      "Goethe"
+    ],
+    "formats": [
+      "中文指南"
+    ],
+    "price": "free",
+    "access": "open",
+    "languages": [
+      "中文",
+      "德语"
+    ],
+    "sourceName": "Deutsch Lernen 公开学习文档",
+    "url": "https://github.com/aolingge/deutsch-lernen/blob/main/docs/exam/goethe-b1-format-and-strategy.md",
+    "canonicalUrl": "https://github.com/aolingge/deutsch-lernen/blob/main/docs/exam/goethe-b1-format-and-strategy.md",
+    "rights": "owned",
+    "status": "published",
+    "linkStatus": "ok",
+    "lastEditorialCheckedAt": "2026-09-30"
+  },
+  {
+    "id": "guide-goethe-b1-mock-exam-workflow",
+    "slug": "guide-goethe-b1-mock-exam-workflow",
+    "titleOriginal": "Goethe B1 官方模考使用路线",
+    "titleZh": "Goethe B1 官方模考使用路线",
+    "descriptionZh": "官方模考不要反复刷分。第一次熟悉题型，第二次限时，第三次只复盘错因。",
+    "howToUseZh": "先阅读说明，按文中任务做一次练习或整理自己的清单，再复盘未完成项目。",
+    "primaryCategory": "exams",
+    "tags": [
+      "中文资料",
+      "本站文档"
+    ],
+    "levels": [
+      "A1",
+      "A2",
+      "B1",
+      "B2",
+      "C1"
+    ],
+    "levelBasis": "editorial",
+    "skills": [
+      "综合"
+    ],
+    "exams": [
+      "Goethe"
+    ],
+    "formats": [
+      "中文指南"
+    ],
+    "price": "free",
+    "access": "open",
+    "languages": [
+      "中文",
+      "德语"
+    ],
+    "sourceName": "Deutsch Lernen 公开学习文档",
+    "url": "https://github.com/aolingge/deutsch-lernen/blob/main/docs/exam/goethe-b1-mock-exam-workflow.md",
+    "canonicalUrl": "https://github.com/aolingge/deutsch-lernen/blob/main/docs/exam/goethe-b1-mock-exam-workflow.md",
+    "rights": "owned",
+    "status": "published",
+    "linkStatus": "ok",
+    "lastEditorialCheckedAt": "2026-09-30"
+  },
+  {
+    "id": "guide-listening-review-bank",
+    "slug": "guide-listening-review-bank",
+    "titleOriginal": "B1 听力例题复盘库",
+    "titleZh": "B1 听力例题复盘库",
+    "descriptionZh": "听力错题要按错因分类，不要只写“没听懂”。本页用于收集 Teil 1-4 的典型错法和可复用听力动作。",
+    "howToUseZh": "先阅读说明，按文中任务做一次练习或整理自己的清单，再复盘未完成项目。",
+    "primaryCategory": "listening",
+    "tags": [
+      "中文资料",
+      "本站文档"
+    ],
+    "levels": [
+      "A1",
+      "A2",
+      "B1",
+      "B2",
+      "C1"
+    ],
+    "levelBasis": "editorial",
+    "skills": [
+      "听力"
+    ],
+    "exams": [],
+    "formats": [
+      "中文指南"
+    ],
+    "price": "free",
+    "access": "open",
+    "languages": [
+      "中文",
+      "德语"
+    ],
+    "sourceName": "Deutsch Lernen 公开学习文档",
+    "url": "https://github.com/aolingge/deutsch-lernen/blob/main/docs/exam/listening-review-bank.md",
+    "canonicalUrl": "https://github.com/aolingge/deutsch-lernen/blob/main/docs/exam/listening-review-bank.md",
+    "rights": "owned",
+    "status": "published",
+    "linkStatus": "ok",
+    "lastEditorialCheckedAt": "2026-09-30"
+  },
+  {
+    "id": "guide-listening-strategy",
+    "slug": "guide-listening-strategy",
+    "titleOriginal": "B1 听力解题策略",
+    "titleZh": "B1 听力解题策略",
+    "descriptionZh": "B1 听力最怕“听到一个词就立刻选”。更稳的做法是先判断场景，再抓时间、地点、数字、否定和转折。",
+    "howToUseZh": "先阅读说明，按文中任务做一次练习或整理自己的清单，再复盘未完成项目。",
+    "primaryCategory": "listening",
+    "tags": [
+      "中文资料",
+      "本站文档"
+    ],
+    "levels": [
+      "A1",
+      "A2",
+      "B1",
+      "B2",
+      "C1"
+    ],
+    "levelBasis": "editorial",
+    "skills": [
+      "听力"
+    ],
+    "exams": [],
+    "formats": [
+      "中文指南"
+    ],
+    "price": "free",
+    "access": "open",
+    "languages": [
+      "中文",
+      "德语"
+    ],
+    "sourceName": "Deutsch Lernen 公开学习文档",
+    "url": "https://github.com/aolingge/deutsch-lernen/blob/main/docs/exam/listening-strategy.md",
+    "canonicalUrl": "https://github.com/aolingge/deutsch-lernen/blob/main/docs/exam/listening-strategy.md",
+    "rights": "owned",
+    "status": "published",
+    "linkStatus": "ok",
+    "lastEditorialCheckedAt": "2026-09-30"
+  },
+  {
+    "id": "guide-reading-strategy",
+    "slug": "guide-reading-strategy",
+    "titleOriginal": "B1 阅读解题策略",
+    "titleZh": "B1 阅读解题策略",
+    "descriptionZh": "阅读不是逐词翻译比赛。B1 阅读更看重你能否快速定位信息、识别态度、看懂规则。",
+    "howToUseZh": "先阅读说明，按文中任务做一次练习或整理自己的清单，再复盘未完成项目。",
+    "primaryCategory": "reading",
+    "tags": [
+      "中文资料",
+      "本站文档"
+    ],
+    "levels": [
+      "A1",
+      "A2",
+      "B1",
+      "B2",
+      "C1"
+    ],
+    "levelBasis": "editorial",
+    "skills": [
+      "阅读"
+    ],
+    "exams": [],
+    "formats": [
+      "中文指南"
+    ],
+    "price": "free",
+    "access": "open",
+    "languages": [
+      "中文",
+      "德语"
+    ],
+    "sourceName": "Deutsch Lernen 公开学习文档",
+    "url": "https://github.com/aolingge/deutsch-lernen/blob/main/docs/exam/reading-strategy.md",
+    "canonicalUrl": "https://github.com/aolingge/deutsch-lernen/blob/main/docs/exam/reading-strategy.md",
+    "rights": "owned",
+    "status": "published",
+    "linkStatus": "ok",
+    "lastEditorialCheckedAt": "2026-09-30"
+  },
+  {
+    "id": "guide-speaking-templates",
+    "slug": "guide-speaking-templates",
+    "titleOriginal": "B1 口语模板",
+    "titleZh": "B1 口语模板",
+    "descriptionZh": "B1 口语先追求“能稳定说完整”，再追求复杂表达。句子短一点没关系，逻辑清楚更重要。",
+    "howToUseZh": "先阅读说明，按文中任务做一次练习或整理自己的清单，再复盘未完成项目。",
+    "primaryCategory": "speaking",
+    "tags": [
+      "中文资料",
+      "本站文档"
+    ],
+    "levels": [
+      "A1",
+      "A2",
+      "B1",
+      "B2",
+      "C1"
+    ],
+    "levelBasis": "editorial",
+    "skills": [
+      "口语"
+    ],
+    "exams": [],
+    "formats": [
+      "中文指南"
+    ],
+    "price": "free",
+    "access": "open",
+    "languages": [
+      "中文",
+      "德语"
+    ],
+    "sourceName": "Deutsch Lernen 公开学习文档",
+    "url": "https://github.com/aolingge/deutsch-lernen/blob/main/docs/exam/speaking-templates.md",
+    "canonicalUrl": "https://github.com/aolingge/deutsch-lernen/blob/main/docs/exam/speaking-templates.md",
+    "rights": "owned",
+    "status": "published",
+    "linkStatus": "ok",
+    "lastEditorialCheckedAt": "2026-09-30"
+  },
+  {
+    "id": "guide-testdaf-c1-bridge",
+    "slug": "guide-testdaf-c1-bridge",
+    "titleOriginal": "TestDaF 与 C1 衔接",
+    "titleZh": "TestDaF 与 C1 衔接",
+    "descriptionZh": "如果你还没确定要考 TestDaF、DSH 还是 telc C1 Hochschule，先看 德语考试选择树。",
+    "howToUseZh": "先阅读说明，按文中任务做一次练习或整理自己的清单，再复盘未完成项目。",
+    "primaryCategory": "exams",
+    "tags": [
+      "中文资料",
+      "本站文档"
+    ],
+    "levels": [
+      "B2",
+      "C1"
+    ],
+    "levelBasis": "editorial",
+    "skills": [
+      "综合"
+    ],
+    "exams": [
+      "TestDaF"
+    ],
+    "formats": [
+      "中文指南"
+    ],
+    "price": "free",
+    "access": "open",
+    "languages": [
+      "中文",
+      "德语"
+    ],
+    "sourceName": "Deutsch Lernen 公开学习文档",
+    "url": "https://github.com/aolingge/deutsch-lernen/blob/main/docs/exam/testdaf-c1-bridge.md",
+    "canonicalUrl": "https://github.com/aolingge/deutsch-lernen/blob/main/docs/exam/testdaf-c1-bridge.md",
+    "rights": "owned",
+    "status": "published",
+    "linkStatus": "ok",
+    "lastEditorialCheckedAt": "2026-09-30"
+  },
+  {
+    "id": "guide-writing-templates",
+    "slug": "guide-writing-templates",
+    "titleOriginal": "B1 写作模板",
+    "titleZh": "B1 写作模板",
+    "descriptionZh": "写作模板的目标不是机械套话，而是先保证结构稳定、语法少错、要点不漏。",
+    "howToUseZh": "先阅读说明，按文中任务做一次练习或整理自己的清单，再复盘未完成项目。",
+    "primaryCategory": "writing",
+    "tags": [
+      "中文资料",
+      "本站文档"
+    ],
+    "levels": [
+      "A1",
+      "A2",
+      "B1",
+      "B2",
+      "C1"
+    ],
+    "levelBasis": "editorial",
+    "skills": [
+      "写作"
+    ],
+    "exams": [],
+    "formats": [
+      "中文指南"
+    ],
+    "price": "free",
+    "access": "open",
+    "languages": [
+      "中文",
+      "德语"
+    ],
+    "sourceName": "Deutsch Lernen 公开学习文档",
+    "url": "https://github.com/aolingge/deutsch-lernen/blob/main/docs/exam/writing-templates.md",
+    "canonicalUrl": "https://github.com/aolingge/deutsch-lernen/blob/main/docs/exam/writing-templates.md",
+    "rights": "owned",
+    "status": "published",
+    "linkStatus": "ok",
+    "lastEditorialCheckedAt": "2026-09-30"
+  },
+  {
+    "id": "guide-daily-b1-training-template",
+    "slug": "guide-daily-b1-training-template",
+    "titleOriginal": "每日 B1 训练模板",
+    "titleZh": "每日 B1 训练模板",
+    "descriptionZh": "复制本页作为每天的学习记录。目标不是写得漂亮，而是让输入、输出和错题每天闭环。",
+    "howToUseZh": "复制模板到自己的笔记中，填入实际学习内容，每周回顾一次。",
+    "primaryCategory": "tools",
+    "tags": [
+      "中文资料",
+      "本站文档",
+      "可复制模板"
+    ],
+    "levels": [
+      "A1",
+      "A2",
+      "B1",
+      "B2",
+      "C1"
+    ],
+    "levelBasis": "editorial",
+    "skills": [
+      "综合"
+    ],
+    "exams": [],
+    "formats": [
+      "模板"
+    ],
+    "price": "free",
+    "access": "open",
+    "languages": [
+      "中文",
+      "德语"
+    ],
+    "sourceName": "Deutsch Lernen 公开学习文档",
+    "url": "https://github.com/aolingge/deutsch-lernen/blob/main/docs/templates/daily-b1-training-template.md",
+    "canonicalUrl": "https://github.com/aolingge/deutsch-lernen/blob/main/docs/templates/daily-b1-training-template.md",
+    "rights": "owned",
+    "status": "published",
+    "linkStatus": "ok",
+    "lastEditorialCheckedAt": "2026-09-30"
+  },
+  {
+    "id": "guide-dsh-hoeren-note-sheet",
+    "slug": "guide-dsh-hoeren-note-sheet",
+    "titleOriginal": "DSH 听力笔记模板",
+    "titleZh": "DSH 听力笔记模板",
+    "descriptionZh": "关于DSH 听力笔记模板的中文学习说明与练习。",
+    "howToUseZh": "先阅读说明，按文中任务做一次练习或整理自己的清单，再复盘未完成项目。",
+    "primaryCategory": "listening",
+    "tags": [
+      "中文资料",
+      "本站文档",
+      "可复制模板"
+    ],
+    "levels": [
+      "B2",
+      "C1"
+    ],
+    "levelBasis": "editorial",
+    "skills": [
+      "听力"
+    ],
+    "exams": [
+      "DSH"
+    ],
+    "formats": [
+      "模板"
+    ],
+    "price": "free",
+    "access": "open",
+    "languages": [
+      "中文",
+      "德语"
+    ],
+    "sourceName": "Deutsch Lernen 公开学习文档",
+    "url": "https://github.com/aolingge/deutsch-lernen/blob/main/docs/templates/dsh-hoeren-note-sheet.md",
+    "canonicalUrl": "https://github.com/aolingge/deutsch-lernen/blob/main/docs/templates/dsh-hoeren-note-sheet.md",
+    "rights": "owned",
+    "status": "published",
+    "linkStatus": "ok",
+    "lastEditorialCheckedAt": "2026-09-30"
+  },
+  {
+    "id": "guide-dsh-lesen-argument-map",
+    "slug": "guide-dsh-lesen-argument-map",
+    "titleOriginal": "DSH 阅读论证地图模板",
+    "titleZh": "DSH 阅读论证地图模板",
+    "descriptionZh": "关于DSH 阅读论证地图模板的中文学习说明与练习。",
+    "howToUseZh": "先阅读说明，按文中任务做一次练习或整理自己的清单，再复盘未完成项目。",
+    "primaryCategory": "reading",
+    "tags": [
+      "中文资料",
+      "本站文档",
+      "可复制模板"
+    ],
+    "levels": [
+      "B2",
+      "C1"
+    ],
+    "levelBasis": "editorial",
+    "skills": [
+      "阅读"
+    ],
+    "exams": [
+      "DSH"
+    ],
+    "formats": [
+      "模板"
+    ],
+    "price": "free",
+    "access": "open",
+    "languages": [
+      "中文",
+      "德语"
+    ],
+    "sourceName": "Deutsch Lernen 公开学习文档",
+    "url": "https://github.com/aolingge/deutsch-lernen/blob/main/docs/templates/dsh-lesen-argument-map.md",
+    "canonicalUrl": "https://github.com/aolingge/deutsch-lernen/blob/main/docs/templates/dsh-lesen-argument-map.md",
+    "rights": "owned",
+    "status": "published",
+    "linkStatus": "ok",
+    "lastEditorialCheckedAt": "2026-09-30"
+  },
+  {
+    "id": "guide-dsh-muendlich-5min-talk",
+    "slug": "guide-dsh-muendlich-5min-talk",
+    "titleOriginal": "DSH 口试 5 分钟报告模板",
+    "titleZh": "DSH 口试 5 分钟报告模板",
+    "descriptionZh": "Heute moechte ich ueber ... sprechen.",
+    "howToUseZh": "先阅读说明，按文中任务做一次练习或整理自己的清单，再复盘未完成项目。",
+    "primaryCategory": "speaking",
+    "tags": [
+      "中文资料",
+      "本站文档",
+      "可复制模板"
+    ],
+    "levels": [
+      "B2",
+      "C1"
+    ],
+    "levelBasis": "editorial",
+    "skills": [
+      "口语"
+    ],
+    "exams": [
+      "DSH"
+    ],
+    "formats": [
+      "模板"
+    ],
+    "price": "free",
+    "access": "open",
+    "languages": [
+      "中文",
+      "德语"
+    ],
+    "sourceName": "Deutsch Lernen 公开学习文档",
+    "url": "https://github.com/aolingge/deutsch-lernen/blob/main/docs/templates/dsh-muendlich-5min-talk.md",
+    "canonicalUrl": "https://github.com/aolingge/deutsch-lernen/blob/main/docs/templates/dsh-muendlich-5min-talk.md",
+    "rights": "owned",
+    "status": "published",
+    "linkStatus": "ok",
+    "lastEditorialCheckedAt": "2026-09-30"
+  },
+  {
+    "id": "guide-dsh-textproduktion-250w",
+    "slug": "guide-dsh-textproduktion-250w",
+    "titleOriginal": "DSH Textproduktion 250 词模板",
+    "titleZh": "DSH Textproduktion 250 词模板",
+    "descriptionZh": "Das Thema ... spielt heutzutage eine wichtige Rolle.",
+    "howToUseZh": "先阅读说明，按文中任务做一次练习或整理自己的清单，再复盘未完成项目。",
+    "primaryCategory": "writing",
+    "tags": [
+      "中文资料",
+      "本站文档",
+      "可复制模板"
+    ],
+    "levels": [
+      "B2",
+      "C1"
+    ],
+    "levelBasis": "editorial",
+    "skills": [
+      "写作"
+    ],
+    "exams": [
+      "DSH"
+    ],
+    "formats": [
+      "模板"
+    ],
+    "price": "free",
+    "access": "open",
+    "languages": [
+      "中文",
+      "德语"
+    ],
+    "sourceName": "Deutsch Lernen 公开学习文档",
+    "url": "https://github.com/aolingge/deutsch-lernen/blob/main/docs/templates/dsh-textproduktion-250w.md",
+    "canonicalUrl": "https://github.com/aolingge/deutsch-lernen/blob/main/docs/templates/dsh-textproduktion-250w.md",
+    "rights": "owned",
+    "status": "published",
+    "linkStatus": "ok",
+    "lastEditorialCheckedAt": "2026-09-30"
+  },
+  {
+    "id": "guide-dsh-ws-transformation-drills",
+    "slug": "guide-dsh-ws-transformation-drills",
+    "titleOriginal": "DSH Wissenschaftssprachliche Strukturen 转换模板",
+    "titleZh": "DSH Wissenschaftssprachliche Strukturen 转换模板",
+    "descriptionZh": "`WS = wissenschaftssprachliche Strukturen / 科学或学术语言结构 / DSH 中常见的语法和句式转换任务。`",
+    "howToUseZh": "复制模板到自己的笔记中，填入实际学习内容，每周回顾一次。",
+    "primaryCategory": "tools",
+    "tags": [
+      "中文资料",
+      "本站文档",
+      "可复制模板"
+    ],
+    "levels": [
+      "B2",
+      "C1"
+    ],
+    "levelBasis": "editorial",
+    "skills": [
+      "综合"
+    ],
+    "exams": [
+      "DSH"
+    ],
+    "formats": [
+      "模板"
+    ],
+    "price": "free",
+    "access": "open",
+    "languages": [
+      "中文",
+      "德语"
+    ],
+    "sourceName": "Deutsch Lernen 公开学习文档",
+    "url": "https://github.com/aolingge/deutsch-lernen/blob/main/docs/templates/dsh-ws-transformation-drills.md",
+    "canonicalUrl": "https://github.com/aolingge/deutsch-lernen/blob/main/docs/templates/dsh-ws-transformation-drills.md",
+    "rights": "owned",
+    "status": "published",
+    "linkStatus": "ok",
+    "lastEditorialCheckedAt": "2026-09-30"
+  },
+  {
+    "id": "guide-error-review-template",
+    "slug": "guide-error-review-template",
+    "titleOriginal": "B1 错题复盘模板",
+    "titleZh": "B1 错题复盘模板",
+    "descriptionZh": "错题不要只写“答案是什么”，要写“下次怎么不再错”。B1 最值得记录的是语序、介词、同义替换、听力转折、写作漏点和口语卡顿。",
+    "howToUseZh": "复制模板到自己的笔记中，填入实际学习内容，每周回顾一次。",
+    "primaryCategory": "tools",
+    "tags": [
+      "中文资料",
+      "本站文档",
+      "可复制模板"
+    ],
+    "levels": [
+      "A1",
+      "A2",
+      "B1",
+      "B2",
+      "C1"
+    ],
+    "levelBasis": "editorial",
+    "skills": [
+      "综合"
+    ],
+    "exams": [],
+    "formats": [
+      "模板"
+    ],
+    "price": "free",
+    "access": "open",
+    "languages": [
+      "中文",
+      "德语"
+    ],
+    "sourceName": "Deutsch Lernen 公开学习文档",
+    "url": "https://github.com/aolingge/deutsch-lernen/blob/main/docs/templates/error-review-template.md",
+    "canonicalUrl": "https://github.com/aolingge/deutsch-lernen/blob/main/docs/templates/error-review-template.md",
+    "rights": "owned",
+    "status": "published",
+    "linkStatus": "ok",
+    "lastEditorialCheckedAt": "2026-09-30"
+  },
+  {
+    "id": "guide-mock-exam-review-template",
+    "slug": "guide-mock-exam-review-template",
+    "titleOriginal": "Goethe B1 模考复盘模板",
+    "titleZh": "Goethe B1 模考复盘模板",
+    "descriptionZh": "模考复盘比模考分数更重要。每次只抓最高频的 3 类错误，下一轮训练才会真的变好。",
+    "howToUseZh": "复制模板到自己的笔记中，填入实际学习内容，每周回顾一次。",
+    "primaryCategory": "tools",
+    "tags": [
+      "中文资料",
+      "本站文档",
+      "可复制模板"
+    ],
+    "levels": [
+      "A1",
+      "A2",
+      "B1",
+      "B2",
+      "C1"
+    ],
+    "levelBasis": "editorial",
+    "skills": [
+      "综合"
+    ],
+    "exams": [],
+    "formats": [
+      "模板"
+    ],
+    "price": "free",
+    "access": "open",
+    "languages": [
+      "中文",
+      "德语"
+    ],
+    "sourceName": "Deutsch Lernen 公开学习文档",
+    "url": "https://github.com/aolingge/deutsch-lernen/blob/main/docs/templates/mock-exam-review-template.md",
+    "canonicalUrl": "https://github.com/aolingge/deutsch-lernen/blob/main/docs/templates/mock-exam-review-template.md",
+    "rights": "owned",
+    "status": "published",
+    "linkStatus": "ok",
+    "lastEditorialCheckedAt": "2026-09-30"
+  },
+  {
+    "id": "guide-weekly-german-study-template",
+    "slug": "guide-weekly-german-study-template",
+    "titleOriginal": "每周德语学习模板",
+    "titleZh": "每周德语学习模板",
+    "descriptionZh": "这个模板适合 A1-C1 和 DSH。复制后按自己的等级填写；每周只追踪少量关键指标，避免计划做得比学习还累。",
+    "howToUseZh": "复制模板到自己的笔记中，填入实际学习内容，每周回顾一次。",
+    "primaryCategory": "tools",
+    "tags": [
+      "中文资料",
+      "本站文档",
+      "可复制模板"
+    ],
+    "levels": [
+      "A1",
+      "A2",
+      "B1",
+      "B2",
+      "C1"
+    ],
+    "levelBasis": "editorial",
+    "skills": [
+      "综合"
+    ],
+    "exams": [],
+    "formats": [
+      "模板"
+    ],
+    "price": "free",
+    "access": "open",
+    "languages": [
+      "中文",
+      "德语"
+    ],
+    "sourceName": "Deutsch Lernen 公开学习文档",
+    "url": "https://github.com/aolingge/deutsch-lernen/blob/main/docs/templates/weekly-german-study-template.md",
+    "canonicalUrl": "https://github.com/aolingge/deutsch-lernen/blob/main/docs/templates/weekly-german-study-template.md",
+    "rights": "owned",
+    "status": "published",
+    "linkStatus": "ok",
+    "lastEditorialCheckedAt": "2026-09-30"
+  },
+  {
+    "id": "guide-collocations",
+    "slug": "guide-collocations",
+    "titleOriginal": "B1 固定搭配",
+    "titleZh": "B1 固定搭配",
+    "descriptionZh": "固定搭配是 B1 提分很快的一类内容。背单词时不要只背单个词，最好连介词、格和例句一起背。",
+    "howToUseZh": "先阅读说明，按文中任务做一次练习或整理自己的清单，再复盘未完成项目。",
+    "primaryCategory": "vocabulary",
+    "tags": [
+      "中文资料",
+      "本站文档"
+    ],
+    "levels": [
+      "A1",
+      "A2",
+      "B1",
+      "B2",
+      "C1"
+    ],
+    "levelBasis": "editorial",
+    "skills": [
+      "词汇"
+    ],
+    "exams": [],
+    "formats": [
+      "中文指南"
+    ],
+    "price": "free",
+    "access": "open",
+    "languages": [
+      "中文",
+      "德语"
+    ],
+    "sourceName": "Deutsch Lernen 公开学习文档",
+    "url": "https://github.com/aolingge/deutsch-lernen/blob/main/docs/vocabulary/collocations.md",
+    "canonicalUrl": "https://github.com/aolingge/deutsch-lernen/blob/main/docs/vocabulary/collocations.md",
+    "rights": "owned",
+    "status": "published",
+    "linkStatus": "ok",
+    "lastEditorialCheckedAt": "2026-09-30"
+  },
+  {
+    "id": "guide-listening-reading-core-vocabulary",
+    "slug": "guide-listening-reading-core-vocabulary",
+    "titleOriginal": "听力与阅读高频词汇",
+    "titleZh": "听力与阅读高频词汇",
+    "descriptionZh": "这份词表优先服务 B1 听力和阅读。重点不是一次背完，而是能在题干、公告、对话和规则说明里快速认出。",
+    "howToUseZh": "先阅读说明，按文中任务做一次练习或整理自己的清单，再复盘未完成项目。",
+    "primaryCategory": "listening",
+    "tags": [
+      "中文资料",
+      "本站文档"
+    ],
+    "levels": [
+      "A1",
+      "A2",
+      "B1",
+      "B2",
+      "C1"
+    ],
+    "levelBasis": "editorial",
+    "skills": [
+      "听力"
+    ],
+    "exams": [],
+    "formats": [
+      "中文指南"
+    ],
+    "price": "free",
+    "access": "open",
+    "languages": [
+      "中文",
+      "德语"
+    ],
+    "sourceName": "Deutsch Lernen 公开学习文档",
+    "url": "https://github.com/aolingge/deutsch-lernen/blob/main/docs/vocabulary/listening-reading-core-vocabulary.md",
+    "canonicalUrl": "https://github.com/aolingge/deutsch-lernen/blob/main/docs/vocabulary/listening-reading-core-vocabulary.md",
+    "rights": "owned",
+    "status": "published",
+    "linkStatus": "ok",
+    "lastEditorialCheckedAt": "2026-09-30"
+  },
+  {
+    "id": "guide-theme-vocabulary",
+    "slug": "guide-theme-vocabulary",
+    "titleOriginal": "主题词汇",
+    "titleZh": "主题词汇",
+    "descriptionZh": "关于主题词汇的中文学习说明与练习。",
+    "howToUseZh": "先阅读说明，按文中任务做一次练习或整理自己的清单，再复盘未完成项目。",
+    "primaryCategory": "vocabulary",
+    "tags": [
+      "中文资料",
+      "本站文档"
+    ],
+    "levels": [
+      "A1",
+      "A2",
+      "B1",
+      "B2",
+      "C1"
+    ],
+    "levelBasis": "editorial",
+    "skills": [
+      "词汇"
+    ],
+    "exams": [],
+    "formats": [
+      "中文指南"
+    ],
+    "price": "free",
+    "access": "open",
+    "languages": [
+      "中文",
+      "德语"
+    ],
+    "sourceName": "Deutsch Lernen 公开学习文档",
+    "url": "https://github.com/aolingge/deutsch-lernen/blob/main/docs/vocabulary/theme-vocabulary.md",
+    "canonicalUrl": "https://github.com/aolingge/deutsch-lernen/blob/main/docs/vocabulary/theme-vocabulary.md",
+    "rights": "owned",
+    "status": "published",
+    "linkStatus": "ok",
+    "lastEditorialCheckedAt": "2026-09-30"
+  },
+  {
+    "id": "guide-vocabulary-review-system",
+    "slug": "guide-vocabulary-review-system",
+    "titleOriginal": "词汇复习闭环",
+    "titleZh": "词汇复习闭环",
+    "descriptionZh": "词汇不是“看过就会”。A1-C1 的词汇复习应该从单词升级到搭配、句子、场景和输出。",
+    "howToUseZh": "先阅读说明，按文中任务做一次练习或整理自己的清单，再复盘未完成项目。",
+    "primaryCategory": "vocabulary",
+    "tags": [
+      "中文资料",
+      "本站文档"
+    ],
+    "levels": [
+      "A1",
+      "A2",
+      "B1",
+      "B2",
+      "C1"
+    ],
+    "levelBasis": "editorial",
+    "skills": [
+      "词汇"
+    ],
+    "exams": [],
+    "formats": [
+      "中文指南"
+    ],
+    "price": "free",
+    "access": "open",
+    "languages": [
+      "中文",
+      "德语"
+    ],
+    "sourceName": "Deutsch Lernen 公开学习文档",
+    "url": "https://github.com/aolingge/deutsch-lernen/blob/main/docs/vocabulary/vocabulary-review-system.md",
+    "canonicalUrl": "https://github.com/aolingge/deutsch-lernen/blob/main/docs/vocabulary/vocabulary-review-system.md",
+    "rights": "owned",
+    "status": "published",
+    "linkStatus": "ok",
+    "lastEditorialCheckedAt": "2026-09-30"
+  },
+  {
+    "id": "guide-a1-c1-four-skills-training",
+    "slug": "guide-a1-c1-four-skills-training",
+    "titleOriginal": "A1-C1 四技能训练系统",
+    "titleZh": "A1-C1 四技能训练系统",
+    "descriptionZh": "四技能不是平均用力。不同等级的重点不同：A1-A2 建句子，B1 建任务，B2 建观点，C1 建学术和专业表达。",
+    "howToUseZh": "复制模板到自己的笔记中，填入实际学习内容，每周回顾一次。",
+    "primaryCategory": "tools",
+    "tags": [
+      "中文资料",
+      "本站文档"
+    ],
+    "levels": [
+      "A1"
+    ],
+    "levelBasis": "editorial",
+    "skills": [
+      "综合"
+    ],
+    "exams": [],
+    "formats": [
+      "中文指南"
+    ],
+    "price": "free",
+    "access": "open",
+    "languages": [
+      "中文",
+      "德语"
+    ],
+    "sourceName": "Deutsch Lernen 公开学习文档",
+    "url": "https://github.com/aolingge/deutsch-lernen/blob/main/docs/skills/a1-c1-four-skills-training.md",
+    "canonicalUrl": "https://github.com/aolingge/deutsch-lernen/blob/main/docs/skills/a1-c1-four-skills-training.md",
+    "rights": "owned",
+    "status": "published",
+    "linkStatus": "ok",
+    "lastEditorialCheckedAt": "2026-09-30"
+  },
+  {
+    "id": "guide-a1-self-check",
+    "slug": "guide-a1-self-check",
+    "titleOriginal": "A1 自检训练",
+    "titleZh": "A1 自检训练",
+    "descriptionZh": "这页用于判断 A1 是否真的能用。A1 不追求复杂表达，核心是：听懂慢速基本信息，说出完整短句，写清楚非常简单的任务。",
+    "howToUseZh": "先阅读说明，按文中任务做一次练习或整理自己的清单，再复盘未完成项目。",
+    "primaryCategory": "courses",
+    "tags": [
+      "中文资料",
+      "本站文档"
+    ],
+    "levels": [
+      "A1"
+    ],
+    "levelBasis": "editorial",
+    "skills": [
+      "综合"
+    ],
+    "exams": [],
+    "formats": [
+      "中文指南"
+    ],
+    "price": "free",
+    "access": "open",
+    "languages": [
+      "中文",
+      "德语"
+    ],
+    "sourceName": "Deutsch Lernen 公开学习文档",
+    "url": "https://github.com/aolingge/deutsch-lernen/blob/main/docs/levels/a1-self-check.md",
+    "canonicalUrl": "https://github.com/aolingge/deutsch-lernen/blob/main/docs/levels/a1-self-check.md",
+    "rights": "owned",
+    "status": "published",
+    "linkStatus": "ok",
+    "lastEditorialCheckedAt": "2026-09-30"
+  },
+  {
+    "id": "guide-a1",
+    "slug": "guide-a1",
+    "titleOriginal": "A1 入门路线",
+    "titleZh": "A1 入门路线",
+    "descriptionZh": "A1 的目标是能在对方说得慢、愿意配合时完成最基本互动。不要急着学复杂语法，先把发音、短句和日常场景练稳。",
+    "howToUseZh": "先阅读说明，按文中任务做一次练习或整理自己的清单，再复盘未完成项目。",
+    "primaryCategory": "courses",
+    "tags": [
+      "中文资料",
+      "本站文档"
+    ],
+    "levels": [
+      "A1"
+    ],
+    "levelBasis": "editorial",
+    "skills": [
+      "综合"
+    ],
+    "exams": [],
+    "formats": [
+      "中文指南"
+    ],
+    "price": "free",
+    "access": "open",
+    "languages": [
+      "中文",
+      "德语"
+    ],
+    "sourceName": "Deutsch Lernen 公开学习文档",
+    "url": "https://github.com/aolingge/deutsch-lernen/blob/main/docs/levels/a1.md",
+    "canonicalUrl": "https://github.com/aolingge/deutsch-lernen/blob/main/docs/levels/a1.md",
+    "rights": "owned",
+    "status": "published",
+    "linkStatus": "ok",
+    "lastEditorialCheckedAt": "2026-09-30"
+  },
+  {
+    "id": "guide-a2-self-check",
+    "slug": "guide-a2-self-check",
+    "titleOriginal": "A2 自检训练",
+    "titleZh": "A2 自检训练",
+    "descriptionZh": "A2 的关键是能讲日常经历、安排和需求。你不只会说“我是谁”，还要能说明昨天发生了什么、接下来要做什么、遇到问题怎么处理。",
+    "howToUseZh": "先阅读说明，按文中任务做一次练习或整理自己的清单，再复盘未完成项目。",
+    "primaryCategory": "courses",
+    "tags": [
+      "中文资料",
+      "本站文档"
+    ],
+    "levels": [
+      "A2"
+    ],
+    "levelBasis": "editorial",
+    "skills": [
+      "综合"
+    ],
+    "exams": [],
+    "formats": [
+      "中文指南"
+    ],
+    "price": "free",
+    "access": "open",
+    "languages": [
+      "中文",
+      "德语"
+    ],
+    "sourceName": "Deutsch Lernen 公开学习文档",
+    "url": "https://github.com/aolingge/deutsch-lernen/blob/main/docs/levels/a2-self-check.md",
+    "canonicalUrl": "https://github.com/aolingge/deutsch-lernen/blob/main/docs/levels/a2-self-check.md",
+    "rights": "owned",
+    "status": "published",
+    "linkStatus": "ok",
+    "lastEditorialCheckedAt": "2026-09-30"
+  },
+  {
+    "id": "guide-a2",
+    "slug": "guide-a2",
+    "titleOriginal": "A2 日常稳定路线",
+    "titleZh": "A2 日常稳定路线",
+    "descriptionZh": "A2 的目标是能处理熟悉场景里的简单信息交换。重点从“短句”升级到“过去经历、日常安排、简单邮件”。",
+    "howToUseZh": "先阅读说明，按文中任务做一次练习或整理自己的清单，再复盘未完成项目。",
+    "primaryCategory": "courses",
+    "tags": [
+      "中文资料",
+      "本站文档"
+    ],
+    "levels": [
+      "A2"
+    ],
+    "levelBasis": "editorial",
+    "skills": [
+      "综合"
+    ],
+    "exams": [],
+    "formats": [
+      "中文指南"
+    ],
+    "price": "free",
+    "access": "open",
+    "languages": [
+      "中文",
+      "德语"
+    ],
+    "sourceName": "Deutsch Lernen 公开学习文档",
+    "url": "https://github.com/aolingge/deutsch-lernen/blob/main/docs/levels/a2.md",
+    "canonicalUrl": "https://github.com/aolingge/deutsch-lernen/blob/main/docs/levels/a2.md",
+    "rights": "owned",
+    "status": "published",
+    "linkStatus": "ok",
+    "lastEditorialCheckedAt": "2026-09-30"
+  },
+  {
+    "id": "guide-b1-self-check",
+    "slug": "guide-b1-self-check",
+    "titleOriginal": "B1 自检训练",
+    "titleZh": "B1 自检训练",
+    "descriptionZh": "B1 的核心是任务型表达：能处理邮件、投诉、计划、观点、简单讨论。考试中最重要的不是炫技，而是把任务点完整、清楚、礼貌地完成。",
+    "howToUseZh": "先阅读说明，按文中任务做一次练习或整理自己的清单，再复盘未完成项目。",
+    "primaryCategory": "courses",
+    "tags": [
+      "中文资料",
+      "本站文档"
+    ],
+    "levels": [
+      "B1"
+    ],
+    "levelBasis": "editorial",
+    "skills": [
+      "综合"
+    ],
+    "exams": [],
+    "formats": [
+      "中文指南"
+    ],
+    "price": "free",
+    "access": "open",
+    "languages": [
+      "中文",
+      "德语"
+    ],
+    "sourceName": "Deutsch Lernen 公开学习文档",
+    "url": "https://github.com/aolingge/deutsch-lernen/blob/main/docs/levels/b1-self-check.md",
+    "canonicalUrl": "https://github.com/aolingge/deutsch-lernen/blob/main/docs/levels/b1-self-check.md",
+    "rights": "owned",
+    "status": "published",
+    "linkStatus": "ok",
+    "lastEditorialCheckedAt": "2026-09-30"
+  },
+  {
+    "id": "guide-b1",
+    "slug": "guide-b1",
+    "titleOriginal": "B1 独立使用路线",
+    "titleZh": "B1 独立使用路线",
+    "descriptionZh": "B1 的目标是能在常见生活、学习、工作场景中独立表达需求、观点和理由。本仓库已有完整 B1 系统，这页只做入口。",
+    "howToUseZh": "先阅读说明，按文中任务做一次练习或整理自己的清单，再复盘未完成项目。",
+    "primaryCategory": "courses",
+    "tags": [
+      "中文资料",
+      "本站文档"
+    ],
+    "levels": [
+      "B1"
+    ],
+    "levelBasis": "editorial",
+    "skills": [
+      "综合"
+    ],
+    "exams": [],
+    "formats": [
+      "中文指南"
+    ],
+    "price": "free",
+    "access": "open",
+    "languages": [
+      "中文",
+      "德语"
+    ],
+    "sourceName": "Deutsch Lernen 公开学习文档",
+    "url": "https://github.com/aolingge/deutsch-lernen/blob/main/docs/levels/b1.md",
+    "canonicalUrl": "https://github.com/aolingge/deutsch-lernen/blob/main/docs/levels/b1.md",
+    "rights": "owned",
+    "status": "published",
+    "linkStatus": "ok",
+    "lastEditorialCheckedAt": "2026-09-30"
+  },
+  {
+    "id": "guide-b2-self-check",
+    "slug": "guide-b2-self-check",
+    "titleOriginal": "B2 自检训练",
+    "titleZh": "B2 自检训练",
+    "descriptionZh": "B2 的任务是把“能交流”升级为“能讨论复杂问题”。你需要读懂较长材料、表达立场、说明利弊，并能把语法用于段落组织。",
+    "howToUseZh": "先阅读说明，按文中任务做一次练习或整理自己的清单，再复盘未完成项目。",
+    "primaryCategory": "courses",
+    "tags": [
+      "中文资料",
+      "本站文档"
+    ],
+    "levels": [
+      "B2"
+    ],
+    "levelBasis": "editorial",
+    "skills": [
+      "综合"
+    ],
+    "exams": [],
+    "formats": [
+      "中文指南"
+    ],
+    "price": "free",
+    "access": "open",
+    "languages": [
+      "中文",
+      "德语"
+    ],
+    "sourceName": "Deutsch Lernen 公开学习文档",
+    "url": "https://github.com/aolingge/deutsch-lernen/blob/main/docs/levels/b2-self-check.md",
+    "canonicalUrl": "https://github.com/aolingge/deutsch-lernen/blob/main/docs/levels/b2-self-check.md",
+    "rights": "owned",
+    "status": "published",
+    "linkStatus": "ok",
+    "lastEditorialCheckedAt": "2026-09-30"
+  },
+  {
+    "id": "guide-b2",
+    "slug": "guide-b2",
+    "titleOriginal": "B2 复杂表达路线",
+    "titleZh": "B2 复杂表达路线",
+    "descriptionZh": "B2 的目标是从日常德语进入抽象话题、新闻、工作和大学预备场景。重点是观点、结构和较长输入。",
+    "howToUseZh": "先阅读说明，按文中任务做一次练习或整理自己的清单，再复盘未完成项目。",
+    "primaryCategory": "courses",
+    "tags": [
+      "中文资料",
+      "本站文档"
+    ],
+    "levels": [
+      "B2"
+    ],
+    "levelBasis": "editorial",
+    "skills": [
+      "综合"
+    ],
+    "exams": [],
+    "formats": [
+      "中文指南"
+    ],
+    "price": "free",
+    "access": "open",
+    "languages": [
+      "中文",
+      "德语"
+    ],
+    "sourceName": "Deutsch Lernen 公开学习文档",
+    "url": "https://github.com/aolingge/deutsch-lernen/blob/main/docs/levels/b2.md",
+    "canonicalUrl": "https://github.com/aolingge/deutsch-lernen/blob/main/docs/levels/b2.md",
+    "rights": "owned",
+    "status": "published",
+    "linkStatus": "ok",
+    "lastEditorialCheckedAt": "2026-09-30"
+  },
+  {
+    "id": "guide-c1-self-check",
+    "slug": "guide-c1-self-check",
+    "titleOriginal": "C1 自检训练",
+    "titleZh": "C1 自检训练",
+    "descriptionZh": "C1 的目标是学术和专业表达：能处理抽象材料、长文本、讲座、图表、论证和追问。C1 不等于用很多难词，而是能准确组织复杂信息。",
+    "howToUseZh": "先阅读说明，按文中任务做一次练习或整理自己的清单，再复盘未完成项目。",
+    "primaryCategory": "courses",
+    "tags": [
+      "中文资料",
+      "本站文档"
+    ],
+    "levels": [
+      "C1"
+    ],
+    "levelBasis": "editorial",
+    "skills": [
+      "综合"
+    ],
+    "exams": [],
+    "formats": [
+      "中文指南"
+    ],
+    "price": "free",
+    "access": "open",
+    "languages": [
+      "中文",
+      "德语"
+    ],
+    "sourceName": "Deutsch Lernen 公开学习文档",
+    "url": "https://github.com/aolingge/deutsch-lernen/blob/main/docs/levels/c1-self-check.md",
+    "canonicalUrl": "https://github.com/aolingge/deutsch-lernen/blob/main/docs/levels/c1-self-check.md",
+    "rights": "owned",
+    "status": "published",
+    "linkStatus": "ok",
+    "lastEditorialCheckedAt": "2026-09-30"
+  },
+  {
+    "id": "guide-c1",
+    "slug": "guide-c1",
+    "titleOriginal": "C1 学术与专业德语路线",
+    "titleZh": "C1 学术与专业德语路线",
+    "descriptionZh": "C1 的目标是能在大学、专业和复杂公共场景中灵活使用德语。它是 DSH、TestDaF、telc C1 Hochschule 的核心准备阶段。",
+    "howToUseZh": "先阅读说明，按文中任务做一次练习或整理自己的清单，再复盘未完成项目。",
+    "primaryCategory": "courses",
+    "tags": [
+      "中文资料",
+      "本站文档"
+    ],
+    "levels": [
+      "C1"
+    ],
+    "levelBasis": "editorial",
+    "skills": [
+      "综合"
+    ],
+    "exams": [],
+    "formats": [
+      "中文指南"
+    ],
+    "price": "free",
+    "access": "open",
+    "languages": [
+      "中文",
+      "德语"
+    ],
+    "sourceName": "Deutsch Lernen 公开学习文档",
+    "url": "https://github.com/aolingge/deutsch-lernen/blob/main/docs/levels/c1.md",
+    "canonicalUrl": "https://github.com/aolingge/deutsch-lernen/blob/main/docs/levels/c1.md",
+    "rights": "owned",
+    "status": "published",
+    "linkStatus": "ok",
+    "lastEditorialCheckedAt": "2026-09-30"
+  },
+  {
+    "id": "guide-bank-insurance",
+    "slug": "guide-bank-insurance",
+    "titleOriginal": "银行与保险",
+    "titleZh": "银行与保险",
+    "descriptionZh": "银行和保险涉及财务与合规，本仓库只做学习导航和词汇整理，不推荐具体产品。",
+    "howToUseZh": "先阅读说明，按文中任务做一次练习或整理自己的清单，再复盘未完成项目。",
+    "primaryCategory": "life",
+    "tags": [
+      "中文资料",
+      "本站文档"
+    ],
+    "levels": [
+      "A1",
+      "A2",
+      "B1",
+      "B2",
+      "C1"
+    ],
+    "levelBasis": "editorial",
+    "skills": [
+      "阅读",
+      "词汇"
+    ],
+    "exams": [],
+    "formats": [
+      "中文指南"
+    ],
+    "price": "free",
+    "access": "open",
+    "languages": [
+      "中文",
+      "德语"
+    ],
+    "sourceName": "Deutsch Lernen 公开学习文档",
+    "url": "https://github.com/aolingge/deutsch-lernen/blob/main/docs/germany-prep/bank-insurance.md",
+    "canonicalUrl": "https://github.com/aolingge/deutsch-lernen/blob/main/docs/germany-prep/bank-insurance.md",
+    "rights": "owned",
+    "status": "published",
+    "linkStatus": "ok",
+    "lastEditorialCheckedAt": "2026-09-30"
+  },
+  {
+    "id": "guide-daad-aps-uni-assist",
+    "slug": "guide-daad-aps-uni-assist",
+    "titleOriginal": "DAAD、APS、uni-assist 和选校",
+    "titleZh": "DAAD、APS、uni-assist 和选校",
+    "descriptionZh": "Welche Zulassungsvoraussetzungen gibt es?",
+    "howToUseZh": "先阅读说明，按文中任务做一次练习或整理自己的清单，再复盘未完成项目。",
+    "primaryCategory": "life",
+    "tags": [
+      "中文资料",
+      "本站文档"
+    ],
+    "levels": [
+      "A1",
+      "A2",
+      "B1",
+      "B2",
+      "C1"
+    ],
+    "levelBasis": "editorial",
+    "skills": [
+      "阅读",
+      "词汇"
+    ],
+    "exams": [],
+    "formats": [
+      "中文指南"
+    ],
+    "price": "free",
+    "access": "open",
+    "languages": [
+      "中文",
+      "德语"
+    ],
+    "sourceName": "Deutsch Lernen 公开学习文档",
+    "url": "https://github.com/aolingge/deutsch-lernen/blob/main/docs/germany-prep/daad-aps-uni-assist.md",
+    "canonicalUrl": "https://github.com/aolingge/deutsch-lernen/blob/main/docs/germany-prep/daad-aps-uni-assist.md",
+    "rights": "owned",
+    "status": "published",
+    "linkStatus": "ok",
+    "lastEditorialCheckedAt": "2026-09-30"
+  },
+  {
+    "id": "guide-glossary",
+    "slug": "guide-glossary",
+    "titleOriginal": "赴德准备词汇表",
+    "titleZh": "赴德准备词汇表",
+    "descriptionZh": "关于赴德准备词汇表的中文学习说明与练习。",
+    "howToUseZh": "先阅读说明，按文中任务做一次练习或整理自己的清单，再复盘未完成项目。",
+    "primaryCategory": "vocabulary",
+    "tags": [
+      "中文资料",
+      "本站文档"
+    ],
+    "levels": [
+      "A1",
+      "A2",
+      "B1",
+      "B2",
+      "C1"
+    ],
+    "levelBasis": "editorial",
+    "skills": [
+      "词汇"
+    ],
+    "exams": [],
+    "formats": [
+      "中文指南"
+    ],
+    "price": "free",
+    "access": "open",
+    "languages": [
+      "中文",
+      "德语"
+    ],
+    "sourceName": "Deutsch Lernen 公开学习文档",
+    "url": "https://github.com/aolingge/deutsch-lernen/blob/main/docs/germany-prep/glossary.md",
+    "canonicalUrl": "https://github.com/aolingge/deutsch-lernen/blob/main/docs/germany-prep/glossary.md",
+    "rights": "owned",
+    "status": "published",
+    "linkStatus": "ok",
+    "lastEditorialCheckedAt": "2026-09-30"
+  },
+  {
+    "id": "guide-healthcare",
+    "slug": "guide-healthcare",
+    "titleOriginal": "医疗与就医",
+    "titleZh": "医疗与就医",
+    "descriptionZh": "本页只整理就医路径和德语表达，不提供诊断或治疗建议。生命危险或重大紧急情况请拨打当地紧急电话。",
+    "howToUseZh": "先阅读说明，按文中任务做一次练习或整理自己的清单，再复盘未完成项目。",
+    "primaryCategory": "life",
+    "tags": [
+      "中文资料",
+      "本站文档"
+    ],
+    "levels": [
+      "A1",
+      "A2",
+      "B1",
+      "B2",
+      "C1"
+    ],
+    "levelBasis": "editorial",
+    "skills": [
+      "阅读",
+      "词汇"
+    ],
+    "exams": [],
+    "formats": [
+      "中文指南"
+    ],
+    "price": "free",
+    "access": "open",
+    "languages": [
+      "中文",
+      "德语"
+    ],
+    "sourceName": "Deutsch Lernen 公开学习文档",
+    "url": "https://github.com/aolingge/deutsch-lernen/blob/main/docs/germany-prep/healthcare.md",
+    "canonicalUrl": "https://github.com/aolingge/deutsch-lernen/blob/main/docs/germany-prep/healthcare.md",
+    "rights": "owned",
+    "status": "published",
+    "linkStatus": "ok",
+    "lastEditorialCheckedAt": "2026-09-30"
+  },
+  {
+    "id": "guide-housing-anmeldung",
+    "slug": "guide-housing-anmeldung",
+    "titleOriginal": "住房与 Anmeldung",
+    "titleZh": "住房与 Anmeldung",
+    "descriptionZh": "`Anmeldung = 住址登记 / 抵德后向城市登记当前住址 / 不同城市预约和材料要求不同。`",
+    "howToUseZh": "先阅读说明，按文中任务做一次练习或整理自己的清单，再复盘未完成项目。",
+    "primaryCategory": "life",
+    "tags": [
+      "中文资料",
+      "本站文档"
+    ],
+    "levels": [
+      "A1",
+      "A2",
+      "B1",
+      "B2",
+      "C1"
+    ],
+    "levelBasis": "editorial",
+    "skills": [
+      "阅读",
+      "词汇"
+    ],
+    "exams": [],
+    "formats": [
+      "中文指南"
+    ],
+    "price": "free",
+    "access": "open",
+    "languages": [
+      "中文",
+      "德语"
+    ],
+    "sourceName": "Deutsch Lernen 公开学习文档",
+    "url": "https://github.com/aolingge/deutsch-lernen/blob/main/docs/germany-prep/housing-anmeldung.md",
+    "canonicalUrl": "https://github.com/aolingge/deutsch-lernen/blob/main/docs/germany-prep/housing-anmeldung.md",
+    "rights": "owned",
+    "status": "published",
+    "linkStatus": "ok",
+    "lastEditorialCheckedAt": "2026-09-30"
+  },
+  {
+    "id": "guide-recognition-career",
+    "slug": "guide-recognition-career",
+    "titleOriginal": "职业资格认证与职业发展",
+    "titleZh": "职业资格认证与职业发展",
+    "descriptionZh": "`Anerkennung = 职业资格认可 / 判断外国职业资格是否等同德国资格 / 对受监管职业尤其重要。`",
+    "howToUseZh": "先阅读说明，按文中任务做一次练习或整理自己的清单，再复盘未完成项目。",
+    "primaryCategory": "life",
+    "tags": [
+      "中文资料",
+      "本站文档"
+    ],
+    "levels": [
+      "A1",
+      "A2",
+      "B1",
+      "B2",
+      "C1"
+    ],
+    "levelBasis": "editorial",
+    "skills": [
+      "阅读",
+      "词汇"
+    ],
+    "exams": [],
+    "formats": [
+      "中文指南"
+    ],
+    "price": "free",
+    "access": "open",
+    "languages": [
+      "中文",
+      "德语"
+    ],
+    "sourceName": "Deutsch Lernen 公开学习文档",
+    "url": "https://github.com/aolingge/deutsch-lernen/blob/main/docs/germany-prep/recognition-career.md",
+    "canonicalUrl": "https://github.com/aolingge/deutsch-lernen/blob/main/docs/germany-prep/recognition-career.md",
+    "rights": "owned",
+    "status": "published",
+    "linkStatus": "ok",
+    "lastEditorialCheckedAt": "2026-09-30"
+  },
+  {
+    "id": "guide-scenario-german-phrasebook",
+    "slug": "guide-scenario-german-phrasebook",
+    "titleOriginal": "赴德场景德语短语本",
+    "titleZh": "赴德场景德语短语本",
+    "descriptionZh": "这页整理赴德学习和生活中高频、可替换的表达。它只用于语言学习，不替代官方流程、城市要求、合同判断或法律建议。",
+    "howToUseZh": "先阅读说明，按文中任务做一次练习或整理自己的清单，再复盘未完成项目。",
+    "primaryCategory": "vocabulary",
+    "tags": [
+      "中文资料",
+      "本站文档"
+    ],
+    "levels": [
+      "A1",
+      "A2",
+      "B1",
+      "B2",
+      "C1"
+    ],
+    "levelBasis": "editorial",
+    "skills": [
+      "词汇"
+    ],
+    "exams": [],
+    "formats": [
+      "中文指南"
+    ],
+    "price": "free",
+    "access": "open",
+    "languages": [
+      "中文",
+      "德语"
+    ],
+    "sourceName": "Deutsch Lernen 公开学习文档",
+    "url": "https://github.com/aolingge/deutsch-lernen/blob/main/docs/germany-prep/scenario-german-phrasebook.md",
+    "canonicalUrl": "https://github.com/aolingge/deutsch-lernen/blob/main/docs/germany-prep/scenario-german-phrasebook.md",
+    "rights": "owned",
+    "status": "published",
+    "linkStatus": "ok",
+    "lastEditorialCheckedAt": "2026-09-30"
+  },
+  {
+    "id": "guide-timeline-checklist",
+    "slug": "guide-timeline-checklist",
+    "titleOriginal": "赴德时间线清单",
+    "titleZh": "赴德时间线清单",
+    "descriptionZh": "关于赴德时间线清单的中文学习说明与练习。",
+    "howToUseZh": "先阅读说明，按文中任务做一次练习或整理自己的清单，再复盘未完成项目。",
+    "primaryCategory": "life",
+    "tags": [
+      "中文资料",
+      "本站文档"
+    ],
+    "levels": [
+      "A1",
+      "A2",
+      "B1",
+      "B2",
+      "C1"
+    ],
+    "levelBasis": "editorial",
+    "skills": [
+      "阅读",
+      "词汇"
+    ],
+    "exams": [],
+    "formats": [
+      "中文指南"
+    ],
+    "price": "free",
+    "access": "open",
+    "languages": [
+      "中文",
+      "德语"
+    ],
+    "sourceName": "Deutsch Lernen 公开学习文档",
+    "url": "https://github.com/aolingge/deutsch-lernen/blob/main/docs/germany-prep/timeline-checklist.md",
+    "canonicalUrl": "https://github.com/aolingge/deutsch-lernen/blob/main/docs/germany-prep/timeline-checklist.md",
+    "rights": "owned",
+    "status": "published",
+    "linkStatus": "ok",
+    "lastEditorialCheckedAt": "2026-09-30"
+  },
+  {
+    "id": "guide-transport",
+    "slug": "guide-transport",
+    "titleOriginal": "交通",
+    "titleZh": "交通",
+    "descriptionZh": "Welches Gleis ist das?",
+    "howToUseZh": "先阅读说明，按文中任务做一次练习或整理自己的清单，再复盘未完成项目。",
+    "primaryCategory": "life",
+    "tags": [
+      "中文资料",
+      "本站文档"
+    ],
+    "levels": [
+      "A1",
+      "A2",
+      "B1",
+      "B2",
+      "C1"
+    ],
+    "levelBasis": "editorial",
+    "skills": [
+      "阅读",
+      "词汇"
+    ],
+    "exams": [],
+    "formats": [
+      "中文指南"
+    ],
+    "price": "free",
+    "access": "open",
+    "languages": [
+      "中文",
+      "德语"
+    ],
+    "sourceName": "Deutsch Lernen 公开学习文档",
+    "url": "https://github.com/aolingge/deutsch-lernen/blob/main/docs/germany-prep/transport.md",
+    "canonicalUrl": "https://github.com/aolingge/deutsch-lernen/blob/main/docs/germany-prep/transport.md",
+    "rights": "owned",
+    "status": "published",
+    "linkStatus": "ok",
+    "lastEditorialCheckedAt": "2026-09-30"
+  },
+  {
+    "id": "guide-visa-study-residence",
+    "slug": "guide-visa-study-residence",
+    "titleOriginal": "留学签证和居留",
+    "titleZh": "留学签证和居留",
+    "descriptionZh": "签证和居留规则会变化，实际材料以德国使领馆、目标城市 Auslaenderbehoerde 和目标大学当前页面为准。",
+    "howToUseZh": "先阅读说明，按文中任务做一次练习或整理自己的清单，再复盘未完成项目。",
+    "primaryCategory": "life",
+    "tags": [
+      "中文资料",
+      "本站文档"
+    ],
+    "levels": [
+      "A1",
+      "A2",
+      "B1",
+      "B2",
+      "C1"
+    ],
+    "levelBasis": "editorial",
+    "skills": [
+      "阅读",
+      "词汇"
+    ],
+    "exams": [],
+    "formats": [
+      "中文指南"
+    ],
+    "price": "free",
+    "access": "open",
+    "languages": [
+      "中文",
+      "德语"
+    ],
+    "sourceName": "Deutsch Lernen 公开学习文档",
+    "url": "https://github.com/aolingge/deutsch-lernen/blob/main/docs/germany-prep/visa-study-residence.md",
+    "canonicalUrl": "https://github.com/aolingge/deutsch-lernen/blob/main/docs/germany-prep/visa-study-residence.md",
+    "rights": "owned",
+    "status": "published",
+    "linkStatus": "ok",
+    "lastEditorialCheckedAt": "2026-09-30"
+  },
+  {
+    "id": "guide-work-internship",
+    "slug": "guide-work-internship",
+    "titleOriginal": "工作与实习",
+    "titleZh": "工作与实习",
+    "descriptionZh": "学生工作、实习和签证身份有关。本页只做官方入口和场景德语整理，具体工作权限以签证、居留和官方页面为准。",
+    "howToUseZh": "先阅读说明，按文中任务做一次练习或整理自己的清单，再复盘未完成项目。",
+    "primaryCategory": "life",
+    "tags": [
+      "中文资料",
+      "本站文档"
+    ],
+    "levels": [
+      "A1",
+      "A2",
+      "B1",
+      "B2",
+      "C1"
+    ],
+    "levelBasis": "editorial",
+    "skills": [
+      "阅读",
+      "词汇"
+    ],
+    "exams": [],
+    "formats": [
+      "中文指南"
+    ],
+    "price": "free",
+    "access": "open",
+    "languages": [
+      "中文",
+      "德语"
+    ],
+    "sourceName": "Deutsch Lernen 公开学习文档",
+    "url": "https://github.com/aolingge/deutsch-lernen/blob/main/docs/germany-prep/work-internship.md",
+    "canonicalUrl": "https://github.com/aolingge/deutsch-lernen/blob/main/docs/germany-prep/work-internship.md",
+    "rights": "owned",
+    "status": "published",
+    "linkStatus": "ok",
+    "lastEditorialCheckedAt": "2026-09-30"
+  },
+  {
+    "id": "guide-appointments-and-offices",
+    "slug": "guide-appointments-and-offices",
+    "titleOriginal": "预约与办事表达",
+    "titleZh": "预约与办事表达",
+    "descriptionZh": "德国生活中很多事情需要提前预约，例如看病、办证、咨询课程、租房看房、政府部门办事。先掌握一套稳定表达，会比临场硬想轻松很多。",
+    "howToUseZh": "先阅读说明，按文中任务做一次练习或整理自己的清单，再复盘未完成项目。",
+    "primaryCategory": "life",
+    "tags": [
+      "中文资料",
+      "本站文档"
+    ],
+    "levels": [
+      "A1",
+      "A2",
+      "B1",
+      "B2",
+      "C1"
+    ],
+    "levelBasis": "editorial",
+    "skills": [
+      "阅读",
+      "词汇"
+    ],
+    "exams": [],
+    "formats": [
+      "中文指南"
+    ],
+    "price": "free",
+    "access": "open",
+    "languages": [
+      "中文",
+      "德语"
+    ],
+    "sourceName": "Deutsch Lernen 公开学习文档",
+    "url": "https://github.com/aolingge/deutsch-lernen/blob/main/docs/life-in-germany/appointments-and-offices.md",
+    "canonicalUrl": "https://github.com/aolingge/deutsch-lernen/blob/main/docs/life-in-germany/appointments-and-offices.md",
+    "rights": "owned",
+    "status": "published",
+    "linkStatus": "ok",
+    "lastEditorialCheckedAt": "2026-09-30"
+  },
+  {
+    "id": "guide-official-links-and-scenario-german",
+    "slug": "guide-official-links-and-scenario-german",
+    "titleOriginal": "官方链接与场景德语",
+    "titleZh": "官方链接与场景德语",
+    "descriptionZh": "这页把赴德准备常见官方入口和可直接练的德语表达放在一起。具体流程以官方页面、城市页面和目标大学为准。",
+    "howToUseZh": "先阅读说明，按文中任务做一次练习或整理自己的清单，再复盘未完成项目。",
+    "primaryCategory": "life",
+    "tags": [
+      "中文资料",
+      "本站文档"
+    ],
+    "levels": [
+      "A1",
+      "A2",
+      "B1",
+      "B2",
+      "C1"
+    ],
+    "levelBasis": "editorial",
+    "skills": [
+      "阅读",
+      "词汇"
+    ],
+    "exams": [],
+    "formats": [
+      "中文指南"
+    ],
+    "price": "free",
+    "access": "open",
+    "languages": [
+      "中文",
+      "德语"
+    ],
+    "sourceName": "Deutsch Lernen 公开学习文档",
+    "url": "https://github.com/aolingge/deutsch-lernen/blob/main/docs/life-in-germany/official-links-and-scenario-german.md",
+    "canonicalUrl": "https://github.com/aolingge/deutsch-lernen/blob/main/docs/life-in-germany/official-links-and-scenario-german.md",
+    "rights": "owned",
+    "status": "published",
+    "linkStatus": "ok",
+    "lastEditorialCheckedAt": "2026-09-30"
+  },
+  {
+    "id": "guide-study-and-life-prep-checklist",
+    "slug": "guide-study-and-life-prep-checklist",
+    "titleOriginal": "赴德学习与生活准备清单",
+    "titleZh": "赴德学习与生活准备清单",
+    "descriptionZh": "这页是“先查什么、准备什么、用什么德语表达”的导航。政策、材料和费用会变化，实际办理必须回官方页面和目标大学页面确认。",
+    "howToUseZh": "先阅读说明，按文中任务做一次练习或整理自己的清单，再复盘未完成项目。",
+    "primaryCategory": "life",
+    "tags": [
+      "中文资料",
+      "本站文档"
+    ],
+    "levels": [
+      "A1",
+      "A2",
+      "B1",
+      "B2",
+      "C1"
+    ],
+    "levelBasis": "editorial",
+    "skills": [
+      "阅读",
+      "词汇"
+    ],
+    "exams": [],
+    "formats": [
+      "中文指南"
+    ],
+    "price": "free",
+    "access": "open",
+    "languages": [
+      "中文",
+      "德语"
+    ],
+    "sourceName": "Deutsch Lernen 公开学习文档",
+    "url": "https://github.com/aolingge/deutsch-lernen/blob/main/docs/life-in-germany/study-and-life-prep-checklist.md",
+    "canonicalUrl": "https://github.com/aolingge/deutsch-lernen/blob/main/docs/life-in-germany/study-and-life-prep-checklist.md",
+    "rights": "owned",
+    "status": "published",
+    "linkStatus": "ok",
+    "lastEditorialCheckedAt": "2026-09-30"
+  }
+]

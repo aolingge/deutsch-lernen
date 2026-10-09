@@ -4,9 +4,9 @@
 
 ## 官方入口
 
-- [BaFin basic payment account](https://www.bafin.de/EN/Verbraucher/Bank/Produkte/Basiskonto/basiskonto_artikel_en.html)
+- [BaFin basic payment account](https://kontenvergleich.bafin.de/en)
 - [BaFin account comparison](https://kontenvergleich.bafin.de/en)
-- [DAAD health insurance](https://www.daad.de/en/study-and-research-in-germany/plan-your-studies/health-insurance/)
+- [DAAD health insurance](https://www.daad.de/en/studying-in-germany/living-in-germany/health-insurance/)
 - [gesund.bund student insurance](https://gesund.bund.de/en/student-health-insurance)
 
 ## 银行词汇

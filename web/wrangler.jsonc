@@ -1,0 +1,22 @@
+{
+  "name": "deutsch-lernen-resource-hub",
+  "compatibility_date": "2026-09-30",
+  "compatibility_flags": ["nodejs_compat"],
+  "main": "./worker/index.ts",
+  "assets": { "directory": "./dist", "binding": "ASSETS", "run_worker_first": ["/api/*", "/resource/*"] },
+  "ratelimits": [{ "name": "VISIT_LIMIT", "namespace_id": "100930", "simple": { "limit": 60, "period": 60 } }],
+  "routes": [],
+  "d1_databases": [
+    { "binding": "DB", "database_name": "deutsch-lernen-resource-hub", "database_id": "628f3409-5888-450b-a2af-6f5916aee324", "migrations_dir": "./migrations" }
+  ],
+  "vars": {
+    "ACCESS_ISSUER": "",
+    "ACCESS_AUDIENCE": "",
+    "ADMIN_EMAILS": ""
+  },
+  "observability": {
+    "enabled": true,
+    "logs": { "enabled": true, "head_sampling_rate": 1 },
+    "traces": { "enabled": true, "head_sampling_rate": 0.01 }
+  }
+}

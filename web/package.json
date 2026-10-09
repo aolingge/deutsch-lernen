@@ -1,0 +1,32 @@
+{
+  "name": "deutsch-lernen-resource-hub",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build && node scripts/prepare-assets.mjs",
+    "preview": "astro preview",
+    "dev:cf": "astro dev --host 127.0.0.1",
+    "deploy": "npm run build && wrangler deploy",
+    "worker:types": "wrangler types",
+    "check": "astro check",
+    "test": "node scripts/compile-worker-test.mjs && node --test tests/*.test.mjs",
+    "validate:catalog": "node scripts/validate-catalog.mjs",
+    "verify": "npm run validate:catalog && npm run check && npm run test && npm run build"
+  },
+  "dependencies": {
+    "astro": "7.3.5",
+    "jose": "^6.1.0",
+    "typescript": "^5.9.3"
+  },
+  "overrides": {
+    "sharp": "0.35.5"
+  },
+  "devDependencies": {
+    "@astrojs/check": "^0.9.4",
+    "@types/node": "^22.15.0",
+    "wrangler": "4.144.0",
+    "esbuild": "0.28.2"
+  }
+}

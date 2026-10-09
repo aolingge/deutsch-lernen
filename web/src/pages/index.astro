@@ -1,0 +1,125 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import ResourceCard from '../components/ResourceCard.astro';
+import { categories, resources } from '../data';
+
+const featured = ['dw-nicos-weg', 'vhs-b1-course', 'goethe-b1-practice', 'nachrichtenleicht']
+  .map((id) => resources.find((resource) => resource.id === id))
+  .filter(Boolean);
+const news = resources.filter((resource) => resource.primaryCategory === 'news').slice(0, 3);
+const categoryCount = (id: string) => resources.filter((resource) => resource.primaryCategory === id).length;
+const routes = [
+  { level: 'A1', verb: '开口生活', description: '自我介绍、问时间、完成简单对话', href: '/levels/a1/' },
+  { level: 'A2', verb: '处理日常', description: '描述经历、安排计划、理解通知', href: '/levels/a2/' },
+  { level: 'B1', verb: '独立表达', description: '讲清观点、写完整邮件、应对考试', href: '/levels/b1/' },
+  { level: 'B2', verb: '展开论证', description: '读长文、比较立场、组织讨论', href: '/levels/b2/' },
+  { level: 'C1', verb: '准确沟通', description: '理解复杂材料并清晰表达专业观点', href: '/levels/c1/' },
+];
+const studySteps = [
+  { number: '01', title: '先听或读', detail: '选一段略有挑战的材料，先抓主题。', time: '10 分钟', tone: 'green' },
+  { number: '02', title: '查明白', detail: '只查影响理解的词句，把语法放回原文。', time: '10 分钟', tone: 'yellow' },
+  { number: '03', title: '合上材料回忆', detail: '口头复述要点，写下 3 个短语，不照抄。', time: '5 分钟', tone: 'red' },
+  { number: '04', title: '换成自己的话', detail: '说一段或写几句，让输入变成可用表达。', time: '10 分钟', tone: 'blue' },
+  { number: '05', title: '隔天再提取', detail: '隔一天、三天和一周再回忆并订正。', time: '5 分钟', tone: 'ink' },
+];
+---
+<BaseLayout title="德语学习路线与资源地图" description="按 A1-C1 等级、听说读写技能和考试目标规划德语学习。包含中文学习指南、128 条精选资源、可执行的每周训练路线。">
+  <section class="hero-band">
+    <div class="hero shell">
+      <div class="hero-copy">
+        <p class="kicker">DEUTSCH LERNEN · 中文学习工作台</p>
+        <h1>学会用德语<br /><em>完成下一件事。</em></h1>
+        <p class="lead">从第一次自我介绍，到通过 B1 考试、读懂德国新闻。按你的水平与目标找到一条能走下去的路线。</p>
+        <form class="hero-search" action="/resources/" method="get">
+          <label class="visually-hidden" for="home-search">搜索德语课程、考试和训练资料</label>
+          <input id="home-search" name="q" placeholder="搜 B1 听力、冠词、Goethe 考试…" />
+          <button type="submit">找一份可用的资料 <span aria-hidden="true">↗</span></button>
+        </form>
+        <p class="search-note">搜索课程、练习、考试资料、词典和站内原创指南</p>
+      </div>
+      <div class="hero-map" aria-label="德语学习五步闭环：输入、理解、回忆、表达、复习">
+        <div class="map-caption"><span>让每一次学习都留下结果</span><span>5 步 · 可重复</span></div>
+        <ol class="study-loop">
+          {studySteps.map((step) => <li class={`loop-step ${step.tone}`}>
+            <span class="step-number">{step.number}</span>
+            <div class="step-copy"><strong>{step.title}</strong><p>{step.detail}</p></div>
+            <span class="step-time">{step.time}</span>
+          </li>)}
+        </ol>
+        <p class="loop-foot"><span class="loop-dot"></span>复习后回到新材料 · 约 40 分钟完成一轮</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="proof-strip shell" aria-label="网站内容概况">
+    <div><strong data-resource-count>{resources.length}</strong><span>条已整理资源</span></div>
+    <div><strong>{categories.length}</strong><span>个中文分类</span></div>
+    <div><strong>A1 — C1</strong><span>连续学习路线</span></div>
+    <div><strong>—</strong><span id="site-views">累计访问（读取中）</span></div>
+    <a href="/sources/">来源与核验规则 <span aria-hidden="true">↗</span></a>
+  </section>
+
+  <section class="section shell level-section">
+    <div class="section-heading"><div><p class="kicker">01 / FIND YOUR NEXT LEVEL</p><h2>按水平走，先看自己要会什么</h2><p>每一级都从“能完成的沟通任务”出发，再连接语法、词汇和技能练习。</p></div><a class="text-link" href="/study/">查看完整学习路线 <span aria-hidden="true">↗</span></a></div>
+    <div class="level-track" aria-label="A1 到 C1 德语能力成长路线">
+      {routes.map((route, index) => <a class={`level-stop ${index === 2 ? 'current-level' : ''}`} href={route.href}>
+        <span class="level-marker">{route.level}</span><span class="level-verb">{route.verb}</span><span class="level-description">{route.description}</span><span class="stop-arrow" aria-hidden="true">↗</span>
+      </a>)}
+    </div>
+    <p class="level-note">不确定当前水平？先用各级自检页确认，再选主线课程和训练材料。</p>
+  </section>
+
+  <section class="purpose-band">
+    <div class="shell section">
+      <div class="section-heading"><div><p class="kicker">02 / CHOOSE A PURPOSE</p><h2>你今天想解决哪件事？</h2><p>不用从 128 条里盲选。先选学习目的，再缩小范围。</p></div><a class="text-link" href="/resources/">打开资源筛选器 <span aria-hidden="true">↗</span></a></div>
+      <div class="purpose-grid">
+        <a class="purpose-item" href="/resources/?category=courses"><span class="purpose-index">A</span><span><strong>建立课程主线</strong><small>从系统课程和每日安排开始</small></span><b>{categoryCount('courses')} 条 <i aria-hidden="true">↗</i></b></a>
+        <a class="purpose-item" href="/resources/?category=grammar"><span class="purpose-index">B</span><span><strong>补语法与词汇</strong><small>把规则放进句子、邮件和口语</small></span><b>{categoryCount('grammar') + categoryCount('vocabulary')} 条 <i aria-hidden="true">↗</i></b></a>
+        <a class="purpose-item" href="/resources/?category=exams"><span class="purpose-index">C</span><span><strong>准备目标考试</strong><small>看考试结构，再练对应模块</small></span><b>{categoryCount('exams')} 条 <i aria-hidden="true">↗</i></b></a>
+        <a class="purpose-item" href="/resources/?category=news"><span class="purpose-index">D</span><span><strong>听读真实德语</strong><small>按等级接触新闻、播客与视频</small></span><b>{categoryCount('news') + categoryCount('listening') + categoryCount('reading')} 条 <i aria-hidden="true">↗</i></b></a>
+        <a class="purpose-item" href="/resources/?category=life"><span class="purpose-index">E</span><span><strong>准备德国生活</strong><small>查留学、办事、医疗与求职</small></span><b>{categoryCount('life')} 条 <i aria-hidden="true">↗</i></b></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section shell shortlist-section">
+    <div class="section-heading"><div><p class="kicker">03 / START WITH A SMALL SET</p><h2>先搭一个不贪多的学习组合</h2><p>一个主线课程、一份真实输入、一个输出练习，再加一次复盘。</p></div><a class="text-link" href="/resources/">浏览全部 {resources.length} 条资源 <span aria-hidden="true">↗</span></a></div>
+    <div class="resource-grid">{featured.map((resource) => <ResourceCard resource={resource} compact />)}</div>
+  </section>
+
+  <section class="section shell practice-section">
+    <div class="practice-copy"><p class="kicker">04 / MAKE IT A WEEKLY HABIT</p><h2>资源只是材料，<br /><em>练习才会留下能力。</em></h2><p>把每周安排成输入、输出和复盘的循环。你不需要每天学很久，但每次都要留下能检查的结果：一段复述、一封邮件、一次录音，或一页错题复盘。</p><div class="practice-links"><a href="/study/b1-week/">打开 B1 一周示范计划 <span aria-hidden="true">↗</span></a><a href="/my-study/">把任务加入我的计划 <span aria-hidden="true">↗</span></a></div></div>
+    <div class="week-board" aria-label="每周学习节奏示例">
+      <div class="board-head"><strong>WOCHE 01</strong><span>示例节奏 · 每次 25–45 分钟</span></div>
+      <div class="week-row"><span>MO</span><b>听一课</b><small>提取 5 个表达</small><i class="bar green-bar"></i></div>
+      <div class="week-row"><span>DI</span><b>读一篇</b><small>合上材料复述</small><i class="bar yellow-bar"></i></div>
+      <div class="week-row"><span>MI</span><b>写一封信</b><small>覆盖任务要点</small><i class="bar red-bar"></i></div>
+      <div class="week-row"><span>DO</span><b>听写跟读</b><small>纠正重音和语序</small><i class="bar green-bar"></i></div>
+      <div class="week-row"><span>FR</span><b>录一段口语</b><small>讲清观点和理由</small><i class="bar yellow-bar"></i></div>
+      <div class="week-row"><span>SA</span><b>做一组专项</b><small>按考试时间完成</small><i class="bar red-bar"></i></div>
+      <div class="week-row"><span>SO</span><b>复盘再安排</b><small>隔天主动回忆</small><i class="bar ink-bar"></i></div>
+      <div class="board-footer"><span>听 · 读 · 写 · 说</span><span>每周留下一项可检查成果</span></div>
+    </div>
+  </section>
+
+  <section class="news-band">
+    <div class="section shell">
+      <div class="section-heading"><div><p class="kicker">05 / GERMAN IN CONTEXT</p><h2>让德语回到真实世界</h2><p>从易读新闻开始，读完后用自己的德语说出主题、立场和一个新表达。</p></div><a class="text-link" href="/news/">打开德语新闻入口 <span aria-hidden="true">↗</span></a></div>
+      <div class="news-list">{news.map((resource) => <a href={`/resource/${resource.slug}/`}><span>{resource.levels.join(' · ')}</span><strong>{resource.titleZh}</strong><small>{resource.sourceName}</small><b aria-hidden="true">↗</b></a>)}</div>
+    </div>
+  </section>
+
+  <section class="section shell category-section">
+    <div class="section-heading"><div><p class="kicker">06 / THE RESOURCE MAP</p><h2>需要查找具体材料？</h2><p>按用途进入分类；每条资源都附中文说明、等级、技能和使用条件。</p></div><span class="category-count">{categories.length} 个分类 · {resources.length} 条资源</span></div>
+    <div class="category-grid">{categories.map((category, index) => <a class="category-tile" href={`/resources/?category=${category.id}`}><span class="category-number">{String(index + 1).padStart(2, '0')}</span><strong>{category.name}</strong><p>{category.description}</p><span class="tile-arrow" aria-hidden="true">↗</span></a>)}</div>
+  </section>
+
+  <section class="closing-band"><div class="shell closing-content"><div><p class="kicker">DEIN NÄCHSTER SCHRITT</p><h2>把下一次学习安排下来。</h2><p>计划保存在你的浏览器中；收藏、目标和完成记录不会上传到网站。</p></div><a href="/my-study/">打开我的学习计划 <span aria-hidden="true">↗</span></a></div></section>
+</BaseLayout>
+
+<style>
+.shell{width:min(100% - 48px,1280px);margin-inline:auto}.hero-band{background:#152b25;color:#f7f4ea;overflow:hidden}.hero{min-height:548px;padding-block:74px 68px;display:grid;grid-template-columns:minmax(0,1.05fr) minmax(390px,.95fr);gap:76px;align-items:center}.kicker{font:700 11px/1.4 'DM Mono',monospace;letter-spacing:0;color:#c54834;margin:0 0 17px;text-transform:uppercase}.hero .kicker{color:#f0c755}.hero h1{font-size:clamp(50px,6.6vw,82px);line-height:1.08;letter-spacing:0;margin:0 0 22px;font-weight:800}.hero h1 em{font-style:normal;color:#f0c755}.lead{max-width:560px;color:#d7dfd8;font-size:17px;line-height:1.9;margin:0 0 27px}.hero-search{max-width:640px;background:#fff;border:1px solid #d9dfd9;border-radius:7px;padding:5px;display:flex}.visually-hidden{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}.hero-search input{border:0;outline:0;padding:13px 12px;font:14px inherit;flex:1;min-width:0;color:#17231f}.hero-search button{border:0;background:#c54834;color:white;border-radius:4px;padding:0 17px;font-size:13px;font-weight:750;cursor:pointer}.hero-search button span{font-size:17px;margin-left:6px}.hero-search:focus-within{outline:3px solid #f0c755;outline-offset:3px}.search-note{font-size:11px;color:#bac7be;margin:11px 0 0}.hero-map{position:relative;border-left:1px solid #68766d;padding:3px 0 4px 29px}.map-caption{display:flex;justify-content:space-between;gap:14px;color:#d6dfd8;font:11px 'DM Mono',monospace;margin-bottom:18px}.study-loop{margin:0;padding:0;list-style:none;position:relative}.study-loop::before{content:"";position:absolute;left:20px;top:28px;bottom:29px;border-left:1px dashed #718178}.loop-step{min-height:69px;display:grid;grid-template-columns:42px 1fr auto;gap:12px;align-items:start;position:relative;padding:8px 0}.step-number{height:34px;width:34px;border:1px solid #849087;border-radius:50%;display:grid;place-items:center;background:#152b25;color:#f4f0df;font:11px 'DM Mono',monospace;z-index:1}.step-copy strong{display:block;font-size:14px;line-height:1.35;color:#fcfaf1}.step-copy p{margin:4px 0 0;color:#b7c4ba;font-size:11px;line-height:1.5}.step-time{color:#e5c861;font:10px 'DM Mono',monospace;padding-top:3px}.green .step-number{border-color:#88a778}.yellow .step-number{border-color:#dfc75f}.red .step-number{border-color:#cf735f}.blue .step-number{border-color:#88aab3}.ink .step-number{border-color:#bec7be}.loop-foot{display:flex;align-items:center;gap:9px;color:#b7c4ba;font-size:10px;margin:15px 0 0 42px}.loop-dot{width:7px;height:7px;background:#dfc75f;border-radius:50%}.proof-strip{display:grid;grid-template-columns:1fr 1fr 1.15fr 1.1fr auto;align-items:center;border-bottom:1px solid #dadfd8;padding-block:22px;gap:20px}.proof-strip div{display:flex;align-items:baseline;gap:10px;border-right:1px solid #d7ddd7}.proof-strip strong{font:800 20px 'DM Mono',monospace;color:#1a332b}.proof-strip span{font-size:11px;color:#647067}.proof-strip a,.text-link{color:#a63b2c;text-decoration:none;font-size:12px;font-weight:800}.proof-strip a{white-space:nowrap}.proof-strip a span{color:#a63b2c;margin-left:3px}.section{padding-block:78px}.section-heading{display:flex;align-items:end;justify-content:space-between;gap:25px;margin-bottom:26px}.section-heading h2,.practice-copy h2{font-size:clamp(28px,3.4vw,42px);line-height:1.2;letter-spacing:0;margin:0;color:#18251f}.section-heading p:not(.kicker){color:#667269;font-size:14px;line-height:1.7;margin:10px 0 0}.text-link{white-space:nowrap}.text-link span{font-size:16px;margin-left:5px}.level-track{display:grid;grid-template-columns:repeat(5,1fr);border-top:1px solid #aeb7ae;border-bottom:1px solid #aeb7ae}.level-stop{position:relative;min-height:175px;padding:21px 19px 20px 0;text-decoration:none;border-right:1px solid #d7ddd6;display:flex;flex-direction:column;align-items:flex-start}.level-stop:not(:first-child){padding-left:20px}.level-stop:last-child{border-right:0}.level-marker{display:grid;place-items:center;width:46px;height:46px;border-radius:50%;background:#e6eee7;color:#214633;font:700 12px 'DM Mono',monospace;margin-bottom:17px;position:relative}.level-stop:not(:last-child) .level-marker::after{content:"";height:1px;width:calc(100% + 21px);position:absolute;left:46px;top:50%;background:#b7c1b8}.level-verb{font-size:16px;font-weight:800;color:#23352b}.level-description{font-size:11px;line-height:1.6;color:#68746a;margin-top:6px;max-width:190px}.stop-arrow{position:absolute;right:15px;bottom:15px;color:#b44532;opacity:0;transition:opacity .15s,transform .15s}.level-stop:hover .stop-arrow{opacity:1;transform:translate(2px,-2px)}.current-level .level-marker{background:#b94332;color:#fff}.current-level .level-verb{color:#a2382b}.level-note{font-size:11px;color:#778177;margin:12px 0 0}.purpose-band{background:#f0eee5}.purpose-band .section{padding-block:72px}.purpose-grid{border-top:1px solid #c9c9bc}.purpose-item{min-height:78px;display:grid;grid-template-columns:42px minmax(0,1fr) 130px;align-items:center;gap:16px;text-decoration:none;border-bottom:1px solid #c9c9bc;padding:12px 8px 12px 0;transition:padding .15s,color .15s}.purpose-item:hover{padding-left:8px;color:#a6382d}.purpose-index{display:grid;place-items:center;height:30px;width:30px;border:1px solid #b0b2a8;border-radius:50%;color:#9b3d30;font:11px 'DM Mono',monospace}.purpose-item strong,.purpose-item small{display:block}.purpose-item strong{font-size:15px;color:#26352c}.purpose-item small{font-size:11px;color:#747d73;margin-top:4px}.purpose-item>b{text-align:right;color:#72796f;font:10px 'DM Mono',monospace}.purpose-item i{font-style:normal;color:#ae3b2d;margin-left:8px;font-size:14px}.shortlist-section{padding-bottom:48px}.resource-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}.practice-section{display:grid;grid-template-columns:minmax(0,.85fr) minmax(430px,1.15fr);gap:72px;align-items:center;padding-top:42px;padding-bottom:86px}.practice-copy .kicker{margin-bottom:16px}.practice-copy h2 em{font-style:normal;color:#ac3d30}.practice-copy>p:not(.kicker){color:#626e64;font-size:14px;line-height:1.85;margin:19px 0 22px;max-width:470px}.practice-links{display:grid;gap:11px}.practice-links a{color:#a43b2f;text-decoration:none;font-size:12px;font-weight:800}.practice-links span{font-size:15px;margin-left:4px}.week-board{background:#fff;border:1px solid #d9ddd5;padding:19px 23px 13px;box-shadow:8px 8px 0 #e5e1d5}.board-head,.board-footer{display:flex;justify-content:space-between;gap:15px;align-items:center}.board-head{padding-bottom:14px;border-bottom:1px solid #e1e4dc}.board-head strong{font:700 11px 'DM Mono',monospace;color:#213b2f}.board-head span,.board-footer span{font-size:10px;color:#758075}.week-row{display:grid;grid-template-columns:36px 105px 1fr 68px;gap:10px;align-items:center;min-height:38px;border-bottom:1px solid #edf0e9}.week-row>span{font:10px 'DM Mono',monospace;color:#9b4235}.week-row>b{font-size:11px;color:#344239}.week-row small{font-size:10px;color:#7a8378}.bar{height:5px;border-radius:5px;width:100%;max-width:70px}.green-bar{background:#80a58a}.yellow-bar{background:#dfbd50}.red-bar{background:#c85f4e}.ink-bar{background:#273d33}.board-footer{padding-top:12px}.board-footer span:first-child{color:#35443b;font-weight:700}.news-band{background:#e7ebe5}.news-band .section{padding-block:66px}.news-list{border-top:1px solid #bfc8be}.news-list a{display:grid;grid-template-columns:85px 1fr 150px 20px;gap:15px;align-items:center;padding:17px 0;border-bottom:1px solid #bfc8be;text-decoration:none}.news-list a>span,.news-list small{font:10px 'DM Mono',monospace;color:#68756a}.news-list strong{font-size:14px;color:#20342a}.news-list b{color:#a63d30}.category-section{padding-top:68px;padding-bottom:80px}.category-count{font:11px 'DM Mono',monospace;color:#70796f;white-space:nowrap}.category-grid{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid #cbd2ca;border-left:1px solid #cbd2ca}.category-tile{min-height:143px;padding:17px;border-right:1px solid #cbd2ca;border-bottom:1px solid #cbd2ca;position:relative;text-decoration:none;background:#fbfbf7;transition:background .2s}.category-tile:hover{background:#e9efe8}.category-number{font:11px 'DM Mono',monospace;color:#a04435;display:block;margin-bottom:19px}.category-tile strong{font-size:14px;color:#25362c}.category-tile p{color:#707a70;font-size:11px;line-height:1.6;max-width:210px;margin:6px 0 0}.tile-arrow{position:absolute;right:15px;bottom:13px;color:#aa3f32;font-size:15px}.closing-band{background:#c54834;color:white}.closing-content{min-height:174px;display:flex;align-items:center;justify-content:space-between;gap:25px}.closing-content .kicker{color:#f5df8c;margin-bottom:10px}.closing-content h2{font-size:30px;line-height:1.2;margin:0;letter-spacing:0}.closing-content p:not(.kicker){font-size:12px;color:#fae5df;margin:9px 0 0}.closing-content>a{background:#f0ca59;color:#18251f;padding:14px 17px;border-radius:4px;text-decoration:none;font-size:12px;font-weight:800;white-space:nowrap}.closing-content>a span{margin-left:7px;font-size:15px}.hero-search input{font-family:inherit}
+@media(max-width:1000px){.hero{gap:38px;grid-template-columns:minmax(0,1fr) minmax(350px,.95fr)}.resource-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.practice-section{gap:36px}.proof-strip{grid-template-columns:repeat(4,1fr)}.proof-strip>a{grid-column:1/-1}.proof-strip div:nth-child(4){border:0}}
+@media(max-width:720px){.shell{width:min(100% - 36px,1280px)}.hero{grid-template-columns:1fr;gap:36px;padding-block:48px 45px}.hero h1{font-size:52px}.hero-map{padding-left:18px}.hero-band{background:#152b25}.proof-strip{grid-template-columns:1fr 1fr;gap:13px;padding-block:17px}.proof-strip div{min-height:32px}.proof-strip div:nth-child(2){border:0}.proof-strip div:nth-child(3){border:0}.proof-strip>a{grid-column:auto;white-space:normal;align-self:center}.section{padding-block:55px}.section-heading{align-items:flex-start;flex-direction:column;gap:13px}.section-heading h2,.practice-copy h2{font-size:30px}.level-track{grid-template-columns:1fr;border-bottom:0}.level-stop,.level-stop:not(:first-child){min-height:88px;padding:13px 30px 13px 0;border-right:0;border-bottom:1px solid #d7ddd6;display:grid;grid-template-columns:48px 1fr 20px;grid-template-rows:auto auto;column-gap:13px;align-items:center}.level-marker{grid-row:1/3;margin:0;width:42px;height:42px}.level-stop:not(:last-child) .level-marker::after{display:none}.level-verb{align-self:end}.level-description{align-self:start;margin-top:3px}.stop-arrow{right:3px;top:28px;bottom:auto;opacity:1}.purpose-band .section,.news-band .section{padding-block:55px}.purpose-item{grid-template-columns:34px 1fr 84px;gap:9px;min-height:72px}.purpose-item strong{font-size:13px}.purpose-item small{font-size:10px}.purpose-item>b{font-size:9px}.shortlist-section{padding-bottom:35px}.practice-section{grid-template-columns:1fr;gap:27px;padding-top:35px;padding-bottom:55px}.week-board{padding:14px 13px 10px;box-shadow:5px 5px 0 #e5e1d5}.week-row{grid-template-columns:29px 84px 1fr;gap:7px;min-height:36px}.week-row small{font-size:9px}.week-row .bar{display:none}.news-list a{grid-template-columns:60px 1fr 18px;gap:9px}.news-list small{display:none}.news-list strong{font-size:12px}.category-section{padding-top:55px;padding-bottom:58px}.category-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.category-tile{min-height:127px;padding:13px}.category-tile p{font-size:10px;padding-right:4px}.category-count{white-space:normal}.closing-content{align-items:flex-start;flex-direction:column;justify-content:center;padding-block:25px;min-height:180px}.closing-content h2{font-size:26px}}
+@media(max-width:390px){.shell{width:min(100% - 28px,1280px)}.hero h1{font-size:46px}.hero-search{display:grid;gap:6px}.hero-search input{min-height:43px}.hero-search button{min-height:43px}.map-caption{font-size:9px}.step-copy p{max-width:220px}.step-time{font-size:9px}.proof-strip{column-gap:7px}.proof-strip strong{font-size:17px}.proof-strip span{font-size:10px}.purpose-item>b{width:78px}.news-list a>span{font-size:9px}}
+</style>

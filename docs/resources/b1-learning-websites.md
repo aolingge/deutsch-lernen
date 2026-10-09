@@ -15,7 +15,7 @@ Last checked: 2026-05-05
 | Goethe/ÖSD B1 词表 | [B1 Wortliste PDF](https://www.goethe.de/pro/relaunch/prf/en/Goethe-Zertifikat_B1_Wortliste.pdf) | 词汇覆盖 | 每周按主题抽词，做例句和口头造句 | 词表是参考，不是唯一课程 |
 | telc Deutsch B1 | [telc B1](https://www.telc.net/sprachpruefungen/deutsch/zertifikat-deutsch-telc-deutsch-b1/) | 模拟题、迁移检测 | Goethe 做熟后再做一套 telc | 题型不同，不替代 Goethe |
 | telc B1 Uebungstest PDF | [telc PDF](https://shop.telc.net/media/catalog/product/file/telc_deutsch_b1_zd_uebungstest_1.pdf) | 完整模拟 | 周末整套计时，写作口语看评分标准 | 音频需配套下载 |
-| ÖSD Zertifikat B1 | [OESD B1](https://www.osd.at/en/exams/oesd-exams/oesd-zertifikat-b1-zb1/) | 跨机构模拟 | 用作补充模考 | 考 Goethe 时仍以 Goethe 为准 |
+| ÖSD Zertifikat B1 | [OESD B1](https://osd.at/portfolio-item/osd-zertifikat-b1-zb1/) | 跨机构模拟 | 用作补充模考 | 考 Goethe 时仍以 Goethe 为准 |
 
 ## 主线课程
 

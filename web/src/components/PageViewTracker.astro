@@ -1,0 +1,3 @@
+<script is:inline>
+(() => { const path = location.pathname; if (path.startsWith('/admin') || path.startsWith('/api') || document.visibilityState !== 'visible') return; let eventId; try { const key = `deutsch-hub.view.${path}`; eventId=sessionStorage.getItem(key) || crypto.randomUUID().replaceAll('-', ''); sessionStorage.setItem(key,eventId); } catch { eventId=crypto.randomUUID().replaceAll('-',''); } const send=()=>fetch('/api/visit', { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ eventId, path }) }); send().then(r=>{if(!r.ok)setTimeout(()=>send().catch(()=>{}),2000);}).catch(()=>setTimeout(()=>send().catch(()=>{}),2000)); })();
+</script>

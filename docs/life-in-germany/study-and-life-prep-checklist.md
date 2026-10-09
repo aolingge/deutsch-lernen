@@ -10,7 +10,7 @@ Last checked: 2026-05-05
 | --- | --- | --- |
 | 选校前 | 专业、授课语言、语言证明、申请截止 | [DAAD](https://www.daad.de/en/studying-in-germany/), [Hochschulkompass](https://www.hochschulkompass.de/) |
 | 申请中 | uni-assist、大学系统、APS、材料认证 | [uni-assist](https://www.uni-assist.de/en/), [APS 中国](https://www.aps.org.cn/zh/verfahren-und-services-deutschland/chinaverfahren) |
-| 签证前 | 录取、资金证明、保险、签证清单 | [Federal Foreign Office visa](https://www.auswaertiges-amt.de/en/visa-service), [DAAD health insurance](https://www.daad.de/en/study-and-research-in-germany/plan-your-studies/health-insurance/) |
+| 签证前 | 录取、资金证明、保险、签证清单 | [Federal Foreign Office visa](https://www.auswaertiges-amt.de/en/visa-service), [DAAD health insurance](https://www.daad.de/en/studying-in-germany/living-in-germany/health-insurance/) |
 | 到德国后 | Anmeldung、医保、银行、居留、入学注册 | [DAAD enrolling](https://www.daad.de/en/studying-in-germany/requirements/enrolling/), [Make it in Germany](https://www.make-it-in-germany.com/en/) |
 | 稳定生活 | 看病、找房、合同、交通、工作 | [BAMF advice](https://www.bamf.de/EN/Themen/Integration/ZugewanderteTeilnehmende/BeratungErwachsene/beratung-erwachsene-node.html) |
 

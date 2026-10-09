@@ -1,0 +1,111 @@
+import seed from '../data/resources.json';
+import categories from '../data/categories.json';
+import { createRemoteJWKSet, jwtVerify } from 'jose';
+import { validateResource } from '../src/lib/catalog-schema.mjs';
+
+interface Statement { bind(...values: unknown[]): Statement; run(): Promise<{meta:{changes:number}}> ; first<T=Record<string,unknown>>():Promise<T|null>; all<T=Record<string,unknown>>():Promise<{results:T[]}>; }
+type Env = { DB?: {prepare(sql:string):Statement}; ASSETS: {fetch(request:Request):Promise<Response>}; VISIT_LIMIT?: {limit(input:{key:string}):Promise<{success:boolean}>}; ACCESS_ISSUER?: string; ACCESS_AUDIENCE?: string; ADMIN_EMAILS?: string };
+const json = (body: unknown, status = 200, headers: Record<string,string> = {}) => new Response(JSON.stringify(body), { status, headers: { 'content-type': 'application/json; charset=utf-8', 'cache-control': 'no-store', 'x-content-type-options': 'nosniff', ...headers } });
+const jwksByIssuer = new Map<string, ReturnType<typeof createRemoteJWKSet>>();
+export async function adminEmail(request: Request, env: Env) {
+  if (!env.ACCESS_ISSUER || !env.ACCESS_AUDIENCE || !env.ADMIN_EMAILS) return null;
+  const assertion = request.headers.get('Cf-Access-Jwt-Assertion');
+  if (!assertion) return null;
+  try {
+    const issuer = env.ACCESS_ISSUER.replace(/\/$/, '');
+    if (!/^https:\/\/[a-z0-9-]+\.cloudflareaccess\.com$/.test(issuer)) return null;
+    let jwks = jwksByIssuer.get(issuer);
+    if (!jwks) { jwks = createRemoteJWKSet(new URL(issuer + '/cdn-cgi/access/certs')); jwksByIssuer.set(issuer, jwks); }
+    const { payload } = await jwtVerify(assertion, jwks, { issuer, audience: env.ACCESS_AUDIENCE, algorithms: ['RS256'] });
+    if (typeof payload.exp !== 'number' || typeof payload.email !== 'string') return null;
+    const email = payload.email.toLowerCase();
+    return env.ADMIN_EMAILS.split(',').map(v => v.trim().toLowerCase()).includes(email) ? email : null;
+  } catch { return null; }
+}
+async function publicCatalog(env: Env) {
+  if (!env.DB) return { resources: seed.filter(r => r.status === 'published'), categories };
+  const rows = await env.DB.prepare("SELECT payload_json FROM catalog_entries WHERE status = 'published' ORDER BY id").all<{payload_json: string}>();
+  return { resources: rows.results.map(r => validateResource(JSON.parse(r.payload_json))), categories };
+}
+async function admin(request: Request, env: Env, path: string) {
+  const email = await adminEmail(request, env);
+  if (!email) return json({ error: env.ACCESS_ISSUER ? 'forbidden' : 'admin-auth-not-configured' }, 403);
+  if (!env.DB) return json({ error: 'database-unavailable' },503);
+  if (path === '/api/admin/session') return json({ ok:true });
+  if (path === '/api/admin/export') return json({ schemaVersion:1, ...(await publicCatalog(env)) });
+  if (path !== '/api/admin/resources') return json({ error:'not-found' },404);
+  if (request.method === 'GET') {
+    const rows = await env.DB.prepare('SELECT payload_json, revision FROM catalog_entries ORDER BY id').all<{payload_json:string;revision:number}>();
+    return json({ resources: rows.results.map(r => ({ ...JSON.parse(r.payload_json), revision:r.revision })), categories });
+  }
+  if (!['POST','PUT'].includes(request.method)) return json({error:'method-not-allowed'},405,{allow:'GET, POST, PUT'});
+  if (request.headers.get('origin') !== new URL(request.url).origin) return json({error:'cross-origin-write'},403);
+  if (!request.headers.get('content-type')?.startsWith('application/json')) return json({error:'expected-json'},415);
+  const raw = await request.text();
+  if (raw.length > 32768) return json({error:'resource-too-large'},413);
+  let input: Record<string,unknown>;
+  let item: ReturnType<typeof validateResource>;
+  try { input=JSON.parse(raw); item=validateResource(input); } catch (error) { return json({error:'invalid-resource',message:String(error)},400); }
+  const now=new Date().toISOString();
+  const values=[item.slug,item.canonicalUrl,item.primaryCategory,item.status,JSON.stringify(item),now,email];
+  try {
+    if (request.method === 'POST') {
+      await env.DB.prepare('INSERT INTO catalog_entries(slug,canonical_url,category,status,payload_json,updated_at,actor,id) VALUES(?,?,?,?,?,?,?,?)').bind(...values,item.id).run();
+      return json({ok:true,id:item.id,revision:1},201);
+    }
+    if (!Number.isInteger(input.revision) || Number(input.revision)<1) return json({error:'revision-required'},400);
+    const result=await env.DB.prepare('UPDATE catalog_entries SET slug=?,canonical_url=?,category=?,status=?,payload_json=?,updated_at=?,actor=?,revision=revision+1 WHERE id=? AND revision=?').bind(...values,item.id,input.revision).run();
+    if (result.meta.changes !== 1) return json({error:'revision-conflict'},409);
+    return json({ok:true,id:item.id,revision:Number(input.revision)+1});
+  } catch { return json({error:'duplicate-id-slug-or-url'},409); }
+}
+async function visit(request: Request, env: Env) {
+  if (!env.DB) return json({accepted:false,reason:'stats-unavailable'},503);
+  if (env.VISIT_LIMIT && !(await env.VISIT_LIMIT.limit({key:request.headers.get('cf-connecting-ip')??'local'})).success) return json({accepted:false,reason:'rate-limited'},429,{'retry-after':'60'});
+  if (!request.headers.get('content-type')?.startsWith('application/json')) return json({accepted:false,reason:'expected-json'},415);
+  const origin=request.headers.get('origin');
+  if (origin && origin !== new URL(request.url).origin) return json({accepted:false,reason:'cross-origin'},403);
+  const raw=await request.text();
+  if (raw.length>1024) return json({accepted:false,reason:'too-large'},413);
+  let input: {eventId?:unknown;path?:unknown};
+  try { input=JSON.parse(raw); } catch { return json({accepted:false,reason:'invalid-json'},400); }
+  if (!input || typeof input.eventId !== 'string' || !/^[a-zA-Z0-9_-]{12,80}$/.test(input.eventId) || typeof input.path !== 'string' || !/^\/(?!\/)[a-zA-Z0-9/_-]{0,179}$/.test(input.path) || /^\/(admin|api)(\/|$)/.test(input.path)) return json({accepted:false,reason:'invalid-event'},400);
+  const now=new Date().toISOString();
+  const day=new Intl.DateTimeFormat('en-CA',{timeZone:'Asia/Hong_Kong'}).format(new Date());
+  const inserted=await env.DB.prepare('INSERT OR IGNORE INTO visit_events(event_id,path,created_at,day) VALUES(?,?,?,?)').bind(input.eventId,input.path,now,day).run();
+  return json({accepted:inserted.meta.changes===1,duplicate:inserted.meta.changes!==1});
+}
+async function stats(env: Env) {
+  if (!env.DB) return json({available:false,message:'统计服务尚未配置'},503);
+  const day=new Intl.DateTimeFormat('en-CA',{timeZone:'Asia/Hong_Kong'}).format(new Date());
+  const row=await env.DB.prepare('SELECT page_views AS totalPageViews,since,updated_at AS updatedAt FROM visit_totals WHERE id=1').first();
+  const today=await env.DB.prepare('SELECT page_views AS count FROM visit_daily WHERE day=?').bind(day).first<{count:number}>();
+  if (!row) return json({available:false,message:'统计数据库尚未初始化'},503);
+  return json({available:true,...row,todayPageViews:today?.count??0},200,{'cache-control':'public, max-age=30'});
+}
+export default {
+  async fetch(request: Request, env: Env): Promise<Response> {
+    const url=new URL(request.url); const path=url.pathname.replace(/\/$/,'') || '/';
+    try {
+      if (path==='/api/health') return json({ok:true,service:'deutsch-lernen-resource-hub'});
+      if (path==='/api/public-catalog' && request.method==='GET') return json({schemaVersion:1,...(await publicCatalog(env))},200,{'cache-control':'public, max-age=30'});
+      if (path==='/api/stats' && request.method==='GET') return await stats(env);
+      if (path==='/api/visit' && request.method==='POST') return await visit(request,env);
+      if (path.startsWith('/api/admin/')) return await admin(request,env,path);
+      if (path.startsWith('/api/')) return json({error:'not-found'},404);
+      if (/^\/resource\/[a-z0-9-]+$/.test(path)) {
+        const slug=path.split('/')[2]; const {resources}=await publicCatalog(env);
+        if (!resources.some(r=>r.slug===slug)) return new Response('资源不存在或尚未公开',{status:404});
+        url.pathname='/resource/view/';
+        return env.ASSETS.fetch(new Request(url,request));
+      }
+      const response=await env.ASSETS.fetch(request);
+      const secured=new Response(response.body,response);
+      secured.headers.set('x-content-type-options','nosniff');
+      secured.headers.set('referrer-policy','strict-origin-when-cross-origin');
+      secured.headers.set('x-frame-options','DENY');
+      return secured;
+    } catch { return json({error:'service-unavailable',message:'服务暂不可用，请稍后重试'},503); }
+  }
+};
+
