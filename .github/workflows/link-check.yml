@@ -1,9 +1,9 @@
 name: Link Check
 
 on:
+  # External links currently return persistent 404/reset errors.
+  # Keep manual checks available without repeated scheduled failure alerts.
   workflow_dispatch:
-  schedule:
-    - cron: "17 2 * * 1"
 
 permissions:
   contents: read
